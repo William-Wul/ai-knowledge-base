@@ -7,6 +7,73 @@
     <title>AI 知识库 · 后台管理</title>
   </head>
   <body>
+    <script>window.CMS_MANUAL_INIT = true;</script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'William-Wul/ai-knowledge-base',
+            branch: 'main',
+            auth_type: 'pkce',
+            app_id: 'Ov23liciYipf20DfoVpW'
+          },
+          locale: 'zh',
+          media_folder: 'docs/public/images',
+          public_folder: '/ai-knowledge-base/images',
+          collections: [
+            {
+              name: 'stage-1',
+              label: '阶段一 · 快速认知',
+              folder: 'docs/stage-1',
+              create: false,
+              slug: '{{slug}}',
+              fields: [
+                { label: '标题', name: 'title', widget: 'string' },
+                { label: '描述', name: 'description', widget: 'string', required: false },
+                { label: '正文', name: 'body', widget: 'markdown' }
+              ]
+            },
+            {
+              name: 'stage-2',
+              label: '阶段二 · 上手实操',
+              folder: 'docs/stage-2',
+              create: false,
+              slug: '{{slug}}',
+              fields: [
+                { label: '标题', name: 'title', widget: 'string' },
+                { label: '描述', name: 'description', widget: 'string', required: false },
+                { label: '正文', name: 'body', widget: 'markdown' }
+              ]
+            },
+            {
+              name: 'stage-3',
+              label: '阶段三 · 场景深耕',
+              folder: 'docs/stage-3',
+              create: false,
+              slug: '{{slug}}',
+              fields: [
+                { label: '标题', name: 'title', widget: 'string' },
+                { label: '描述', name: 'description', widget: 'string', required: false },
+                { label: '正文', name: 'body', widget: 'markdown' }
+              ]
+            },
+            {
+              name: 'stage-4',
+              label: '阶段四 · 持续进化',
+              folder: 'docs/stage-4',
+              create: false,
+              slug: '{{slug}}',
+              fields: [
+                { label: '标题', name: 'title', widget: 'string' },
+                { label: '描述', name: 'description', widget: 'string', required: false },
+                { label: '正文', name: 'body', widget: 'markdown' }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
   </body>
 </html>
