@@ -1,14 +1,11 @@
 backend:
-  name: github
-  repo: William-Wul/ai-knowledge-base
+  name: git-gateway
   branch: main
-  auth_type: pkce
-  app_id: Ov23liciYipf20DfoVpW
 
 locale: zh
 
 media_folder: "docs/public/images"
-public_folder: "/ai-knowledge-base/images"
+public_folder: "/images"
 
 collections:
   - name: "stage-1"
