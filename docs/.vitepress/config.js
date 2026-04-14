@@ -81,7 +81,6 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'OpenClaw 配置与使用', link: '/stage-5/openclaw-guide' },
-          { text: 'Hermes 配置与使用', link: '/stage-5/hermes-guide' },
           { text: 'Claude Code 使用指南', link: '/stage-5/claude-code-guide' },
         ],
       },
