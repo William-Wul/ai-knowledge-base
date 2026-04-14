@@ -7,6 +7,17 @@
     <title>AI 知识库 · 后台管理</title>
   </head>
   <body>
+    <script>
+      // 修复 Decap CMS 路由在 hash 前加 '/' 导致 Netlify Identity token 无法识别的问题
+      (function () {
+        var hash = window.location.hash;
+        if (hash.startsWith('#/invite_token=') ||
+            hash.startsWith('#/recovery_token=') ||
+            hash.startsWith('#/confirmation_token=')) {
+          history.replaceState(null, '', window.location.pathname + '#' + hash.slice(2));
+        }
+      })();
+    </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
