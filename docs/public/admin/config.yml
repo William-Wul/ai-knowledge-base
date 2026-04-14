@@ -11,89 +11,99 @@ collections:
   - name: "stage-1"
     label: "阶段一 · 快速认知"
     folder: "docs/stage-1"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: "stage-2"
     label: "阶段二 · 零基础上手"
     folder: "docs/stage-2"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: "stage-3"
     label: "阶段三 · AI 进阶概念"
     folder: "docs/stage-3"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: "stage-4"
     label: "阶段四 · 工作场景实战"
     folder: "docs/stage-4"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: "stage-5"
     label: "阶段五 · AI Agent 使用"
     folder: "docs/stage-5"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: "stage-6"
     label: "阶段六 · AI 创意与创业"
     folder: "docs/stage-6"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: "frontier"
     label: "AI 前沿探讨"
     folder: "docs/frontier"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: "coding"
     label: "AI 编程"
     folder: "docs/coding"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: "news"
     label: "AI 新闻"
     folder: "docs/news"
-    create: false
+    create: true
     slug: "{{slug}}"
     fields:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "描述", name: "description", widget: "string", required: false }
+      - { label: "发布日期", name: "date", widget: "datetime", required: false }
+      - { label: "来源链接", name: "source_url", widget: "string", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
