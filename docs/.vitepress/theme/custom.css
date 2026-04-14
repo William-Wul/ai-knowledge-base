@@ -1,0 +1,180 @@
+/* ===== 主题色覆盖：深绿色系 ===== */
+:root {
+  --vp-c-brand-1: #2D5A3D;
+  --vp-c-brand-2: #3a7050;
+  --vp-c-brand-3: #4a8b63;
+  --vp-c-brand-soft: rgba(45, 90, 61, 0.1);
+
+  --vp-c-green-1: #2D5A3D;
+  --vp-c-green-2: #3a7050;
+  --vp-c-green-3: #4a8b63;
+  --vp-c-green-soft: rgba(45, 90, 61, 0.1);
+
+  /* 按钮 */
+  --vp-button-brand-bg: #2D5A3D;
+  --vp-button-brand-hover-bg: #245033;
+  --vp-button-brand-active-bg: #1e4229;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+
+  /* 链接颜色 */
+  --vp-c-text-1: #1a2e20;
+  --vp-c-text-2: #4a6352;
+}
+
+/* ===== Hero 区域 ===== */
+.VPHero .name {
+  background: linear-gradient(135deg, #2D5A3D 0%, #4a8b63 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.VPHero .tagline {
+  color: #4a6352 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+}
+
+/* ===== Feature 卡片 ===== */
+.VPFeature {
+  border-radius: 14px !important;
+  border: 1.5px solid #e2ebe5 !important;
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s !important;
+  background: white !important;
+}
+
+.VPFeature:hover {
+  box-shadow: 0 6px 24px rgba(45, 90, 61, 0.12) !important;
+  transform: translateY(-3px) !important;
+  border-color: #b8d4c0 !important;
+}
+
+.VPFeature .title {
+  color: #1a2e20 !important;
+  font-weight: 700 !important;
+}
+
+.VPFeature .details {
+  color: #4a6352 !important;
+  line-height: 1.6 !important;
+}
+
+/* ===== 导航栏 ===== */
+.VPNav {
+  backdrop-filter: blur(12px) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid #e8f0ea !important;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700 !important;
+  color: #2D5A3D !important;
+}
+
+/* ===== 侧边栏 ===== */
+.VPSidebarItem.is-active > .item .link,
+.VPSidebarItem.is-active > .item .text {
+  color: #2D5A3D !important;
+  font-weight: 600 !important;
+}
+
+.VPSidebarItem .link:hover {
+  color: #2D5A3D !important;
+}
+
+/* ===== 文章内容排版 ===== */
+.vp-doc h1 {
+  border-bottom: 2px solid #e2ebe5;
+  padding-bottom: 0.5rem;
+  color: #1a2e20;
+}
+
+.vp-doc h2 {
+  border-top: none;
+  color: #2D5A3D;
+}
+
+.vp-doc a {
+  color: #2D5A3D;
+  font-weight: 500;
+}
+
+.vp-doc a:hover {
+  color: #4a8b63;
+}
+
+/* ===== 代码块 ===== */
+.vp-doc code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  background: #f0f6f2;
+  color: #2D5A3D;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+}
+
+/* ===== 自定义容器颜色 ===== */
+.vp-doc .custom-block.tip {
+  border-color: #2D5A3D;
+  background: #f0f6f2;
+}
+
+.vp-doc .custom-block.tip .custom-block-title {
+  color: #2D5A3D;
+}
+
+/* ===== 阶段标签（徽章） ===== */
+.stage-badge {
+  display: inline-block;
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.stage-1 { background: #dbeafe; color: #1d4ed8; }  /* 蓝色 - 认知 */
+.stage-2 { background: #dcfce7; color: #166534; }  /* 绿色 - 实操 */
+.stage-3 { background: #ede9fe; color: #6d28d9; }  /* 紫色 - 岗位 */
+.stage-4 { background: #fef3c7; color: #92400e; }  /* 琥珀色 - 动态 */
+
+/* ===== 手机端优化 ===== */
+@media (max-width: 768px) {
+  .VPHero .name { font-size: 2rem !important; }
+  .VPHero .tagline { font-size: 0.95rem !important; }
+
+  .vp-doc { padding: 0 1rem; }
+
+  .VPFeature {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ===== 搜索框 ===== */
+.VPNavBarSearch .DocSearch-Button {
+  border-radius: 8px;
+}
+
+/* ===== 滚动条美化 ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c5d9cb; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2D5A3D; }
+
+/* ===== 暗色模式适配 ===== */
+.dark {
+  --vp-c-brand-1: #6dbf8a;
+  --vp-c-brand-2: #5aad77;
+  --vp-c-brand-3: #4a9a64;
+  --vp-c-brand-soft: rgba(109, 191, 138, 0.12);
+}
+
+.dark .VPFeature {
+  background: #1a2e1e !important;
+  border-color: #2d4a32 !important;
+}
+
+.dark .VPNav {
+  background: rgba(22, 36, 25, 0.92) !important;
+  border-bottom-color: #2d4a32 !important;
+}
