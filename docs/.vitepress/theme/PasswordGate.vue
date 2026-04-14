@@ -58,6 +58,13 @@ const showPassword = ref(false)
 const inputRef = ref(null)
 
 onMounted(() => {
+  // 检测 Netlify Identity 身份验证 token，自动跳转到后台处理
+  const hash = window.location.hash
+  if (hash.includes('invite_token') || hash.includes('recovery_token') || hash.includes('confirmation_token')) {
+    window.location.replace('/admin/' + hash)
+    return
+  }
+
   const stored = sessionStorage.getItem(STORAGE_KEY)
   if (stored === 'ok') {
     authenticated.value = true
