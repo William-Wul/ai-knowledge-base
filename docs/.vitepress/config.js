@@ -63,6 +63,11 @@ export default defineConfig({
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['link', { rel: 'icon', href: '/ai-knowledge-base/favicon.svg', type: 'image/svg+xml' }],
     ['script', { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-6TV8DT9DEY' }],
+    ['script', {}, `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6TV8DT9DEY');`],
   ],
 
   themeConfig: {
@@ -83,6 +88,7 @@ export default defineConfig({
       { text: '🔭 AI 前沿', link: '/frontier/' },
       { text: '💻 AI 编程', link: '/coding/' },
       { text: '📰 AI 新闻', link: '/news/' },
+      { text: '📝 学习测试', link: 'https://wenjuan.fazhipro.com/s/cfHSUQOa' },
     ],
 
     sidebar: [
