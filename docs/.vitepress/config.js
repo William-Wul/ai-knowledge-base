@@ -141,6 +141,13 @@ export default defineConfig({
         ]),
       },
       {
+        text: '📰 AI 新闻',
+        collapsed: true,
+        items: autoItems('news', [
+          { text: '专区介绍', link: '/news/' },
+        ]),
+      },
+      {
         text: '🔭 AI 前沿探讨',
         collapsed: true,
         items: autoItems('frontier', [
@@ -152,13 +159,6 @@ export default defineConfig({
         collapsed: true,
         items: autoItems('coding', [
           { text: '专区介绍', link: '/coding/' },
-        ]),
-      },
-      {
-        text: '📰 AI 新闻',
-        collapsed: true,
-        items: autoItems('news', [
-          { text: '专区介绍', link: '/news/' },
         ]),
       },
     ],

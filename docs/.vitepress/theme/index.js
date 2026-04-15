@@ -1,15 +1,17 @@
+import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import PasswordGate from './PasswordGate.vue'
+import HomeLayout from './HomeLayout.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('HomeLayout', HomeLayout)
+  },
   Layout() {
     return h(PasswordGate, null, {
       default: () => h(DefaultTheme.Layout),
     })
   },
 }
-
-// Vue 的 h 函数需要从 vue 引入
-import { h } from 'vue'
