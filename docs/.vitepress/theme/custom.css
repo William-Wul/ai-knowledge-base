@@ -1,3 +1,9 @@
+/* ===== 隐藏暗色模式切换按钮 ===== */
+.VPNavBarAppearance,
+.VPNavScreenAppearance {
+  display: none !important;
+}
+
 /* ===== 主题色覆盖：深绿色系 ===== */
 :root {
   --vp-c-brand-1: #2D5A3D;
