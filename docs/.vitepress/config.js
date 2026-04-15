@@ -85,10 +85,10 @@ gtag('config', 'G-6TV8DT9DEY');`],
           { text: '🚀 阶段六 · AI 创意与创业', link: '/stage-6/ai-side-projects' },
         ]
       },
+      { text: '📝 学习测试', link: 'https://wenjuan.fazhipro.com/s/cfHSUQOa' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
       { text: '💻 AI 编程', link: '/coding/' },
       { text: '📰 AI 新闻', link: '/news/' },
-      { text: '📝 学习测试', link: 'https://wenjuan.fazhipro.com/s/cfHSUQOa' },
     ],
 
     sidebar: [
