@@ -20,7 +20,7 @@
             autocomplete="current-password"
             @input="hasError = false"
           />
-          <button type="button" class="toggle-btn" @click="showPassword = !showPassword" tabindex="-1">
+          <button type="button" class="toggle-btn" @click.stop.prevent="showPassword = !showPassword" tabindex="-1">
             <svg v-if="!showPassword" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
               <circle cx="12" cy="12" r="3"/>
@@ -32,7 +32,7 @@
           </button>
         </div>
         <p v-if="hasError" class="error-msg">密码错误，请重试</p>
-        <button type="submit" class="submit-btn" :disabled="!password">
+        <button type="submit" class="submit-btn" :class="{ disabled: !password }" @click.prevent="password && handleSubmit()">
           进入知识库 →
         </button>
       </form>
@@ -174,9 +174,11 @@ function handleSubmit() {
   border: none;
   cursor: pointer;
   color: #9aab9e;
-  padding: 0;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .toggle-btn:hover { color: #2D5A3D; }
@@ -199,6 +201,8 @@ function handleSubmit() {
   cursor: pointer;
   transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
   letter-spacing: 0.01em;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .submit-btn:hover:not(:disabled) {
@@ -209,7 +213,8 @@ function handleSubmit() {
 
 .submit-btn:active:not(:disabled) { transform: translateY(0); }
 
-.submit-btn:disabled {
+.submit-btn:disabled,
+.submit-btn.disabled {
   opacity: 0.45;
   cursor: not-allowed;
 }
