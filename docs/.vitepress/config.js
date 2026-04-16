@@ -61,19 +61,8 @@ export default defineConfig({
 
   vite: {
     build: {
-      minify: 'terser',
+      minify: 'esbuild',
       cssCodeSplit: true,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'vue-vendor': ['vue'],
-            'vitepress-vendor': ['vitepress'],
-          },
-        },
-      },
-    },
-    server: {
-      compress: true,
     },
   },
 
