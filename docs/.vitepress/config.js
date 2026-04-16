@@ -57,17 +57,30 @@ export default defineConfig({
   description: '从零开始，掌握 AI 工作力',
 
   lang: 'zh-CN',
+  cleanUrls: true,
+
+  vite: {
+    build: {
+      minify: 'terser',
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vue-vendor': ['vue'],
+            'vitepress-vendor': ['vitepress'],
+          },
+        },
+      },
+    },
+    server: {
+      compress: true,
+    },
+  },
 
   head: [
     ['meta', { name: 'robots', content: 'noindex, nofollow' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['link', { rel: 'icon', href: '/ai-knowledge-base/favicon.svg', type: 'image/svg+xml' }],
-    ['script', { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-6TV8DT9DEY' }],
-    ['script', {}, `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-6TV8DT9DEY');`],
   ],
 
   themeConfig: {
