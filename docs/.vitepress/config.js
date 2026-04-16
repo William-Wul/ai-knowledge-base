@@ -85,10 +85,10 @@ gtag('config', 'G-6TV8DT9DEY');`],
           { text: '🚀 阶段六 · AI 创意与创业', link: '/stage-6/ai-side-projects' },
         ]
       },
-      { text: '📝 学习测试', link: 'https://wenjuan.fazhipro.com/s/cfHSUQOa' },
+      { text: '📝 学习测试', link: '/exams/' },
+      { text: '📰 AI 新闻', link: '/news/' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
       { text: '💻 AI 编程', link: '/coding/' },
-      { text: '📰 AI 新闻', link: '/news/' },
     ],
 
     sidebar: [
@@ -144,6 +144,13 @@ gtag('config', 'G-6TV8DT9DEY');`],
         items: autoItems('stage-6', [
           { text: '用AI做副业和小项目', link: '/stage-6/ai-side-projects' },
           { text: 'AI创业案例与经验', link: '/stage-6/ai-startup-cases' },
+        ]),
+      },
+      {
+        text: '📝 学习测试',
+        collapsed: true,
+        items: autoItems('exams', [
+          { text: '测试入口', link: '/exams/' },
         ]),
       },
       {
