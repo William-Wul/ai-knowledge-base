@@ -125,6 +125,7 @@ export default defineConfig({
         text: '💼 阶段四 · 工作场景实战',
         collapsed: true,
         items: autoItems('stage-4', [
+          { text: '产品经理 · AI 实战', link: '/stage-4/pm-scenarios' },
           { text: '人资场景', link: '/stage-4/hr-scenarios' },
           { text: '财务场景', link: '/stage-4/finance-scenarios' },
           { text: '法务场景', link: '/stage-4/legal-scenarios' },
