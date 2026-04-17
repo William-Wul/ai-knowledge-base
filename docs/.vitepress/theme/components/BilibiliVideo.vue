@@ -39,7 +39,7 @@ const props = defineProps({
 const activated = ref(false)
 
 const iframeSrc = computed(() =>
-  `https://player.bilibili.com/player.html?bvid=${props.bvid}&page=${props.page}&high_quality=1&danmaku=0&autoplay=1`
+  `https://player.bilibili.com/player.html?bvid=${props.bvid}&page=${props.page}&high_quality=1&danmaku=0&autoplay=0`
 )
 </script>
 
