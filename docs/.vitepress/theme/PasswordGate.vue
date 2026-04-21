@@ -40,7 +40,6 @@
       <p class="gate-hint">如忘记密码，请联系管理员</p>
     </div>
   </div>
-  <slot v-else />
 </template>
 
 <script setup>

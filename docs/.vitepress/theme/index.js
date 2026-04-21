@@ -12,8 +12,6 @@ export default {
     app.component('BilibiliVideo', BilibiliVideo)
   },
   Layout() {
-    return h(PasswordGate, null, {
-      default: () => h(DefaultTheme.Layout),
-    })
+    return h('div', [h(DefaultTheme.Layout), h(PasswordGate)])
   },
 }

@@ -2,6 +2,15 @@
 
 ---
 
+## v1.3 · 2026-04-21
+
+### 修复
+- 修复所有文章正文不显示的 P0 生产 bug：登录后进入任何 stage 文章仅见侧边栏和"上/下篇"导航，正文区域完全空白
+- 根因：PasswordGate 作为 DefaultTheme.Layout 的父级 slot 包裹器，导致 VitePress 路由数据加载时机错位，文章 full chunk 未被加载
+- 解法：将 PasswordGate 改为与 DefaultTheme.Layout 平级的覆盖层组件（position: fixed 遮罩），Layout 从初始渲染即挂载
+
+---
+
 ## v1.2 · 2026-04-15
 
 ### 新增
