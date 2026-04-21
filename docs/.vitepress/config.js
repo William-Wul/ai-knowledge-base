@@ -70,6 +70,9 @@ export default defineConfig({
     ['meta', { name: 'robots', content: 'noindex, nofollow' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.loli.net' }],
+    ['link', { rel: 'preconnect', href: 'https://gstatic.loli.net', crossorigin: '' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap' }],
     ['script', {}, `if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }`],
   ],
 
@@ -99,6 +102,7 @@ export default defineConfig({
         text: '🧠 阶段一 · 快速认知',
         collapsed: false,
         items: autoItems('stage-1', [
+          { text: '阶段简介', link: '/stage-1/' },
           { text: '一文看懂AI是什么', link: '/stage-1/what-is-ai' },
           { text: 'AI 常见术语一点通', link: '/stage-1/ai-terminology' },
         ]),
@@ -107,6 +111,7 @@ export default defineConfig({
         text: '🛠️ 阶段二 · 零基础上手',
         collapsed: true,
         items: autoItems('stage-2', [
+          { text: '阶段简介', link: '/stage-2/' },
           { text: 'AI 工具全景图', link: '/stage-2/ai-tools-overview' },
           { text: '注册与上手指南', link: '/stage-2/getting-started' },
           { text: '跟 AI 说话的基本方法', link: '/stage-2/how-to-prompt' },
@@ -118,6 +123,7 @@ export default defineConfig({
         text: '🔬 阶段三 · AI 进阶概念',
         collapsed: true,
         items: autoItems('stage-3', [
+          { text: '阶段简介', link: '/stage-3/' },
           { text: '什么是 Agentic AI', link: '/stage-3/agentic-ai' },
           { text: 'AI Harness：驾驭AI的框架', link: '/stage-3/ai-harness' },
         ]),
@@ -126,6 +132,7 @@ export default defineConfig({
         text: '💼 阶段四 · 工作场景实战',
         collapsed: true,
         items: autoItems('stage-4', [
+          { text: '阶段简介', link: '/stage-4/' },
           { text: '产品经理 · AI 实战', link: '/stage-4/pm-scenarios' },
           { text: '人资场景', link: '/stage-4/hr-scenarios' },
           { text: '财务场景', link: '/stage-4/finance-scenarios' },
@@ -138,6 +145,7 @@ export default defineConfig({
         text: '🤖 阶段五 · AI Agent 使用',
         collapsed: true,
         items: autoItems('stage-5', [
+          { text: '阶段简介', link: '/stage-5/' },
           { text: 'OpenClaw 配置与使用', link: '/stage-5/openclaw-guide' },
           { text: 'Claude Code 使用指南', link: '/stage-5/claude-code-guide' },
         ]),
@@ -146,6 +154,7 @@ export default defineConfig({
         text: '🚀 阶段六 · AI 创意与创业',
         collapsed: true,
         items: autoItems('stage-6', [
+          { text: '阶段简介', link: '/stage-6/' },
           { text: '用AI做副业和小项目', link: '/stage-6/ai-side-projects' },
           { text: 'AI创业案例与经验', link: '/stage-6/ai-startup-cases' },
         ]),

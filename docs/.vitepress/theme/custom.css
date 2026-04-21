@@ -185,10 +185,36 @@
   border-bottom-color: #2d4a32 !important;
 }
 
-/* ===== 自定义首页布局 ===== */
+/* ===== 自定义首页布局（v14 山水登山路径） ===== */
 .home-wrapper {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* 仅当页面内有 .home-wrapper 时（即首页）：隐藏 VitePress 默认 nav，换上渐变底 */
+body:has(.home-wrapper) .VPNav,
+body:has(.home-wrapper) .VPLocalNav,
+body:has(.home-wrapper) .VPFooter {
+  display: none !important;
+}
+body:has(.home-wrapper) .VPContent,
+body:has(.home-wrapper) .Layout {
+  padding-top: 0 !important;
+}
+body:has(.home-wrapper) {
+  background: linear-gradient(
+    180deg,
+    #f2f7ef   0%,
+    #e8f5e9  35%,
+    #eff5eb  60%,
+    #fbfaf5  80%,
+    #fbfaf5 100%
+  ) fixed !important;
+}
+/* 首页的 body 直接由渐变承担，VPContent 可透明 */
+body:has(.home-wrapper) #app,
+body:has(.home-wrapper) .VPContent {
+  background: transparent !important;
 }
 
 /* Hero 区 */
