@@ -2,3 +2,6 @@ node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
 .DS_Store
+
+# article-kb: 原文素材（带版权风险）不入库；笔记和索引正常提交
+kb-articles/**/original.json

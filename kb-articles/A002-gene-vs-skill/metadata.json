@@ -1,0 +1,20 @@
+{
+  "id": "A002",
+  "slug": "gene-vs-skill",
+  "title": "你写的Skill，正在拖慢模型？策略式Gene才是正确答案",
+  "short_title": "Gene vs Skill：Agent 经验复用的形态之争",
+  "author": "机器之心",
+  "source_platform": "微信公众号",
+  "url": "https://mp.weixin.qq.com/s/NCb4489oBtPCa-3xgxAicQ",
+  "published_at": "2026-04-21 18:14",
+  "ingested_at": "2026-04-21",
+  "tags": ["AI前沿", "Agent", "Agent自进化", "经验复用", "Gene", "GEP协议", "Skill设计", "论文解读", "EvoMap", "清华"],
+  "applicable_stages": ["frontier", "stage-5", "stage-3"],
+  "topics": ["agent-memory-and-experience"],
+  "feishu_doc_url": "https://my.feishu.cn/docx/MEuHdssCcoYPHUxuTRmckD6tnQd",
+  "feishu_doc_token": "MEuHdssCcoYPHUxuTRmckD6tnQd",
+  "local_path": "A002-gene-vs-skill/",
+  "char_count": 5500,
+  "reading_time_min": 14,
+  "one_line_summary": "清华 × EvoMap 团队用 4590 次受控实验证明：给 Agent 喂一份 2500 token 的完整 Skill 文档，反而不如喂一份 230 token、只含'策略 + AVOID 警告'的 Gene 对象——决定 Agent 聪不聪明的，不是存了多少经验，而是经验回到模型那一刻长什么形状。"
+}

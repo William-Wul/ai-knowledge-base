@@ -2,6 +2,17 @@
 
 ---
 
+## v1.5 · 2026-04-22
+
+### 新增
+- **frontier 专区首篇文章**：《给 AI 写一份超详细的说明书，反而让它变笨了？》
+  - 路径：`docs/frontier/gene-vs-skill.md`
+  - 基于清华 × EvoMap 论文《From Procedural Skills to Strategy Genes》解读，面向非技术员工读者
+  - 两张自制配图：Skill vs Gene 得分对比 + 结构对比
+  - 飞书 Wiki 镜像已同步
+
+---
+
 ## v1.4 · 2026-04-21
 
 ### 首页改版（山水登山路径风格）
