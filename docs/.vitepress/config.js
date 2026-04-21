@@ -39,10 +39,10 @@ function autoItems(dir, knownItems = []) {
   if (!existsSync(dirPath)) return kept
 
   const extras = readdirSync(dirPath)
-    .filter(f => f.endsWith('.md'))
+    .filter(f => f.endsWith('.md') && f !== 'index.md')
     .sort()
     .map(f => {
-      const link = f === 'index.md' ? `/${dir}/` : `/${dir}/${basename(f, '.md')}`
+      const link = `/${dir}/${basename(f, '.md')}`
       return { text: getTitle(join(dirPath, f)), link }
     })
     .filter(item => !keptLinks.has(item.link))
@@ -100,18 +100,18 @@ export default defineConfig({
     sidebar: [
       {
         text: '🧠 阶段一 · 快速认知',
+        link: '/stage-1/',
         collapsed: false,
         items: autoItems('stage-1', [
-          { text: '阶段简介', link: '/stage-1/' },
           { text: '一文看懂AI是什么', link: '/stage-1/what-is-ai' },
           { text: 'AI 常见术语一点通', link: '/stage-1/ai-terminology' },
         ]),
       },
       {
         text: '🛠️ 阶段二 · 零基础上手',
+        link: '/stage-2/',
         collapsed: true,
         items: autoItems('stage-2', [
-          { text: '阶段简介', link: '/stage-2/' },
           { text: 'AI 工具全景图', link: '/stage-2/ai-tools-overview' },
           { text: '注册与上手指南', link: '/stage-2/getting-started' },
           { text: '跟 AI 说话的基本方法', link: '/stage-2/how-to-prompt' },
@@ -121,18 +121,18 @@ export default defineConfig({
       },
       {
         text: '🔬 阶段三 · AI 进阶概念',
+        link: '/stage-3/',
         collapsed: true,
         items: autoItems('stage-3', [
-          { text: '阶段简介', link: '/stage-3/' },
           { text: '什么是 Agentic AI', link: '/stage-3/agentic-ai' },
           { text: 'AI Harness：驾驭AI的框架', link: '/stage-3/ai-harness' },
         ]),
       },
       {
         text: '💼 阶段四 · 工作场景实战',
+        link: '/stage-4/',
         collapsed: true,
         items: autoItems('stage-4', [
-          { text: '阶段简介', link: '/stage-4/' },
           { text: '产品经理 · AI 实战', link: '/stage-4/pm-scenarios' },
           { text: '人资场景', link: '/stage-4/hr-scenarios' },
           { text: '财务场景', link: '/stage-4/finance-scenarios' },
@@ -143,49 +143,45 @@ export default defineConfig({
       },
       {
         text: '🤖 阶段五 · AI Agent 使用',
+        link: '/stage-5/',
         collapsed: true,
         items: autoItems('stage-5', [
-          { text: '阶段简介', link: '/stage-5/' },
           { text: 'OpenClaw 配置与使用', link: '/stage-5/openclaw-guide' },
           { text: 'Claude Code 使用指南', link: '/stage-5/claude-code-guide' },
         ]),
       },
       {
         text: '🚀 阶段六 · AI 创意与创业',
+        link: '/stage-6/',
         collapsed: true,
         items: autoItems('stage-6', [
-          { text: '阶段简介', link: '/stage-6/' },
           { text: '用AI做副业和小项目', link: '/stage-6/ai-side-projects' },
           { text: 'AI创业案例与经验', link: '/stage-6/ai-startup-cases' },
         ]),
       },
       {
         text: '📝 学习测试',
+        link: '/exams/',
         collapsed: true,
-        items: autoItems('exams', [
-          { text: '测试入口', link: '/exams/' },
-        ]),
+        items: autoItems('exams', []),
       },
       {
         text: '📰 AI 新闻',
+        link: '/news/',
         collapsed: true,
-        items: autoItems('news', [
-          { text: '专区介绍', link: '/news/' },
-        ]),
+        items: autoItems('news', []),
       },
       {
         text: '🔭 AI 前沿探讨',
+        link: '/frontier/',
         collapsed: true,
-        items: autoItems('frontier', [
-          { text: '专区介绍', link: '/frontier/' },
-        ]),
+        items: autoItems('frontier', []),
       },
       {
         text: '💻 AI 编程',
+        link: '/coding/',
         collapsed: true,
-        items: autoItems('coding', [
-          { text: '专区介绍', link: '/coding/' },
-        ]),
+        items: autoItems('coding', []),
       },
     ],
 
