@@ -80,6 +80,7 @@ export default defineConfig({
     siteTitle: 'AI 学习知识库',
 
     nav: [
+      { text: '📖 前言', link: '/preface' },
       {
         text: '📚 学习路径',
         items: [
@@ -98,6 +99,7 @@ export default defineConfig({
     ],
 
     sidebar: [
+      { text: '📖 前言', link: '/preface' },
       {
         text: '🧠 阶段一 · 快速认知',
         link: '/stage-1/',
