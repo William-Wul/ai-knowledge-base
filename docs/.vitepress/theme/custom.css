@@ -89,6 +89,19 @@
   color: #2D5A3D !important;
 }
 
+/* 长文章标题在侧边栏最多显示 2 行，超出省略号；同时字号和行高收紧，不让长标题撑开侧边栏 */
+.VPSidebarItem .link .text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
 /* ===== 文章内容排版 ===== */
 .vp-doc h1 {
   border-bottom: 2px solid #e2ebe5;
@@ -108,6 +121,40 @@
 
 .vp-doc a:hover {
   color: #4a8b63;
+}
+
+/* 图片：限制最大尺寸，保证一屏能看完整张图；保留原比例，居中显示 */
+.vp-doc img {
+  max-width: 100%;
+  max-height: 520px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 1.25rem auto 0.4rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* 图注：小字灰色，跟在图下方，不抢正文视觉 */
+.vp-doc .figcaption {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #8a8a8a;
+  text-align: left;
+  margin: 0 auto 1.5rem;
+  max-width: 620px;
+  padding: 0 0.5rem;
+}
+
+.vp-doc .figcaption a {
+  color: #8a8a8a;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.vp-doc .figcaption a:hover {
+  color: #2D5A3D;
 }
 
 /* ===== 代码块 ===== */
