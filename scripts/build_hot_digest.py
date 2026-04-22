@@ -240,11 +240,9 @@ def render_markdown(date: str, tldr: str, events: list[dict], raw_items: list[di
         "",
         f"# {date} · AI 热榜日报",
         "",
-        f"> 抓取时间:{datetime.now().strftime('%Y-%m-%d %H:%M')} · "
-        "数据源:微博 / 知乎 / 今日头条 / B 站 / 36 氪 / 澎湃 / 华尔街见闻 / Hacker News · "
-        "AI 摘要:DeepSeek Chat",
+        f"> 抓取时间:{datetime.now().strftime('%Y-%m-%d %H:%M')}",
         "",
-        "## 📝 今日速览(一段话看完)",
+        "## 📝 今日速览",
         "",
         tldr,
         "",
@@ -282,12 +280,7 @@ def render_markdown(date: str, tldr: str, events: list[dict], raw_items: list[di
             "",
         ])
 
-    sections.extend([
-        "---",
-        "",
-        "> 想看深度解读?请到 [📰 AI 新闻](/news/) 看每周精选。",
-        "",
-    ])
+    sections.append("")
     return "\n".join(sections)
 
 
