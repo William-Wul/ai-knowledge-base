@@ -29,7 +29,8 @@ function linkToFile(link) {
 // 智能侧边栏条目生成：
 // - 已知列表中的文件：若文件存在则保留（保序），文件删了自动消失
 // - 目录里新增的文件：自动追加到末尾（标题从 frontmatter 读取）
-function autoItems(dir, knownItems = []) {
+// - reverse: 新文件按日期倒序排（最新在上），用于日报类目录
+function autoItems(dir, knownItems = [], { reverse = false } = {}) {
   // 1. 过滤掉文件已不存在的已知项（处理「后台删除」场景）
   const kept = knownItems.filter(item => existsSync(linkToFile(item.link)))
   const keptLinks = new Set(kept.map(i => i.link))
@@ -38,9 +39,12 @@ function autoItems(dir, knownItems = []) {
   const dirPath = join(docsRoot, dir)
   if (!existsSync(dirPath)) return kept
 
-  const extras = readdirSync(dirPath)
+  const files = readdirSync(dirPath)
     .filter(f => f.endsWith('.md') && f !== 'index.md')
     .sort()
+  if (reverse) files.reverse()
+
+  const extras = files
     .map(f => {
       const link = `/${dir}/${basename(f, '.md')}`
       return { text: getTitle(join(dirPath, f)), link }
@@ -93,6 +97,7 @@ export default defineConfig({
         ]
       },
       { text: '📝 学习测试', link: '/exams/' },
+      { text: '🔥 AI 热点', link: '/hot/' },
       { text: '📰 AI 新闻', link: '/news/' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
       { text: '💻 AI 编程', link: '/coding/' },
@@ -114,7 +119,7 @@ export default defineConfig({
         link: '/stage-2/',
         collapsed: true,
         items: autoItems('stage-2', [
-          { text: 'AI 工具全景图', link: '/stage-2/ai-tools-overview' },
+          { text: '综合对话 AI：从豆包开始', link: '/stage-2/ai-tools-overview' },
           { text: '注册与上手指南', link: '/stage-2/getting-started' },
           { text: '跟 AI 说话的基本方法', link: '/stage-2/how-to-prompt' },
           { text: '5 个马上能用的场景', link: '/stage-2/quick-use-cases' },
@@ -166,6 +171,12 @@ export default defineConfig({
         link: '/exams/',
         collapsed: true,
         items: autoItems('exams', []),
+      },
+      {
+        text: '🔥 AI 热点',
+        link: '/hot/',
+        collapsed: true,
+        items: autoItems('hot', [], { reverse: true }),
       },
       {
         text: '📰 AI 新闻',

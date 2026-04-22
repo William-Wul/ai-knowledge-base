@@ -1,0 +1,98 @@
+name: 每日 AI 热点日报
+
+# 触发条件:
+#   - 定时:每天 UTC 13:00(北京时间 21:00)
+#   - 手动:可在 Actions 页面点 "Run workflow" 立刻触发一次(用于测试)
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+# 给这个 workflow 写回仓库的权限(用来提交生成的 MD)
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-hot-digest
+  cancel-in-progress: false
+
+jobs:
+  build-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 设置 Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装 uv(Python 包管理器)
+        uses: astral-sh/setup-uv@v3
+
+      - name: 克隆 TrendRadar(固定到验证过的版本)
+        run: |
+          git clone https://github.com/sansan0/TrendRadar.git /tmp/TrendRadar
+          cd /tmp/TrendRadar
+          git checkout ddd3f4dcaf801b656a747e607b6ab9867c9e1ec0
+
+      - name: 覆盖 TrendRadar 的配置
+        run: |
+          cp .trendradar-config/frequency_words.txt /tmp/TrendRadar/config/frequency_words.txt
+
+          # 关掉 TrendRadar 自带的 AI 分析 / 通知 / 翻译 / 调度
+          # 避免空 key 触发报错,也避免它尝试推送到不存在的飞书机器人等
+          cd /tmp/TrendRadar
+          python3 - <<'PY'
+          import re, pathlib
+          p = pathlib.Path('config/config.yaml')
+          s = p.read_text()
+          patches = [
+              (r'^  enabled: true.*是否启用调度系统.*$', '  enabled: false  # AI KB: 禁用调度'),
+              (r'^  enabled: true.*是否启用通知.*$', '  enabled: false  # AI KB: 禁用通知'),
+              (r'^  enabled: true.*是否启用 AI 分析.*$', '  enabled: false  # AI KB: 禁用 AI 分析(我们自己跑)'),
+              (r'^  enabled: true.*是否启用翻译.*$', '  enabled: false  # AI KB: 禁用翻译'),
+          ]
+          for pattern, repl in patches:
+              s = re.sub(pattern, repl, s, flags=re.MULTILINE)
+          p.write_text(s)
+          print("TrendRadar config patched")
+          PY
+
+      - name: 安装 TrendRadar 依赖
+        working-directory: /tmp/TrendRadar
+        run: uv sync
+
+      - name: 跑 TrendRadar 抓数据
+        working-directory: /tmp/TrendRadar
+        run: uv run python -m trendradar
+        timeout-minutes: 10
+
+      - name: 生成当日 AI 日报 MD
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          echo "生成 $TODAY 日报..."
+          python3 scripts/build_hot_digest.py \
+            --trendradar-dir /tmp/TrendRadar \
+            --date "$TODAY" \
+            --out "docs/hot/$TODAY.md"
+
+      - name: 提交并 push(触发自动部署)
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "docs/hot/$TODAY.md"
+
+          if git diff --cached --quiet; then
+            echo "今日 MD 无变化,跳过提交"
+            exit 0
+          fi
+
+          git commit -m "chore(hot): 更新 $TODAY AI 热点日报"
+          git push

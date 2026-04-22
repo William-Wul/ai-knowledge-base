@@ -1,0 +1,87 @@
+# AI 学习知识库 · AI 热点精选关键词表
+# 三层结构:核心层 / 玩家层 / 应用层
+# 修改此文件后重新运行 TrendRadar 即生效
+
+[GLOBAL_FILTER]
+震惊
+AI 诈骗
+AI骗局
+
+
+[WORD_GROUPS]
+
+[AI 核心]
+AI
+大模型
+人工智能
+LLM
+AGI
+生成式
+AIGC
+AI生成
+
+
+[海外模型公司]
+OpenAI
+ChatGPT
+GPT-4
+GPT-5
+GPT-6
+Sora
+Dall-E
+Claude
+Anthropic
+Gemini
+DeepMind
+Meta AI
+Llama
+Mistral
+xAI
+Grok
+Perplexity
+
+
+[国产模型公司]
+DeepSeek
+Kimi
+Moonshot
+通义
+Qwen
+文心
+百度 AI
+豆包
+字节 AI
+混元
+腾讯 AI
+智谱
+GLM
+MiniMax
+零一万物
+百川
+
+
+[AI Agent 与工具]
+AI Agent
+MCP
+Cursor
+Copilot
+Manus
+Claude Code
+Codex
+Windsurf
+Devin
+
+
+[AI 应用赛道]
+AI 编程
+AI 视频
+AI 绘画
+AI 搜索
+AI 眼镜
+AI Pin
+具身智能
+人形机器人
+Figure AI
+宇树
+智元
+Optimus
