@@ -339,6 +339,8 @@ def rebuild_index_md(hot_dir: Path) -> None:
             date_str = f.stem
             label = date_label(date_str)
             body = strip_frontmatter(f.read_text(encoding="utf-8"))
+            # 归档内容降级 h2/h3 → h4/h5，避免污染右侧目录
+            body = body.replace("\n### ", "\n##### ").replace("\n## ", "\n#### ")
             parts += [
                 "<details>",
                 f"<summary><b>{label}</b></summary>",
