@@ -176,7 +176,7 @@ export default defineConfig({
         link: '/news/',
         collapsed: true,
         items: [
-          { text: '🔥 今日热点', link: '/hot/' },
+          { text: '🔥 ' + getTitle(join(docsRoot, 'hot/index.md')), link: '/hot/' },
           ...autoItems('news', []),
         ],
       },

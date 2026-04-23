@@ -298,39 +298,50 @@ def strip_frontmatter(content: str) -> str:
     return "\n".join(lines).lstrip("\n")
 
 
+def date_label(date_str: str) -> str:
+    """'2026-04-23' → '4月23日热点'"""
+    try:
+        d = datetime.strptime(date_str, "%Y-%m-%d")
+        return f"{d.month}月{d.day}日热点"
+    except ValueError:
+        return date_str
+
+
 def rebuild_index_md(hot_dir: Path) -> None:
     """重写 hot/index.md：最新一天全文展示，过去 7 天折叠。"""
     daily_files = sorted(
         [f for f in hot_dir.glob("????-??-??.md")],
         reverse=True,
-    )[:7]  # 最多保留 7 天
+    )[:7]
 
     if not daily_files:
         return
 
-    today_file = daily_files[0]
-    today_date = today_file.stem
-    today_body = strip_frontmatter(today_file.read_text(encoding="utf-8"))
+    latest_file = daily_files[0]
+    latest_date = latest_file.stem
+    latest_label = date_label(latest_date)
+    latest_body = strip_frontmatter(latest_file.read_text(encoding="utf-8"))
 
     parts = [
         "---",
-        "title: AI 热点",
+        f"title: {latest_label}",
         "description: 每日自动抓取各大平台的 AI 相关热榜，去重汇总",
         "---",
         "",
-        f"# {today_date} · AI 热榜日报",
+        f"# {latest_label}",
         "",
-        today_body,
+        latest_body,
     ]
 
     if len(daily_files) > 1:
         parts += ["", "---", "", "## 往期热点", ""]
         for f in daily_files[1:]:
             date_str = f.stem
+            label = date_label(date_str)
             body = strip_frontmatter(f.read_text(encoding="utf-8"))
             parts += [
-                f"<details>",
-                f"<summary><b>{date_str} 热榜日报</b></summary>",
+                "<details>",
+                f"<summary><b>{label}</b></summary>",
                 "",
                 body,
                 "</details>",
@@ -338,7 +349,7 @@ def rebuild_index_md(hot_dir: Path) -> None:
             ]
 
     (hot_dir / "index.md").write_text("\n".join(parts), encoding="utf-8")
-    print(f"      hot/index.md 已更新（今日: {today_date}，归档: {len(daily_files)-1} 天）", file=sys.stderr)
+    print(f"      hot/index.md 已更新（最新: {latest_label}，归档: {len(daily_files)-1} 天）", file=sys.stderr)
 
 
 def main():
