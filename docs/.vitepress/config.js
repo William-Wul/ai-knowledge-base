@@ -97,7 +97,6 @@ export default defineConfig({
         ]
       },
       { text: '📝 学习测试', link: '/exams/' },
-      { text: '🔥 AI 热点', link: '/hot/' },
       { text: '📰 AI 新闻', link: '/news/' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
       { text: '💻 AI 编程', link: '/coding/' },
@@ -173,16 +172,13 @@ export default defineConfig({
         items: autoItems('exams', []),
       },
       {
-        text: '🔥 AI 热点',
-        link: '/hot/',
-        collapsed: true,
-        items: autoItems('hot', [], { reverse: true }),
-      },
-      {
         text: '📰 AI 新闻',
         link: '/news/',
         collapsed: true,
-        items: autoItems('news', []),
+        items: [
+          { text: '🔥 今日热点', link: '/hot/' },
+          ...autoItems('news', []),
+        ],
       },
       {
         text: '🔭 AI 前沿探讨',

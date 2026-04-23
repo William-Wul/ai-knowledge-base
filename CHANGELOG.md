@@ -2,6 +2,31 @@
 
 ---
 
+## v1.6 · 2026-04-23
+
+### 新增
+- **🔥 AI 热点专区自动化上线**:新路由 `/hot/`,导航栏 + 侧边栏已接入,日报按日期倒序
+  - 每日北京时间 21:00,GitHub Actions(`.github/workflows/daily-hot-digest.yml`)自动触发
+  - 数据源:TrendRadar 抓 11 个国内热榜(微博/知乎/B 站/头条/百度/澎湃 等) + Hacker News RSS
+  - LLM 合并去重 + 生成摘要:OpenRouter 聚合网关,默认走 DeepSeek Chat,单次成本约 $0.002
+  - 综合打分维度:重要性、时效性、讨论度、影响面 4 个维度 → 前端仅显示 🔥 数量(1-5 档)
+  - 每条热点默认折叠,展开后显示 200-300 字概述 + 代表链接
+  - 关键词表:`.trendradar-config/frequency_words.txt`,三层结构(核心层 / 玩家层 / 应用层)
+  - API key 通过 GitHub Secret `OPENROUTER_API_KEY` 注入,不出现在代码里
+
+### 调整
+- 专区入口页精简:去掉"覆盖平台清单""每条热点包含什么""更新频率""关键词表维护""数据来源致谢"等对读者无用的内部字段
+- 日报 MD 顶部只保留抓取时间行,"今日速览(一段话看完)" 简化为"今日速览"
+- `autoItems()` 支持 `reverse: true` 参数,AI 热点侧边栏按日期倒序(最新在上)
+
+### 相关文件
+- `scripts/build_hot_digest.py` — SQLite → LLM → MD 的生成脚本
+- `.trendradar-config/frequency_words.txt` — AI 关键词表
+- `.github/workflows/daily-hot-digest.yml` — 定时任务
+- `BUILD_JOURNAL.md`(新建)— 整站建设历程的叙事回顾
+
+---
+
 ## v1.5.2 · 2026-04-22
 
 ### 新增

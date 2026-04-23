@@ -284,6 +284,63 @@ def render_markdown(date: str, tldr: str, events: list[dict], raw_items: list[di
     return "\n".join(sections)
 
 
+def strip_frontmatter(content: str) -> str:
+    """去掉 YAML frontmatter（--- ... ---）和第一个 h1 标题行。"""
+    lines = content.splitlines()
+    if lines and lines[0].strip() == "---":
+        end = next((i for i, l in enumerate(lines[1:], 1) if l.strip() == "---"), None)
+        if end is not None:
+            lines = lines[end + 1:]
+    # 去掉开头空行后的第一个 h1（# xxxx）
+    non_empty = next((i for i, l in enumerate(lines) if l.strip()), None)
+    if non_empty is not None and lines[non_empty].startswith("# "):
+        lines.pop(non_empty)
+    return "\n".join(lines).lstrip("\n")
+
+
+def rebuild_index_md(hot_dir: Path) -> None:
+    """重写 hot/index.md：最新一天全文展示，过去 7 天折叠。"""
+    daily_files = sorted(
+        [f for f in hot_dir.glob("????-??-??.md")],
+        reverse=True,
+    )[:7]  # 最多保留 7 天
+
+    if not daily_files:
+        return
+
+    today_file = daily_files[0]
+    today_date = today_file.stem
+    today_body = strip_frontmatter(today_file.read_text(encoding="utf-8"))
+
+    parts = [
+        "---",
+        "title: AI 热点",
+        "description: 每日自动抓取各大平台的 AI 相关热榜，去重汇总",
+        "---",
+        "",
+        f"# {today_date} · AI 热榜日报",
+        "",
+        today_body,
+    ]
+
+    if len(daily_files) > 1:
+        parts += ["", "---", "", "## 往期热点", ""]
+        for f in daily_files[1:]:
+            date_str = f.stem
+            body = strip_frontmatter(f.read_text(encoding="utf-8"))
+            parts += [
+                f"<details>",
+                f"<summary><b>{date_str} 热榜日报</b></summary>",
+                "",
+                body,
+                "</details>",
+                "",
+            ]
+
+    (hot_dir / "index.md").write_text("\n".join(parts), encoding="utf-8")
+    print(f"      hot/index.md 已更新（今日: {today_date}，归档: {len(daily_files)-1} 天）", file=sys.stderr)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--trendradar-dir", required=True, type=Path)
@@ -311,6 +368,9 @@ def main():
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(md, encoding="utf-8")
     print(f"      完成: {args.out}", file=sys.stderr)
+
+    print(f"[4/3] 重建 hot/index.md", file=sys.stderr)
+    rebuild_index_md(args.out.parent)
 
 
 if __name__ == "__main__":
