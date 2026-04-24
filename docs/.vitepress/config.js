@@ -78,6 +78,7 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://gstatic.loli.net', crossorigin: '' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap' }],
     ['script', {}, `if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }`],
+    ['script', {}, `var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?a681b724c97970a6d082bec9d556c968"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();`],
   ],
 
   themeConfig: {
