@@ -87,7 +87,7 @@ jobs:
           TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "docs/hot/$TODAY.md"
+          git add "docs/hot/$TODAY.md" "docs/hot/index.md"
 
           if git diff --cached --quiet; then
             echo "今日 MD 无变化,跳过提交"
