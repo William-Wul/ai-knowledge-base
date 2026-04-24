@@ -56,17 +56,19 @@ const shaking = ref(false)
 const showPassword = ref(false)
 const inputRef = ref(null)
 
-onMounted(() => {
-  // 检测 Netlify Identity 身份验证 token，自动跳转到后台处理
-  const hash = window.location.hash
-  if (hash.includes('invite_token') || hash.includes('recovery_token') || hash.includes('confirmation_token')) {
-    window.location.replace('/admin/' + hash)
-    return
-  }
+function redirectIfNotFound() {
+  setTimeout(() => {
+    if (document.title.startsWith('404')) {
+      window.location.replace('/')
+    }
+  }, 300)
+}
 
+onMounted(() => {
   const stored = sessionStorage.getItem(STORAGE_KEY)
   if (stored === 'ok') {
     authenticated.value = true
+    redirectIfNotFound()
   } else {
     nextTick(() => inputRef.value?.focus())
   }
@@ -76,6 +78,7 @@ function handleSubmit() {
   if (password.value === CORRECT_PASSWORD) {
     sessionStorage.setItem(STORAGE_KEY, 'ok')
     authenticated.value = true
+    redirectIfNotFound()
   } else {
     hasError.value = true
     shaking.value = true
