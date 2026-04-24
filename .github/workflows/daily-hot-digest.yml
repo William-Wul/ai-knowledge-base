@@ -5,7 +5,7 @@ name: 每日 AI 热点日报
 #   - 手动:可在 Actions 页面点 "Run workflow" 立刻触发一次(用于测试)
 on:
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '30 2 * * *'
   workflow_dispatch:
 
 # 给这个 workflow 写回仓库的权限(用来提交生成的 MD)
