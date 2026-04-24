@@ -100,7 +100,7 @@
               <path d="M5 12h14M13 5l7 7-7 7"/>
             </svg>
           </a>
-          <a class="btn btn-ghost" href="/stage-2/ai-tools-overview">查看全部内容</a>
+          <a class="btn btn-ghost" href="/stage-2/">查看全部内容</a>
         </div>
       </div>
 
