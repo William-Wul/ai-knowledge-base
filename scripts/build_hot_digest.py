@@ -17,7 +17,9 @@ import re
 import sqlite3
 import sys
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+
+_BJT = timezone(timedelta(hours=8))
 from pathlib import Path
 
 KEYWORDS = [
@@ -194,7 +196,7 @@ def call_llm(raw_items: list[dict], api_key: str, model: str) -> dict:
         for idx, item in enumerate(raw_items)
     ]
     user_msg = (
-        f"今天(北京时间 {datetime.now().strftime('%Y-%m-%d')})抓到 "
+        f"今天(北京时间 {datetime.now(_BJT).strftime('%Y-%m-%d')})抓到 "
         f"{len(llm_input)} 条 AI 相关条目:\n\n"
         f"{json.dumps(llm_input, ensure_ascii=False, indent=2)}\n\n"
         "请按系统指令输出 JSON。"
@@ -240,7 +242,7 @@ def render_markdown(date: str, tldr: str, events: list[dict], raw_items: list[di
         "",
         f"# {date} · AI 热榜日报",
         "",
-        f"> 抓取时间:{datetime.now().strftime('%Y-%m-%d %H:%M')}",
+        f"> 抓取时间:{datetime.now(_BJT).strftime('%Y-%m-%d %H:%M')}",
         "",
         "## 📝 今日速览",
         "",
