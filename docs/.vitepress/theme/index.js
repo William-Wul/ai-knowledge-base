@@ -26,7 +26,12 @@ export default {
     })
     watch(
       () => route.path,
-      () => nextTick(() => initZoom())
+      () => nextTick(() => {
+        initZoom()
+        if (typeof window !== 'undefined' && window._hmt) {
+          window._hmt.push(['_trackPageview', window.location.pathname])
+        }
+      })
     )
   },
   Layout() {
