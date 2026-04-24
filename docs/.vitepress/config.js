@@ -166,7 +166,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '🔥 ' + getTitle(join(docsRoot, 'hot/index.md')), link: '/hot/' },
-          ...autoItems('news', []),
+          ...autoItems('news', [], { reverse: true }),
         ],
       },
       {
