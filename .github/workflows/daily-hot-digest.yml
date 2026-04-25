@@ -11,6 +11,7 @@ on:
 # 给这个 workflow 写回仓库的权限(用来提交生成的 MD)
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: daily-hot-digest
@@ -82,7 +83,8 @@ jobs:
             --date "$TODAY" \
             --out "docs/hot/$TODAY.md"
 
-      - name: 提交并 push(触发自动部署)
+      - name: 提交并 push
+        id: commit
         run: |
           TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
           git config user.name "github-actions[bot]"
@@ -91,8 +93,16 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "今日 MD 无变化,跳过提交"
+            echo "changed=false" >> $GITHUB_OUTPUT
             exit 0
           fi
 
           git commit -m "chore(hot): 更新 $TODAY AI 热点日报"
           git push
+          echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: 触发站点部署
+        if: steps.commit.outputs.changed == 'true'
+        run: gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,44 @@
+name: 热点日报兜底检查
+
+# 每天北京时间 11:30（UTC 03:30）检查当日热点是否已生成
+# 如果 10:30 的定时任务漏跑，这里兜底补触发
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 检查今日热点文件是否存在
+        id: check
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          echo "today=$TODAY" >> $GITHUB_OUTPUT
+
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/William-Wul/ai-knowledge-base/contents/docs/hot/${TODAY}.md")
+
+          echo "file_status=$HTTP_STATUS" >> $GITHUB_OUTPUT
+          echo "今日($TODAY)热点文件 HTTP 状态: $HTTP_STATUS"
+
+      - name: 触发热点日报生成(兜底)
+        if: steps.check.outputs.file_status != '200'
+        run: |
+          echo "今日热点文件不存在，触发 daily-hot-digest..."
+          gh workflow run daily-hot-digest.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 已有文件，无需补跑
+        if: steps.check.outputs.file_status == '200'
+        run: echo "今日热点已生成，跳过。"
