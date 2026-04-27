@@ -21,10 +21,17 @@ date: 2026-04-27
 
 整个备考期间，她没有订阅过 ChatGPT，没有用过 Claude。原因很朴素：「免费的为什么不用，为什么要付费？」
 
-![陈雨欣的故事封面](../public/images/news/2026-04-27/a023-cover.png)
+![软科2025中国大学社会工作专业排名](../public/images/news/2026-04-27/a023-chatbox.webp)
 <div class="figcaption">
 
-这篇文章由 AI 领域创作者卡兹克（数字生命卡兹克）采访陈雨欣后写成，今天在微信公众号发出后引发大量转发。（图源：[数字生命卡兹克](https://mp.weixin.qq.com/s/0v-Yn5p02nzMjw5Z8-Enlw)）
+软科2025中国大学专业排名，社会工作方向共148所院校参评，北京大学位列第一（总分57.7）。这也是陈雨欣选定这个方向的背景之一。（图源：[数字生命卡兹克](https://mp.weixin.qq.com/s/0v-Yn5p02nzMjw5Z8-Enlw)）
+
+</div>
+
+![北大2026年硕士招生计划：社会工作专业](../public/images/news/2026-04-27/a023-study.webp)
+<div class="figcaption">
+
+北大社会学系2026年硕士招生计划表：社会工作专业（代码035200）全日制计划招17人，其中6个推免名额，留给统考的只有11个。（图源：[数字生命卡兹克](https://mp.weixin.qq.com/s/0v-Yn5p02nzMjw5Z8-Enlw)）
 
 </div>
 
@@ -47,13 +54,6 @@ date: 2026-04-27
 去年五月，她在小红书上看到上届北大社工考研第一名的学姐推荐了一款叫 Chatbox 的工具（当时免费可用），从这里正式开始接触 AI 辅助学习。后来主力转为 DeepSeek，豆包用来生成图片和做模拟面试，讯飞星火偶尔用来生成论文框架。
 
 国内免费工具，全套。
-
-![陈雨欣的 Chatbox 对话列表](../public/images/news/2026-04-27/a023-chatbox.webp)
-<div class="figcaption">
-
-陈雨欣在免费版 Chatbox 里的对话列表：「社会工作知识体系探讨」「北大社工考研预测」「考前焦虑疏导」……每一条都是她当时真实的学习需求。（图源：[数字生命卡兹克](https://mp.weixin.qq.com/s/0v-Yn5p02nzMjw5Z8-Enlw)）
-
-</div>
 
 ---
 
@@ -82,13 +82,6 @@ date: 2026-04-27
 **最终版本 = AI 批改宏观结构 + 学长批改专业深度 + 自己的思考**。
 
 她的解释很直接：「我怕 AI 的思路替代了我自己的思路。怕我在考场上写出来的东西，不是我自己想的。」
-
-![陈雨欣备考时的学习状态](../public/images/news/2026-04-27/a023-study.webp)
-<div class="figcaption">
-
-备考期间，陈雨欣没有找家里用过一分钱，勤工俭学自给自足，同时买书、准备考研资料。（图源：[数字生命卡兹克](https://mp.weixin.qq.com/s/0v-Yn5p02nzMjw5Z8-Enlw)）
-
-</div>
 
 ---
 
