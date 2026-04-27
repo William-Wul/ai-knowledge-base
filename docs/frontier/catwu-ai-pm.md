@@ -7,8 +7,6 @@ date: 2026-04-27
 # Claude产品负责人的PM方法论和AI时代工作方法
 
 
----
-
 Cat Wu 是 Anthropic Claude Code 和 Cowork 的产品负责人。
 
 普林斯顿 CS 专业，做过工程师，去 Index Ventures 做了三年风险投资，2024 年 8 月加入 Anthropic。一年半后，她和 Claude Code 负责人 Boris Cherny 一起，把 Claude Code 做成了 Anthropic 300 亿美元年化收入里增长最猛的产品线。
