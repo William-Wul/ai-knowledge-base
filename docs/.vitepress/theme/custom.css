@@ -545,3 +545,8 @@ body:has(.home-wrapper) .VPContent {
   .stages-grid { grid-template-columns: 1fr; }
   .hero-section { padding: 48px 16px 40px; }
 }
+
+/* ===== 隐藏标题悬停锚点 # 号 ===== */
+.header-anchor {
+  display: none !important;
+}
