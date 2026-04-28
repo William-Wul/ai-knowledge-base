@@ -108,7 +108,7 @@ export default defineConfig({
       {
         text: '🧠 阶段一 · 快速认知',
         link: '/stage-1/',
-        collapsed: false,
+        collapsed: true,
         items: autoItems('stage-1', [
           { text: '一文看懂AI是什么', link: '/stage-1/what-is-ai' },
           { text: 'AI 常见术语一点通', link: '/stage-1/ai-terminology' },
