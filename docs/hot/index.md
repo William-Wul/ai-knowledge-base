@@ -5,11 +5,11 @@ description: 每日自动抓取各大平台的 AI 相关热榜，去重汇总
 
 # 4月29日热点
 
-> 抓取时间:2026-04-29 10:22
+> 抓取时间:2026-04-29 18:20
 
 ## 📝 今日速览
 
-今日AI领域主要关注点集中在OpenAI相关事件对资本市场的影响，以及AI对就业市场的冲击。杭州发布应对AI替代岗位的指引，同时工业富联财报显示AI算力需求持续爆发。
+今日AI领域主要聚焦于OpenAI相关事件对金融市场的影响，以及中国AI企业如智谱、Minimax和DeepSeek的市场进展。OpenAI的负面消息导致美股相关板块下跌，而中国AI公司在港股市场表现活跃。同时，AI技术在实际应用中的部署速度加快，多家券商迅速接入DeepSeek V4。
 
 ---
 
@@ -18,65 +18,65 @@ description: 每日自动抓取各大平台的 AI 相关热榜，去重汇总
 > 点击每条可展开查看 200-300 字概述和代表链接。
 
 <details>
-<summary><b>1. OpenAI 营收未达预期，软银、甲骨文、AMD 股价同日下跌</b>　🔥🔥🔥🔥</summary>
+<summary><b>1. OpenAI负面消息影响金融市场</b>　🔥🔥🔥🔥🔥</summary>
 
-OpenAI未能达成预期目标的消息导致相关股票承压，包括软银、甲骨文和AMD等公司股价下跌。这一事件反映出市场对AI领军企业业绩的高度敏感，也表明AI产业与资本市场的联动日益紧密。对普通投资者而言，需要关注AI企业的实际进展而非单纯概念炒作。
+OpenAI未能达成预期目标的消息导致美股相关板块下跌，软银股价创六个月来最大跌幅，甲骨文和AMD也受到拖累。这一事件不仅反映了市场对AI技术进展的高度敏感，也显示出OpenAI作为行业标杆的影响力。对于普通投资者而言，AI相关股票的高波动性需要更加谨慎的风险管理。
 
 **[查看代表报道 →](https://wallstreetcn.com/articles/3771095)**
 
 </details>
 
 <details>
-<summary><b>2. 杭州发布应对AI替代岗位的指引</b>　🔥🔥🔥🔥</summary>
+<summary><b>2. 中国AI企业智谱、Minimax进入港股通</b>　🔥🔥🔥🔥</summary>
 
-杭州市发布针对AI替代工作岗位的应对指引，这是地方政府首次系统性回应AI对就业的影响。此前已有法院判决支持公司因引入AI而裁员的案例。这些进展显示AI对就业市场的冲击已进入政策应对阶段，普通工作者需要关注技能转型和职业规划。
+智谱和Minimax即将进入恒生科技和港股通，标志着中国AI企业在资本市场的进一步认可。这一进展不仅提升了这些公司的融资能力，也为投资者提供了更多参与AI行业增长的机会。对于普通投资者，这意味着可以通过港股通渠道更便捷地投资中国领先的AI企业。
 
-**[查看代表报道 →](https://www.baidu.com/s?wd=%E5%B2%97%E4%BD%8D%E8%A2%ABAI%E6%9B%BF%E4%BB%A3%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%E6%9D%AD%E5%B7%9E%E5%8F%91%E5%B8%83%E6%8C%87%E5%BC%95)**
-
-</details>
-
-<details>
-<summary><b>3. 工业富联财报显示AI算力需求爆发</b>　🔥🔥🔥🔥</summary>
-
-工业富联第一季度财报显示，受益于AI算力需求增长，营收同比增长57%，净利润增长103%。这一数据印证了AI基础设施建设的强劲需求，也反映出整个产业链上游的景气度。对行业从业者而言，AI硬件和基础设施领域仍存在较大发展空间。
-
-**[查看代表报道 →](https://wallstreetcn.com/articles/3771123)**
+**[查看代表报道 →](https://wallstreetcn.com/articles/3771194)**
 
 </details>
 
 <details>
-<summary><b>4. OpenAI模型将登陆亚马逊Bedrock平台</b>　🔥🔥🔥</summary>
+<summary><b>3. DeepSeek V4在金融行业快速部署</b>　🔥🔥🔥🔥</summary>
 
-OpenAI宣布其模型将通过亚马逊Bedrock平台提供服务，这是OpenAI扩大商业化的重要一步。Bedrock作为AWS的托管服务，将降低企业使用OpenAI模型的门槛。对开发者而言，这意味着更便捷的模型接入方式，但也需关注可能的平台锁定风险。
+6家券商在2小时内完成DeepSeek V4的接入，24小时内上线，展示了AI技术在金融行业的高效应用。这一快速部署不仅体现了DeepSeek V4的技术成熟度，也反映了金融机构对AI工具的迫切需求。对于金融从业者，这意味着更高效的工具支持，可能改变传统的工作流程。
+
+**[查看代表报道 →](https://www.cls.cn/detail/2359433)**
+
+</details>
+
+<details>
+<summary><b>4. OpenAI模型将登陆Amazon Bedrock</b>　🔥🔥🔥🔥</summary>
+
+OpenAI与AWS宣布合作，将OpenAI模型引入Amazon Bedrock平台。这一合作扩展了OpenAI模型的可用性，使更多企业能够通过AWS的云服务访问先进的AI技术。对于开发者而言，这意味着更便捷的模型集成和更低的部署成本。
 
 **[查看代表报道 →](https://stratechery.com/2026/an-interview-with-openai-ceo-sam-altman-and-aws-ceo-matt-garman-about-bedrock-managed-agents/)**
 
 </details>
 
 <details>
-<summary><b>5. 全AI生成电影《灵魂摆渡》引发讨论</b>　🔥🔥🔥</summary>
+<summary><b>5. ChatGPT广告服务引发讨论</b>　🔥🔥🔥</summary>
 
-全AI生成的《灵魂摆渡》电影宣布制作，使用AI建模替代原班演员。这一尝试引发关于AI在创意产业中角色的讨论，涉及艺术创作、版权和观众接受度等多方面问题。对普通观众而言，AI生成内容的质量和情感表达仍是关键考量因素。
-
-**[查看代表报道 →](https://www.zhihu.com/question/2030222424457703714)**
-
-</details>
-
-<details>
-<summary><b>6. Claude系统提示漏洞导致费用浪费</b>　🔥🔥🔥</summary>
-
-Claude AI系统被曝存在提示漏洞，可能导致用户费用浪费和管理代理失效。这一技术问题反映出当前大模型服务在稳定性和成本控制方面的挑战。对开发者用户而言，需要更加谨慎地监控API使用情况，避免意外支出。
-
-**[查看代表报道 →](https://github.com/anthropics/claude-code/issues/49363)**
-
-</details>
-
-<details>
-<summary><b>7. ChatGPT开始展示广告</b>　🔥🔥🔥</summary>
-
-ChatGPT被观察到开始展示广告内容，这标志着商业化进程的深入。虽然具体实施方式尚不明确，但这一变化可能影响用户体验。普通用户需要适应AI服务从纯工具向商业化平台的转变。
+Hacker News上关于ChatGPT如何服务广告的讨论引发关注。这一话题反映了AI技术在商业化应用中的新尝试，也引发了关于用户体验和隐私的讨论。对于普通用户，这可能意味着未来在使用AI工具时会遇到更多广告内容。
 
 **[查看代表报道 →](https://www.buchodi.com/how-chatgpt-serves-ads-heres-the-full-attribution-loop/)**
+
+</details>
+
+<details>
+<summary><b>6. 中美AI竞争的本质差距</b>　🔥🔥🔥</summary>
+
+B站上关于中美AI竞争本质差距的讨论引发热议。这一话题触及了技术、政策和市场等多方面的因素，反映了公众对AI领域国际竞争的关注。对于行业从业者，这提供了一个思考自身定位和战略的视角。
+
+**[查看代表报道 →](https://search.bilibili.com/all?keyword=%E4%B8%AD%E7%BE%8EAI%E7%AB%9E%E4%BA%89%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%B7%AE%E8%B7%9D%E5%9C%A8%E5%93%AA)**
+
+</details>
+
+<details>
+<summary><b>7. 硅谷视角下的DeepSeek V4</b>　🔥🔥🔥</summary>
+
+B站上从硅谷视角分析DeepSeek V4的内容引发关注。这一讨论展示了中国AI技术在国际视野中的表现，也为国内开发者提供了外部视角的反馈。对于技术爱好者，这是一个了解国内外技术评价差异的机会。
+
+**[查看代表报道 →](https://search.bilibili.com/all?keyword=%E4%BB%8E%E7%A1%85%E8%B0%B7%E8%A7%86%E8%A7%92%E7%9C%8BDeepSeekV4)**
 
 </details>
 
