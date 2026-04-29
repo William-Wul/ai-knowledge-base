@@ -8,7 +8,7 @@ date: 2026-04-29
 
 ## 一、发生了什么
 
-2026 年 4 月 28 日，Claude 的开发商 Anthropic 宣布：和 8 家主流创意软件同时完成技术对接，包括 Blender、Adobe Creative Cloud、Autodesk Fusion、SketchUp、Ableton、Splice、Affinity by Canva、Resolume。
+Claude 的开发商 Anthropic 宣布：和 8 家主流创意软件同时完成技术对接，包括 Blender、Adobe Creative Cloud、Autodesk Fusion、SketchUp、Ableton、Splice、Affinity by Canva、Resolume。
 
 这次发布的产品叫「连接器」（Connector）。所谓连接器，可以理解为给 Claude 装了一双手——以前 Claude 只能坐在聊天框里和你说话，从今以后，它可以直接伸手操作这些软件。
 
