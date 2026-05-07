@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 学习词汇本</title>
+<style>
+:root {
+  --bg: #f8faff;
+  --surface: rgba(255,255,255,0.92);
+  --surface-2: #f4f6ff;
+  --surface-3: rgba(255,255,255,0.72);
+  --text-primary: #1f2430;
+  --text-secondary: #667085;
+  --text-tertiary: #8c8fa3;
+  --border: rgba(104,114,151,0.16);
+  --border-2: rgba(104,114,151,0.28);
+  --accent: #6757f5;
+  --accent-2: #17bdf0;
+  --accent-bg: rgba(103,87,245,0.12);
+  --danger: #bd2d45;
+  --danger-bg: #fff0f3;
+  --warning: #b56618;
+  --warning-bg: #fff4de;
+  --success: #1c9661;
+  --success-bg: #e9f8f1;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+  --shadow: 0 22px 70px rgba(34, 60, 158, 0.15);
+  --card-shadow: 0 14px 38px rgba(57, 75, 133, 0.11);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101322;
+    --surface: rgba(27,31,48,0.92);
+    --surface-2: rgba(44,49,74,0.9);
+    --surface-3: rgba(31,36,56,0.74);
+    --text-primary: #f7f8ff;
+    --text-secondary: #b9bfd3;
+    --text-tertiary: #858ba3;
+    --border: rgba(255,255,255,0.11);
+    --border-2: rgba(255,255,255,0.2);
+    --accent: #9a86ff;
+    --accent-2: #35cdf4;
+    --accent-bg: rgba(154,134,255,0.18);
+    --danger: #ff8da0;
+    --danger-bg: rgba(189,45,69,0.18);
+    --warning: #ffca7c;
+    --warning-bg: rgba(255,156,47,0.17);
+    --success: #7be0ae;
+    --success-bg: rgba(40,178,111,0.16);
+  }
+}
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 4%, rgba(195,76,255,0.26), transparent 31%),
+    radial-gradient(circle at 92% 12%, rgba(31,90,255,0.18), transparent 35%),
+    radial-gradient(circle at 84% 82%, rgba(23,188,239,0.18), transparent 34%),
+    linear-gradient(135deg, #fbf9ff 0%, #f7f9ff 44%, #f4fbff 100%);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(82,101,170,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(82,101,170,0.08) 1px, transparent 1px);
+  background-size: 120px 120px;
+  pointer-events: none;
+  mask-image: radial-gradient(circle at 50% 42%, black, transparent 78%);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background:
+      radial-gradient(circle at 12% 8%, rgba(142,78,255,0.28), transparent 34%),
+      radial-gradient(circle at 90% 14%, rgba(31,90,255,0.2), transparent 38%),
+      radial-gradient(circle at 78% 84%, rgba(23,188,239,0.14), transparent 36%),
+      linear-gradient(135deg, #111525 0%, #14182a 52%, #101827 100%);
+  }
+}
+.app {
+  min-height: 100vh;
+  padding: 18px;
+  position: relative;
+}
+.app-shell {
+  height: calc(100vh - 36px);
+  min-height: 640px;
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 18px;
+  border: 1px solid rgba(255,255,255,0.72);
+  border-radius: 28px;
+  background: rgba(255,255,255,0.52);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(24px);
+  overflow: hidden;
+}
+.sidebar {
+  position: relative;
+  min-height: 0;
+  padding: 24px 20px;
+  color: white;
+  background:
+    radial-gradient(circle at 82% 14%, rgba(255,255,255,0.2), transparent 22%),
+    linear-gradient(155deg, rgba(177,72,255,0.96), rgba(72,75,244,0.96) 48%, rgba(12,173,235,0.9));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.58;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 78px 78px;
+  pointer-events: none;
+}
+.sparkle {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  transform: rotate(45deg);
+  background: radial-gradient(circle, #fff 0 13%, rgba(255,255,255,0.78) 14% 23%, transparent 25%);
+  filter: drop-shadow(0 0 13px rgba(255,255,255,0.8));
+  pointer-events: none;
+}
+.sparkle.one { top: 82px; right: 42px; }
+.sparkle.two { width: 19px; height: 19px; top: 148px; right: 86px; opacity: 0.75; }
+.brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.app-logo {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 16px 34px rgba(5,35,150,0.34);
+}
+.app-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.title { font-size: 22px; line-height: 1.2; font-weight: 760; margin: 0 0 5px; letter-spacing: 0; }
+.subtitle { font-size: 12px; color: rgba(255,255,255,0.76); margin: 0; }
+.lookup-section {
+  position: relative;
+  background: rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 22px;
+  padding: 15px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.lookup-row { display: grid; gap: 12px; align-items: stretch; width: 100%; }
+.lookup-row > input,
+.lookup-row > textarea {
+  display: block;
+  width: 100%;
+}
+input[type="text"], input[type="password"], select, textarea {
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+input[type="text"], input[type="password"], select { height: 42px; }
+#lookup-word {
+  width: 100%;
+  height: 52px;
+  font-size: 17px;
+  font-weight: 560;
+  border: 0;
+  background: rgba(255,255,255,0.94);
+  box-shadow: 0 12px 24px rgba(7,27,102,0.16);
+}
+#lookup-word::placeholder { color: rgba(31,36,48,0.42); font-weight: 460; }
+input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-bg); }
+button {
+  font-size: 13px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-family: inherit;
+  height: 38px;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s, border-color 0.15s;
+}
+button:hover { background: var(--surface-2); }
+button:active { transform: scale(0.98); }
+button.primary {
+  background: linear-gradient(135deg, #ff7bd4, #7b5cff 50%, #15c3f0);
+  color: white;
+  border: 0;
+  box-shadow: 0 14px 26px rgba(29,52,188,0.24);
+  font-weight: 700;
+}
+button.primary:hover { background: linear-gradient(135deg, #ff7bd4, #7b5cff 50%, #15c3f0); box-shadow: 0 16px 30px rgba(29,52,188,0.28); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.context-input {
+  width: 100%;
+  min-height: 74px;
+  max-height: 156px;
+  resize: vertical;
+  line-height: 1.52;
+  overflow-y: auto;
+  color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.17);
+  border-color: rgba(255,255,255,0.18);
+}
+.context-input::placeholder { color: rgba(255,255,255,0.62); }
+.interpret-row { display: grid; grid-template-columns: 1fr; width: 100%; margin-top: 14px; }
+.interpret-row .primary { width: 100%; height: 44px; }
+.config-bar { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: rgba(255,255,255,0.72); flex-wrap: wrap; }
+.api-status { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; color: rgba(255,255,255,0.82); font-weight: 650; }
+.api-status:hover { color: white; }
+.export-btn {
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(255,255,255,0.82);
+  font-size: 12px;
+  font-weight: 650;
+}
+.export-btn:hover { background: transparent; color: white; }
+.status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--warning); }
+.status-dot.ready { background: #32d47d; box-shadow: 0 0 0 4px rgba(50,212,125,0.18); }
+.status-dot.fallback { background: var(--accent-2); }
+.main {
+  min-width: 0;
+  padding: 26px 28px 28px 8px;
+  overflow: auto;
+}
+.main-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 2px 0 18px;
+}
+.toolbar-title { min-width: 0; }
+.main-title { font-size: 24px; font-weight: 760; margin: 0 0 4px; letter-spacing: 0; }
+.interpret-count {
+  margin-left: 8px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 560;
+  vertical-align: 2px;
+}
+.main-subtitle { margin: 0; color: var(--text-secondary); font-size: 13px; }
+.toolbar-left { display: flex; align-items: center; min-width: 0; gap: 14px; }
+.result-panel { margin: 0; }
+.section-title { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.74); margin: 0; letter-spacing: 0.01em; }
+.main .section-title { color: var(--text-secondary); margin-bottom: 10px; }
+.recent-section {
+  position: relative;
+  margin-top: 24px;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.recent-head { display: grid; gap: 10px; margin: 0 0 12px; }
+.sidebar-tabs { display: flex; align-items: center; gap: 18px; }
+.sidebar-tab {
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(255,255,255,0.62);
+  font-size: 13px;
+  font-weight: 760;
+}
+.sidebar-tab:hover { background: transparent; color: white; }
+.sidebar-tab.active { color: white; }
+.recent-tools { display: grid; grid-template-columns: 1fr; gap: 8px; align-items: center; }
+.recent-tools input {
+  width: 100%;
+  height: 34px;
+  font-size: 12px;
+  color: white;
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.18);
+}
+.recent-tools input::placeholder { color: rgba(255,255,255,0.58); }
+.text-btn { height: 34px; padding: 6px 10px; font-size: 12px; color: white; background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.18); }
+.text-btn:hover { background: rgba(255,255,255,0.24); }
+.filter-pills { display: none; }
+.pill { font-size: 12px; padding: 4px 12px; height: 28px; border-radius: 999px; border: 0.5px solid var(--border); background: transparent; cursor: pointer; color: var(--text-secondary); }
+.pill.active { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+.pill-count { opacity: 0.6; margin-left: 4px; font-size: 11px; }
+.word-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding-right: 2px;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+.word-list > * { flex: 0 0 auto; }
+.word-card {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.82);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: var(--card-shadow);
+}
+.word-card:hover { border-color: rgba(103,87,245,0.28); transform: translateY(-1px); }
+.word-card.pending { border-color: var(--warning); border-width: 1px; }
+.word-head { padding: 22px 24px 18px; cursor: pointer; }
+.word-summary { min-width: 0; display: grid; gap: 8px; }
+.summary-top { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.word-term { font-size: 34px; font-weight: 760; line-height: 1.16; color: var(--text-primary); letter-spacing: 0; }
+.summary-top .phonetic { font-size: 16px; }
+.summary-fullname { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; color: var(--text-secondary); font-size: 14px; line-height: 1.5; }
+.summary-translation { font-size: 21px; font-weight: 650; color: var(--text-primary); line-height: 1.42; }
+.summary-empty { font-size: 13px; color: var(--text-secondary); }
+.word-meta { font-size: 12px; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.word-tag { font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+.tag-ai { background: #EEEDFE; color: #3C3489; }
+.tag-code { background: #E1F5EE; color: #085041; }
+.tag-product { background: #FAECE7; color: #712B13; }
+.tag-other { background: #F1EFE8; color: #444441; }
+@media (prefers-color-scheme: dark) {
+  .tag-ai { background: #3C3489; color: #CECBF6; }
+  .tag-code { background: #085041; color: #9FE1CB; }
+  .tag-product { background: #712B13; color: #F5C4B3; }
+  .tag-other { background: #444441; color: #D3D1C7; }
+}
+.pending-badge, .freq-badge { font-size: 10px; padding: 2px 6px; border-radius: 999px; background: var(--warning-bg); color: var(--warning); font-weight: 650; }
+.freq-hot { background: var(--danger-bg); color: var(--danger); }
+.phonetic { font-size: 13px; color: var(--text-secondary); font-family: ui-serif, "Times New Roman", serif; font-weight: 400; }
+.word-head .phonetic { margin-left: 4px; }
+.summary-fullname .phonetic { margin-left: 4px; }
+.icon-btn { width: 28px; height: 28px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border: none; background: transparent; cursor: pointer; border-radius: 4px; color: var(--text-tertiary); font-size: 14px; }
+.icon-btn:hover { background: var(--surface-2); color: var(--text-primary); }
+.icon-btn.starred { color: var(--warning); }
+.word-body { display: none; padding: 24px; border-top: 1px solid var(--border); }
+.word-card.open .word-body { display: block; }
+.word-section { margin-top: 24px; }
+.word-section:first-child { margin-top: 0; }
+.section-label { font-size: 13px; color: var(--text-secondary); margin: 0 0 10px; letter-spacing: 0.02em; font-weight: 700; }
+.section-content { font-size: 16px; line-height: 1.75; margin: 0; }
+.highlight-box {
+  background: linear-gradient(135deg, rgba(250,250,255,0.96), rgba(241,246,255,0.96));
+  border: 1px solid rgba(120,134,184,0.12);
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+}
+.full-name { font-style: italic; color: var(--text-secondary); }
+.full-name-parts { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: baseline; }
+.full-name-word { color: var(--text-secondary); }
+.full-name-word .phonetic { margin-left: 4px; }
+.breakdown-inline { font-size: 14px; line-height: 1.9; color: var(--text-primary); }
+.breakdown-inline code {
+  background: linear-gradient(135deg, rgba(137,92,255,0.12), rgba(31,173,235,0.12));
+  color: var(--accent);
+  padding: 3px 7px;
+  border-radius: 7px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+.example-box {
+  background: rgba(248,246,255,0.9);
+  border-left: 4px solid rgba(129,87,255,0.55);
+  border-radius: 18px;
+  padding: 15px 17px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.context-box { background: var(--surface-2); border-radius: 16px; padding: 13px 15px; font-size: 13px; line-height: 1.65; white-space: pre-wrap; }
+.uncertain-box { background: var(--warning-bg); color: var(--warning); border-radius: 16px; padding: 13px 15px; font-size: 13px; line-height: 1.65; }
+.empty { text-align: center; padding: 2rem 1rem; color: var(--text-tertiary); font-size: 13px; }
+.empty.result-empty {
+  background: var(--surface);
+  border: 1px dashed var(--border-2);
+  border-radius: var(--radius-lg);
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+}
+.sidebar .empty { color: rgba(255,255,255,0.68); padding: 22px 12px; }
+.loading-card { padding: 14px; text-align: center; color: var(--text-secondary); font-size: 13px; }
+.error-msg { color: var(--danger); font-size: 12px; padding: 9px 12px; background: var(--danger-bg); border-radius: var(--radius-md); margin-top: 8px; }
+.success-msg { color: var(--success); font-size: 12px; padding: 9px 12px; background: var(--success-bg); border-radius: var(--radius-md); margin-top: 8px; }
+.warn-msg { color: var(--warning); font-size: 12px; padding: 9px 12px; background: var(--warning-bg); border-radius: var(--radius-md); margin-top: 8px; }
+.spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--border); border-top-color: var(--text-primary); border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; margin-right: 6px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.action-row { display: flex; gap: 8px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+.action-row button { font-size: 12px; padding: 5px 12px; height: 32px; }
+.action-row .delete-btn { color: var(--danger); margin-left: auto; }
+.learning-status { border-top: 1px solid var(--border); padding-top: 18px; }
+.status-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.status-title { font-size: 13px; color: var(--text-secondary); margin-right: 2px; }
+.status-btn { height: 34px; padding: 6px 14px; font-size: 13px; background: transparent; border-color: var(--border-2); border-radius: 999px; font-weight: 650; }
+.status-btn.understood { background: var(--success); border-color: var(--success); color: white; }
+.status-btn.confused { background: linear-gradient(135deg, #ff9b3d, #805cff); border-color: transparent; color: white; }
+.deepening-panel {
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid rgba(107,122,184,0.14);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(139,90,255,0.08), rgba(23,191,240,0.08));
+}
+.deepening-title { margin: 0 0 12px; font-size: 13px; color: var(--text-secondary); font-weight: 650; }
+.deepening-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.deepening-actions button { height: 34px; padding: 6px 12px; font-size: 12px; border-radius: 12px; font-weight: 650; }
+.custom-question { margin-top: 10px; display: grid; gap: 8px; }
+.custom-question textarea { width: 100%; min-height: 78px; max-height: 140px; resize: vertical; font-size: 13px; line-height: 1.5; }
+.custom-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.supplement-list { display: grid; gap: 10px; margin-top: 12px; }
+.supplement-card { border-top: 1px solid var(--border); padding-top: 12px; }
+.supplement-title { font-size: 13px; color: var(--text-primary); margin: 0 0 8px; font-weight: 650; }
+.supplement-content { background: var(--surface); border-radius: 16px; padding: 12px 14px; font-size: 14px; line-height: 1.65; white-space: pre-wrap; }
+.supplement-actions { display: flex; justify-content: flex-end; margin-top: 8px; }
+.supplement-actions button { height: 28px; padding: 4px 10px; font-size: 12px; color: var(--danger); }
+.mastery-note { font-size: 13px; color: var(--success); }
+.link-btn { border: none; background: transparent; color: var(--accent); padding: 0; height: auto; font-size: inherit; }
+.modal { position: fixed; inset: 0; background: rgba(8,12,26,0.52); display: none; align-items: center; justify-content: center; z-index: 100; padding: 20px; backdrop-filter: blur(10px); }
+.modal.open { display: flex; }
+.modal-content { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 22px; max-width: 580px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: var(--shadow); }
+.modal-content h3 { margin: 0 0 12px; font-size: 18px; font-weight: 700; }
+.modal-content p { font-size: 13px; color: var(--text-secondary); margin: 0 0 12px; line-height: 1.7; }
+.form-row { margin-bottom: 12px; }
+.form-row label { display: block; font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+.form-row input, .form-row select { width: 100%; }
+.prompt-box { background: var(--surface-2); border-radius: var(--radius-md); padding: 12px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.6; white-space: pre-wrap; word-break: break-word; max-height: 200px; overflow-y: auto; margin-bottom: 8px; }
+.modal-content textarea { width: 100%; min-height: 140px; resize: vertical; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.5; }
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; flex-wrap: wrap; }
+.tab-bar { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 0.5px solid var(--border); }
+.tab { padding: 8px 14px; border: none; background: transparent; cursor: pointer; font-size: 13px; color: var(--text-secondary); border-bottom: 2px solid transparent; height: auto; border-radius: 0; }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.library-index {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  min-height: 0;
+}
+.letter-link {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  background: rgba(255,255,255,0.18);
+  border-color: transparent;
+}
+.letter-link.disabled {
+  color: rgba(255,255,255,0.34);
+  background: rgba(255,255,255,0.08);
+  opacity: 1;
+  cursor: default;
+}
+.library-letter-section { display: grid; gap: 10px; scroll-margin-top: 8px; }
+.library-letter-title { margin: 8px 0 0; font-size: 13px; font-weight: 760; color: rgba(255,255,255,0.78); }
+.sidebar .word-card {
+  background: rgba(255,255,255,0.13);
+  border-color: rgba(255,255,255,0.13);
+  box-shadow: none;
+  color: white;
+  border-radius: 16px;
+}
+.sidebar .word-card:hover { background: rgba(255,255,255,0.19); border-color: rgba(255,255,255,0.22); transform: none; }
+.sidebar .word-head { padding: 13px 14px; }
+.sidebar .word-summary { gap: 4px; }
+.sidebar .word-term { font-size: 17px; color: white; font-weight: 760; }
+.sidebar .summary-fullname { display: none; }
+.sidebar .summary-translation { font-size: 13px; color: rgba(255,255,255,0.68); font-weight: 500; line-height: 1.4; }
+.sidebar .phonetic { color: rgba(255,255,255,0.68); font-size: 12px; }
+.sidebar .pending-badge { background: rgba(255,255,255,0.16); color: rgba(255,255,255,0.86); }
+.result-panel .word-card.open {
+  border-radius: 26px;
+  min-height: calc(100vh - 132px);
+}
+.result-panel .word-card.open .word-head {
+  padding: 34px 38px 28px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(22,191,240,0.16), transparent 32%),
+    linear-gradient(140deg, rgba(145,88,255,0.11), rgba(255,255,255,0.72) 48%, rgba(35,112,255,0.08));
+  border-bottom: 1px solid var(--border);
+}
+.result-panel .word-card.open .word-body { padding: 30px 38px 34px; }
+.result-panel .word-card.open .word-term { font-size: 42px; }
+@media (prefers-color-scheme: dark) {
+  .highlight-box { background: linear-gradient(135deg, rgba(37,42,64,0.96), rgba(33,42,68,0.96)); }
+  .example-box { background: rgba(36,39,62,0.92); }
+  .result-panel .word-card.open .word-head {
+    background:
+      radial-gradient(circle at 88% 18%, rgba(22,191,240,0.16), transparent 32%),
+      linear-gradient(140deg, rgba(145,88,255,0.18), rgba(27,31,48,0.86) 48%, rgba(35,112,255,0.12));
+  }
+}
+@media (max-width: 780px) {
+  .app { padding: 0; }
+  .app-shell { height: auto; min-height: 100vh; grid-template-columns: 1fr; border-radius: 0; overflow: visible; }
+  .sidebar { padding: 22px; }
+  .word-list { max-height: 280px; flex: none; }
+  .main { padding: 22px; }
+  .result-panel .word-card.open { min-height: 0; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <i class="sparkle one"></i>
+      <i class="sparkle two"></i>
+      <div class="brand">
+        <div class="app-logo" aria-hidden="true">
+          <img src="app-icon.png" alt="">
+        </div>
+        <div>
+          <h1 class="title">AI 学习词汇本</h1>
+          <p class="subtitle">把陌生术语讲成人话</p>
+        </div>
+      </div>
+
+      <div class="lookup-section">
+        <div class="lookup-row">
+          <input type="text" id="lookup-word" placeholder="输入或粘贴英文术语/单词" />
+          <textarea id="lookup-context" class="context-input" rows="2" placeholder="可选：这个词出现在什么场景？贴一段原文会更准"></textarea>
+        </div>
+        <div class="interpret-row">
+          <button id="interpret-btn" class="primary">解读</button>
+        </div>
+        <div class="config-bar">
+          <span class="api-status"><span class="status-dot" id="api-dot"></span><span id="api-status-text">deepseek-chat 在线解读</span></span>
+          <button class="export-btn" id="export-btn" type="button">导出词库</button>
+        </div>
+        <div id="lookup-error"></div>
+      </div>
+
+      <section class="recent-section">
+        <div class="recent-head">
+          <div class="sidebar-tabs" aria-label="词汇视图切换">
+            <button class="sidebar-tab active" type="button" data-sidebar-mode="history">学习历史</button>
+            <button class="sidebar-tab" type="button" data-sidebar-mode="library">查看词库</button>
+          </div>
+          <div class="recent-tools">
+            <input type="text" id="search" placeholder="搜索词库..." />
+            <div class="library-index" id="library-index" hidden></div>
+          </div>
+        </div>
+        <div class="word-list" id="word-list">
+          <div class="empty">还没有解读记录</div>
+        </div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <div class="main-toolbar">
+        <div class="toolbar-left">
+          <div class="toolbar-title">
+            <h2 class="main-title">当前解读<span id="current-interpret-count" class="interpret-count"></span></h2>
+            <p class="main-subtitle">解读完成后会自动保存，下次输入同一个词直接调出</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-panel">
+        <div id="current-result">
+          <div class="empty result-empty">把看到的新词粘贴到左侧，点「解读」</div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Manual Prompt Modal (fallback) -->
+<div class="modal" id="prompt-modal">
+  <div class="modal-content">
+    <h3>步骤 1 / 2：复制提示词到 AI 对话</h3>
+    <p>复制下面整段，发送到 Claude.ai 或其他 AI 对话窗口，AI 会返回 JSON。</p>
+    <div class="prompt-box" id="prompt-text"></div>
+    <button id="copy-prompt" class="primary">📋 一键复制提示词</button>
+    <p style="margin-top: 16px;">复制成功后，去对话粘贴发送，再回来点下面的按钮粘贴 JSON 结果：</p>
+    <div class="modal-actions">
+      <button id="prompt-cancel">稍后处理（保留为待补充）</button>
+      <button id="prompt-next" class="primary">已发送，下一步 →</button>
+    </div>
+  </div>
+</div>
+
+<!-- Paste JSON Modal -->
+<div class="modal" id="paste-modal">
+  <div class="modal-content">
+    <h3>步骤 2 / 2：粘贴 AI 返回的 JSON</h3>
+    <p>把 AI 返回的内容（整段或只有 JSON 部分）粘贴到下面，自动解析。</p>
+    <textarea id="json-input" placeholder='例如：&#10;{&#10;  "fullName": "...",&#10;  "breakdown": [...],&#10;  ...&#10;}'></textarea>
+    <div id="paste-error"></div>
+    <div class="modal-actions">
+      <button id="paste-back">← 回上一步</button>
+      <button id="paste-cancel">稍后处理</button>
+      <button id="paste-save" class="primary">解析并保存</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const STORAGE_KEY = 'ailinkstart:vocab:words';
+  const API_ENDPOINT = '/api/vocab/interpret';
+  const MODEL_NAME = 'deepseek-chat';
+  let words = [];
+  let currentFilter = 'all';
+  let searchTerm = '';
+  let sidebarMode = 'history';
+  let activeWordId = null;
+  let currentWordId = null;
+  let supplementaryLoading = null;
+  let customQuestionWordId = null;
+  const expandedMasteryHistory = new Set();
+  const DEFAULT_CONFIG = { provider: 'worker', model: MODEL_NAME, baseUrl: API_ENDPOINT };
+  let config = Object.assign({}, DEFAULT_CONFIG);
+  const hasNativeStorage = false;
+
+  const TAG_LABELS = { ai: 'AI', code: '编程', product: '产品', other: '其他' };
+
+  function loadWords() {
+    try { words = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
+    catch (e) { words = []; }
+  }
+  function saveWords() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(words)); }
+    catch (e) { console.error('Save failed', e); }
+  }
+  function loadConfig() {
+    updateApiStatus();
+  }
+  function normalizeConfig() {
+    config = Object.assign({}, DEFAULT_CONFIG);
+  }
+  function saveConfig() {
+  }
+  function hasUsefulConfig(c) {
+    return !!(c && (c.model || c.baseUrl));
+  }
+  function saveNativeData() {
+  }
+  function requestNativeData() {
+  }
+  function requestNativePaste() {
+    return false;
+  }
+  function getExportConfig() {
+    return {
+      provider: 'ailinkstart-worker',
+      model: MODEL_NAME
+    };
+  }
+  function exportWords() {
+    const payload = {
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      words: JSON.parse(JSON.stringify(words || [])),
+      config: getExportConfig()
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const date = new Date().toISOString().slice(0, 10);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ai-vocab-notebook-' + date + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  function selectDefaultCurrent() {
+    if (currentWordId && words.some(w => w.id === currentWordId)) return;
+    const latest = words.slice().sort((a, b) => (b.lastInterpretedAt || b.createdAt || 0) - (a.lastInterpretedAt || a.createdAt || 0))[0];
+    currentWordId = latest ? latest.id : null;
+  }
+  window.__nativeStorageLoaded = function() {}
+  function updateApiStatus() {
+    const dot = document.getElementById('api-dot');
+    const txt = document.getElementById('api-status-text');
+    dot.classList.remove('ready', 'fallback');
+    dot.classList.add('ready');
+    txt.textContent = MODEL_NAME + ' 在线解读';
+  }
+
+  function isHot(w) { return (w.viewCount || 0) >= 3; }
+  function isThisWeek(w) { return (Date.now() - new Date(w.createdAt).getTime()) < 7 * 24 * 3600 * 1000; }
+  function isPending(w) { return w.status === 'pending'; }
+  function isLoading(w) { return w.status === 'loading'; }
+
+  function getInterpretationCount(w) {
+    const n = Number(w && w.interpretationCount);
+    if (Number.isFinite(n) && n > 0) return Math.floor(n);
+    return w && !isPending(w) ? 1 : 0;
+  }
+
+  function recordInterpretation(w) {
+    if (!w) return 0;
+    w.interpretationCount = getInterpretationCount(w) + 1;
+    return w.interpretationCount;
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function buildPrompt(term, tag, context) {
+    const contextBlock = context && context.trim()
+      ? '\n\n用户提供的上下文：\n"""\n' + context.trim() + '\n"""'
+      : '';
+    return '你是一个面向中文母语学习者的英文术语解释助手。我在做 vibecoding，会遇到大量 AI、编程、产品领域的英文专业词汇或缩写。请先判断词条是不是一个明确可解读的英文术语、技术词、产品词、互联网/AI 圈常见表达，再决定是否解释。\n\n词条："' + term + '"' + contextBlock + '\n分类：' + TAG_LABELS[tag] + '\n\n仅返回严格 JSON（不要任何前后缀文字、不要 markdown 代码块包裹），格式如下：\n{\n  "isRecognizedTerm": true,\n  "confidence": "high / medium / low 三选一",\n  "uncertaintyReason": "如果 isRecognizedTerm 为 false 或 confidence 为 low，说明为什么不能确定；否则留空",\n  "displayTerm": "词条的标准写法和大小写，例如 agi -> AGI，github -> GitHub，push -> push",\n  "fullName": "如果是缩写则给出英文全称，否则原样返回单词本身",\n  "fullNameParts": [{"word": "英文全称里的单词", "phoneticUs": "这个单词的美式 IPA 音标，带斜杠"}],\n  "phoneticUs": "如果词条本身是普通单词或品牌词，给出这个词条本身的美式 IPA 音标；如果词条是缩写且 fullName 是多词全称，则留空字符串",\n  "breakdown": [{"part": "单词或缩写的某一部分", "meaning": "中文含义"}],\n  "translation": "直译或专业翻译，简短一句",\n  "explanation": "用最直白、易懂的中文解释这个词，避免堆术语，让小白能立刻明白。2-4句话。",\n  "example": "贴近 vibecoding/AI学习/产品 真实场景的具体使用例子，让我能想到什么时候会遇到这个词。1-2句话。"\n}\n\n如果词条不是明确术语、只是随机字母/占位符/泛泛的字母组合（例如 abc、test、asdf），必须返回：\n{\n  "isRecognizedTerm": false,\n  "confidence": "low",\n  "uncertaintyReason": "这个输入不像一个明确的技术/AI/产品术语；如果它来自某个上下文，需要提供上下文再判断。",\n  "displayTerm": "原词",\n  "fullName": "原词",\n  "fullNameParts": [],\n  "phoneticUs": "",\n  "breakdown": [],\n  "translation": "可能不是一个明确术语",\n  "explanation": "不要编造解释，只说明无法可靠解读。",\n  "example": ""\n}\n\n要求：\n- 如果用户提供了上下文，请优先根据上下文判断这个词的具体含义。同一个词在不同场景下意思可能完全不同（例如 agent 在 LangChain 框架里指 AI 智能体，在销售场景里指代理人）。如果上下文存在但与词条无明显关联，正常解读即可，不要强行关联。\n- displayTerm 必须使用行业中最常见、最规范的大小写；即使用户输入大小写错误，也要纠正显示。例如 agi 显示 AGI，rag 显示 RAG，github 显示 GitHub。\n- AGI 的中文专业翻译优先使用“通用人工智能”，不是“人工通用智能”。\n- 不要为了显得有用而硬解释。遇到不确定、歧义很大、缺少上下文的词，宁可返回 isRecognizedTerm=false 或 confidence=low。\n- fullNameParts：如果 fullName 是 Retrieval-Augmented Generation，就拆成 Retrieval、Augmented、Generation 三个词，并分别给美式音标；不要给整段全称的音标。\n- phoneticUs：只用于词条本身的读音，例如 push = /pʊʃ/、GitHub = /ˈɡɪtˌhʌb/；RAG 这类缩写如果已经有 fullNameParts，就不要在 phoneticUs 里塞整段全称音标。\n- 所有音标必须使用美式读法；不要写英式音标；不确定时给最常见的美式读法。\n- breakdown：只在有学习价值时提供；缩写按字母拆（如 RAG = R/A/G），合成词按词根拆（如 GitHub = Git + Hub），俚语短语按词拆；普通单词如果拆不出有意义的部分，可以返回空数组。\n- 解释直白通俗，避免循环定义。\n- 例子要场景化、口语化。';
+  }
+
+  function getDisplayTerm(w) {
+    return w.displayTerm || w.term || '';
+  }
+
+  function ensureLearningFields(w) {
+    if (w.understood !== true && w.understood !== false) w.understood = null;
+    if (!('understoodAt' in w)) w.understoodAt = null;
+    if (!Array.isArray(w.supplementary)) w.supplementary = [];
+    return w;
+  }
+
+  function getAngleLabel(angle) {
+    return {
+      analogy: '🌱 用类比',
+      deeper: '📖 更底层',
+      example: '🎬 举例子',
+      custom: '💬 你问'
+    }[angle] || '补充解释';
+  }
+
+  function buildSupplementPrompt(w, angle, question) {
+    const term = getDisplayTerm(w) || w.term;
+    const fullName = w.fullName || '';
+    const context = w.context && w.context.trim() ? w.context.trim() : '';
+    const angleInstruction = {
+      analogy: '请用一个日常生活中的具体事物或场景来类比这个概念。比喻要贴切、具体、有画面感，让一个完全不懂技术的人也能理解。不要再用任何术语。',
+      deeper: '请先简单解释这个词依赖的 1-2 个更基础的前置概念（用户可能也不懂这些基础概念），用直白语言讲清楚这些前置概念，然后再回过头来解释这个词本身。',
+      example: '请给出一个非常具体、详细的真实使用场景。包括：什么人、什么时候、为了什么目的、怎么用了这个东西、最后得到了什么结果。像讲一个简短故事一样。',
+      custom: '用户的具体疑问是："' + (question || '') + '"\n请直接针对这个疑问回答，不要重复原始解释里已有的内容。'
+    }[angle] || '';
+
+    return '词条："' + term + '"\n' +
+      (fullName && fullName.toLowerCase() !== term.toLowerCase() ? '英文全称：' + fullName + '\n' : '') +
+      '原始翻译：' + (w.translation || '') + '\n' +
+      '原始解释：' + (w.explanation || '') + '\n' +
+      (context ? '当时的上下文：' + context + '\n' : '') +
+      '\n用户标记了"还没懂"，需要换角度补充解释。\n\n' +
+      angleInstruction + '\n\n' +
+      '请只返回纯文本解释，3-5 句话，简洁但具体。不要 JSON 格式，不要 markdown 标题，不要重复原始解释里已有的内容。';
+  }
+
+  function hasExpandedFullName(w) {
+    const displayTerm = getDisplayTerm(w).toLowerCase();
+    return !!(w.fullName && w.fullName.toLowerCase() !== displayTerm);
+  }
+
+  function shouldShowFullNameSummary(w) {
+    const parts = Array.isArray(w.fullNameParts) ? w.fullNameParts.filter(p => p && p.word) : [];
+    if (hasExpandedFullName(w)) return true;
+    return parts.length > 1 && parts.some(p => p.phoneticUs) && !w.phoneticUs;
+  }
+
+  function normalizeFullNameParts(w, parsed) {
+    if (Array.isArray(parsed.fullNameParts)) {
+      return parsed.fullNameParts
+        .map(p => ({ word: (p.word || p.part || '').trim(), phoneticUs: (p.phoneticUs || p.phonetic || '').trim() }))
+        .filter(p => p.word);
+    }
+    if (!hasExpandedFullName(w)) return [];
+    return String(w.fullName)
+      .split(/[\s-]+/)
+      .filter(Boolean)
+      .map(word => ({ word, phoneticUs: '' }));
+  }
+
+  function renderFullName(w) {
+    const parts = Array.isArray(w.fullNameParts) ? w.fullNameParts.filter(p => p && p.word) : [];
+    if (parts.length) {
+      return '<div class="full-name-parts">' + parts.map(p =>
+        '<span class="full-name-word">' + escapeHtml(p.word) +
+        (p.phoneticUs ? ' <span class="phonetic">' + escapeHtml(p.phoneticUs) + '</span>' : '') +
+        '</span>'
+      ).join('') + '</div>';
+    }
+    return '<p class="section-content full-name">' + escapeHtml(w.fullName) + '</p>';
+  }
+
+  function renderFullNameInline(w) {
+    const parts = Array.isArray(w.fullNameParts) ? w.fullNameParts.filter(p => p && p.word) : [];
+    if (parts.length) {
+      return parts.map(p =>
+        '<span class="full-name-word">' + escapeHtml(p.word) +
+        (p.phoneticUs ? ' <span class="phonetic">' + escapeHtml(p.phoneticUs) + '</span>' : '') +
+        '</span>'
+      ).join('');
+    }
+    return '<span class="full-name-word">' + escapeHtml(w.fullName || '') + '</span>';
+  }
+
+  function shouldShowBreakdown(w) {
+    const parts = Array.isArray(w.breakdown) ? w.breakdown : [];
+    if (!parts.length) return false;
+    if (parts.length > 1) return true;
+    const part = String(parts[0].part || '').toLowerCase();
+    const meaning = String(parts[0].meaning || '').trim();
+    return !(part === String(getDisplayTerm(w) || '').toLowerCase() && meaning === String(w.translation || '').trim());
+  }
+
+  function updateStats() {
+    const setText = (id, value) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    };
+    setText('stat-total', words.length);
+    setText('stat-starred', words.filter(w => w.starred).length);
+    setText('stat-hot', words.filter(isHot).length);
+    setText('stat-week', words.filter(isThisWeek).length);
+    setText('count-all', words.length);
+    setText('count-pending', words.filter(isPending).length);
+    setText('count-ai', words.filter(w => w.tag === 'ai').length);
+    setText('count-code', words.filter(w => w.tag === 'code').length);
+    setText('count-product', words.filter(w => w.tag === 'product').length);
+    setText('count-other', words.filter(w => w.tag === 'other').length);
+    setText('count-starred', words.filter(w => w.starred).length);
+    setText('count-hot', words.filter(isHot).length);
+  }
+
+  function getFilteredWords() {
+    let list = words.slice();
+    if (searchTerm) {
+      const s = searchTerm.toLowerCase();
+      list = list.filter(w =>
+        w.term.toLowerCase().includes(s) ||
+        (w.displayTerm || '').toLowerCase().includes(s) ||
+        (w.fullName || '').toLowerCase().includes(s) ||
+        (w.phoneticUs || '').toLowerCase().includes(s) ||
+        (w.fullNameParts || []).some(p => (p.word || '').toLowerCase().includes(s) || (p.phoneticUs || '').toLowerCase().includes(s)) ||
+        (w.translation || '').toLowerCase().includes(s) ||
+        (w.explanation || '').toLowerCase().includes(s)
+      );
+    }
+    return list;
+  }
+
+  function getHistoryWords() {
+    return getFilteredWords().slice()
+      .sort((a, b) => (a.createdAt || 0) - (b.createdAt || 0));
+  }
+
+  function getLibraryLetter(w) {
+    const title = getDisplayTerm(w).trim();
+    const first = title.charAt(0).toUpperCase();
+    return /^[A-Z]$/.test(first) ? first : '#';
+  }
+
+  function getLibraryGroups() {
+    return getFilteredWords().slice()
+      .sort((a, b) => getDisplayTerm(a).localeCompare(getDisplayTerm(b), 'en', { sensitivity: 'base' }))
+      .reduce((groups, w) => {
+        const letter = getLibraryLetter(w);
+        if (!groups[letter]) groups[letter] = [];
+        groups[letter].push(w);
+        return groups;
+      }, {});
+  }
+
+  function renderLibraryIndex(groups) {
+    const index = document.getElementById('library-index');
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    const extraLetters = groups['#'] ? ['#'] : [];
+    index.hidden = sidebarMode !== 'library';
+    if (index.hidden) {
+      index.innerHTML = '';
+      return;
+    }
+    index.innerHTML = letters.concat(extraLetters).map(letter => {
+      const disabled = !groups[letter];
+      return '<button class="letter-link' + (disabled ? ' disabled' : '') + '" type="button" data-letter="' + letter + '" ' + (disabled ? 'disabled' : '') + '>' + letter + '</button>';
+    }).join('');
+  }
+
+  function renderLibraryWords(groups) {
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    const extraLetters = groups['#'] ? ['#'] : [];
+    return letters.concat(extraLetters)
+      .filter(letter => groups[letter])
+      .map(letter => {
+        const groupId = letter === '#' ? 'library-group-other' : 'library-group-' + letter;
+        return '<section class="library-letter-section" id="' + groupId + '">' +
+          '<p class="library-letter-title">' + letter + '</p>' +
+          groups[letter].map(w => renderCard(w, { compactActions: true })).join('') +
+        '</section>';
+      }).join('');
+  }
+
+  function scrollLibraryListTo(target) {
+    const list = document.getElementById('word-list');
+    if (!list || !target) return;
+    const listRect = list.getBoundingClientRect();
+    const targetRect = target.getBoundingClientRect();
+    const top = list.scrollTop + targetRect.top - listRect.top - 6;
+    list.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  }
+
+  function renderSidebarList() {
+    document.querySelectorAll('[data-sidebar-mode]').forEach(tab => {
+      tab.classList.toggle('active', tab.dataset.sidebarMode === sidebarMode);
+    });
+    const container = document.getElementById('word-list');
+    const visibleWords = getFilteredWords();
+
+    if (sidebarMode === 'library') {
+      const groups = getLibraryGroups();
+      renderLibraryIndex(groups);
+      if (visibleWords.length === 0) {
+        container.innerHTML = '<div class="empty">' + (words.length === 0 ? '还没有解读记录' : '没有匹配的词汇') + '</div>';
+        return;
+      }
+      container.innerHTML = renderLibraryWords(groups);
+      bindCardEvents(container);
+      return;
+    }
+
+    renderLibraryIndex({});
+    const list = getHistoryWords();
+    if (list.length === 0) {
+      container.innerHTML = '<div class="empty">' + (words.length === 0 ? '还没有解读记录' : (searchTerm ? '没有匹配的词汇' : '还没有学习记录')) + '</div>';
+      return;
+    }
+    container.innerHTML = list.map(w => renderCard(w, { compactActions: true })).join('');
+    bindCardEvents(container);
+  }
+
+  function renderCurrent() {
+    const container = document.getElementById('current-result');
+    const countEl = document.getElementById('current-interpret-count');
+    if (!container) return;
+    const current = words.find(w => w.id === currentWordId);
+    if (!current) {
+      if (countEl) countEl.textContent = '';
+      container.innerHTML = '<div class="empty result-empty">把看到的新词粘贴到上方，点「解读」</div>';
+      return;
+    }
+    if (countEl) {
+      const count = getInterpretationCount(current);
+      countEl.textContent = count > 0 ? '（已解读' + count + '次）' : '';
+    }
+    container.innerHTML = renderCard(current, { compactActions: false });
+    bindCardEvents(container);
+  }
+
+  function render() {
+    updateStats();
+    renderCurrent();
+    renderSidebarList();
+  }
+
+  function bindCardEvents(container) {
+    container.querySelectorAll('.word-head').forEach(el => {
+      el.addEventListener('click', e => { if (e.target.closest('.icon-btn')) return; showWord(el.dataset.id); });
+    });
+    container.querySelectorAll('[data-action="star"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); toggleStar(el.dataset.id); });
+    });
+    container.querySelectorAll('[data-action="delete"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); deleteWord(el.dataset.id); });
+    });
+    container.querySelectorAll('[data-action="fetch"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); processWord(el.dataset.id, { countInterpretation: true }); });
+    });
+    container.querySelectorAll('[data-action="manual"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); openPromptModal(el.dataset.id); });
+    });
+    container.querySelectorAll('[data-action="understood"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); setUnderstood(el.dataset.id, el.dataset.value); });
+    });
+    container.querySelectorAll('[data-action="deepen"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); addSupplementary(el.dataset.id, el.dataset.angle); });
+    });
+    container.querySelectorAll('[data-action="custom-open"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); customQuestionWordId = el.dataset.id; render(); });
+    });
+    container.querySelectorAll('[data-action="custom-cancel"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); customQuestionWordId = null; render(); });
+    });
+    container.querySelectorAll('[data-action="custom-submit"]').forEach(el => {
+      el.addEventListener('click', e => {
+        e.stopPropagation();
+        const box = container.querySelector('[data-custom-question="' + el.dataset.id + '"]');
+        addSupplementary(el.dataset.id, 'custom', box ? box.value.trim() : '');
+      });
+    });
+    container.querySelectorAll('[data-action="delete-supp"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); deleteSupplementary(el.dataset.id, el.dataset.suppId); });
+    });
+    container.querySelectorAll('[data-action="expand-history"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); expandedMasteryHistory.add(el.dataset.id); render(); });
+    });
+  }
+
+  function renderSupplementaryList(w, includeDelete) {
+    const items = Array.isArray(w.supplementary) ? w.supplementary.slice().sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0)) : [];
+    if (!items.length) return '';
+    return '<div class="supplement-list">' + items.map(item => {
+      const title = item.angle === 'custom'
+        ? '💬 你问：' + escapeHtml(item.question || '')
+        : escapeHtml(getAngleLabel(item.angle));
+      const deleteButton = includeDelete
+        ? '<div class="supplement-actions"><button data-action="delete-supp" data-id="' + w.id + '" data-supp-id="' + item.id + '">删除</button></div>'
+        : '';
+      return '<div class="supplement-card">' +
+        '<p class="supplement-title">' + title + '</p>' +
+        '<div class="supplement-content">' + escapeHtml(item.content || '') + '</div>' +
+        deleteButton +
+      '</div>';
+    }).join('') + '</div>';
+  }
+
+  function renderLearningStatus(w, options) {
+    if (options && options.compactActions) return '';
+    ensureLearningFields(w);
+    const supCount = w.supplementary.length;
+    const selectedYes = w.understood === true ? ' understood' : '';
+    const selectedNo = w.understood === false ? ' confused' : '';
+    const statusButtons = '<div class="status-row">' +
+      '<span class="status-title">我的状态：</span>' +
+      '<button class="status-btn' + selectedYes + '" data-action="understood" data-value="true" data-id="' + w.id + '">✓ 懂了</button>' +
+      '<button class="status-btn' + selectedNo + '" data-action="understood" data-value="false" data-id="' + w.id + '">🤔 还没懂</button>' +
+      '</div>';
+
+    if (w.understood === true) {
+      const history = supCount > 0
+        ? ' · 经过了 ' + supCount + ' 次深化解读 ' +
+          (expandedMasteryHistory.has(w.id)
+            ? ''
+            : '<button class="link-btn" data-action="expand-history" data-id="' + w.id + '">展开历史</button>')
+        : '';
+      const historyList = expandedMasteryHistory.has(w.id) ? renderSupplementaryList(w, false) : '';
+      return '<div class="word-section learning-status">' +
+        statusButtons +
+        '<div class="deepening-panel"><span class="mastery-note">✓ 已掌握' + history + '</span>' + historyList + '</div>' +
+      '</div>';
+    }
+
+    if (w.understood === false) {
+      const loadingKey = supplementaryLoading && supplementaryLoading.id === w.id ? supplementaryLoading.angle : '';
+      const button = (angle, label) => {
+        const isLoading = loadingKey === angle;
+        return '<button data-action="deepen" data-id="' + w.id + '" data-angle="' + angle + '" ' + (loadingKey ? 'disabled' : '') + '>' +
+          (isLoading ? '<span class="spinner"></span>' : '') + label +
+        '</button>';
+      };
+      const customBox = customQuestionWordId === w.id
+        ? '<div class="custom-question">' +
+          '<textarea data-custom-question="' + w.id + '" placeholder="把你卡住的问题写在这里，比如：为什么 RAG 比微调好？"></textarea>' +
+          '<div class="custom-actions">' +
+            '<button data-action="custom-cancel" data-id="' + w.id + '">取消</button>' +
+            '<button class="primary" data-action="custom-submit" data-id="' + w.id + '">提交</button>' +
+          '</div>' +
+        '</div>'
+        : '';
+      return '<div class="word-section learning-status">' +
+        statusButtons +
+        '<div class="deepening-panel">' +
+          '<p class="deepening-title">还是有点抽象？换个角度再讲讲：</p>' +
+          '<div class="deepening-actions">' +
+            button('analogy', '🌱 用类比') +
+            button('deeper', '📖 更底层') +
+            button('example', '🎬 举例子') +
+            '<button data-action="custom-open" data-id="' + w.id + '" ' + (loadingKey ? 'disabled' : '') + '>💬 我自己问</button>' +
+          '</div>' +
+          customBox +
+          renderSupplementaryList(w, true) +
+        '</div>' +
+      '</div>';
+    }
+
+    return '<div class="word-section learning-status">' + statusButtons + '</div>';
+  }
+
+  function renderCard(w, options) {
+    options = options || {};
+    const tagClass = 'tag-' + (w.tag || 'other');
+    const hot = isHot(w);
+    const pending = isPending(w);
+    const loading = isLoading(w);
+    const errored = w.status === 'error';
+    const viewCount = w.viewCount || 0;
+    let body = '';
+    if (loading) {
+      body = '<div class="loading-card"><span class="spinner"></span>调用 ' + (config.model || 'AI') + ' 生成解释...</div>';
+    } else if (errored) {
+      body = '<div class="error-msg">' + escapeHtml(w.error || '生成失败') + '</div>' +
+        '<div class="action-row">' +
+        '<button data-action="fetch" data-id="' + w.id + '" class="primary">重试</button>' +
+        '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>' +
+        '</div>';
+    } else if (pending) {
+      body = '<div class="word-section"><p class="section-content" style="color: var(--text-secondary);">这个词还没有解释。点下方按钮调用 AI 自动生成。</p></div>' +
+        '<div class="action-row">' +
+        '<button data-action="fetch" data-id="' + w.id + '" class="primary">自动生成</button>' +
+        '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>' +
+        '</div>';
+    } else {
+      if (w.isRecognizedTerm === false || w.confidence === 'low') {
+        const reason = w.uncertaintyReason || '这个输入不像一个明确术语；如果它来自某个上下文，可以补充上下文后重新解读。';
+        const actionRow = options.compactActions
+          ? ''
+          : '<div class="action-row">' +
+            '<button data-action="fetch" data-id="' + w.id + '">重新解读</button>' +
+            '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>' +
+            '</div>';
+        body = '<div class="word-section"><div class="uncertain-box">' + escapeHtml(reason) + '</div></div>' +
+          renderLearningStatus(w, options) +
+          actionRow;
+      } else {
+      const breakdownItems = Array.isArray(w.breakdown) && w.breakdown.length >= 2 ? w.breakdown : [];
+      const breakdownHtml = breakdownItems.map(b =>
+        '<span><code>' + escapeHtml(b.part) + '</code> ' + escapeHtml(b.meaning) + '</span>'
+      ).join(' · ');
+      const breakdownSection = breakdownHtml
+        ? '<div class="word-section"><p class="section-label">🔍 拆解</p><div class="breakdown-inline">' + breakdownHtml + '</div></div>' : '';
+      const exampleSection = w.example
+        ? '<div class="word-section"><p class="section-label">📍 举个例子</p><div class="example-box">' + escapeHtml(w.example) + '</div></div>' : '';
+      const contextSection = w.context && w.context.trim()
+        ? '<div class="word-section"><p class="section-label">📎 当时的语境</p><div class="context-box">' + escapeHtml(w.context.trim()) + '</div></div>' : '';
+      const actionRow = options.compactActions
+        ? ''
+        : '<div class="action-row">' +
+          '<button data-action="fetch" data-id="' + w.id + '">重新解读</button>' +
+          '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>' +
+          '</div>';
+      body = breakdownSection +
+        '<div class="word-section"><p class="section-label">💡 大白话解释</p><div class="highlight-box"><p class="section-content">' + escapeHtml(w.explanation || '') + '</p></div></div>' +
+        exampleSection +
+        contextSection +
+        renderLearningStatus(w, options) +
+        actionRow;
+      }
+    }
+    const pendingBadge = pending ? '<span class="pending-badge">待补充</span>' : '';
+    const hotBadge = '';
+    const statusText = errored ? '生成失败' : (pending ? '等待解释' : (loading ? '生成中...' : ''));
+    const phoneticHtml = w.phoneticUs && !hasExpandedFullName(w) ? '<span class="phonetic">' + escapeHtml(w.phoneticUs) + '</span>' : '';
+    const fullNameSummary = shouldShowFullNameSummary(w)
+      ? '<div class="summary-fullname">' + renderFullNameInline(w) + '</div>' : '';
+    const translationSummary = w.translation
+      ? '<div class="summary-translation">' + escapeHtml(w.translation) + '</div>'
+      : (statusText ? '<div class="summary-empty">' + statusText + '</div>' : '');
+    const openClass = options.compactActions ? '' : 'open';
+    return '<div class="word-card ' + openClass + ' ' + (pending ? 'pending' : '') + '" data-id="' + w.id + '">' +
+      '<div class="word-head" data-id="' + w.id + '">' +
+        '<div class="word-summary">' +
+          '<div class="summary-top">' +
+            '<span class="word-term">' + escapeHtml(getDisplayTerm(w)) + phoneticHtml + '</span>' +
+            pendingBadge + hotBadge +
+          '</div>' +
+          fullNameSummary +
+          translationSummary +
+        '</div>' +
+      '</div>' +
+      '<div class="word-body">' + body + '</div>' +
+    '</div>';
+  }
+
+  function showWord(id) {
+    const w = words.find(x => x.id === id);
+    if (!w) return;
+    currentWordId = id;
+    w.open = true;
+    if (!isPending(w) && !isLoading(w)) { w.viewCount = (w.viewCount || 0) + 1; w.lastViewed = Date.now(); }
+    saveWords(); render();
+  }
+  function toggleStar(id) {
+    const w = words.find(x => x.id === id);
+    if (!w) return;
+    w.starred = !w.starred;
+    saveWords(); render();
+  }
+  function setUnderstood(id, value) {
+    const w = words.find(x => x.id === id);
+    if (!w) return;
+    ensureLearningFields(w);
+    const next = value === 'true';
+    w.understood = w.understood === next ? null : next;
+    w.understoodAt = w.understood === null ? null : Date.now();
+    if (w.understood === true) {
+      expandedMasteryHistory.delete(id);
+      customQuestionWordId = null;
+    }
+    saveWords(); render();
+  }
+  async function addSupplementary(id, angle, question) {
+    const w = words.find(x => x.id === id);
+    if (!w || supplementaryLoading) return;
+    ensureLearningFields(w);
+    if (angle === 'custom' && !question) {
+      alert('先写下你具体卡在哪里');
+      return;
+    }
+    normalizeConfig();
+    supplementaryLoading = { id, angle };
+    render();
+    try {
+      const content = await supplementWithWorker(w, angle, question);
+      w.supplementary.push({
+        id: 'sup_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+        angle,
+        question: angle === 'custom' ? question : null,
+        content: content.trim(),
+        createdAt: Date.now()
+      });
+      w.understood = false;
+      w.understoodAt = Date.now();
+      customQuestionWordId = null;
+      w.lastInterpretedAt = Date.now();
+    } catch (err) {
+      alert('补充解释生成失败：' + (err.message || '未知错误'));
+    } finally {
+      supplementaryLoading = null;
+      saveWords();
+      render();
+    }
+  }
+  function deleteSupplementary(id, suppId) {
+    const w = words.find(x => x.id === id);
+    if (!w) return;
+    ensureLearningFields(w);
+    if (!confirm('确定删除这条补充解释？')) return;
+    w.supplementary = w.supplementary.filter(item => item.id !== suppId);
+    saveWords(); render();
+  }
+  function deleteWord(id) {
+    if (!confirm('确定删除这个词条？')) return;
+    words = words.filter(w => w.id !== id);
+    if (currentWordId === id) currentWordId = words[0] ? words[0].id : null;
+    saveWords(); render();
+  }
+
+  // ===== API call layer =====
+  async function callWorker(payload) {
+    const res = await fetch(API_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const raw = await res.text();
+    let data = null;
+    try { data = raw ? JSON.parse(raw) : null; }
+    catch (e) { throw new Error('接口返回不是有效 JSON：' + raw.slice(0, 160)); }
+    if (!res.ok) {
+      throw new Error((data && (data.error || data.message)) || ('接口请求失败：' + res.status));
+    }
+    return data;
+  }
+
+  async function interpretWithWorker(w) {
+    const data = await callWorker({
+      mode: 'interpret',
+      term: w.term,
+      tag: w.tag || 'ai',
+      context: w.context || ''
+    });
+    return data && data.result ? data.result : data;
+  }
+
+  async function supplementWithWorker(w, angle, question) {
+    const data = await callWorker({
+      mode: 'supplement',
+      term: w.term,
+      tag: w.tag || 'ai',
+      context: w.context || '',
+      angle,
+      question: question || '',
+      word: {
+        displayTerm: getDisplayTerm(w),
+        fullName: w.fullName || '',
+        translation: w.translation || '',
+        explanation: w.explanation || '',
+        example: w.example || ''
+      }
+    });
+    if (typeof data === 'string') return data;
+    if (data && typeof data.content === 'string') return data.content;
+    if (data && data.result && typeof data.result.content === 'string') return data.result.content;
+    throw new Error('接口没有返回补充解释内容');
+  }
+
+  function parseJsonFromText(text) {
+    let s = text.trim().replace(/^```json\s*/i, '').replace(/^```\s*/, '').replace(/\s*```$/, '').trim();
+    const firstBrace = s.indexOf('{');
+    const lastBrace = s.lastIndexOf('}');
+    if (firstBrace !== -1 && lastBrace > firstBrace) s = s.slice(firstBrace, lastBrace + 1);
+    return JSON.parse(s);
+  }
+
+  async function processWord(id, options) {
+    const w = words.find(x => x.id === id);
+    if (!w) return;
+    options = options || {};
+    normalizeConfig();
+    if (options.countInterpretation && (!isPending(w) || getInterpretationCount(w) === 0)) {
+      recordInterpretation(w);
+    }
+    w.status = 'loading';
+    w.error = null;
+    w.lastInterpretedAt = Date.now();
+    saveWords(); render();
+    try {
+      const parsed = await interpretWithWorker(w);
+      w.isRecognizedTerm = parsed.isRecognizedTerm !== false;
+      w.confidence = parsed.confidence || (w.isRecognizedTerm ? 'medium' : 'low');
+      w.uncertaintyReason = parsed.uncertaintyReason || '';
+      w.displayTerm = parsed.displayTerm || w.term;
+      w.fullName = parsed.fullName || w.term;
+      w.fullNameParts = normalizeFullNameParts(w, parsed);
+      w.phoneticUs = hasExpandedFullName(w) && w.fullNameParts.length ? '' : (parsed.phoneticUs || parsed.phonetic || '');
+      w.breakdown = Array.isArray(parsed.breakdown) ? parsed.breakdown : [];
+      w.translation = parsed.translation || '';
+      w.explanation = parsed.explanation || '';
+      w.example = parsed.example || '';
+      w.status = 'ready';
+      w.error = null;
+      w.lastInterpretedAt = Date.now();
+    } catch (err) {
+      w.status = 'error';
+      const msg = err.message || '未知错误';
+      if (msg.includes('Failed to fetch') || msg.includes('NetworkError') || msg.includes('CORS') || err.name === 'TypeError') {
+        w.error = '暂时无法连接在线解读接口，请稍后再试。';
+      } else {
+        w.error = msg;
+      }
+    }
+    saveWords(); render();
+  }
+
+  function applyParsedToWord(w, parsed) {
+    w.isRecognizedTerm = parsed.isRecognizedTerm !== false;
+    w.confidence = parsed.confidence || (w.isRecognizedTerm ? 'medium' : 'low');
+    w.uncertaintyReason = parsed.uncertaintyReason || '';
+    w.displayTerm = parsed.displayTerm || w.term;
+    w.fullName = parsed.fullName || w.term;
+    w.fullNameParts = normalizeFullNameParts(w, parsed);
+    w.phoneticUs = hasExpandedFullName(w) && w.fullNameParts.length ? '' : (parsed.phoneticUs || parsed.phonetic || '');
+    w.breakdown = Array.isArray(parsed.breakdown) ? parsed.breakdown : [];
+    w.translation = parsed.translation || '';
+    w.explanation = parsed.explanation || '';
+    w.example = parsed.example || '';
+    w.status = 'ready';
+    w.error = null;
+    w.open = true;
+  }
+
+  function interpretWord() {
+    const input = document.getElementById('lookup-word');
+    const contextInput = document.getElementById('lookup-context');
+    const errorDiv = document.getElementById('lookup-error');
+    const term = input.value.trim();
+    const context = contextInput ? contextInput.value.trim() : '';
+    errorDiv.innerHTML = '';
+    if (!term) { errorDiv.innerHTML = '<div class="error-msg">请输入要解读的词</div>'; return; }
+    const existing = words.find(w => w.term.toLowerCase() === term.toLowerCase());
+    if (existing) {
+      existing.viewCount = (existing.viewCount || 0) + 1;
+      recordInterpretation(existing);
+      existing.open = true;
+      existing.lastInterpretedAt = Date.now();
+      currentWordId = existing.id;
+      saveWords(); input.value = ''; if (contextInput) contextInput.value = ''; render();
+      if (isPending(existing) || existing.status === 'error') processWord(existing.id);
+      errorDiv.innerHTML = '<div class="success-msg">词库里已有这个词，已调出旧解读</div>';
+      setTimeout(() => { errorDiv.innerHTML = ''; }, 3000);
+      return;
+    }
+    const newWord = {
+      id: 'w_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+      term: term, tag: 'ai', createdAt: Date.now(), lastInterpretedAt: Date.now(),
+      viewCount: 0, interpretationCount: 1, starred: false, status: 'pending', open: true,
+      context: context,
+      understood: null,
+      understoodAt: null,
+      supplementary: []
+    };
+    words.unshift(newWord);
+    currentWordId = newWord.id;
+    input.value = '';
+    if (contextInput) contextInput.value = '';
+    saveWords(); render();
+    processWord(newWord.id);
+  }
+
+  // ===== Manual prompt modal =====
+  function openPromptModal(id) {
+    const w = words.find(x => x.id === id);
+    if (!w) return;
+    activeWordId = id;
+    document.getElementById('prompt-text').textContent = buildPrompt(w.term, w.tag, w.context || '');
+    document.getElementById('prompt-modal').classList.add('open');
+  }
+  function closeAllModals() {
+    document.querySelectorAll('.modal').forEach(m => m.classList.remove('open'));
+    document.getElementById('paste-error').innerHTML = '';
+    document.getElementById('json-input').value = '';
+  }
+  function copyPrompt() {
+    const text = document.getElementById('prompt-text').textContent;
+    const btn = document.getElementById('copy-prompt');
+    const original = btn.textContent;
+    const done = () => { btn.textContent = '✓ 已复制，去 AI 对话粘贴吧'; setTimeout(() => { btn.textContent = original; }, 2500); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, btn, original, done));
+    } else fallbackCopy(text, btn, original, done);
+  }
+  function fallbackCopy(text, btn, original, done) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); done(); }
+    catch (e) { btn.textContent = '复制失败'; setTimeout(() => { btn.textContent = original; }, 2500); }
+    document.body.removeChild(ta);
+  }
+  function parseJsonInput() {
+    const errorDiv = document.getElementById('paste-error');
+    errorDiv.innerHTML = '';
+    const raw = document.getElementById('json-input').value.trim();
+    if (!raw) { errorDiv.innerHTML = '<div class="error-msg">请粘贴内容</div>'; return; }
+    let parsed;
+    try { parsed = parseJsonFromText(raw); }
+    catch (e) {
+      errorDiv.innerHTML = '<div class="error-msg">JSON 解析失败：' + escapeHtml(e.message) + '</div>';
+      return;
+    }
+    const w = words.find(x => x.id === activeWordId);
+    if (!w) { errorDiv.innerHTML = '<div class="error-msg">找不到对应词条</div>'; return; }
+    applyParsedToWord(w, parsed);
+    saveWords();
+    closeAllModals();
+    render();
+    setTimeout(() => {
+      const el = document.querySelector('.word-card[data-id="' + w.id + '"]');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  }
+  // event bindings
+  document.addEventListener('keydown', e => {
+    const key = (e.key || '').toLowerCase();
+    if (key === 'v' && (e.metaKey || e.ctrlKey) && requestNativePaste()) {
+      e.preventDefault();
+    }
+  });
+  document.getElementById('interpret-btn').addEventListener('click', interpretWord);
+  document.getElementById('lookup-word').addEventListener('keydown', e => { if (e.key === 'Enter') interpretWord(); });
+  document.getElementById('lookup-context').addEventListener('keydown', e => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) interpretWord(); });
+  document.getElementById('search').addEventListener('input', e => { searchTerm = e.target.value; render(); });
+  document.querySelectorAll('[data-sidebar-mode]').forEach(tab => {
+    tab.addEventListener('click', () => {
+      sidebarMode = tab.dataset.sidebarMode;
+      render();
+    });
+  });
+  document.getElementById('library-index').addEventListener('click', e => {
+    const btn = e.target.closest('[data-letter]');
+    if (!btn || btn.disabled) return;
+    const letter = btn.dataset.letter;
+    const targetId = letter === '#' ? 'library-group-other' : 'library-group-' + letter;
+    const target = document.getElementById(targetId);
+    scrollLibraryListTo(target);
+  });
+  document.getElementById('export-btn').addEventListener('click', exportWords);
+  document.getElementById('copy-prompt').addEventListener('click', copyPrompt);
+  document.getElementById('prompt-cancel').addEventListener('click', closeAllModals);
+  document.getElementById('prompt-next').addEventListener('click', () => {
+    document.getElementById('prompt-modal').classList.remove('open');
+    document.getElementById('paste-modal').classList.add('open');
+    setTimeout(() => document.getElementById('json-input').focus(), 100);
+  });
+  document.getElementById('paste-back').addEventListener('click', () => {
+    document.getElementById('paste-modal').classList.remove('open');
+    document.getElementById('prompt-modal').classList.add('open');
+  });
+  document.getElementById('paste-cancel').addEventListener('click', closeAllModals);
+  document.getElementById('paste-save').addEventListener('click', parseJsonInput);
+  document.querySelectorAll('.modal').forEach(m => {
+    m.addEventListener('click', e => { if (e.target === m) closeAllModals(); });
+  });
+  document.querySelectorAll('.pill').forEach(p => {
+    p.addEventListener('click', () => {
+      document.querySelectorAll('.pill').forEach(x => x.classList.remove('active'));
+      p.classList.add('active');
+      currentFilter = p.dataset.filter;
+      render();
+    });
+  });
+
+  loadConfig();
+  loadWords();
+  selectDefaultCurrent();
+  render();
+  requestNativeData();
+})();
+</script>
+</body>
+</html>

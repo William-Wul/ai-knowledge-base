@@ -12,6 +12,8 @@
           :key="zone.title"
           class="feature-card reveal"
           :href="zone.link"
+          :target="zone.target"
+          :rel="zone.rel"
           :ref="el => cardRefs[i] = el"
         >
           <div class="feature-icon" v-html="zone.icon"></div>
@@ -53,6 +55,14 @@ const zones = [
     desc: '专为有编程经验的技术人员准备',
     link: '/coding/',
     icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="8 9 4 12 8 15"/><polyline points="16 9 20 12 16 15"/><line x1="14" y1="6" x2="10" y2="18"/></svg>`,
+  },
+  {
+    title: 'AI 学习词汇本',
+    desc: '随手收录陌生英文术语，AI 帮你解读、拆解、记忆',
+    link: '/vocab/',
+    target: '_blank',
+    rel: 'noopener',
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M4 17a3 3 0 0 1 3-3h12"/><line x1="9" y1="8" x2="14" y2="8"/><line x1="9" y1="11" x2="14" y2="11"/></svg>`,
   },
 ]
 

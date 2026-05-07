@@ -2,6 +2,20 @@
 
 ---
 
+## v1.9 · 2026-05-07
+
+### 新增
+- **AI 学习词汇本上线**：新路由 `/vocab/`，独立工具页（codex 交付的 `web/vocab/index.html`，作为静态页放在 `docs/public/vocab/`）
+  - 入口三处：首页自定义顶栏（`HomeNav.vue`）、首页特色专区第 4 张卡片（`HomeFeatures.vue`）、VitePress 内页顶栏（`config.js` themeConfig.nav）；均新标签打开
+  - 数据策略：词库存在用户浏览器 localStorage（key: `ailinkstart:vocab:words`），用户可手动导出备份；不收集用户数据，不让用户填 API Key
+  - AI 后端：单独一个 Cloudflare Worker（`ai-vocab-api`，代码仓库在 `claude专用/vocab-worker/`），路由 `ailinkstart.com/api/vocab/*`
+    - 模型：DeepSeek `deepseek-chat`，Key 存在 Worker Secret `DEEPSEEK_API_KEY`，不进前端、不进仓库
+    - CORS：仅放行 `https://ailinkstart.com`
+    - 支持两种 mode：`interpret`（解读，返回严格 JSON：`displayTerm/fullName/fullNameParts/breakdown/translation/explanation/example` 等字段）和 `supplement`（换角度补充：`analogy/deeper/example/custom`，返回 `{content}`）
+    - 防刷：Cloudflare WAF Rate limiting，按 IP 5 次 / 10 秒 → Block 10 秒（Free 套餐限制下的最稳配置）
+
+---
+
 ## v1.8 · 2026-05-06
 
 ### 新增

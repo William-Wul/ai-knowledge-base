@@ -101,6 +101,7 @@ export default defineConfig({
       { text: '📰 AI 新闻', link: '/news/' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
       { text: '💻 AI 编程', link: '/coding/' },
+      { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
     ],
 
     sidebar: [
