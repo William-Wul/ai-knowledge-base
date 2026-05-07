@@ -2,6 +2,17 @@
 
 ---
 
+## v1.10 · 2026-05-07
+
+### 调整
+- **密码门体验优化**：`PasswordGate.vue` 把 `sessionStorage` 改成 `localStorage`，密码输入一次后跨标签页/重启浏览器都记得，解决了之前"每次新标签都要重输"的问题
+- **/vocab/ 工具页加密码门**：`docs/public/vocab/index.html` 注入了一段轻量原生 JS 密码门，逻辑/密码/`STORAGE_KEY = 'kb_auth_v1'` 与主站完全一致，三处效果：
+  - 主站登录过的人，进入 /vocab/ 不再二次输入
+  - /vocab/ 单独输入过的人，进入主站也不再二次输入
+  - 同时在 `<head>` 加了 `<meta name="robots" content="noindex, nofollow">`，搜索引擎不会索引这个工具页
+
+---
+
 ## v1.9 · 2026-05-07
 
 ### 新增

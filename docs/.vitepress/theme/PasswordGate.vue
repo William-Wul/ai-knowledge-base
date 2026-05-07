@@ -65,7 +65,7 @@ function redirectIfNotFound() {
 }
 
 onMounted(() => {
-  const stored = sessionStorage.getItem(STORAGE_KEY)
+  const stored = localStorage.getItem(STORAGE_KEY)
   if (stored === 'ok') {
     authenticated.value = true
     redirectIfNotFound()
@@ -76,7 +76,7 @@ onMounted(() => {
 
 function handleSubmit() {
   if (password.value === CORRECT_PASSWORD) {
-    sessionStorage.setItem(STORAGE_KEY, 'ok')
+    localStorage.setItem(STORAGE_KEY, 'ok')
     authenticated.value = true
     redirectIfNotFound()
   } else {
