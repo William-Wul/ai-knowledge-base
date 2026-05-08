@@ -2,6 +2,15 @@
 
 ---
 
+## v1.14 · 2026-05-08
+
+### 工程
+- 加 `.github/dependabot.yml`：Dependabot 每周自动扫 GitHub Actions 版本，任何 action 有新版（如 `actions/checkout@v4` → `v5`）会自动开 PR，一键 merge 即完成升级
+- 替代"6 月前升级 Node 24"这类需要人记的待办，改为 GitHub 主动通知 + 一键合并的零负担流程
+- 不监控 npm 依赖（vitepress / medium-zoom 量少，避免周期性噪音 PR）
+
+---
+
 ## v1.13 · 2026-05-08
 
 ### 修复 / 完善
