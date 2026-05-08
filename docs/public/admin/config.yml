@@ -85,17 +85,6 @@ collections:
       - { label: "发布日期", name: "date", widget: "datetime", required: false }
       - { label: "正文", name: "body", widget: "markdown" }
 
-  - name: "coding"
-    label: "AI 编程"
-    folder: "docs/coding"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "描述", name: "description", widget: "string", required: false }
-      - { label: "发布日期", name: "date", widget: "datetime", required: false }
-      - { label: "正文", name: "body", widget: "markdown" }
-
   - name: "news"
     label: "AI 新闻"
     folder: "docs/news"

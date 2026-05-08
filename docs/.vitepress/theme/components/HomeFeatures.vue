@@ -51,12 +51,6 @@ const zones = [
     icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20l6-6"/><path d="M8 15l5-5 3 3-5 5-3-3z"/><path d="M12 10l4-4 3 3-4 4"/><path d="M18 3l3 3"/></svg>`,
   },
   {
-    title: 'AI 编程',
-    desc: '专为有编程经验的技术人员准备',
-    link: '/coding/',
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="8 9 4 12 8 15"/><polyline points="16 9 20 12 16 15"/><line x1="14" y1="6" x2="10" y2="18"/></svg>`,
-  },
-  {
     title: 'AI 学习词汇本',
     desc: '随手收录陌生英文术语，AI 帮你解读、拆解、记忆',
     link: '/vocab/',

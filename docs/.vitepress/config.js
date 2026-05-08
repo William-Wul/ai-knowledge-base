@@ -100,7 +100,6 @@ export default defineConfig({
       { text: '📝 学习测试', link: '/exams/' },
       { text: '📰 AI 新闻', link: '/news/' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
-      { text: '💻 AI 编程', link: '/coding/' },
       { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
     ],
 
@@ -176,12 +175,6 @@ export default defineConfig({
         link: '/frontier/',
         collapsed: true,
         items: autoItems('frontier', []),
-      },
-      {
-        text: '💻 AI 编程',
-        link: '/coding/',
-        collapsed: true,
-        items: autoItems('coding', []),
       },
     ],
 
