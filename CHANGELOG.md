@@ -2,6 +2,19 @@
 
 ---
 
+## v1.13 · 2026-05-08
+
+### 修复 / 完善
+- **AI 日报自动化重新接通**：v1.12 删除 `scripts/build_hot_digest.py` 但忘了一并改 `daily-hot-digest.yml`（旧 workflow 仍依赖该 Python 脚本 + TrendRadar），会导致次日 10:30 自动同步失败
+- 把 `.github/workflows/daily-hot-digest.yml` 的核心步骤替换为 `node scripts/sync-aihot.mjs`：
+  - 去掉 Python 3.12 / uv / TrendRadar 克隆 / `OPENROUTER_API_KEY` 依赖
+  - 耗时从 ~5-10 分钟降到 ~5 秒
+  - cron 保持 UTC 02:30 = 北京 10:30（AIHOT 8 点生成后 2.5 小时拉，稳）
+- watchdog（兜底检查）文件 `hot-digest-watchdog.yml` 保持不动 —— 它的逻辑（检查 `docs/hot/$TODAY.md` 是否存在 → 否则触发 daily-hot-digest）跟新 workflow 完全兼容
+- `OPENROUTER_API_KEY` secret 不再被 hot 板块使用（但保留在仓库 secret 里，以备其他用途）
+
+---
+
 ## v1.12 · 2026-05-08
 
 ### 重构
