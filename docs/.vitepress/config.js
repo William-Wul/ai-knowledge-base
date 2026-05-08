@@ -97,10 +97,10 @@ export default defineConfig({
           { text: '🚀 阶段六 · AI 创意与创业', link: '/stage-6/' },
         ]
       },
-      { text: '📝 学习测试', link: '/exams/' },
       { text: '📰 AI 新闻', link: '/news/' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
       { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
+      { text: '📝 学习测试', link: '/exams/' },
     ],
 
     sidebar: [
@@ -156,12 +156,6 @@ export default defineConfig({
         items: autoItems('stage-6', []),
       },
       {
-        text: '📝 学习测试',
-        link: '/exams/',
-        collapsed: true,
-        items: autoItems('exams', []),
-      },
-      {
         text: '📰 AI 新闻',
         link: '/news/',
         collapsed: true,
@@ -175,6 +169,12 @@ export default defineConfig({
         link: '/frontier/',
         collapsed: true,
         items: autoItems('frontier', []),
+      },
+      {
+        text: '📝 学习测试',
+        link: '/exams/',
+        collapsed: true,
+        items: autoItems('exams', []),
       },
     ],
 
