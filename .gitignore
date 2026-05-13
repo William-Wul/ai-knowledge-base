@@ -9,3 +9,6 @@ CLAUDE.md
 # article-kb 整个工作区：入库笔记、主题笔记、草稿、原文、索引都不公开发布
 # 仅作为 Claude + William 的本地工作状态，通过飞书同步给 William 审阅
 kb-articles/
+
+# Claude Code 本地状态（worktree 元数据、临时会话文件等），不公开
+.claude/
