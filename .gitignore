@@ -12,3 +12,6 @@ kb-articles/
 
 # Claude Code 本地状态（worktree 元数据、临时会话文件等），不公开
 .claude/
+
+# Obsidian 本地配置（vault 设置、插件、工作区状态），不公开
+.obsidian/
