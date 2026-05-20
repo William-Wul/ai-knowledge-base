@@ -62,6 +62,7 @@ export default defineConfig({
 
   lang: 'zh-CN',
   cleanUrls: true,
+  appearance: false,
 
   vite: {
     build: {
