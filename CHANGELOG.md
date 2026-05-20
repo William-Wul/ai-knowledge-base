@@ -2,6 +2,16 @@
 
 ---
 
+## v1.15 · 2026-05-20
+
+### 内容
+- 新增 news：[Google I/O 2026：主角是 Agent](docs/news/2026-05-20-google-io-2026.md)
+  - 基于 kb-articles A039（数字生命卡兹克 · Google I/O 2026 总结）的二次创作，按非技术员工调性改写
+  - 主线：Agent 是这场发布会的真主角，从模型（Gemini 3.5 Flash）、开发工具（Antigravity 2.0）、个人助手（Spark）、手机系统（Android Halo）、搜索、电商三件套（UCP/AP2/Universal Cart）到 TPU 8 代双芯片，全部围绕 Agent 落地铺基础设施
+  - 共 9 节 + 12 张配图，每张图都做了「图里有什么、对应文中哪个论点」的图注
+
+---
+
 ## v1.14 · 2026-05-08
 
 ### 工程
