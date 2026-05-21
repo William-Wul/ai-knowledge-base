@@ -19,6 +19,16 @@ function getTitle(filePath) {
   return basename(filePath, '.md')
 }
 
+// 读取 frontmatter 的 date 字段（YYYY-MM-DD），没有则返回空串（排到最末尾）
+function getDate(filePath) {
+  try {
+    const content = readFileSync(filePath, 'utf-8')
+    const m = content.match(/^date:\s*(.+)$/m)
+    if (m) return m[1].trim().replace(/["']/g, '')
+  } catch {}
+  return ''
+}
+
 // 把导航链接转成对应的本地文件路径
 function linkToFile(link) {
   const clean = link.replace(/^\//, '')
@@ -30,7 +40,7 @@ function linkToFile(link) {
 // - 已知列表中的文件：若文件存在则保留（保序），文件删了自动消失
 // - 目录里新增的文件：自动追加到末尾（标题从 frontmatter 读取）
 // - reverse: 新文件按日期倒序排（最新在上），用于日报类目录
-function autoItems(dir, knownItems = [], { reverse = false } = {}) {
+function autoItems(dir, knownItems = [], { reverse = false, sortByDate = false } = {}) {
   // 1. 过滤掉文件已不存在的已知项（处理「后台删除」场景）
   const kept = knownItems.filter(item => existsSync(linkToFile(item.link)))
   const keptLinks = new Set(kept.map(i => i.link))
@@ -39,10 +49,24 @@ function autoItems(dir, knownItems = [], { reverse = false } = {}) {
   const dirPath = join(docsRoot, dir)
   if (!existsSync(dirPath)) return kept
 
-  const files = readdirSync(dirPath)
+  let files = readdirSync(dirPath)
     .filter(f => f.endsWith('.md') && f !== 'index.md')
-    .sort()
-  if (reverse) files.reverse()
+
+  if (sortByDate) {
+    // 按 frontmatter 的 date 倒序（最新在上），缺 date 的排末尾
+    files = files
+      .map(f => ({ f, date: getDate(join(dirPath, f)) }))
+      .sort((a, b) => {
+        if (!a.date && !b.date) return a.f.localeCompare(b.f)
+        if (!a.date) return 1
+        if (!b.date) return -1
+        return b.date.localeCompare(a.date)
+      })
+      .map(x => x.f)
+  } else {
+    files.sort()
+    if (reverse) files.reverse()
+  }
 
   const extras = files
     .map(f => {
@@ -169,7 +193,7 @@ export default defineConfig({
         text: '🔭 AI 前沿探讨',
         link: '/frontier/',
         collapsed: true,
-        items: autoItems('frontier', []),
+        items: autoItems('frontier', [], { sortByDate: true }),
       },
       {
         text: '📝 学习测试',
