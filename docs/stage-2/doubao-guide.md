@@ -16,13 +16,13 @@ description: 零基础上手，从豆包入手，职场最实用的 8 个功能�
 
 首先是截图——豆包快捷键截图后可以直接调整框选范围，也可以直接复制图片，没有多余操作。我日常即使不用豆包回答问题也会开着豆包，就为了方便截图。
 
-![豆包截图功能示意 1](/images/stage-2/JdrUbooF7oKbujxYVeXcSTtonB3.png)
+![豆包截图功能示意 1](/images/stage-2/doubao-screenshot-1.png)
 
-![豆包截图功能示意 2](/images/stage-2/SJH0bhznRoysrGxpMPIcES3Jnfd.png)
+![豆包截图功能示意 2](/images/stage-2/doubao-screenshot-2.png)
 
 然后是截图提问和翻译。比如学用一些海外 AI 工具的时候没有中文界面，你直接就可以截图让豆包给你翻译。如果这个界面都是英文，直接截图后让豆包根据图片帮你"翻译并解释"，甚至可以让它给出使用攻略。
 
-![截图翻译示例](/images/stage-2/NvnHbwCXXonKqfxX1cOcUAgOnGe.png)
+![截图翻译示例](/images/stage-2/screenshot-translation.png)
 
 ## 2、生成 PPT：简约风格，改改就能用
 
@@ -30,63 +30,63 @@ description: 零基础上手，从豆包入手，职场最实用的 8 个功能�
 
 **第一步**：在豆包对话界面下方工具栏中选择"PPT 生成"，还可以选择你希望的篇幅大小。
 
-![PPT 生成入口](/images/stage-2/I98Rb7G5toEHqzx6ehCc57UTnre.png)
+![PPT 生成入口](/images/stage-2/ppt-entry.png)
 
-![篇幅选择](/images/stage-2/UWTxbd0MyoZK9ZxoPTlcL9sGnHc.png)
+![篇幅选择](/images/stage-2/ppt-length-option.png)
 
 **第二步**：等豆包做出来，下载下来，直接再改吧改吧。
 
 你别说，虽然有些画面有点土味，但是在简洁、结构化、可视化方面，豆包的 PPT 是越做越好的，而且主干信息没有被曲解，补充的也是结构化的内容，直接改就好了——不盲目追求精美的话，日常使用是完全够用的。
 
-![PPT 生成结果](/images/stage-2/Wathbicx6o1VZPxnms0cDoHCnJb.png)
+![PPT 生成结果](/images/stage-2/ppt-result.png)
 
 **第三步**：让豆包切换 PPT 风格。
 
 改的速度很快，也帮我留出了空白的位置方便我自己配图。
 
-![PPT 风格切换 1](/images/stage-2/G8sBbyx2boZniDxeT2vcty3Kn3d.png)
+![PPT 风格切换 1](/images/stage-2/ppt-style-1.png)
 
-![PPT 风格切换 2](/images/stage-2/AqjNb4HT7oEinRxQYZ0cbQm6nMe.png)
+![PPT 风格切换 2](/images/stage-2/ppt-style-2.png)
 
 ## 3、AI 播客：直接可用的音频讲解文件
 
 这个功能很方便，一个对话框口述直接就完成了。
 
-![AI 播客功能](/images/stage-2/QiDzbSWOVovkEAxTupEcKP1Nnze.png)
+![AI 播客功能](/images/stage-2/podcast-feature.png)
 
 还可以在这个基础上生成视频，当然现在效果还只是一个短视频效果，没办法做到 NotebookLM 那种完全的十几分钟讲解视频，但我觉得只是时间问题，后面一定能做到。
 
-![播客转视频](/images/stage-2/Meq8b67RCopecsxweRUcLmNPnLg.png)
+![播客转视频](/images/stage-2/podcast-to-video.png)
 
 ## 4、深入研究：深度学习、调研的利器
 
 我还加了一点难度——我把一个博主的"横纵研究法"（简而言之就是既看纵向历史又看横向对比）告诉了豆包，让豆包按这个逻辑去研究，居然真的做到了，很不错。而且所有研究都有引用来源，多达 100+，可以直接点击来源拓展阅读。
 
-![深入研究结果 1](/images/stage-2/LTQlb3eZ9oI2zCxteJdcc5ufnQF.png)
+![深入研究结果 1](/images/stage-2/deep-research-1.png)
 
-![深入研究结果 2](/images/stage-2/VUFbbVvoooXhqZxoIA7cMZHwndg.png)
+![深入研究结果 2](/images/stage-2/deep-research-2.png)
 
 ## 5、豆包浏览器：浏览器场景里的 AI 助手
 
 比如可以帮你回答当前浏览网页相关的问题，直接在侧边栏提问豆包就可以。
 
-![豆包浏览器侧边栏](/images/stage-2/GDkDb8iMlo1IkYxULr0ctd3vnzg.png)
+![豆包浏览器侧边栏](/images/stage-2/browser-sidebar.png)
 
 还比如浏览一些带有英文的网站时，帮你进行翻译。
 
-![浏览器翻译功能](/images/stage-2/ANhkbynHuoztkpxIsSMcEHGPnzN.png)
+![浏览器翻译功能](/images/stage-2/browser-translate.png)
 
 还有总结、截图提问、脑图、播客功能都可以根据需要来使用。
 
-![浏览器更多功能](/images/stage-2/OOLJby63zozbN0x4apqcjSTjnIc.png)
+![浏览器更多功能](/images/stage-2/browser-more-features.png)
 
 ## 6、超能模式：复杂任务的解决入口
 
 你有一些比较难、比较大的复杂问题可以丢给这个模式下的豆包，比如需要同时完成：调研、分析、方案策划等多步骤的任务。感觉豆包未来会把这个超能模式升级成有更多电脑权限和应用接口权限的 Agent 助手，因为很多复杂问题其实主要是如何直接出结果。
 
-![超能模式入口](/images/stage-2/XVQPbcP2xoaQ7Pxu3J2cKWDlnYc.png)
+![超能模式入口](/images/stage-2/super-mode-entry.png)
 
-![超能模式执行过程](/images/stage-2/C30bbLdJ6oRrDoxpUKlcXTSxnkb.png)
+![超能模式执行过程](/images/stage-2/super-mode-running.png)
 
 其他更多的豆包功能比如：生图、生视频、做音乐、记录会议都是常规操作，大家直接使用就好啦~
 
@@ -96,13 +96,13 @@ description: 零基础上手，从豆包入手，职场最实用的 8 个功能�
 
 豆包不是万能的，会犯一些错误。比如一些复杂的问题，像你使用氛围编程类工具的时候可能会系统报错、网络报错，这种复杂现实问题，豆包一般给出的答案不能说完全没用，只能说是胡乱指挥。**一定要自己判断！** 附上我的惨痛教训：
 
-![豆包出错的案例](/images/stage-2/VN16bwzWsofPNyxzYsjcV1Uznqg.png)
+![豆包出错的案例](/images/stage-2/doubao-error-case.png)
 
 ## 8、不要只用一个大模型
 
 比如可以主力用豆包，或者哪个你趁手的 AI 大模型，然后在一些特定领域比如 PPT 制作，辅以其他大模型。在一些你认为比较重要的、或者你也拿不准需要 AI 提供参考的问题上，也可以问多家大模型提供思路，跟智囊团是一个道理。
 
-![多模型对比使用](/images/stage-2/KybLbOFoyoJkMOxbcxEcqaSBnFb.png)
+![多模型对比使用](/images/stage-2/multi-model-compare.png)
 
 ---
 

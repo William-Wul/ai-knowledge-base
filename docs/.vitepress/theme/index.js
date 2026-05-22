@@ -5,6 +5,8 @@ import mediumZoom from 'medium-zoom'
 import PasswordGate from './PasswordGate.vue'
 import HomeLayout from './HomeLayout.vue'
 import BilibiliVideo from './components/BilibiliVideo.vue'
+import Breadcrumb from './components/Breadcrumb.vue'
+import BackToTop from './components/BackToTop.vue'
 import './custom.css'
 
 export default {
@@ -35,6 +37,16 @@ export default {
     )
   },
   Layout() {
-    return h('div', [h(DefaultTheme.Layout), h(PasswordGate)])
+    return h(
+      'div',
+      [
+        h(DefaultTheme.Layout, null, {
+          // 把面包屑塞进文章正文上方
+          'doc-before': () => h(Breadcrumb),
+        }),
+        h(BackToTop),
+        h(PasswordGate),
+      ]
+    )
   },
 }

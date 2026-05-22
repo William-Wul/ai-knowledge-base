@@ -106,7 +106,7 @@ AI只会越来越强
 
 :::
 
-# 一、豆包做PPT，纯免费国产AI应用里最实用的
+## 一、豆包做 PPT，纯免费国产 AI 应用里最实用的
 
 第一步，我们先试试把之前的文档直接丢给豆包：
 
@@ -183,7 +183,7 @@ AI只会越来越强
 
 至于Kimi，现在收费收的已经丧失理智了，你免费根本就没资格排队进去做PPT，直接劝退。
 
-# 二、Coze做PPT，免费积分也可以做的不错
+## 二、Coze 做 PPT，免费积分也可以做的不错
 
 同上，我们还是先试试把之前的文档直接丢给coze：
 
@@ -203,7 +203,7 @@ AI只会越来越强
 
 ![](/images/stage-4/O3TEbQ99Ro3aUJx91E0cQZIdnxA.png)
 
-# 三、付费工具谨慎推荐
+## 三、付费工具谨慎推荐
 
 各家收费策略不一而足，大都卡在下载界面就要付费，我觉得完全不值，这里只推荐一个可以免费下载，带有水印的工具：美图设计室-LivePPT
 
@@ -231,7 +231,7 @@ AI只会越来越强
 
 ![](/images/stage-4/MbMObMHEOoEpSbx1fOgc8Hkknsc.png)
 
-# 四、海外免费工具推荐
+## 四、海外免费工具推荐
 
 *需要你会魔法上网
 
@@ -259,7 +259,7 @@ AI只会越来越强
 
 ![](/images/stage-4/L11BbXTMuoQLABxYciAc4tJDnZe.png)
 
-# 五、用Claude Code等Agent做PPT
+## 五、用 Claude Code 等 Agent 做 PPT
 
 这个时候你就可以调用Skill了，可以玩一些花里胡哨的风格，包括但不限于PPT格式，可以去做一些html格式的有更炫酷效果的展示材料，比如：杂志审美风格。我们通过公众号等途径找到一个杂志审美风格的skill，当你说“帮我做一份杂志风 PPT”就会触发，skill地址：github.com/op7418/guizang-ppt-skill
 

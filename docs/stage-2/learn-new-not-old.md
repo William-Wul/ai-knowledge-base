@@ -18,7 +18,7 @@ description: 给零技术背景 AI 小白的学习与使用原则
 
 举个例子，比如 Openclaw（小龙虾），说白了就是给大模型装上了一个框架，这个框架权限足够大，可以操作一些你的电脑应用和后台，理论上能帮你直接干活，于是最近几个月引爆了一波付费装小龙虾、学怎么使用的热潮。
 
-![Openclaw 相关截图](/images/stage-2/WPFsbPJ1to7XxAx5PuEcPuQJnSf.png)
+![Openclaw 相关截图](/images/stage-2/openclaw-screenshot.png)
 
 但如果你现在去学，我觉得完全没必要，因为这玩意儿已经被各种新东西降低门槛了，普通人直接用就好了，没有必要再去学了。比如智谱清言的 Autoclaw（澳龙）、腾讯的 Qclaw、字节的飞书 aily，甚至连有道都有龙虾产品，直接开用就可以了。
 
@@ -32,13 +32,13 @@ description: 给零技术背景 AI 小白的学习与使用原则
 
 再比如生图，如果你还在漫天收集提示词，不如去试试新出的 GPT-image-2，国内也有平台接入了这个模型。你会发现提示词根本不重要，大模型够不够牛才是最关键的。
 
-![GPT Image 生成示例](/images/stage-2/NizVbQdBroqMOGxkqDOcA1SknBb.png)
+![GPT Image 生成示例](/images/stage-2/gpt-image-example.png)
 
 ## 二、使用 AI 的原则：用实不用虚
 
 好，假设你已经学习到了最新的 AI 知识，知道了 Claude Code 是目前小白用起来最好用的 vibecoding 工具，知道了 ChatGPT 是目前地表最强生图工具，然后你就开始花大价钱去开通 Claude 的订阅，还要想办法解决魔法上网和网络纯净度的问题，还要额外充一个 ChatGPT 的订阅——还没开始用上呢，就先花出去 1000+ 软妹币。
 
-![先买工具后茫然的状态](/images/stage-2/MswYbfdD5ozp7Wxg2XNcIID2nad.png)
+![先买工具后茫然的状态](/images/stage-2/buy-then-confused.png)
 
 然后呢？
 

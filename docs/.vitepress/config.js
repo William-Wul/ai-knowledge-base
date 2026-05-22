@@ -114,9 +114,9 @@ export default defineConfig({
       {
         text: '📚 学习路径',
         items: [
-          { text: '🧠 阶段一 · 快速认知', link: '/stage-1/what-is-ai' },
+          { text: '🧠 阶段一 · 快速认知', link: '/stage-1/' },
           { text: '🛠️ 阶段二 · 零基础上手', link: '/stage-2/' },
-          { text: '🔬 阶段三 · AI 进阶概念', link: '/stage-3/agentic-ai' },
+          { text: '🔬 阶段三 · AI 进阶概念', link: '/stage-3/' },
           { text: '💼 阶段四 · 工作场景实战', link: '/stage-4/' },
           { text: '🤖 阶段五 · AI Agent 使用', link: '/stage-5/' },
           { text: '🚀 阶段六 · AI 创意与创业', link: '/stage-6/' },
