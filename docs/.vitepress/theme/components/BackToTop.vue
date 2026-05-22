@@ -6,6 +6,7 @@
       type="button"
       aria-label="返回顶部"
       title="返回顶部"
+      :style="{ right: rightOffset + 'px' }"
       @click="scrollToTop"
     >
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -27,8 +28,28 @@ import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useData, useRoute } from 'vitepress'
 
 const visible = ref(false)
+const rightOffset = ref(24)
 const { frontmatter } = useData()
 const route = useRoute()
+
+const MIN = 16 // 窄屏时距右边缘的最小留白
+const BTN = 44 // 按钮直径
+const GAP = 12 // 按钮左边缘与正文列右边缘之间的留白
+
+// 把按钮放到「中间正文列」右侧的空白区，紧贴正文列但不压住文字
+const updateOffset = () => {
+  if (typeof document === 'undefined') return
+  const doc =
+    document.querySelector('.VPDoc .content-container') ||
+    document.querySelector('.vp-doc')
+  if (!doc) {
+    rightOffset.value = MIN
+    return
+  }
+  const rect = doc.getBoundingClientRect()
+  // 让按钮整体落在正文列右边缘之外的空白里；窄屏（正文铺满、没有空白）退回 MIN
+  rightOffset.value = Math.max(MIN, window.innerWidth - rect.right - BTN - GAP)
+}
 
 let ticking = false
 const onScroll = () => {
@@ -42,23 +63,30 @@ const onScroll = () => {
   })
 }
 
+const onResize = () => updateOffset()
+
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('resize', onResize, { passive: true })
   onScroll()
+  updateOffset()
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('resize', onResize)
 })
 
-// 路由切换后重新评估（新页面初始 scrollY = 0，按钮该消失）
+// 路由切换后重新评估（新页面初始 scrollY = 0，按钮该消失；正文列宽度也可能变）
 watch(() => route.path, () => {
-  // 等下一帧，浏览器完成 scroll restoration 后再判断
-  requestAnimationFrame(onScroll)
+  requestAnimationFrame(() => {
+    onScroll()
+    updateOffset()
+  })
 })
 </script>
 
