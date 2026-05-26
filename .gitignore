@@ -6,6 +6,9 @@ docs/.vitepress/cache/
 # 项目内部文档（含敏感信息），不公开
 CLAUDE.md
 
+# Hermes (银月) 通过飞书加的待入库队列，本地工作文件
+.kb-pending.md
+
 # article-kb 整个工作区：入库笔记、主题笔记、草稿、原文、索引都不公开发布
 # 仅作为 Claude + William 的本地工作状态，通过飞书同步给 William 审阅
 kb-articles/
