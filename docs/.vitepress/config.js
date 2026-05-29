@@ -201,6 +201,7 @@ export default defineConfig({
         collapsed: true,
         items: autoItems('exams', []),
       },
+      { text: '🧾 更新日志', link: '/changelog' },
     ],
 
     search: {
