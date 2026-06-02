@@ -4,8 +4,13 @@
 
 ## v1.19 · 2026-06-02
 
-### 维护
+### 内容
+- 新增 frontier 文章：[AI 时代的技术面试会变成什么样子](docs/frontier/tech-interview-future.md)，围绕 Steve Yegge《The Last Technical Interview》讲清技术面试信号失效、AI 对简历/线上面试的冲击，以及“真实工作试炼 / 篝火模式”的替代方向
+- 新增 news 文章：[英伟达 RTX Spark：把"能跑大模型的 AI 电脑"搬上你的桌面](docs/news/2026-06-01-nvidia-rtx-spark.md)，解释 RTX Spark、统一内存、CUDA 生态、本地大模型和本地 Agent PC 的意义，并配套 10 张发布会与架构图
+- AI 日报更新至 [2026-06-01](docs/hot/2026-06-01.md)，同步 AIHOT 当日行业精选，并更新日报入口页
 - 补充公开更新日志，记录入门文章重写，避免遗漏读者可见的内容更新
+
+### 维护
 - 本地资料库补充 6 篇参考素材，覆盖 AI 时代技术面试、RTX Spark / AI PC、世界模型 Project Eden 等主题，为后续 frontier、stage-5、stage-6 内容创作做资料准备
 
 ---
