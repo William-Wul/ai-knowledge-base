@@ -2,6 +2,14 @@
 
 ---
 
+## v1.20 · 2026-06-05
+
+### 内容
+- 新增 stage-5 文章：[Codex 从零开始：保姆级完整教程](docs/stage-5/codex-guide.md)，面向零基础读者讲清 Codex 桌面 App 的定位、下载安装、ChatGPT 账号登录、首个任务、计划模式、AGENTS.md 和国内接入方案，并配套 14 张步骤截图
+- AI 日报连续同步至 [2026-06-04](docs/hot/2026-06-04.md)，补充 MiniMax M3、OpenAI Codex on AWS、Claude Code 动态工作流、微软自研推理模型、WhatsApp Business AI Agent、OpenClaw 2026.6.1 等行业精选内容
+
+---
+
 ## v1.19 · 2026-06-02
 
 ### 内容

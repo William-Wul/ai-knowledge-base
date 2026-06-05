@@ -11,6 +11,15 @@ description: AI 学习知识库近期内容与功能更新记录
 
 ---
 
+## 2026-06-05
+
+### 内容更新
+
+- 新增阶段五文章：[Codex 从零开始：保姆级完整教程](/stage-5/codex-guide)，从安装、登录、跑通第一个任务，到计划模式、AGENTS.md 和国内接入方案，带零基础读者一步步把 Codex 用起来。
+- 补充记录：AI 日报更新至 [2026-06-04](/hot/2026-06-04)，新增 MiniMax M3、OpenAI Codex on AWS、Claude Code 动态工作流、微软自研推理模型、WhatsApp Business AI Agent、OpenClaw 2026.6.1 等精选内容。
+
+---
+
 ## 2026-06-02
 
 ### 内容更新
