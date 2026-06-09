@@ -5,7 +5,7 @@
 //   npm run sync:hot              全量同步（覆盖现有）
 //   node scripts/sync-aihot.mjs   同上
 
-import { writeFileSync, existsSync, mkdirSync, readdirSync, unlinkSync } from 'fs'
+import { writeFileSync, existsSync, mkdirSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -185,19 +185,7 @@ async function main() {
   const otherMetas = others.map(o => o.meta)
   writeFileSync(join(HOT_DIR, 'index.md'), indexToMarkdown(latest.detail, otherMetas), 'utf-8')
 
-  console.log(`→ 清理超过 ${KEEP_DAYS} 期的旧日报文件`)
-  const keepDates = new Set(details.map(d => d.meta.date))
-  const localFiles = readdirSync(HOT_DIR).filter(f => /^\d{4}-\d{2}-\d{2}\.md$/.test(f))
-  let removed = 0
-  for (const f of localFiles) {
-    const date = f.replace(/\.md$/, '')
-    if (!keepDates.has(date)) {
-      unlinkSync(join(HOT_DIR, f))
-      console.log(`  删除: ${f}`)
-      removed++
-    }
-  }
-  if (!removed) console.log('  无需清理')
+  console.log(`→ 保留历史日报文件（入口页只展示最近 ${KEEP_DAYS} 期）`)
 
   console.log(`\n✅ 完成 · 入口页 = ${latest.meta.date} · 往期 ${otherMetas.length} 期`)
 }
