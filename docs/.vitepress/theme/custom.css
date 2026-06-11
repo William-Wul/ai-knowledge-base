@@ -550,3 +550,14 @@ body:has(.home-wrapper) .VPContent {
 .header-anchor {
   display: none !important;
 }
+
+/* ===== 本页目录：长标题完整换行显示，不再截断省略 ===== */
+.VPDocAsideOutline .outline-link,
+.VPLocalNavOutlineDropdown .outline-link {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.5;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
