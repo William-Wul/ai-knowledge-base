@@ -2,6 +2,19 @@
 
 ---
 
+## v1.22 · 2026-06-11
+
+### 内容
+- 新增 stage-5 文章：[WorkBuddy 从零开始：保姆级完整教程](docs/stage-5/workbuddy-guide.md)，面向零基础读者讲清国产 Agent WorkBuddy 的下载安装、微信扫码登录、界面设置、Ask / Plan / Craft 模式、办公实战、专家 / 技能 / 连接器、定时自动化和手机远程控制，并配套 27 张截图
+- 新增 news 文章：[Claude Fable 5：最强的 Claude 开放了，但戴着镣铐](docs/news/2026-06-10-claude-fable-5.md)，围绕 Anthropic 发布 Claude Fable 5 / Mythos 5，解释公开版与受限版的区别、能力跑分、安全降级机制、监管背景和定价
+- AI 日报连续同步至 [2026-06-11](docs/hot/2026-06-11.md)，补充 Claude Fable 5 / Mythos 5、Google Gemma 4、Claude Managed Agents、DiffusionGemma、MiMo Code、Cursor Bugbot 等行业精选内容
+
+### 体验
+- 优化全站图注样式：自动识别“图片后一段纯斜体文字”的旧写法，统一套用小字灰色图注样式，并让图注跟随居中图片对齐
+- 优化本页目录展示：文章内长标题完整换行显示，不再截断省略，改善 WorkBuddy 等长教程的章节定位体验
+
+---
+
 ## v1.21 · 2026-06-09
 
 ### 内容
