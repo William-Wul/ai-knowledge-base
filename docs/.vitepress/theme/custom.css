@@ -153,25 +153,35 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
 }
 
-/* 图注：小字灰色，跟在图下方，不抢正文视觉 */
-.vp-doc .figcaption {
+/* 图注：小字灰色，跟在图下方，不抢正文视觉。
+   全站图注的写法惯例是「图片独占一段，下一段是纯斜体文字」，
+   用 :has() 自动命中这种结构，27 处旧文章无需逐一改写 */
+.vp-doc .figcaption,
+.vp-doc p:has(> img:only-child) + p:has(> em:only-child) {
   font-size: 13px;
   line-height: 1.6;
   color: #8a8a8a;
   text-align: left;
-  margin: 0 auto 1.5rem;
+  margin: 0.1rem auto 1.5rem;
   max-width: 620px;
   padding: 0 0.5rem;
 }
 
-.vp-doc .figcaption a {
+/* 抵消中文伪斜体：图注已靠字号和颜色与正文区分，不再需要倾斜 */
+.vp-doc p:has(> img:only-child) + p:has(> em:only-child) > em {
+  font-style: normal;
+}
+
+.vp-doc .figcaption a,
+.vp-doc p:has(> img:only-child) + p:has(> em:only-child) a {
   color: #8a8a8a;
   font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.vp-doc .figcaption a:hover {
+.vp-doc .figcaption a:hover,
+.vp-doc p:has(> img:only-child) + p:has(> em:only-child) a:hover {
   color: #2D5A3D;
 }
 
