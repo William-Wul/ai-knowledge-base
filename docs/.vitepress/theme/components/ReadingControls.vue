@@ -104,10 +104,10 @@ onBeforeUnmount(() => {
 
   .kb-zen-exit {
     position: fixed;
-    /* 坐标对齐侧栏头部里沉浸图标的实际位置(165,17),
+    /* 坐标对齐侧栏头部里沉浸图标的实际位置(169,17),
        退出后真正的图标在同一点出现,进出像同一个按钮 */
     top: 17px;
-    left: 165px;
+    left: 169px;
     width: 26px;
     height: 26px;
     border: none;

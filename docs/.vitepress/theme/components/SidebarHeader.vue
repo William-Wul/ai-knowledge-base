@@ -1,6 +1,13 @@
 <template>
   <div class="kb-sb-header">
-    <a class="kb-sb-brand" href="/" title="回到首页">AI 学习知识库</a>
+    <a class="kb-sb-brand" href="/" title="回到首页">
+      <svg viewBox="9 7 41 43" width="16" height="17" aria-hidden="true">
+        <rect x="13" y="10" width="9" height="36" rx="2.5" fill="#1f4332" />
+        <rect x="25" y="10" width="9" height="36" rx="2.5" fill="#3a7050" />
+        <rect x="38" y="14" width="7" height="32" rx="2.5" transform="rotate(12 41.5 30)" fill="#6dbf8a" />
+      </svg>
+      <span>AI 学习知识库</span>
+    </a>
     <span class="kb-sb-spacer"></span>
     <button class="kb-sb-icon" type="button" title="收起侧边栏" aria-label="收起侧边栏" @click="toggleSidebar">
       <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
@@ -43,12 +50,15 @@ import { toggleSidebar, toggleZen, openSearch } from '../readingState.js'
     z-index: 2;
     background: var(--vp-sidebar-bg-color);
     margin: 0 -32px 8px;
-    padding: 14px 20px 10px;
+    padding: 14px 16px 10px;
     border-bottom: 1px solid var(--vp-c-divider);
   }
 
-  /* 和首页 logo 同款:衬线字体、墨绿、同字重,字号按侧栏宽度适配 */
+  /* 和首页 logo 同款:书脊标记 + 衬线字体、墨绿、同字重,字号按侧栏宽度适配 */
   .kb-sb-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
     font-size: 15px;
     font-weight: 700;
@@ -58,6 +68,9 @@ import { toggleSidebar, toggleZen, openSearch } from '../readingState.js'
     white-space: nowrap;
     padding: 4px 0;
     transition: opacity 0.2s;
+  }
+  .kb-sb-brand svg {
+    flex-shrink: 0;
   }
   .kb-sb-brand:hover {
     opacity: 0.75;

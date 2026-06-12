@@ -1,7 +1,14 @@
 <template>
   <nav class="home-nav">
     <div class="nav-inner">
-      <a class="brand" href="/">AI 学习知识库</a>
+      <a class="brand" href="/">
+        <svg viewBox="9 7 41 43" width="19" height="20" aria-hidden="true">
+          <rect x="13" y="10" width="9" height="36" rx="2.5" fill="#1f4332" />
+          <rect x="25" y="10" width="9" height="36" rx="2.5" fill="#3a7050" />
+          <rect x="38" y="14" width="7" height="32" rx="2.5" transform="rotate(12 41.5 30)" fill="#6dbf8a" />
+        </svg>
+        <span>AI 学习知识库</span>
+      </a>
       <button class="nav-search" @click="triggerSearch" aria-label="打开搜索">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
@@ -80,12 +87,18 @@ function triggerSearch() {
   height: 64px;
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-serif);
   font-weight: 700; font-size: 18px;
   color: var(--green-900);
   letter-spacing: 0.02em;
   flex-shrink: 0;
   text-decoration: none;
+}
+.brand svg {
+  flex-shrink: 0;
 }
 .nav-search {
   display: flex; align-items: center; gap: 10px;
