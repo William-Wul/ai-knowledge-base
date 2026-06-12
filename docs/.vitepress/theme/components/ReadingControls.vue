@@ -15,9 +15,6 @@
       </svg>
     </button>
 
-    <!-- 右上角站名,点击回首页;沉浸模式下隐藏 -->
-    <a v-show="!zen" class="kb-wordmark" href="/" title="回到首页">AI 学习知识库</a>
-
     <!-- 沉浸模式的退出按钮;按 Esc 也能退出 -->
     <button
       v-show="zen"
@@ -63,7 +60,6 @@ onBeforeUnmount(() => {
 <style scoped>
 /* 全部控件只在桌面端出现:窄屏布局未改动 */
 .kb-sb-reopen,
-.kb-wordmark,
 .kb-zen-exit {
   display: none;
 }
@@ -89,22 +85,6 @@ onBeforeUnmount(() => {
   .kb-sb-reopen:hover {
     color: var(--vp-c-brand-1);
     background: var(--vp-c-bg-soft);
-  }
-
-  .kb-wordmark {
-    display: inline-block;
-    position: fixed;
-    top: 18px;
-    right: 24px;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: #2D5A3D;
-    text-decoration: none;
-    z-index: 25;
-    transition: opacity 0.2s;
-  }
-  .kb-wordmark:hover {
-    opacity: 0.75;
   }
 
   .kb-zen-exit {
