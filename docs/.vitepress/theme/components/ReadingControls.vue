@@ -148,30 +148,34 @@ onBeforeUnmount(() => {
 
   .kb-sidebar-handle {
     position: fixed;
-    /* 吸附在侧栏右边缘；折叠后 --vp-sidebar-width 变 0，自动贴回屏幕左缘 */
-    left: var(--vp-sidebar-width);
+    /* 实心小圆钮,骑在侧栏分界线上(一半在左一半在右),
+       不透明所以不会和侧栏文字叠出"鬼影" */
+    left: calc(var(--vp-sidebar-width) - 13px);
     top: 50%;
     transform: translateY(-50%);
-    width: 18px;
-    height: 48px;
+    width: 26px;
+    height: 26px;
     border: 1px solid var(--vp-c-divider);
-    border-left: none;
-    border-radius: 0 8px 8px 0;
-    background: var(--vp-c-bg-elv);
+    border-radius: 50%;
+    background: #fff;
     color: var(--vp-c-text-3);
-    /* 平时淡淡地待着,鼠标靠近才显形 */
-    opacity: 0.4;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 30;
-    transition: left 0.25s, background 0.2s, color 0.2s, opacity 0.2s;
+    transition: left 0.25s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   }
   .kb-sidebar-handle:hover {
-    opacity: 1;
-    background: var(--vp-c-bg-soft);
     color: var(--vp-c-brand-1);
+    border-color: var(--vp-c-brand-1);
+    box-shadow: 0 2px 8px rgba(45, 90, 61, 0.18);
+  }
+
+  /* 折叠后侧栏宽度归零,圆钮完整地停在屏幕左缘 */
+  html.kb-sidebar-collapsed .kb-sidebar-handle {
+    left: 8px;
   }
   .kb-sidebar-handle svg {
     transition: transform 0.25s;

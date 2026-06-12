@@ -300,11 +300,19 @@ html.kb-zen {
   border-radius: 8px;
 }
 
-/* ===== 滚动条美化:细、灰、低存在感,悬停时才加深 ===== */
+/* ===== 滚动条:正文保留细灰条(长文需要位置感),其余低存在感 ===== */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.28); }
+
+/* 侧边栏滚动条:默认完全隐形,悬停侧栏时才浮现 3px 细线——
+   侧栏内容不长,常驻滚动条只是视觉噪音 */
+.VPSidebar::-webkit-scrollbar { width: 3px; }
+.VPSidebar::-webkit-scrollbar-thumb { background: transparent; }
+.VPSidebar:hover::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.15); }
+.VPSidebar { scrollbar-width: none; }
+.VPSidebar:hover { scrollbar-width: thin; }
 
 /* ===== 暗色模式适配 ===== */
 .dark {
