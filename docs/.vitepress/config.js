@@ -195,6 +195,7 @@ export default defineConfig({
         collapsed: true,
         items: autoItems('frontier', [], { sortByDate: true }),
       },
+      { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
       {
         text: '📝 学习测试',
         link: '/exams/',
