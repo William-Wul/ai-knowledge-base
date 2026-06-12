@@ -102,6 +102,20 @@
   word-break: break-word;
 }
 
+/* 分组标题(阶段一~六等):永远一行排齐,不折行;
+   配合下面收窄的箭头,所有标题都放得下 */
+.VPSidebarItem.level-0 > .item .text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 折叠箭头从 32px 收窄到 24px,把空间还给标题 */
+.VPSidebarItem .item .caret {
+  width: 24px;
+}
+
 /* ===== 文章内容排版 ===== */
 .vp-doc h1 {
   border-bottom: 2px solid #e2ebe5;
