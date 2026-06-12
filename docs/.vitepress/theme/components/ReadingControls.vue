@@ -26,8 +26,9 @@
           :title="collapsed ? '展开侧边栏' : '收起侧边栏'"
           @click="toggleSidebar"
         >
-          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" :style="{ transform: collapsed ? 'rotate(180deg)' : 'none' }">
-            <path d="M14 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- 细长的浅弧度左箭头,视觉上像分割线自己的一部分 -->
+          <svg viewBox="0 0 12 36" width="12" height="36" aria-hidden="true" :style="{ transform: collapsed ? 'rotate(180deg)' : 'none' }">
+            <path d="M8.5 4L4.5 18l4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
       </Teleport>
@@ -148,34 +149,30 @@ onBeforeUnmount(() => {
 
   .kb-sidebar-handle {
     position: fixed;
-    /* 实心小圆钮,骑在侧栏分界线上(一半在左一半在右),
-       不透明所以不会和侧栏文字叠出"鬼影" */
-    left: calc(var(--vp-sidebar-width) - 13px);
+    /* 无底无框,只是分割线上一段细长箭头,和线融为一体;
+       按钮比箭头宽一圈,保证好点 */
+    left: calc(var(--vp-sidebar-width) - 10px);
     top: 50%;
     transform: translateY(-50%);
-    width: 26px;
-    height: 26px;
-    border: 1px solid var(--vp-c-divider);
-    border-radius: 50%;
-    background: #fff;
-    color: var(--vp-c-text-3);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    width: 20px;
+    height: 52px;
+    border: none;
+    background: transparent;
+    color: #c2c2c2;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 30;
-    transition: left 0.25s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    transition: left 0.25s, color 0.2s;
   }
   .kb-sidebar-handle:hover {
     color: var(--vp-c-brand-1);
-    border-color: var(--vp-c-brand-1);
-    box-shadow: 0 2px 8px rgba(45, 90, 61, 0.18);
   }
 
-  /* 折叠后侧栏宽度归零,圆钮完整地停在屏幕左缘 */
+  /* 折叠后侧栏宽度归零,箭头停在屏幕左缘 */
   html.kb-sidebar-collapsed .kb-sidebar-handle {
-    left: 8px;
+    left: 2px;
   }
   .kb-sidebar-handle svg {
     transition: transform 0.25s;
