@@ -36,21 +36,24 @@ import { toggleSidebar, toggleZen, openSearch } from '../readingState.js'
   .kb-sb-header {
     display: flex;
     align-items: center;
-    gap: 2px;
-    /* 钉在侧栏顶部,滚动导航时不跟着跑 */
+    gap: 1px;
+    /* 钉在侧栏顶部,滚动导航时不跟着跑;铺满侧栏全宽 */
     position: sticky;
     top: 0;
     z-index: 2;
     background: var(--vp-sidebar-bg-color);
-    margin: 0 -16px 8px;
-    padding: 14px 16px 10px;
+    margin: 0 -32px 8px;
+    padding: 14px 20px 10px;
     border-bottom: 1px solid var(--vp-c-divider);
   }
 
+  /* 和首页 logo 同款:衬线字体、墨绿、同字重,字号按侧栏宽度适配 */
   .kb-sb-brand {
-    font-size: 13.5px;
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+    font-size: 15px;
     font-weight: 700;
-    color: #2D5A3D;
+    letter-spacing: 0.02em;
+    color: #1f4332;
     text-decoration: none;
     white-space: nowrap;
     padding: 4px 0;

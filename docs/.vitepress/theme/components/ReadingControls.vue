@@ -15,7 +15,8 @@
       </svg>
     </button>
 
-    <!-- 沉浸模式的退出按钮;按 Esc 也能退出 -->
+    <!-- 沉浸模式的退出按钮:和侧栏头部的进入按钮同图标、同样式、同坐标,
+         视觉上是同一个按钮在开/关,只用绿色表示"沉浸中";按 Esc 也能退出 -->
     <button
       v-show="zen"
       class="kb-zen-exit"
@@ -24,8 +25,8 @@
       title="退出沉浸阅读（Esc）"
       @click="toggleZen"
     >
-      <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
-        <path d="M4 9h5V4M20 9h-5V4M4 15h5v5M20 15h-5v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+        <path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </button>
   </div>
@@ -89,26 +90,25 @@ onBeforeUnmount(() => {
 
   .kb-zen-exit {
     position: fixed;
-    top: 16px;
-    right: 24px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--vp-c-divider);
-    background: var(--vp-c-bg-elv);
-    color: var(--vp-c-text-2);
+    /* 坐标对齐侧栏头部里沉浸图标的实际位置(165,17),
+       退出后真正的图标在同一点出现,进出像同一个按钮 */
+    top: 17px;
+    left: 165px;
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--vp-c-brand-1);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     z-index: 60;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    transition: background 0.2s;
   }
   .kb-zen-exit:hover {
     background: var(--vp-c-bg-soft);
-    color: var(--vp-c-brand-1);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   }
 }
 </style>
