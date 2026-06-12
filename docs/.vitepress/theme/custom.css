@@ -102,13 +102,26 @@
   word-break: break-word;
 }
 
-/* 分组标题(阶段一~六等):永远一行排齐,不折行;
-   配合下面收窄的箭头,所有标题都放得下 */
-.VPSidebarItem.level-0 > .item .text {
+/* 顶层条目(分组标题和单条链接)统一排版:
+   一行排齐不折行;同字重同颜色——VitePress 默认给"带子项的分组"加粗、
+   给"单条链接"(前言/词汇本/更新日志)细体浅色,混在一列里不整齐 */
+.VPSidebarItem.level-0 > .item .text,
+.VPSidebarItem.level-0:not(:has(> .item > .link)) > .items > .VPSidebarItem.level-1 > .item .text {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+.VPSidebarItem.level-0 > .item .text {
+  color: var(--vp-c-text-1);
+}
+
+/* 无标题分组里的单条链接(前言/词汇本/更新日志):颜色和分组标题对齐;
+   :not(.is-active) 给"当前页高亮绿"让路 */
+.VPSidebarItem.level-0:not(:has(> .item > .link)) > .items > .VPSidebarItem.level-1:not(.is-active) > .item .text {
+  color: var(--vp-c-text-1) !important;
 }
 
 /* 折叠箭头从 32px 收窄到 24px,把空间还给标题 */
