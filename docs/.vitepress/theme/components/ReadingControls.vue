@@ -152,21 +152,24 @@ onBeforeUnmount(() => {
     left: var(--vp-sidebar-width);
     top: 50%;
     transform: translateY(-50%);
-    width: 22px;
-    height: 56px;
+    width: 18px;
+    height: 48px;
     border: 1px solid var(--vp-c-divider);
     border-left: none;
     border-radius: 0 8px 8px 0;
     background: var(--vp-c-bg-elv);
-    color: var(--vp-c-text-2);
+    color: var(--vp-c-text-3);
+    /* 平时淡淡地待着,鼠标靠近才显形 */
+    opacity: 0.4;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 30;
-    transition: left 0.25s, background 0.2s, color 0.2s;
+    transition: left 0.25s, background 0.2s, color 0.2s, opacity 0.2s;
   }
   .kb-sidebar-handle:hover {
+    opacity: 1;
     background: var(--vp-c-bg-soft);
     color: var(--vp-c-brand-1);
   }

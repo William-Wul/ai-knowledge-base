@@ -300,11 +300,11 @@ html.kb-zen {
   border-radius: 8px;
 }
 
-/* ===== 滚动条美化 ===== */
-::-webkit-scrollbar { width: 6px; height: 6px; }
+/* ===== 滚动条美化:细、灰、低存在感,悬停时才加深 ===== */
+::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #c5d9cb; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #2D5A3D; }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.28); }
 
 /* ===== 暗色模式适配 ===== */
 .dark {
