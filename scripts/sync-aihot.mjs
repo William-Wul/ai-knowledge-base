@@ -28,13 +28,31 @@ const SECTION_EMOJI = {
 }
 
 async function fetchJSON(url) {
-  const res = await fetch(url, { headers: { 'User-Agent': UA } })
+  // 30 秒超时：对方接口挂起时及时放弃，避免 CI 干等到任务超时
+  const res = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30_000) })
   if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`)
   return res.json()
 }
 
+// 外部数据写进 Markdown 前转义 HTML 敏感字符，
+// 防止数据源被篡改时往页面里注入可执行代码（XSS）
+function escapeHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+}
+
 function clean(s) {
-  return (s || '').replace(/\r/g, '').trim()
+  return escapeHtml((s || '').replace(/\r/g, '').trim())
+}
+
+// 链接只放行 http/https，并转义会破坏 Markdown 链接语法的字符
+function safeUrl(u) {
+  try {
+    const protocol = new URL(String(u)).protocol
+    if (protocol !== 'http:' && protocol !== 'https:') return ''
+    return String(u).replace(/\(/g, '%28').replace(/\)/g, '%29').replace(/\s/g, '%20')
+  } catch {
+    return ''
+  }
 }
 
 // 清理信源名：去除全角括号包裹的内部备注（保留半角括号，例如 X 用户名 (@username)）
@@ -45,8 +63,9 @@ function cleanSource(s) {
 function renderSections(sections) {
   const lines = []
   for (const section of sections || []) {
-    const emoji = SECTION_EMOJI[section.label] || '📌'
-    lines.push(`## ${emoji} ${section.label}`)
+    const label = clean(section.label)
+    const emoji = SECTION_EMOJI[label] || '📌'
+    lines.push(`## ${emoji} ${label}`)
     lines.push('')
 
     const items = section.items || []
@@ -59,7 +78,7 @@ function renderSections(sections) {
     items.forEach((item, idx) => {
       const title = clean(item.title) || '（无标题）'
       const summary = clean(item.summary)
-      const url = item.sourceUrl || ''
+      const url = safeUrl(item.sourceUrl)
       const sourceName = cleanSource(item.sourceName)
 
       lines.push(`### ${idx + 1}. ${title}`)
@@ -127,7 +146,7 @@ function indexToMarkdown(latestDaily, otherMetas) {
     lines.push(`## 📅 往期日报`)
     lines.push('')
     for (const d of otherMetas) {
-      const lead = d.leadTitle ? ` — ${d.leadTitle}` : ''
+      const lead = d.leadTitle ? ` — ${clean(d.leadTitle)}` : ''
       lines.push(`- [${d.date}](./${d.date})${lead}`)
     }
     lines.push('')
@@ -153,7 +172,9 @@ async function main() {
   }
   console.log(`  归档共 ${all.length} 期，本地保留最近 ${KEEP_DAYS} 期`)
 
-  const sortedDesc = [...all].sort((a, b) => b.date.localeCompare(a.date))
+  // 日期会用作本地文件名，只接受 YYYY-MM-DD 格式，防止异常数据写到目录之外
+  const valid = all.filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d.date || ''))
+  const sortedDesc = [...valid].sort((a, b) => b.date.localeCompare(a.date))
   const keep = sortedDesc.slice(0, KEEP_DAYS)
 
   console.log(`→ 拉取保留期详情（${keep.length} 期）`)

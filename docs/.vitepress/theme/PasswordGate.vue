@@ -2,9 +2,11 @@
   <div v-if="!authenticated" class="password-gate">
     <div class="gate-card" :class="{ shake: shaking }">
       <div class="gate-logo">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-          <rect width="48" height="48" rx="12" fill="#2D5A3D"/>
-          <path d="M24 12C28.4 12 32 15.6 32 20V22H34C35.1 22 36 22.9 36 24V36C36 37.1 35.1 38 34 38H14C12.9 38 12 37.1 12 36V24C12 22.9 12.9 22 14 22H16V20C16 15.6 19.6 12 24 12ZM24 15C21.2 15 19 17.2 19 20V22H29V20C29 17.2 26.8 15 24 15ZM24 27C22.9 27 22 27.9 22 29C22 30.1 22.9 31 24 31C25.1 31 26 30.1 26 29C26 27.9 25.1 27 24 27Z" fill="white"/>
+        <!-- 与全站一致的绿书脊 logo（同 favicon.svg） -->
+        <svg width="44" height="46" viewBox="9 7 41 43" aria-hidden="true">
+          <rect x="13" y="10" width="9" height="36" rx="2.5" fill="#1f4332"/>
+          <rect x="25" y="10" width="9" height="36" rx="2.5" fill="#3a7050"/>
+          <rect x="38" y="14" width="7" height="32" rx="2.5" transform="rotate(12 41.5 30)" fill="#6dbf8a"/>
         </svg>
       </div>
       <h1>AI 学习知识库</h1>
@@ -117,6 +119,8 @@ function handleSubmit() {
 
 .gate-logo {
   margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .gate-card h1 {

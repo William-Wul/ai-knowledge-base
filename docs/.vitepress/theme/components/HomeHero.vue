@@ -141,14 +141,18 @@
 </template>
 
 <script setup>
-const nodes = [
-  { num: '01', title: '快速认知',    sub: '10 分钟建立 AI 世界观',  link: '/stage-1/', aria: '阶段一：快速认知' },
-  { num: '02', title: '零基础上手',  sub: '用上趁手的 AI 工具',     link: '/stage-2/', aria: '阶段二：零基础上手' },
-  { num: '03', title: 'AI 进阶概念', sub: '解锁 AI 圈思维方式',     link: '/stage-3/', aria: '阶段三：AI 进阶概念' },
-  { num: '04', title: '工作场景实践', sub: '按岗位融入工作流',      link: '/stage-4/', aria: '阶段四：工作场景实践' },
-  { num: '05', title: 'AI Agent 使用', sub: '解放双手提高生产力',   link: '/stage-5/', aria: '阶段五：AI Agent 使用' },
-  { num: '06', title: 'AI 创意与创业', sub: '成为全能超级个体',     link: '/stage-6/', aria: '阶段六：AI 创意与创业', reverse: true, final: true },
-]
+import { STAGES } from '../../stagesData.js'
+
+// 路径图节点数据来自 stagesData.js；最后一个节点标签放在左侧（reverse）并用旗标样式（final）
+const nodes = STAGES.map((s, i) => ({
+  num: String(i + 1).padStart(2, '0'),
+  title: s.name,
+  sub: s.sub,
+  link: s.link,
+  aria: `${s.stageLabel}：${s.name}`,
+  reverse: i === STAGES.length - 1,
+  final: i === STAGES.length - 1,
+}))
 </script>
 
 <style scoped>
@@ -541,5 +545,7 @@ const nodes = [
   .hero-nodes { height: 380px; }
   .node-label-sub { display: none; }
   .node-label-title { font-size: 13px; }
+  /* 窄屏下 01 节点圆圈会贴到屏幕左缘被裁掉，沿路径方向往内挪一点 */
+  .node-01 { left: 17%; top: 86%; }
 }
 </style>

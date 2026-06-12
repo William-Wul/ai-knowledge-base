@@ -11,25 +11,16 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vitepress'
+import { STAGES, SECTIONS, fullTitle } from '../../stagesData.js'
 
 const route = useRoute()
 
-// 学习路径六阶段元数据，与顶导/侧栏保持一致
-const STAGE_META = {
-  'stage-1': { text: '阶段一 · 快速认知' },
-  'stage-2': { text: '阶段二 · 零基础上手' },
-  'stage-3': { text: '阶段三 · AI 进阶概念' },
-  'stage-4': { text: '阶段四 · 工作场景实战' },
-  'stage-5': { text: '阶段五 · AI Agent 使用' },
-  'stage-6': { text: '阶段六 · AI 创意与创业' },
-}
+// 学习路径六阶段元数据，与顶导/侧栏共用 stagesData.js
+const STAGE_META = Object.fromEntries(
+  STAGES.map(s => [s.dir, { text: fullTitle(s) }])
+)
 
-const TOP_LEVEL = {
-  news:     { text: 'AI 新闻',   link: '/news/' },
-  hot:      { text: 'AI 日报',   link: '/hot/' },
-  frontier: { text: 'AI 前沿',   link: '/frontier/' },
-  exams:    { text: '学习测试',  link: '/exams/' },
-}
+const TOP_LEVEL = SECTIONS
 
 const crumbs = computed(() => {
   const path = route.path || ''
@@ -50,7 +41,7 @@ const crumbs = computed(() => {
     ]
   }
 
-  // 新闻/前沿/日报/测试：仅在正文页显示
+  // 新闻/前沿/日报：仅在正文页显示
   if (TOP_LEVEL[first]) {
     if (parts.length < 2) return [] // /news/ 自己就是栏目首页
     return [{ text: TOP_LEVEL[first].text, link: TOP_LEVEL[first].link }]

@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { existsSync, readdirSync, readFileSync } from 'fs'
 import { resolve, join, basename, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { STAGES, fullTitle } from './stagesData.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -78,6 +79,27 @@ function autoItems(dir, knownItems = [], { reverse = false, sortByDate = false }
   return [...kept, ...extras]
 }
 
+// 各阶段需要固定排序的已知文章（新文件会由 autoItems 自动追加到末尾）
+const STAGE_KNOWN_ITEMS = {
+  'stage-1': [
+    { text: '一文看懂AI是什么', link: '/stage-1/what-is-ai' },
+    { text: 'AI 常见术语一点通', link: '/stage-1/ai-terminology' },
+  ],
+  'stage-2': [
+    { text: '学新不学旧，用实不用虚', link: '/stage-2/learn-new-not-old' },
+    { text: '综合/对话类 AI：从豆包开始', link: '/stage-2/doubao-guide' },
+    { text: '图片/视频类 AI：即梦、可灵等', link: '/stage-2/image-video-ai' },
+    { text: '智能体/助理类 AI：Coze、秒哒等', link: '/stage-2/agent-tools' },
+    { text: '跟 AI 对话的基本方法', link: '/stage-2/how-to-prompt' },
+    { text: 'Prompt 场景案例库', link: '/stage-2/prompt-cases' },
+    { text: 'AI 使用的安全红线', link: '/stage-2/safety-guidelines' },
+  ],
+  'stage-3': [
+    { text: '什么是 Agentic AI', link: '/stage-3/agentic-ai' },
+    { text: 'AI Harness：驾驭AI的框架', link: '/stage-3/ai-harness' },
+  ],
+}
+
 export default defineConfig({
   base: '/',
 
@@ -119,73 +141,22 @@ export default defineConfig({
       { text: '📖 前言', link: '/preface' },
       {
         text: '📚 学习路径',
-        items: [
-          { text: '🧠 阶段一 · 快速认知', link: '/stage-1/' },
-          { text: '🛠️ 阶段二 · 零基础上手', link: '/stage-2/' },
-          { text: '🔬 阶段三 · AI 进阶概念', link: '/stage-3/' },
-          { text: '💼 阶段四 · 工作场景实战', link: '/stage-4/' },
-          { text: '🤖 阶段五 · AI Agent 使用', link: '/stage-5/' },
-          { text: '🚀 阶段六 · AI 创意与创业', link: '/stage-6/' },
-        ]
+        items: STAGES.map(s => ({ text: `${s.emoji} ${fullTitle(s)}`, link: s.link })),
       },
       { text: '📰 AI 新闻', link: '/news/' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
       { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
-      { text: '📝 学习测试', link: '/exams/' },
     ],
 
     sidebar: [
       { text: '📖 前言', link: '/preface' },
-      {
-        text: '🧠 阶段一 · 快速认知',
-        link: '/stage-1/',
+      // 六个阶段统一从 stagesData.js 生成；各阶段固定排序的文章列表写在这里
+      ...STAGES.map(s => ({
+        text: `${s.emoji} ${fullTitle(s)}`,
+        link: s.link,
         collapsed: true,
-        items: autoItems('stage-1', [
-          { text: '一文看懂AI是什么', link: '/stage-1/what-is-ai' },
-          { text: 'AI 常见术语一点通', link: '/stage-1/ai-terminology' },
-        ]),
-      },
-      {
-        text: '🛠️ 阶段二 · 零基础上手',
-        link: '/stage-2/',
-        collapsed: true,
-        items: autoItems('stage-2', [
-          { text: '学新不学旧，用实不用虚', link: '/stage-2/learn-new-not-old' },
-          { text: '综合/对话类 AI：从豆包开始', link: '/stage-2/doubao-guide' },
-          { text: '图片/视频类 AI：即梦、可灵等', link: '/stage-2/image-video-ai' },
-          { text: '智能体/助理类 AI：Coze、秒哒等', link: '/stage-2/agent-tools' },
-          { text: '跟 AI 对话的基本方法', link: '/stage-2/how-to-prompt' },
-          { text: 'Prompt 场景案例库', link: '/stage-2/prompt-cases' },
-          { text: 'AI 使用的安全红线', link: '/stage-2/safety-guidelines' },
-        ]),
-      },
-      {
-        text: '🔬 阶段三 · AI 进阶概念',
-        link: '/stage-3/',
-        collapsed: true,
-        items: autoItems('stage-3', [
-          { text: '什么是 Agentic AI', link: '/stage-3/agentic-ai' },
-          { text: 'AI Harness：驾驭AI的框架', link: '/stage-3/ai-harness' },
-        ]),
-      },
-      {
-        text: '💼 阶段四 · 工作场景实战',
-        link: '/stage-4/',
-        collapsed: true,
-        items: autoItems('stage-4', []),
-      },
-      {
-        text: '🤖 阶段五 · AI Agent 使用',
-        link: '/stage-5/',
-        collapsed: true,
-        items: autoItems('stage-5', []),
-      },
-      {
-        text: '🚀 阶段六 · AI 创意与创业',
-        link: '/stage-6/',
-        collapsed: true,
-        items: autoItems('stage-6', []),
-      },
+        items: autoItems(s.dir, STAGE_KNOWN_ITEMS[s.dir] || []),
+      })),
       {
         text: '📰 AI 新闻',
         link: '/news/',
@@ -202,12 +173,6 @@ export default defineConfig({
         items: autoItems('frontier', [], { sortByDate: true }),
       },
       { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
-      {
-        text: '📝 学习测试',
-        link: '/exams/',
-        collapsed: true,
-        items: autoItems('exams', []),
-      },
       { text: '🧾 更新日志', link: '/changelog' },
     ],
 
