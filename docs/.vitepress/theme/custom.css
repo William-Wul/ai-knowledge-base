@@ -238,9 +238,15 @@
   }
 }
 
-/* 沉浸阅读:右侧目录也收起,只留正文居中 */
-html.kb-zen .VPDoc .aside {
+/* 沉浸阅读:导航栏和右侧目录都收起,只留正文居中。
+   --vp-nav-height 归零让正文顶部留白和标题锚点偏移自动跟着回正 */
+html.kb-zen .VPDoc .aside,
+html.kb-zen .VPNav {
   display: none;
+}
+
+html.kb-zen {
+  --vp-nav-height: 0px;
 }
 
 /* ===== 代码块 ===== */
