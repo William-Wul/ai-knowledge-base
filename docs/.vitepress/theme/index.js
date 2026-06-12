@@ -7,6 +7,7 @@ import HomeLayout from './HomeLayout.vue'
 import BilibiliVideo from './components/BilibiliVideo.vue'
 import Breadcrumb from './components/Breadcrumb.vue'
 import BackToTop from './components/BackToTop.vue'
+import ReadingControls from './components/ReadingControls.vue'
 import './custom.css'
 
 export default {
@@ -43,6 +44,8 @@ export default {
         h(DefaultTheme.Layout, null, {
           // 把面包屑塞进文章正文上方
           'doc-before': () => h(Breadcrumb),
+          // 阅读控件:沉浸阅读按钮进导航栏,侧栏折叠把手是 fixed 定位不受挂载点影响
+          'nav-bar-content-after': () => h(ReadingControls),
         }),
         h(BackToTop),
         h(PasswordGate),
