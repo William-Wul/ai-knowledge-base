@@ -97,6 +97,7 @@ const STAGE_KNOWN_ITEMS = {
   'stage-3': [
     { text: '什么是 Agentic AI', link: '/stage-3/agentic-ai' },
     { text: 'AI Harness：驾驭AI的框架', link: '/stage-3/ai-harness' },
+    { text: 'Loop Engineering：让 AI 自己干完', link: '/stage-3/loop-engineering' },
   ],
 }
 
