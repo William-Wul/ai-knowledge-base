@@ -21,4 +21,5 @@ export const SECTIONS = {
   news:     { text: 'AI 新闻', link: '/news/' },
   hot:      { text: 'AI 日报', link: '/hot/' },
   frontier: { text: 'AI 前沿', link: '/frontier/' },
+  exams:    { text: 'AI 能力自测', link: '/exams/' },
 }

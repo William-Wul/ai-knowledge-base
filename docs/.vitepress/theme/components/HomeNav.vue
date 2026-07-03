@@ -27,6 +27,7 @@
         </li>
         <li><a href="/news/">AI 新闻</a></li>
         <li><a href="/frontier/">AI 前沿</a></li>
+        <li><a href="/exams/">AI 能力自测</a></li>
         <li><a href="/vocab/" target="_blank" rel="noopener">AI 学习词汇本</a></li>
       </ul>
     </div>

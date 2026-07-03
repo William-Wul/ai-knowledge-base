@@ -146,6 +146,7 @@ export default defineConfig({
       },
       { text: '📰 AI 新闻', link: '/news/' },
       { text: '🔭 AI 前沿', link: '/frontier/' },
+      { text: '📝 AI 能力自测', link: '/exams/' },
       { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
     ],
 
@@ -172,6 +173,12 @@ export default defineConfig({
         link: '/frontier/',
         collapsed: true,
         items: autoItems('frontier', [], { sortByDate: true }),
+      },
+      {
+        text: '📝 AI 能力自测',
+        link: '/exams/',
+        collapsed: true,
+        items: autoItems('exams', []),
       },
       { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
       { text: '🧾 更新日志', link: '/changelog' },

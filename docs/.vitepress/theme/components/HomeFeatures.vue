@@ -58,6 +58,12 @@ const zones = [
     rel: 'noopener',
     icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M4 17a3 3 0 0 1 3-3h12"/><line x1="9" y1="8" x2="14" y2="8"/><line x1="9" y1="11" x2="14" y2="11"/></svg>`,
   },
+  {
+    title: 'AI 能力自测',
+    desc: '12 道场景题，测出你现在的 AI 使用水平和下一步该学什么',
+    link: '/exams/',
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="12" width="3" height="4" rx="1"/><rect x="12" y="8" width="3" height="8" rx="1"/><rect x="17" y="4" width="3" height="12" rx="1"/></svg>`,
+  },
 ]
 
 onMounted(() => {
@@ -118,7 +124,7 @@ onUnmounted(() => {
 }
 .features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 .feature-card {

@@ -5,6 +5,7 @@ import mediumZoom from 'medium-zoom'
 import PasswordGate from './PasswordGate.vue'
 import HomeLayout from './HomeLayout.vue'
 import BilibiliVideo from './components/BilibiliVideo.vue'
+import AiAbilityQuiz from './components/AiAbilityQuiz.vue'
 import Breadcrumb from './components/Breadcrumb.vue'
 import BackToTop from './components/BackToTop.vue'
 import ReadingControls from './components/ReadingControls.vue'
@@ -16,6 +17,7 @@ export default {
   enhanceApp({ app }) {
     app.component('HomeLayout', HomeLayout)
     app.component('BilibiliVideo', BilibiliVideo)
+    app.component('AiAbilityQuiz', AiAbilityQuiz)
   },
   setup() {
     const route = useRoute()
