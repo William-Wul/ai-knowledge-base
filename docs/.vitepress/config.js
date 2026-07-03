@@ -88,10 +88,9 @@ const STAGE_KNOWN_ITEMS = {
   'stage-2': [
     { text: '学新不学旧，用实不用虚', link: '/stage-2/learn-new-not-old' },
     { text: '综合/对话类 AI：从豆包开始', link: '/stage-2/doubao-guide' },
-    { text: '图片/视频类 AI：即梦、可灵等', link: '/stage-2/image-video-ai' },
-    { text: '智能体/助理类 AI：Coze、秒哒等', link: '/stage-2/agent-tools' },
-    { text: '跟 AI 对话的基本方法', link: '/stage-2/how-to-prompt' },
-    { text: 'Prompt 场景案例库', link: '/stage-2/prompt-cases' },
+    { text: '智能体/助理类 AI：从腾讯 Marvis 开始', link: '/stage-2/marvis-guide' },
+    { text: '跟 AI 说话的基本方法', link: '/stage-2/how-to-prompt' },
+    { text: 'Prompt 进阶：让 AI 帮你想', link: '/stage-2/prompt-cases' },
     { text: 'AI 使用的安全红线', link: '/stage-2/safety-guidelines' },
   ],
   'stage-3': [
