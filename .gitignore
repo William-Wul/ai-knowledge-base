@@ -25,3 +25,6 @@ kb-articles/
 
 # Obsidian 本地配置（vault 设置、插件、工作区状态），不公开
 .obsidian/
+
+# QA 验收截图，本地证据不入库
+qa-shots/

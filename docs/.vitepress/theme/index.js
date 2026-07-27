@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import mediumZoom from 'medium-zoom'
 import PasswordGate from './PasswordGate.vue'
 import HomeLayout from './HomeLayout.vue'
+import VocabEmbed from './components/VocabEmbed.vue'
 import BilibiliVideo from './components/BilibiliVideo.vue'
 import AiAbilityQuiz from './components/AiAbilityQuiz.vue'
 import Breadcrumb from './components/Breadcrumb.vue'
@@ -18,6 +19,7 @@ export default {
     app.component('HomeLayout', HomeLayout)
     app.component('BilibiliVideo', BilibiliVideo)
     app.component('AiAbilityQuiz', AiAbilityQuiz)
+    app.component('VocabEmbed', VocabEmbed)
   },
   setup() {
     const route = useRoute()

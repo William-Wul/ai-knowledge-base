@@ -165,7 +165,7 @@ export default defineConfig({
       { text: 'AI 基础学习', link: '/stage-1/' },
       { text: 'AI 进阶实践', link: '/stage-4/' },
       { text: 'AI 能力自测', link: '/exams/' },
-      { text: 'AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
+      { text: 'AI 学习词汇本', link: '/vocab-book' },
     ],
 
     // 2026-07-28 改版：侧边栏按四大板块重组（目录与 URL 不变，仅逻辑归组）
@@ -210,7 +210,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '📝 AI 能力自测', link: '/exams/', collapsed: true, items: autoItems('exams', []) },
-          { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
+          { text: '📓 AI 学习词汇本', link: '/vocab-book' },
         ],
       },
       { text: '更新日志', link: '/changelog' },
