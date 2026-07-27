@@ -2,9 +2,9 @@
   <section class="features-section" id="features">
     <div class="section-inner">
       <div class="features-header reveal" ref="headerRef">
-        <div class="section-label">More</div>
-        <h2 class="section-title">特色专区</h2>
-        <p class="section-desc">走完路径之后，这里让你保持在一线</p>
+        <div class="section-label">Tools</div>
+        <h2 class="section-title">AI 学习小工具</h2>
+        <p class="section-desc">测一测自己的水平，顺手攒下每个陌生术语</p>
       </div>
       <div class="features">
         <a
@@ -39,16 +39,10 @@ let io = null
 
 const zones = [
   {
-    title: 'AI 新闻',
-    desc: '滚动更新的 AI 行业动态和资讯',
-    link: '/news/',
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="7" y1="14" x2="13" y2="14"/><line x1="7" y1="16.5" x2="11" y2="16.5"/></svg>`,
-  },
-  {
-    title: 'AI 前沿探讨',
-    desc: '探讨 AI 领域最前沿的技术、趋势和思考',
-    link: '/frontier/',
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20l6-6"/><path d="M8 15l5-5 3 3-5 5-3-3z"/><path d="M12 10l4-4 3 3-4 4"/><path d="M18 3l3 3"/></svg>`,
+    title: 'AI 能力自测',
+    desc: '12 道场景题，测出你现在的 AI 使用水平和下一步该学什么',
+    link: '/exams/',
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="12" width="3" height="4" rx="1"/><rect x="12" y="8" width="3" height="8" rx="1"/><rect x="17" y="4" width="3" height="12" rx="1"/></svg>`,
   },
   {
     title: 'AI 学习词汇本',
@@ -57,12 +51,6 @@ const zones = [
     target: '_blank',
     rel: 'noopener',
     icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M4 17a3 3 0 0 1 3-3h12"/><line x1="9" y1="8" x2="14" y2="8"/><line x1="9" y1="11" x2="14" y2="11"/></svg>`,
-  },
-  {
-    title: 'AI 能力自测',
-    desc: '12 道场景题，测出你现在的 AI 使用水平和下一步该学什么',
-    link: '/exams/',
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="12" width="3" height="4" rx="1"/><rect x="12" y="8" width="3" height="8" rx="1"/><rect x="17" y="4" width="3" height="12" rx="1"/></svg>`,
   },
 ]
 
@@ -124,8 +112,10 @@ onUnmounted(() => {
 }
 .features {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  max-width: 880px;
+  margin: 0 auto;
 }
 .feature-card {
   position: relative;

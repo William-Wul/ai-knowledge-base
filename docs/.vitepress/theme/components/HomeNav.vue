@@ -17,16 +17,9 @@
         <span class="kbd">{{ shortcutKey }}</span>
       </button>
       <ul class="nav-links">
-        <li class="has-dropdown" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
-          <a class="has-caret" href="/stage-1/">学习路径</a>
-          <ul v-show="dropdownOpen" class="dropdown">
-            <li v-for="s in stages" :key="s.link">
-              <a :href="s.link">{{ s.label }}</a>
-            </li>
-          </ul>
-        </li>
-        <li><a href="/news/">AI 新闻</a></li>
-        <li><a href="/frontier/">AI 前沿</a></li>
+        <li><a href="/hot/">AI 最新动态</a></li>
+        <li><a href="/stage-1/">AI 基础学习</a></li>
+        <li><a href="/stage-4/">AI 进阶实践</a></li>
         <li><a href="/exams/">AI 能力自测</a></li>
         <li><a href="/vocab/" target="_blank" rel="noopener">AI 学习词汇本</a></li>
       </ul>
@@ -36,9 +29,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { STAGES, fullTitle } from '../../stagesData.js'
 
-const dropdownOpen = ref(false)
 const isMac = ref(true)
 
 onMounted(() => {
@@ -46,8 +37,6 @@ onMounted(() => {
 })
 
 const shortcutKey = computed(() => isMac.value ? '⌘ K' : 'Ctrl K')
-
-const stages = STAGES.map(s => ({ label: `${s.emoji} ${fullTitle(s)}`, link: s.link }))
 
 function triggerSearch() {
   const btn = document.querySelector('.VPNavBarSearch .DocSearch-Button, .VPNavBarSearch button')
@@ -122,7 +111,7 @@ function triggerSearch() {
   margin-block: 0;
   padding-inline-start: 0;
 }
-.nav-links > li { position: relative; }
+.nav-links > li { position: relative; flex-shrink: 0; }
 .nav-links a {
   display: inline-block;
   padding: 7px 13px; border-radius: 8px;
@@ -130,53 +119,19 @@ function triggerSearch() {
   font-size: 14px; font-weight: 500;
   transition: all 0.18s ease;
   text-decoration: none;
+  white-space: nowrap;
 }
 .nav-links a:hover {
   color: var(--green-900);
   background: var(--green-100);
 }
-.nav-links a.has-caret::after {
-  content: '';
-  display: inline-block; margin-left: 5px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid currentColor;
-  opacity: 0.5;
-  vertical-align: middle;
-}
-
-.dropdown {
-  position: absolute;
-  top: 100%; left: 0;
-  margin-top: 6px;
-  min-width: 240px;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(31, 67, 50, 0.12);
-  padding: 6px;
-  list-style: none;
-  margin-block: 0;
-  padding-inline-start: 6px;
-  padding-inline-end: 6px;
-}
-.dropdown a {
-  display: block;
-  padding: 9px 12px;
-  font-size: 13.5px;
-  color: var(--ink-soft);
-  border-radius: 6px;
-  white-space: nowrap;
-}
-.dropdown a:hover {
-  background: var(--green-100);
-  color: var(--green-900);
-}
 
 @media (max-width: 960px) {
   .nav-inner { padding: 12px 20px; gap: 12px; }
   .nav-search { display: none; }
-  .nav-links a { padding: 6px 10px; font-size: 13px; }
-  .nav-links > li:not(.has-dropdown) a { display: none; }
+  /* 窄屏下链接可横向滑动，不再整体隐藏 */
+  .nav-links { overflow-x: auto; scrollbar-width: none; }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { padding: 6px 9px; font-size: 12.5px; }
 }
 </style>

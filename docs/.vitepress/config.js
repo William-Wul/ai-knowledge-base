@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { existsSync, readdirSync, readFileSync } from 'fs'
 import { resolve, join, basename, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { STAGES, fullTitle } from './stagesData.js'
+import { CAUTION_LINKS, PRACTICE_DIRS } from './stagesData.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -41,7 +41,9 @@ function linkToFile(link) {
 // - 已知列表中的文件：若文件存在则保留（保序），文件删了自动消失
 // - 目录里新增的文件：自动追加到末尾（标题从 frontmatter 读取）
 // - reverse: 新文件按日期倒序排（最新在上），用于日报类目录
-function autoItems(dir, knownItems = [], { reverse = false, sortByDate = false } = {}) {
+// - limit: 限制条目总数（日报归档只展示最近几期）
+// - exclude: 这些链接被别的模块占用（如「使用注意事项」借用了 stage-2 的文章），不再追加
+function autoItems(dir, knownItems = [], { reverse = false, sortByDate = false, limit = 0, exclude = [] } = {}) {
   // 1. 过滤掉文件已不存在的已知项（处理「后台删除」场景）
   const kept = knownItems.filter(item => existsSync(linkToFile(item.link)))
   const keptLinks = new Set(kept.map(i => i.link))
@@ -74,24 +76,44 @@ function autoItems(dir, knownItems = [], { reverse = false, sortByDate = false }
       const link = `/${dir}/${basename(f, '.md')}`
       return { text: getTitle(join(dirPath, f)), link }
     })
-    .filter(item => !keptLinks.has(item.link))
+    .filter(item => !keptLinks.has(item.link) && !exclude.includes(item.link))
 
-  return [...kept, ...extras]
+  const all = [...kept, ...extras]
+  return limit > 0 ? all.slice(0, limit) : all
 }
 
-// 各阶段需要固定排序的已知文章（新文件会由 autoItems 自动追加到末尾）
+// 跨目录合并文章列表（按 frontmatter date 倒序，最新在上）：
+// 用于「AI 前沿」栏目合并 frontier/（深度专题）与 news/（原 AI 新闻）
+// 显示时去掉标题开头的日期前缀（如「2026/07/17 · 」），排序不受影响
+function mergedItems(dirs, { limit = 0 } = {}) {
+  const all = []
+  for (const dir of dirs) {
+    const dirPath = join(docsRoot, dir)
+    if (!existsSync(dirPath)) continue
+    for (const f of readdirSync(dirPath)) {
+      if (!f.endsWith('.md') || f === 'index.md') continue
+      const fp = join(dirPath, f)
+      const text = getTitle(fp).replace(/^\d{4}[/.-]\d{1,2}[/.-]\d{1,2}\s*[·\-–—|]?\s*/, '')
+      all.push({ text, link: `/${dir}/${basename(f, '.md')}`, date: getDate(fp) })
+    }
+  }
+  all.sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.text.localeCompare(b.text))
+  const list = limit > 0 ? all.slice(0, limit) : all
+  return list.map(({ text, link }) => ({ text, link }))
+}
+
+// 各模块需要固定排序的已知文章（新文件会由 autoItems 自动追加到末尾）
+// 注：stage-2 的「安全红线」「学新不学旧」已划归「AI 使用注意事项」模块（CAUTION_LINKS）
 const STAGE_KNOWN_ITEMS = {
   'stage-1': [
     { text: '一文看懂AI是什么', link: '/stage-1/what-is-ai' },
     { text: 'AI 常见术语一点通', link: '/stage-1/ai-terminology' },
   ],
   'stage-2': [
-    { text: '学新不学旧，用实不用虚', link: '/stage-2/learn-new-not-old' },
     { text: '综合/对话类 AI：从豆包开始', link: '/stage-2/doubao-guide' },
     { text: '智能体/助理类 AI：从 Marvis 开始', link: '/stage-2/marvis-guide' },
     { text: '跟 AI 说话的基本方法', link: '/stage-2/how-to-prompt' },
     { text: 'Prompt 进阶：让 AI 帮你想', link: '/stage-2/prompt-cases' },
-    { text: 'AI 使用的安全红线', link: '/stage-2/safety-guidelines' },
   ],
   'stage-3': [
     { text: '什么是 Agentic AI', link: '/stage-3/agentic-ai' },
@@ -137,50 +159,61 @@ export default defineConfig({
   themeConfig: {
     siteTitle: 'AI 学习知识库',
 
+    // 2026-07 改版：与首页导航一致的五大入口
     nav: [
-      { text: '📖 前言', link: '/preface' },
-      {
-        text: '📚 学习路径',
-        items: STAGES.map(s => ({ text: `${s.emoji} ${fullTitle(s)}`, link: s.link })),
-      },
-      { text: '📰 AI 新闻', link: '/news/' },
-      { text: '🔭 AI 前沿', link: '/frontier/' },
-      { text: '📝 AI 能力自测', link: '/exams/' },
-      { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
+      { text: 'AI 最新动态', link: '/hot/' },
+      { text: 'AI 基础学习', link: '/stage-1/' },
+      { text: 'AI 进阶实践', link: '/stage-4/' },
+      { text: 'AI 能力自测', link: '/exams/' },
+      { text: 'AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
     ],
 
+    // 2026-07-28 改版：侧边栏按四大板块重组（目录与 URL 不变，仅逻辑归组）
+    // 注：板块标题不带图标，图标只留给二级模块——层级更清晰
+    // 前言居首、更新日志收尾，与四大板块同为一级标题（样式见 custom.css 按 href 定向）
+    // 板块与模块均默认折叠（collapsed: true），仅自动展开包含当前页的那一条链
     sidebar: [
-      { text: '📖 前言', link: '/preface' },
-      // 六个阶段统一从 stagesData.js 生成；各阶段固定排序的文章列表写在这里
-      ...STAGES.map(s => ({
-        text: `${s.emoji} ${fullTitle(s)}`,
-        link: s.link,
-        collapsed: true,
-        items: autoItems(s.dir, STAGE_KNOWN_ITEMS[s.dir] || []),
-      })),
+      { text: '前言', link: '/preface' },
       {
-        text: '📰 AI 新闻',
-        link: '/news/',
+        text: 'AI 最新动态',
         collapsed: true,
         items: [
-          { text: '🔥 ' + getTitle(join(docsRoot, 'hot/index.md')), link: '/hot/' },
-          ...autoItems('news', [], { reverse: true }),
+          { text: '🔥 AI 日报', link: '/hot/', collapsed: true, items: autoItems('hot', [], { reverse: true, limit: 7 }) },
+          // AI 前沿 = frontier/ 深度专题 + 原 news/ AI 新闻，按日期倒序混排
+          { text: '🔭 AI 前沿', link: '/frontier/', collapsed: true, items: mergedItems(['frontier', 'news']) },
         ],
       },
       {
-        text: '🔭 AI 前沿探讨',
-        link: '/frontier/',
+        text: 'AI 基础学习',
         collapsed: true,
-        items: autoItems('frontier', [], { sortByDate: true }),
+        items: [
+          { text: '🧠 AI 快速认知', link: '/stage-1/', collapsed: true, items: autoItems('stage-1', STAGE_KNOWN_ITEMS['stage-1']) },
+          { text: '🛠️ AI 工具快速上手', link: '/stage-2/', collapsed: true, items: autoItems('stage-2', STAGE_KNOWN_ITEMS['stage-2'], { exclude: CAUTION_LINKS }) },
+          {
+            text: '⚠️ AI 使用注意事项',
+            link: '/stage-2/safety-guidelines',
+            collapsed: true,
+            items: CAUTION_LINKS.filter(l => existsSync(linkToFile(l)))
+              .map(l => ({ text: getTitle(linkToFile(l)), link: l })),
+          },
+        ],
       },
       {
-        text: '📝 AI 能力自测',
-        link: '/exams/',
+        text: 'AI 进阶实践',
+        link: '/stage-4/',
         collapsed: true,
-        items: autoItems('exams', []),
+        // 扁平文章池：思路方法(stage-3) → 岗位实战(stage-4) → Agent 教程(stage-5) → 创意创业(stage-6)
+        items: PRACTICE_DIRS.flatMap(d => autoItems(d, STAGE_KNOWN_ITEMS[d] || [])),
       },
-      { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
-      { text: '🧾 更新日志', link: '/changelog' },
+      {
+        text: 'AI 学习小工具',
+        collapsed: true,
+        items: [
+          { text: '📝 AI 能力自测', link: '/exams/', collapsed: true, items: autoItems('exams', []) },
+          { text: '📓 AI 学习词汇本', link: '/vocab/', target: '_blank', rel: 'noopener' },
+        ],
+      },
+      { text: '更新日志', link: '/changelog' },
     ],
 
     search: {
@@ -206,7 +239,7 @@ export default defineConfig({
     lastUpdated: { text: '最后更新于' },
 
     footer: {
-      message: '内部学习资料，请勿外传',
+      message: '仅用作个人 AI 学习，请勿商用',
       copyright: '© 2026 AI 学习知识库',
     },
   },

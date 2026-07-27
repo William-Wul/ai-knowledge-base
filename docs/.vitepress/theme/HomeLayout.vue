@@ -2,7 +2,6 @@
   <div class="home-wrapper">
     <HomeNav />
     <HomeHero />
-    <HomeFeatures />
     <HomeFooter />
   </div>
 </template>
@@ -10,8 +9,8 @@
 <script setup>
 import HomeNav from './components/HomeNav.vue'
 import HomeHero from './components/HomeHero.vue'
-import HomeFeatures from './components/HomeFeatures.vue'
 import HomeFooter from './components/HomeFooter.vue'
+// 注：HomeFeatures（独立第二屏）已合并进 HomeHero 首屏，组件文件保留便于日后恢复
 </script>
 
 <style>
@@ -44,5 +43,10 @@ import HomeFooter from './components/HomeFooter.vue'
   color: var(--ink);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+
+  /* 整页一屏：导航 + 首屏(flex:1) + 细页脚，桌面端不滚动 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 </style>

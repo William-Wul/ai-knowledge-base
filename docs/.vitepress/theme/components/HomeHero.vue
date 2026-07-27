@@ -83,82 +83,96 @@
       </svg>
     </div>
 
-    <!-- 文字 + 节点 -->
+    <!-- 文字 + AI 最新动态 -->
     <div class="hero-foreground">
       <div class="hero-text">
-        <h1>
-          从零基础小白，<br>
-          走向<span class="accent">AI 时代</span>超级个体
-        </h1>
-        <p class="hero-sub">
-          无论你是第一次接触 AI，还是想用 AI 重新定义自己的工作方式——在这里，你能找到一条循序渐进、亲测有效的学习路径。
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="/stage-1/">
-            从第一阶段开始
-            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M13 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a class="btn btn-ghost" href="/preface">查看全部内容</a>
+        <div class="hero-main">
+          <h1>
+            零门槛学 AI<br>
+            成为 <span class="accent">AI 时代</span>超级个体
+          </h1>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/stage-1/">
+              进入 AI 基础学习
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="/stage-4/">发现更多 AI 实践</a>
+          </div>
+        </div>
+
+        <div class="hero-tools">
+          <div class="tools-label">AI 学习小工具</div>
+          <div class="tools-cards">
+            <a class="tool-card" href="/exams/">
+              <div class="tool-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="12" width="3" height="4" rx="1"/><rect x="12" y="8" width="3" height="8" rx="1"/><rect x="17" y="4" width="3" height="12" rx="1"/></svg>
+              </div>
+              <div class="tool-content">
+                <div class="tool-title">AI 能力自测</div>
+                <div class="tool-desc">12 道场景题，测出你的 AI 使用水平</div>
+              </div>
+              <svg class="tool-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="tool-card" href="/vocab/" target="_blank" rel="noopener">
+              <div class="tool-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M4 17a3 3 0 0 1 3-3h12"/><line x1="9" y1="8" x2="14" y2="8"/><line x1="9" y1="11" x2="14" y2="11"/></svg>
+              </div>
+              <div class="tool-content">
+                <div class="tool-title">AI 学习词汇本</div>
+                <div class="tool-desc">收录陌生术语，AI 帮你拆解记忆</div>
+              </div>
+              <svg class="tool-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="hero-nodes">
-        <svg class="path-svg" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="pathWidth" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0%" stop-color="#fbfaf5" stop-opacity="0.95"/>
-              <stop offset="50%" stop-color="#fbfaf5" stop-opacity="0.88"/>
-              <stop offset="100%" stop-color="#fbfaf5" stop-opacity="0.7"/>
-            </linearGradient>
-            <linearGradient id="pathBorder" x1="0" y1="1" x2="1" y2="0">
-              <stop offset="0%" stop-color="#6ba583"/>
-              <stop offset="100%" stop-color="#1f4332"/>
-            </linearGradient>
-          </defs>
-          <path class="path-fill" d="M 12 88 C 20 86, 26 78, 30 73 C 34 68, 36 62, 40 58 C 44 54, 46 50, 50 46 C 54 42, 60 34, 62 30 C 64 26, 78 18, 88 14" stroke="rgba(31, 67, 50, 0.08)" stroke-linecap="round" stroke-linejoin="round" fill="none" vector-effect="non-scaling-stroke" style="stroke-width: 24px; transform: translate(2px, 3px);"/>
-          <path class="path-fill" d="M 12 88 C 20 86, 26 78, 30 73 C 34 68, 36 62, 40 58 C 44 54, 46 50, 50 46 C 54 42, 60 34, 62 30 C 64 26, 78 18, 88 14" stroke="url(#pathWidth)" stroke-linecap="round" stroke-linejoin="round" fill="none" vector-effect="non-scaling-stroke" style="stroke-width: 20px;"/>
-          <path class="path-border" d="M 12 88 C 20 86, 26 78, 30 73 C 34 68, 36 62, 40 58 C 44 54, 46 50, 50 46 C 54 42, 60 34, 62 30 C 64 26, 78 18, 88 14" stroke="url(#pathBorder)" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.35" vector-effect="non-scaling-stroke" style="stroke-width: 1.5px;"/>
-          <path class="path-border" d="M 12 88 C 20 86, 26 78, 30 73 C 34 68, 36 62, 40 58 C 44 54, 46 50, 50 46 C 54 42, 60 34, 62 30 C 64 26, 78 18, 88 14" stroke="#3d7860" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.5 1.2" fill="none" opacity="0.35" vector-effect="non-scaling-stroke" style="stroke-width: 0.8px;"/>
-        </svg>
-
-        <a v-for="n in nodes" :key="n.num" :class="['node', `node-${n.num}`, n.reverse && 'reverse', n.final && 'final']" :href="n.link" :aria-label="n.aria">
-          <div class="node-dot">{{ n.num }}</div>
-          <div class="node-label">
-            <div class="node-label-title">{{ n.title }}</div>
-            <div class="node-label-sub">{{ n.sub }}</div>
+      <!-- 右侧面板：AI 最新动态（构建时取 hot/ 最新一期日报） -->
+      <div class="hero-daily">
+        <div class="daily-panel">
+          <div class="daily-header">
+            <div class="daily-title">
+              <span class="live-dot"></span>
+              AI 最新动态
+            </div>
+            <a class="daily-more" :href="daily.url">
+              {{ daily.date }} · 查看本期
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M5 12h14M13 5l7 7-7 7"/>
+              </svg>
+            </a>
           </div>
-        </a>
+          <ul class="daily-list">
+            <li v-for="(item, i) in daily.items" :key="i" :style="{ animationDelay: `${0.9 + i * 0.12}s` }">
+              <a class="daily-item" :href="`${daily.url}#${item.anchor}`">
+                <span class="daily-cat">{{ item.category }}</span>
+                <span class="daily-item-title">{{ item.title }}</span>
+              </a>
+            </li>
+          </ul>
+          <div class="daily-footer">
+            <span>每日自动同步 · AIHOT 精选</span>
+            <a href="/hot/">全部日报 →</a>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="hero-footnote">
-      <span class="scroll-dot"></span>
-      <span>继续滚动，查看特色专区</span>
     </div>
   </section>
 </template>
 
 <script setup>
-import { STAGES } from '../../stagesData.js'
-
-// 路径图节点数据来自 stagesData.js；最后一个节点标签放在左侧（reverse）并用旗标样式（final）
-const nodes = STAGES.map((s, i) => ({
-  num: String(i + 1).padStart(2, '0'),
-  title: s.name,
-  sub: s.sub,
-  link: s.link,
-  aria: `${s.stageLabel}：${s.name}`,
-  reverse: i === STAGES.length - 1,
-  final: i === STAGES.length - 1,
-}))
+import { data as daily } from '../../data/hotLatest.data.js'
 </script>
 
 <style scoped>
 .hero {
   position: relative;
-  min-height: calc(100vh - 64px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -197,12 +211,12 @@ const nodes = STAGES.map((s, i) => ({
 .hero-foreground {
   position: relative;
   z-index: 2;
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 64px 40px 80px;
-  min-height: calc(100vh - 64px);
+  padding: 48px 40px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 40px;
   align-items: center;
 }
@@ -210,16 +224,25 @@ const nodes = STAGES.map((s, i) => ({
 .hero-text {
   max-width: 560px;
   position: relative;
+  /* 左列撑满整行高度：slogan 顶部与右侧面板对齐，小工具卡底部与面板底部对齐 */
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .hero h1 {
   font-family: var(--font-serif);
-  font-size: clamp(34px, 4vw, 56px);
+  font-size: clamp(34px, 3.5vw, 48px);
   line-height: 1.22;
   font-weight: 900;
   color: var(--green-900);
   letter-spacing: -0.01em;
-  margin-bottom: 26px;
+  margin-bottom: 36px;
   opacity: 0; animation: fadeUp 0.8s 0.3s ease forwards;
+}
+/* 桌面端两行各自禁换行（<br> 的强制断行不受影响），防止「体」字被挤到第三行 */
+@media (min-width: 961px) {
+  .hero h1 { white-space: nowrap; }
 }
 .hero h1 .accent {
   position: relative;
@@ -238,14 +261,6 @@ const nodes = STAGES.map((s, i) => ({
   opacity: 0.7;
   z-index: -1;
   border-radius: 2px;
-}
-.hero-sub {
-  font-size: 16px; line-height: 1.78;
-  color: var(--ink-soft);
-  max-width: 480px;
-  margin-bottom: 36px;
-  opacity: 0; animation: fadeUp 0.8s 0.45s ease forwards;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 .hero-actions {
   display: flex; gap: 14px; flex-wrap: wrap;
@@ -283,197 +298,119 @@ const nodes = STAGES.map((s, i) => ({
   background: var(--green-900); color: var(--cream);
 }
 
-.hero-nodes {
+/* ============ 右侧：AI 最新动态面板 ============ */
+.hero-daily {
   position: relative;
-  height: 540px;
   opacity: 0; animation: fadeIn 1.2s 0.6s ease forwards;
 }
-
-.path-svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  overflow: visible;
+.daily-panel {
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid var(--green-200);
+  border-radius: 18px;
+  box-shadow: 0 18px 48px rgba(31, 67, 50, 0.12);
+  padding: 22px 24px 16px;
 }
-.path-fill {
-  opacity: 0;
-  animation: pathReveal 2.8s 0.8s ease-out forwards;
+.daily-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 6px;
 }
-@keyframes pathReveal {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.daily-title {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 900;
+  color: var(--green-900);
+  letter-spacing: 0.01em;
 }
-.path-border {
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
-  animation: drawBorder 3s 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.live-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green-600);
+  box-shadow: 0 0 0 3px var(--green-100);
+  animation: livePulse 2.4s ease-in-out infinite;
 }
-@keyframes drawBorder { to { stroke-dashoffset: 0; } }
-
-.node {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  display: flex; align-items: center; gap: 12px;
-  cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-  padding: 4px;
-  z-index: 3;
+@keyframes livePulse {
+  0%, 100% { box-shadow: 0 0 0 3px var(--green-100); }
+  50% { box-shadow: 0 0 0 6px rgba(107, 165, 131, 0.28); }
+}
+.daily-more {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--green-700);
   text-decoration: none;
-}
-.node-dot {
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  background: white;
-  border: 2.5px solid var(--green-700);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 16px; font-weight: 700;
-  color: var(--green-900);
-  flex-shrink: 0;
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-  box-shadow: 0 6px 16px rgba(31, 67, 50, 0.15);
-  position: relative;
-}
-.node-dot::before {
-  content: '';
-  position: absolute;
-  inset: -7px;
-  border-radius: 50%;
-  border: 1px solid var(--green-400);
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-.node-dot::after {
-  content: '';
-  position: absolute;
-  bottom: -9px; left: 50%;
-  transform: translateX(-50%);
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--green-700);
-  opacity: 0.55;
-}
-.node:hover .node-dot {
-  transform: scale(1.1);
-  background: var(--green-900);
-  color: var(--cream);
-  border-color: var(--green-900);
-  box-shadow: 0 12px 26px rgba(31, 67, 50, 0.3);
-}
-.node:hover .node-dot::before {
-  opacity: 1;
-  inset: -11px;
-}
-
-.node-label {
-  border-left: 2px solid rgba(31, 67, 50, 0.28);
-  border-radius: 0;
-  background: rgba(255, 255, 255, 0.42);
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-  backdrop-filter: blur(10px) saturate(140%);
-  padding: 8px 14px 8px 12px;
   white-space: nowrap;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  box-shadow: none;
-  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
-.node-label-title {
-  font-family: var(--font-serif);
-  font-size: 15px; font-weight: 700;
-  color: var(--green-900);
-  line-height: 1.25;
+.daily-more:hover { background: var(--green-100); color: var(--green-900); }
+
+.daily-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.node-label-sub {
+.daily-list li {
+  opacity: 0;
+  animation: itemIn 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+@keyframes itemIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.daily-item {
+  display: flex; align-items: baseline; gap: 10px;
+  padding: 9px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.daily-item:hover { background: rgba(255, 255, 255, 0.85); }
+.daily-item + .daily-item { border-top: none; }
+.daily-list li + li { border-top: 1px dashed rgba(31, 67, 50, 0.08); }
+.daily-cat {
+  flex-shrink: 0;
+  font-size: 11px;
+  color: var(--green-700);
+  background: var(--green-100);
+  border: 1px solid var(--green-200);
+  border-radius: 5px;
+  padding: 1.5px 7px;
+  white-space: nowrap;
+  transform: translateY(-1px);
+}
+.daily-item-title {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+.daily-item:hover .daily-item-title { color: var(--green-800); }
+
+.daily-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--ink-mute);
+  font-family: var(--font-mono);
+}
+.daily-footer a {
+  color: var(--green-700);
+  text-decoration: none;
+  font-family: var(--font-sans);
   font-size: 12px;
-  color: var(--ink-soft);
-  margin-top: 2px;
-  line-height: 1.35;
 }
-.node:hover .node-label {
-  background: rgba(255, 255, 255, 0.78);
-  border-left-color: var(--green-700);
-  transform: translateX(4px);
-}
-
-.node.reverse { flex-direction: row-reverse; }
-.node.reverse .node-label {
-  border-left: none;
-  border-right: 2px solid rgba(31, 67, 50, 0.28);
-  padding: 8px 12px 8px 14px;
-  text-align: right;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-.node.reverse:hover .node-label {
-  border-right-color: var(--green-700);
-  transform: translateX(-4px);
-}
-
-.node.final .node-dot {
-  width: 44px; height: 44px;
-  background: var(--green-900);
-  color: var(--cream);
-  border-color: var(--green-900);
-  font-size: 16px;
-  box-shadow: 0 8px 22px rgba(31, 67, 50, 0.28);
-}
-.node.final .node-dot::after {
-  background: var(--green-900);
-  opacity: 0.6;
-}
-.node.final .node-dot::before {
-  opacity: 1; inset: -8px;
-  border-color: var(--green-500);
-  animation: ring 3s ease-in-out infinite;
-}
-.node.final:hover .node-dot {
-  transform: scale(1.1);
-  background: var(--green-800);
-}
-.node.final .node-label {
-  background: rgba(31, 67, 50, 0.72);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-right-color: rgba(251, 250, 245, 0.35);
-}
-.node.final .node-label-title {
-  color: var(--cream);
-}
-.node.final .node-label-sub {
-  color: rgba(251, 250, 245, 0.75);
-}
-.node.final:hover .node-label {
-  background: rgba(31, 67, 50, 0.88);
-}
-@keyframes ring {
-  0%, 100% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.12); opacity: 0.2; }
-}
-
-.node { opacity: 0; animation: nodePop 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
-.node-01 { animation-delay: 1.1s; }
-.node-02 { animation-delay: 1.4s; }
-.node-03 { animation-delay: 1.7s; }
-.node-04 { animation-delay: 2.0s; }
-.node-05 { animation-delay: 2.3s; }
-.node-06 { animation-delay: 2.6s; }
-@keyframes nodePop {
-  from { opacity: 0; transform: translate(-50%, -50%) scale(0.65); }
-  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-}
-
-.node-01 { left: 12%; top: 88%; }
-.node-02 { left: 30%; top: 73%; }
-.node-03 { left: 40%; top: 58%; }
-.node-04 { left: 50%; top: 46%; }
-.node-05 { left: 62%; top: 30%; }
-.node-06 { left: 88%; top: 14%; }
+.daily-footer a:hover { color: var(--green-900); text-decoration: underline; }
 
 .sun-glow {
   transform-origin: center;
@@ -492,25 +429,81 @@ const nodes = STAGES.map((s, i) => ({
   50% { transform: translateX(20px); }
 }
 
-.hero-footnote {
-  position: absolute;
-  bottom: 20px; left: 50%; transform: translateX(-50%);
-  z-index: 4;
-  font-family: var(--font-mono);
-  font-size: 11px; letter-spacing: 0.15em;
-  color: var(--ink-mute);
-  text-transform: uppercase;
+/* ============ 左列：AI 学习小工具 ============ */
+.hero-tools {
+  margin-top: 44px;
+  opacity: 0; animation: fadeUp 0.8s 0.75s ease forwards;
+}
+.tools-label {
   display: flex; align-items: center; gap: 10px;
-  opacity: 0; animation: fadeUp 0.8s 2.8s ease forwards;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--green-700);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 12px;
 }
-.hero-footnote .scroll-dot {
-  width: 4px; height: 4px; border-radius: 50%;
-  background: var(--green-500);
-  animation: pulse 2s ease-in-out infinite;
+.tools-label::after {
+  content: ''; flex: 1; height: 1px;
+  background: var(--green-300);
+  opacity: 0.6;
 }
-@keyframes pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 1; }
+.tools-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.tool-card {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--green-200);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.tool-card:hover {
+  border-color: var(--green-500);
+  background: white;
+  transform: translateY(-2px);
+}
+.tool-icon {
+  width: 38px; height: 38px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: white;
+  border: 1px solid var(--green-200);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--green-700);
+  transition: all 0.3s ease;
+}
+.tool-card:hover .tool-icon {
+  background: var(--green-100);
+  border-color: var(--green-300);
+}
+.tool-content { flex: 1; min-width: 0; }
+.tool-title {
+  font-family: var(--font-serif);
+  font-size: 14.5px; font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 2px;
+}
+.tool-desc {
+  font-size: 11.5px;
+  color: var(--ink-mute);
+  line-height: 1.45;
+}
+.tool-arrow {
+  flex-shrink: 0;
+  color: var(--green-700);
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+.tool-card:hover .tool-arrow {
+  opacity: 1;
+  transform: translateX(3px);
 }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
@@ -522,8 +515,7 @@ const nodes = STAGES.map((s, i) => ({
 }
 
 @media (max-width: 1100px) {
-  .hero-foreground { gap: 24px; }
-  .hero h1 { font-size: 40px; }
+  .hero-foreground { gap: 32px; }
 }
 @media (max-width: 960px) {
   .hero { min-height: auto; }
@@ -533,19 +525,13 @@ const nodes = STAGES.map((s, i) => ({
     padding: 60px 24px 60px;
     min-height: auto;
   }
-  .hero-nodes { height: 420px; }
   .hero h1 { font-size: 34px; }
-  .hero-footnote { display: none; }
-  .node-dot { width: 40px; height: 40px; font-size: 14px; }
-  .node.final .node-dot { width: 40px; height: 40px; font-size: 14px; }
-  .node-label-title { font-size: 14px; }
+  .daily-panel { max-width: none; margin-left: 0; }
 }
 @media (max-width: 640px) {
   .hero h1 { font-size: 28px; }
-  .hero-nodes { height: 380px; }
-  .node-label-sub { display: none; }
-  .node-label-title { font-size: 13px; }
-  /* 窄屏下 01 节点圆圈会贴到屏幕左缘被裁掉，沿路径方向往内挪一点 */
-  .node-01 { left: 17%; top: 86%; }
+  .tools-cards { grid-template-columns: 1fr; }
+  .daily-panel { padding: 18px 16px 14px; }
+  .daily-item-title { font-size: 13px; }
 }
 </style>

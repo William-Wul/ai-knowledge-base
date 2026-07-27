@@ -102,26 +102,67 @@
   word-break: break-word;
 }
 
-/* 顶层条目(分组标题和单条链接)统一排版:
-   一行排齐不折行;同字重同颜色——VitePress 默认给"带子项的分组"加粗、
-   给"单条链接"(前言/词汇本/更新日志)细体浅色,混在一列里不整齐 */
-.VPSidebarItem.level-0 > .item .text,
-.VPSidebarItem.level-0:not(:has(> .item > .link)) > .items > .VPSidebarItem.level-1 > .item .text {
+/* ===== 侧边栏三级层级（2026-07-28 改版）=====
+   结构（已按渲染后 DOM 确认）：一级板块 = level-0 > h2.text，
+   二级模块 = level-1.collapsible > h3.text，文章 = .is-link 里的 p.text。
+   设计：板块用衬线加粗墨绿做出"标题感"，模块用细黑体弱一级，
+   文章列表加左侧竖向导轨——一眼看清"板块 > 模块 > 文章"的归属。 */
+
+/* 一级板块标题：衬线 + 加粗 + 墨绿 + 字距拉开 */
+.VPSidebarItem.level-0 > .item h2.text {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 600;
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+  font-weight: 700;
+  font-size: 15.5px;
+  color: #1f4332;
+  letter-spacing: 0.03em;
 }
 
-.VPSidebarItem.level-0 > .item .text {
+/* 板块之间的分隔沿用 VitePress 默认 .group 间距，不再额外叠加 */
+
+/* 二级模块标题：无衬线、中等字重、14px，明显弱于板块标题 */
+.VPSidebarItem.level-1.collapsible > .item h3.text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 14px;
   color: var(--vp-c-text-1);
 }
 
-/* 无标题分组里的单条链接(前言/词汇本/更新日志):颜色和分组标题对齐;
-   :not(.is-active) 给"当前页高亮绿"让路 */
-.VPSidebarItem.level-0:not(:has(> .item > .link)) > .items > .VPSidebarItem.level-1:not(.is-active) > .item .text {
+/* 模块下的文章列表：左侧竖向导轨，看出文章归属哪个模块 */
+.VPSidebarItem.level-1.collapsible > .items {
+  margin-left: 13px;
+  padding-left: 12px;
+  border-left: 1px solid var(--vp-c-divider);
+}
+
+/* 模块标题不参与"当前页高亮"：绿色高亮只留给具体文章条目，二级标题格式统一 */
+.VPSidebarItem.level-1.is-active > .item h3.text {
   color: var(--vp-c-text-1) !important;
+  font-weight: 500 !important;
+}
+
+/* 前言 / 更新日志：渲染为 level-1 链接（VitePress 对无子项条目的默认行为），
+   按 href 定向套上一级板块的衬线标题样式，与四大板块视觉对齐。
+   !important 用于压过"当前页高亮"规则，保证站在 /preface 上时格式也一样 */
+.VPSidebarItem.level-1.is-link > .item > a[href="/preface"] > p.text,
+.VPSidebarItem.level-1.is-link > .item > a[href="/changelog"] > p.text {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif !important;
+  font-weight: 700 !important;
+  font-size: 15.5px;
+  color: #1f4332 !important;
+  letter-spacing: 0.03em;
+}
+/* 前言/更新日志的裸 level-0 容器默认带 24px 底距（展开分组的标准值），
+   这里压成折叠分组的 10px，与其他板块之间的间距节奏一致 */
+section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.level-1.is-link > .item > a[href="/preface"]),
+section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.level-1.is-link > .item > a[href="/changelog"]) {
+  padding-bottom: 10px;
 }
 
 /* 折叠箭头从 32px 收窄到 24px,把空间还给标题 */
