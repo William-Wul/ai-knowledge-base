@@ -47,9 +47,7 @@ const zones = [
   {
     title: 'AI 学习词汇本',
     desc: '随手收录陌生英文术语，AI 帮你解读、拆解、记忆',
-    link: '/vocab/',
-    target: '_blank',
-    rel: 'noopener',
+    link: '/vocab-book',
     icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M4 17a3 3 0 0 1 3-3h12"/><line x1="9" y1="8" x2="14" y2="8"/><line x1="9" y1="11" x2="14" y2="11"/></svg>`,
   },
 ]

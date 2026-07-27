@@ -21,7 +21,7 @@
         <li><a href="/stage-1/">AI 基础学习</a></li>
         <li><a href="/stage-4/">AI 进阶实践</a></li>
         <li><a href="/exams/">AI 能力自测</a></li>
-        <li><a href="/vocab/" target="_blank" rel="noopener">AI 学习词汇本</a></li>
+        <li><a href="/vocab-book">AI 学习词汇本</a></li>
       </ul>
     </div>
   </nav>
