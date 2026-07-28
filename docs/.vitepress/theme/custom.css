@@ -224,6 +224,15 @@ section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.le
 /* 图注：小字灰色，跟在图下方，不抢正文视觉。
    全站图注的写法惯例是「图片独占一段，下一段是纯斜体文字」，
    用 :has() 自动命中这种结构，27 处旧文章无需逐一改写 */
+/* 文章日期行：紧跟 H1 下方的小灰字，替代旧的「标题里写日期」做法。
+   用法：H1 下一段写 <p class="post-meta">2026 年 7 月 28 日 · AI 新闻</p> */
+.vp-doc .post-meta {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #8a8a8a;
+  margin: -0.9rem 0 1.5rem;
+}
+
 .vp-doc .figcaption,
 .vp-doc p:has(> img:only-child) + p:has(> em:only-child) {
   font-size: 13px;

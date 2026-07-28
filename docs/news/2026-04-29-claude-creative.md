@@ -1,10 +1,12 @@
 ---
-title: 2026/04/29 · Claude 正式进驻设计师、音乐人、3D 建模师的工具软件
+title: Claude 正式进驻设计师、音乐人、3D 建模师的工具软件
 description: Anthropic 一口气与 Blender、Adobe、Autodesk、Ableton 等 8 家创意软件发布连接器，从今以后你在这些软件里可以直接叫 Claude 干活，不用切来切去了。
 date: 2026-04-29
 ---
 
-# 2026/04/29 · Claude 正式进驻设计师、音乐人、3D 建模师的工具软件
+# Claude 正式进驻设计师、音乐人、3D 建模师的工具软件
+
+<p class="post-meta">2026 年 4 月 29 日 · AI 新闻</p>
 
 ## 一、发生了什么
 

@@ -1,10 +1,12 @@
 ---
-title: 2026/06/10 · Claude Fable 5：最强的 Claude 开放了，但戴着镣铐
+title: Claude Fable 5：最强的 Claude 开放了，但戴着镣铐
 description: Anthropic 发布了它公开过的最强模型 Claude Fable 5，多项榜单领先。它能公开，是因为另一道闸——碰到网络安全、生物化学这类危险问题，会自动降级给更弱的老模型来答。这篇讲清楚：它有多强、凭什么敢放出来、以及多贵。
 date: 2026-06-10
 ---
 
-# 2026/06/10 · Claude Fable 5：最强的 Claude 开放了，但戴着镣铐
+# Claude Fable 5：最强的 Claude 开放了，但戴着镣铐
+
+<p class="post-meta">2026 年 6 月 10 日 · AI 新闻</p>
 
 6 月 9 日，Anthropic 发布 Claude Fable 5，称它是公司至今向公众开放过的、能力最强的模型，在测试过的几乎所有能力榜单上都做到了当前最好。
 
