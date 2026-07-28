@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { existsSync, readdirSync, readFileSync } from 'fs'
 import { resolve, join, basename, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { CAUTION_LINKS, PRACTICE_DIRS } from './stagesData.js'
+import { CAUTION_LINKS, TOOL_LINKS, PRACTICE_LINKS, FRONTIER_EXTRA_LINKS } from './stagesData.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -35,6 +35,13 @@ function linkToFile(link) {
   const clean = link.replace(/^\//, '')
   if (clean.endsWith('/')) return join(docsRoot, clean, 'index.md')
   return join(docsRoot, clean + '.md')
+}
+
+// 把跨目录链接清单（如 TOOL_LINKS）转成侧边栏条目，标题从文件读取，文件缺失自动跳过
+function linkItems(links) {
+  return links
+    .filter(l => existsSync(linkToFile(l)))
+    .map(l => ({ text: getTitle(linkToFile(l)), link: l }))
 }
 
 // 智能侧边栏条目生成：
@@ -84,8 +91,9 @@ function autoItems(dir, knownItems = [], { reverse = false, sortByDate = false, 
 
 // 跨目录合并文章列表（按 frontmatter date 倒序，最新在上）：
 // 用于「AI 前沿」栏目合并 frontier/（深度专题）与 news/（原 AI 新闻）
+// extraLinks：目录外单篇长文（如 stage-6 的一人公司）按 date 一起混排
 // 显示时去掉标题开头的日期前缀（如「2026/07/17 · 」），排序不受影响
-function mergedItems(dirs, { limit = 0 } = {}) {
+function mergedItems(dirs, { limit = 0, extraLinks = [] } = {}) {
   const all = []
   for (const dir of dirs) {
     const dirPath = join(docsRoot, dir)
@@ -97,28 +105,23 @@ function mergedItems(dirs, { limit = 0 } = {}) {
       all.push({ text, link: `/${dir}/${basename(f, '.md')}`, date: getDate(fp) })
     }
   }
+  for (const l of extraLinks) {
+    const fp = linkToFile(l)
+    if (!existsSync(fp)) continue
+    all.push({ text: getTitle(fp), link: l, date: getDate(fp) })
+  }
   all.sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.text.localeCompare(b.text))
   const list = limit > 0 ? all.slice(0, limit) : all
   return list.map(({ text, link }) => ({ text, link }))
 }
 
 // 各模块需要固定排序的已知文章（新文件会由 autoItems 自动追加到末尾）
-// 注：stage-2 的「安全红线」「学新不学旧」已划归「AI 使用注意事项」模块（CAUTION_LINKS）
+// 注：2026-07-28 内容重组后，工具上手 / 注意事项 / 进阶实践的文章顺序由
+// stagesData.js 的 TOOL_LINKS / CAUTION_LINKS / PRACTICE_LINKS 清单决定，不再走本表
 const STAGE_KNOWN_ITEMS = {
   'stage-1': [
     { text: '一文看懂AI是什么', link: '/stage-1/what-is-ai' },
     { text: 'AI 常见术语一点通', link: '/stage-1/ai-terminology' },
-  ],
-  'stage-2': [
-    { text: '综合/对话类 AI：从豆包开始', link: '/stage-2/doubao-guide' },
-    { text: '智能体/助理类 AI：从 Marvis 开始', link: '/stage-2/marvis-guide' },
-    { text: '跟 AI 说话的基本方法', link: '/stage-2/how-to-prompt' },
-    { text: 'Prompt 进阶：让 AI 帮你想', link: '/stage-2/prompt-cases' },
-  ],
-  'stage-3': [
-    { text: '什么是 Agentic AI', link: '/stage-3/agentic-ai' },
-    { text: 'AI Harness：驾驭AI的框架', link: '/stage-3/ai-harness' },
-    { text: 'Loop Engineering：让 AI 自己干完', link: '/stage-3/loop-engineering' },
   ],
 }
 
@@ -169,6 +172,8 @@ export default defineConfig({
     ],
 
     // 2026-07-28 改版：侧边栏按四大板块重组（目录与 URL 不变，仅逻辑归组）
+    // 2026-07-28 内容重组：工具上手/注意事项/进阶实践按 stagesData.js 清单跨目录归组，
+    // 清单之外、目录里新增的文件仍由 autoItems 自动追加到对应模块末尾
     // 注：板块标题不带图标，图标只留给二级模块——层级更清晰
     // 前言居首、更新日志收尾，与四大板块同为一级标题（样式见 custom.css 按 href 定向）
     // 板块与模块均默认折叠（collapsed: true），仅自动展开包含当前页的那一条链
@@ -179,8 +184,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '🔥 AI 日报', link: '/hot/', collapsed: true, items: autoItems('hot', [], { reverse: true, limit: 7 }) },
-          // AI 前沿 = frontier/ 深度专题 + 原 news/ AI 新闻，按日期倒序混排
-          { text: '🔭 AI 前沿', link: '/frontier/', collapsed: true, items: mergedItems(['frontier', 'news']) },
+          // AI 前沿 = frontier/ 深度专题 + 原 news/ AI 新闻 + 目录外趋势长文，按日期倒序混排
+          { text: '🔭 AI 前沿', link: '/frontier/', collapsed: true, items: mergedItems(['frontier', 'news'], { extraLinks: FRONTIER_EXTRA_LINKS }) },
         ],
       },
       {
@@ -188,13 +193,22 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '🧠 AI 快速认知', link: '/stage-1/', collapsed: true, items: autoItems('stage-1', STAGE_KNOWN_ITEMS['stage-1']) },
-          { text: '🛠️ AI 工具快速上手', link: '/stage-2/', collapsed: true, items: autoItems('stage-2', STAGE_KNOWN_ITEMS['stage-2'], { exclude: CAUTION_LINKS }) },
+          // 工具快速上手：TOOL_LINKS 清单（跨目录）+ stage-2/stage-5 新增文件自动追加
+          {
+            text: '🛠️ AI 工具快速上手',
+            link: '/stage-2/',
+            collapsed: true,
+            items: [
+              ...linkItems(TOOL_LINKS),
+              ...autoItems('stage-2', [], { exclude: [...TOOL_LINKS, ...CAUTION_LINKS, ...PRACTICE_LINKS] }),
+              ...autoItems('stage-5', [], { exclude: TOOL_LINKS }),
+            ],
+          },
           {
             text: '⚠️ AI 使用注意事项',
             link: '/stage-2/safety-guidelines',
             collapsed: true,
-            items: CAUTION_LINKS.filter(l => existsSync(linkToFile(l)))
-              .map(l => ({ text: getTitle(linkToFile(l)), link: l })),
+            items: linkItems(CAUTION_LINKS),
           },
         ],
       },
@@ -202,8 +216,12 @@ export default defineConfig({
         text: 'AI 进阶实践',
         link: '/stage-4/',
         collapsed: true,
-        // 扁平文章池：思路方法(stage-3) → 岗位实战(stage-4) → Agent 教程(stage-5) → 创意创业(stage-6)
-        items: PRACTICE_DIRS.flatMap(d => autoItems(d, STAGE_KNOWN_ITEMS[d] || [])),
+        // 扁平文章池：PRACTICE_LINKS 清单（不绑单一工具的技巧方法）+ stage-3/4 新增文件自动追加
+        items: [
+          ...linkItems(PRACTICE_LINKS),
+          ...autoItems('stage-3', [], { exclude: PRACTICE_LINKS }),
+          ...autoItems('stage-4', [], { exclude: [...PRACTICE_LINKS, ...TOOL_LINKS] }),
+        ],
       },
       {
         text: 'AI 学习小工具',

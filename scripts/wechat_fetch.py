@@ -193,7 +193,10 @@ def clean_text(value: str) -> str:
 
 
 def js_string_var(name: str, source: str) -> str:
-    pattern = rf"(?:var\s+)?{re.escape(name)}\s*=\s*(['\"])(.*?)\1\s*;"
+    # Do not let a JavaScript variable lookup start inside an HTML attribute
+    # such as `data-nickname="..."`. Without the hyphen guard, the regex can
+    # consume most of the page while looking for a later quote + semicolon.
+    pattern = rf"(?<![\w-])(?:var\s+)?{re.escape(name)}\s*=\s*(['\"])(.*?)\1\s*;"
     match = re.search(pattern, source, re.S)
     if not match:
         return ""
