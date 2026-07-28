@@ -10,11 +10,17 @@
 </template>
 
 <style scoped>
-/* 占满顶部导航以下的整个视口：外层页面不再滚动，词汇本在 iframe 内部自滚动，避免双滚动条 */
+/* 高度 = 视口 - 顶部导航 - 文档布局上留白：
+   桌面端文章页隐藏顶导航（--vp-nav-height 归零），外层页面不滚动，
+   词汇本在 iframe 内部自滚动，避免双滚动条 */
 .vocab-embed {
+  --vocab-embed-offset: 48px;
   width: 100%;
-  height: calc(100vh - var(--vp-nav-height));
-  height: calc(100dvh - var(--vp-nav-height));
+  height: calc(100vh - var(--vp-nav-height) - var(--vocab-embed-offset));
+  height: calc(100dvh - var(--vp-nav-height) - var(--vocab-embed-offset));
+}
+@media (min-width: 768px) {
+  .vocab-embed { --vocab-embed-offset: 64px; }
 }
 .vocab-embed-frame {
   display: block;

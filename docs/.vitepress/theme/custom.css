@@ -296,6 +296,17 @@ html.kb-zen .VPDoc .aside {
   display: none;
 }
 
+/* ===== 词汇本嵌入页（/vocab-book） =====
+   文档布局内放开内容区宽度（aside:false 本就不带 780px 限制，这里兜底），
+   吃掉 VPDoc 底部留白，配合 iframe 定高避免外层页面滚动 */
+.vocab-book-page .VPDoc .content-container,
+.vocab-book-page .VPDoc .content {
+  max-width: none !important;
+}
+.vocab-book-page .VPDoc {
+  padding-bottom: 0 !important;
+}
+
 /* ===== 代码块 ===== */
 .vp-doc code {
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
