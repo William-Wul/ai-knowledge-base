@@ -34,12 +34,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #10170f;
-    --surface: rgba(27,31,48,0.92);
-    --surface-2: rgba(44,49,74,0.9);
-    --surface-3: rgba(31,36,56,0.74);
+    --surface: rgba(31,37,31,0.92);
+    --surface-2: rgba(45,52,45,0.9);
+    --surface-3: rgba(33,39,33,0.74);
     --text-primary: #f7f8ff;
-    --text-secondary: #b9bfd3;
-    --text-tertiary: #858ba3;
+    --text-secondary: #b5bdb5;
+    --text-tertiary: #868c86;
     --border: rgba(255,255,255,0.11);
     --border-2: rgba(255,255,255,0.2);
     --accent: #6dbf8a;
@@ -527,6 +527,12 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
       radial-gradient(circle at 88% 18%, rgba(109,191,138,0.14), transparent 32%),
       linear-gradient(140deg, rgba(45,90,61,0.16), rgba(24,32,26,0.86) 48%, rgba(74,139,99,0.10));
   }
+  /* 暗色下侧边栏压深：与暗色页面融为一体，保持深绿气质 */
+  .sidebar {
+    background:
+      radial-gradient(circle at 82% 14%, rgba(255,255,255,0.08), transparent 22%),
+      linear-gradient(155deg, rgba(18,30,22,0.99), rgba(24,40,29,0.98) 48%, rgba(30,52,38,0.96));
+  }
 }
 @media (max-width: 780px) {
   .app { padding: 0; }
@@ -536,7 +542,28 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
   .main { padding: 22px; }
   .result-panel .word-card.open { min-height: 0; }
 }
+
+/* ===== 站内嵌入模式（iframe 内）：脱掉自身外壳，融入站点页面 =====
+   去掉卡片边框/圆角/阴影/渐变背景/四周留白，面板与内容区平铺拼接。
+   直开 /vocab/（非 iframe）不加 embedded 类，保留原有卡片外观。 */
+html.embedded body { background: #ffffff; }
+html.embedded body::before { display: none; }
+html.embedded .app { padding: 0; }
+html.embedded .app-shell {
+  height: 100vh;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #ffffff;
+  backdrop-filter: none;
+}
+html.embedded .word-card { border-color: var(--border); }
+@media (prefers-color-scheme: dark) {
+  html.embedded body { background: #1b1b1f; }
+  html.embedded .app-shell { background: #1b1b1f; }
+}
 </style>
+<script>if (window.self !== window.top) { try { document.documentElement.classList.add('embedded'); } catch (e) {} }</script>
 </head>
 <body>
 <style id="ailinkstart-gate-style">
