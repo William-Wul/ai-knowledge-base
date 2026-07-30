@@ -38,11 +38,10 @@ export const CAUTION_LINKS = [
 ]
 
 // 「AI 进阶实践」扁平文章池（跨目录逻辑分组，顺序即侧边栏顺序）
-// 提示词技巧 → 智能体概念 → 驾驭框架 → Loop → 多智能体协同
+// 提示词技巧 → 写好 Skill → Loop → 多 AI 协同
 export const PRACTICE_LINKS = [
   '/stage-2/prompt-cases',
-  '/stage-3/agentic-ai',
-  '/stage-3/ai-harness',
+  '/stage-3/write-good-skill',
   '/stage-3/loop-engineering',
   '/stage-4/multi-agent-teamwork',
 ]

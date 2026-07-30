@@ -1,192 +1,236 @@
 ---
 title: Loop Engineering：从"盯着 AI 干活"到"让 AI 自己干完"
-description: 用大白话讲清 Loop Engineering（循环工程）——为什么 AI 高手不再一句句给 AI 下指令，而是设计一套能自动运转的"工作制度"
+description: 循环工程实战指南——一个能自动运转的循环由哪几部分组成、怎么定目标、怎么装刹车，以及普通人从哪一步开始上手
 ---
 
 # Loop Engineering：从"盯着 AI 干活"到"让 AI 自己干完"
 
-## 什么是 Loop Engineering
+先回忆一下你现在用 AI 干活的样子：让 AI 写个东西，它写完你看一眼；不对，你提修改意见；它改完，你再看；再提……**来回几轮，直到能用。**
 
-**Loop Engineering，中文叫循环工程。** 它说的是：你不再一句句给 AI 下指令、盯着它一轮轮改，而是一次性定好目标、验收标准和出错怎么办，然后撒手——让 AI 自己做一轮、自己检查、不达标自己再来，直到达标，或者卡住了才喊你。
+这就是一个最原始的"循环"：行动、观察、修正、再行动。问题在于，这个循环里每一圈都靠你手动推动——**你就是那个发动机，你不踩，它就不走。**
 
-把这套"能自动转起来的流程"设计出来，就是循环工程。"Loop"就是循环、回路的意思。
+**Loop Engineering（循环工程）做的事，就是把这些反复发生的动作写成规则，交给系统去执行**：你一次性定好目标、验收标准和出错怎么办，然后撒手。AI 自己做一轮、自己检查、不达标自己再来，直到达标，或者卡住了才喊你。
 
-它带来的最大变化，是你的角色变了。
+2026 年 6 月，Claude Code 的创始人 Boris Cherny 说："我不再手动给 Claude 写提示词了，我运行着能自动编排任务的循环，我的工作就是编写这些循环。"OpenClaw 创始人 Peter 说得更直接："你不该再给编程 Agent 写提示词了，你该设计循环来驱动你的 Agent。"
 
-<div style="display:flex; gap:14px; flex-wrap:wrap; margin:18px 0;">
-  <div style="flex:1; min-width:240px; border:2px solid #d9c4c4; border-radius:12px; padding:18px; background:#faf3f3;">
-    <div style="font-weight:700; color:#9a4a4a; margin-bottom:8px;">以前：你是发动机</div>
-    <div style="font-size:14px; line-height:1.9; color:#5a4040;">
-      你下一个指令<br>
-      → AI 做一轮<br>
-      → 你看、你挑错、你再说一句<br>
-      → AI 再做一轮<br>
-      <span style="color:#9a4a4a; font-weight:600;">你不踩，它就不走。人离不开。</span>
-    </div>
-  </div>
-  <div style="flex:1; min-width:240px; border:2px solid #cde0d4; border-radius:12px; padding:18px; background:#f1f6f2;">
-    <div style="font-weight:700; color:#2D5A3D; margin-bottom:8px;">现在：你是设计者</div>
-    <div style="font-size:14px; line-height:1.9; color:#33503c;">
-      你一次定好"目标 + 验收标准 + 出错怎么办"<br>
-      → 撒手<br>
-      → AI 自己做一轮、自己检查、不达标自己再来<br>
-      → 直到达标，或卡住了才喊你<br>
-      <span style="color:#2D5A3D; font-weight:600;">你睡觉，它也在干。</span>
-    </div>
-  </div>
-</div>
-<p class="figcaption">同一个 AI，区别只在于：你是站在旁边一直踩油门的人，还是提前把规则定好、让它自己跑的人。</p>
-
-以前你是**发动机**——不下指令它就不动，人一步都离不开。现在你是**设计者**——规则定好就撒手，AI 自己转，你睡觉它也在干。
+这篇文章不讲概念史，直接回答三个问题：**一个循环由什么组成？怎么上手？坑在哪？**
 
 ---
 
-## 从 Prompt 到 Loop 的四级变迁
+## 一个能跑的循环，必须回答五个问题
 
-循环工程是这几年 AI 用法升级的第四级，前面还有三级。
-
-<div style="margin:18px 0;">
-  <div style="border:1px solid #e3e8e3; border-left:4px solid #c9d6cc; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#fbfcfb;">
-    <strong>第 1 级 · 把话说好</strong>（Prompt Engineering，提示词工程）<br>
-    <span style="font-size:14px; color:#555;">把要求讲清楚，AI 才答得准。核心能力：<b>会表达</b>。</span>
-  </div>
-  <div style="border:1px solid #e3e8e3; border-left:4px solid #b3cebd; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#fafcfb; margin-left:18px;">
-    <strong>第 2 级 · 把料喂够</strong>（Context Engineering，上下文工程）<br>
-    <span style="font-size:14px; color:#555;">光说要求不够，还得把背景资料、规矩、例子一并塞给它。核心能力：<b>会整理信息</b>。</span>
-  </div>
-  <div style="border:1px solid #dde7e0; border-left:4px solid #8fbda3; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#f6faf7; margin-left:36px;">
-    <strong>第 3 级 · 立规矩、搭框架</strong>（Harness Engineering，驾驭工程）<br>
-    <span style="font-size:14px; color:#444;">给 AI 配好工具、定好流程和"不许越界"的红线，让它稳定产出。核心能力：<b>会设计规则</b>。</span>
-  </div>
-  <div style="border:2px solid #2D5A3D; border-left:6px solid #2D5A3D; border-radius:8px; padding:14px 16px; background:#eef5f0; margin-left:54px;">
-    <strong style="color:#2D5A3D;">第 4 级 · 让整套东西自己转起来</strong>（Loop Engineering，循环工程）<br>
-    <span style="font-size:14px; color:#33503c;">定好目标和验收，AI 自己一轮轮干到达标。核心能力：<b>会定目标、会管理</b>。</span>
-  </div>
-</div>
-<p class="figcaption">每上一级，人做的事就更靠后一点，AI 接手的事就更多一点。</p>
-
-规律很清楚：**每上一级，人就往后退一步，AI 就多接一段活。** 第 1 级人还在亲口下每道指令；到第 4 级，人连"什么时候开工、做完没有"都不用盯了，只管定目标、看结果。
-
-循环工程就站在第 3 级的肩膀上——前一级给 AI 立好规矩和护栏，循环工程在这个基础上让它自己一圈一圈跑起来。
-
----
-
-## 一个循环由哪几部分组成
-
-一个能自己跑的循环，通常包含五个零件加一本"记事本"。这些零件原本都是程序员的行话，但它们对应的角色，其实就是"管一个小团队"要的那几样东西。下面左边是行话，右边是大白话。
+别被"工程"两个字吓到。一个循环能不能转起来，就看它有没有回答清楚这五个问题：
 
 <div style="border:1px solid #dde7e0; border-radius:12px; overflow:hidden; margin:18px 0;">
   <div style="display:flex; background:#eef5f0; font-weight:700; color:#2D5A3D; padding:10px 14px; font-size:14px;">
-    <div style="flex:1;">循环里的零件</div>
-    <div style="flex:2;">说白了就是……</div>
+    <div style="flex:1;">问题</div><div style="flex:2;">对应大白话</div>
   </div>
-  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;"><div style="flex:1; color:#2D5A3D; font-weight:600;">定时任务</div><div style="flex:2; color:#444;"><b>上班打卡</b>——定好开工时间，每天自动到岗，不用你天天去叫醒它。</div></div>
-  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;"><div style="flex:1; color:#2D5A3D; font-weight:600;">工作空间隔离</div><div style="flex:2; color:#444;"><b>独立工位</b>——同时让几个 AI 干活时，各给一张桌子，不会两人把同一份东西改乱。</div></div>
-  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;"><div style="flex:1; color:#2D5A3D; font-weight:600;">项目知识库</div><div style="flex:2; color:#444;"><b>员工手册</b>——把"咱家的规矩、踩过的坑、别再犯的错"写下来，AI 上岗不用从零问起。</div></div>
-  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;"><div style="flex:1; color:#2D5A3D; font-weight:600;">连接器</div><div style="flex:2; color:#444;"><b>各系统的账号权限</b>——给它开通邮箱、数据库、网盘的权限，它才能真去干活，而不是只能空想。</div></div>
-  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;"><div style="flex:1; color:#2D5A3D; font-weight:600;">检查员（另一个 AI）</div><div style="flex:2; color:#444;"><b>专职质检</b>——做事的和验收的不能是同一个，好比学生不能自己批自己的卷子，一定对自己太宽容。</div></div>
-  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#f6faf7;"><div style="flex:1; color:#2D5A3D; font-weight:700;">状态文件（记事本）</div><div style="flex:2; color:#333;"><b>交接本</b>——记下"已确认的事、踩过的坑、上次没干完的活"。AI 每次开工先翻一遍，接着昨天往下做，不用每天从头来。</div></div>
-</div>
-<p class="figcaption">凑齐这六样，AI 才能在你不在场时照常运转。</p>
-
-"员工手册"和"交接本"在这里尤其重要，因为循环是**没人盯着时自己在跑**。AI 有个毛病：每开一段新对话，前面说过的全忘了——你交代的规矩、踩过的坑，下次从零开始。不把这些沉淀下来，它就像一个每天都在看过期资料的员工，**干得越快，错得越多**。
-
----
-
-## 关键能力：把目标定清楚
-
-循环搭出来，离用得好还差得远。决定成败的是一个听起来很简单的能力：**定目标**。两个目标一对比，你就知道它有多难。
-
-<div style="display:flex; gap:14px; flex-wrap:wrap; margin:18px 0;">
-  <div style="flex:1; min-width:240px; border:2px solid #d9c4c4; border-radius:12px; padding:16px; background:#faf3f3;">
-    <div style="font-weight:700; color:#9a4a4a; margin-bottom:6px;">目标 A（模糊）</div>
-    <div style="font-size:15px; color:#5a4040; margin-bottom:10px;">"把这个东西<b>优化一下</b>。"</div>
-    <div style="font-size:13.5px; line-height:1.8; color:#7a5555;">AI 不知道什么叫"优化好了"。它可能改一点点就停，也可能一直改一直改改到面目全非——因为它<b>判断不出自己什么时候算干完</b>。</div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">① 什么时候开始干活？</div>
+    <div style="flex:2; color:#444;">每天早上自动跑？还是出事了（比如有人提交了新内容）才跑？</div>
   </div>
-  <div style="flex:1; min-width:240px; border:2px solid #cde0d4; border-radius:12px; padding:16px; background:#f1f6f2;">
-    <div style="font-weight:700; color:#2D5A3D; margin-bottom:6px;">目标 B（可验证）</div>
-    <div style="font-size:15px; color:#33503c; margin-bottom:10px;">"打开速度降到 2 秒内、出错率低于 1%、周三前上线。"</div>
-    <div style="font-size:13.5px; line-height:1.8; color:#3a5a44;">每条都能<b>明确判定达没达到</b>。AI 每做一轮就对照检查：全过了就停，没过就继续。</div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">② 能调用哪些工具？</div>
+    <div style="flex:2; color:#444;">能读文件？能联网？能操作你的表格、邮箱、项目看板？</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">③ 怎么知道自己做错了？</div>
+    <div style="flex:2; color:#444;">靠什么判断这一轮干得合不合格？测试、检查清单、还是另一个 AI 来复核？</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">④ 每一轮结果记在哪里？</div>
+    <div style="flex:2; color:#444;">AI 每次开新对话都会失忆，进度、踩过的坑、已确认的结论得有个固定的地方存。</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">⑤ 什么时候必须停下来喊人？</div>
+    <div style="flex:2; color:#444;">花多少钱以内自己解决？连续失败几次就停手？哪些动作必须先经你批准？</div>
   </div>
 </div>
-<p class="figcaption">同一个 AI、同一件事，结果天差地别。差别只在于目标是一句"感觉"，还是一组能验证的标准。</p>
-
-这件事，**管过人的人最有体会**。你跟员工说"把这个功能做好"，他交上来的大概率不是你想要的——你脑子里的"好"和他脑子里的"好"不是一回事。可你要是说"响应降到 200 毫秒、出错率低于千分之一、下周三上线"，偏差就小很多。因为你给了他一个**能验证的完成标准**。
-
-对 AI 也一样，而且**比管人还要命**：人没听懂会回头问你，AI 不会。它会非常自信地按自己的理解干完，再非常自信地告诉你"做完了"。
-
-所以循环工程的核心竞争力不在工程，在**管理**——把一个模糊的想法，翻译成一组可衡量、可验证的完成条件。
+<p class="figcaption">看出来了吗？循环工程更像一套"工作制度"：给 AI 设任务、设工具、设反馈、设记忆、设刹车。提示词只是这套制度里最小的一个零件。</p>
 
 ---
 
-## 一个陷阱：你考核什么，它就只做什么
+## 拆开看：五个零件 + 一本记事本
 
-定目标还有个更阴险的坑，在 AI 身上被放大了一百倍。
+行业里（Google 的 Addy Osmani 最早系统梳理）把一个完整循环拆成五个零件加一个记忆本。行话很唬人，对应的东西其实很朴素：
 
-这个现象在管理上是老问题：**你考核什么，下属就只盯着那个指标使劲，别的全不管。** 放到 AI 身上有多夸张，看个真实会发生的例子：
+<div style="border:1px solid #dde7e0; border-radius:12px; overflow:hidden; margin:18px 0;">
+  <div style="display:flex; background:#eef5f0; font-weight:700; color:#2D5A3D; padding:10px 14px; font-size:14px;">
+    <div style="flex:1;">零件（行话）</div><div style="flex:2;">大白话</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">定时任务</div>
+    <div style="flex:2; color:#444;"><b>循环的心跳。</b>每天几点自动开工，或者一有新动静就触发。没有它，AI 每次都得你手动踢一脚才动，那就不叫循环。</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">工作区隔离（Worktree）</div>
+    <div style="flex:2; color:#444;"><b>一人一张工位。</b>几个 AI 同时干活时各用各的独立空间，互不打扰，干完再合并——就像两个设计师不能同时改同一个图层。</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">项目知识（Skill）</div>
+    <div style="flex:2; color:#444;"><b>岗位手册。</b>把项目规范、踩过的坑、"上次就是这么出事的"写进文件，AI 每次开工先读，不用重新教。</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">连接器（MCP）</div>
+    <div style="flex:2; color:#444;"><b>门禁卡。</b>让 AI 能连上你的真实工作环境——文档、表格、邮箱、项目管理工具，从"发现问题"到"解决问题"再到"通知你"形成闭环。</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">子 Agent</div>
+    <div style="flex:2; color:#444;"><b>干活的和检查的分开。</b>写方案的那个 AI 不能自己给自己打分——学生批自己的考卷一定放水。让另一个 AI（甚至另一个模型）专门挑刺。</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#f6faf7;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">＋ 记事本（状态文件）</div>
+    <div style="flex:2; color:#444;"><b>循环的记忆。</b>一份固定的文档或表格，记下已确认的结论、踩过的坑、上次没解决的问题。AI 每次启动先读它，接着往下走，而不是从零开始。</div>
+  </div>
+</div>
+<p class="figcaption">好消息是：这些零件不需要你自己搭。Claude Code、Codex 这类工具已经把定时任务、/goal（追求目标）、/loop、子 Agent 做成了内置功能，你要做的是理解它们、组合它们。</p>
 
-> 你给的目标是"**让所有报错都消失**"。
-> 结果 AI 不去修问题，而是**直接把会报错的那段代码删了**。
-> 报错确实一个都没有了——指标达标。可活儿呢？啥也没干。
-
-人偶尔也这么干，但 AI 干得**更快、更彻底、还毫无心理负担**。（这个现象有个正经名字叫"古德哈特定律"，名字不用记，记住画面就行。）
-
-所以一个好目标，光有"做完的标准"不够，**还得划出"不许这么做"的边界**。上面那个例子，正确的目标该是"让所有报错消失，**但不许删除或跳过任何一项检查**"。
-
-这条边界正是 **Harness（护栏）** 在循环里的作用：
-
-- **Loop 是油门**，让 AI 朝目标一直跑；
-- **Harness 是护栏**，告诉 AI"可以自由发挥，但这条线不许越"。
-
-两个加一起才靠得住。光有油门没护栏，AI 跑得越欢，翻得越惨。
+其中"记事本"值得单独说一句。没有它，循环就是每天重新招一个失忆的新员工：昨天确认过的事实今天再查一遍，上周否掉的风格这周又生成出来。**循环跑得越久，这本记事本越值钱。**
 
 ---
 
-## 循环不是免费的
+## 灵魂：定义目标的能力
 
-让 AI 自己一轮一轮转，**每一轮都在烧钱**。循环会反复读资料、反复重试、四处试探，不管有没有产出，消耗都在持续发生。循环工程没让 AI 协作变得没成本，它只是把成本**从"你一轮轮盯着"的时间成本，换成了"系统一轮轮空转"的真金白银**。
+零件都是现成的，真正拉开差距的是一件事：**你能不能把目标定义清楚。**
 
-大公司的工程师用的额度基本没上限，循环对他们是常识。但对一个每月花几十、上百块用 AI 的普通用户，**一个循环跑两天，可能就把当月额度烧光了**。
+拿 Claude Code 和 Codex 里的 /goal 功能举例：你给它一个完成条件，它就一轮一轮自己干，干完每轮检查条件满没满足。用法看起来很简单，但效果完全取决于你写的那个条件。对比两个目标：
 
-所以一件事值不值得做成循环，有三个现实前提：
+> **目标 A**："把这个应用优化一下。"
 
-- **任务得反复出现**：一次性的活，一句好提示词又快又便宜，没必要搭循环；
-- **结果得能被检查**：得有明确办法判断"这轮干对没有"，否则没人盯着就越错越远；
-- **额度得跟得上**：循环烧的钱，不能高过它帮你省下的价值。
+> **目标 B**："XX 目录下所有测试通过，类型检查零报错，代码规范检查零违规。"
 
-记住这一条，你就不会被"以后再也不用动手了"这种话忽悠。**它是个好工具，但有门槛、有账要算。**
+目标 A 会发生什么？AI 不知道什么叫"优化好了"——可能改一点就自己觉得还行、停了；也可能不停，一直改，把你的东西改得面目全非，**因为它始终无法判断自己什么时候算完成。**
+
+目标 B 呢？每改一轮，跑三个检查，三个都有明确的通过标准：全过就停，没过就继续。清清楚楚，干干净净。
+
+**同一个工具，同一个模型，区别只在于目标定义得好不好。** 这跟带团队是同一套逻辑：你跟员工说"把这个功能做好"，他做出来的大概率不是你想要的，因为你脑子里的"好"跟他脑子里的不是一个东西；你说"响应时间降到 200 毫秒以内、错误率低于 0.1%、下周三前上线"，偏差就小得多。管理学几十年就讲一件事：**把模糊的意图，翻译成一组可衡量、可验证的完成条件。**
+
+一个实用的目标定义框架，四条：
+
+1. **完成标准要可以被机器验证**——"测试全过"能验证，"体验更好"不能；
+2. **边界条件要跟完成标准一起定**——不只说"要做到什么"，还要说"不能怎么做"；
+3. **要有失败的降级方案**——连续失败几次怎么办？回退还是喊人？
+4. **目标要分层**——大目标拆成阶段小目标，别让 AI 对着一个宏大目标空转。
 
 ---
 
-## 普通人能用它做什么
+## 最大的坑：你考核什么，它就只做什么
 
-前面的例子大多和写代码有关，因为代码天生适合做循环——能不能跑、测试过没过、错在哪行，反馈又快又明确。但循环的用处远不止编程。一件事只要满足下面四条，就适合：
+管理学和经济学里有个"古德哈特定律"：**一个指标一旦变成目标，它就不再是好指标。** 大白话：你考核什么，对方就只做什么，其他全退化。
 
-> **活儿是反复要干的 · 流程相对稳定 · 结果能被检查 · 最后拍板的还是人。**
+这个坑在 AI 身上被放大了一百倍，因为 AI 钻规则空子比人更快、更彻底、更没有心理负担。真实的例子：你的循环条件是"测试全部通过"，AI 可能不去修问题，**直接把失败的测试删了**——从验证条件看，它"完成"了；从你真正想要的结果看，它啥也没干。
 
-对照这四条，普通人的很多日常都能套进去：
+所以好的目标定义，不能只有"做完了的标准"，还必须有"不能怎么做"的边界。这也是为什么写循环时，要把边界条件和完成标准一起写进去（上面框架的第二条）。
 
-- **做内容**：每天自动扫一遍新闻源和社媒，挑出几个能写的选题，补好背景和争议点，整理成一张"选题卡"递给你，你只管挑。
-- **做客服**：先读客户来信，自动判断问题类型、翻出历史记录、拟好回复草稿；棘手的投诉留给人工。
-- **做运营 / 产品**：定期把用户反馈、应用商店评论、竞品动态汇总成一份简报。
-- **做研究 / 学习**：盯住一个主题，每天或每周把新出的报告、数据、文章收拢到一起。
+跟边界同样重要的是**刹车**。一套正经的循环会提前约定好六件事，行话叫"循环协议"（Loop Contract）：
 
-这些场景有个共同点：**AI 干的是"反复、繁琐、可检查"的前半段，最后那个需要眼光和判断的决定，依然握在你手里。**
+<div style="border:1px solid #dde7e0; border-radius:12px; overflow:hidden; margin:18px 0;">
+  <div style="display:flex; background:#eef5f0; font-weight:700; color:#2D5A3D; padding:10px 14px; font-size:14px;">
+    <div style="flex:1;">约定项</div><div style="flex:2;">举个例子</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">触发</div><div style="flex:2; color:#444;">每 15 分钟 / 每天早上 8 点 / 一有新提交</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">范围</div><div style="flex:2; color:#444;">只管这一个项目、这一类文件，别的不许碰</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">动作</div><div style="flex:2; color:#444;">读新内容 → 分类 → 写摘要 → 存进记事本</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">预算</div><div style="flex:2; color:#444;">单次最多花多少 token / 多少钱 / 多长时间，超了就停</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">停止</div><div style="flex:2; color:#444;">目标达成就停；连续失败 3 次也停</div>
+  </div>
+  <div style="display:flex; padding:11px 14px; border-top:1px solid #e8efe9; font-size:14px; background:#fafcfb;">
+    <div style="flex:1; color:#2D5A3D; font-weight:600;">上报</div><div style="flex:2; color:#444;">出异常时，到哪里找你（邮件 / 群消息 / 文档留言）</div>
+  </div>
+</div>
+<p class="figcaption">没有预算和停止条件的循环，就是一辆没有刹车的车——它可能半夜空转 50 次，把你的额度烧光，你早上起来才发现。</p>
+
+---
+
+## 普通人怎么上手：先判断，再从"只读"开始
+
+### 第一步：先判断这件事值不值得循环
+
+循环不是免费的，它把成本从"你一轮轮盯着"的时间，换成了"系统一轮轮运行"的额度。三件事都满足，才值得上循环：
+
+- **任务反复出现**——每周、每天都要做。一次性的活，一句好 Prompt 又快又便宜；
+- **结果能被检查**——有明确的判断标准，AI 不在场也能拦住烂活；
+- **关键判断还在你手里**——AI 负责跑腿和初稿，拍板的还是你。
+
+### 第二步：按成熟度三级往上爬，别一步登天
+
+<div style="margin:18px 0;">
+  <div style="border:1px solid #dde7e0; border-left:4px solid #8fbda3; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#f6faf7;">
+    <strong style="color:#2D5A3D;">L1 · 只报告，不动手</strong>　<span style="font-size:14px; color:#444;">让 AI 定时把情况摸一遍，写成报告给你看，<b>不改任何东西</b>。风险最低，最适合新手摸清循环的脾气。</span>
+  </div>
+  <div style="border:1px solid #dde7e0; border-left:4px solid #8fbda3; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#f6faf7;">
+    <strong style="color:#2D5A3D;">L2 · 小范围自动改，人来审</strong>　<span style="font-size:14px; color:#444;">允许 AI 在有验证手段的范围内自动处理，但结果必须经你过目才生效。</span>
+  </div>
+  <div style="border:1px solid #dde7e0; border-left:4px solid #8fbda3; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#f6faf7;">
+    <strong style="color:#2D5A3D;">L3 · 全自动长时间运行</strong>　<span style="font-size:14px; color:#444;">前提是前两级跑稳了、刹车装好了、验证手段可靠了。到这一级，你睡觉它干活。</span>
+  </div>
+</div>
+<p class="figcaption">老手和新手的区别，不是谁敢直接上 L3，而是谁都知道该从 L1 爬起。</p>
+
+### 第三步：用现成功能，不从零搭
+
+如果你在用 Claude Code 或 Codex 这类工具，不用写任何代码就能开始：
+
+- **/goal（追求目标）**：给一个可验证的完成条件，AI 自己一轮轮干到达标——这是循环最微观的形态；
+- **定时任务 / /loop**：设定频率，让 AI 到点自动执行一段任务；
+- **现成的工作流模板**：开源社区已经有成套的循环框架，内置"每日巡检、PR 看管、依赖扫描、起草更新日志"等七八套工作流，一行命令初始化，还附带成本估算工具——先估 token 花多少，再决定跑不跑。
+
+---
+
+## 不写代码，循环能干什么
+
+循环工程最早在编程圈火起来，是因为代码有天然的验收手段：测试过没过、程序跑不跑得起来。但只要符合"反复出现、流程稳定、结果可检查"这三个特征，日常工作处处可循环：
+
+- **内容工作**：每天早上自动扫指定的信息源，挑出 5 个候选选题，补好来源、关键人物、争议点，整理成选题卡放在你面前；
+- **客服/行政**：自动读来信，判断问题类型，整理好历史记录和回复草稿，敏感的留给人工；
+- **产品/运营**：每周自动汇总用户反馈、应用商店评论、竞品更新，和上周的判断放在一起对照；
+- **研究学习**：追踪一个主题下的新报告、新数据，定期更新到你的记事本里。
+
+吴恩达把做产品拆成了三层循环，恰好说明了人的位置在哪：
+
+<div style="border:1px solid #dde7e0; border-radius:12px; overflow:hidden; margin:18px 0;">
+  <div style="padding:12px 16px; border-bottom:1px solid #e8efe9; font-size:14px;">
+    <strong style="color:#2D5A3D;">最内层 · AI 干活循环</strong>（几分钟一圈）　<span style="color:#444;">AI 自己写、自己测、自己改，直到没有 bug。</span>
+  </div>
+  <div style="padding:12px 16px; border-bottom:1px solid #e8efe9; font-size:14px; background:#fafcfb;">
+    <strong style="color:#2D5A3D;">中间层 · 你的反馈循环</strong>（几小时一圈）　<span style="color:#444;">你定期看效果、给反馈，决定"该做成什么样"。</span>
+  </div>
+  <div style="padding:12px 16px; font-size:14px;">
+    <strong style="color:#2D5A3D;">最外层 · 用户反馈循环</strong>（几天几周一圈）　<span style="color:#444;">交给真实用户，用数据验证"这东西值不值得继续做"。</span>
+  </div>
+</div>
+<p class="figcaption">AI 负责把东西快速做出来，你负责决定该做什么，用户负责证明它值不值得。循环不会让人退出——关于用户和产品的经验（也就是"品味"），反而是你越循环越值钱的护城河。</p>
 
 ---
 
 ## 总结
 
-这几年 AI 用法的升级，其实是同一个故事在反复讲：
-
-**从"把话说好"（提示词），到"把料喂够"（上下文），到"立好规矩"（Harness），再到"让它自己转"（Loop）——人一步步从"亲手做"退到"定目标"。越往后，越考验的不是技术，而是把一件事想清楚、说明白的能力。**
-
-循环工程名字叫工程，骨子里是管理。它真正稀缺的能力只有一个：**把一个模糊的想法，翻译成一组机器能验证、又不会被钻空子的完成条件。** 这件事，AI 替你做不了。
+<div style="border:2px solid #cde0d4; border-radius:12px; padding:20px; background:#f6faf7; margin:18px 0;">
+  <div style="font-weight:700; color:#2D5A3D; font-size:16px; margin-bottom:12px;">循环工程上手清单</div>
+  <div style="font-size:14px; line-height:2.2; color:#33503c;">
+    <strong>五个问题</strong> → 何时开工、用什么工具、怎么算错、记在哪、何时喊人<br>
+    <strong>五件套</strong> → 定时任务 + 独立工位 + 岗位手册 + 门禁卡 + 检查者，外加一本记事本<br>
+    <strong>定目标</strong> → 可机器验证 + 边界条件 + 降级方案 + 分层<br>
+    <strong>装刹车</strong> → 触发、范围、动作、预算、停止、上报，六件事提前约定<br>
+    <strong>上手路径</strong> → 先判断值不值得 → L1 只读 → L2 人审 → L3 自动
+  </div>
+</div>
+<p class="figcaption">一句话：以前你的工作是把 AI 的每一步盯完，以后你的工作是定好目标和验收，让系统替你盯。</p>
 
 ---
 
-### 扩展阅读
+## 扩展阅读
 
-- [Prompt 该退环境了，未来属于 Loop Engineering](https://mp.weixin.qq.com/s/omwt7d9BSFX7kotW9vo9bQ)（数字生命卡兹克）——把循环讲到"管理学"层面，本文"定目标 = 管人"的思路主要参考自此。
-- [提示词过时了？AI 最新的玩法是「无限流」](https://mp.weixin.qq.com/s/8RplW8IcFxMXcOrgUMxDqw)（爱范儿）——带着对热词的警惕拆解循环，本文"成本账"与"普通人场景"参考自此。
-- [《Loop Engineering 橙皮书》来了](https://mp.weixin.qq.com/s/AHD8zquJXomkiX8ffo4IAg)（花叔）——一份免费开源的循环工程概念手册，适合想再深入一层的读者。
+- [《Prompt该退环境了，未来属于Loop Engineering。》](https://mp.weixin.qq.com/s/omwt7d9BSFX7kotW9vo9bQ) · **数字生命卡兹克**（微信公众号）——"定义目标"和古德哈特定律部分的出处。
+- [《提示词过时了？AI 最新的玩法是「无限流」》](https://mp.weixin.qq.com/s/8RplW8IcFxMXcOrgUMxDqw) · **爱范儿**（微信公众号）——"五个问题"框架、token 成本账和非编程场景的出处。
+- [《傻瓜式Loop教程来了：一行命令直接上手，GitHub狂揽4.5k Star》](https://mp.weixin.qq.com/s/EolKWeKXRi1EQS65uSYRYg) · **量子位**（微信公众号）——L1→L2→L3 成熟度路径、现成工作流和吴恩达三层循环的出处。
+- [《最新！万字综述 Prompt 到 Loop 进化》](https://mp.weixin.qq.com/s/hcgKahtQRE2QqI6xplv2Rg) · **Datawhale**（微信公众号）——循环协议六要素和技术演进脉络的深度综述，适合想钻进去的读者。

@@ -229,7 +229,3 @@ AI 帮不上的那部分具体是：
 
 - 《硅谷刷屏的AI护城河新论：代码能抄，产品能抄，但有一样东西，谁都抄不走》 · **量子位**（微信公众号）· 2026-05-11 · [👉 原文链接](https://mp.weixin.qq.com/s/POmh134WCNaRAP4dWHxahw)
 - 原作者 Jaya Gupta 的 X 帖子（英文原版起点）：[👉 X 原帖](https://x.com/JayaGup10/status/2052870394093408558)
-
-本知识库的相关延伸：
-
-- [Claude产品负责人的PM方法论和AI时代工作方法](/frontier/catwu-ai-pm) —— Anthropic Cat Wu 讲 AI 时代公司怎么"运转"，本文讲 AI 时代公司怎么"成型"，可以连起来看

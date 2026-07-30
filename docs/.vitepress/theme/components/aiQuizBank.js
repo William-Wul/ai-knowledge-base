@@ -14,7 +14,7 @@ export const dimensions = [
     ],
     links: [
       { text: '跟 AI 说话的基本方法', href: '/stage-2/how-to-prompt' },
-      { text: 'Prompt 进阶：让 AI 帮你想', href: '/stage-2/prompt-cases' },
+      { text: 'Prompt 进阶技巧', href: '/stage-2/prompt-cases' },
     ],
   },
   {
@@ -25,8 +25,8 @@ export const dimensions = [
       '目标、材料、约束、验收标准会一次给齐。',
     ],
     links: [
-      { text: 'Prompt 进阶：让 AI 帮你想', href: '/stage-2/prompt-cases' },
-      { text: 'AI Harness：驾驭 AI 的框架', href: '/stage-3/ai-harness' },
+      { text: 'Prompt 进阶技巧', href: '/stage-2/prompt-cases' },
+      { text: '如何写好一个 Skill', href: '/stage-3/write-good-skill' },
     ],
   },
   {
@@ -38,7 +38,7 @@ export const dimensions = [
     ],
     links: [
       { text: 'Loop Engineering：让 AI 自己干完', href: '/stage-3/loop-engineering' },
-      { text: '什么是 Agentic AI', href: '/stage-3/agentic-ai' },
+      { text: '多 AI 协同：带一队 AI 做项目', href: '/stage-4/multi-agent-teamwork' },
     ],
   },
   {
