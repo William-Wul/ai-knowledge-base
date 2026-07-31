@@ -3,6 +3,9 @@
 // 保证维度覆盖稳定、题目不重样。选项在抽题时随机排序（互斥选项除外）。
 // 防"选看起来正确的"设计：不给提示小字、选项乱序、埋少量"听起来高级
 // 但其实是坏做法"的陷阱选项、多用行为回忆题。
+//
+// 维度补短板 / 阶段路径推荐：只写 topic 标识（不写死 URL），真实 link / text
+// 在 topicMap.js 集中维护，文章改 URL 不会让自测推荐失效。
 
 export const dimensions = [
   {
@@ -12,10 +15,7 @@ export const dimensions = [
       '会交代基本要求，但还可以说得更完整。',
       '会把任务说清楚，也会让 AI 先反问你。',
     ],
-    links: [
-      { text: '跟 AI 说话的基本方法', href: '/stage-2/how-to-prompt' },
-      { text: 'Prompt 进阶技巧', href: '/stage-2/prompt-cases' },
-    ],
+    topics: ['prompt-basic', 'prompt-advanced'],
   },
   {
     key: 'context', label: '上下文力', color: '#8f6a2f',
@@ -24,10 +24,7 @@ export const dimensions = [
       '会给目标和部分材料，但标准和红线经常漏掉。',
       '目标、材料、约束、验收标准会一次给齐。',
     ],
-    links: [
-      { text: 'Prompt 进阶技巧', href: '/stage-2/prompt-cases' },
-      { text: '如何写好一个 Skill', href: '/stage-3/write-good-skill' },
-    ],
+    topics: ['prompt-advanced', 'write-skill'],
   },
   {
     key: 'workflow', label: '流程力', color: '#386f82',
@@ -36,10 +33,7 @@ export const dimensions = [
       '会拆任务，但验收和返工环节还不稳定。',
       '会拆流程、定验收，让 AI 分步推进。',
     ],
-    links: [
-      { text: 'Loop Engineering：让 AI 自己干完', href: '/stage-3/loop-engineering' },
-      { text: '多 AI 协同：带一队 AI 做项目', href: '/stage-4/multi-agent-teamwork' },
-    ],
+    topics: ['loop-engineering', 'multi-agent'],
   },
   {
     key: 'agent', label: 'Agent 力', color: '#6f5c9c',
@@ -48,10 +42,7 @@ export const dimensions = [
       '用过 Agent 类工具，但还没形成日常习惯。',
       '已经会把整段任务交给 Agent 去跑。',
     ],
-    links: [
-      { text: '智能体/助理类 AI：从 Marvis 开始', href: '/stage-2/marvis-guide' },
-      { text: 'WorkBuddy 从零开始', href: '/stage-5/workbuddy-guide' },
-    ],
+    topics: ['agent-tools', 'workbuddy'],
   },
   {
     key: 'judgment', label: '判断力', color: '#9a554c',
@@ -60,9 +51,7 @@ export const dimensions = [
       '重要内容会复核，但标准还不固定。',
       '有自己的核查习惯，也清楚安全边界。',
     ],
-    links: [
-      { text: 'AI 使用的安全红线', href: '/stage-2/safety-guidelines' },
-    ],
+    topics: ['safety'],
   },
 ]
 
@@ -70,40 +59,27 @@ export const levels = [
   {
     name: '刚起步', short: '起步',
     summary: '你对 AI 的使用还比较少，或者刚刚开始。这不是坏事，现在起步一点都不晚——先从一个真实的小任务开始。',
-    stages: [
-      { text: 'AI 快速认知', href: '/stage-1/' },
-      { text: 'AI 工具快速上手', href: '/stage-2/' },
-    ],
+    topics: ['section-cognition', 'section-tools'],
   },
   {
     name: '日常使用者', short: '日常',
     summary: '你已经会让 AI 帮你干活，但交代任务的方式还比较简单，产出质量时好时坏。把任务说完整，是你现在最划算的一步。',
-    stages: [
-      { text: 'AI 工具快速上手', href: '/stage-2/' },
-    ],
+    topics: ['section-tools'],
   },
   {
     name: '熟练协作者', short: '熟练',
     summary: '你会交代背景、会追问、会让 AI 改到满意，日常任务基本能稳定跑起来。下一步是从"对话"升级到"流程"。',
-    stages: [
-      { text: 'AI 进阶实践', href: '/stage-4/' },
-    ],
+    topics: ['section-practice'],
   },
   {
     name: '流程设计者', short: '流程',
     summary: '你已经开始拆流程、定验收，让 AI 完成整段任务，用法领先大多数人。下一步是把 Agent 用进日常工作。',
-    stages: [
-      { text: 'AI 进阶实践', href: '/stage-4/' },
-      { text: 'AI 工具快速上手', href: '/stage-2/' },
-    ],
+    topics: ['section-practice', 'section-tools'],
   },
   {
     name: '系统构建者', short: '系统',
     summary: '你在设计人和 AI 的分工体系，并把经验沉淀成可复用的资产。对你来说，重要的不再是学工具，而是选择值得做的问题。',
-    stages: [
-      { text: '一人公司', href: '/stage-6/one-person-company' },
-      { text: 'AI 前沿专区', href: '/frontier/' },
-    ],
+    topics: ['section-frontier'],
   },
 ]
 

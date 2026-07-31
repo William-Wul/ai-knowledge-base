@@ -1,14 +1,11 @@
 node_modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
-admin/.next/
-admin/out/
 .DS_Store
 
 # Codex 本地状态与私有工作手册，不公开
 .codex/
 AGENTS.md
-打开内容后台.command
 
 # 项目内部文档（含敏感信息），不公开
 CLAUDE.md

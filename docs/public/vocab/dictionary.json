@@ -1,0 +1,454 @@
+[
+  {
+    "term": "Loop Engineering",
+    "displayTerm": "Loop Engineering",
+    "fullName": "Loop Engineering",
+    "translation": "循环工程",
+    "tag": "ai",
+    "explanation": "一种把任务交给 AI 反复执行直到达标的工程方法。你定好目标和检查标准，AI 自己跑、自己改、自己检查，循环往复直到满足验收条件，人不用全程盯着。",
+    "example": "你写好“每段不超过 3 行、必须含一个数据”的标准，让 AI 反复改稿直到每段都过关，就是 Loop。",
+    "source": "站内《Loop Engineering》一文"
+  },
+  {
+    "term": "Prompt",
+    "displayTerm": "Prompt",
+    "translation": "提示词",
+    "tag": "ai",
+    "explanation": "你发给 AI 的那段指令或问题。它是人和 AI 沟通的基本单位——Prompt 写得好不好，直接决定 AI 输出的质量。",
+    "example": "你问 AI“帮我写个招聘文案”，和问“我要招兼职老师，读者是大学生，语气真诚，先问我 5 个必要信息再写”，结果差很多。后者就是更好的 Prompt。",
+    "source": "站内《Prompt 进阶技巧》一文"
+  },
+  {
+    "term": "Skill",
+    "displayTerm": "Skill",
+    "translation": "技能 / AI 技能包",
+    "tag": "ai",
+    "explanation": "把一套成熟的 AI 工作流程封装成可复用的固定指令包。和 Prompt 的区别在于：Prompt 是一次性的对话指令，Skill 是沉淀下来、带流程和验收标准的可复用方案。",
+    "example": "你写好“周报生成”的标准流程（要哪些材料、分几步、验收看哪几点），存下来每次套用，这就是一个 Skill。",
+    "source": "站内《如何写好一个 Skill》一文"
+  },
+  {
+    "term": "Agent",
+    "displayTerm": "Agent",
+    "translation": "智能体",
+    "tag": "ai",
+    "explanation": "能独立执行一段完整任务的 AI。普通对话是你问一句它答一句，Agent 是你交代一个目标，它自己拆步骤、调工具、跑流程、交付结果，中间不需要你逐步指挥。",
+    "example": "你对 Agent 说“帮我做一份本周竞品动态”，它自己去搜索、整理、排版、出结论，这就是 Agent 在干活。",
+    "source": "站内《多 AI 协同》一文"
+  },
+  {
+    "term": "MCP",
+    "displayTerm": "MCP",
+    "fullName": "Model Context Protocol",
+    "fullNameParts": [
+      { "word": "Model", "phoneticUs": "/ˈmɒdl/" },
+      { "word": "Context", "phoneticUs": "/ˈkɒntekst/" },
+      { "word": "Protocol", "phoneticUs": "/ˈprəʊtəkɒl/" }
+    ],
+    "translation": "模型上下文协议",
+    "tag": "ai",
+    "explanation": "让 AI 能连接外部工具和数据源的统一标准接口。有了它，AI 不再只能聊天，还能读你的文件、查数据库、调外部服务，相当于给 AI 装上了手和眼睛。",
+    "example": "通过 MCP，AI 编程助手能直接读取你本地的代码文件，而不需要你手动复制粘贴过去。",
+    "source": "站内多篇文章高频出现"
+  },
+  {
+    "term": "AGI",
+    "displayTerm": "AGI",
+    "fullName": "Artificial General Intelligence",
+    "fullNameParts": [
+      { "word": "Artificial", "phoneticUs": "/ˌɑːtɪˈfɪʃl/" },
+      { "word": "General", "phoneticUs": "/ˈdʒenrəl/" },
+      { "word": "Intelligence", "phoneticUs": "/ɪnˈtelɪdʒəns/" }
+    ],
+    "translation": "通用人工智能",
+    "tag": "ai",
+    "explanation": "能像人一样理解、学习、处理各种任务的 AI。现在的 AI 大多擅长某一类事（写文案、画画、写代码），AGI 是指那种什么都能学、能举一反三、达到人类综合水平的智能。",
+    "example": "现在的 GPT 写代码很强但不会自己开车，AGI 的目标是同一个智能既能写代码也能学开车。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "LLM",
+    "displayTerm": "LLM",
+    "fullName": "Large Language Model",
+    "fullNameParts": [
+      { "word": "Large", "phoneticUs": "/lɑːdʒ/" },
+      { "word": "Language", "phoneticUs": "/ˈlæŋɡwɪdʒ/" },
+      { "word": "Model", "phoneticUs": "/ˈmɒdl/" }
+    ],
+    "translation": "大语言模型",
+    "tag": "ai",
+    "explanation": "用海量文本训练出来的、能理解和生成人类语言的大型 AI 模型。你用的 ChatGPT、文心一言、豆包，背后都是 LLM。它“大”在参数多、训练数据多，所以能力强。",
+    "example": "你问豆包一个问题，它给出流畅的回答，背后就是一个 LLM 在工作。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Token",
+    "displayTerm": "Token",
+    "translation": "词元 / 令牌",
+    "tag": "ai",
+    "explanation": "AI 处理和计费的最小单位。一段文字会被切成一个个 token（大致可以理解为一个字或词算一个 token），AI 按处理的 token 数量来收费和衡量工作量。",
+    "example": "你发 1000 字给 AI，大约消耗 1000 多个 token；AI 回复 500 字，也是 500 多个 token，都算在你的用量里。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "RAG",
+    "displayTerm": "RAG",
+    "fullName": "Retrieval-Augmented Generation",
+    "fullNameParts": [
+      { "word": "Retrieval", "phoneticUs": "/rɪˈtriːvl/" },
+      { "word": "Augmented", "phoneticUs": "/ɔːɡˈmentɪd/" },
+      { "word": "Generation", "phoneticUs": "/ˌdʒenəˈreɪʃn/" }
+    ],
+    "translation": "检索增强生成",
+    "tag": "ai",
+    "explanation": "让 AI 先去你的资料库里检索相关内容，再基于检索结果来回答问题。解决了 AI“凭空编造”的问题，让它回答有据可依。",
+    "example": "公司用 RAG 接入内部知识库后，员工问“年假怎么算”，AI 会先查公司制度再回答，而不是瞎编。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "GPT",
+    "displayTerm": "GPT",
+    "fullName": "Generative Pre-trained Transformer",
+    "fullNameParts": [
+      { "word": "Generative", "phoneticUs": "/ˈdʒenərətɪv/" },
+      { "word": "Pre-trained", "phoneticUs": "/ˌpriːˈtreɪnd/" },
+      { "word": "Transformer", "phoneticUs": "/trænsˈfɔːmər/" }
+    ],
+    "translation": "生成式预训练变换器",
+    "tag": "ai",
+    "explanation": "OpenAI 的系列大模型，也是 ChatGPT 背后的技术架构。名字说明了它的原理：能生成内容、经过预先训练、基于 Transformer 架构。",
+    "example": "GPT-5.6、GPT-4o 都是 GPT 系列的不同版本，数字越大通常能力越强。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "API",
+    "displayTerm": "API",
+    "fullName": "Application Programming Interface",
+    "fullNameParts": [
+      { "word": "Application", "phoneticUs": "/ˌæplɪˈkeɪʃn/" },
+      { "word": "Programming", "phoneticUs": "/ˈprəʊɡræmɪŋ/" },
+      { "word": "Interface", "phoneticUs": "/ˈɪntəfeɪs/" }
+    ],
+    "translation": "应用程序接口",
+    "tag": "code",
+    "explanation": "让两个软件互相通信的标准接口。简单说就是“别人写好的功能，你按规矩调用就能用”。比如你不用自己训练 AI，调用 OpenAI 的 API 就能用上它的模型。",
+    "example": "你在自己网站加个“AI 客服”按钮，背后是调用 AI 公司的 API，把用户问题传过去、把回答显示出来。",
+    "source": "站内多篇文章高频出现"
+  },
+  {
+    "term": "CLI",
+    "displayTerm": "CLI",
+    "fullName": "Command Line Interface",
+    "fullNameParts": [
+      { "word": "Command", "phoneticUs": "/kəˈmɑːnd/" },
+      { "word": "Line", "phoneticUs": "/laɪn/" },
+      { "word": "Interface", "phoneticUs": "/ˈɪntəfeɪs/" }
+    ],
+    "translation": "命令行界面",
+    "tag": "code",
+    "explanation": "用纯文字命令操作电脑的界面，相对于鼠标点击的图形界面。黑底白字敲命令那种，就是 CLI。很多 AI 工具（如 Claude Code）是用 CLI 操作的。",
+    "example": "在终端里敲 `claude` 启动 Claude Code，就是在用 CLI 操作 AI 编程助手。",
+    "source": "站内 Claude Code、Codex 等编程教程"
+  },
+  {
+    "term": "IDE",
+    "displayTerm": "IDE",
+    "fullName": "Integrated Development Environment",
+    "fullNameParts": [
+      { "word": "Integrated", "phoneticUs": "/ˈɪntɪɡreɪtɪd/" },
+      { "word": "Development", "phoneticUs": "/dɪˈveləpmənt/" },
+      { "word": "Environment", "phoneticUs": "/ɪnˈvaɪrənmənt/" }
+    ],
+    "translation": "集成开发环境",
+    "tag": "code",
+    "explanation": "程序员写代码用的集成工具，把编辑、调试、运行等功能打包在一起。Cursor、VS Code 都属于 IDE，现在的 AI 编程工具大多做成 IDE 插件或独立的 AI IDE。",
+    "example": "程序员打开 Cursor 写代码，Cursor 就是一个内置了 AI 助手的 IDE。",
+    "source": "站内 Claude Code、Codex 教程"
+  },
+  {
+    "term": "Hallucination",
+    "displayTerm": "Hallucination",
+    "phoneticUs": "/həˌluːsɪˈneɪʃn/",
+    "translation": "幻觉（AI 胡说八道）",
+    "tag": "ai",
+    "explanation": "AI 一本正经地编造不存在的事实或细节。模型生成得很流畅、很自信，但内容是错的或瞎编的。这是用 AI 最大的风险之一，重要信息一定要复核。",
+    "example": "AI 信誓旦旦地说某公司去年营收 10 亿，但这个数字是它编的——这就是幻觉。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Context",
+    "displayTerm": "Context",
+    "phoneticUs": "/ˈkɒntekst/",
+    "translation": "上下文",
+    "tag": "ai",
+    "explanation": "AI 在处理任务时能拿到的所有背景信息。包括你这次发的指令、之前对话的内容、你提供的资料。上下文越完整，AI 的回答越准；上下文给不够，AI 只能盲猜。",
+    "example": "你说“帮我改改这段”，AI 不知道改什么；加上“这是给领导的汇报，要简洁正式”，效果立刻不同——后者就是补全了 context。",
+    "source": "站内《Prompt 进阶技巧》一文"
+  },
+  {
+    "term": "MoE",
+    "displayTerm": "MoE",
+    "fullName": "Mixture of Experts",
+    "fullNameParts": [
+      { "word": "Mixture", "phoneticUs": "/ˈmɪkstʃər/" },
+      { "word": "Experts", "phoneticUs": "/ˈekspɜːts/" }
+    ],
+    "translation": "混合专家模型",
+    "tag": "ai",
+    "explanation": "一种让大模型更省算力的架构。把模型拆成多个“专家”，每次只激活处理当前任务最相关的几个，不用全模型一起算。这样模型可以做得很大，但每次推理成本可控。",
+    "example": "Kimi K3 有 2.8 万亿参数，但因为用了 MoE，每次只激活其中一小部分，所以普通用户也用得起。",
+    "source": "站内 Kimi K3 新闻"
+  },
+  {
+    "term": "GPU",
+    "displayTerm": "GPU",
+    "fullName": "Graphics Processing Unit",
+    "fullNameParts": [
+      { "word": "Graphics", "phoneticUs": "/ˈɡræfɪks/" },
+      { "word": "Processing", "phoneticUs": "/ˈprəʊsesɪŋ/" },
+      { "word": "Unit", "phoneticUs": "/ˈjuːnɪt/" }
+    ],
+    "translation": "图形处理器 / 显卡",
+    "tag": "code",
+    "explanation": "原本用来处理图像的芯片，因为特别擅长并行计算，成了训练和运行 AI 的核心硬件。AI 圈说的“算力”，主要指 GPU。英伟达（NVIDIA）靠卖 GPU 成为 AI 时代最大赢家。",
+    "example": "训练一个大模型需要成千上万块 GPU 跑几个月，所以算力价格直接影响 AI 成本。",
+    "source": "站内新闻高频出现"
+  },
+  {
+    "term": "Copilot",
+    "displayTerm": "Copilot",
+    "phoneticUs": "/ˈkəʊpɪlɒt/",
+    "translation": "AI 副驾驶 / 辅助助手",
+    "tag": "ai",
+    "explanation": "微软的 AI 助手品牌，也泛指那种和人协作、辅助人完成工作的 AI 工具。名字来自“副驾驶”——你是主驾驶，AI 帮你打下手，但拍板权在人手里。",
+    "example": "GitHub Copilot 在你写代码时自动补全，Microsoft 365 Copilot 帮你处理 Word/Excel，都是 Copilot 类工具。",
+    "source": "站内多篇文章"
+  },
+  {
+    "term": "Multimodal",
+    "displayTerm": "Multimodal",
+    "phoneticUs": "/ˌmʌltiˈməʊdl/",
+    "translation": "多模态",
+    "tag": "ai",
+    "explanation": "能同时处理多种类型输入的 AI，比如文字、图片、语音、视频都能理解。早期的 AI 只能处理文字，多模态 AI 可以看图说话、听语音回复。",
+    "example": "你给 AI 发一张图表问“这数据说明了什么”，它能看懂图并分析，这就是多模态能力。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Fine-tune",
+    "displayTerm": "Fine-tune",
+    "phoneticUs": "/ˌfaɪnˈtjuːn/",
+    "translation": "微调",
+    "tag": "ai",
+    "explanation": "在已有大模型基础上，用特定领域的数据再训练一遍，让它在某个方向更专业。相当于通用 AI 读了本专业书，变成某个领域的专家。",
+    "example": "用大量法律文书对一个通用模型做 fine-tune，它就能更好地处理法律咨询。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Embedding",
+    "displayTerm": "Embedding",
+    "phoneticUs": "/ɪmˈbedɪŋ/",
+    "translation": "向量化 / 嵌入",
+    "tag": "ai",
+    "explanation": "把文字、图片等内容转换成一串数字（向量），让 AI 能计算它们之间的相似度。是搜索、推荐、RAG 等技术的基础——AI 靠它判断“哪些内容意思相近”。",
+    "example": "RAG 系统会把你所有的文档做 embedding，你提问时，它找出和问题最相似的文档段落给 AI 参考。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Vibe Coding",
+    "displayTerm": "Vibe Coding",
+    "translation": "凭感觉编程 / 氛围编程",
+    "tag": "code",
+    "explanation": "用自然语言描述需求让 AI 写代码，人不用懂编程语法，主要靠描述意图和验收结果来“指挥”AI。让非程序员也能做出软件产品。",
+    "example": "你对 AI 说“帮我做个能记录每天开销的小网页”，它直接写出来，你改改就用——这就是 vibe coding。",
+    "source": "站内文章提及"
+  },
+  {
+    "term": "SWE",
+    "displayTerm": "SWE",
+    "fullName": "Software Engineer",
+    "fullNameParts": [
+      { "word": "Software", "phoneticUs": "/ˈsɒftweər/" },
+      { "word": "Engineer", "phoneticUs": "/ˌendʒɪˈnɪər/" }
+    ],
+    "translation": "软件工程师",
+    "tag": "code",
+    "explanation": "程序员 / 写代码的人。AI 圈常说的“SWE-bench”是评测 AI 编程能力的基准测试，看 AI 能不能像真人工程师一样完成真实的编程任务。",
+    "example": "新闻里说“AI 在 SWE-bench 上得分超过人类 SWE”，意思是它做编程题的水平超过了普通程序员。",
+    "source": "站内新闻高频出现"
+  },
+  {
+    "term": "FDE",
+    "displayTerm": "FDE",
+    "fullName": "Forward Deployed Engineer",
+    "fullNameParts": [
+      { "word": "Forward", "phoneticUs": "/ˈfɔːwəd/" },
+      { "word": "Deployed", "phoneticUs": "/dɪˈplɔɪd/" },
+      { "word": "Engineer", "phoneticUs": "/ˌendʒɪˈnɪər/" }
+    ],
+    "translation": "前线部署工程师",
+    "tag": "product",
+    "explanation": "一种 AI 时代的新型工程师岗位。区别于坐在办公室写代码的传统工程师，FDE 要深入客户现场，把 AI 能力快速部署到客户的真实业务场景里，是技术 + 业务 + 落地的复合角色。",
+    "example": "客户买了 AI 产品但不会用，FDE 直接进驻客户公司，把 AI 接进对方的工作流。",
+    "source": "站内《AI 时代的新岗位：FDE》一文"
+  },
+  {
+    "term": "SDK",
+    "displayTerm": "SDK",
+    "fullName": "Software Development Kit",
+    "fullNameParts": [
+      { "word": "Software", "phoneticUs": "/ˈsɒftweər/" },
+      { "word": "Development", "phoneticUs": "/dɪˈveləpmənt/" },
+      { "word": "Kit", "phoneticUs": "/kɪt/" }
+    ],
+    "translation": "软件开发工具包",
+    "tag": "code",
+    "explanation": "帮你更快开发软件的工具包，里面打包好了常用的代码库、调试工具、文档等。比起从零开始写，用 SDK 能省大量时间。",
+    "example": "AI 公司提供 SDK，开发者几行代码就能把 AI 能力加进自己的 App，不用自己实现底层。",
+    "source": "站内编程相关文章"
+  },
+  {
+    "term": "DeepSeek",
+    "displayTerm": "DeepSeek",
+    "translation": "深度求索（国产 AI 公司）",
+    "tag": "ai",
+    "explanation": "国内知名的 AI 公司及其大模型系列。以开源、性价比高著称，它的模型能力接近国际一线但价格便宜很多，是国产 AI 的代表之一。",
+    "example": "很多开发者用 DeepSeek 的 API 做应用，因为效果好、成本低，被称为“国产之光”。",
+    "source": "站内新闻高频出现"
+  },
+  {
+    "term": "Transformer",
+    "displayTerm": "Transformer",
+    "phoneticUs": "/trænsˈfɔːmər/",
+    "translation": "变换器（核心架构）",
+    "tag": "ai",
+    "explanation": "现代大语言模型背后的核心神经网络架构，2017 年由 Google 提出。GPT、Claude、DeepSeek 等几乎所有主流大模型都基于它。理解这个名词就能明白为什么现在 AI 这么强。",
+    "example": "GPT 里的 T 就是 Transformer——整个大模型浪潮都建立在它之上。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Inference",
+    "displayTerm": "Inference",
+    "phoneticUs": "/ˈɪnfərəns/",
+    "translation": "推理（运行模型）",
+    "tag": "ai",
+    "explanation": "训练好的 AI 模型在接收到输入后给出输出的过程，就是“用 AI”这一步。训练（training）是造模型，推理（inference）是用模型。AI 的成本主要分这两块。",
+    "example": "你每次问 ChatGPT 问题，它生成回答的过程就是一次推理，消耗的算力叫推理成本。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Open Source",
+    "displayTerm": "Open Source",
+    "translation": "开源",
+    "tag": "code",
+    "explanation": "把软件的源代码公开，任何人都能查看、使用、修改、分发。AI 圈的“开源模型”是指模型权重公开，开发者可以免费下载到自己机器上运行，不依赖原公司。",
+    "example": "Kimi K3 开源后，任何人都能下载它在本地跑，不用花钱买 API，这就是开源模型的价值。",
+    "source": "站内 Kimi K3 新闻"
+  },
+  {
+    "term": "TTS",
+    "displayTerm": "TTS",
+    "fullName": "Text To Speech",
+    "fullNameParts": [
+      { "word": "Text", "phoneticUs": "/tekst/" },
+      { "word": "To", "phoneticUs": "/tuː/" },
+      { "word": "Speech", "phoneticUs": "/spiːtʃ/" }
+    ],
+    "translation": "语音合成 / 文字转语音",
+    "tag": "ai",
+    "explanation": "把文字转成语音的技术。现在的 AI TTS 能做到几乎和真人一样的自然语音，广泛用于有声书、客服、视频配音。",
+    "example": "短视频里那些 AI 旁白配音，就是 TTS 把文案转成了人声。",
+    "source": "站内新闻高频出现"
+  },
+  {
+    "term": "ASR",
+    "displayTerm": "ASR",
+    "fullName": "Automatic Speech Recognition",
+    "fullNameParts": [
+      { "word": "Automatic", "phoneticUs": "/ˌɔːtəˈmætɪk/" },
+      { "word": "Speech", "phoneticUs": "/spiːtʃ/" },
+      { "word": "Recognition", "phoneticUs": "/ˌrekəɡˈnɪʃn/" }
+    ],
+    "translation": "语音识别",
+    "tag": "ai",
+    "explanation": "把人说的话转成文字的技术，和 TTS 正好相反。语音输入、会议转写、字幕自动生成背后都是 ASR。",
+    "example": "开会时用飞书妙会的“转文字”功能，就是 ASR 把大家说的话实时变成了文字。",
+    "source": "站内新闻高频出现"
+  },
+  {
+    "term": "Context Window",
+    "displayTerm": "Context Window",
+    "translation": "上下文窗口",
+    "tag": "ai",
+    "explanation": "AI 一次能记住和处理的信息量上限。窗口越大，你能一次塞给它的资料越多、对话越长它也不会“忘”。超过窗口的旧内容会被遗忘。",
+    "example": "Context window 是 10 万 token 的模型，你能一次发它一整本书让它总结；只有 8 千的，发几页就超了。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Reasoning",
+    "displayTerm": "Reasoning",
+    "phoneticUs": "/ˈriːzənɪŋ/",
+    "translation": "推理能力 / 思考过程",
+    "tag": "ai",
+    "explanation": "AI 在给出答案前先一步步思考、推导的能力。新一代模型（如 OpenAI 的 o 系列）会展示“思考过程”，擅长数学、编程、复杂逻辑题，而不是直接凭直觉回答。",
+    "example": "问普通模型“鸡兔同笼”，它直接给答案；问推理模型，它会先列出思路、验证、再给结论，更可靠。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Distillation",
+    "displayTerm": "Distillation",
+    "phoneticUs": "/ˌdɪstɪˈleɪʃn/",
+    "translation": "蒸馏（模型压缩）",
+    "tag": "ai",
+    "explanation": "把大模型的能力“压缩”到小模型里的技术。用大模型的输出训练小模型，让小模型在保持大部分能力的同时体积更小、成本更低。是降本的关键手段之一。",
+    "example": "公司用蒸馏把几百亿参数的大模型压缩成几十亿的小模型，部署成本降一个数量级。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Alignment",
+    "displayTerm": "Alignment",
+    "phoneticUs": "/əˈlaɪnmənt/",
+    "translation": "对齐（价值观对齐）",
+    "tag": "ai",
+    "explanation": "让 AI 的行为符合人类意图和价值观的技术。确保 AI 不说有害内容、不产生危险行为、听人类指挥。是 AI 安全的核心议题。",
+    "example": "AI 拒绝回答“怎么制造危险品”，就是 alignment 在起作用——它被训练得知道什么不该做。",
+    "source": "AI 圈通用基础概念"
+  },
+  {
+    "term": "Benchmark",
+    "displayTerm": "Benchmark",
+    "phoneticUs": "/ˈbentʃmɑːk/",
+    "translation": "基准测试 / 跑分",
+    "tag": "ai",
+    "explanation": "用来客观衡量 AI 模型能力的一套标准考题。把不同模型在同一套 benchmark 上测试打分，就能横向比较谁更强。AI 发布新模型常说的“排名第一”就是指某个 benchmark 的成绩。",
+    "example": "SWE-bench 考编程，ARC-AGI 考推理，模型在这些 benchmark 上的分数就是它的“成绩单”。",
+    "source": "站内新闻高频出现"
+  },
+  {
+    "term": "Open Weight",
+    "displayTerm": "Open Weight",
+    "translation": "开放权重",
+    "tag": "ai",
+    "explanation": "把 AI 模型的“权重”（模型的核心数据文件）公开。和“开源”含义接近，但更精确——公开的不一定是完整源代码，而是训练好的模型参数，让人能直接拿来用。",
+    "example": "Anthropic 的 CEO 曾因反对 open weight 模型引发争议，认为大模型权重公开有安全风险。",
+    "source": "站内新闻"
+  },
+  {
+    "term": "Speculative Decoding",
+    "displayTerm": "Speculative Decoding",
+    "translation": "推测解码",
+    "tag": "ai",
+    "explanation": "一种让 AI 生成更快的优化技术。先用小模型快速猜几个可能的输出，再用大模型验证，对的就保留。能大幅提升推理速度、降低成本。",
+    "example": "腾讯混元开源的 AngelSpec 用推测解码，让模型推理速度提升了近 2 倍。",
+    "source": "站内新闻"
+  },
+  {
+    "term": "Agent Index",
+    "displayTerm": "Agent Index",
+    "translation": "Agent 能力榜单",
+    "tag": "ai",
+    "explanation": "专门评测 AI 在“自主执行任务”（而非单纯对话）能力的排行榜。衡量 AI 能不能像真正的 Agent 一样独立拆解任务、调用工具、完成多步工作。",
+    "example": "新闻说“某模型在 Artificial Analysis Coding Agent Index 上登顶”，是说它的自主编程能力排名第一。",
+    "source": "站内新闻"
+  }
+]

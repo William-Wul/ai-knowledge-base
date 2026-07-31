@@ -131,7 +131,7 @@
         <div class="path-block">
           <p class="path-label">再按阶段继续</p>
           <div class="path-links">
-            <a v-for="link in result.stages" :key="link.href" :href="link.href">{{ link.text }}</a>
+            <a v-for="link in stageLinks" :key="link.href" :href="link.href">{{ link.text }}</a>
           </div>
         </div>
       </div>
@@ -151,6 +151,7 @@
 <script setup>
 import { computed, nextTick, onMounted, reactive, ref } from 'vue'
 import { dimensions, levels, questionBank } from './aiQuizBank.js'
+import { resolveLinks } from './topicMap.js'
 
 const STORAGE_KEY = 'ai_ability_quiz_last_result_v4'
 const LEVEL_THRESHOLDS = [0.18, 0.38, 0.58, 0.78]
@@ -277,17 +278,13 @@ const weakestDimensions = computed(() => {
 const weakestLabels = computed(() => weakestDimensions.value.map(dimension => `${dimension.label} ${dimension.percent} 分`).join('、'))
 
 const weakestLinks = computed(() => {
-  const seen = new Set()
-  const links = []
-  for (const dimension of weakestDimensions.value) {
-    for (const link of dimension.links) {
-      if (seen.has(link.href)) continue
-      seen.add(link.href)
-      links.push(link)
-    }
-  }
-  return links
+  // 把最弱两个维度的 topic 合并，经 topicMap 解析成 { text, href }，去重并过滤无对应内容的项
+  const topics = weakestDimensions.value.flatMap(dimension => dimension.topics || [])
+  return resolveLinks(topics)
 })
+
+// 当前等级的阶段路径推荐（同样经 topicMap 解析）
+const stageLinks = computed(() => resolveLinks(result.value.topics || []))
 
 // ---- 五维雷达图 ----
 const RADAR = { w: 420, h: 302, cx: 210, cy: 162, r: 105 }

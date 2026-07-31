@@ -47,8 +47,10 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
 
-// ⚠️ 修改密码请在此处更改
-const CORRECT_PASSWORD = 'ai2026'
+// ⚠️ 修改密码：把新密码用 SHA-256 算一下，把十六进制摘要填到这里。
+// 算法：printf '%s' '你的密码' | shasum -a 256
+// 明文不进代码，避免被 F12 一眼看穿。
+const CORRECT_HASH = '743392a6cfca212568fbd1ca6b693f91f583f67672f2698b000dc20e062ddf6e'
 const STORAGE_KEY = 'kb_auth_v1'
 
 const authenticated = ref(false)
@@ -57,6 +59,15 @@ const hasError = ref(false)
 const shaking = ref(false)
 const showPassword = ref(false)
 const inputRef = ref(null)
+
+// SHA-256 摘要（用浏览器原生 Web Crypto API，不引入依赖）
+async function sha256(text) {
+  const data = new TextEncoder().encode(text)
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data)
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(byte => byte.toString(16).padStart(2, '0'))
+    .join('')
+}
 
 function redirectIfNotFound() {
   setTimeout(() => {
@@ -76,8 +87,9 @@ onMounted(() => {
   }
 })
 
-function handleSubmit() {
-  if (password.value === CORRECT_PASSWORD) {
+async function handleSubmit() {
+  const hash = await sha256(password.value)
+  if (hash === CORRECT_HASH) {
     localStorage.setItem(STORAGE_KEY, 'ok')
     authenticated.value = true
     redirectIfNotFound()

@@ -667,8 +667,8 @@ html.embedded .word-card { border-color: var(--border); }
       <section class="recent-section">
         <div class="recent-head">
           <div class="sidebar-tabs" aria-label="词汇视图切换">
-            <button class="sidebar-tab active" type="button" data-sidebar-mode="history">学习历史</button>
-            <button class="sidebar-tab" type="button" data-sidebar-mode="library">查看词库</button>
+            <button class="sidebar-tab active" type="button" data-sidebar-mode="library">我的词库</button>
+            <button class="sidebar-tab" type="button" data-sidebar-mode="dictionary">🔥 常见热词</button>
           </div>
           <div class="recent-tools">
             <input type="text" id="search" placeholder="搜索词库..." />
@@ -736,9 +736,11 @@ html.embedded .word-card { border-color: var(--border); }
   const API_ENDPOINT = '/api/vocab/interpret';
   const MODEL_NAME = 'deepseek-chat';
   let words = [];
+  let dictionary = [];            // 内置词典（公共，只读，随网站发布）
+  let currentDictId = null;       // 当前在右侧展示的词典词条 id
   let currentFilter = 'all';
   let searchTerm = '';
-  let sidebarMode = 'history';
+  let sidebarMode = 'library';
   let activeWordId = null;
   let currentWordId = null;
   let supplementaryLoading = null;
@@ -757,6 +759,26 @@ html.embedded .word-card { border-color: var(--border); }
   function saveWords() {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(words)); }
     catch (e) { console.error('Save failed', e); }
+  }
+
+  // 加载内置词典（公共词条，只读，不存 localStorage、不调 AI）
+  // 数据源是同目录的 dictionary.json，由维护者更新，所有人共享
+  function loadDictionary() {
+    fetch('dictionary.json?v=' + (window.__vocabDictVersion || Date.now()))
+      .then(r => r.ok ? r.json() : Promise.reject(new Error('dictionary.json 加载失败')))
+      .then(data => {
+        dictionary = Array.isArray(data) ? data.map((w, i) => ({
+          ...w,
+          id: 'dict_' + i,           // 给词典词条稳定 id，和 words 的 w_xxx 区分
+          dictIndex: i
+        })) : [];
+        render();
+      })
+      .catch(err => {
+        console.warn('内置词典加载失败：', err.message);
+        dictionary = [];
+        render();
+      });
   }
   function loadConfig() {
     updateApiStatus();
@@ -977,11 +999,6 @@ html.embedded .word-card { border-color: var(--border); }
     return list;
   }
 
-  function getHistoryWords() {
-    return getFilteredWords().slice()
-      .sort((a, b) => (a.createdAt || 0) - (b.createdAt || 0));
-  }
-
   function getLibraryLetter(w) {
     const title = getDisplayTerm(w).trim();
     const first = title.charAt(0).toUpperCase();
@@ -1003,7 +1020,8 @@ html.embedded .word-card { border-color: var(--border); }
     const index = document.getElementById('library-index');
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     const extraLetters = groups['#'] ? ['#'] : [];
-    index.hidden = sidebarMode !== 'library';
+    // 字母索引在「查看词库」和「内置词典」两种模式下都显示
+    index.hidden = (sidebarMode !== 'library' && sidebarMode !== 'dictionary');
     if (index.hidden) {
       index.innerHTML = '';
       return;
@@ -1028,6 +1046,124 @@ html.embedded .word-card { border-color: var(--border); }
       }).join('');
   }
 
+  // ===== 内置词典（公共词条）的列表 / 分组 / 渲染 =====
+  // 词典词条是只读的，不进入 words 数组、不存 localStorage、不调 AI。
+  // 复用 renderCard 的展示能力，但在详情区额外提供「加入我的词库」按钮。
+
+  function getFilteredDictionary() {
+    let list = dictionary.slice();
+    // 已落地到个人词库的热词不再显示在「常见热词」tab（避免和「我的词库」重复）
+    list = list.filter(w => !findAdopted(w.id));
+    if (searchTerm) {
+      const s = searchTerm.toLowerCase();
+      list = list.filter(w =>
+        (w.term || '').toLowerCase().includes(s) ||
+        (w.displayTerm || '').toLowerCase().includes(s) ||
+        (w.fullName || '').toLowerCase().includes(s) ||
+        (w.translation || '').toLowerCase().includes(s) ||
+        (w.explanation || '').toLowerCase().includes(s)
+      );
+    }
+    return list;
+  }
+
+  function getDictionaryLetter(w) {
+    const title = (w.displayTerm || w.term || '').trim();
+    const first = title.charAt(0).toUpperCase();
+    return /^[A-Z]$/.test(first) ? first : '#';
+  }
+
+  function getDictionaryGroups(list) {
+    return list.slice()
+      .sort((a, b) => (getDisplayTerm(a) || a.term || '').localeCompare((getDisplayTerm(b) || b.term || ''), 'en', { sensitivity: 'base' }))
+      .reduce((groups, w) => {
+        const letter = getDictionaryLetter(w);
+        if (!groups[letter]) groups[letter] = [];
+        groups[letter].push(w);
+        return groups;
+      }, {});
+  }
+
+  function renderDictionaryWords(groups) {
+    // 复用 library 的字母分组 DOM 结构，但 id 加 dict_ 前缀避免和 library 冲突
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    const extraLetters = groups['#'] ? ['#'] : [];
+    return letters.concat(extraLetters)
+      .filter(letter => groups[letter])
+      .map(letter => {
+        const groupId = letter === '#' ? 'dict-group-other' : 'dict-group-' + letter;
+        return '<section class="library-letter-section" id="' + groupId + '">' +
+          '<p class="library-letter-title">' + letter + '</p>' +
+          groups[letter].map(w => renderCard(w, { compactActions: true, isDictionary: true })).join('') +
+        '</section>';
+      }).join('');
+  }
+
+  // 点击词典词条 → 落地到个人词库 + 右侧详情区展示
+  // 热词一旦被点开看详情，就立即落地成个人词条，这样可以复用所有现有功能：
+  // 懂了/还没懂/重新解读/深化解读，状态正常持久化（只是没有删除按钮）。
+  function showDictWord(id) {
+    const w = dictionary.find(x => x.id === id);
+    if (!w) return;
+    const adopted = adoptDictionaryWord(id);   // 幂等：已落地则直接返回已有词条
+    saveWords();
+    currentDictId = id;
+    currentWordId = adopted ? adopted.id : null;   // 用落地词条驱动右侧渲染
+    render();
+  }
+
+  // 把词典词条复制进「我的词库」（words 数组），让用户继续做笔记
+  function addDictionaryToMyWords(id) {
+    const adopted = adoptDictionaryWord(id);
+    if (!adopted) return;
+    currentWordId = adopted.id;
+    sidebarMode = 'library';
+    saveWords();
+    render();
+  }
+
+  // 找出某个词典词条已落地的个人词条（按 term 匹配，不区分大小写）；没有则返回 null
+  function findAdopted(dictId) {
+    const w = dictionary.find(x => x.id === dictId);
+    if (!w) return null;
+    return words.find(x => (x.term || '').toLowerCase() === (w.term || '').toLowerCase() && x.dictOriginId === dictId) || null;
+  }
+
+  // 把词典词条「落地」成个人词条（如果还没落地的话），返回个人词条对象。
+  // 落地后这个词就能像普通词条一样支持「懂了/还没懂/重新解读/深化」等所有状态。
+  function adoptDictionaryWord(dictId) {
+    const w = dictionary.find(x => x.id === dictId);
+    if (!w) return null;
+    // 已落地则直接返回
+    const existing = findAdopted(dictId);
+    if (existing) return existing;
+    const newWord = {
+      id: 'w_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+      term: w.term,
+      tag: w.tag || 'ai',
+      displayTerm: w.displayTerm,
+      fullName: w.fullName,
+      fullNameParts: w.fullNameParts,
+      phoneticUs: w.phoneticUs,
+      breakdown: w.breakdown,
+      translation: w.translation,
+      explanation: w.explanation,
+      example: w.example,
+      createdAt: Date.now(),
+      lastInterpretedAt: Date.now(),
+      viewCount: 0,
+      interpretationCount: 0,
+      starred: false,
+      status: 'done',          // 词典词条自带解析，标记为已完成
+      open: true,
+      context: '',
+      supplementary: [],
+      dictOriginId: dictId     // 标记来源，便于词典列表反向查找已落地的状态
+    };
+    words.unshift(newWord);
+    return newWord;
+  }
+
   function scrollLibraryListTo(target) {
     const list = document.getElementById('word-list');
     if (!list || !target) return;
@@ -1042,13 +1178,27 @@ html.embedded .word-card { border-color: var(--border); }
       tab.classList.toggle('active', tab.dataset.sidebarMode === sidebarMode);
     });
     const container = document.getElementById('word-list');
-    const visibleWords = getFilteredWords();
+
+    // 内置词典模式：复用字母分组渲染，但数据来自 dictionary
+    if (sidebarMode === 'dictionary') {
+      const filtered = getFilteredDictionary();
+      const groups = getDictionaryGroups(filtered);
+      renderLibraryIndex(groups);
+      if (filtered.length === 0) {
+        container.innerHTML = '<div class="empty">' + (dictionary.length === 0 ? '词典加载中...' : '没有匹配的词汇') + '</div>';
+        return;
+      }
+      container.innerHTML = renderDictionaryWords(groups);
+      bindCardEvents(container);
+      return;
+    }
 
     if (sidebarMode === 'library') {
+      const visibleWords = getFilteredWords();
       const groups = getLibraryGroups();
       renderLibraryIndex(groups);
       if (visibleWords.length === 0) {
-        container.innerHTML = '<div class="empty">' + (words.length === 0 ? '还没有解读记录' : '没有匹配的词汇') + '</div>';
+        container.innerHTML = '<div class="empty">' + (words.length === 0 ? '还没有词条，去「常见热词」看看，或自己查一个新词' : '没有匹配的词汇') + '</div>';
         return;
       }
       container.innerHTML = renderLibraryWords(groups);
@@ -1057,19 +1207,30 @@ html.embedded .word-card { border-color: var(--border); }
     }
 
     renderLibraryIndex({});
-    const list = getHistoryWords();
-    if (list.length === 0) {
-      container.innerHTML = '<div class="empty">' + (words.length === 0 ? '还没有解读记录' : (searchTerm ? '没有匹配的词汇' : '还没有学习记录')) + '</div>';
-      return;
-    }
-    container.innerHTML = list.map(w => renderCard(w, { compactActions: true })).join('');
-    bindCardEvents(container);
+    container.innerHTML = '<div class="empty">没有匹配的词汇</div>';
   }
 
   function renderCurrent() {
     const container = document.getElementById('current-result');
     const countEl = document.getElementById('current-interpret-count');
     if (!container) return;
+
+    // 内置词典模式：右侧展示选中的词典词条
+    // 热词点开时已落地（showDictWord 里处理），这里直接用落地后的个人词条渲染，
+    // 完整支持懂了/还没懂/重新解读等所有功能，只是隐藏删除按钮。
+    if (sidebarMode === 'dictionary') {
+      if (countEl) countEl.textContent = '';
+      const dictWord = dictionary.find(w => w.id === currentDictId);
+      if (!dictWord) {
+        container.innerHTML = '<div class="empty result-empty">点击左侧词典词条查看解析，或用搜索框查找</div>';
+        return;
+      }
+      const adopted = findAdopted(currentDictId) || dictWord;
+      container.innerHTML = renderCard(adopted, { compactActions: false, hideDelete: true });
+      bindCardEvents(container);
+      return;
+    }
+
     const current = words.find(w => w.id === currentWordId);
     if (!current) {
       if (countEl) countEl.textContent = '';
@@ -1091,29 +1252,48 @@ html.embedded .word-card { border-color: var(--border); }
   }
 
   function bindCardEvents(container) {
+    // 对于需要操作个人词库（words）的动作，如果点击的是未落地的热词（dict_ 开头），
+    // 先落地成个人词条，再返回落地的 id；普通词条原样返回。
+    // 这样热词点「懂了/还没懂/重新解读/深化」时会自动进入个人词库，状态得以持久化。
+    const ensureOperable = id => {
+      if (!id || id.indexOf('dict_') !== 0) return id;
+      const adopted = adoptDictionaryWord(id);
+      saveWords();
+      return adopted ? adopted.id : id;
+    };
+
     container.querySelectorAll('.word-head').forEach(el => {
-      el.addEventListener('click', e => { if (e.target.closest('.icon-btn')) return; showWord(el.dataset.id); });
+      el.addEventListener('click', e => {
+        if (e.target.closest('.icon-btn')) return;
+        // 词典词条 id 以 dict_ 开头，走词典展示逻辑；否则走个人词库
+        const id = el.dataset.id;
+        if (id && id.indexOf('dict_') === 0) showDictWord(id);
+        else showWord(id);
+      });
+    });
+    container.querySelectorAll('[data-action="add-to-mine"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); addDictionaryToMyWords(el.dataset.id); });
     });
     container.querySelectorAll('[data-action="star"]').forEach(el => {
-      el.addEventListener('click', e => { e.stopPropagation(); toggleStar(el.dataset.id); });
+      el.addEventListener('click', e => { e.stopPropagation(); toggleStar(ensureOperable(el.dataset.id)); });
     });
     container.querySelectorAll('[data-action="delete"]').forEach(el => {
       el.addEventListener('click', e => { e.stopPropagation(); deleteWord(el.dataset.id); });
     });
     container.querySelectorAll('[data-action="fetch"]').forEach(el => {
-      el.addEventListener('click', e => { e.stopPropagation(); processWord(el.dataset.id, { countInterpretation: true }); });
+      el.addEventListener('click', e => { e.stopPropagation(); processWord(ensureOperable(el.dataset.id), { countInterpretation: true }); });
     });
     container.querySelectorAll('[data-action="manual"]').forEach(el => {
-      el.addEventListener('click', e => { e.stopPropagation(); openPromptModal(el.dataset.id); });
+      el.addEventListener('click', e => { e.stopPropagation(); openPromptModal(ensureOperable(el.dataset.id)); });
     });
     container.querySelectorAll('[data-action="understood"]').forEach(el => {
-      el.addEventListener('click', e => { e.stopPropagation(); setUnderstood(el.dataset.id, el.dataset.value); });
+      el.addEventListener('click', e => { e.stopPropagation(); setUnderstood(ensureOperable(el.dataset.id), el.dataset.value); });
     });
     container.querySelectorAll('[data-action="deepen"]').forEach(el => {
-      el.addEventListener('click', e => { e.stopPropagation(); addSupplementary(el.dataset.id, el.dataset.angle); });
+      el.addEventListener('click', e => { e.stopPropagation(); addSupplementary(ensureOperable(el.dataset.id), el.dataset.angle); });
     });
     container.querySelectorAll('[data-action="custom-open"]').forEach(el => {
-      el.addEventListener('click', e => { e.stopPropagation(); customQuestionWordId = el.dataset.id; render(); });
+      el.addEventListener('click', e => { e.stopPropagation(); customQuestionWordId = ensureOperable(el.dataset.id); render(); });
     });
     container.querySelectorAll('[data-action="custom-cancel"]').forEach(el => {
       el.addEventListener('click', e => { e.stopPropagation(); customQuestionWordId = null; render(); });
@@ -1121,15 +1301,17 @@ html.embedded .word-card { border-color: var(--border); }
     container.querySelectorAll('[data-action="custom-submit"]').forEach(el => {
       el.addEventListener('click', e => {
         e.stopPropagation();
+        const realId = ensureOperable(el.dataset.id);
         const box = container.querySelector('[data-custom-question="' + el.dataset.id + '"]');
-        addSupplementary(el.dataset.id, 'custom', box ? box.value.trim() : '');
+        // 落地后输入框的 data 属性可能还没更新，按落地前的 id 查找输入框再取值
+        addSupplementary(realId, 'custom', box ? box.value.trim() : '');
       });
     });
     container.querySelectorAll('[data-action="delete-supp"]').forEach(el => {
-      el.addEventListener('click', e => { e.stopPropagation(); deleteSupplementary(el.dataset.id, el.dataset.suppId); });
+      el.addEventListener('click', e => { e.stopPropagation(); deleteSupplementary(ensureOperable(el.dataset.id), el.dataset.suppId); });
     });
     container.querySelectorAll('[data-action="expand-history"]').forEach(el => {
-      el.addEventListener('click', e => { e.stopPropagation(); expandedMasteryHistory.add(el.dataset.id); render(); });
+      el.addEventListener('click', e => { e.stopPropagation(); expandedMasteryHistory.add(ensureOperable(el.dataset.id)); render(); });
     });
   }
 
@@ -1153,6 +1335,8 @@ html.embedded .word-card { border-color: var(--border); }
 
   function renderLearningStatus(w, options) {
     if (options && options.compactActions) return '';
+    // 词典词条是公共只读的，不显示个人化的「学习状态」（懂了/还没懂、深化解读等）
+    if (options && options.isDictionary) return '';
     ensureLearningFields(w);
     const supCount = w.supplementary.length;
     const selectedYes = w.understood === true ? ' understood' : '';
@@ -1225,25 +1409,28 @@ html.embedded .word-card { border-color: var(--border); }
     if (loading) {
       body = '<div class="loading-card"><span class="spinner"></span>调用 ' + (config.model || 'AI') + ' 生成解释...</div>';
     } else if (errored) {
+      const deleteBtn = options.hideDelete ? '' : '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>';
       body = '<div class="error-msg">' + escapeHtml(w.error || '生成失败') + '</div>' +
         '<div class="action-row">' +
         '<button data-action="fetch" data-id="' + w.id + '" class="primary">重试</button>' +
-        '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>' +
+        deleteBtn +
         '</div>';
     } else if (pending) {
+      const deleteBtn = options.hideDelete ? '' : '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>';
       body = '<div class="word-section"><p class="section-content" style="color: var(--text-secondary);">这个词还没有解释。点下方按钮调用 AI 自动生成。</p></div>' +
         '<div class="action-row">' +
         '<button data-action="fetch" data-id="' + w.id + '" class="primary">自动生成</button>' +
-        '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>' +
+        deleteBtn +
         '</div>';
     } else {
       if (w.isRecognizedTerm === false || w.confidence === 'low') {
         const reason = w.uncertaintyReason || '这个输入不像一个明确术语；如果它来自某个上下文，可以补充上下文后重新解读。';
+        const deleteBtn = options.hideDelete ? '' : '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>';
         const actionRow = options.compactActions
           ? ''
           : '<div class="action-row">' +
             '<button data-action="fetch" data-id="' + w.id + '">重新解读</button>' +
-            '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>' +
+            deleteBtn +
             '</div>';
         body = '<div class="word-section"><div class="uncertain-box">' + escapeHtml(reason) + '</div></div>' +
           renderLearningStatus(w, options) +
@@ -1259,12 +1446,28 @@ html.embedded .word-card { border-color: var(--border); }
         ? '<div class="word-section"><p class="section-label">📍 举个例子</p><div class="example-box">' + escapeHtml(w.example) + '</div></div>' : '';
       const contextSection = w.context && w.context.trim()
         ? '<div class="word-section"><p class="section-label">📎 当时的语境</p><div class="context-box">' + escapeHtml(w.context.trim()) + '</div></div>' : '';
-      const actionRow = options.compactActions
-        ? ''
-        : '<div class="action-row">' +
-          '<button data-action="fetch" data-id="' + w.id + '">重新解读</button>' +
-          '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>' +
-          '</div>';
+      // 按钮区：
+      //   hideDelete=true（热词落地后）→ 显示「重新解读」，隐藏「删除」
+      //   isDictionary=true（未落地的热词）→ 只显示「加入我的词库」
+      //   普通词条 → 显示「重新解读 + 删除」
+      let actionRow;
+      if (options.isDictionary) {
+        actionRow = options.compactActions
+          ? ''
+          : '<div class="action-row">' +
+            '<button data-action="add-to-mine" data-id="' + w.id + '" class="primary">＋ 加入我的词库</button>' +
+            '</div>';
+      } else {
+        const deleteBtn = options.hideDelete
+          ? ''
+          : '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>';
+        actionRow = options.compactActions
+          ? ''
+          : '<div class="action-row">' +
+            '<button data-action="fetch" data-id="' + w.id + '">重新解读</button>' +
+            deleteBtn +
+            '</div>';
+      }
       body = breakdownSection +
         '<div class="word-section"><p class="section-label">💡 大白话解释</p><div class="highlight-box"><p class="section-content">' + escapeHtml(w.explanation || '') + '</p></div></div>' +
         exampleSection +
@@ -1597,7 +1800,9 @@ html.embedded .word-card { border-color: var(--border); }
     const btn = e.target.closest('[data-letter]');
     if (!btn || btn.disabled) return;
     const letter = btn.dataset.letter;
-    const targetId = letter === '#' ? 'library-group-other' : 'library-group-' + letter;
+    // 字母索引在 library / dictionary 两种模式下指向不同的分组 id 前缀
+    const prefix = sidebarMode === 'dictionary' ? 'dict-group-' : 'library-group-';
+    const targetId = letter === '#' ? prefix + 'other' : prefix + letter;
     const target = document.getElementById(targetId);
     scrollLibraryListTo(target);
   });
@@ -1631,6 +1836,7 @@ html.embedded .word-card { border-color: var(--border); }
   loadWords();
   selectDefaultCurrent();
   render();
+  loadDictionary();   // 异步加载内置词典，加载完成后会自动 re-render
   requestNativeData();
 })();
 </script>

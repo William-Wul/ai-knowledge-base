@@ -2,6 +2,36 @@
 
 ---
 
+## v1.35 · 2026-07-31
+
+### 安全：密码门改哈希比对（去明文）
+- 现象：访问密码 `ai2026` 以明文硬编码在 `PasswordGate.vue`，F12 查看 source 即可看到
+- 修复：改用浏览器原生 Web Crypto API 做 SHA-256 摘要比对，代码里只存十六进制哈希值，不再出现明文
+- 影响：密码不变、用户无感；改密码方式见 `PasswordGate.vue` 顶部注释（`printf '%s' '新密码' | shasum -a 256`）
+
+### 清理：移除未使用的本地内容后台（admin/）
+- 背景：本地 Keystatic 后台（`admin/`，Next.js）自 2026-07-31 确认不再使用，AGENTS.md 已标注优先级最低；占 740M（含 node_modules 547M、4.7 万文件）
+- 删除：`admin/` 整目录、`打开内容后台.command` 启动脚本、`package.json` 的 `admin:dev`/`admin:build` 脚本、`.gitignore` 中失效的 `admin/.next/` 与 `admin/out/` 规则
+- 影响：网站本身不受影响；后续改依赖不再需要评估 admin
+
+### 架构：自测题库去硬编码，改 topicMap 间接映射
+- 问题：`aiQuizBank.js` 的 `dimensions[].links` 和 `levels[].stages` 把文章 `{text, href}` 写死在题库里，违反 AGENTS.md「不做站内互链」原则，且文章改 URL 自测推荐会坏
+- 改造：新增 `topicMap.js` 作为推荐路径的单一映射源；题库只存稳定 `topic` 标识（如 `prompt-advanced`），`AiAbilityQuiz.vue` 渲染时经 `resolveLinks()` 解析为 `{text, href}`，未知 topic 自动跳过、去重
+- 附带：`levels[系统构建者]` 的阶段推荐由已废弃的 `/stage-6/one-person-company` 改为 `/frontier/`（AI 前沿专区），更稳定
+- 验证：`npm run docs:build` 无报错；node 跑通 5 组 resolveLinks 测试（去重/跳过未知/全 topic 完整性）均通过
+
+### 新功能：词汇本上线「常见热词」（公共词库 + 两 tab 架构重构）
+- 背景：词汇本原是纯个人查词工具（输入英文术语→调 AI 实时解析→存 localStorage），知识不共享、不沉淀；且原「学习历史」「查看词库」两个 tab 数据源完全相同（都来自 `words`，仅排序不同），存在重复
+- 信息架构重构：精简为两个 tab——「我的词库」（默认，用户所有词按字母分组，含自查词 + 看过的热词）+「🔥 常见热词」（收录 39 个常见 AI 术语，站内高频 + AI 圈通用）；删掉重复的「学习历史」tab 及死函数 `getHistoryWords`
+- 数据：新建 `docs/public/vocab/dictionary.json`（静态文件，随网站发布）；`index.html` 启动时 `fetch` 加载，不参与 VitePress 构建
+- 热词落地机制：热词点开看详情即「落地」成个人词条（`adoptDictionaryWord`，幂等），自动从「常见热词」消失、进入「我的词库」——两个 tab 零重复、总数守恒（39 词始终找得到）
+- 功能对齐：落地后的热词复用全部现有功能（懂了/还没懂/重新解读/深化解读/加星），状态持久化；唯一区别是热词无删除按钮（避免删公共词）。`bindCardEvents` 用 `ensureOperable()` 统一拦截 `dict_` 开头 id 的状态操作，先落地再执行
+- 渲染：复用现有字母分组和 `renderCard` 卡片样式；`hideDelete` 选项控制删除按钮显隐，`isDictionary` 控制是否显示「加入我的词库」（落地后自动消失）
+- 边界：词典词条 id 用 `dict_` 前缀与个人词条 `w_` 区分；字母索引点击在 dictionary 模式指向 `dict-group-*`；状态函数对无字段词条安全返回 false
+- 验证：`npm run docs:build` 无报错；node 跑通多组测试（字段完整性/字母分组/搜索过滤/落地幂等/两 tab 不重复不遗漏/状态流转）均通过
+
+---
+
 ## v1.34 · 2026-07-31
 
 ### 修复：文章日期行（.post-meta）被 H1 分隔线从文字中间穿过
