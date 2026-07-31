@@ -667,7 +667,7 @@ html.embedded .word-card { border-color: var(--border); }
       <section class="recent-section">
         <div class="recent-head">
           <div class="sidebar-tabs" aria-label="词汇视图切换">
-            <button class="sidebar-tab active" type="button" data-sidebar-mode="library">我的词库</button>
+            <button class="sidebar-tab active" type="button" data-sidebar-mode="history">学习历史</button>
             <button class="sidebar-tab" type="button" data-sidebar-mode="dictionary">🔥 常见热词</button>
           </div>
           <div class="recent-tools">
@@ -740,7 +740,7 @@ html.embedded .word-card { border-color: var(--border); }
   let currentDictId = null;       // 当前在右侧展示的词典词条 id
   let currentFilter = 'all';
   let searchTerm = '';
-  let sidebarMode = 'library';
+  let sidebarMode = 'history';
   let activeWordId = null;
   let currentWordId = null;
   let supplementaryLoading = null;
@@ -1005,6 +1005,13 @@ html.embedded .word-card { border-color: var(--border); }
     return /^[A-Z]$/.test(first) ? first : '#';
   }
 
+  // 学习历史：按「最近接触时间」倒序——最近查过/看过的词排最前
+  // 主排序键 lastInterpretedAt（最后解读时间），没有则退回 createdAt
+  function getHistoryWords() {
+    return getFilteredWords().slice()
+      .sort((a, b) => ((b.lastInterpretedAt || b.createdAt || 0) - (a.lastInterpretedAt || a.createdAt || 0)));
+  }
+
   function getLibraryGroups() {
     return getFilteredWords().slice()
       .sort((a, b) => getDisplayTerm(a).localeCompare(getDisplayTerm(b), 'en', { sensitivity: 'base' }))
@@ -1117,7 +1124,7 @@ html.embedded .word-card { border-color: var(--border); }
     const adopted = adoptDictionaryWord(id);
     if (!adopted) return;
     currentWordId = adopted.id;
-    sidebarMode = 'library';
+    sidebarMode = 'history';
     saveWords();
     render();
   }
@@ -1193,21 +1200,15 @@ html.embedded .word-card { border-color: var(--border); }
       return;
     }
 
-    if (sidebarMode === 'library') {
-      const visibleWords = getFilteredWords();
-      const groups = getLibraryGroups();
-      renderLibraryIndex(groups);
-      if (visibleWords.length === 0) {
-        container.innerHTML = '<div class="empty">' + (words.length === 0 ? '还没有词条，去「常见热词」看看，或自己查一个新词' : '没有匹配的词汇') + '</div>';
-        return;
-      }
-      container.innerHTML = renderLibraryWords(groups);
-      bindCardEvents(container);
+    // 学习历史模式（默认）：按时间倒序平铺，最近接触的词排最前，无字母索引
+    renderLibraryIndex({});
+    const list = getHistoryWords();
+    if (list.length === 0) {
+      container.innerHTML = '<div class="empty">' + (words.length === 0 ? '还没有词条，去「常见热词」看看，或自己查一个新词' : (searchTerm ? '没有匹配的词汇' : '还没有学习记录')) + '</div>';
       return;
     }
-
-    renderLibraryIndex({});
-    container.innerHTML = '<div class="empty">没有匹配的词汇</div>';
+    container.innerHTML = list.map(w => renderCard(w, { compactActions: true })).join('');
+    bindCardEvents(container);
   }
 
   function renderCurrent() {
