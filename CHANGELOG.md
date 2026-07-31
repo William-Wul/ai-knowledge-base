@@ -2,6 +2,16 @@
 
 ---
 
+## v1.34 · 2026-07-31
+
+### 修复：文章日期行（.post-meta）被 H1 分隔线从文字中间穿过
+- 现象：news 文章标题下的「日期 · 分类」小灰字被 H1 的 border-bottom 横线穿过，看起来像删除线，全站 16 篇 news 文章全部中招
+- 原因：`.vp-doc h1` 带 `border-bottom: 2px solid #e2ebe5` + `padding-bottom: 0.5rem`，而 `.vp-doc .post-meta` 写了 `margin: -0.9rem 0 1.5rem` 向上贴标题，把日期行拉进了标题的边框区
+- 修复：`.post-meta` 负 margin 改为 `0.5rem 0 1.5rem`，日期行落在分隔线下方；custom.css 注释补警告防止复发
+- 验证：`npm run docs:build` 无报错；浏览器实测 2 篇 news 文章标题区渲染正常（线在上、日期在下）
+
+---
+
 ## v1.33 · 2026-07-30
 
 ### 「AI 进阶实践」板块重做：5 篇旧文重写为 4 篇新文
