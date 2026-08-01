@@ -145,7 +145,13 @@
             </a>
           </div>
           <ul class="daily-list">
-            <li v-for="(item, i) in daily.items" :key="i" :style="{ animationDelay: `${0.9 + i * 0.12}s` }">
+            <li v-if="frontier" key="frontier" :style="{ animationDelay: '0.9s' }">
+              <a class="daily-item" :href="frontier.url">
+                <span class="daily-cat daily-cat-frontier">🔭 最新前沿观察</span>
+                <span class="daily-item-title">{{ frontier.title }}</span>
+              </a>
+            </li>
+            <li v-for="(item, i) in dailyItems" :key="i" :style="{ animationDelay: `${1.02 + i * 0.12}s` }">
               <a class="daily-item" :href="`${daily.url}#${item.anchor}`">
                 <span class="daily-cat">{{ item.category }}</span>
                 <span class="daily-item-title">{{ item.title }}</span>
@@ -163,7 +169,12 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { data as daily } from '../../data/hotLatest.data.js'
+import { data as frontier } from '../../data/frontierLatest.data.js'
+
+// 头条固定给最新 AI 前沿专题，日报条目相应减为 5 条，面板总条数保持 6 条不变
+const dailyItems = computed(() => (daily.items || []).slice(0, 5))
 </script>
 
 <style scoped>
@@ -374,6 +385,13 @@ import { data as daily } from '../../data/hotLatest.data.js'
 .daily-list li + li { border-top: 1px dashed rgba(31, 67, 50, 0.08); }
 .daily-cat {
   flex-shrink: 0;
+  /* 固定宽度 + 内容左对齐：所有标签色块同宽，符号与文字在各行间严格对齐成一列；
+     宽度按最长分类「🤖 模型发布/更新」（emoji + 6 字）留出余量 */
+  width: 108px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
   font-size: 11px;
   color: var(--green-700);
   background: var(--green-100);
@@ -382,6 +400,12 @@ import { data as daily } from '../../data/hotLatest.data.js'
   padding: 1.5px 7px;
   white-space: nowrap;
   transform: translateY(-1px);
+}
+/* 头条「前沿」标签：金色系，与日报条的绿色分类标签区分 */
+.daily-cat-frontier {
+  color: #8a6508;
+  background: #fdf3dc;
+  border-color: #ecd9a8;
 }
 .daily-item-title {
   font-size: 13.5px;

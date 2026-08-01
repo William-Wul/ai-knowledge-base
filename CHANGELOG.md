@@ -2,6 +2,18 @@
 
 ---
 
+## v1.37 · 2026-08-01
+
+### 功能：首页「AI 最新动态」新增前沿头条
+- 列表第一条固定展示最新 AI 前沿专题：新增构建时数据加载器 `docs/.vitepress/data/frontierLatest.data.js`，按 frontmatter `date` 时间戳取 `frontier/` 最新一篇（排除 index.md 落地页），发布新专题后自动更新，无需手动维护
+- 日报条目从 6 条减为 5 条，面板总条数与高度不变；头条直达专题文章页，其余条目仍指向当日日报锚点
+- 样式：头条标签为金色「🔭 最新前沿观察」；所有分类标签统一固定宽度 108px + 内容左对齐，符号与标题整列严格对齐
+- 修复：frontmatter `date` 被 YAML 解析为 Date 对象，初版按字符串排序导致取到旧文章，已改为时间戳排序
+- 文件：`docs/.vitepress/theme/components/HomeHero.vue`、`docs/.vitepress/data/frontierLatest.data.js`
+- 验证：`npm run docs:build` 无报错；构建产物逐条检查头条链接、标签样式、列表条数均正确
+
+---
+
 ## v1.36 · 2026-08-01
 
 ### 内容：AI 前沿新增 DeepSeek 专题《DeepSeek 这盘棋：不追“最强”，追“够用、够快、够便宜”》
