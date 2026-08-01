@@ -2,6 +2,18 @@
 
 ---
 
+## v1.36 · 2026-08-01
+
+### 内容：AI 前沿新增 DeepSeek 专题《DeepSeek 这盘棋：不追“最强”，追“够用、够快、够便宜”》
+- 专题视角：把 2026-04-24 V4 首发（混合注意力架构把百万 token 推理计算量降到前代 27%、国产算力 Day 0 适配）与 2026-07-31 V4-Flash 正式版（不动架构只重做后训练、Agent 基准反超 Pro 预览版、Responses API + Codex 适配）串成一条线，讲清 DeepSeek 在 Agent 时代“够用、够快、够便宜、好接入”的打法
+- 事实边界处理：官方跑分统一标注“DeepSeek 官方公布”并给出三问读法（谁跑的 / 是否同一套题 / 运行环境是否一致）；“Flash 反超 Pro”加了测试集版本与测试条件限定；融资估值数字标明仅为媒体消息（据凤凰网科技报道）
+- 素材来源：kb-articles A137 / A138 / A139（2026-07-31 三篇）+ A018 / A019（2026-04-24 背景两篇）
+- 文件：`docs/frontier/deepseek-v4-playbook.md`；配图 5 张存于 `docs/public/images/frontier/deepseek-v4/`
+- 同日清理：删除两份同主题重复稿（`docs/frontier/deepseek-v4-posttraining.md` 与根目录 `deepseek-v4-posttraining.GLM版备份.md`）
+- 验证：`npm run docs:build` 无报错
+
+---
+
 ## v1.35 · 2026-07-31
 
 ### 安全：密码门改哈希比对（去明文）
