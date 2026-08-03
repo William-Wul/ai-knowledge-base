@@ -2,6 +2,20 @@
 
 ---
 
+## v1.40 · 2026-08-03
+
+### 内容：进阶实践新文《给 AI 派活：把任务说清楚，把"完成"定义明白》
+
+- 新增 `docs/stage-2/define-done.md`（约 2900 字）：面向非技术读者讲"派活"——操作指令 vs 完成定义的观念转变、任务适合度判断表（吴恩达三条 + 别派清单）、五格任务单（最终结果/范围/约束/完成条件/停止条件）、模糊形容词天敌、大纲→初稿→修改的迭代节奏、意图衰减与重申目标、普通人四招验收法
+- 素材出处（kb-articles，文末扩展阅读已附原文外链）：A010 Z Potentials/吴恩达（迭代工作流、适合度判断）、A052 AI的岔路口（/goal 五段式、意图衰减、架构师握手）、A140 cxuanAI（验证器、定义结果与验收）
+- 配图 3 张（取自 A052 原文水墨配图，图注已标出处）：`goal-vs-command.webp`（指令 vs 目标）、`task-brief-five-grids.webp`（五格任务单）、`intent-decay.jpg`（意图衰减）
+- 文章顺序：`PRACTICE_LINKS` 第 1 位插入 `/stage-2/define-done`，池内顺序现为 派活 → 提示词 → 上下文 → Skill → Loop → 多 AI 协同；侧边栏与 stage-4 落地页自动收录
+- 写作规范遵守：独立成篇无站内互链（已扫描 0 处）、/goal 与 Steering 等概念全部去工具化改写、与 loop-engineering 的机器验证内容做了边界切分
+- 文件：`docs/stage-2/define-done.md`、`docs/.vitepress/stagesData.js`、`docs/public/images/stage-2/` 新增 3 图
+- 验证：`npm run docs:build` 无报错；dist 页面与 3 图产物逐一确认；git status 无 iCloud 冲突杂文件；dev 服务器实测文章页/配图/首页均 200
+
+---
+
 ## v1.39 · 2026-08-03
 
 ### 内容：进阶实践新文《上下文管理：AI 为什么会"忘事"，以及怎么喂对资料》
