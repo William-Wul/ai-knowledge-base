@@ -26,11 +26,42 @@
         <line x1="16" y1="16" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
       </svg>
     </button>
+    <!-- 深浅模式切换：isDark 是 VitePress 暴露的可写 ref，赋值即切换，
+         自动写入 localStorage 记住用户选择。图标随当前模式切换日/月 -->
+    <button
+      class="kb-sb-icon"
+      type="button"
+      :title="isDark ? '切换到浅色模式' : '切换到深色模式'"
+      :aria-label="isDark ? '切换到浅色模式' : '切换到深色模式'"
+      @click="toggleTheme"
+    >
+      <!-- 浅色时显示月亮（点了变深）；深色时显示太阳（点了变浅） -->
+      <svg v-if="!isDark" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+      </svg>
+      <svg v-else viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="12" y1="3" x2="12" y2="5.2" />
+          <line x1="12" y1="18.8" x2="12" y2="21" />
+          <line x1="3" y1="12" x2="5.2" y2="12" />
+          <line x1="18.8" y1="12" x2="21" y2="12" />
+          <line x1="5.6" y1="5.6" x2="7.2" y2="7.2" />
+          <line x1="16.8" y1="16.8" x2="18.4" y2="18.4" />
+          <line x1="5.6" y1="18.4" x2="7.2" y2="16.8" />
+          <line x1="16.8" y1="7.2" x2="18.4" y2="5.6" />
+        </g>
+      </svg>
+    </button>
   </div>
 </template>
 
 <script setup>
 import { toggleSidebar, toggleZen, openSearch } from '../readingState.js'
+import { useData } from 'vitepress'
+
+const { isDark } = useData()
+const toggleTheme = () => { isDark.value = !isDark.value }
 </script>
 
 <style scoped>

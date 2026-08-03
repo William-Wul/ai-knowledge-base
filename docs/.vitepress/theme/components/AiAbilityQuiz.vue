@@ -645,6 +645,16 @@ async function downloadShareImage() {
   margin: 0 auto;
 }
 
+/* 深色模式：覆盖组件内 token，整块自测页夜景墨绿。
+   注意 Canvas 分享图（ctx.fillStyle）保持浅色不变，因为它是导出图片。 */
+.dark .ai-quiz {
+  --ink: #d6e0db;
+  --muted: #a3b3aa;
+  --line: #2f4438;
+  --paper: #1f2e24;
+  --green: #6dbf8a;
+}
+
 .ai-quiz h1 {
   margin: 0 0 16px;
   border: 0;
@@ -799,7 +809,7 @@ async function downloadShareImage() {
 .badge {
   padding: 3px 10px;
   border-radius: 999px;
-  background: #eef5f0;
+  background: var(--paper);
   color: var(--green);
   font-size: 12px;
   font-weight: 600;
@@ -832,7 +842,7 @@ async function downloadShareImage() {
   padding: 13px 16px;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: #fff;
+  background: var(--paper);
   text-align: left;
   cursor: pointer;
   font: inherit;
@@ -845,7 +855,7 @@ async function downloadShareImage() {
 
 .choice-btn.selected {
   border-color: var(--green);
-  background: #eef5f0;
+  background: var(--paper);
 }
 
 .choice-mark {
@@ -964,7 +974,7 @@ async function downloadShareImage() {
 .path-card {
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: #fff;
+  background: var(--paper);
   padding: 24px;
   margin-bottom: 20px;
 }
@@ -1079,7 +1089,7 @@ async function downloadShareImage() {
 
 .path-links a:hover {
   border-color: var(--green);
-  background: #eef5f0;
+  background: var(--paper);
 }
 
 /* 报告底部 */

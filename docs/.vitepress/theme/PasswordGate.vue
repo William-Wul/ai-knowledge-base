@@ -265,4 +265,31 @@ async function handleSubmit() {
   }
   .gate-card h1 { font-size: 1.3rem; }
 }
+
+/* ============ 深色模式：密码门夜景化 ============ */
+.dark .password-gate {
+  background: linear-gradient(135deg, #131c16 0%, #18231c 50%, #111713 100%);
+}
+.dark .gate-card {
+  background: #1f2e24;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0,0,0,0.2);
+  border-color: rgba(160, 200, 175, 0.12);
+}
+.dark .gate-card h1 { color: #d6e0db; }
+.dark .gate-subtitle { color: #a3b3aa; }
+.dark .input-wrapper input {
+  background: #16221b;
+  color: #d6e0db;
+  border-color: #2f4438;
+}
+.dark .input-wrapper input:focus {
+  border-color: #6dbf8a;
+  box-shadow: 0 0 0 3px rgba(109, 191, 138, 0.14);
+  background: #182721;
+}
+.dark .input-wrapper.error input {
+  border-color: #e4a6aa;
+  background: #382426;
+}
+.dark .gate-hint { color: #7d8c83; }
 </style>

@@ -558,4 +558,40 @@ const dailyItems = computed(() => (daily.items || []).slice(0, 5))
   .daily-panel { padding: 18px 16px 14px; }
   .daily-item-title { font-size: 13px; }
 }
+
+/* ============ 深色模式：山水画夜景 + 玻璃面板深色化 ============
+   山水 SVG 的渐变色是 fill/stop-color 属性，无法用 CSS 变量覆盖，
+   改用 filter 整体压暗+降饱和：山体压成夜景墨色，太阳光晕变冷月光。
+   白色半透明玻璃面板换成深绿半透明，融入夜色。 */
+.dark .hero-scene {
+  filter: brightness(0.5) saturate(0.6) hue-rotate(-8deg);
+}
+/* 深色下太阳光晕弱化，更像月光 */
+.dark .sun-glow {
+  opacity: 0.35;
+}
+
+/* 玻璃面板：浅色是白半透明，深色换成墨绿半透明 */
+.dark .daily-panel {
+  background: rgba(31, 46, 36, 0.55);
+  border-color: rgba(160, 200, 175, 0.14);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.36);
+}
+.dark .daily-item:hover {
+  background: rgba(160, 200, 175, 0.08);
+}
+.dark .btn-ghost {
+  background: rgba(31, 46, 36, 0.55);
+}
+.dark .tool-card {
+  background: rgba(31, 46, 36, 0.5);
+  border-color: rgba(160, 200, 175, 0.14);
+}
+.dark .tool-card:hover {
+  background: rgba(40, 58, 44, 0.7);
+}
+.dark .tool-icon {
+  background: rgba(31, 46, 36, 0.7);
+  border-color: rgba(160, 200, 175, 0.14);
+}
 </style>

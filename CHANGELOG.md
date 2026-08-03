@@ -2,6 +2,23 @@
 
 ---
 
+## v1.38 · 2026-08-03
+
+### 功能：全站深色模式上线（深绿配色，延续品牌色）
+
+- 核心机制：`config.js` 由 `appearance: false` 改为 `appearance: true`，恢复 VitePress 原生深色切换（首次访问跟随系统偏好，用户手动切换后自动写入 `localStorage` 记住选择）
+- 配色策略：不沿用 VitePress 默认中性灰，自建 `--kb-*` 语义变量在 `:root`（浅色）与 `.dark`（深色）双套定义；深色背景取墨绿黑（`#1f2e24`/`#16261c`），主题色提亮到浅绿（`#6dbf8a`）保证暗背景对比度
+- 切换入口：文章页侧栏顶部图标组（收起/沉浸/搜索）新增第 4 个 ☀️/🌙 图标，调用 `useData().isDark` 切换；窄屏沿用 VitePress 汉堡菜单内原生按钮
+- 文章内联彩色块的深色兼容：多篇深度文章（world-model、loop-engineering 等）用内联 style 写了浅色对比卡片，**文章源码零改动**，统一用一条 `.dark .vp-doc div[style*="background"]` 全局滤镜 `brightness(0.82) contrast(1.05)` 压暗
+- 首页夜景：`HomeLayout` 深色覆盖色板 token（`--green-*`/`--ink`/`--cream`）；`HomeHero` 山水 SVG 用 `filter: brightness(0.5) saturate(0.6)` 整体压暗成夜景，白色半透明玻璃面板换深绿半透明
+- 组件适配：`PasswordGate`（密码门夜景）、`AiAbilityQuiz`（`--paper`/`--muted` token 深色覆盖，Canvas 分享图保持浅色不变）、`HomeNav`（导航/搜索框深色）
+- 关键修复：`:root` 里曾把 `--vp-c-text-1` 硬设成深绿（浅色文字色），导致深色背景下文章正文「深字配深底」看不清；在 `.dark` 块补上 `--vp-c-text-1/2/3` 的浅色覆盖，正文恢复正常可读
+- 遗留：词汇本 `/vocab-book` 为 iframe 嵌入，深色仅跟随系统 `prefers-color-scheme`，暂不响应主站点手动切换，留作后续优化
+- 文件：`docs/.vitepress/config.js`、`docs/.vitepress/theme/custom.css`、`docs/.vitepress/theme/HomeLayout.vue`、`docs/.vitepress/theme/components/{HomeHero,HomeNav,SidebarHeader}.vue`、`docs/.vitepress/theme/PasswordGate.vue`、`docs/.vitepress/theme/components/AiAbilityQuiz.vue`
+- 验证：`npm run docs:build` 无报错；浏览器实测文章正文色值由 `#1a2e20` 修正为 `#d6e0db`，深色下清晰可读
+
+---
+
 ## v1.37 · 2026-08-01
 
 ### 功能：首页「AI 最新动态」新增前沿头条

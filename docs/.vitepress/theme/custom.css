@@ -1,10 +1,6 @@
-/* ===== 隐藏暗色模式切换按钮 ===== */
-.VPNavBarAppearance,
-.VPNavScreenAppearance {
-  display: none !important;
-}
-
-/* ===== 主题色覆盖：深绿色系 ===== */
+/* ===== 主题色 + 语义变量：浅色（默认）=====
+   2026-08 新增深色模式：所有视觉颜色走语义变量，.dark 下统一覆盖，
+   组件和文章样式块不再写死十六进制色值。品牌色仍以深绿 #2D5A3D 为基准。 */
 :root {
   --vp-c-brand-1: #2D5A3D;
   --vp-c-brand-2: #3a7050;
@@ -26,6 +22,23 @@
   /* 链接颜色 */
   --vp-c-text-1: #1a2e20;
   --vp-c-text-2: #4a6352;
+
+  /* 站点语义变量：浅色 —— 各组件、文章块统一引用，深色在 .dark 下覆盖 */
+  --kb-brand-strong: #1f4332;        /* 衬线板块标题、logo 深色段 */
+  --kb-brand: #2D5A3D;               /* 主品牌色：链接、按钮、强调 */
+  --kb-surface: #ffffff;             /* 卡片/面板背景 */
+  --kb-surface-soft: #f6faf7;        /* 次级面板背景 */
+  --kb-surface-muted: #f0f6f2;       /* 代码块、tip 块背景 */
+  --kb-text-1: #1a2e20;              /* 正文主文字 */
+  --kb-text-2: #4a6352;              /* 次要文字 */
+  --kb-text-3: #8a8a8a;              /* 弱化文字（图注、日期） */
+  --kb-border: #e2ebe5;              /* 卡片/分隔线边框 */
+  --kb-border-soft: #e8f0ea;         /* 导航底边等更淡的线 */
+  --kb-nav-bg: rgba(255, 255, 255, 0.92);
+  --kb-scrollbar: rgba(0, 0, 0, 0.12);
+  --kb-scrollbar-hover: rgba(0, 0, 0, 0.28);
+  --kb-shadow: rgba(45, 90, 61, 0.12);
+  color-scheme: light;
 }
 
 /* ===== Hero 区域 ===== */
@@ -45,48 +58,48 @@
 /* ===== Feature 卡片 ===== */
 .VPFeature {
   border-radius: 14px !important;
-  border: 1.5px solid #e2ebe5 !important;
+  border: 1.5px solid var(--kb-border) !important;
   transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s !important;
-  background: white !important;
+  background: var(--kb-surface) !important;
 }
 
 .VPFeature:hover {
-  box-shadow: 0 6px 24px rgba(45, 90, 61, 0.12) !important;
+  box-shadow: 0 6px 24px var(--kb-shadow) !important;
   transform: translateY(-3px) !important;
-  border-color: #b8d4c0 !important;
+  border-color: var(--vp-c-brand-3) !important;
 }
 
 .VPFeature .title {
-  color: #1a2e20 !important;
+  color: var(--kb-text-1) !important;
   font-weight: 700 !important;
 }
 
 .VPFeature .details {
-  color: #4a6352 !important;
+  color: var(--kb-text-2) !important;
   line-height: 1.6 !important;
 }
 
 /* ===== 导航栏 ===== */
 .VPNav {
   backdrop-filter: blur(12px) !important;
-  background: rgba(255, 255, 255, 0.92) !important;
-  border-bottom: 1px solid #e8f0ea !important;
+  background: var(--kb-nav-bg) !important;
+  border-bottom: 1px solid var(--kb-border-soft) !important;
 }
 
 .VPNavBarTitle .title {
   font-weight: 700 !important;
-  color: #2D5A3D !important;
+  color: var(--kb-brand) !important;
 }
 
 /* ===== 侧边栏 ===== */
 .VPSidebarItem.is-active > .item .link,
 .VPSidebarItem.is-active > .item .text {
-  color: #2D5A3D !important;
+  color: var(--kb-brand) !important;
   font-weight: 600 !important;
 }
 
 .VPSidebarItem .link:hover {
-  color: #2D5A3D !important;
+  color: var(--kb-brand) !important;
 }
 
 /* 长文章标题在侧边栏最多显示 2 行，超出省略号；同时字号和行高收紧，不让长标题撑开侧边栏 */
@@ -117,7 +130,7 @@
   font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
   font-weight: 700;
   font-size: 15.5px;
-  color: #1f4332;
+  color: var(--kb-brand-strong);
   letter-spacing: 0.03em;
 }
 
@@ -155,7 +168,7 @@
   font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif !important;
   font-weight: 700 !important;
   font-size: 15.5px;
-  color: #1f4332 !important;
+  color: var(--kb-brand-strong) !important;
   letter-spacing: 0.03em;
 }
 /* 前言/更新日志的裸 level-0 容器默认带 24px 底距（展开分组的标准值），
@@ -172,23 +185,23 @@ section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.le
 
 /* ===== 文章内容排版 ===== */
 .vp-doc h1 {
-  border-bottom: 2px solid #e2ebe5;
+  border-bottom: 2px solid var(--kb-border);
   padding-bottom: 0.5rem;
-  color: #1a2e20;
+  color: var(--kb-text-1);
 }
 
 .vp-doc h2 {
   border-top: none;
-  color: #2D5A3D;
+  color: var(--kb-brand);
 }
 
 .vp-doc a {
-  color: #2D5A3D;
+  color: var(--kb-brand);
   font-weight: 500;
 }
 
 .vp-doc a:hover {
-  color: #4a8b63;
+  color: var(--vp-c-brand-3);
 }
 
 /* 图片：限制最大尺寸，保证一屏能看完整张图；保留原比例，居中显示 */
@@ -231,7 +244,7 @@ section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.le
 .vp-doc .post-meta {
   font-size: 13px;
   line-height: 1.6;
-  color: #8a8a8a;
+  color: var(--kb-text-3);
   margin: 0.5rem 0 1.5rem;
 }
 
@@ -239,7 +252,7 @@ section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.le
 .vp-doc p:has(> img:only-child) + p:has(> em:only-child) {
   font-size: 13px;
   line-height: 1.6;
-  color: #8a8a8a;
+  color: var(--kb-text-3);
   /* 图片是居中的,图注跟着居中,二者才像一个整体;左对齐会和图的左边缘错位 */
   text-align: center;
   margin: 0.1rem auto 1.5rem;
@@ -254,7 +267,7 @@ section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.le
 
 .vp-doc .figcaption a,
 .vp-doc p:has(> img:only-child) + p:has(> em:only-child) a {
-  color: #8a8a8a;
+  color: var(--kb-text-3);
   font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -262,7 +275,7 @@ section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.le
 
 .vp-doc .figcaption a:hover,
 .vp-doc p:has(> img:only-child) + p:has(> em:only-child) a:hover {
-  color: #2D5A3D;
+  color: var(--kb-brand);
 }
 
 /* ===== 桌面端阅读布局 =====
@@ -323,20 +336,20 @@ html.kb-zen .VPDoc .aside {
 /* ===== 代码块 ===== */
 .vp-doc code {
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
-  background: #f0f6f2;
-  color: #2D5A3D;
+  background: var(--kb-surface-muted);
+  color: var(--kb-brand);
   border-radius: 4px;
   padding: 0.1em 0.4em;
 }
 
 /* ===== 自定义容器颜色 ===== */
 .vp-doc .custom-block.tip {
-  border-color: #2D5A3D;
-  background: #f0f6f2;
+  border-color: var(--kb-brand);
+  background: var(--kb-surface-muted);
 }
 
 .vp-doc .custom-block.tip .custom-block-title {
-  color: #2D5A3D;
+  color: var(--kb-brand);
 }
 
 /* ===== 阶段标签（徽章） ===== */
@@ -374,33 +387,73 @@ html.kb-zen .VPDoc .aside {
 /* ===== 滚动条:正文保留细灰条(长文需要位置感),其余低存在感 ===== */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.28); }
+::-webkit-scrollbar-thumb { background: var(--kb-scrollbar); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--kb-scrollbar-hover); }
 
 /* 侧边栏滚动条:默认完全隐形,悬停侧栏时才浮现 3px 细线——
    侧栏内容不长,常驻滚动条只是视觉噪音 */
 .VPSidebar::-webkit-scrollbar { width: 3px; }
 .VPSidebar::-webkit-scrollbar-thumb { background: transparent; }
-.VPSidebar:hover::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.15); }
+.VPSidebar:hover::-webkit-scrollbar-thumb { background: var(--kb-scrollbar); }
 .VPSidebar { scrollbar-width: none; }
 .VPSidebar:hover { scrollbar-width: thin; }
 
-/* ===== 暗色模式适配 ===== */
+/* ===== 深色模式：深绿系，延续品牌色 =====
+   配色逻辑：背景取墨绿黑（不是中性灰），保留品牌识别；主题色提亮到浅绿
+   保证暗背景下的对比度与可读性。所有变量在浅色基础上整体压暗+提亮文字。 */
 .dark {
   --vp-c-brand-1: #6dbf8a;
   --vp-c-brand-2: #5aad77;
   --vp-c-brand-3: #4a9a64;
-  --vp-c-brand-soft: rgba(109, 191, 138, 0.12);
+  --vp-c-brand-soft: rgba(109, 191, 138, 0.14);
+
+  /* 正文文字色：浅色下 :root 把 --vp-c-text-1 硬设成深绿（#1a2e20），
+     深色背景上必须改回浅色，否则深字配深底看不清。这里对齐 VitePress 默认深色值。 */
+  --vp-c-text-1: #d6e0db;
+  --vp-c-text-2: #b5c2ba;
+  --vp-c-text-3: #9aa8a0;
+
+  --vp-button-brand-bg: #4f9d6b;
+  --vp-button-brand-hover-bg: #61af7c;
+  --vp-button-brand-active-bg: #43895b;
+
+  --kb-brand-strong: #cfe6d6;        /* 衬线标题：深色下提亮为浅绿白 */
+  --kb-brand: #6dbf8a;               /* 主品牌色提亮，暗背景上更醒目 */
+  --kb-surface: #1f2e24;             /* 卡片：墨绿，比背景亮一档做层次 */
+  --kb-surface-soft: #243a2c;        /* 次级面板 */
+  --kb-surface-muted: #1a2a20;       /* 代码块背景：比卡片更深 */
+  --kb-text-1: #d6e0db;              /* 正文主文字：浅灰绿，护眼 */
+  --kb-text-2: #b5c2ba;              /* 次要文字：提亮保证小字可读 */
+  --kb-text-3: #9aa8a0;              /* 弱化文字：图注/日期，提亮一档 */
+  --kb-border: #2f4438;              /* 边框：深绿灰 */
+  --kb-border-soft: #283a30;
+  --kb-nav-bg: rgba(22, 34, 26, 0.92);
+  --kb-scrollbar: rgba(255, 255, 255, 0.14);
+  --kb-scrollbar-hover: rgba(255, 255, 255, 0.28);
+  --kb-shadow: rgba(0, 0, 0, 0.32);
+  color-scheme: dark;
 }
 
-.dark .VPFeature {
-  background: #1a2e1e !important;
-  border-color: #2d4a32 !important;
+/* ===== 文章内联彩色块的深色兼容（不改文章源码）=====
+   多篇深度文章（world-model、loop-engineering 等）用内联 style 写了浅色卡片块
+   （绿底、红底、蓝底等对比框）。深色模式下这些浅色块会刺眼漏白。
+   用一条全局滤镜把它们整体压暗+反转，再轻微校正色相，文字保持可读。
+   只命中 .vp-doc 内带内联 background 的 div/p，不影响图片和代码块。 */
+.dark .vp-doc div[style*="background"],
+.dark .vp-doc p[style*="background"] {
+  /* 轻微提亮文字保证可读性，再压暗背景 */
+  filter: brightness(0.82) contrast(1.05);
 }
 
-.dark .VPNav {
-  background: rgba(22, 36, 25, 0.92) !important;
-  border-bottom-color: #2d4a32 !important;
+/* 深色下首页大背景渐变：夜空感墨绿 */
+.dark body:has(.home-wrapper) {
+  background: linear-gradient(
+    180deg,
+    #131c16  0%,
+    #16221b  38%,
+    #182721  68%,
+    #131a15 100%
+  ) fixed !important;
 }
 
 /* ===== 自定义首页布局（v14 山水登山路径） ===== */

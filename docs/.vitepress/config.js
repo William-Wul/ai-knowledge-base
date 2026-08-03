@@ -133,7 +133,9 @@ export default defineConfig({
 
   lang: 'zh-CN',
   cleanUrls: true,
-  appearance: false,
+  // 2026-08：恢复深色模式开关。首次访问跟随系统偏好，
+  // 用户手动切换后 VitePress 自动写入 localStorage 记住选择。
+  appearance: true,
 
   vite: {
     build: {

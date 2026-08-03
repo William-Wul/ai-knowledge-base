@@ -63,6 +63,10 @@ function triggerSearch() {
   backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid var(--line);
 }
+/* 深色下导航栏背景融入夜景 */
+.dark .home-nav {
+  background: rgba(19, 28, 22, 0.72);
+}
 .nav-inner {
   max-width: 1400px; margin: 0 auto;
   padding: 14px 40px;
@@ -97,6 +101,11 @@ function triggerSearch() {
   font-family: inherit;
 }
 .nav-search:hover { border-color: var(--green-400); background: white; }
+.dark .nav-search {
+  background: rgba(31, 46, 36, 0.6);
+  color: var(--ink-mute);
+}
+.dark .nav-search:hover { background: rgba(40, 58, 44, 0.8); }
 .nav-search .kbd {
   margin-left: auto;
   font-family: var(--font-mono); font-size: 10.5px;

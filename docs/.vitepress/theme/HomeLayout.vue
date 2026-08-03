@@ -49,4 +49,25 @@ import HomeFooter from './components/HomeFooter.vue'
   flex-direction: column;
   min-height: 100vh;
 }
+
+/* ============ 深色模式：覆盖首页色板 token，整页夜景墨绿 ============ */
+.dark .home-wrapper {
+  --green-900: #cfe6d6;
+  --green-800: #9cd0ad;
+  --green-700: #7ec295;
+  --green-600: #5fb483;
+  --green-500: #4aa674;
+  --green-400: #3a8f63;
+  --green-300: #2d704f;
+  --green-200: #245a40;
+  --green-100: #1f4a36;
+  --green-50:  #18392a;
+
+  --ink:       #d6e0db;
+  --ink-soft:  #b5c2ba;
+  --ink-mute:  #9aa8a0;
+  --line:      rgba(160, 200, 175, 0.12);
+  --cream:     #1f2e24;
+  --sky-top:   #131c16;
+}
 </style>
