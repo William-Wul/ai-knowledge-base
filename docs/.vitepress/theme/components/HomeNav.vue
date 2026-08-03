@@ -23,12 +23,40 @@
         <li><a href="/exams/">AI 能力自测</a></li>
         <li><a href="/vocab-book">AI 学习词汇本</a></li>
       </ul>
+      <button
+        class="nav-theme"
+        type="button"
+        :title="isDark ? '切换到浅色模式' : '切换到深色模式'"
+        :aria-label="isDark ? '切换到浅色模式' : '切换到深色模式'"
+        @click="toggleTheme"
+      >
+        <svg v-if="!isDark" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+        </svg>
+        <svg v-else viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+          <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line x1="12" y1="3" x2="12" y2="5.2" />
+            <line x1="12" y1="18.8" x2="12" y2="21" />
+            <line x1="3" y1="12" x2="5.2" y2="12" />
+            <line x1="18.8" y1="12" x2="21" y2="12" />
+            <line x1="5.6" y1="5.6" x2="7.2" y2="7.2" />
+            <line x1="16.8" y1="16.8" x2="18.4" y2="18.4" />
+            <line x1="5.6" y1="18.4" x2="7.2" y2="16.8" />
+            <line x1="16.8" y1="7.2" x2="18.4" y2="5.6" />
+          </g>
+        </svg>
+      </button>
     </div>
   </nav>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useData } from 'vitepress'
+
+const { isDark } = useData()
+const toggleTheme = () => { isDark.value = !isDark.value }
 
 const isMac = ref(true)
 
@@ -131,6 +159,26 @@ function triggerSearch() {
   white-space: nowrap;
 }
 .nav-links a:hover {
+  color: var(--green-900);
+  background: var(--green-100);
+}
+/* 深浅切换按钮：和导航链接同一视觉节奏（圆角方块、同 hover 色），
+   尺寸对齐 nav-links 行高，图标 16px 与链接文字视觉重心齐平 */
+.nav-theme {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  margin-left: 4px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.nav-theme:hover {
   color: var(--green-900);
   background: var(--green-100);
 }
