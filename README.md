@@ -1,8 +1,10 @@
 # AI 学习知识库
 
-面向公司内部员工的 AI 学习路径网站，涵盖从零认知到 Agent 实战的完整内容体系。
+面向非技术背景读者的 AI 学习路径网站，涵盖从零认知到 Agent 实战的完整内容体系。
 
 **线上地址**：[ailinkstart.com](https://ailinkstart.com)
+
+**项目性质**：个人项目，对内共享。版权归属与授权范围见 [LICENSE](LICENSE)。
 
 ---
 

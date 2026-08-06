@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "AI 学习知识库",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vitepress dev docs",
     "docs:dev": "vitepress dev docs",
@@ -11,8 +12,8 @@
     "sync:hot": "node scripts/sync-aihot.mjs"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "William",
+  "license": "UNLICENSED",
   "devDependencies": {
     "vitepress": "^1.6.4"
   },
