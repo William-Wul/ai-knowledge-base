@@ -197,7 +197,16 @@ export default defineConfig({
           // AI 前沿 = frontier/ 深度专题 + 原 news/ AI 新闻 + 目录外趋势长文，按日期倒序混排
           { text: '🔭 AI 前沿', link: '/frontier/', collapsed: true, items: mergedItems(['frontier', 'news'], { extraLinks: FRONTIER_EXTRA_LINKS }) },
           // AI 模型排行榜：AIHOT 榜单每日同步（scripts/sync-leaderboard.mjs 生成数据）
-          { text: '🏆 AI 模型排行榜', link: '/model-ranking/' },
+          {
+            text: '🏆 AI 模型排行榜',
+            link: '/model-ranking/',
+            collapsed: true,
+            items: [
+              { text: '完整榜单', link: '/model-ranking/' },
+              { text: 'AIHOT 原榜 ↗', link: 'https://aihot.virxact.com/leaderboard' },
+              { text: '共识分计算规则 ↗', link: 'https://aihot.virxact.com/leaderboard/rules' },
+            ],
+          },
         ],
       },
       {
