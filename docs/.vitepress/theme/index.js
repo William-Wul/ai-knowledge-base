@@ -11,6 +11,7 @@ import Breadcrumb from './components/Breadcrumb.vue'
 import BackToTop from './components/BackToTop.vue'
 import ReadingControls from './components/ReadingControls.vue'
 import SidebarHeader from './components/SidebarHeader.vue'
+import ModelRanking from './components/ModelRanking.vue'
 import './custom.css'
 
 export default {
@@ -20,6 +21,7 @@ export default {
     app.component('BilibiliVideo', BilibiliVideo)
     app.component('AiAbilityQuiz', AiAbilityQuiz)
     app.component('VocabEmbed', VocabEmbed)
+    app.component('ModelRanking', ModelRanking)
   },
   setup() {
     const route = useRoute()

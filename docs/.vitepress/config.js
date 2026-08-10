@@ -8,6 +8,11 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const docsRoot = resolve(__dirname, '..')
 
+// 判断是否为 iCloud 同步冲突副本（如 "define-done 2.md"），侧边栏/列表一律跳过
+function isConflictCopy(name) {
+  return / \d+\.md$/.test(name)
+}
+
 // 从文件的 frontmatter 或第一个 # 标题提取文章标题
 function getTitle(filePath) {
   try {
@@ -61,6 +66,8 @@ function autoItems(dir, knownItems = [], { reverse = false, sortByDate = false, 
 
   let files = readdirSync(dirPath)
     .filter(f => f.endsWith('.md') && f !== 'index.md')
+    // 跳过 iCloud 同步冲突副本（如 "define-done 2.md"），避免混入侧边栏
+    .filter(f => !isConflictCopy(f))
 
   if (sortByDate) {
     // 按 frontmatter 的 date 倒序（最新在上），缺 date 的排末尾
@@ -100,6 +107,7 @@ function mergedItems(dirs, { limit = 0, extraLinks = [] } = {}) {
     if (!existsSync(dirPath)) continue
     for (const f of readdirSync(dirPath)) {
       if (!f.endsWith('.md') || f === 'index.md') continue
+      if (isConflictCopy(f)) continue
       const fp = join(dirPath, f)
       const text = getTitle(fp).replace(/^\d{4}[/.-]\d{1,2}[/.-]\d{1,2}\s*[·\-–—|]?\s*/, '')
       all.push({ text, link: `/${dir}/${basename(f, '.md')}`, date: getDate(fp) })
@@ -188,6 +196,8 @@ export default defineConfig({
           { text: '🔥 AI 日报', link: '/hot/', collapsed: true, items: autoItems('hot', [], { reverse: true, limit: 7 }) },
           // AI 前沿 = frontier/ 深度专题 + 原 news/ AI 新闻 + 目录外趋势长文，按日期倒序混排
           { text: '🔭 AI 前沿', link: '/frontier/', collapsed: true, items: mergedItems(['frontier', 'news'], { extraLinks: FRONTIER_EXTRA_LINKS }) },
+          // AI 模型排行榜：AIHOT 榜单每日同步（scripts/sync-leaderboard.mjs 生成数据）
+          { text: '🏆 AI 模型排行榜', link: '/model-ranking/' },
         ],
       },
       {

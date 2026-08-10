@@ -9,7 +9,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "sync:hot": "node scripts/sync-aihot.mjs"
+    "sync:hot": "node scripts/sync-aihot.mjs",
+    "sync:leaderboard": "node scripts/sync-leaderboard.mjs"
   },
   "keywords": [],
   "author": "William",

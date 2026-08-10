@@ -25,3 +25,33 @@ kb-articles/
 
 # QA 验收截图，本地证据不入库
 qa-shots/
+
+# 连尚 AI Native 报告/PPT 是 Kimi 正在编辑的私有工作资料，不进公开仓库
+/连尚AI Native组织变革思考报告.md
+/连尚AI-Native组织变革思考报告-PPT/
+/连尚AI-Native组织变革思考报告-PPT-screenshots/
+
+# iCloud 同步冲突副本（如 "xxx 2.md" / "xxx 2.webp"），绝不入库
+# 2026-08-03 曾因 define-done 2.md 混入侧边栏并险被 publish.sh 提交
+* 2.md
+* 2.jpg
+* 2.jpeg
+* 2.png
+* 2.webp
+* 2.gif
+.icloud
+
+# 本地私有工作资料（AI Native 报告/PPT/截图/工具产物等），不进公开仓库
+/.build-*/
+/.qoder/
+/.review-ai-native/
+/ai-native-org/
+/ai-native-org-screenshots/
+/build_ppt.py
+/deliverables/
+/AI Native 组织转型案例集.md
+/如何建成AI Native组织-PPT/
+/如何建成AI Native组织——思考与实施建议.md
+/如何建成AI Native组织-思考与实施建议-PPT/
+/如何建成AI Native组织-思考与实施建议-PPT-screenshots/
+/如何构建AI Native组织.docx

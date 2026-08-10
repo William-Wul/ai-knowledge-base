@@ -137,15 +137,31 @@
               <span class="live-dot"></span>
               AI 最新动态
             </div>
-            <a class="daily-more" :href="daily.url">
-              {{ daily.date }} · 查看本期
+            <a class="daily-more" href="/hot/">
+              {{ daily.date }} · 查看全部
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
                 <path d="M5 12h14M13 5l7 7-7 7"/>
               </svg>
             </a>
           </div>
           <ul class="daily-list">
-            <li v-if="frontier" key="frontier" :style="{ animationDelay: '0.9s' }">
+            <!-- AI 模型排行榜：置顶第一条，金色徽章与下方标签列对齐，2 列网格展示前 10 名（scripts/sync-leaderboard.mjs 每日同步） -->
+            <li v-if="lbTop.length" key="leaderboard" :style="{ animationDelay: '0.9s' }">
+              <a class="daily-item lb-item" href="/model-ranking/">
+                <span class="lb-head">
+                  <span class="daily-cat lb-cat">🏆 AI 模型排行榜</span>
+                  <span class="lb-all">查看完整榜单 →</span>
+                </span>
+                <span class="lb-grid">
+                  <span v-for="m in lbTop" :key="m.slug" class="lb-cell">
+                    <b class="lb-no" :class="`top-${m.rank}`">No.{{ m.rank }}</b>
+                    <span class="lb-name">{{ m.name }}</span>
+                    <span class="lb-score">{{ m.score.toFixed(1) }}<i class="lb-fen">分</i></span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li v-if="frontier" key="frontier" :style="{ animationDelay: '0.96s' }">
               <a class="daily-item" :href="frontier.url">
                 <span class="daily-cat daily-cat-frontier">🔭 最新前沿观察</span>
                 <span class="daily-item-title">{{ frontier.title }}</span>
@@ -158,10 +174,6 @@
               </a>
             </li>
           </ul>
-          <div class="daily-footer">
-            <span>每日自动同步 · AIHOT 精选</span>
-            <a href="/hot/">全部日报 →</a>
-          </div>
         </div>
       </div>
     </div>
@@ -172,9 +184,12 @@
 import { computed } from 'vue'
 import { data as daily } from '../../data/hotLatest.data.js'
 import { data as frontier } from '../../data/frontierLatest.data.js'
+import lb from '../../data/leaderboard.json'
 
 // 头条固定给最新 AI 前沿专题，日报条目相应减为 5 条，面板总条数保持 6 条不变
 const dailyItems = computed(() => (daily.items || []).slice(0, 5))
+// 首页排行榜条目展示前 10 名
+const lbTop = (lb.models || []).slice(0, 10)
 </script>
 
 <style scoped>
@@ -235,11 +250,11 @@ const dailyItems = computed(() => (daily.items || []).slice(0, 5))
 .hero-text {
   max-width: 560px;
   position: relative;
-  /* 左列撑满整行高度：slogan 顶部与右侧面板对齐，小工具卡底部与面板底部对齐 */
+  /* 左列内容整体垂直居中，避免标题与小工具之间留大段空白 */
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 .hero h1 {
   font-family: var(--font-serif);
@@ -321,19 +336,19 @@ const dailyItems = computed(() => (daily.items || []).slice(0, 5))
   border: 1px solid var(--green-200);
   border-radius: 18px;
   box-shadow: 0 18px 48px rgba(31, 67, 50, 0.12);
-  padding: 22px 24px 16px;
+  padding: 16px 20px 12px;
 }
 .daily-header {
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px;
-  padding-bottom: 14px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--line);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .daily-title {
   display: flex; align-items: center; gap: 9px;
   font-family: var(--font-serif);
-  font-size: 17px; font-weight: 900;
+  font-size: 16px; font-weight: 900;
   color: var(--green-900);
   letter-spacing: 0.01em;
 }
@@ -375,7 +390,7 @@ const dailyItems = computed(() => (daily.items || []).slice(0, 5))
 }
 .daily-item {
   display: flex; align-items: baseline; gap: 10px;
-  padding: 9px 8px;
+  padding: 6px 8px;
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.2s ease;
@@ -408,8 +423,8 @@ const dailyItems = computed(() => (daily.items || []).slice(0, 5))
   border-color: #ecd9a8;
 }
 .daily-item-title {
-  font-size: 13.5px;
-  line-height: 1.5;
+  font-size: 12.5px;
+  line-height: 1.45;
   color: var(--ink);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -419,22 +434,81 @@ const dailyItems = computed(() => (daily.items || []).slice(0, 5))
 }
 .daily-item:hover .daily-item-title { color: var(--green-800); }
 
-.daily-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  margin-top: 8px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
-  font-size: 11px;
-  color: var(--ink-mute);
-  font-family: var(--font-mono);
+/* ============ 列表内：AI 模型排行榜条目（金色徽章 + 双列网格） ============ */
+.lb-item {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
 }
-.daily-footer a {
+.lb-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+/* 金色实心徽章：与其他绿色描边标签明显区分；宽度沿用标准 108px，与下方标签列严格对齐 */
+.daily-cat.lb-cat {
+  color: #fff;
+  background: linear-gradient(135deg, #d9a520, #b8860b);
+  border-color: transparent;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(184, 134, 11, 0.3);
+}
+.lb-all {
+  flex-shrink: 0;
+  font-size: 11.5px;
   color: var(--green-700);
-  text-decoration: none;
-  font-family: var(--font-sans);
-  font-size: 12px;
+  white-space: nowrap;
 }
-.daily-footer a:hover { color: var(--green-900); text-decoration: underline; }
+.daily-item:hover .lb-all { color: var(--green-900); text-decoration: underline; }
+.lb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column; /* 先填满左列 No.1-5，再右列 No.6-10 */
+  column-gap: 16px;
+  row-gap: 1px;
+}
+.lb-cell {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  line-height: 1.4;
+}
+.lb-no {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-mute);
+}
+/* 前三名名次统一金色 */
+.lb-no.top-1,
+.lb-no.top-2,
+.lb-no.top-3 { color: #b8860b; font-weight: 700; }
+.lb-name {
+  font-size: 12px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lb-score {
+  flex-shrink: 0;
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--green-700);
+}
+.lb-fen {
+  font-style: normal;
+  font-size: 9px;
+  font-weight: 400;
+  color: var(--ink-mute);
+  margin-left: 1px;
+}
 
 .sun-glow {
   transform-origin: center;
@@ -555,8 +629,7 @@ const dailyItems = computed(() => (daily.items || []).slice(0, 5))
 @media (max-width: 640px) {
   .hero h1 { font-size: 28px; }
   .tools-cards { grid-template-columns: 1fr; }
-  .daily-panel { padding: 18px 16px 14px; }
-  .daily-item-title { font-size: 13px; }
+  .daily-panel { padding: 14px 14px 10px; }
 }
 
 /* ============ 深色模式：山水画夜景 + 玻璃面板深色化 ============
@@ -579,6 +652,12 @@ const dailyItems = computed(() => (daily.items || []).slice(0, 5))
 }
 .dark .daily-item:hover {
   background: rgba(160, 200, 175, 0.08);
+}
+/* 深色下金徽章改为半透明，避免过亮 */
+.dark .daily-cat.lb-cat {
+  background: rgba(201, 162, 39, 0.26);
+  color: #f0dc9a;
+  box-shadow: none;
 }
 .dark .btn-ghost {
   background: rgba(31, 46, 36, 0.55);

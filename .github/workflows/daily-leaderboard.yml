@@ -1,0 +1,59 @@
+name: 每日 AI 模型榜单同步
+
+# 触发条件:
+#   - 定时:每天 UTC 03:12(北京时间 11:12,在 AIHOT 原榜每日 08:20 更新之后)
+#   - 手动:可在 Actions 页面点 "Run workflow" 立刻触发一次(用于测试)
+on:
+  schedule:
+    - cron: '12 3 * * *'
+  workflow_dispatch:
+
+# 给这个 workflow 写回仓库的权限(用来提交生成的 JSON)
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: daily-leaderboard
+  cancel-in-progress: false
+
+jobs:
+  sync-leaderboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 设置 Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 同步 AI 模型排行榜
+        run: node scripts/sync-leaderboard.mjs
+
+      - name: 提交并 push
+        id: commit
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/.vitepress/data/leaderboard.json
+
+          if git diff --cached --quiet; then
+            echo "榜单数据无变化,跳过提交"
+            echo "changed=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          git commit -m "🏆 自动同步 AI 模型排行榜 $TODAY"
+          git push
+          echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: 触发站点部署
+        if: steps.commit.outputs.changed == 'true'
+        run: gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

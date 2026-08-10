@@ -2,6 +2,21 @@
 
 ---
 
+## v1.41 · 2026-08-10
+
+### 功能：AI 模型排行榜（AIHOT 数据每日自动同步）
+
+- 新增站内栏目 `/model-ranking/`：`docs/model-ranking/index.md` + `docs/.vitepress/theme/components/ModelRanking.vue`，展示 AIHOT 模型榜前 30 名（排名/厂商/上线日期/评测完整度/输入输出成本/共识分），附三指标读法说明、来源署名与原榜/规则页外链
+- 数据链路：新增 `scripts/sync-leaderboard.mjs`（`npm run sync:leaderboard`），抓取 AIHOT 公开榜单页 SSR HTML 解析生成 `docs/.vitepress/data/leaderboard.json`（官方 v1 API 暂无榜单端点，2026-08-10 核实 openapi-v1.json）；解析失败保留旧数据、构建不中断（输出 ::warning::）
+- 自动化：新增 `.github/workflows/daily-leaderboard.yml`，每天北京时间 11:12 同步，数据变化时自动 commit 并触发 deploy（机制与 daily-hot-digest 相同）
+- 首页（`HomeHero.vue`）：动态面板置顶「🏆 AI 模型排行榜」条目——金色实心徽章（108px 与标签列对齐）、左列 No.1-5 右列 No.6-10 双列网格（grid-auto-flow: column）、前三名名次统一金色、附共识分（如 87.7分）；面板整体压缩（标题 16px、正文 12.5px、行距收紧）；左列文案改垂直居中消除大段空白；页头「查看本期」改「查看全部」指向 /hot/；移除底部「每日自动同步 · AIHOT 精选 / 全部日报」栏
+- 侧边栏：「AI 最新动态」板块新增 🏆 AI 模型排行榜入口（config.js）；组件注册 theme/index.js
+- 许可核查：AIHOT 公开使用规则 v1.0（2026-08-10 生效）——组织内部使用免费无需申请，本站密码门 + noindex 定位内部学习，来源署名保留；iframe 嵌入已被对方 X-Frame-Options: SAMEORIGIN 禁止，故采用数据同步自渲染
+- 同批带上：进阶实践 2 篇新文入库配置（stagesData.js：`/stage-4/read-long-doc`、`/stage-4/merge-messy-tables`，文章文件随本次首次入库）；`.gitignore` 增补（iCloud 冲突副本、私有工作资料排除）；`publish.sh` 新增 iCloud 冲突副本提交拦截
+- 验证：`npm run docs:build` 无报错；dist 产物逐项核验（榜单 30 行/首页条目置顶/侧边栏/来源与规则外链/无旧名残留/无 footer 残留）
+
+---
+
 ## v1.40 · 2026-08-03
 
 ### 内容：进阶实践新文《给 AI 派活：把任务说清楚，把"完成"定义明白》
