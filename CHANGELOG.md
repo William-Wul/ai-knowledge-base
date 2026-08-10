@@ -2,6 +2,17 @@
 
 ---
 
+## v1.43 · 2026-08-10
+
+### 内容：下线两篇进阶实践文章
+
+- 删除 `docs/stage-4/read-long-doc.md`、`docs/stage-4/merge-messy-tables.md`（william 评审后决定下线；两文无配图、无落地页引用，无残留资源）
+- `stagesData.js` 的 PRACTICE_LINKS 同步移除两条，池内恢复 6 篇；侧边栏自动消失
+- 站内更新日志 2026-08-10 分节中对应两条新文章公告一并撤下
+- 验证：`npm run docs:build` 无报错
+
+---
+
 ## v1.42 · 2026-08-10
 
 ### 修复：侧边栏「AI 模型排行榜」格式与同级栏目对齐
