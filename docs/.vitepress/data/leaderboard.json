@@ -3,8 +3,8 @@
   "sourceUrl": "https://aihot.virxact.com/leaderboard",
   "rulesUrl": "https://aihot.virxact.com/leaderboard/rules",
   "sourceCount": 10,
-  "sourceUpdatedAt": "8月10日 08:20",
-  "syncedAt": "2026-08-10T03:08:19.511Z",
+  "sourceUpdatedAt": "8月11日 08:17",
+  "syncedAt": "2026-08-11T04:37:43.563Z",
   "models": [
     {
       "rank": 1,
@@ -12,10 +12,10 @@
       "name": "Claude Opus 5",
       "provider": "Anthropic",
       "releaseDate": "2026-07-24",
-      "completeness": 73.1,
+      "completeness": 73.8,
       "inputPrice": "$5",
       "outputPrice": "$25",
-      "score": 87.7
+      "score": 86.1
     },
     {
       "rank": 2,
@@ -26,7 +26,7 @@
       "completeness": 93.8,
       "inputPrice": "$10",
       "outputPrice": "$50",
-      "score": 86.7
+      "score": 85.2
     },
     {
       "rank": 3,
@@ -37,7 +37,7 @@
       "completeness": 95,
       "inputPrice": "$5",
       "outputPrice": "$30",
-      "score": 85.7
+      "score": 84.3
     },
     {
       "rank": 4,
@@ -48,7 +48,7 @@
       "completeness": 95,
       "inputPrice": "$3",
       "outputPrice": "$15",
-      "score": 83.7
+      "score": 81.9
     },
     {
       "rank": 5,
@@ -59,7 +59,7 @@
       "completeness": 95,
       "inputPrice": "$5",
       "outputPrice": "$30",
-      "score": 79.5
+      "score": 77.4
     },
     {
       "rank": 6,
@@ -70,7 +70,7 @@
       "completeness": 90,
       "inputPrice": "$5",
       "outputPrice": "$25",
-      "score": 74.5
+      "score": 71.7
     },
     {
       "rank": 7,
@@ -79,9 +79,9 @@
       "provider": "OpenAI",
       "releaseDate": "2026-07-09",
       "completeness": 80,
-      "inputPrice": "$1",
-      "outputPrice": "$6",
-      "score": 74.2
+      "inputPrice": "$2",
+      "outputPrice": "$12",
+      "score": 71.4
     },
     {
       "rank": 8,
@@ -90,9 +90,9 @@
       "provider": "Alibaba",
       "releaseDate": "2026-07-19",
       "completeness": 77.5,
-      "inputPrice": "$2",
-      "outputPrice": "$6",
-      "score": 72.6
+      "inputPrice": null,
+      "outputPrice": null,
+      "score": 69.1
     },
     {
       "rank": 9,
@@ -103,7 +103,7 @@
       "completeness": 80,
       "inputPrice": "$5",
       "outputPrice": "$25",
-      "score": 68.4
+      "score": 65.7
     },
     {
       "rank": 10,
@@ -114,7 +114,7 @@
       "completeness": 57.5,
       "inputPrice": "$1.25",
       "outputPrice": "$4.25",
-      "score": 66.7
+      "score": 63.1
     },
     {
       "rank": 11,
@@ -123,9 +123,9 @@
       "provider": "OpenAI",
       "releaseDate": "2026-07-09",
       "completeness": 86.9,
-      "inputPrice": "$0.1",
-      "outputPrice": "$0.6",
-      "score": 64.1
+      "inputPrice": "$0.2",
+      "outputPrice": "$1.2",
+      "score": 60.7
     },
     {
       "rank": 12,
@@ -136,7 +136,7 @@
       "completeness": 65,
       "inputPrice": "$1.25",
       "outputPrice": "$4.25",
-      "score": 63.4
+      "score": 59.8
     },
     {
       "rank": 13,
@@ -147,7 +147,7 @@
       "completeness": 87.5,
       "inputPrice": "$2",
       "outputPrice": "$6",
-      "score": 62.4
+      "score": 58.8
     },
     {
       "rank": 14,
@@ -158,7 +158,7 @@
       "completeness": 83.1,
       "inputPrice": "$2",
       "outputPrice": "$10",
-      "score": 59.1
+      "score": 55.4
     },
     {
       "rank": 15,
@@ -169,7 +169,7 @@
       "completeness": 75,
       "inputPrice": "$2.5",
       "outputPrice": "$15",
-      "score": 59
+      "score": 55.3
     },
     {
       "rank": 16,
@@ -180,18 +180,18 @@
       "completeness": 60,
       "inputPrice": "$5",
       "outputPrice": "$25",
-      "score": 54.9
+      "score": 51.1
     },
     {
       "rank": 17,
-      "slug": "gemini-3-1-pro",
-      "name": "Gemini 3.1 Pro",
-      "provider": "Google",
-      "releaseDate": "2026-02-19",
-      "completeness": 25,
-      "inputPrice": "$2",
-      "outputPrice": "$12",
-      "score": 53.3
+      "slug": "deepseek-v-4-flash-20260731",
+      "name": "DeepSeek V4 Flash 0731",
+      "provider": "DeepSeek",
+      "releaseDate": "2026-07-31",
+      "completeness": 64.4,
+      "inputPrice": "$0.14",
+      "outputPrice": "$0.28",
+      "score": 50
     },
     {
       "rank": 18,
@@ -200,23 +200,12 @@
       "provider": "Z.ai",
       "releaseDate": "2026-06-16",
       "completeness": 94.4,
-      "inputPrice": "$0.07",
-      "outputPrice": "$0.22",
-      "score": 52.8
+      "inputPrice": "$1.4",
+      "outputPrice": "$4.4",
+      "score": 49
     },
     {
       "rank": 19,
-      "slug": "deepseek-v-4-flash-20260731",
-      "name": "DeepSeek V4 Flash 20260731",
-      "provider": "DeepSeek",
-      "releaseDate": "2026-07-31",
-      "completeness": 49.4,
-      "inputPrice": "$0.09",
-      "outputPrice": "$0.18",
-      "score": 51.8
-    },
-    {
-      "rank": 20,
       "slug": "gemini-3-6-flash",
       "name": "Gemini 3.6 Flash",
       "provider": "Google",
@@ -224,10 +213,10 @@
       "completeness": 65,
       "inputPrice": "$1.5",
       "outputPrice": "$7.5",
-      "score": 48.5
+      "score": 44.4
     },
     {
-      "rank": 21,
+      "rank": 20,
       "slug": "hy-3",
       "name": "Hy 3",
       "provider": "Tencent",
@@ -235,10 +224,32 @@
       "completeness": 30,
       "inputPrice": "$0.13",
       "outputPrice": "$0.53",
-      "score": 44.6
+      "score": 40.9
+    },
+    {
+      "rank": 21,
+      "slug": "gpt-5-2-2025-12-11",
+      "name": "GPT-5.2 2025 12 11",
+      "provider": "OpenAI",
+      "releaseDate": "2025-12-11",
+      "completeness": 50,
+      "inputPrice": "$1.75",
+      "outputPrice": "$14",
+      "score": 40.5
     },
     {
       "rank": 22,
+      "slug": "gemini-3-1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview",
+      "provider": "Google",
+      "releaseDate": "2026-02-19",
+      "completeness": 95,
+      "inputPrice": "$2",
+      "outputPrice": "$12",
+      "score": 39.6
+    },
+    {
+      "rank": 23,
       "slug": "claude-sonnet-4-6",
       "name": "Claude Sonnet 4.6",
       "provider": "Anthropic",
@@ -246,32 +257,10 @@
       "completeness": 75,
       "inputPrice": "$3",
       "outputPrice": "$15",
-      "score": 40.4
-    },
-    {
-      "rank": 23,
-      "slug": "deepseek-v-4-flash",
-      "name": "DeepSeek V4 Flash",
-      "provider": "DeepSeek",
-      "releaseDate": "2026-04-24",
-      "completeness": 45,
-      "inputPrice": "$0.14",
-      "outputPrice": "$0.28",
-      "score": 40.3
+      "score": 36.6
     },
     {
       "rank": 24,
-      "slug": "gemini-3-5-flash",
-      "name": "Gemini 3.5 Flash",
-      "provider": "Google",
-      "releaseDate": "2026-05-19",
-      "completeness": 71.9,
-      "inputPrice": "$1.5",
-      "outputPrice": "$9",
-      "score": 40.2
-    },
-    {
-      "rank": 25,
       "slug": "gpt-5-3-codex",
       "name": "GPT-5.3 Codex",
       "provider": "OpenAI",
@@ -279,62 +268,73 @@
       "completeness": 35,
       "inputPrice": "$1.75",
       "outputPrice": "$14",
-      "score": 39.7
+      "score": 36.3
+    },
+    {
+      "rank": 25,
+      "slug": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "provider": "Google",
+      "releaseDate": "2026-05-19",
+      "completeness": 71.9,
+      "inputPrice": "$1.5",
+      "outputPrice": "$9",
+      "score": 36.2
     },
     {
       "rank": 26,
-      "slug": "gemini-3-1-pro-preview",
-      "name": "Gemini 3.1 Pro Preview",
-      "provider": "Google",
-      "releaseDate": "2026-02-19",
-      "completeness": 70,
-      "inputPrice": "$2",
-      "outputPrice": "$12",
-      "score": 39.4
-    },
-    {
-      "rank": 27,
-      "slug": "gpt-5-2",
-      "name": "GPT-5.2",
-      "provider": "OpenAI",
-      "releaseDate": "2025-12-11",
-      "completeness": 40,
-      "inputPrice": "$1.75",
-      "outputPrice": "$14",
-      "score": 38.9
-    },
-    {
-      "rank": 28,
       "slug": "qwen-3-7-max",
       "name": "Qwen3.7 Max",
       "provider": "Alibaba",
       "releaseDate": "2026-05-19",
       "completeness": 65,
-      "inputPrice": "$1.48",
-      "outputPrice": "$4.43",
-      "score": 36.7
+      "inputPrice": "$2.5",
+      "outputPrice": "$7.5",
+      "score": 33.3
     },
     {
-      "rank": 29,
-      "slug": "gemini-3-pro",
-      "name": "Gemini 3 Pro",
+      "rank": 27,
+      "slug": "gemini-3-pro-preview",
+      "name": "Gemini 3 Pro Preview",
       "provider": "Google",
       "releaseDate": "2025-11-18",
-      "completeness": 30,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 35.3
+      "completeness": 40,
+      "inputPrice": "$2",
+      "outputPrice": "$12",
+      "score": 32.2
     },
     {
-      "rank": 30,
+      "rank": 28,
       "slug": "deepseek-v-4-pro-preview",
       "name": "DeepSeek V4 Pro Preview",
       "provider": "DeepSeek",
       "releaseDate": "2026-04-24",
-      "completeness": 19.4,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 34.2
+      "completeness": 79.4,
+      "inputPrice": "$0.44",
+      "outputPrice": "$0.87",
+      "score": 30.3
+    },
+    {
+      "rank": 29,
+      "slug": "gpt-5-2-codex",
+      "name": "GPT-5.2 Codex",
+      "provider": "OpenAI",
+      "releaseDate": "2025-12-11",
+      "completeness": 35,
+      "inputPrice": "$1.75",
+      "outputPrice": "$14",
+      "score": 30.2
+    },
+    {
+      "rank": 30,
+      "slug": "kimi-k-2-6",
+      "name": "Kimi K2.6",
+      "provider": "Moonshot AI",
+      "releaseDate": "2026-04-20",
+      "completeness": 75,
+      "inputPrice": "$0.95",
+      "outputPrice": "$4",
+      "score": 30.1
     }
   ]
 }
