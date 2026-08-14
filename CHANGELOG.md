@@ -2,6 +2,18 @@
 
 ---
 
+## v1.44 · 2026-08-14
+
+### 内容：AI 前沿新文《后训练、Harness、价格战，AI竞赛的三条战线》
+
+- 新增 `docs/frontier/ai-race-three-fronts.md`（约 4500 字）：以 8 月 12–14 日 72 小时内三波新闻为线索，讲清 AI 竞赛同时开打的三条战线——后训练（GLM-5.3 / V4 Pro 基座不动、能力大涨）、Harness（DeepSeek 开源 Agent 框架，"模型 + 壳"）、价格战（V4 Pro 涨价 12 倍 + Gemini/Grok 性价比反攻），收尾给三个带走判断
+- 素材出处：kb-articles 当日入库 A171–A181（文末扩展阅读已附 10 篇公众号原文外链）：量子位 / cxuanAI / AI科技评论（GLM-5.3 三篇）、机器之心 / 爱范儿 / 智东西 / 数字生命卡兹克（DeepSeek Harness 四篇）、AI范儿 ×2（涨价分析 + 海外反攻）、橘AI（V4 Pro 快讯）
+- 配图 7 张拷至 `docs/public/images/frontier/ai-race-three-fronts/`，全部经视觉核查后选定（素材笔记标注与图片实物不符的 1 张已弃用换选），图注均标来源
+- 侧边栏与首页动态面板由 autoItems 自动收录，无配置改动；写作规范：独立成篇无站内互链，外链仅在扩展阅读区
+- 验证：`npm run docs:build` 无报错；dist 产物抽查（页面标题、首页 2 处引用）
+
+---
+
 ## v1.43 · 2026-08-10
 
 ### 内容：下线两篇进阶实践文章
