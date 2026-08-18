@@ -1,6 +1,6 @@
 ---
 title: Prompt 进阶技巧：从把话说清楚，到让 AI 帮你想
-description: 一套把需求说完整的基本功、六个可直接复制的进阶心法、两个万能加句——让 AI 从"照着做"升级到"帮你想"
+description: 一套把需求说完整的基本功、七个可直接复制的进阶心法、两个万能加句——让 AI 从"照着做"升级到"帮你想"
 ---
 
 # Prompt 进阶技巧：从把话说清楚，到让 AI 帮你想
@@ -163,6 +163,55 @@ AI 有个刻在骨子里的毛病：**太想让你满意了。** 你说什么它
 
 ---
 
+## 进阶心法七：做决策，用"双向钢人论证"
+
+前面的心法解决"把活干好"，这一个专门解决**拿不定主意**：两个方案选哪个、这笔投入值不值、这份工作要不要换。直接把选项丢给 AI，它多半顺着你的倾向说，因为 AI 天生想让你满意（心法三提过这个毛病）。
+
+对策是让它做"钢人论证"。**钢人论证（Steelman）是稻草人谬误的反义词**：不是把对方观点削弱了再反驳，而是先把它补强成最完整、最难反驳的版本，再来比较。"双向"就是正反两边都补强——支持你想法的理由和反对你想法的理由，都推到最强，谁也不占便宜，真正的分歧才会露出来。
+
+**你可以直接复制：**
+
+> 先别急着回答，也别默认我已经把问题想清楚。请对这个问题做一次详细思考后的"双向钢人论证"：
+> 1. 用最完整、最有力的方式，重述我真正想解决的问题。
+> 2. 使用钢人论证法分别给出支持我当前想法、以及反对它的最强论证。
+> 3. 找出双方真正的分歧，以及最可能改变结论的关键变量。
+> 4. 只问我一个最关键的问题。
+> 等我回答后，再给出明确判断、理由和下一步行动。
+>
+> 我的问题是：【你的问题】
+
+四步各有分工，拆开看：
+
+<div style="margin:18px 0;">
+  <div style="border:1px solid #e3e8e3; border-left:4px solid #c9d6cc; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#fbfcfb;">
+    <strong>第 1 步 · 重述问题</strong><br>
+    <span style="font-size:14px; color:#555;">你嘴上问的选项，往往不是心里真正的矛盾。先让 AI 把问题改写一遍，避免答非所问。</span>
+  </div>
+  <div style="border:1px solid #e3e8e3; border-left:4px solid #a8c7b3; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#fbfcfb;">
+    <strong>第 2 步 · 双向补强</strong><br>
+    <span style="font-size:14px; color:#555;">正反两方都给出最强论证，不是列一份普通的优缺点表。这一步堵死了 AI 顺着你说的路。</span>
+  </div>
+  <div style="border:1px solid #dde7e0; border-left:4px solid #8fbda3; border-radius:8px; padding:12px 16px; margin-bottom:8px; background:#f6faf7;">
+    <strong>第 3 步 · 找关键变量</strong><br>
+    <span style="font-size:14px; color:#444;">复杂决策通常由少数几个条件决定：预算、时间、你最在意什么。条件一变，结论就变。</span>
+  </div>
+  <div style="border:2px solid #2D5A3D; border-left:6px solid #2D5A3D; border-radius:8px; padding:14px 16px; background:#eef5f0;">
+    <strong style="color:#2D5A3D;">第 4 步 · 只追问一个问题</strong><br>
+    <span style="font-size:14px; color:#33503c;">逼 AI 从所有想问的里挑出最能改变结论的那一个，你答完，它必须给明确判断和下一步，不许和稀泥。</span>
+  </div>
+</div>
+<p class="figcaption">四步是一条漏斗：问题越收越窄，最后落到一个判断上。</p>
+
+![双向钢人 Prompt 的实际用法](/images/stage-2/steelman-prompt-usage.png)
+<p class="figcaption">一次真实使用：问"公司司庆该从哪天算起"，给了三个候选日期。AI 第一句就把问题拆到了底层——表面在选日期，真正要决定的是"公司想如何书写自己的出生故事"。</p>
+
+![AI 找出的关键变量](/images/stage-2/steelman-key-variable.png)
+<p class="figcaption">走到第 3、4 步：AI 判断工商日期、业务规模都是次要因素，真正的关键变量只有一个——"你认为公司这个'我们'从什么时候开始存在"，然后只追问了这一个问题。</p>
+
+它和心法三（当反对者）的分工：**反对者用来压力测试一个已有的方案，双向钢人用来在几个选项之间做决定。** 前者你已经有了倾向、想验证它扛不扛得住；后者你真的还没想清楚，需要有人帮你把两边都摆到最强再比。
+
+---
+
 ## 两个万能加句：管生成的，管验证的
 
 最后这两个，是从 AI 编程圈流传出来的高频技巧，被社区称为"神级 Prompt"。其实它们跟编程没什么关系，写方案、做决策一样好用，而且用法简单到只有一句话。
@@ -202,6 +251,7 @@ AI 默认是类比推理：你说写一个方案，它从训练数据里找几�
     <strong>心法 4</strong> → 预演失败：假设搞砸了，倒推哪里出问题<br>
     <strong>心法 5</strong> → 给成品，让 AI 倒推 Prompt<br>
     <strong>心法 6</strong> → 双层解释 / 寓言故事，学透新概念<br>
+    <strong>心法 7</strong> → 拿不定主意时，"双向钢人论证"：正反都补到最强再比<br>
     <strong>万能加句</strong> → "从第一性原理出发" + "开启对抗式审查"
   </div>
 </div>
@@ -215,3 +265,4 @@ AI 默认是类比推理：你说写一个方案，它从训练数据里找几�
 - [《如何写出完美的Prompt（提示词）？》](https://mp.weixin.qq.com/s/sl2MuDpW9mawh2axLuGxNw) · **Li的碎碎念**（微信公众号）——"三个误区"和"四要素基本功"的出处，附大量办公场景模板。
 - [《分享2个Vibe Coding必备的超实用Prompt。》](https://mp.weixin.qq.com/s/umPqTD_-IubbhXIgiS47eQ) · **数字生命卡兹克**（微信公众号）——"第一性原理"和"对抗式审查"两个万能加句的出处。
 - [《分享一个很实用的寓言故事prompt，5分钟帮你理解任何新概念。》](https://mp.weixin.qq.com/s/L1ISA0FvxY_7OR994RttWw) · **数字生命卡兹克**（微信公众号）——寓言故事学习法的完整版 Prompt（含防套路清单），灵感来自 Anthropic 的 Amanda Askell。
+- [《一个极度实用的深度思考Prompt，帮你挖出最本质的答案。》](https://mp.weixin.qq.com/s/6eDElggMR7aefaEzlWfVMA) · **数字生命卡兹克**（微信公众号）——"双向钢人论证"心法的出处，原型来自 Reddit r/PromptEngineering 社区的一段高赞 Prompt。
