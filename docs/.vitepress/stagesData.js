@@ -38,7 +38,7 @@ export const CAUTION_LINKS = [
 ]
 
 // 「AI 进阶实践」扁平文章池（跨目录逻辑分组，顺序即侧边栏顺序）
-// 给 AI 派活 → 提示词技巧 → 上下文管理 → 写好 Skill → Loop → 多 AI 协同
+// 给 AI 派活 → 提示词技巧 → 上下文管理 → 写好 Skill → Loop → 多 AI 协同 → 深度调研
 export const PRACTICE_LINKS = [
   '/stage-2/define-done',
   '/stage-2/prompt-cases',
@@ -46,6 +46,7 @@ export const PRACTICE_LINKS = [
   '/stage-3/write-good-skill',
   '/stage-3/loop-engineering',
   '/stage-4/multi-agent-teamwork',
+  '/stage-4/ai-industry-research',
 ]
 
 // 「AI 前沿」栏目的额外文章（物理在 stage-6 的趋势长文，按 date 与专题混排）
