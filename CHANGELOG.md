@@ -2,6 +2,19 @@
 
 ---
 
+## v1.47 · 2026-08-23
+
+### 内容：进阶实践新文《Harness 解读与 DIY 玩法》
+
+- 新增 `docs/stage-2/harness-diy.md`：Harness 进阶实战——①六个零件拆解（工具/提示词/上下文/运行日志/权限审批/界面，HTML 对照表）②同模型跨 Harness 实测（同一个 V4 Flash 在 DeepSeek Harness / Reasonix / Codex 做同一 Three.js 滑沙游戏，产物差异肉眼可见，注明单次案例边界）③DIY 三档：一档"你已经在 DIY"（做过的事 ↔ 零件对照表 + 三个实战动作：重复劳动写成 Skill、项目写 AGENTS.md、MCP 按工作流接线）；二档 DeepSeek Harness 三玩法（换模型接 40 家厂商 / 切四种预设模式 / 装插件：官方仓库 + dsh-plugin 标签页 + 设置页 ZIP + 创造模式自己写）；三档 Codex Harness 开源三接法（App Server / codex exec / SDK）④风险与权限三档
+- 素材出处：kb-articles A177–A180、A195、A197、A009 七篇 + `topics/agent-harness-and-runtime.md` 主题笔记；官方 GitHub 仓库核实安装命令（`npx @deepseek-ai/dsh web`）、产品形态（Web UI / TUI / Headless，无独立桌面客户端）与 `dsh-plugin` 社区插件标签
+- 配图 13 张拷至 `docs/public/images/stage-2/harness-diy/`：候选 20+ 张逐张视觉核查后选定（跨壳对比三产物、Codex 翻本地项目过程、模型切换、四种模式预设页、插件配置页、社区插件 2 张、轨迹视图、架构总览、权限三档、Codex 嵌入架构）；素材笔记三处图文标注不符（A178/016 实为 Codex 插件商店、A180/011 实为 API Key 弹窗、A197/024 实为插件配置页），全部按实物写图注或弃用；结构图 4 张 HTML/CSS 内联
+- `stagesData.js` 的 PRACTICE_LINKS 末尾登记 `/stage-2/harness-diy`，池内 8 篇；侧边栏自动收录
+- 写作过程：选题三方案带推荐 → william 选方案 A → 大纲确认 → 初稿 → william 三轮反馈修订（定义句去"站得住"、加粗只留核心短语；正文统一称 Harness、"壳"只留开头解释段；一档补三个实战动作；玩法三补安装命令/插件获取三渠道/具体插件实例；标题瘦身防侧边栏截断；结尾改名"三句话收尾"）
+- 验证：`npm run docs:build` 无报错；dist 产物确认 13 张图全部输出；本地预览页面 200；自检正文 0 破折号、无夸张词、来源名仅出现在扩展阅读
+
+---
+
 ## v1.46 · 2026-08-21
 
 ### 内容：进阶实践新文《如何用 AI 做深度行业调研》
