@@ -2,6 +2,19 @@
 
 ---
 
+## v1.48 · 2026-08-24
+
+### 修复：模型排行榜同步脚本适配源站改版，榜单恢复更新
+
+- 故障：8/21 起 `daily-leaderboard.yml` 每天正常运行（绿色），但榜单数据停在 8/20——脚本报 warning「字段解析失败: score#0」后按既有设计保留旧数据、exit 0 静默退出
+- 根因：源站 aihot.virxact.com/leaderboard 页面改版——①分数 `<strong>` 新增 aria-hidden 属性，旧正则要求裸标签匹配失败（报错点）②价格区 `lb-pricing` 容器拆成 `lb-input-price` / `lb-output-price` 两个独立单元格，旧正则静默失效
+- 修复 `scripts/sync-leaderboard.mjs`：score 正则放宽为 `<strong[^>]*>`；价格改为按两个单元格分别解析（单元格内无 `<strong>` 即「暂无」，保持 null）
+- 新增防呆：解析失败时若旧数据已超 2 天未更新，exit 1 让工作流变红（触发 Actions 失败通知），避免再次静默过期；2 天内的偶发失败仍保留旧数据、不中断
+- 本地实测：30/30 行解析成功，榜单同步至「8月21日 20:00」（源站自身最新即此）；各模型价格从全 null 补全为人民币价格；排名有真实变化（GLM-5.3 升至第 5、Gemini 3.7 Flash 新上榜第 6）
+- 验证：`npm run docs:build` 无报错
+
+---
+
 ## v1.47 · 2026-08-23
 
 ### 内容：进阶实践新文《Harness 解读与 DIY 玩法》

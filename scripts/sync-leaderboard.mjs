@@ -2,12 +2,13 @@
 // 同步 AIHOT 模型榜（站内称「AI 模型排行榜」）到 docs/.vitepress/data/leaderboard.json
 // 数据源：https://aihot.virxact.com/leaderboard（公开页面，前 30 名 SSR 在 HTML 中）
 // 官方 v1 API 暂无榜单端点（2026-08-10 核实），本脚本按公开页面结构解析；
-// 对方页面改版导致解析失败时：保留上一份数据、构建不中断（输出 warning）。
+// 对方页面改版导致解析失败时：保留上一份数据、构建不中断（输出 warning）；
+// 但旧数据超过 2 天未更新时让工作流失败（变红），避免像 2026-08-21 源站改版那样静默过期。
 // 用法：
 //   npm run sync:leaderboard      同步一次
 //   node scripts/sync-leaderboard.mjs
 
-import { writeFileSync, existsSync, renameSync, mkdirSync } from 'fs'
+import { writeFileSync, readFileSync, existsSync, renameSync, mkdirSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -66,16 +67,18 @@ function parse(html) {
     const provider = pick(/lb-model-copy"><strong>[\s\S]*?<\/strong><small>([\s\S]*?)<\/small>/, block, `provider#${i}`)
     const releaseDate = pick(/lb-release-date"[^>]*><small>上线<\/small><strong>([\s\S]*?)<\/strong>/, block, `releaseDate#${i}`)
     const completeness = Number(pick(/lb-completeness"[^>]*[\s\S]*?<strong>([\d.]+)%<\/strong>/, block, `completeness#${i}`))
-    const score = Number(pick(/lb-score"[^>]*><strong>([\d.]+)<\/strong>/, block, `score#${i}`))
+    // 2026-08-21 源站改版：分数的 <strong> 多了 aria-hidden 等属性，不能再要求裸标签
+    const score = Number(pick(/lb-score"[^>]*><strong[^>]*>([\d.]+)<\/strong>/, block, `score#${i}`))
 
-    // 价格可能为「暂无」（<span class="lb-metadata-empty">暂无</span>），此时两个 <strong> 都抓不到
-    let inputPrice = null
-    let outputPrice = null
-    const pricingBlock = block.match(/lb-pricing"[^>]*>([\s\S]*?)<\/span><\/span>/)
-    if (pricingBlock) {
-      const prices = [...pricingBlock[1].matchAll(/<strong>([\s\S]*?)<\/strong>/g)].map(m => decodeEntities(m[1]))
-      if (prices.length >= 2) [inputPrice, outputPrice] = prices
+    // 价格为「暂无」时单元格里没有 <strong>，保持 null
+    // 2026-08-21 源站改版：lb-pricing 容器拆成 lb-input-price / lb-output-price 两个独立单元格
+    const pickPrice = (cellClass) => {
+      const cell = block.match(new RegExp(`${cellClass}"[\\s\\S]*?</span>`))
+      const strong = cell && cell[0].match(/<strong[^>]*>([\s\S]*?)<\/strong>/)
+      return strong ? decodeEntities(strong[1]) : null
     }
+    const inputPrice = pickPrice('lb-input-price')
+    const outputPrice = pickPrice('lb-output-price')
 
     return { rank, slug, name, provider, releaseDate, completeness, inputPrice, outputPrice, score }
   })
@@ -112,7 +115,17 @@ async function main() {
   } catch (err) {
     if (existsSync(TMP_FILE)) { /* 残留临时文件不处理，下次覆盖 */ }
     if (hadExisting) {
-      // 保留上一份数据，构建不中断；GitHub Actions 会显示为 warning
+      // 保留上一份数据，构建不中断；但旧数据超过 2 天未更新说明在持续失败，
+      // 此时让工作流失败（变红 + 邮件通知），避免静默过期
+      let ageDays = NaN
+      try {
+        const prev = JSON.parse(readFileSync(OUT_FILE, 'utf-8'))
+        ageDays = (Date.now() - Date.parse(prev.syncedAt)) / 86400_000
+      } catch { /* 读不出旧数据时间，按过期处理 */ }
+      if (!Number.isFinite(ageDays) || ageDays > 2) {
+        console.error(`::error::榜单同步失败且旧数据已超过 2 天未更新：${err.message}（请检查源站页面结构是否改版）`)
+        process.exit(1)
+      }
       console.log(`::warning::榜单同步失败，保留上一份数据：${err.message}`)
       console.log(`⚠️  ${err.message}（保留上一份数据）`)
       process.exit(0)

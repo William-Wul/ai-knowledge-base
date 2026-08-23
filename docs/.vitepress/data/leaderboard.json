@@ -3,8 +3,8 @@
   "sourceUrl": "https://aihot.virxact.com/leaderboard",
   "rulesUrl": "https://aihot.virxact.com/leaderboard/rules",
   "sourceCount": 7,
-  "sourceUpdatedAt": "8月20日 06:00",
-  "syncedAt": "2026-08-20T03:56:54.836Z",
+  "sourceUpdatedAt": "8月21日 20:00",
+  "syncedAt": "2026-08-23T17:05:39.545Z",
   "models": [
     {
       "rank": 1,
@@ -12,10 +12,10 @@
       "name": "Claude Fable 5",
       "provider": "Anthropic",
       "releaseDate": "2026-06-09",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 89.9
+      "completeness": 88,
+      "inputPrice": "¥67.21",
+      "outputPrice": "¥336.03",
+      "score": 89.4
     },
     {
       "rank": 2,
@@ -23,10 +23,10 @@
       "name": "Claude Opus 5",
       "provider": "Anthropic",
       "releaseDate": "2026-07-24",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 89.3
+      "completeness": 84.5,
+      "inputPrice": "¥33.60",
+      "outputPrice": "¥168.02",
+      "score": 86.2
     },
     {
       "rank": 3,
@@ -34,10 +34,10 @@
       "name": "GPT-5.6 Sol",
       "provider": "OpenAI",
       "releaseDate": "2026-07-09",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 85.2
+      "completeness": 84.5,
+      "inputPrice": "¥33.60",
+      "outputPrice": "¥201.62",
+      "score": 83.3
     },
     {
       "rank": 4,
@@ -45,21 +45,21 @@
       "name": "Kimi K3",
       "provider": "Moonshot AI",
       "releaseDate": "2026-07-16",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 81.2
+      "completeness": 84.5,
+      "inputPrice": "¥20.00",
+      "outputPrice": "¥100.00",
+      "score": 79.9
     },
     {
       "rank": 5,
-      "slug": "grok-4-6",
-      "name": "Grok 4.6",
-      "provider": "xAI",
-      "releaseDate": "2026-08-12",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 80.3
+      "slug": "glm-5-3",
+      "name": "GLM-5.3",
+      "provider": "Z.ai",
+      "releaseDate": "2026-08-18",
+      "completeness": 60,
+      "inputPrice": "¥9.41",
+      "outputPrice": "¥29.57",
+      "score": 76.9
     },
     {
       "rank": 6,
@@ -67,21 +67,21 @@
       "name": "Gemini 3.7 Flash",
       "provider": "Google",
       "releaseDate": "2026-08-13",
-      "completeness": 72,
-      "inputPrice": null,
-      "outputPrice": null,
+      "completeness": 81,
+      "inputPrice": "¥5.04",
+      "outputPrice": "¥25.20",
       "score": 75.7
     },
     {
       "rank": 7,
-      "slug": "qwen-3-8-max",
-      "name": "Qwen3.8 Max",
-      "provider": "Alibaba",
-      "releaseDate": "2026-07-19",
-      "completeness": 72,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 73.8
+      "slug": "grok-4-6",
+      "name": "Grok 4.6",
+      "provider": "xAI",
+      "releaseDate": "2026-08-12",
+      "completeness": 84.5,
+      "inputPrice": "¥13.44",
+      "outputPrice": "¥40.32",
+      "score": 74.8
     },
     {
       "rank": 8,
@@ -89,10 +89,10 @@
       "name": "GPT-5.5",
       "provider": "OpenAI",
       "releaseDate": "2026-04-23",
-      "completeness": 67.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 73
+      "completeness": 80,
+      "inputPrice": "¥33.60",
+      "outputPrice": "¥201.62",
+      "score": 73.9
     },
     {
       "rank": 9,
@@ -100,54 +100,54 @@
       "name": "Muse Spark 1.2",
       "provider": "Meta",
       "releaseDate": "2026-08-05",
-      "completeness": 64,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 73
+      "completeness": 73,
+      "inputPrice": "¥8.40",
+      "outputPrice": "¥28.56",
+      "score": 72.5
     },
     {
       "rank": 10,
+      "slug": "qwen-3-8-max",
+      "name": "Qwen3.8 Max",
+      "provider": "Alibaba",
+      "releaseDate": "2026-07-19",
+      "completeness": 81,
+      "inputPrice": "¥12.00",
+      "outputPrice": "¥36.00",
+      "score": 71.7
+    },
+    {
+      "rank": 11,
       "slug": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "provider": "Anthropic",
       "releaseDate": "2026-05-28",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 72.2
+      "completeness": 88,
+      "inputPrice": "¥33.60",
+      "outputPrice": "¥168.02",
+      "score": 70.6
     },
     {
-      "rank": 11,
+      "rank": 12,
       "slug": "gpt-5-6-terra",
       "name": "GPT-5.6 Terra",
       "provider": "OpenAI",
       "releaseDate": "2026-07-09",
-      "completeness": 72,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 71.5
+      "completeness": 81,
+      "inputPrice": "¥13.44",
+      "outputPrice": "¥80.65",
+      "score": 69.3
     },
     {
-      "rank": 12,
+      "rank": 13,
       "slug": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "provider": "Anthropic",
       "releaseDate": "2026-04-16",
-      "completeness": 59.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 60.4
-    },
-    {
-      "rank": 13,
-      "slug": "deepseek-v-4-pro-20260813",
-      "name": "DeepSeek V4 Pro 0813",
-      "provider": "DeepSeek",
-      "releaseDate": "2026-08-13",
-      "completeness": 64,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 60.4
+      "completeness": 72,
+      "inputPrice": "¥33.60",
+      "outputPrice": "¥168.02",
+      "score": 64.1
     },
     {
       "rank": 14,
@@ -155,65 +155,65 @@
       "name": "Muse Spark 1.1",
       "provider": "Meta",
       "releaseDate": "2026-07-09",
-      "completeness": 67.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 59.3
+      "completeness": 76.5,
+      "inputPrice": "¥8.40",
+      "outputPrice": "¥28.56",
+      "score": 61.2
     },
     {
       "rank": 15,
-      "slug": "claude-sonnet-5",
-      "name": "Claude Sonnet 5",
-      "provider": "Anthropic",
-      "releaseDate": "2026-06-30",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 59
+      "slug": "deepseek-v-4-pro-20260813",
+      "name": "DeepSeek V4 Pro 0813",
+      "provider": "DeepSeek",
+      "releaseDate": "2026-08-13",
+      "completeness": 73,
+      "inputPrice": "¥9.00",
+      "outputPrice": "¥27.00",
+      "score": 58.7
     },
     {
       "rank": 16,
-      "slug": "grok-4-5",
-      "name": "Grok 4.5",
-      "provider": "xAI",
-      "releaseDate": "2026-07-08",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 58.2
-    },
-    {
-      "rank": 17,
       "slug": "gpt-5-4",
       "name": "GPT-5.4",
       "provider": "OpenAI",
       "releaseDate": "2026-03-05",
-      "completeness": 60.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 55.3
+      "completeness": 69.5,
+      "inputPrice": "¥16.80",
+      "outputPrice": "¥100.81",
+      "score": 57.1
+    },
+    {
+      "rank": 17,
+      "slug": "grok-4-5",
+      "name": "Grok 4.5",
+      "provider": "xAI",
+      "releaseDate": "2026-07-08",
+      "completeness": 88,
+      "inputPrice": "¥13.44",
+      "outputPrice": "¥40.32",
+      "score": 56.4
     },
     {
       "rank": 18,
+      "slug": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-06-30",
+      "completeness": 84.5,
+      "inputPrice": "¥13.44",
+      "outputPrice": "¥67.21",
+      "score": 55.7
+    },
+    {
+      "rank": 19,
       "slug": "gpt-5-6-luna",
       "name": "GPT-5.6 Luna",
       "provider": "OpenAI",
       "releaseDate": "2026-07-09",
-      "completeness": 72,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 54.3
-    },
-    {
-      "rank": 19,
-      "slug": "deepseek-v-4-flash-20260731",
-      "name": "DeepSeek V4 Flash 0731",
-      "provider": "DeepSeek",
-      "releaseDate": "2026-07-31",
-      "completeness": 67.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 47.9
+      "completeness": 81,
+      "inputPrice": "¥1.34",
+      "outputPrice": "¥8.06",
+      "score": 51.9
     },
     {
       "rank": 20,
@@ -221,21 +221,21 @@
       "name": "Gemini 3.6 Flash",
       "provider": "Google",
       "releaseDate": "2026-07-21",
-      "completeness": 72,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 47.7
+      "completeness": 81,
+      "inputPrice": "¥5.04",
+      "outputPrice": "¥25.20",
+      "score": 49.9
     },
     {
       "rank": 21,
-      "slug": "glm-5-2",
-      "name": "GLM-5.2",
-      "provider": "Z.ai",
-      "releaseDate": "2026-06-16",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 47
+      "slug": "qwen-3-8-27-b",
+      "name": "Qwen3.8 27 B",
+      "provider": "Alibaba",
+      "releaseDate": "2026-08-14",
+      "completeness": 51,
+      "inputPrice": "¥3.00",
+      "outputPrice": "¥12.00",
+      "score": 47.9
     },
     {
       "rank": 22,
@@ -243,98 +243,98 @@
       "name": "Gemini 3.5 Flash",
       "provider": "Google",
       "releaseDate": "2026-05-19",
-      "completeness": 72,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 46.2
+      "completeness": 81,
+      "inputPrice": "¥10.08",
+      "outputPrice": "¥60.49",
+      "score": 47.6
     },
     {
       "rank": 23,
+      "slug": "glm-5-2",
+      "name": "GLM-5.2",
+      "provider": "Z.ai",
+      "releaseDate": "2026-06-16",
+      "completeness": 84.5,
+      "inputPrice": "¥8.00",
+      "outputPrice": "¥28.00",
+      "score": 46.8
+    },
+    {
+      "rank": 24,
       "slug": "claude-opus-4-6",
       "name": "Claude Opus 4.6",
       "provider": "Anthropic",
       "releaseDate": "2026-02-05",
-      "completeness": 60.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 37.4
-    },
-    {
-      "rank": 24,
-      "slug": "claude-sonnet-4-6",
-      "name": "Claude Sonnet 4.6",
-      "provider": "Anthropic",
-      "releaseDate": "2026-02-17",
-      "completeness": 64,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 35.7
+      "completeness": 73,
+      "inputPrice": "¥33.60",
+      "outputPrice": "¥168.02",
+      "score": 46.1
     },
     {
       "rank": 25,
+      "slug": "deepseek-v-4-flash-20260731",
+      "name": "DeepSeek V4 Flash 0731",
+      "provider": "DeepSeek",
+      "releaseDate": "2026-07-31",
+      "completeness": 76.5,
+      "inputPrice": "¥3.00",
+      "outputPrice": "¥9.00",
+      "score": 42.9
+    },
+    {
+      "rank": 26,
       "slug": "gemini-3-1-pro-preview",
       "name": "Gemini 3.1 Pro Preview",
       "provider": "Google",
       "releaseDate": "2026-02-19",
-      "completeness": 75.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 35.7
+      "completeness": 88,
+      "inputPrice": "¥13.44",
+      "outputPrice": "¥80.65",
+      "score": 41.1
     },
     {
-      "rank": 26,
+      "rank": 27,
+      "slug": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "provider": "Anthropic",
+      "releaseDate": "2026-02-17",
+      "completeness": 76.5,
+      "inputPrice": "¥20.16",
+      "outputPrice": "¥100.81",
+      "score": 37.4
+    },
+    {
+      "rank": 28,
+      "slug": "qwen-3-7-max",
+      "name": "Qwen3.7 Max",
+      "provider": "Alibaba",
+      "releaseDate": "2026-05-19",
+      "completeness": 51,
+      "inputPrice": "¥12.00",
+      "outputPrice": "¥36.00",
+      "score": 34.3
+    },
+    {
+      "rank": 29,
+      "slug": "gpt-5-3-codex",
+      "name": "GPT-5.3 Codex",
+      "provider": "OpenAI",
+      "releaseDate": "2026-02-05",
+      "completeness": 42,
+      "inputPrice": "¥11.76",
+      "outputPrice": "¥94.09",
+      "score": 32.2
+    },
+    {
+      "rank": 30,
       "slug": "deepseek-v-4-pro-preview",
       "name": "DeepSeek V4 Pro Preview",
       "provider": "DeepSeek",
       "releaseDate": "2026-04-24",
-      "completeness": 64,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 29.5
-    },
-    {
-      "rank": 27,
-      "slug": "gpt-5-2-2025-12-11",
-      "name": "GPT-5.2 2025 12 11",
-      "provider": "OpenAI",
-      "releaseDate": "2025-12-11",
-      "completeness": 52.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 27.7
-    },
-    {
-      "rank": 28,
-      "slug": "minimax-m-3",
-      "name": "MiniMax M 3",
-      "provider": "MiniMax",
-      "releaseDate": "2026-06-01",
-      "completeness": 64,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 25.5
-    },
-    {
-      "rank": 29,
-      "slug": "kimi-k-2-6",
-      "name": "Kimi K2.6",
-      "provider": "Moonshot AI",
-      "releaseDate": "2026-04-20",
-      "completeness": 56,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 23.6
-    },
-    {
-      "rank": 30,
-      "slug": "kimi-k-2-7-code",
-      "name": "Kimi K2.7 Code",
-      "provider": "Moonshot AI",
-      "releaseDate": "2026-06-12",
-      "completeness": 60.5,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 18.3
+      "completeness": 73,
+      "inputPrice": "¥2.92",
+      "outputPrice": "¥5.85",
+      "score": 31.8
     }
   ]
 }
