@@ -13,6 +13,11 @@ description: AI 学习知识库近期内容与功能更新记录
 
 ## 2026-08-24
 
+### 修复：几篇文章正文里多出来的星号符号
+
+- 有读者翻到：一些文章里加粗的句子旁边会多出一对 `**` 符号，这是网站渲染的一条规则导致的（加粗的句号紧跟汉字时星号会漏出来），已全部修复
+- 涉及四篇：[《AI 能放大人的能力，但替代不了人》](/frontier/ai-amplifier-not-replacement)、[《AI 竞赛的三条战线》](/frontier/ai-race-three-fronts)、[《AI 时代最宽的护城河》](/frontier/org-form-moat)、[《用 WorkBuddy 搞定 Word、Excel、PPT》](/stage-4/workbuddy-word-excel-ppt)
+
 ### 修复：首页 AI 模型排行榜恢复更新
 
 - 8 月 21 日起首页的模型排行榜停更，原因是数据源网站改了页面结构，同步脚本识别不了，现已修复

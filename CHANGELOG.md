@@ -2,6 +2,19 @@
 
 ---
 
+## v1.49 · 2026-08-24
+
+### 修复：全站 18 处加粗失效、星号在页面上原样显示
+
+- 现象：多篇文章正文出现字面 `**` 符号（如"**医疗是最典型的对照组。**"），加粗未生效——william 读文时发现
+- 根因：CommonMark 规则——闭界定符 `**` 前面是标点（。或 "）、后面紧跟汉字时不构成合法强调，星号按字面输出；段落收尾的 `**` 不受影响
+- 扫描方法：markdown-it（commonmark 预设）逐行渲染全站 docs/，输出残留 `**` 即失效点；命中 4 个文件 18 处：`frontier/ai-amplifier-not-replacement`（5 处）、`frontier/ai-race-three-fronts`（3 处）、`frontier/org-form-moat`（1 处）、`stage-4/workbuddy-word-excel-ppt`（9 处）
+- 修法：句号移出加粗（`**……。**X` → `**……**。X`）；org-form-moat 一处引号收尾的改为把"存在"并入加粗（`**新的"人"**存在：` → `**新的"人"存在**：`）
+- 验证：复扫 0 残留；`npm run docs:build` 无报错
+- 规范沉淀：`skills/ai-site-writer/SKILL.md` 自检清单与 AVOID 各补一条——加粗整句时结尾标点放 `**` 外面（william 已批准）
+
+---
+
 ## v1.48 · 2026-08-24
 
 ### 修复：模型排行榜同步脚本适配源站改版，榜单恢复更新
