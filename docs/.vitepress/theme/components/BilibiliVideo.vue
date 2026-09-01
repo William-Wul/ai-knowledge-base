@@ -2,9 +2,12 @@
   <div class="bilibili-video-wrapper">
     <p v-if="title" class="bilibili-video-title">{{ title }}</p>
     <div class="bilibili-video-container" :class="{ active: activated }" @click="activated = true">
-      <div v-if="!activated" class="bilibili-video-overlay">
-        <span class="play-hint">点击播放</span>
-      </div>
+      <template v-if="!activated">
+        <img v-if="cover" class="bilibili-video-cover" :src="cover" :alt="title || '视频封面'" loading="lazy" />
+        <div class="bilibili-video-overlay" :class="{ 'has-cover': !!cover }">
+          <span class="play-hint">点击播放</span>
+        </div>
+      </template>
       <iframe
         v-if="activated"
         :src="iframeSrc"
@@ -27,6 +30,12 @@ const props = defineProps({
     required: true,
   },
   title: {
+    type: String,
+    default: '',
+  },
+  // 可选：视频封面本地路径（如 /videos/covers/xxx.jpg）。不传则回退黑底占位。
+  // 封面获取：curl B站 view 接口的 pic 字段下载到 docs/public/videos/covers/
+  cover: {
     type: String,
     default: '',
   },
@@ -75,6 +84,14 @@ const iframeSrc = computed(() =>
   border: none;
 }
 
+.bilibili-video-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .bilibili-video-overlay {
   position: absolute;
   inset: 0;
@@ -83,6 +100,11 @@ const iframeSrc = computed(() =>
   justify-content: center;
   background: #111;
   border-radius: 8px;
+}
+
+/* 有封面时不再整面压黑，只留轻遮罩 + 播放提示 */
+.bilibili-video-overlay.has-cover {
+  background: rgba(0, 0, 0, 0.22);
 }
 
 .play-hint {

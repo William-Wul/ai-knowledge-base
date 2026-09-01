@@ -33,6 +33,13 @@ assert spec and spec.loader
 sys.modules["wechat_fetch"] = wechat_fetch
 spec.loader.exec_module(wechat_fetch)
 
+RENDER_PATH = SCRIPT_DIR / "kb_render_original_md.py"
+render_spec = importlib.util.spec_from_file_location("kb_render_original_md", RENDER_PATH)
+kb_render_original_md = importlib.util.module_from_spec(render_spec)
+assert render_spec and render_spec.loader
+sys.modules["kb_render_original_md"] = kb_render_original_md
+render_spec.loader.exec_module(kb_render_original_md)
+
 
 CORE_METADATA_FIELDS = [
     "id",
@@ -371,6 +378,8 @@ def ingest_article(kb_root: Path, source: str, from_raw: bool = False) -> Dict:
     write_json(target_dir / "metadata.json", metadata)
     write_json(target_dir / "original.json", original)
     (target_dir / "notes.md").write_text(notes_skeleton(article, metadata, candidates), encoding="utf-8")
+    markdown_report = kb_render_original_md.render_bundle(target_dir, update_notes_link=True)
+    metadata["archive_quality"] = markdown_report["archive_quality"]
 
     index["last_id"] = article_id
     index["updated_at"] = today()
@@ -394,6 +403,13 @@ def ingest_article(kb_root: Path, source: str, from_raw: bool = False) -> Dict:
             "downloaded": metadata["imgs_downloaded"],
             "failed": metadata["imgs_failed"],
             "candidates_for_ai": len(original["image_candidates"]),
+        },
+        "original_markdown": {
+            "mode": markdown_report["mode"],
+            "images_local": markdown_report["images_local"],
+            "images_placed_in_body": markdown_report["images_placed_in_body"],
+            "image_position_status": markdown_report["archive_quality"]["image_position_status"],
+            "safe_use": markdown_report["archive_quality"]["safe_use"],
         },
         "candidate_topics": candidates[:8],
     }

@@ -25,6 +25,18 @@ CORE_METADATA_FIELDS = [
     "reading_time_min",
 ]
 CORE_ORIGINAL_FIELDS = ["title"]
+IMAGE_POSITION_STATUSES = {
+    "preserved",
+    "partially_unverified",
+    "unverified_legacy",
+    "not_applicable",
+}
+SAFE_USE_BY_STATUS = {
+    "preserved": "text_and_images",
+    "partially_unverified": "text_only_until_source_verified",
+    "unverified_legacy": "text_only_until_source_verified",
+    "not_applicable": "text_only",
+}
 
 
 def load_json(path: Path) -> Dict:
@@ -59,7 +71,169 @@ def is_notes_skeleton(path: Path) -> bool:
     return text.count("待 AI") >= 3 or len(text.strip()) < 300
 
 
-def validate(kb_root: Path, strict_raw_html: bool = False) -> Dict:
+def downloaded_image_paths(bundle: Path, original: Dict) -> Set[str]:
+    paths: Set[str] = set()
+    imgs_path = bundle / "imgs"
+    if imgs_path.exists():
+        paths.update(
+            f"imgs/{path.name}"
+            for path in imgs_path.glob("*")
+            if path.is_file() and not path.name.startswith(".")
+        )
+    for item in original.get("images") or original.get("imgs") or []:
+        if not isinstance(item, dict):
+            continue
+        rel = str(item.get("local_path") or item.get("local") or "").strip()
+        if rel and (bundle / rel).is_file():
+            paths.add(rel)
+    return paths
+
+
+def markdown_image_paths(markdown: str) -> Set[str]:
+    return set(re.findall(r"!\[[^\]]*\]\(([^)\s]+)(?:\s+[^)]*)?\)", markdown))
+
+
+def normalize_for_fulltext_check(text: str) -> str:
+    text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"[`*_#>]", "", text)
+    return re.sub(r"\s+", "", text)
+
+
+def inferred_image_position_status(markdown: str, image_count: int) -> str:
+    if image_count == 0:
+        return "not_applicable"
+    if "## 原文图片（旧素材无法复原准确插入位置）" in markdown:
+        return "unverified_legacy"
+    if "## 原文补充图片" in markdown:
+        return "partially_unverified"
+    return "preserved"
+
+
+def validate_archive_quality(
+    metadata: Dict,
+    markdown: str,
+    image_count: int,
+    metadata_path: Path,
+    markdown_path: Path,
+    issues: List[Dict],
+) -> None:
+    quality = metadata.get("archive_quality")
+    if not isinstance(quality, dict):
+        add_issue(issues, "error", "missing_archive_quality", metadata_path, "metadata.archive_quality is missing.")
+        return
+
+    status = str(quality.get("image_position_status") or "")
+    if status not in IMAGE_POSITION_STATUSES:
+        add_issue(issues, "error", "invalid_image_position_status", metadata_path, f"Invalid image_position_status: {status}")
+        return
+    expected_status = inferred_image_position_status(markdown, image_count)
+    if status != expected_status:
+        add_issue(
+            issues,
+            "error",
+            "archive_quality_status_mismatch",
+            metadata_path,
+            f"image_position_status={status}, expected {expected_status} from original.md.",
+        )
+
+    safe_use = str(quality.get("safe_use") or "")
+    expected_safe_use = SAFE_USE_BY_STATUS[status]
+    if safe_use != expected_safe_use:
+        add_issue(
+            issues,
+            "error",
+            "archive_quality_safe_use_mismatch",
+            metadata_path,
+            f"safe_use={safe_use}, expected {expected_safe_use} for {status}.",
+        )
+    if quality.get("text_status") != "complete_extracted_text":
+        add_issue(issues, "error", "archive_quality_text_status", metadata_path, "text_status must be complete_extracted_text.")
+    if quality.get("images_local") != image_count:
+        add_issue(
+            issues,
+            "error",
+            "archive_quality_image_count_mismatch",
+            metadata_path,
+            f"images_local={quality.get('images_local')}, expected {image_count}.",
+        )
+
+    marker = f"image_position_status={status}; safe_use={safe_use}"
+    if marker not in markdown:
+        add_issue(issues, "error", "original_markdown_quality_marker_mismatch", markdown_path, "Quality marker does not match metadata.")
+    if status in {"partially_unverified", "unverified_legacy"} and "引用风险" not in markdown:
+        add_issue(issues, "error", "original_markdown_missing_risk_warning", markdown_path, "Risky image context is not visibly warned in original.md.")
+
+
+def validate_original_markdown(
+    bundle: Path,
+    original: Dict,
+    metadata: Dict,
+    notes_path: Path,
+    issues: List[Dict],
+    *,
+    allow_missing: bool,
+) -> None:
+    markdown_path = bundle / "original.md"
+    if not markdown_path.exists():
+        if not allow_missing:
+            add_issue(issues, "error", "missing_original_markdown", markdown_path, "original.md is missing.")
+        return
+
+    markdown = markdown_path.read_text(encoding="utf-8", errors="replace")
+    if "## 原文正文" not in markdown:
+        add_issue(issues, "error", "original_markdown_missing_body", markdown_path, "original.md is missing the full-text body marker.")
+        body = markdown
+    else:
+        body = markdown.split("## 原文正文", 1)[1]
+
+    if "[查看 notes.md](notes.md)" not in markdown:
+        add_issue(issues, "error", "original_markdown_missing_notes_link", markdown_path, "original.md does not link back to notes.md.")
+    notes_text = notes_path.read_text(encoding="utf-8", errors="replace") if notes_path.exists() else ""
+    if notes_path.exists() and "(original.md)" not in notes_text:
+        add_issue(issues, "error", "notes_missing_original_link", notes_path, "notes.md does not link to original.md.")
+
+    referenced = markdown_image_paths(markdown)
+    remote = sorted(path for path in referenced if path.startswith(("http://", "https://")))
+    if remote:
+        add_issue(issues, "error", "original_markdown_remote_image", markdown_path, f"original.md contains remote image references: {remote[:3]}")
+    missing_files = sorted(path for path in referenced if not path.startswith(("http://", "https://")) and not (bundle / path).is_file())
+    if missing_files:
+        add_issue(issues, "error", "original_markdown_missing_image", markdown_path, f"original.md references missing local images: {missing_files[:5]}")
+    expected = downloaded_image_paths(bundle, original)
+    unreferenced = sorted(expected - referenced)
+    if unreferenced:
+        add_issue(issues, "error", "original_markdown_unreferenced_image", markdown_path, f"Downloaded article images are absent from original.md: {unreferenced[:5]}")
+
+    validate_archive_quality(
+        metadata,
+        markdown,
+        len(expected),
+        bundle / "metadata.json",
+        markdown_path,
+        issues,
+    )
+    quality = metadata.get("archive_quality") if isinstance(metadata.get("archive_quality"), dict) else {}
+    status = quality.get("image_position_status")
+    has_notes_risk = "KB_SOURCE_RISK_START" in notes_text and "引用限制：图文对应关系未完全恢复" in notes_text
+    if status in {"partially_unverified", "unverified_legacy"} and not has_notes_risk:
+        add_issue(issues, "error", "notes_missing_source_risk_warning", notes_path, "Risky image context is not visibly warned in notes.md.")
+    if status in {"preserved", "not_applicable"} and "KB_SOURCE_RISK_START" in notes_text:
+        add_issue(issues, "error", "notes_stale_source_risk_warning", notes_path, "notes.md has a stale image-context risk warning.")
+
+    source_text = str(original.get("text") or original.get("raw_text") or "")
+    source_norm = normalize_for_fulltext_check(source_text)
+    body_norm = normalize_for_fulltext_check(body)
+    if source_norm:
+        prefix = source_norm[: min(120, len(source_norm))]
+        suffix = source_norm[-min(160, len(source_norm)) :]
+        if prefix not in body_norm:
+            add_issue(issues, "error", "original_markdown_missing_start", markdown_path, "original.md does not preserve the start of the extracted article text.")
+        if suffix not in body_norm:
+            add_issue(issues, "error", "original_markdown_missing_end", markdown_path, "original.md does not preserve the end of the extracted article text.")
+
+
+def validate(kb_root: Path, strict_raw_html: bool = False, allow_missing_original_md: bool = False) -> Dict:
     issues: List[Dict] = []
     index_path = kb_root / "index.json"
     topic_index_path = kb_root / "topics" / "_topics-index.json"
@@ -105,11 +279,13 @@ def validate(kb_root: Path, strict_raw_html: bool = False) -> Dict:
             add_issue(issues, "warning", "dir_not_in_index", path, f"Directory {path.name} is not listed in index.json.")
 
     metadata_by_id: Dict[str, Dict] = {}
+    quality_counts: Dict[str, int] = {}
     for article_id, path in sorted(dirs.items()):
         metadata_path = path / "metadata.json"
         original_path = path / "original.json"
         notes_path = path / "notes.md"
         imgs_path = path / "imgs"
+        original: Dict = {}
 
         if not metadata_path.exists():
             add_issue(issues, "error", "missing_metadata", metadata_path, "metadata.json is missing.")
@@ -120,6 +296,9 @@ def validate(kb_root: Path, strict_raw_html: bool = False) -> Dict:
             add_issue(issues, "error", "invalid_metadata_json", metadata_path, str(exc))
             continue
         metadata_by_id[article_id] = metadata
+        quality = metadata.get("archive_quality")
+        quality_status = str(quality.get("image_position_status")) if isinstance(quality, dict) else "missing"
+        quality_counts[quality_status] = quality_counts.get(quality_status, 0) + 1
 
         for field in CORE_METADATA_FIELDS:
             if field not in metadata or metadata.get(field) in (None, ""):
@@ -149,6 +328,16 @@ def validate(kb_root: Path, strict_raw_html: bool = False) -> Dict:
         elif is_notes_skeleton(notes_path):
             add_issue(issues, "warning", "notes_skeleton_pending", notes_path, "notes.md still looks like an empty AI skeleton.")
 
+        if original:
+            validate_original_markdown(
+                path,
+                original,
+                metadata,
+                notes_path,
+                issues,
+                allow_missing=allow_missing_original_md,
+            )
+
         if metadata.get("imgs_total", 0) and not imgs_path.exists():
             add_issue(issues, "error", "missing_imgs_dir", imgs_path, "metadata has images, but imgs/ is missing.")
 
@@ -163,6 +352,7 @@ def validate(kb_root: Path, strict_raw_html: bool = False) -> Dict:
             "article_dirs": len(dirs),
             "errors": error_count,
             "warnings": warning_count,
+            "archive_quality": quality_counts,
         },
         "issues": issues,
     }
@@ -205,10 +395,19 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Validate kb-articles consistency.")
     parser.add_argument("--kb-root", default="kb-articles", help="kb-articles root directory.")
     parser.add_argument("--strict-raw-html", action="store_true", help="Treat missing original.raw_html as an error.")
+    parser.add_argument(
+        "--allow-missing-original-md",
+        action="store_true",
+        help="Transitional mode: do not fail legacy bundles that have not been backfilled with original.md.",
+    )
     parser.add_argument("--json", action="store_true", help="Print full JSON report.")
     args = parser.parse_args()
 
-    report = validate(Path(args.kb_root), strict_raw_html=args.strict_raw_html)
+    report = validate(
+        Path(args.kb_root),
+        strict_raw_html=args.strict_raw_html,
+        allow_missing_original_md=args.allow_missing_original_md,
+    )
     if args.json:
         print(json.dumps(report, ensure_ascii=False, indent=2))
     else:

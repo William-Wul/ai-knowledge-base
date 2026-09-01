@@ -38,11 +38,12 @@ export const CAUTION_LINKS = [
 ]
 
 // 「AI 进阶实践」扁平文章池（跨目录逻辑分组，顺序即侧边栏顺序）
-// 给 AI 派活 → 提示词技巧 → 上下文管理 → 写好 Skill → Loop → 多 AI 协同 → 深度调研 → Harness DIY
+// 给 AI 派活 → 提示词技巧 → 上下文管理 → 写作去 AI 味 → 写好 Skill → Loop → 多 AI 协同 → 深度调研 → Harness DIY
 export const PRACTICE_LINKS = [
   '/stage-2/define-done',
   '/stage-2/prompt-cases',
   '/stage-2/context-management',
+  '/stage-2/writing-no-ai-flavor',
   '/stage-3/write-good-skill',
   '/stage-3/loop-engineering',
   '/stage-4/multi-agent-teamwork',
@@ -62,11 +63,13 @@ export const SECTIONS = {
   frontier: { text: 'AI 前沿', link: '/frontier/' },
 }
 
-// 四大板块归属（面包屑用）
+// 五大板块归属（面包屑用）
 // dirs 是目录级默认归属；上面的 *_LINKS 清单是文件级覆盖，优先级更高。
 // stage-6 已整体废弃（唯一文章划归 AI 前沿），不在任何板块 dirs 内，新文章请勿再写入该目录。
+// videos = AI 视频课（B 站精选卡片墙，清单在 .vitepress/videosData.js，不按文件目录组织）
 export const BOARDS = {
   pulse:    { text: 'AI 最新动态', link: '/hot/',     dirs: ['hot', 'news', 'frontier'] },
   basics:   { text: 'AI 基础学习', link: '/stage-1/', dirs: ['stage-1', 'stage-2', 'stage-5'] },
   practice: { text: 'AI 进阶实践', link: '/stage-4/', dirs: ['stage-3', 'stage-4'] },
+  videos:   { text: 'AI 视频课',   link: '/videos/',  dirs: ['videos'] },
 }

@@ -207,6 +207,19 @@ def js_string_var(name: str, source: str) -> str:
         return html.unescape(match.group(2))
 
 
+def js_object_string_prop(name: str, source: str) -> str:
+    """Read a quoted string from an object literal such as `name: 'value'`."""
+    pattern = rf"(?<![\w-]){re.escape(name)}\s*:\s*(['\"])(.*?)\1\s*,"
+    match = re.search(pattern, source, re.S)
+    if not match:
+        return ""
+    raw = match.group(1) + match.group(2) + match.group(1)
+    try:
+        return str(ast.literal_eval(raw))
+    except Exception:
+        return html.unescape(match.group(2))
+
+
 def js_number_var(names: Iterable[str], source: str) -> str:
     for name in names:
         match = re.search(rf"(?:var\s+)?{re.escape(name)}\s*=\s*['\"]?(\d{{10,13}})['\"]?", source)
@@ -227,7 +240,7 @@ def format_wechat_time(raw: str) -> str:
 
 
 def extract_js_content(page: str) -> str:
-    decoded = js_string_var("content_noencode", page)
+    decoded = js_string_var("content_noencode", page) or js_object_string_prop("content_noencode", page)
     if decoded:
         return html.unescape(unquote(decoded))
     match = re.search(
@@ -254,7 +267,7 @@ def parse_article(url: str, page: str, ua_mode: str) -> Dict[str, object]:
         ],
         page,
     )
-    author = clean_text(js_string_var("nickname", page)) or first_regex(
+    author = clean_text(js_string_var("nickname", page) or js_object_string_prop("nick_name", page)) or first_regex(
         [
             r'var\s+nickname\s*=\s*["\'](.+?)["\'];',
             r'id=["\']js_name["\'][^>]*>\s*([^<]+?)\s*</',

@@ -177,6 +177,7 @@ export default defineConfig({
       { text: 'AI 最新动态', link: '/hot/' },
       { text: 'AI 基础学习', link: '/stage-1/' },
       { text: 'AI 进阶实践', link: '/stage-4/' },
+      { text: 'AI 视频课', link: '/videos/' },
       { text: 'AI 能力自测', link: '/exams/' },
       { text: 'AI 学习词汇本', link: '/vocab-book' },
     ],
@@ -242,6 +243,14 @@ export default defineConfig({
           ...linkItems(PRACTICE_LINKS),
           ...autoItems('stage-3', [], { exclude: PRACTICE_LINKS }),
           ...autoItems('stage-4', [], { exclude: [...PRACTICE_LINKS, ...TOOL_LINKS] }),
+        ],
+      },
+      {
+        text: 'AI 视频课',
+        collapsed: true,
+        items: [
+          // B 站精选视频卡片墙：清单在 .vitepress/videosData.js（入库→推荐→发布流程见该文件头注释）
+          { text: '📺 B 站 AI 学习视频精选', link: '/videos/' },
         ],
       },
       {

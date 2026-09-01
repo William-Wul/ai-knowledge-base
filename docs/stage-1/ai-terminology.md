@@ -295,7 +295,7 @@ RAG 的做法是：先把你的资料"喂"给系统，提问时 AI 先去这些�
 
 如果你更习惯听讲解，可以直接观看视频版：
 
-<BilibiliVideo bvid="BV1WzdzBsE49" title="AI 常见术语一点通" />
+<BilibiliVideo bvid="BV1WzdzBsE49" title="AI 常见术语一点通" cover="/videos/covers/ai-terminology.jpg" />
 
 > 视频内容和本文完全对应，任选一种方式学习都可以。
 

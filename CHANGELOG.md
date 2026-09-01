@@ -2,6 +2,28 @@
 
 ---
 
+## v1.51 · 2026-09-01
+
+### 新文章：《用 AI 写材料，怎么才没有"AI 味"》（AI 进阶实践）
+
+- `docs/stage-2/writing-no-ai-flavor.md`，物理存 stage-2 活动目录，PRACTICE_LINKS 注册在第 4 位（context-management 之后）
+- 素材 A168（活人感写作 Skill 规则原文，含双版本快照）+ A221（StoryScope 研究）+ 外部对照搜索（检测工具看节奏指纹、post-editing 骨架残留研究、AI 味技术成因）
+- 与 8-30 前沿文《为什么 AI 写的东西越来越一个味》主动错位：那篇讲"为什么"（认知），本篇只讲"怎么做"（操作手册），StoryScope 数据只取 2 个核心数字不展开四个习惯
+- 结构：平均化本质 → 材料门槛（五件具体材料）→ 材料不够让 AI 追问/查/写短 → 四句写作规矩 → 三层自查；HTML 组件 4 个（三步分工流程卡、派活对照卡、追问提示词卡、自查表）
+- william 两轮反馈修订：①去掉"三个带走的判断："标签式收尾，改为自然段落；②补视觉元素——开头加三步分工结构图、第一节配 StoryScope 叙事分布散点图（论文 Figure 2 裁掉正文残段，落 `docs/public/images/stage-2/2026-09-01/`）
+- 验证：`npm run docs:build` 通过；Chrome headless 真实渲染确认四个组件、配图、侧边栏位置（进阶实践第 4 位）；自检清单全过（破折号 0、无夸张词、无说教、来源名仅扩展阅读、加粗标点无泄漏）
+
+### 新板块：AI 视频课（/videos/）
+
+- B 站 AI 学习视频精选卡片墙：`docs/videos/index.md` + `docs/.vitepress/videosData.js`（唯一数据源，头注释含入库→推荐→发布流程）+ `theme/components/VideoBoard.vue` 渲染
+- 导航与侧边栏各加「AI 视频课」入口（config.js）；BOARDS 已含 videos 归属
+- `BilibiliVideo.vue` 新增可选 `cover` 属性：封面本地路径（`docs/public/videos/covers/`），不传回退黑底占位；`stage-1/ai-terminology.md` 视频卡片补上封面
+- 首批 2 条：V001 桌面 Agent 教程（秋芝2046）+ AI 术语视频封面补挂
+- 随本次一起入库的脚本改动：`scripts/kb_render_original_md.py`、`scripts/kb_source_risk.py`（素材库工具链），`kb_curate.py` / `kb_ingest.py` / `wechat_fetch.py` 配套更新
+- 验证：build 通过；/videos/ 页面 Chrome headless 渲染确认（侧边栏入口、分类、封面卡片、推荐语）
+
+---
+
 ## v1.50 · 2026-08-30
 
 ### 新文章：《为什么 AI 写的东西越来越一个味？》（AI 前沿）

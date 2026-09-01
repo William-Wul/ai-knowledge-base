@@ -12,6 +12,7 @@ import BackToTop from './components/BackToTop.vue'
 import ReadingControls from './components/ReadingControls.vue'
 import SidebarHeader from './components/SidebarHeader.vue'
 import ModelRanking from './components/ModelRanking.vue'
+import VideoBoard from './components/VideoBoard.vue'
 import './custom.css'
 
 export default {
@@ -22,6 +23,7 @@ export default {
     app.component('AiAbilityQuiz', AiAbilityQuiz)
     app.component('VocabEmbed', VocabEmbed)
     app.component('ModelRanking', ModelRanking)
+    app.component('VideoBoard', VideoBoard)
   },
   setup() {
     const route = useRoute()
