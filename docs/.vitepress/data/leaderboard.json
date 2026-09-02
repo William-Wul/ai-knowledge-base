@@ -3,8 +3,8 @@
   "sourceUrl": "https://aihot.virxact.com/leaderboard",
   "rulesUrl": "https://aihot.virxact.com/leaderboard/rules",
   "sourceCount": 7,
-  "sourceUpdatedAt": "9月1日 15:42",
-  "syncedAt": "2026-09-01T08:35:26.216Z",
+  "sourceUpdatedAt": "9月2日 14:49",
+  "syncedAt": "2026-09-02T07:52:05.513Z",
   "models": [
     {
       "rank": 1,
@@ -13,8 +13,8 @@
       "provider": "Anthropic",
       "releaseDate": "2026-06-09",
       "completeness": 88,
-      "inputPrice": "¥67.20",
-      "outputPrice": "¥335.99",
+      "inputPrice": "¥67.22",
+      "outputPrice": "¥336.12",
       "score": 89.4
     },
     {
@@ -24,9 +24,9 @@
       "provider": "Anthropic",
       "releaseDate": "2026-07-24",
       "completeness": 84.5,
-      "inputPrice": "¥33.60",
-      "outputPrice": "¥167.99",
-      "score": 86.4
+      "inputPrice": "¥33.61",
+      "outputPrice": "¥168.06",
+      "score": 86.3
     },
     {
       "rank": 3,
@@ -35,8 +35,8 @@
       "provider": "OpenAI",
       "releaseDate": "2026-07-09",
       "completeness": 84.5,
-      "inputPrice": "¥33.60",
-      "outputPrice": "¥201.59",
+      "inputPrice": "¥33.61",
+      "outputPrice": "¥201.67",
       "score": 83.7
     },
     {
@@ -48,7 +48,7 @@
       "completeness": 84.5,
       "inputPrice": "¥20.00",
       "outputPrice": "¥100.00",
-      "score": 79.5
+      "score": 79.6
     },
     {
       "rank": 5,
@@ -58,7 +58,7 @@
       "releaseDate": "2026-08-13",
       "completeness": 81,
       "inputPrice": "¥5.04",
-      "outputPrice": "¥25.20",
+      "outputPrice": "¥25.21",
       "score": 75.5
     },
     {
@@ -69,7 +69,7 @@
       "releaseDate": "2026-08-18",
       "completeness": 81,
       "inputPrice": "¥9.41",
-      "outputPrice": "¥29.57",
+      "outputPrice": "¥29.58",
       "score": 75.4
     },
     {
@@ -80,7 +80,7 @@
       "releaseDate": "2026-08-12",
       "completeness": 84.5,
       "inputPrice": "¥13.44",
-      "outputPrice": "¥40.32",
+      "outputPrice": "¥40.33",
       "score": 74.7
     },
     {
@@ -90,9 +90,9 @@
       "provider": "OpenAI",
       "releaseDate": "2026-04-23",
       "completeness": 80,
-      "inputPrice": "¥33.60",
-      "outputPrice": "¥201.59",
-      "score": 73.6
+      "inputPrice": "¥33.61",
+      "outputPrice": "¥201.67",
+      "score": 73.5
     },
     {
       "rank": 9,
@@ -102,7 +102,7 @@
       "releaseDate": "2026-08-05",
       "completeness": 73,
       "inputPrice": "¥8.40",
-      "outputPrice": "¥28.56",
+      "outputPrice": "¥28.57",
       "score": 72.8
     },
     {
@@ -114,7 +114,7 @@
       "completeness": 81,
       "inputPrice": "¥12.00",
       "outputPrice": "¥36.00",
-      "score": 72.2
+      "score": 72.1
     },
     {
       "rank": 11,
@@ -123,9 +123,9 @@
       "provider": "Anthropic",
       "releaseDate": "2026-05-28",
       "completeness": 88,
-      "inputPrice": "¥33.60",
-      "outputPrice": "¥167.99",
-      "score": 70.5
+      "inputPrice": "¥33.61",
+      "outputPrice": "¥168.06",
+      "score": 70.4
     },
     {
       "rank": 12,
@@ -135,8 +135,8 @@
       "releaseDate": "2026-07-09",
       "completeness": 81,
       "inputPrice": "¥13.44",
-      "outputPrice": "¥80.64",
-      "score": 69.6
+      "outputPrice": "¥80.67",
+      "score": 69.7
     },
     {
       "rank": 13,
@@ -145,31 +145,31 @@
       "provider": "Alibaba",
       "releaseDate": "2026-08-26",
       "completeness": 49,
-      "inputPrice": null,
-      "outputPrice": null,
+      "inputPrice": "¥0.80",
+      "outputPrice": "¥2.70",
       "score": 65.8
     },
     {
       "rank": 14,
-      "slug": "claude-opus-4-7",
-      "name": "Claude Opus 4.7",
-      "provider": "Anthropic",
-      "releaseDate": "2026-04-16",
-      "completeness": 72,
-      "inputPrice": "¥33.60",
-      "outputPrice": "¥167.99",
-      "score": 64.2
-    },
-    {
-      "rank": 15,
       "slug": "glm-5-3-flash",
       "name": "GLM-5.3 Flash",
       "provider": "Z.ai",
       "releaseDate": "2026-08-26",
       "completeness": 81,
-      "inputPrice": null,
-      "outputPrice": null,
-      "score": 63.4
+      "inputPrice": "¥0.80",
+      "outputPrice": "¥2.80",
+      "score": 64.3
+    },
+    {
+      "rank": 15,
+      "slug": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "provider": "Anthropic",
+      "releaseDate": "2026-04-16",
+      "completeness": 72,
+      "inputPrice": "¥33.61",
+      "outputPrice": "¥168.06",
+      "score": 64.1
     },
     {
       "rank": 16,
@@ -179,8 +179,8 @@
       "releaseDate": "2026-07-09",
       "completeness": 76.5,
       "inputPrice": "¥8.40",
-      "outputPrice": "¥28.56",
-      "score": 60.4
+      "outputPrice": "¥28.57",
+      "score": 60.9
     },
     {
       "rank": 17,
@@ -191,7 +191,7 @@
       "completeness": 73,
       "inputPrice": "¥9.00",
       "outputPrice": "¥27.00",
-      "score": 58.7
+      "score": 58.4
     },
     {
       "rank": 18,
@@ -200,8 +200,8 @@
       "provider": "OpenAI",
       "releaseDate": "2026-03-05",
       "completeness": 69.5,
-      "inputPrice": "¥16.80",
-      "outputPrice": "¥100.80",
+      "inputPrice": "¥16.81",
+      "outputPrice": "¥100.83",
       "score": 57.1
     },
     {
@@ -212,7 +212,7 @@
       "releaseDate": "2026-07-08",
       "completeness": 88,
       "inputPrice": "¥13.44",
-      "outputPrice": "¥40.32",
+      "outputPrice": "¥40.33",
       "score": 55.4
     },
     {
@@ -223,8 +223,8 @@
       "releaseDate": "2026-06-30",
       "completeness": 84.5,
       "inputPrice": "¥13.44",
-      "outputPrice": "¥67.20",
-      "score": 54.3
+      "outputPrice": "¥67.22",
+      "score": 54.5
     },
     {
       "rank": 21,
@@ -234,8 +234,8 @@
       "releaseDate": "2026-07-09",
       "completeness": 81,
       "inputPrice": "¥1.34",
-      "outputPrice": "¥8.06",
-      "score": 51.5
+      "outputPrice": "¥8.07",
+      "score": 51.4
     },
     {
       "rank": 22,
@@ -245,8 +245,8 @@
       "releaseDate": "2026-07-21",
       "completeness": 81,
       "inputPrice": "¥5.04",
-      "outputPrice": "¥25.20",
-      "score": 49.8
+      "outputPrice": "¥25.21",
+      "score": 49.7
     },
     {
       "rank": 23,
@@ -256,8 +256,8 @@
       "releaseDate": "2026-05-19",
       "completeness": 81,
       "inputPrice": "¥10.08",
-      "outputPrice": "¥60.48",
-      "score": 47.7
+      "outputPrice": "¥60.50",
+      "score": 47.5
     },
     {
       "rank": 24,
@@ -277,9 +277,9 @@
       "provider": "Anthropic",
       "releaseDate": "2026-02-05",
       "completeness": 73,
-      "inputPrice": "¥33.60",
-      "outputPrice": "¥167.99",
-      "score": 45.9
+      "inputPrice": "¥33.61",
+      "outputPrice": "¥168.06",
+      "score": 45.8
     },
     {
       "rank": 26,
@@ -290,7 +290,7 @@
       "completeness": 73,
       "inputPrice": "¥3.00",
       "outputPrice": "¥12.00",
-      "score": 43.7
+      "score": 43.5
     },
     {
       "rank": 27,
@@ -311,7 +311,7 @@
       "releaseDate": "2026-02-19",
       "completeness": 88,
       "inputPrice": "¥13.44",
-      "outputPrice": "¥80.64",
+      "outputPrice": "¥80.67",
       "score": 42
     },
     {
@@ -321,8 +321,8 @@
       "provider": "Anthropic",
       "releaseDate": "2026-02-17",
       "completeness": 76.5,
-      "inputPrice": "¥20.16",
-      "outputPrice": "¥100.80",
+      "inputPrice": "¥20.17",
+      "outputPrice": "¥100.83",
       "score": 37.8
     },
     {
