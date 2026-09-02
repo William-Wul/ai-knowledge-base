@@ -190,6 +190,14 @@ section.VPSidebarItem.level-0:not(.collapsible):has(> .items > .VPSidebarItem.le
   color: var(--kb-text-1);
 }
 
+/* AI 视频课页专属：标题不带下划线（分类标题自带分隔线，双线显重复）。
+   页面内 <style> 在生产构建不被加载，故放这里；范围用唯一 class 锁死 */
+.vp-doc h1.videos-page-title {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 4px;
+}
+
 .vp-doc h2 {
   border-top: none;
   color: var(--kb-brand);
