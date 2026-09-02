@@ -80,40 +80,40 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
 
 <style scoped>
 .video-board {
-  margin: 8px 0 24px;
+  margin: 4px 0 24px;
 }
 
 /* ── 分类区块 ── */
 .video-section + .video-section {
-  margin-top: 40px;
+  margin-top: 28px;
 }
 .section-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--vp-c-text-1);
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--vp-c-divider);
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid var(--vp-c-divider);
   margin: 0 0 4px;
 }
 .section-desc {
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--vp-c-text-3);
-  margin: 8px 0 0;
+  margin: 6px 0 0;
 }
 
-/* ── 卡片网格 ── */
+/* ── 卡片网格：桌面 4 列，窄屏逐级降列 ── */
 .card-grid {
-  margin-top: 18px;
+  margin-top: 14px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px 16px;
 }
 
 .video-card {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   background: var(--vp-c-bg);
   cursor: pointer;
@@ -121,7 +121,7 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
 }
 .video-card:hover {
   border-color: var(--vp-c-brand-1);
-  box-shadow: 0 8px 24px rgba(45, 90, 61, 0.12);
+  box-shadow: 0 6px 18px rgba(45, 90, 61, 0.1);
   transform: translateY(-2px);
 }
 
@@ -143,14 +143,14 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
 }
 .duration {
   position: absolute;
-  right: 8px;
-  bottom: 8px;
+  right: 6px;
+  bottom: 6px;
   z-index: 1;
-  padding: 1px 7px;
-  border-radius: 5px;
+  padding: 1px 6px;
+  border-radius: 4px;
   background: rgba(0, 0, 0, 0.72);
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-variant-numeric: tabular-nums;
 }
 .play-overlay {
@@ -171,19 +171,19 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(45, 90, 61, 0.92);
   color: #fff;
-  font-size: 18px;
-  padding-left: 4px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  font-size: 13px;
+  padding-left: 2px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
 }
 /* 触屏设备没有 hover，常显轻量播放提示 */
 @media (hover: none) {
   .play-overlay { opacity: 1; background: rgba(0, 0, 0, 0.08); }
-  .play-btn { width: 42px; height: 42px; font-size: 15px; background: rgba(45, 90, 61, 0.85); }
+  .play-btn { width: 32px; height: 32px; font-size: 11px; background: rgba(45, 90, 61, 0.85); }
 }
 
 /* ── 卡片信息区 ── */
@@ -191,10 +191,10 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 14px 16px 12px;
+  padding: 11px 12px 10px;
 }
 .card-title {
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 600;
   line-height: 1.5;
   color: var(--vp-c-text-1);
@@ -203,17 +203,25 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 2.9em;
 }
 .card-meta {
-  margin: 6px 0 0;
-  font-size: 12.5px;
+  margin: 4px 0 0;
+  font-size: 12px;
   color: var(--vp-c-text-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-reason {
-  margin: 10px 0 0;
-  font-size: 13.5px;
-  line-height: 1.75;
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  line-height: 1.7;
   color: var(--vp-c-text-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ── 大窗播放弹层 ── */
@@ -299,7 +307,14 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   opacity: 0;
 }
 
-@media (max-width: 640px) {
+/* ── 列数随窗口宽度降级 ── */
+@media (max-width: 1279px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 959px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 559px) {
   .card-grid { grid-template-columns: 1fr; }
   .video-modal { padding: 0; }
   .modal-box { width: 100vw; }
