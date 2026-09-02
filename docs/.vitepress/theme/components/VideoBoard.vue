@@ -14,8 +14,8 @@
             <span class="play-overlay"><span class="play-btn">▶</span></span>
           </div>
           <div class="card-body">
-            <h3 class="card-title">{{ v.title }}</h3>
-            <p class="card-meta">{{ v.up }} · {{ v.stats }}</p>
+            <h3 class="card-title">{{ v.cardTitle || v.title }}</h3>
+            <p class="card-meta">{{ v.up }} · {{ v.duration }} · {{ v.stats }}</p>
             <p class="card-reason">{{ v.reason }}</p>
           </div>
         </article>
@@ -101,11 +101,12 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   margin: 6px 0 0;
 }
 
-/* ── 卡片网格：桌面 4 列，窄屏逐级降列 ── */
+/* ── 卡片网格：桌面 4 列，所有行等高（grid-auto-rows 1fr）→ 每张卡同尺寸方块 ── */
 .card-grid {
   margin-top: 14px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
   gap: 14px 16px;
 }
 
@@ -186,42 +187,31 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   .play-btn { width: 32px; height: 32px; font-size: 11px; background: rgba(45, 90, 61, 0.85); }
 }
 
-/* ── 卡片信息区 ── */
+/* ── 卡片信息区：文字全部显示，不截断；放不下靠小字号 + 紧行距消化 ── */
 .card-body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 11px 12px 10px;
+  padding: 10px 12px 10px;
 }
 .card-title {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--vp-c-text-1);
   margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 2.9em;
 }
 .card-meta {
   margin: 4px 0 0;
-  font-size: 12px;
+  font-size: 11.5px;
+  line-height: 1.4;
   color: var(--vp-c-text-3);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .card-reason {
-  margin: 8px 0 0;
-  font-size: 12.5px;
-  line-height: 1.7;
+  margin: 7px 0 0;
+  font-size: 12px;
+  line-height: 1.62;
   color: var(--vp-c-text-2);
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 /* ── 大窗播放弹层 ── */
