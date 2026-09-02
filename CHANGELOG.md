@@ -2,6 +2,17 @@
 
 ---
 
+## v1.52 · 2026-09-02
+
+### AI 视频课：首批 8 条全部上线
+
+- `videosData.js` 从 2 条扩至 8 条（对应素材库 kb-articles V001–V008，视频入库流水线产物），新增 7 张官方封面 `docs/public/videos/covers/`
+- 分类定型为五类：AI 基础科普 / AI 办公实操 / 提示词与 Agent 技巧 / AI 编程实战 / AI 创作实战（新分类，V007 漫剧）
+- 推荐语执行新规范：≤60 字、写读者能得到什么、不写视频内部结构（2026-09-01 William 反馈沉淀，待按提案制并入 ai-site-writer）
+- 内容构成：马克的技术工作坊 3 条（Agent Skill 底层逻辑 179万播放 / Harness / Codex）、秋芝2046 2 条（桌面 Agent / Claude Code 156万播放）、大梁Max WorkBuddy 教程、GenJi AI 漫剧全流程、跟我学个P 的 AI PPT 五家横评
+
+---
+
 ## v1.51 · 2026-09-01
 
 ### 新文章：《用 AI 写材料，怎么才没有"AI 味"》（AI 进阶实践）
