@@ -19,6 +19,18 @@ export const VIDEO_SECTIONS = [
     desc: '概念、术语、底层逻辑——把黑话听成人话',
     videos: [
       {
+        id: 'v010',
+        cardTitle: '人类员工 vs AI 员工',
+        bvid: 'BV1bFXKBwECC',
+        title: '耗时180天制作！这才是你该知道的AI常识！(上)',
+        up: '帧数燃烧',
+        duration: '10:34',
+        stats: '373.6万播放 · 9.2万收藏',
+        cover: '/videos/covers/v010.jpg',
+        reason:
+          '做 PPT、审发票、面试、发视频，四组人机真实对比。看完明白：AI 是认知的镜子，拉开差距的是你，但背锅的也是你。',
+      },
+      {
         id: 'v009',
         cardTitle: 'AI 黑话常识：token 到 Skill',
         bvid: 'BV1ri756dEzT',
@@ -111,6 +123,18 @@ export const VIDEO_SECTIONS = [
     name: 'AI 编程实战',
     desc: 'Claude Code、Codex 等编程 Agent 的系统教程',
     videos: [
+      {
+        id: 'v011',
+        cardTitle: 'DeepSeek Harness 速通',
+        bvid: 'BV1VkgK6NEZS',
+        title: 'DeepSeek Harness 首发实测 + 入门教程，夯爆了！梁神我错了',
+        up: '程序员鱼皮',
+        duration: '16:33',
+        stats: '138.9万播放 · 7.1万收藏',
+        cover: '/videos/covers/v011.jpg',
+        reason:
+          '国产开源的 AI 编程工具：一行命令装好，四个实战任务跑完不到 5 块钱，插件能换也能自己造。需要会开终端。',
+      },
       {
         id: 'v005',
         cardTitle: '60 分钟掌握 Claude Code',

@@ -2,6 +2,17 @@
 
 ---
 
+## v1.60 · 2026-09-03
+
+### 视频课上新 ×2：AI 常识（上）+ DeepSeek Harness 速通
+
+- 基础科普新增：帧数燃烧《这才是你该知道的AI常识！(上)》（BV1bFXKBwECC，10:34，入库时 373.6 万播放）——与 v009 下集成对，基础科普板块凑齐"先看上集看关系、再看下集扫黑话"的组合
+- 编程实战新增：程序员鱼皮《DeepSeek Harness 首发实测 + 入门教程》（BV1VkgK6NEZS，16:33，入库时 138.9 万播放），与 v002 Codex、v005 Claude Code 形成三件套
+- 素材入库 V010、V011（转写稿 + 勘误表 + 帧导航 + notes）；主题笔记 synthesize：ai-learning-approach（V010）、agent-harness-and-runtime（V011）、deepseek-model-evolution（V011）
+- 工具新增 scripts/chunk_transcribe.py：长音频按 210s/200s 分段转写再按时间戳合并（绕开单次执行 300s 上限），V010/V011 均为分段产物
+
+---
+
 ## v1.59 · 2026-09-03
 
 ### 视频课上新：AI 黑话常识（下）· 帧数燃烧
