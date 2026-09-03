@@ -2,6 +2,16 @@
 
 ---
 
+## v1.59 · 2026-09-03
+
+### 视频课上新：AI 黑话常识（下）· 帧数燃烧
+
+- AI 基础科普板块新增第 9 条视频：帧数燃烧《耗时90天制作！这才是你最该学的AI常识！(下）》（BV1ri756dEzT，6:40，入库时 12.3 万播放）
+- 素材入库为 V009（kb-articles/V009-ai-jargon-basics/：转写稿 + 勘误表 + 帧导航 + notes）；同步 synthesize 进 ai-learning-approach、agent-harness-and-runtime 两篇主题笔记
+- 工具修复：kb_curate.py 此前只认 A 开头目录，视频条目全部误报 missing_article_dir（17 个假错误）；已支持 V 视频条目（校验 transcript.md / cover.jpg / bvid，豁免 original.json 等文章字段），验收首次全绿
+
+---
+
 ## v1.58 · 2026-09-02
 
 ### 视频课卡片改均匀方块排版

@@ -56,7 +56,7 @@ def article_dirs(kb_root: Path) -> Dict[str, Path]:
     dirs = {}
     for path in kb_root.iterdir():
         if path.is_dir():
-            match = re.match(r"^(A\d{3,})-", path.name)
+            match = re.match(r"^([AV]\d{3,})-", path.name)
             if match:
                 dirs[match.group(1)] = path
     return dirs
@@ -296,11 +296,14 @@ def validate(kb_root: Path, strict_raw_html: bool = False, allow_missing_origina
             add_issue(issues, "error", "invalid_metadata_json", metadata_path, str(exc))
             continue
         metadata_by_id[article_id] = metadata
+        is_video = metadata.get("type") == "video"
         quality = metadata.get("archive_quality")
-        quality_status = str(quality.get("image_position_status")) if isinstance(quality, dict) else "missing"
+        quality_status = str(quality.get("image_position_status")) if isinstance(quality, dict) else ("not_applicable" if is_video else "missing")
         quality_counts[quality_status] = quality_counts.get(quality_status, 0) + 1
 
         for field in CORE_METADATA_FIELDS:
+            if is_video and field in ("char_count", "reading_time_min"):
+                continue
             if field not in metadata or metadata.get(field) in (None, ""):
                 add_issue(issues, "error", "metadata_missing_field", metadata_path, f"metadata missing required field: {field}")
         if metadata.get("id") != article_id:
@@ -308,7 +311,15 @@ def validate(kb_root: Path, strict_raw_html: bool = False, allow_missing_origina
         if metadata.get("local_path") and metadata["local_path"].rstrip("/") != path.name:
             add_issue(issues, "warning", "metadata_local_path_mismatch", metadata_path, "metadata.local_path does not match directory name.")
 
-        if not original_path.exists():
+        if is_video:
+            # 视频条目没有 original.json/original.md，等价物是转写稿 + 封面
+            if not (path / "transcript.md").exists():
+                add_issue(issues, "error", "missing_transcript", path / "transcript.md", "video entry transcript.md is missing.")
+            if not (path / "cover.jpg").exists():
+                add_issue(issues, "error", "missing_cover", path / "cover.jpg", "video entry cover.jpg is missing.")
+            if not metadata.get("bvid"):
+                add_issue(issues, "error", "metadata_missing_field", metadata_path, "video metadata missing required field: bvid")
+        elif not original_path.exists():
             add_issue(issues, "error", "missing_original", original_path, "original.json is missing.")
         else:
             try:

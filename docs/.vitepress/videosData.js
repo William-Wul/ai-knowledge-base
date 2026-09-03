@@ -19,6 +19,18 @@ export const VIDEO_SECTIONS = [
     desc: '概念、术语、底层逻辑——把黑话听成人话',
     videos: [
       {
+        id: 'v009',
+        cardTitle: 'AI 黑话常识：token 到 Skill',
+        bvid: 'BV1ri756dEzT',
+        title: '耗时90天制作！这才是你最该学的AI常识！(下）',
+        up: '帧数燃烧',
+        duration: '6:40',
+        stats: '12.3万播放 · 5144收藏',
+        cover: '/videos/covers/v009.jpg',
+        reason:
+          'token、上下文、MCP、Agent、Skill 天天听却说不清？坐电梯、USB 接口、工厂主管三组比喻，6 分半全讲清，适合当第一课。',
+      },
+      {
         id: 'v004',
         cardTitle: '从 LLM 到 Agent Skill',
         bvid: 'BV1E7wtzaEdq',
