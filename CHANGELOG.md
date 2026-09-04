@@ -2,6 +2,16 @@
 
 ---
 
+## v1.61 · 2026-09-04
+
+### AI 前沿新文：《GPT-6 Astra 发布：Claude 封号潮后的白月光》
+
+- 新增 `docs/frontier/gpt6-astra-after-claude-ban-wave.md`：以 Claude 封号潮（2025-09 地区限制 → 2025-11 首轮大规模封号 → 2026 年多轮收紧）为背景，拆解 GPT-6 Astra 发布——编程打平 Claude（平替而非升级）、Computer Use 独有优势、Codex 外部记忆、判断力、总账思维、安全新矛盾（行为更乖但思维链可监控性下降）、AGI 口径边界
+- 配图 13 张（`docs/public/images/frontier/2026-09-04/`），全部逐张核查实物后选用：官方基准汇总、Altman 官宣帖、KiCad PCB、FreeCAD 变速箱、Computer Use / 编程 / OSWorld 成本 / 诱捕测试跑分表、PPT 与客户留存看板复刻对比、素数间隔论文、思维链可监控性说明、Claude 封号邮件实锤截图
+- 素材来源：kb-articles A226–A230（GPT-6 Astra 发布五篇媒体资料簇）+ A213（Claude 封号个案）；封号潮规模数据经 WebSearch 交叉验证（Anthropic 透明度报告口径：2025 下半年封禁约 145 万账号、申诉成功率 3.3%）
+
+---
+
 ## v1.60 · 2026-09-03
 
 ### 视频课上新 ×2：AI 常识（上）+ DeepSeek Harness 速通
