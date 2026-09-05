@@ -1,6 +1,6 @@
 ---
 title: Codex 从零开始：保姆级完整教程
-description: OpenAI 的 Codex 怎么装、怎么登录、怎么跑通第一个任务，国内能不能用——从安装到进阶，一篇全讲完
+description: 2026 年 7 月起 Codex 并入 ChatGPT 桌面应用。怎么装、怎么登录、怎么跑通第一个任务，国内能不能用，从安装到进阶一篇全讲完
 ---
 
 # Codex 从零开始：保姆级完整教程
@@ -9,49 +9,54 @@ description: OpenAI 的 Codex 怎么装、怎么登录、怎么跑通第一个�
 
 ---
 
-这是一篇很长的教程，但你不用一口气读完——翻到你需要的那一节，跟着做，就行。
+先说一件最重要的事：**从 2026 年 7 月起，Codex 不再是一个独立软件了。** OpenAI 把它并进了 ChatGPT 桌面应用：你现在装一个 ChatGPT，里面就同时有聊天（Chat）、长任务（Work）、干活（Codex）三种模式，Codex 是其中一个。本文已按合并后的新版重写；文中少数界面截图拍摄于合并前的独立 Codex App，布局略有差异，但操作流程不变，以你电脑上的实际界面为准。
+
+这是一篇很长的教程，但你不用一口气读完，翻到你需要的那一节，跟着做，就行。
 
 **读完这篇，你能做到五件事：**
 
-1. 在自己的电脑上装好 Codex（Mac 或 Windows）
-2. 用 ChatGPT 账号登录，让它真正能用
+1. 装好带 Codex 的新版 ChatGPT 桌面应用（Mac 或 Windows）
+2. 用 ChatGPT 账号登录，让 Codex 真正能用
 3. 跑通第一个任务，亲眼看它干活
 4. 学会用"计划模式"和 AGENTS.md，让它不跑偏
 5. 知道国内没有 ChatGPT 账号时，有哪些接入办法
 
-![Codex 是 OpenAI 出的桌面版 AI 助手](/images/stage-5/codex-hero.png)
+![Codex 是 OpenAI 出的 AI 助手，现在是 ChatGPT 桌面应用里的干活模式](/images/stage-5/codex-hero.png)
 
-*Codex 是 OpenAI 出的桌面 AI 助手，本篇带你从零装好、一步步用起来*
+*Codex 是 OpenAI 出的 AI 助手，2026 年 7 月起并入 ChatGPT 桌面应用，本篇带你从零装好、一步步用起来*
 
 ---
 
 ## 一、先搞懂它是什么
 
-很多人一看到 "Codex" 里那个 "Code"，就以为这是个只有程序员才用得上的写代码工具，直接劝退——这是最大的误会。
+很多人一看到 "Codex" 里那个 "Code"，就以为这是个只有程序员才用得上的写代码工具，直接劝退，这是最大的误会。
 
-我们先把它讲清楚。**Codex 是 OpenAI（就是做 ChatGPT 那家公司）出的一个 AI 助手，但它和 ChatGPT 干的活不一样。**
+我们先把它讲清楚。**Codex 是 OpenAI（就是做 ChatGPT 那家公司）出的 AI 助手，现在它活在 ChatGPT 桌面应用里。** 打开新版 ChatGPT 桌面应用，左边一列三个模式，各管一件事：
 
-打个最直白的比方：
-
-<div style="display:flex;gap:16px;flex-wrap:wrap;margin:20px 0;">
-  <div style="flex:1;min-width:240px;border:1px solid #e2e2e2;border-radius:12px;padding:20px;background:#fafafa;">
-    <div style="font-size:15px;font-weight:700;color:#666;margin-bottom:8px;">ChatGPT ＝ 嘴替</div>
+<div style="display:flex;gap:14px;flex-wrap:wrap;margin:20px 0;">
+  <div style="flex:1;min-width:200px;border:1px solid #e2e2e2;border-radius:12px;padding:18px;background:#fafafa;">
+    <div style="font-size:15px;font-weight:700;color:#555;margin-bottom:8px;">💬 Chat ＝ 嘴替</div>
     <div style="font-size:14px;line-height:1.7;color:#444;">你问它问题，它<strong>动嘴</strong>告诉你答案、给你建议、帮你写一段文字。但具体的活，还得你自己去电脑上一步步操作。</div>
   </div>
-  <div style="flex:1;min-width:240px;border:2px solid #10a37f;border-radius:12px;padding:20px;background:#f0fbf8;">
-    <div style="font-size:15px;font-weight:700;color:#10a37f;margin-bottom:8px;">Codex ＝ 手替</div>
-    <div style="font-size:14px;line-height:1.7;color:#444;">你交代一件事，它<strong>动手</strong>替你做完：自己读文件、自己写、自己改、自己验证，一步步干到底，而不是只给你一段文字。</div>
+  <div style="flex:1;min-width:200px;border:1px solid #e2e2e2;border-radius:12px;padding:18px;background:#fafafa;">
+    <div style="font-size:15px;font-weight:700;color:#555;margin-bottom:8px;">📋 Work ＝ 长工</div>
+    <div style="font-size:14px;line-height:1.7;color:#444;">交办一件要<strong>跑很久</strong>的事：跨应用查资料、做调研、产出文档和表格，它能连续干几个小时，最后交一份成品。</div>
+  </div>
+  <div style="flex:1;min-width:200px;border:2px solid #10a37f;border-radius:12px;padding:18px;background:#f0fbf8;">
+    <div style="font-size:15px;font-weight:700;color:#10a37f;margin-bottom:8px;">🛠 Codex ＝ 手替</div>
+    <div style="font-size:14px;line-height:1.7;color:#444;">绑定你电脑上的文件夹，你交代一件事，它<strong>动手</strong>替你做完：自己读文件、自己写、自己改、自己验证，一步步干到底。</div>
   </div>
 </div>
+<p class="figcaption">合并后的 ChatGPT 桌面应用 = 三个模式一个壳：聊天找 Chat，长任务找 Work，动手干活找 Codex。本篇讲的是 Codex。</p>
 
-> 💡 **"嘴替 / 手替"这个说法**：嘴替就是替你说话的人，手替就是替你动手的人。Codex 的厉害之处在于它能直接动手——文件、代码、网页、数据、甚至帮你操作整台电脑，它都能上手做，而不只是"告诉你该怎么做"。
+> 💡 **"嘴替 / 手替"这个说法**：嘴替就是替你说话的人，手替就是替你动手的人。Codex 的厉害之处在于它能直接动手：文件、代码、网页、数据、甚至帮你操作整台电脑，它都能上手做，而不只是"告诉你该怎么做"。
 
 它的工作方式跟普通 AI 聊天完全不同：
 
 - **普通 AI 对话**：你问一句，它答一句，每一轮都是独立的。
-- **Codex 的工作方式**：你交代一件事，它自己规划步骤、自己调工具、自己看结果、自己再决定下一步——反复循环，直到任务完成或卡住。这种"自己干一整条任务链"的能力，就是大家常说的 **Agent（智能体）**。
+- **Codex 的工作方式**：你交代一件事，它自己规划步骤、自己调工具、自己看结果、自己再决定下一步，反复循环，直到任务完成或卡住。这种"自己干一整条任务链"的能力，就是大家常说的 **Agent（智能体）**。
 
-一句话总结：**Codex 是一个能直接上手帮你把事情做完的 AI，不是再来一个聊天框。**
+一句话总结：**Codex 是 ChatGPT 桌面应用里那个能直接上手帮你把事情做完的模式，不是再来一个聊天框。**
 
 > 💡 **它和 Claude Code 什么关系？** 两个是同一赛道的竞品，就像 iOS 和安卓。Claude Code 是 Anthropic 家的，Codex 是 OpenAI 家的，两家你追我赶、互相抄作业，功能高度相似。学会一个，另一个基本一通百通。**新手先挑一个上手就行**（哪个能用上用哪个），别一上来就给自己加负担。
 
@@ -61,85 +66,83 @@ description: OpenAI 的 Codex 怎么装、怎么登录、怎么跑通第一个�
 
 为了让真正零基础的朋友也能跟下去，先把后文反复出现的三个词解释清楚。
 
-**Codex App（桌面应用）**：Codex 有好几种用法——桌面 App、命令行、IDE 插件（IDE 就是程序员写代码用的软件）、浏览器扩展。对小白来说，**桌面 App 最简单**：它就是一个普通软件，双击图标打开，有窗口、有按钮，跟微信、QQ 一样。本篇主要讲桌面 App。
+**Codex 模式**：合并之后，Codex 不再单独下载，而是新版 ChatGPT 桌面应用左侧的一个入口，点一下就切换过去。除了这个图形界面，Codex 还有命令行、IDE 插件（IDE 就是程序员写代码用的软件）、网页版等用法，合并**不影响**它们。对小白来说，**桌面应用里的 Codex 模式最简单**：有窗口、有按钮，跟用微信、QQ 一样。本篇主要讲它。
 
-**ChatGPT 账号**：Codex 是 OpenAI 出的，所以它直接用你的 ChatGPT 账号登录，额度也和你的 ChatGPT 会员绑定。**没有 ChatGPT 账号 / 没法翻墙的朋友先别急**，第九章专门讲国内怎么办。
+**ChatGPT 账号**：Codex 直接用你的 ChatGPT 账号登录，额度也和你的 ChatGPT 会员绑定。**没有 ChatGPT 账号 / 没法翻墙的朋友先别急**，第九章专门讲国内怎么办。
 
-**任务 / Prompt（提示词）**：你交代给 Codex 的那段话，比如"帮我做一个用药提醒的小网页"。说得越清楚，它干得越准——这个后面第八章会专门教。
+**任务 / Prompt（提示词）**：你交代给 Codex 的那段话，比如"帮我做一个用药提醒的小网页"。说得越清楚，它干得越准，这个后面第八章会专门教。
 
 ---
 
-## 三、第一步：下载并安装 Codex
+## 三、第一步：下载并安装
 
-Codex 桌面 App 的官方下载页：
+现在只要装一个软件：**新版 ChatGPT 桌面应用**，Codex 就在里面。
+
+官方下载页（认准 chatgpt.com 官网）：
 
 ```
-https://developers.openai.com/codex/app
+https://chatgpt.com/download
 ```
 
-打开这个网页，能看到 **macOS 和 Windows 两套下载入口**，**选你电脑对应的系统**点下去就行：
+打开网页，选你电脑对应的系统下载：
 
-![Codex 官方下载页：选你电脑对应的系统下载](/images/stage-5/codex-download.png)
+- **Mac 用户**：下载 .dmg 文件，双击打开，把 ChatGPT 图标拖进"应用程序"文件夹就装好了。之后在"启动台"或用 `Command + 空格` 搜 "ChatGPT" 打开。
+- **Windows 用户**：可以直接在微软应用商店搜 "ChatGPT" 点获取，或者用官网给的安装包。装完在开始菜单就能找到。
 
-*Codex 下载页示意：Mac 用户点 macOS，Windows 用户点 Windows*
+装好后打开，**在应用左侧找到 Codex 入口切换过去**，就是本篇要用的界面了。
 
-> 💡 **Mac 用户注意芯片**：下载 macOS 版时可能会让你选「Apple 芯片」还是「Intel 芯片」。怎么看自己是哪种？点屏幕左上角苹果标志 →「关于本机」，写着 "Apple M…"（比如 M1/M2/M3）就选 Apple 芯片，写着 "Intel" 就选 Intel。选错了装不上，选对就行；2020 年底以后买的 Mac 基本都是 Apple 芯片。
+> 💡 **Mac 用户注意芯片**：下载 macOS 版时可能会让你选「Apple 芯片」还是「Intel 芯片」。怎么看自己是哪种？点屏幕左上角苹果标志 →「关于本机」，写着 "Apple M…"（比如 M1/M2/M3）就选 Apple 芯片，写着 "Intel" 就选 Intel。2020 年底以后买的 Mac 基本都是 Apple 芯片。
 
-下载安装：
+> 💡 **以前装过独立 Codex App 的老用户**：不用卸载重装，正常更新即可，更新后它就自动变成新版 ChatGPT 桌面应用，你的项目、设置、历史记录都会保留。以前装的旧版 ChatGPT 桌面应用则被改名 **ChatGPT Classic**（经典版），功能不再更新，建议直接换用新版。
 
-- **Mac 用户**：下载下来双击打开，把 Codex 图标拖进"应用程序"文件夹就装好了。之后在"启动台"或用 `Command + 空格` 搜 "Codex" 就能打开。
-- **Windows 用户**：按提示装完，在开始菜单就能找到。
+> ⚠️ **Mac 第一次打开提示"无法验证开发者"？** 这是 macOS 的安全机制。去"系统设置 → 隐私与安全性"，往下拉找到相关提示，点"仍要打开"即可。这是正常现象，不是软件有问题。
 
-> 💡 **想用命令行版（CLI）的进阶用户**：Mac/Linux 可以一行命令装 `curl -fsSL https://chatgpt.com/codex/install.sh | sh`；也支持 `brew install --cask codex` 或 `npm i -g @openai/codex@latest`。小白不用管这段，装上面的桌面 App 就够了。
->
-> ⚠️ 另外，`chatgpt.com/codex` 是 Codex 的网页总入口，不是桌面 App 的下载页——别搞混了，桌面版认准上面那个 `developers.openai.com/codex/app`。
-
-> ⚠️ **Mac 第一次打开提示"无法验证开发者"？** 这是 macOS 的安全机制。去"系统设置 → 隐私与安全性"，往下拉找到关于 Codex 的提示，点"仍要打开"即可。这是正常现象，不是软件有问题。
+> 💡 **想用命令行版（CLI）的进阶用户**：命令行版不受这次合并影响，照常独立安装。Mac/Linux 一行命令 `curl -fsSL https://chatgpt.com/codex/install.sh | sh`；也支持 `brew install --cask codex` 或 `npm i -g @openai/codex@latest`。小白不用管这段，装上面的桌面应用就够了。
 
 ---
 
 ## 四、第二步：登录
 
-装好后第一次打开 Codex，第一眼看到的就是一个"欢迎使用 Codex"的登录界面。登录有两种方式，**绝大多数人用第一种。**
+装好后第一次打开，第一眼看到的就是登录界面。登录有两种方式，**绝大多数人用第一种。**
 
 ### 路线 A：用 ChatGPT 账号登录（推荐）
 
 界面上点"使用 ChatGPT 继续"，它会跳到浏览器让你确认账号，点 "Continue"（继续）就登录好了。
 
-![用 ChatGPT 账号登录 Codex 的两步：① 点"使用 ChatGPT 继续" ② 确认账号点 Continue](/images/stage-5/codex-login-chatgpt.png)
+![用 ChatGPT 账号登录的两步：① 点"使用 ChatGPT 继续" ② 确认账号点 Continue](/images/stage-5/codex-login-chatgpt.png)
 
-*登录两步：① 点"使用 ChatGPT 继续" → ② 浏览器里确认你的 ChatGPT 账号，点 Continue*
+*登录两步：① 点"使用 ChatGPT 继续" → ② 浏览器里确认你的 ChatGPT 账号，点 Continue（截图拍摄于合并前的独立 Codex App，新应用流程相同）*
 
-**关于额度（很重要）**：从免费版到 Plus、Pro、企业版，各档 ChatGPT 会员都能用 Codex，区别只在"能用多少"。**这里没有固定的"每天几次"，而是按你的会员等级、用的模型、任务复杂度动态计算的。** 一个大致的体感：
+**关于额度（很重要）**：从免费版到 Plus、Pro、企业版，各档 ChatGPT 会员都能用 Codex，区别在"能用多少、能用哪些模型"。**没有固定的"每天几次"，而是按你的会员等级、用的模型、任务复杂度动态计算的。** 一个大致的体感：
 
 <div style="margin:20px 0;border:1px solid #e2e2e2;border-radius:12px;overflow:hidden;">
   <div style="display:flex;background:#f5f5f5;font-weight:700;font-size:13px;color:#555;padding:12px 16px;">
     <div style="flex:1;">会员等级</div><div style="flex:2;">用 Codex 的体验（经验值，非官方承诺）</div>
   </div>
   <div style="display:flex;font-size:14px;padding:12px 16px;border-top:1px solid #eee;">
-    <div style="flex:1;">免费 / Go</div><div style="flex:2;color:#999;">额度很紧，只能浅尝</div>
+    <div style="flex:1;">免费 / Go</div><div style="flex:2;color:#999;">可以用，但额度紧、模型选择少，只能浅尝</div>
   </div>
   <div style="display:flex;font-size:14px;padding:12px 16px;border-top:1px solid #eee;background:#fafafa;">
     <div style="flex:1;">Plus（约 $20/月）</div><div style="flex:2;">日常轻度使用够用</div>
   </div>
   <div style="display:flex;font-size:14px;padding:12px 16px;border-top:1px solid #eee;">
-    <div style="flex:1;">Pro（约 $200/月）</div><div style="flex:2;">额度宽裕，可以放开了用</div>
+    <div style="flex:1;">Pro（约 $200/月）</div><div style="flex:2;">额度宽裕，模型全开，可以放开了用</div>
   </div>
 </div>
 
-你随时可以在 Codex 里点头像，看到自己的实时用量（"剩余用量"面板），心里有数：
+你随时可以点头像，看到自己的实时用量（"剩余用量"面板），心里有数：
 
-![Codex 头像菜单里的"剩余用量"面板，显示 5 小时和 1 周的剩余比例](/images/stage-5/codex-usage-panel.png)
+![头像菜单里的"剩余用量"面板，显示 5 小时和 1 周的剩余比例](/images/stage-5/codex-usage-panel.png)
 
 *点头像就能看到"剩余用量"：5 小时窗口、1 周窗口各剩多少，还有"升级至 Pro"入口*
 
-> 💡 **价格和额度 OpenAI 经常调整**，上面的体感仅供参考，**一切以你登录后的官方 pricing 页面和这个用量面板为准**。如果你已经是 ChatGPT 会员，登录 Codex 直接复用，不用额外付费。
+> 💡 **价格、额度和模型阵容 OpenAI 经常调整**，光是 2026 年 7、8 两个月就改过好几轮。上面的体感仅供参考，**一切以你登录后的官方 pricing 页面和用量面板为准**。如果你已经是 ChatGPT 会员，登录后直接用，不用额外付费。
 
 ### 路线 B：用 API Key 登录（进阶）
 
-如果你不想绑 ChatGPT 会员，而是想用按量计费的 OpenAI API Key，可以在欢迎界面选"使用其他方式登录"，填入你的 `OpenAI API 密钥`。
+如果你不想绑 ChatGPT 会员，而是想用按量计费的 OpenAI API Key，可以在登录界面选"使用其他方式登录"，填入你的 `OpenAI API 密钥`。
 
-![用 OpenAI API 密钥登录 Codex 的界面](/images/stage-5/codex-login-apikey.png)
+![用 OpenAI API 密钥登录的界面](/images/stage-5/codex-login-apikey.png)
 
 *API Key 登录界面：把你的 OpenAI API 密钥粘进去即可。注意这种方式部分功能会受限*
 
@@ -149,13 +152,13 @@ https://developers.openai.com/codex/app
 
 ## 五、第三步：认识界面
 
-登录后进入主界面。别被它吓到，其实就分三块：
+登录后，先记住左边那一列模式切换：Chat、Work、Codex。**本篇讲的是 Codex 模式**，切过去之后，界面其实就分三块：
 
-![Codex 主界面分三块：① 对话区 ② 功能区 ③ 对话历史区](/images/stage-5/codex-ui-annotated.png)
+![Codex 模式主界面分三块：① 对话区 ② 功能区 ③ 对话历史区](/images/stage-5/codex-ui-annotated.png)
 
-*Codex 主界面三大区：① 中间是对话区（你跟它说话的地方）② 左上是功能区（新对话、搜索、插件、自动化等）③ 左下是对话历史区（你的项目和历史对话都在这）*
+*Codex 模式三大区：① 中间是对话区（你跟它说话的地方）② 左上是功能区（新对话、搜索、插件、自动化等）③ 左下是对话历史区（你的项目和历史对话都在这）（截图拍摄于合并前的独立 App，布局以你电脑上的新版为准）*
 
-这里有一个**新手最该先搞懂的概念**——"对话"和"项目"的区别：
+这里有一个**新手最该先搞懂的概念**：「对话」和「项目」的区别：
 
 <div style="display:flex;gap:16px;flex-wrap:wrap;margin:20px 0;">
   <div style="flex:1;min-width:240px;border:1px solid #e2e2e2;border-radius:12px;padding:20px;background:#fafafa;">
@@ -164,18 +167,18 @@ https://developers.openai.com/codex/app
   </div>
   <div style="flex:1;min-width:240px;border:1px solid #e2e2e2;border-radius:12px;padding:20px;background:#fafafa;">
     <div style="font-size:15px;font-weight:700;margin-bottom:8px;">📁 项目</div>
-    <div style="font-size:14px;line-height:1.7;color:#444;">绑定你电脑上的<strong>一个文件夹</strong>，是真正干活的主战场。一个项目下可以开<strong>多条独立对话</strong>，它们共享文件夹但记录互相隔离。</div>
+    <div style="font-size:14px;line-height:1.7;color:#444;">绑定你电脑上的<strong>文件夹</strong>，是真正干活的主战场。一个项目下可以开<strong>多条独立对话</strong>，它们共享文件夹但记录互相隔离。2026 年 7 月起，一个项目还能同时关联<strong>多个文件夹 / 多个代码仓库</strong>，跨文件夹读写。</div>
   </div>
 </div>
 
-> 💡 **新手最容易犯的错**：把所有事情都堆在同一条对话里。一条对话里它能记住的内容是有限的，旧的、不相干的内容塞太多，它就开始抓不住重点、"忘事"、跑偏（这种现象叫"上下文污染"——可以理解成"一个对话里混进太多杂事，它就乱了"）。**正确做法是：不同的任务开不同的对话**，前期把分类做好，后期才不会抓狂。
+> 💡 **新手最容易犯的错**：把所有事情都堆在同一条对话里。一条对话里它能记住的内容是有限的，旧的、不相干的内容塞太多，它就开始抓不住重点、"忘事"、跑偏（这种现象叫"上下文污染"，可以理解成"一个对话里混进太多杂事，它就乱了"）。**正确做法是：不同的任务开不同的对话**，前期把分类做好，后期才不会抓狂。
 
 **推荐的初始设置**（在设置里调）：
 
-- **模型**：选最新的 GPT 系列（界面里会标版本号，选最高的）
+- **模型**：选界面里最新的旗舰系列（截至 2026 年 9 月是 GPT-5.6 家族起，9 月初又随新一代模型升级过一轮。OpenAI 更新很快，**认界面里标"最新"的那个就行**）。同一家族通常分几档：最强档干硬活、均衡档日常用、快速档省钱省时间，按任务难度选
 - **推理强度**：就是"让它想多深"。想得越深越细致、越不容易出错，但也越慢、越费额度。日常用"高"，复杂大活用"超高"就行
 - **速度**：选"标准"就行（"快速"模式响应更快、约 1.5 倍速，但更费额度，具体倍率随模型变化，以官方说明为准）
-- **跟进行为**：建议改成"引导"——这样任务跑到一半你想插一句修改，可以直接打断，不用干等它跑完
+- **跟进行为**：建议改成"引导"，这样任务跑到一半你想插一句修改，可以直接打断，不用干等它跑完
 
 ---
 
@@ -207,7 +210,7 @@ https://developers.openai.com/codex/app
 
 ![Codex 先给出一份建站计划，并询问是否实施](/images/stage-5/codex-plan-output.png)
 
-*Codex 先把计划列清楚（要建哪些文件、什么风格、第一屏长什么样），等你确认——这一步能避免它理解偏*
+*Codex 先把计划列清楚（要建哪些文件、什么风格、第一屏长什么样），等你确认，这一步能避免它理解偏*
 
 **第四步：等它做完，看成果**
 
@@ -215,15 +218,15 @@ https://developers.openai.com/codex/app
 
 ![Codex 做好的咖啡馆官网成品页面](/images/stage-5/codex-first-task-result.png)
 
-*这就是 Codex 几分钟做出来的咖啡馆官网首屏——你全程只说了一句话*
+*这就是 Codex 几分钟做出来的咖啡馆官网首屏，你全程只说了一句话*
 
 到这里，你已经完整跑通一次了：**说需求 → 看方案 → 出成果。** 这就是 Codex 干活的基本节奏，后面所有复杂任务，都是这个节奏的放大版。
 
-> 💡 **不满意？直接接着说。** 比如"标题再大一点""换成深色背景""加一个菜单栏"——它会在原来的基础上继续改，不用从头来。
+> 💡 **不满意？直接接着说。** 比如"标题再大一点""换成深色背景""加一个菜单栏"，它会在原来的基础上继续改，不用从头来。
 
 ---
 
-## 七、第五步：让它不跑偏——计划模式 + AGENTS.md
+## 七、第五步：让它不跑偏（计划模式 + AGENTS.md）
 
 上一章你已经体验过"计划模式"了。这一章把"让它不跑偏"的两个工具讲透：**计划模式**管"这一次别跑偏"，**AGENTS.md** 管"以后每次都按我的规矩来"。
 
@@ -241,7 +244,7 @@ https://developers.openai.com/codex/app
 
 ![计划模式下，Codex 会先提问确认方案，再开始干活](/images/stage-5/codex-plan-mode.webp)
 
-*开了计划模式后，Codex 会把需求拆开、反问你几个关键问题，你确认后它才执行——避免一上来就跑偏*
+*开了计划模式后，Codex 会把需求拆开、反问你几个关键问题，你确认后它才执行，避免一上来就跑偏*
 
 > 💡 **建议**：但凡是稍微复杂一点的任务，都先开计划模式过一遍。多花一分钟确认方案，能省掉后面十分钟的返工。
 
@@ -264,7 +267,7 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
   </div>
 </div>
 
-> 💡 **不知道 `~/.codex` 在哪？** 不用手动找。你可以直接让 Codex 帮你建：在对话里说一句"帮我在全局 AGENTS.md 里加一条：所有回答用中文"，它会自己处理好文件位置。
+> 💡 **不知道 `~/.codex` 在哪？** 不用手动找。两个省事办法：① 直接对 Codex 说一句"帮我在全局 AGENTS.md 里加一条：所有回答用中文"，它会自己处理好文件位置；② 开一个新项目时输入 `/init` 指令，它会读一遍项目内容，**自动生成一份 AGENTS.md 草稿**，你再在它的基础上改。
 
 **AGENTS.md 长什么样？** 它就是一个纯文本文件，里面一条条写你的规矩，像这样：
 
@@ -283,7 +286,7 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
 <div style="margin-bottom:10px;"><strong>① 先想再做</strong>　动手前先说清你的理解和假设，不确定的地方先问我，别自己瞎猜。</div>
 <div style="margin-bottom:10px;"><strong>② 简单优先</strong>　只做我要求的事，不要自作主张加一堆我没要的功能。</div>
 <div style="margin-bottom:10px;"><strong>③ 外科式修改</strong>　只改该改的地方，不要顺手"重构"其他没让你动的代码。</div>
-<div><strong>④ 目标驱动</strong>　把"修个 bug"变成"写一个测试，让它通过"——用可验证的结果来确认任务真的完成了。</div>
+<div><strong>④ 目标驱动</strong>　把"修个 bug"变成"写一个测试，让它通过"，用可验证的结果来确认任务真的完成了。</div>
 </div>
 
 ---
@@ -312,12 +315,12 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
 
 > 💡 **一个反面教材**：别说"帮我改进一下这个页面"。"改进""优化""更好"这类模糊词，Codex 没法衡量，也就没法对照着干，最后给你的多半不是你想要的。**把"改进"换成可以检验的具体结果。**
 
-### 进阶：`/goal` 指令——把目标钉死
+### 进阶：`/goal` 指令，把目标钉死
 
 当你要让 Codex 干一件比较大、要跑很久的活时，可以用 `/goal` 指令。它和普通派活的区别是：
 
-- **普通派活**：给它一个"动作指令"——让它做某件事。
-- **`/goal`**：给它一个"成功条件"——让某件事变成真，它会自己反复循环、自我验证，直到达成你定义的目标为止。
+- **普通派活**：给它一个"动作指令"，让它做某件事。
+- **`/goal`**：给它一个"成功条件"，让某件事变成真，它会自己反复循环、自我验证，直到达成你定义的目标为止。
 
 为什么需要它？因为对话一长，Codex 容易"忘记最初为什么要做这件事"。`/goal` 像一个锚，把目标钉在那里，哪怕聊了很久也不跑偏。写一个好的 `/goal`，结构是这样的：
 
@@ -335,13 +338,13 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
 
 ## 九、国内能用吗？没有 ChatGPT 账号怎么办
 
-> 🚪 **先看这里**：如果你能用官方 ChatGPT 账号登录（第四章路线 A），**直接跳过这一章**，你已经能正常用 Codex 了。下面这些是给"实在没有 ChatGPT 账号"的人准备的替代办法，里面会出现一些技术词——**看不懂也完全正常，不影响你用 Codex**，跳过就好。
+> 🚪 **先看这里**：如果你能用官方 ChatGPT 账号登录（第四章路线 A），**直接跳过这一章**，你已经能正常用 Codex 了。下面这些是给"实在没有 ChatGPT 账号"的人准备的替代办法，里面会出现一些技术词。**看不懂也完全正常，不影响你用 Codex**，跳过就好。
 
 这是国内朋友最关心的问题。先把话说清楚：
 
 **Codex 最稳、最省心的方式，永远是官方 ChatGPT 账号登录。** 下面这些都是**第三方 / 社区自己折腾出来的方案，不是 OpenAI 官方功能，也没有官方背书，用了出问题要自己担风险。** 新手能用官方账号就别碰这些。
 
-核心思路都一样：**把 Codex 背后调用的"大脑"，从 OpenAI 换成国产大模型（或第三方中转服务）。** 有三条路，按"省心程度"排：
+合并之后有一点要先明白：**这些第三方方案作用的对象是 Codex 的命令行（CLI）和本地配置，不是合并后的 ChatGPT 桌面应用。** 也就是说，走国内方案你用的是命令行版的 Codex，图形界面换成了第三方工具自己做的壳。核心思路都一样：**把 Codex 背后调用的"大脑"，从 OpenAI 换成国产大模型（或第三方中转服务）。** 有三条路，按"省心程度"排：
 
 <div style="margin:20px 0;border:1px solid #e2e2e2;border-radius:12px;overflow:hidden;">
   <div style="display:flex;background:#f5f5f5;font-weight:700;font-size:13px;color:#555;padding:12px 16px;">
@@ -349,7 +352,7 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
   </div>
   <div style="display:flex;font-size:14px;padding:12px 16px;border-top:1px solid #eee;">
     <div style="flex:1.2;font-weight:600;">② Codex++ 工具<br><span style="font-size:12px;color:#10a37f;">（小白首选）</span></div>
-    <div style="flex:1;color:#444;">桌面 App 用户、怕折腾的人</div>
+    <div style="flex:1;color:#444;">怕折腾、想要图形界面的人</div>
     <div style="flex:1.5;color:#444;">一个图形化管理工具，点点鼠标帮你把配置写好、测试连通、再启动 Codex</div>
   </div>
   <div style="display:flex;font-size:14px;padding:12px 16px;border-top:1px solid #eee;background:#fafafa;">
@@ -372,6 +375,8 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
 
 *Codex++ 管理工具：左边是供应商配置、工具插件等菜单，中间会自动检查 Codex 版本、安装位置、启动入口是否正常，点按钮就能修复和启动*
 
+> ⚠️ 合并之后这类第三方工具也在跟着改版，**安装前先看一眼它的最新说明**，确认支持你装的 Codex 版本。
+
 ### 如果你想手动配置
 
 核心就一件事：改 `~/.codex/config.toml` 这个文件（它是 Codex 的本地配置档案）。有几个**最容易踩的坑**先提醒你：
@@ -383,41 +388,44 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
 - **密钥别写死**：API Key 用 `env_key` 指向环境变量，别直接写在配置文件里，更别传到网上。
 - **Mac 要从终端重启**：改完之后，完全退出 Codex，再从终端启动，否则它可能读不到新配置。
 
-> 💡 **哪些是官方支持的、哪些是第三方？** 改 `~/.codex/config.toml` 里的 `model_providers`、`base_url`、`wire_api`、`env_key` 这些字段来接别的模型，是 Codex **官方配置文件本身就支持**的能力。但 **Codex++、CCX、CC Switch 这些是第三方工具，不是 OpenAI 出的，也没有官方背书**——能用，但出问题得自己排查。
+> 💡 **哪些是官方支持的、哪些是第三方？** 改 `~/.codex/config.toml` 里的 `model_providers`、`base_url`、`wire_api`、`env_key` 这些字段来接别的模型，是 Codex **官方配置文件本身就支持**的能力。但 **Codex++、CCX、CC Switch 这些是第三方工具，不是 OpenAI 出的，也没有官方背书**：能用，但出问题得自己排查。
 
-> ⚠️ **安全提醒**：用第三方 API、中转服务、第三方工具时务必做到：密钥不外泄、不要写进任何会上传的文件、改前先备份、配好后先用一个"只读"的小任务验证一下，确认正常再正式用。这些工具和国产模型迭代很快，**具体的供应商名称、地址、支持的接口，请以你充值时各平台公布的为准**——本文只讲思路，不保证字段永远不变。
+> ⚠️ **安全提醒**：用第三方 API、中转服务、第三方工具时务必做到：密钥不外泄、不要写进任何会上传的文件、改前先备份、配好后先用一个"只读"的小任务验证一下，确认正常再正式用。这些工具和国产模型迭代很快，**具体的供应商名称、地址、支持的接口，请以你充值时各平台公布的为准**，本文只讲思路，不保证字段永远不变。
 
 ---
 
 ## 十、进阶能力一览：Codex 还能干这些
 
-把基础跑通后，下面这些是 Codex 比较有特色的能力，按需了解：
+把基础跑通后，下面这些是 Codex 比较有特色的能力，按需了解。2026 年 7 月并入 ChatGPT 前后，它密集更新过一轮，下面标了"新"的都是这一轮加的：
 
-- **内置浏览器批注**：做完一个网页，可以直接在 Codex 自带的浏览器里圈选某个元素、提出具体的修改意见（比如"这个标题字号大一号""这块间距太挤""这里换成蓝色"），它再照着改，比你截图、打字描述高效得多。
+- **内置浏览器批注**：做完一个网页，可以直接在自带的浏览器里圈选某个元素、提出具体的修改意见（比如"这个标题字号大一号""这里换成蓝色"），它再照着改，比你截图、打字描述高效得多。
+- **多文件夹 / 多仓库项目**（新）：一个项目可以同时挂几个文件夹，比如代码在一个目录、文档和参考资料在另一个目录，它能跨着读写。
+- **Diff 内联编辑 + PR 审查**（新）：它改完代码后，你可以直接在改动对比（Diff）里针对某一行写评论、让它改；用 GitHub 的话，侧边栏就能审 Pull Request（程序员合并代码前的评审环节）。
+- **语音指挥**（新）：2026 年 7 月底起，可以直接说话让它干活，甚至同时指挥几个并行的任务。
 - **联网搜索**：让它自己上网查资料、看最新信息，再整理给你。
 - **代码审查**：让它检查一段代码或一个改动有没有问题。
-- **手机端远程控制**：电脑上跑着的任务，可以用手机 App 远程查看、引导，吃饭路上也能让它继续干（Mac 和 Windows 电脑都支持被手机远程连接）。
+- **手机端远程控制**：电脑上跑着的任务，可以用手机上的 ChatGPT App 远程查看、引导，吃饭路上也能让它继续干（Mac 和 Windows 电脑都支持被手机远程连接）。
 - **插件 / Skills**：把你最常做的事打包成一个"技能"，叫一声就执行，省去每次重复描述。
 
 ### Computer Use：让 Codex 直接操作你的电脑
 
-这是 Codex 一个很强的能力——**它能用自己的"虚拟鼠标键盘"，直接操作你电脑上的其他软件**。
+这是 Codex 一个很强的能力：**它能用自己的"虚拟鼠标键盘"，直接操作你电脑上的其他软件**。
 
 举个真实例子：你想做一个手机 App，但开发要用一个叫 Xcode 的工具，你根本没装过、也不会装。这时你不用管 Xcode 是什么，直接让 Codex 的 Computer Use 帮你"去搜索、下载、安装"，它会自己一步步点下去，只有遇到要输密码、要登录这种敏感步骤才停下来交给你。
 
 ![Computer Use 替你操作 Xcode：它自己点击菜单、选择设备、执行编译](/images/stage-5/codex-computer-use-xcode.webp)
 
-*Computer Use 工作中：右边它一条条记录"已点击 Xcode""已查看 Xcode"，左边是它正在操作的 Xcode 界面——你只需要在旁边看着*
+*Computer Use 工作中：右边它一条条记录"已点击 Xcode""已查看 Xcode"，左边是它正在操作的 Xcode 界面，你只需要在旁边看着*
 
 这个能力要在设置里授权：
 
-![在「电脑操控」设置里，开启允许 Codex 控制应用、浏览器、锁屏后操作](/images/stage-5/codex-computer-use-settings.webp)
+![在「电脑操控」设置里，开启允许控制应用、浏览器、锁屏后操作](/images/stage-5/codex-computer-use-settings.webp)
 
 *设置 → 电脑操控：可以分别授权"控制任意应用""连接浏览器""锁屏后继续操作"。给多大权限，看你自己对风险的接受程度*
 
-> 💡 **Mac 和 Windows 的差别**：Computer Use 现在 **Mac、Windows 都支持**，只是方式不同——Mac 可以在后台操作、不打扰你；Windows 上它会接管你当前的桌面前台（你得让出屏幕给它）。
+> 💡 **Mac 和 Windows 的差别**：Computer Use 现在 **Mac、Windows 都支持**，只是方式不同：Mac 可以在后台操作、不打扰你；Windows 上它会接管你当前的桌面前台（你得让出屏幕给它）。
 >
-> 真正还是 **Mac 独有**的，是这几个偏"系统级"的能力：**Appshots**（连按两下 Command 截当前窗口发给 Codex）、**锁屏后继续操作**、**屏幕上下文记忆 Chronicle**（后台记录你最近在屏幕上干了什么，目前是实验性功能）。Windows 用户用不到这几个，但日常的对话、写代码、做网页、操控电脑都不受影响。
+> 真正还是 **Mac 独有**的，是这几个偏"系统级"的能力：**Appshots**（连按两下 Command 把当前窗口截图发给 Codex）、**锁屏后继续操作**、**屏幕记忆 Computer History**（经你授权后，它能记住你最近在屏幕上的操作上下文，2026 年 8 月起从实验功能转为正式上线，部分地区陆续开放）。Windows 用户用不到这几个，但日常的对话、写代码、做网页、操控电脑都不受影响。
 
 ---
 
@@ -425,31 +433,35 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
 
 **Q1：Codex 和 ChatGPT 是一个东西吗？要单独付钱吗？**
 
-是同一家公司（OpenAI）的两个不同产品。Codex 用你的 ChatGPT 账号登录，额度也和 ChatGPT 会员绑定——**如果你已经是 ChatGPT 会员，用 Codex 不用再额外付费**，共用一份额度。
+2026 年 7 月起，可以算是"一个东西"了：Codex 不再是独立软件，而是 ChatGPT 桌面应用里的一个模式。它用你的 ChatGPT 账号登录，额度和 ChatGPT 会员绑定。**如果你已经是 ChatGPT 会员，用 Codex 不用再额外付费**，共用一份额度。
 
-**Q2：我完全不会编程，能用 Codex 吗？**
+**Q2：我以前装的独立 Codex App 怎么办？**
 
-能。Codex 名字里虽然有 "Code"，但它早就不只是写代码工具了。做网页、整理文件、分析数据、操作电脑……很多事它都能替你干。不会编程反而更要靠它——它能帮你把不会的部分（比如装开发工具）也一并做了。
+正常更新就行。更新后它自动变成新版 ChatGPT 桌面应用，项目、设置、历史记录都保留。如果你以前装的是旧版 ChatGPT 桌面应用，它已被改名 ChatGPT Classic、不再更新，建议换到新版。
 
-**Q3：国内没有 ChatGPT 账号，是不是就用不了？**
+**Q3：我完全不会编程，能用 Codex 吗？**
 
-不是。看第九章，有三种替代接入方案，其中 Codex++ 对小白最友好。但要有心理准备：这些方案比官方账号折腾，且效果取决于你接的国产模型能力。
+能。Codex 名字里虽然有 "Code"，但它早就不只是写代码工具了。做网页、整理文件、分析数据、操作电脑……很多事它都能替你干。不会编程反而更要靠它，它能帮你把不会的部分（比如装开发工具）也一并做了。
 
-**Q4：让它干活时它乱改、跑偏怎么办？**
+**Q4：国内没有 ChatGPT 账号，是不是就用不了？**
+
+不是。看第九章，有三种替代接入方案，其中 Codex++ 对小白最友好。注意这些方案作用在命令行版的 Codex 上，和合并后的桌面应用不是一回事。要有心理准备：这些方案比官方账号折腾，且效果取决于你接的国产模型能力。
+
+**Q5：让它干活时它乱改、跑偏怎么办？**
 
 两个办法：①任务复杂就先开**计划模式**，让它先报方案再动手；②把规矩写进 **AGENTS.md**，比如"改前先解释""别动其他文件"。详见第七章。
 
-**Q5：它干到一半，我想停下来或者改方向？**
+**Q6：它干到一半，我想停下来或者改方向？**
 
 把"跟进行为"设成"引导"（第五章），就能中途直接打断、插入新的指示，不用干等它跑完。
 
-**Q6：Windows 用户是不是很吃亏？**
+**Q7：Windows 用户是不是很吃亏？**
 
-不太吃亏。对话、写代码、做网页、计划模式、AGENTS.md，乃至"操控电脑"（Computer Use），现在 Windows 都能用。只有几个偏系统级的小功能（Appshots 截窗、锁屏后继续操作、屏幕记忆 Chronicle）暂时是 Mac 独有，详见第十章。
+不太吃亏。对话、写代码、做网页、计划模式、AGENTS.md，乃至"操控电脑"（Computer Use），现在 Windows 都能用。只有几个偏系统级的小功能（Appshots 截窗、锁屏后继续操作、屏幕记忆 Computer History）暂时是 Mac 独有，详见第十章。
 
-**Q7：Codex 和 Claude Code 我该学哪个？**
+**Q8：Codex 和 Claude Code 我该学哪个？**
 
-两个高度相似，学会一个另一个很快上手。建议**先挑一个上手就行**（哪个能用上用哪个），把基本节奏跑顺。等工作里真用出依赖、有余力了，再装另一个换着用——它们各有所长，但一开始没必要给自己加负担。
+两个高度相似，学会一个另一个很快上手。建议**先挑一个上手就行**（哪个能用上用哪个），把基本节奏跑顺。等工作里真用出依赖、有余力了，再装另一个换着用。它们各有所长，但一开始没必要给自己加负担。
 
 ---
 
@@ -461,14 +473,16 @@ AGENTS.md 是一个文本文件，相当于你给 Codex 写的一份"长期工�
 
 - **把常做的事封装成 Skill / 插件**：叫一声就执行，省下重复描述的时间
 - **用好 `/goal` 跑大任务**：定义清楚成功条件，让它自己长时间循环验证
+- **试试旁边的 Work 模式**：调研、写报告、整理数据这类要跑很久的活，交给它比聊天模式靠谱
 - **学有余力，再添一把武器**：Codex 用顺之后，可以把另一个主流 Agent 工具 Claude Code 也装上，两个都掌握，AI 干活这条路就基本打通了
 
 ---
 
 ## 扩展阅读
 
-本文内容综合参考了以下原作者的一手教程，强烈推荐阅读原文：
+本文内容综合参考了以下一手教程和报道，强烈推荐阅读原文（前几篇写于 Codex 独立 App 时期，操作细节以本文和官方最新说明为准）：
 
+- [《Codex 终于反超 Claude Code，但付出了惨重代价》](https://www.36kr.com/p/3915298041834883) · **36氪**（2026-07，Codex 并入 ChatGPT 与 OpenAI 产品收缩的来龙去脉）
 - [《从0到1带你速通Codex，我整理的终极保姆教程来了》](https://mp.weixin.qq.com/s/5kgVdLNABViv8uAnD0M6Ag) · 数字生命卡兹克（微信公众号）
 - [《写给 Codex 小白用户的全网最详细教程：从 0 到 1，把它真正用起来》](https://mp.weixin.qq.com/s/Dly84gYy3tI7CZzcx6F3hQ) · AI范儿（微信公众号）
 - [《【保姆级教程】Codex 国内也能畅快用，亲测有效》](https://mp.weixin.qq.com/s/Qvfr9LC2wF9ltCEyKFqK3g) · 苍何（微信公众号）

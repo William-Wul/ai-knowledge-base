@@ -1,7 +1,7 @@
 ---
 title: DeepSeek 这盘棋：不追"最强"，追"够用、够快、够便宜"
-description: 2026 年 7 月 31 日，DeepSeek 发布 V4-Flash 正式版：参数一个没改，Agent 跑分却反超自家旗舰 Pro。把这次更新和三个月前的 V4 首发串起来看，DeepSeek 的打法就清楚了——不拼"最贵最强"，拼"够用、够快、够便宜、好接入"。这篇文章把这盘棋完整讲一遍。
-date: 2026-08-01
+description: 从 4 月 V4 首发、7 月 Flash 正式版到 8 月 V4 Pro 正式版涨价与 Harness 开源，DeepSeek 的打法已经很清楚——不拼"最贵最强"，拼"够用、够快、够便宜、好接入"。这篇文章把这盘棋完整讲一遍。
+date: 2026-09-05
 ---
 
 # DeepSeek 这盘棋：不追"最强"，追"够用、够快、够便宜"
@@ -49,7 +49,7 @@ date: 2026-08-01
   </div>
   <div style="display:flex; align-items:center; gap:14px; border:1px solid #e6dada; border-radius:10px; padding:14px 16px; background:#faf5f5;">
     <div style="flex-shrink:0; width:48px; text-align:center; color:#9a4a4a; font-weight:700; font-size:14px; line-height:1.5;">✗<br>没更新</div>
-    <div style="font-size:14px; color:#5a4a4a; line-height:1.8;"><b>V4-Pro 的 API、App 和网页端</b>都没有同步切换。官方说法是：V4-Pro 正式版"将会尽快发布"。</div>
+    <div style="font-size:14px; color:#5a4a4a; line-height:1.8;"><b>V4-Pro 的 API、App 和网页端</b>都没有同步切换。官方说法是：V4-Pro 正式版"将会尽快发布"。（后续：正式版已于 8 月 13 日发布，见下文「第三步棋」。）</div>
   </div>
 </div>
 
@@ -129,25 +129,40 @@ date: 2026-08-01
 **V4-Flash 正式版原生支持 Responses API——也就是兼容 OpenAI 的接口格式；同时针对 Codex 工作流做了优化，并适配 Claude Code、OpenCode、CodeBuddy 等主流编程 Agent 工具。**
 
 ![DeepSeek API 文档的 Responses API 说明](/images/frontier/deepseek-v4/responses-api.png)
-<p class="figcaption">DeepSeek 官方文档：Responses API 目前仅支持 V4-Flash，并预告 2026 年 8 月初将增加对 V4-Pro 的支持。（图源：DeepSeek 官方 API 文档）</p>
+<p class="figcaption">DeepSeek 官方文档：Responses API 起初仅支持 V4-Flash，并预告 2026 年 8 月初增加对 V4-Pro 的支持——这个承诺已兑现，8 月 13 日 V4 Pro 正式版的文档里，Responses API 和兼容 Anthropic 格式的接口都已上线。（图源：DeepSeek 官方 API 文档）</p>
 
 翻译成人话：**一个现在跑在别家模型上的 Agent 应用，想把底层换成 DeepSeek，迁移成本被刻意压到了极低。** 模型能力是一场比赛，接口标准是另一场比赛——后者决定的是开发者生态"人往哪边流"。DeepSeek 两场都在打。
 
 ---
 
-## 把两步棋串起来，DeepSeek 的打法就清楚了
+## 第三步棋（8 月）：旗舰补齐，环境开源
 
-现在可以回答开头那三个"反常"了。把 4 月和 7 月串成一条线：
+本文首发后不到两周，8 月 12 日到 13 日，DeepSeek 又连落三子，把这盘棋补完整了：
+
+**① V4-Flash 学会"看图"（8 月 12 日）。** 多模态版本 V4-Flash-Vision-Exp 上线，Flash 系列从纯文字扩展到能理解图片，多模态 API 同步开放。
+
+**② V4 Pro 正式版来了，同时大幅涨价（8 月 13 日）。** 比预计晚了一个月。官方口径里，它部分 Agent 和编程指标超过 Claude Opus 4.8、个别指标超过 Fable 5；但和成绩一起来的，是 API 定价大幅上调。发布当天两边 headlines 打架：一边说"比对手便宜 100 倍"，一边说"涨价 12 倍、比 GPT 还贵"。**两个说法都是截取了特定场景的概括**：前者按旧价和缓存命中算，后者按峰谷调价后的最贵档算。有第三方拿 Artificial Analysis 的快照对过账：如果能力分和 GPT-5.6 Luna 接近，峰谷涨价后的 DeepSeek 在同档模型里未必最便宜。选型别看标题，按你自己的用量结构算一遍账单。
+
+**③ DeepSeek Harness 开源上线（8 月 13 日）。** 就是 7 月那份成绩单小字里写的"自研运行框架（即将发布）"，现在真的放出来了。它的设计原则是"一切皆插件"：模型、工具、会话、沙箱、Agent 循环、界面，全是可替换的插件；并且刻意兼容别家生态：MCP、Claude Code 和 Codex 的 Hooks、OpenAI 接口格式都接。有意思的是，同一周 OpenAI 也把 Codex 的 Harness 全面开源了，两家大厂前后脚把"壳"从内部零件变成了公共基础设施。这套东西怎么玩，站内[《Harness 可以 DIY》](/stage-2/harness-diy)有专讲。
+
+这一步的意义在于：**7 月那份"系统成绩"里属于环境的那一半，现在也开放了**，任何人都可以拿同一套运行环境去复现成绩、改进流程，或者嵌进自己的产品。"模型便宜"之外，DeepSeek 把"接入省事"又往深推了一层。
+
+---
+
+## 把三步棋串起来，DeepSeek 的打法就清楚了
+
+现在可以回答开头那三个"反常"了。把 4 月、7 月、8 月串成一条线：
 
 <div style="border:1px solid #dde7e0; border-radius:12px; padding:16px 18px; margin:18px 0; background:#f6faf7;">
   <div style="font-size:14px; color:#33503c; line-height:2.1;">
     <b>4 月，用架构创新把"用得起"做到极致</b>——超长文本的计算成本降到前代的约四分之一，国产芯片发布当天就能跑；<br>
     <b>7 月，用后训练把"会干活"提上来</b>——不动一个参数，把 Agent 基准拉高一个档次，让便宜的轻量模型在干活场景反超旗舰；<br>
+    <b>8 月，把旗舰和环境都补齐</b>：V4 Pro 正式版冲能力上限（但价格不再是无脑便宜），Harness 开源把"会干活"的运行环境也开放出来；<br>
     <b>全程，用接口兼容把"迁移成本"压到最低</b>——让别家生态里的开发者几乎可以"平移"过来。
   </div>
 </div>
 
-三件事拼在一起，就是 DeepSeek 在 Agent 时代的完整打法：**不拼"最贵最强"，拼"够用、够快、够便宜、好接入"。** 因为 Agent 应用的特点是高频、多轮、反复调用工具——对单价和速度的敏感远超聊天场景。谁能在"够强 × 够快 × 够便宜"的平衡点上站住，谁就能吃下这块正在放量的市场。模型竞争的主战场，正在从"谁的模型更聪明"，转向"谁的模型更能干活、干活更便宜、接入更省事"。
+这些事拼在一起，就是 DeepSeek 在 Agent 时代的完整打法：**不拼"最贵最强"，拼"够用、够快、够便宜、好接入"。** 因为 Agent 应用的特点是高频、多轮、反复调用工具——对单价和速度的敏感远超聊天场景。谁能在"够强 × 够快 × 够便宜"的平衡点上站住，谁就能吃下这块正在放量的市场。模型竞争的主战场，正在从"谁的模型更聪明"，转向"谁的模型更能干活、干活更便宜、接入更省事"。
 
 顺带提醒一句：同期报道里出现了"500 亿元融资""520 亿美元估值""新一轮估值 710 亿美元"等资本数字。**这些目前都只是媒体消息，没有公司公告或审计材料背书**，看到时按"据凤凰网科技报道"理解就好，别当作确认事实。
 
@@ -165,7 +180,7 @@ date: 2026-08-01
   </div>
 </div>
 
-DeepSeek 这次发布的真正价值，不是多了一个新版本，而是用两步棋把行业的下一程竞赛提前亮了出来：**预训练定底子，后训练定手艺；而决定胜负的，越来越是谁能把"会干活"做得又快、又便宜、又好接入。**
+DeepSeek 这一系列发布的真正价值，不是多了几个新版本，而是用三步棋把行业的下一程竞赛提前亮了出来：**预训练定底子，后训练定手艺；而决定胜负的，越来越是谁能把"会干活"做得又快、又便宜、又好接入。**
 
 ---
 
@@ -174,5 +189,8 @@ DeepSeek 这次发布的真正价值，不是多了一个新版本，而是用�
 - [《DeepSeek V4 正式版来了，新能力浮出水面，性价比之王开战》](https://mp.weixin.qq.com/s/N0ybT7ZiRcFhqhn4fly0Uw) · **凤凰网科技**（微信公众号，2026-07-31，覆盖本次更新、Agent 基准、接口适配与资本动向）
 - [《刚刚，DeepSeek V4 系列更新，架构没变，Agent 能力为何大涨》](https://mp.weixin.qq.com/s/_1gB8KqcLT18vhHXbMbMug) · **AI 科技评论**（微信公众号，2026-07-31，用预训练与后训练的区别解释本次提升，并对官方评测边界做了克制说明）
 - [《倒反天罡？DeepSeek-V4-Flash 正式版上线，干翻自家先发的 Pro》](https://mp.weixin.qq.com/s/WC4HFbz9LoOgk-GTQU7akA) · **智东西**（微信公众号，2026-07-31，用规格、价格和官方图表快速对比 Flash 与 Pro）
+- [《万众期待！DeepSeek V4 Pro 0813 正式版发布》](https://mp.weixin.qq.com/s/c5KsUyqaGduAkfhPmeZKsg) · **橘AI**（微信公众号，2026-08-13，V4 Pro 正式版官方基准图快照）
+- [《DeepSeek 涨价 12 倍，比 GPT 还贵，斩杀线彻底让位了》](https://mp.weixin.qq.com/s/e35aJs_ZjM9Seg_GZK6Jjw) · **AI范儿**（微信公众号，2026-08，用官方调价表和第三方快照质疑性价比，标题虽冲、账本值得一看）
+- [《DeepSeek Harness 上线：一切皆为插件，一切皆是可能》](https://mp.weixin.qq.com/s/FsFE62YVlR08FNM1Ar0kZg) · **赛博禅心**（微信公众号，2026-08-13，Harness 插件架构的长篇整理）
 - [《DeepSeek V4 震撼发布！实现全球开源领先》](https://mp.weixin.qq.com/s/s1jhzL6DEY65nNSk4QIyoQ) · **新智元**（微信公众号，2026-04-24，V4 首发的架构创新与训练方案详解）
 - [《刚刚，DeepSeek V4 双版本正式上线！》](https://mp.weixin.qq.com/s/bRZnEfHaJnJwkP04-5R_vQ) · **机器之心**（微信公众号，2026-04-24，V4 首发速报，含国产算力 Day 0 适配细节）

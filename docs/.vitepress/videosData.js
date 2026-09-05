@@ -145,7 +145,7 @@ export const VIDEO_SECTIONS = [
         stats: '156万播放 · 15.8万收藏',
         cover: '/videos/covers/v005.jpg',
         reason:
-          'Claude Code 从装到用：权限怎么给、省钱命令、给 AI 立规矩的 CLAUDE.md，跟着做出第一个项目。',
+          'Claude Code 从装到用：权限怎么给、省钱命令、给 AI 立规矩的 CLAUDE.md，跟着做出第一个项目。录制于 2026 年 5 月；此后 Fable 5 上线、订阅规则有调整，以官方最新说明为准。',
       },
       {
         id: 'v002',
@@ -157,7 +157,7 @@ export const VIDEO_SECTIONS = [
         stats: '44万播放 · 4.8万收藏',
         cover: '/videos/covers/v002.jpg',
         reason:
-          '从订阅选档、权限怎么给，到自动提交代码、定时任务、手机遥控电脑，Codex 的完整用法一条视频过一遍。',
+          '从订阅选档、权限怎么给，到自动提交代码、定时任务、手机遥控电脑，Codex 完整用法一条视频过一遍。录制于 Codex 独立 App 时期；2026 年 7 月起 Codex 并入 ChatGPT 桌面应用，入口以新版为准，方法仍然通用。',
       },
     ],
   },
