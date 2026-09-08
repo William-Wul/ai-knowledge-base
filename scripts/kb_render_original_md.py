@@ -113,6 +113,8 @@ def append_unplaced_images(body: str, images: Iterable[Dict], placed: Set[str], 
 def normalize_for_fulltext_check(text: str) -> str:
     text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text)
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    # Markdown escapes punctuation (for example, a leading "- 完 -").
+    text = re.sub(r"\\([!\"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])", r"\1", text)
     text = re.sub(r"[`*_#>]", "", text)
     return re.sub(r"\s+", "", text)
 

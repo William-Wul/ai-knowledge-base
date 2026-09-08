@@ -2,6 +2,18 @@
 
 ---
 
+## v1.62 · 2026-09-08
+
+### 视频课上新 ×2：Agent 沙箱科普 + AI 视频云端自部署
+
+- 基础科普新增：小白debug《AI Agent的沙箱是什么？它和Docker容器/虚拟机有什么区别?》（BV14sorBiEgP，7:05，入库时 23.5 万播放）——物理机→虚拟机→容器→MicroVM 演进线 + 腾讯开源 CubeSandbox 架构，与 v003/v011 的 Harness 系列衔接出"执行环境"层
+- 创作实战新增：小白debug《MiniMax-H3 API太贵？云端自部署，让成本压到 1/8》（BV1qebY6FEL6，9:47，入库时 22.6 万播放）——云 GPU 自部署视频模型全流程（Claude Code 当运维、SageAttention + Turbo LoRA 加速、RTX 超分、ComfyUI API 批量出片）；推荐语已标注 Akamai 商单属性
+- 素材入库 V012、V013（转写稿 + 勘误表 + 帧导航 + notes）；主题笔记 synthesize：agent-harness-and-runtime（V012）、ai-agent-safety-risk（V012）
+- V012 专名校验：Cubelet / E2B 兼容 / MiniMax 案例均对照 GitHub README 与公开报道核实；「原宝的在线编程」（4:09）查无公开署名，标 ❓ 待 William 裁决
+- scripts 微调：kb_curate.py / kb_render_original_md.py 全文比对时忽略 Markdown 转义反斜杠（各 +2 行）
+
+---
+
 ## v1.61 · 2026-09-04
 
 ### AI 前沿新文：《GPT-6 Astra 发布：Claude 封号潮后的白月光》

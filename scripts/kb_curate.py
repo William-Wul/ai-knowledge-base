@@ -96,6 +96,8 @@ def markdown_image_paths(markdown: str) -> Set[str]:
 def normalize_for_fulltext_check(text: str) -> str:
     text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text)
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    # Compare visible punctuation, without Markdown escape backslashes.
+    text = re.sub(r"\\([!\"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])", r"\1", text)
     text = re.sub(r"[`*_#>]", "", text)
     return re.sub(r"\s+", "", text)
 

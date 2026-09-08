@@ -54,6 +54,18 @@ export const VIDEO_SECTIONS = [
         reason:
           'Token、上下文、Agent、Skill 这些词到底什么关系？从底层一层层搭到顶，听完能看懂 AI 圈大部分新产品。',
       },
+      {
+        id: 'v012',
+        cardTitle: 'Agent 沙箱是什么',
+        bvid: 'BV14sorBiEgP',
+        title: 'AI Agent的沙箱是什么？它和Docker容器/虚拟机有什么区别?',
+        up: '小白debug',
+        duration: '7:05',
+        stats: '23.5万播放 · 5405收藏',
+        cover: '/videos/covers/v012.jpg',
+        reason:
+          'AI 为什么需要沙箱、虚拟机和容器到底差在哪？7 分钟一条线讲透，顺带看懂腾讯开源的云沙箱 CubeSandbox 在做什么。',
+      },
     ],
   },
   {
@@ -177,6 +189,18 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v007.jpg',
         reason:
           '用 AI 做一部能变现的短剧全流程：选题、剧本、分镜、配音、剪辑。适合想搞 AI 内容创作或副业的同事当参考。',
+      },
+      {
+        id: 'v013',
+        cardTitle: 'AI 视频云端自部署',
+        bvid: 'BV1qebY6FEL6',
+        title: 'MiniMax-H3 API太贵？云端自部署，让成本压到 1/8',
+        up: '小白debug',
+        duration: '9:47',
+        stats: '22.6万播放 · 3879收藏',
+        cover: '/videos/covers/v013.jpg',
+        reason:
+          '嫌 AI 视频按量付费贵？跟 UP 在云 GPU 上自部署视频模型，每秒成本约 6 分钱，还能批量出片。Akamai 商单，价格数字听个参考。',
       },
     ],
   },
