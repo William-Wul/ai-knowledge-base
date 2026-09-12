@@ -2,6 +2,17 @@
 
 ---
 
+## v1.63 · 2026-09-12
+
+### AI 前沿新文：《GPT-6 发布这一周回看：狂欢与思考》
+
+- 新增 `docs/frontier/gpt6-week-review.md`：编年史结构回看 GPT-6 Astra 发布后七天——发布日能力+口号（Computer Use 首次解释）、同日官博跑分反复修改风波（幻觉率 4.2%→2.0%→恢复、Fable 5.1 87.8%→78%→83%、ARC-AGI-3 98.6%→99.99%，Fortune 背书）、民间实测爆发（10 个案例 + 边界：偏科/审美/稳定性/额度）、额度危机与推理档位科普（思考预算、Ultra=专项工作组、官方建议降档）、首席科学家《异类的心智》泼冷水（思维链监控变窄三原因、RSI 两根杠杆）、官方指南自曝五毛病 + slop words 黑名单、48 关验证码击穿 + 德语维基劫持插曲、Images 2.5 被忽略的更新；小结三个判断（进软件干活 / 跑分像广告位 / 盯规则补课速度）
+- 配图 18 张（`docs/public/images/frontier/2026-09-11/`），全部逐张核查实物后选用：官方基准汇总、FrontierMath 对比图、Fortune 报道截图、办公室巡游/PCB/T 细胞演示（含 2 张原版 GIF）、祈年殿、海盗船自证、马里奥星球、金克斯失败对比、档位滑块 GIF、Tibo 降档建议帖、可监控性说明、官方指南首页、slop words 黑名单、reCAPTCHA 复选框、Images 2.5 换装/墨镜对比；图源均标一手出处（OpenAI 官博/开发者文档、Fortune、X 原帖、Google）
+- 素材入库 A237–A245 共 9 篇（GPT-6 发布一周后实测/教程/官方文档簇，138 张图全部下载成功并逐张看过）；主题笔记 synthesize：openai-chatgpt-product-evolution（主更）、ai-agent-safety-risk、skill-design-methodology、ai-image-generation、llm-reshaping-software-and-work、desktop-agent-ecosystem、ai-learning-approach
+- 关键数字核验：跑分修改细节对 A233 原文逐项核验；kb_curate 校验 258 篇 0 错误 0 警告
+
+---
+
 ## v1.62 · 2026-09-08
 
 ### 视频课上新 ×2：Agent 沙箱科普 + AI 视频云端自部署
