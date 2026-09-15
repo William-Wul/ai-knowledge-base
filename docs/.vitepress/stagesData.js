@@ -44,6 +44,7 @@ export const PRACTICE_LINKS = [
   '/stage-2/prompt-cases',
   '/stage-2/context-management',
   '/stage-2/writing-no-ai-flavor',
+  '/stage-2/learn-prompt-from-openai-anthropic',
   '/stage-3/write-good-skill',
   '/stage-3/loop-engineering',
   '/stage-4/multi-agent-teamwork',
