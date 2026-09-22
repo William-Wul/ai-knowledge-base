@@ -11,9 +11,9 @@ TypeSafe 的 **Jev** 已经向所有人开放。注册就送 5 美元额度，�
 
 举个例子。你扔给它一条客诉消息「支付连不上，已经影响生意」，问「该交给技术还是账务」，它答：技术，把握 96%。再问「有多着急」，它答：4 分（满分 5 分）。就这样，没有小作文。
 
-![TypeSafe 官方公告 Jev 向所有人开放](/images/stage-2/jev-play-guide/open-access.jpg)
+![TypeSafe 官方公告 Jev 向所有人开放](/images/stage-2/jev-play-guide/open-access.png)
 
-<div class="figcaption">TypeSafe 官方公告：Jev 向所有人开放，不用排队。注册送的 5 美元额度，按目前定价够试很久。（图源：TypeSafe AI 官方 X 账号）</div>
+<div class="figcaption">TypeSafe 官方公告：Jev 向所有人开放，不用排队。注册入口就在图里。（图源：TypeSafe AI 官方 X 账号）</div>
 
 ---
 
@@ -32,7 +32,7 @@ TypeSafe 的 **Jev** 已经向所有人开放。注册就送 5 美元额度，�
 
 ![Choice、Score、Noul 三种答题方式示意](/images/stage-2/jev-play-guide/three-outputs.png)
 
-<div class="figcaption">三种答题方式：挑一个、打个分、报个概率。（图源：TypeSafe 公开资料）</div>
+<div class="figcaption">三种答题方式：挑一个（Choice）、打个分（Score）、报个概率（Noul）。（图源：TypeSafe 公开资料）</div>
 
 每次答题，它还会多给两个数：
 
@@ -72,7 +72,7 @@ TypeSafe 的 **Jev** 已经向所有人开放。注册就送 5 美元额度，�
 
 ### 1. 批量过筛子
 
-信息流过滤、邮件分流、工单归类、内容初筛，都是同一类活：**一堆东西进来，每条只要一个很短的判断**。
+信息流过滤、邮件归类、工单分类、内容初筛，都是同一类活：**一堆东西进来，每条只要一个很短的判断**。
 
 有人做了个 X（原 Twitter）时间线过滤插件：用户用大白话设定不想看什么（引战、币圈、纯情绪帖），每来一条新帖，Jev 判断一次「折叠还是展示」。实测中位耗时 380 毫秒，比眨一下眼还快。
 
@@ -98,7 +98,7 @@ TypeSafe 的 **Jev** 已经向所有人开放。注册就送 5 美元额度，�
 
 <div class="figcaption">30 选 1 分类任务的中位耗时：Jev 154 毫秒，其余要 0.8 秒到 1.5 秒以上。（图源：Ori Eval / OpenRouter，2026 年 9 月）</div>
 
-### 3. 按「把握大小」分流
+### 3. 按「把握大小」分开处理
 
 光有答案还不够，还要看它有多大把握。把把握写进规则，自动化才敢往下走：
 
@@ -116,7 +116,7 @@ TypeSafe 的 **Jev** 已经向所有人开放。注册就送 5 美元额度，�
 
 1. **大模型干活**：写回复、改代码、出方案。
 2. **Jev 验收**：达标吗？风险高吗？要重做吗？
-3. **分流**：过了就用；不过就打回。
+3. **处理结果**：过了就用；不过就打回。
 
 像学生写完作业，同桌只负责打勾叉。验收又快又便宜，不合格的自动退回。
 
@@ -124,13 +124,13 @@ TypeSafe 的 **Jev** 已经向所有人开放。注册就送 5 美元额度，�
 
 它也便宜到可以随手调。下图里 Jev 在最左边：大约 0.0003 美元判一次，准确率和贵很多的模型差不多。**它不是更准，是更快、更便宜、够用**。
 
-![准确率与成本散点图](/images/stage-2/jev-play-guide/accuracy-cost.png)
+![准确率与成本散点图](/images/stage-2/jev-play-guide/accuracy-cost.jpg)
 
 <div class="figcaption">四条工作流的平均成绩：横轴越靠左越便宜。Jev 最左，一次约 0.0003 美元，准确率约 68%。（图源：TypeSafe 公开评测）</div>
 
 实时场景更直观。同一局乒乓球演示里，Jev 一次决策约 0.2 秒，一局能做几十次按键判断；聊天模型要 2.5 秒以上才能给一次。
 
-![Pong 演示中的决策延迟对比](/images/stage-2/jev-play-guide/pong-latency.jpg)
+![Pong 演示中的决策延迟对比](/images/stage-2/jev-play-guide/pong-latency.png)
 
 <div class="figcaption">同一局乒乓球：Jev 一次约 0.2 秒，其余模型要几秒。（图源：TypeSafe / Vercel 公开演示）</div>
 
@@ -138,7 +138,7 @@ TypeSafe 的 **Jev** 已经向所有人开放。注册就送 5 美元额度，�
 
 ## 什么时候别用
 
-**适合它的是「选项有限、要快、要批量」的判断**。反过来，要写东西、要想清楚复杂问题、要把钱和决定全权交给它，都不合适。
+**它只适合「选项有限、要快、要批量」的判断**。要写东西、要想清楚复杂问题、要把钱和决定全交给它，都不适合用它。
 
 先看一个很说明问题的实测。场景：两车道，左前方一只狗，右前方一个人。规则写成「安全第一」时，它选急刹车，把握 94%。
 
@@ -148,33 +148,33 @@ TypeSafe 的 **Jev** 已经向所有人开放。注册就送 5 美元额度，�
 
 把规则改成「先到达，最后才是安全」，它**还是**选急刹车，只是把握从 94% 降到 77%。
 
-![规则改为优先到达后仍选急刹 77%](/images/stage-2/jev-play-guide/driving-77.jpg)
+![规则改为优先到达后仍选急刹 77%](/images/stage-2/jev-play-guide/driving-77.png)
 
 <div class="figcaption">规则改成「优先到达」后，它仍然选急刹车，概率 77%。你的指令不一定压得住它自己的倾向。</div>
 
-还有一个更疼的翻车：有人让 Jev 全权判断币价涨跌去自动交易，被假盘口带偏，杠杆下亏了很多。**位置放错，快就是亏钱加速器**。
+还有一个更疼的翻车：有人让 Jev 自己判断币价涨跌去自动交易，被假盘口带偏，杠杆下亏了很多。**用错地方，快反而帮你更快亏钱**。
 
 <div style="display:flex; gap:14px; flex-wrap:wrap; margin:18px 0;">
   <div style="flex:1; min-width:240px; border:2px solid #cde0d4; border-radius:12px; padding:18px; background:#f1f6f2;">
     <div style="font-weight:700; color:#2D5A3D; margin-bottom:8px;">可以用</div>
-    <div style="font-size:14px; line-height:1.9; color:#33503c;">选项能列全、标准能写清<br>量大，或者要求快<br>答案要好让程序直接用<br>例如：筛帖子、归工单、打分、分流、验收</div>
+    <div style="font-size:14px; line-height:1.9; color:#33503c;">选项能列全、标准能写清<br>量大，或者要求快<br>答案要好让程序直接用<br>例如：筛帖子、归工单、打分、归类、验收</div>
   </div>
   <div style="flex:1; min-width:240px; border:2px solid #d9c4c4; border-radius:12px; padding:18px; background:#faf3f3;">
     <div style="font-weight:700; color:#9a4a4a; margin-bottom:8px;">别用</div>
-    <div style="font-size:14px; line-height:1.9; color:#5a4040;">要写长文、要讲清楚为什么<br>任务边界模糊、选项列不全<br>对手在故意骗你，或者钱全权交给它<br>例如：写方案、复杂多步操作、自动交易</div>
+    <div style="font-size:14px; line-height:1.9; color:#5a4040;">要写长文、要讲清楚为什么<br>任务边界模糊、选项列不全<br>对手在故意骗你，或者把钱和决定全交给它<br>例如：写方案、复杂多步操作、自动交易</div>
   </div>
 </div>
 <p class="figcaption">先问自己：这活是不是「选项有限、要快、答案好执行」？是，再上 Jev。</p>
 
-实测里还反复出现这些短板：写不了文本；需要一步步推的复杂推理不行；中文细一些的理解偏弱；开放、动态的网页任务容易看走眼（公开测试里出现过 20 题只对 1 题）。一次能塞进它的材料大约 32k token（大致几万字量级），定位就是「快速判断员」，不是第二个全能聊天窗。
+实测里还反复出现这些短板：写不了文本；需要一步步推的复杂推理不行；中文细一些的理解偏弱；开放、动态的网页任务容易看走眼（公开测试里出现过 20 题只对 1 题）。一次能塞进它的材料大约几万字，它就是个「快速判断员」，不是第二个全能聊天窗。
 
 ---
 
 ## 小结
 
 - **先出题，再让它答**。选项写死、一题一事、标准写清，几道题一起问。
-- **四个玩法可以叠着用**。先用批量筛子；再按把握大小分流；需要时让大模型干活、Jev 验收。
-- **封闭判断才上它**。写作、复杂推理、全权决策都不是它的位置；最终决定权留在人这边。
+- **四个玩法可以叠着用**。先用批量筛子；再按把握大小分开处理；需要时让大模型干活、Jev 验收。
+- **写作、复杂推理、全权决策都不适合用它**。最终决定权留在人这边。
 
 ---
 
