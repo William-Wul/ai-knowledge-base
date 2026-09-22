@@ -2,6 +2,16 @@
 
 ---
 
+## v1.65 · 2026-09-22
+
+### AI 前沿新文：《Jev 背后的野心，是完全的自动化》
+
+- 新增 `docs/frontier/jev-full-automation.md`：整理自公众号「橘AI」原创笔记（源：TypeSafe CEO Diogo Almeida 发布前演讲，YouTube 链接文内给出）——Jev 不生成文本、只输出带置信度的判断；正文六节：能力巅峰信任谷底 / RLHF 把人放进循环 / 谄媚与幻觉两个副产品 / 自动化为什么还没发生（RLVR×RLHF 拉扯）/ 软件行业窘境（量变非质变）/ Jev 第三条路（校准的决策），附 RLHF·RLVR·Jev 北极星对比表与"跟你有什么关系"三条
+- 配图 1 处：原文头图（`docs/public/images/frontier/2026-09-22/jev-header.png`，1080×417，图源标注为公众号「橘AI」）
+- frontier/ 目录按日期自动并入「AI 前沿」侧边栏，无需改 `stagesData.js`
+
+---
+
 ## v1.64 · 2026-09-15
 
 ### 进阶实践新文：《跟 OpenAI 和 Anthropic 学写提示词》
