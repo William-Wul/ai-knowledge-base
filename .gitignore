@@ -49,6 +49,13 @@ qa-shots/
 /ai-native-org-screenshots/
 /build_ppt.py
 /deliverables/
+
+# 《AI 对组织变革的影响》研究 PPT 工作产物（设计稿/封面/脚本/成稿/质检图），不进公开仓库
+/DESIGN.md
+/assets/
+/output/
+/scripts/build-org-change-ppt.mjs
+/qa/
 /AI Native 组织转型案例集.md
 /如何建成AI Native组织-PPT/
 /如何建成AI Native组织——思考与实施建议.md
