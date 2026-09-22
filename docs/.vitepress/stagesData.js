@@ -50,6 +50,7 @@ export const PRACTICE_LINKS = [
   '/stage-4/multi-agent-teamwork',
   '/stage-4/ai-industry-research',
   '/stage-2/harness-diy',
+  '/stage-2/jev-play-guide',
 ]
 
 // 「AI 前沿」栏目的额外文章（物理在 stage-6 的趋势长文，按 date 与专题混排）
