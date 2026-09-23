@@ -3,19 +3,21 @@
     <!-- 元信息条 -->
     <div class="mr-meta">
       <span class="mr-meta-item">数据来源：<a :href="lb.sourceUrl" target="_blank" rel="noopener">{{ lb.source }}</a></span>
-      <span class="mr-meta-item">综合 {{ lb.sourceCount }} 家公开榜单</span>
+      <span class="mr-meta-item">{{ lb.sourceCount }} 家机构 · {{ lb.evaluationCount }} 项评测</span>
       <span class="mr-meta-item">原榜更新于 {{ lb.sourceUpdatedAt }}</span>
       <span class="mr-meta-item">本站同步于 {{ syncedText }}</span>
     </div>
+
+    <p v-if="isStale" class="mr-stale" role="status">榜单已超过两天未同步，当前显示历史数据。<a :href="lb.sourceUrl" target="_blank" rel="noopener">查看实时原榜 →</a></p>
 
     <!-- 表头（桌面端） -->
     <div class="mr-head" aria-hidden="true">
       <span class="c-rank">排名</span>
       <span class="c-model">模型</span>
       <span class="c-date">上线日期</span>
-      <span class="c-comp">评测完整度</span>
+      <span class="c-comp">评测证据</span>
       <span class="c-price">输入 / 输出成本</span>
-      <span class="c-score">共识分</span>
+      <span class="c-score">共识指数</span>
     </div>
 
     <!-- 榜单行：点击跳转到 AIHOT 该模型的各榜明细页 -->
@@ -37,40 +39,48 @@
       </span>
       <span class="c-date">{{ m.releaseDate }}</span>
       <span class="c-comp">
-        <i class="comp-bar" aria-hidden="true"><i :style="{ width: m.completeness + '%' }"></i></i>
-        {{ m.completeness.toFixed(1) }}%
+        <span>{{ m.evidenceCount }} 项评测</span><small>{{ m.evidenceStatus }}</small>
       </span>
       <span class="c-price">
-        <template v-if="m.inputPrice">{{ m.inputPrice }} / {{ m.outputPrice }}</template>
-        <span v-else class="na">暂无</span>
+        {{ m.inputPrice ?? '暂无' }} / {{ m.outputPrice ?? '暂无' }}
       </span>
       <span class="c-score">{{ m.score.toFixed(1) }}</span>
 
       <!-- 移动端第二行：桌面端隐藏 -->
       <span class="mr-row-sub">
-        上线 {{ m.releaseDate }} · 完整度 {{ m.completeness.toFixed(1) }}% ·
-        <template v-if="m.inputPrice">成本 {{ m.inputPrice }} / {{ m.outputPrice }}</template>
-        <template v-else>成本暂无</template>
+        上线 {{ m.releaseDate }} · {{ m.evidenceCount }} 项评测 · {{ m.evidenceStatus }} ·
+        成本 {{ m.inputPrice ?? '暂无' }} / {{ m.outputPrice ?? '暂无' }}
       </span>
     </a>
 
     <!-- 来源与说明 -->
     <div class="mr-footer">
-      <p>成本单位：美元 / 百万 Token（OpenRouter 标准 API 参考价，不含缓存、批量与长上下文阶梯价）。</p>
+      <p>成本单位：人民币 / 百万 Token。价格由原榜整理自厂商官网，美元报价按原榜汇率折算；此处展示普通输入与输出价格，缓存、批量及其他优惠另计。</p>
       <p>
         榜单与数据由 <a :href="lb.sourceUrl" target="_blank" rel="noopener">AIHOT</a>
-        维护（作者：数字生命卡兹克），本站按其公开使用规则同步，每日更新一次；点击任一模型可查看它在各家榜单中的官方名次与原始分数。
+        维护（作者：数字生命卡兹克），本站按其公开使用规则同步，每日尝试同步一次；点击任一模型可查看它在各家榜单中的官方名次与原始分数。
       </p>
       <div class="mr-links">
         <a class="mr-btn primary" :href="lb.sourceUrl" target="_blank" rel="noopener">查看实时原榜 →</a>
-        <a class="mr-btn" :href="lb.rulesUrl" target="_blank" rel="noopener">共识分计算规则 →</a>
+        <a class="mr-btn" :href="lb.rulesUrl" target="_blank" rel="noopener">共识指数计算规则 →</a>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import lb from '../../data/leaderboard.json'
+
+// 浏览器打开页面后按当前时间检查，静态站停止部署时也能提示过期。
+const isStale = ref(false)
+let staleTimer
+onMounted(() => {
+  const check = () => { isStale.value = !Number.isFinite(Date.parse(lb.syncedAt)) || Date.now() - Date.parse(lb.syncedAt) > 2 * 86400_000 }
+  check()
+  staleTimer = setInterval(check, 60_000)
+})
+onUnmounted(() => clearInterval(staleTimer))
 
 const pad = (n) => String(n).padStart(2, '0')
 
@@ -205,20 +215,9 @@ const syncedText = (() => {
   font-size: 12.5px;
   color: var(--vp-c-text-2);
 }
-.comp-bar {
-  display: inline-block;
-  width: 44px;
-  height: 5px;
-  border-radius: 3px;
-  background: var(--vp-c-divider);
-  overflow: hidden;
-}
-.comp-bar i {
-  display: block;
-  height: 100%;
-  border-radius: 3px;
-  background: var(--vp-c-brand-2);
-}
+.c-comp { flex-direction: column; gap: 2px; }
+.c-comp small { font-size: 11px; }
+.mr-stale { padding: 12px 16px; border: 1px solid var(--vp-c-warning-1); border-radius: 8px; background: var(--vp-c-warning-soft); }
 
 .c-price {
   font-family: var(--vp-font-family-mono);
