@@ -20,6 +20,7 @@
         <li><a href="/hot/">AI 最新动态</a></li>
         <li><a href="/stage-1/">AI 基础学习</a></li>
         <li><a href="/stage-4/">AI 进阶实践</a></li>
+        <li><a href="/cases/">AI 实践案例集</a></li>
         <li><a href="/exams/">AI 能力自测</a></li>
         <li><a href="/vocab-book">AI 学习词汇本</a></li>
       </ul>
@@ -124,7 +125,7 @@ function triggerSearch() {
   color: var(--ink-mute);
   font-size: 13px;
   cursor: pointer;
-  min-width: 220px;
+  min-width: 150px;
   transition: all 0.2s ease;
   font-family: inherit;
 }
@@ -151,7 +152,7 @@ function triggerSearch() {
 .nav-links > li { position: relative; flex-shrink: 0; }
 .nav-links a {
   display: inline-block;
-  padding: 7px 13px; border-radius: 8px;
+  padding: 7px 9px; border-radius: 8px;
   color: var(--ink-soft);
   font-size: 14px; font-weight: 500;
   transition: all 0.18s ease;

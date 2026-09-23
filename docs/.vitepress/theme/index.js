@@ -14,6 +14,7 @@ import SidebarHeader from './components/SidebarHeader.vue'
 import ModelRanking from './components/ModelRanking.vue'
 import VideoBoard from './components/VideoBoard.vue'
 import './custom.css'
+import './components/cases.css'
 
 export default {
   extends: DefaultTheme,

@@ -66,3 +66,6 @@ qa-shots/
 # 多 agent 共用的写作 skill 正本（内部规范，不公开）
 skills/
 __pycache__/
+
+# Case payloads generated from the curated and imported snapshots before build
+docs/.vitepress/data/cases-generated/

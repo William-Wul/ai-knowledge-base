@@ -10,10 +10,12 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, useData } from 'vitepress'
+import { CASE_CATEGORIES } from '../../casesData.js'
 import { BASIC_MODULES, CAUTION_LINKS, TOOL_LINKS, PRACTICE_LINKS, FRONTIER_EXTRA_LINKS, SECTIONS, BOARDS } from '../../stagesData.js'
 
 const route = useRoute()
+const { frontmatter } = useData()
 
 // 目录 → 所属板块（目录级默认归属，2026-07-28 内容重组）
 const DIR_TO_BOARD = Object.fromEntries(
@@ -42,6 +44,13 @@ const crumbs = computed(() => {
 
   const first = parts[0]
   const full = `/${parts.join('/')}`
+
+  if (first === 'cases') {
+    const result = [{ text: 'AI 实践案例集', link: '/cases/' }]
+    const category = CASE_CATEGORIES.find(c => c.id === frontmatter.value.caseCategory)
+    if (category && frontmatter.value.caseDetail) result.push({ text: category.name, link: `/cases/${category.id}/` })
+    return result
+  }
 
   // 1) 文件级显式归属（优先于目录级默认）
   if (CAUTION_SET.has(full)) {

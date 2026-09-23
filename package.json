@@ -5,12 +5,13 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vitepress dev docs",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "dev": "node scripts/generate-practice-cases.mjs && vitepress dev docs",
+    "docs:dev": "node scripts/generate-practice-cases.mjs && vitepress dev docs",
+    "docs:build": "node scripts/generate-practice-cases.mjs && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "sync:hot": "node scripts/sync-aihot.mjs",
-    "sync:leaderboard": "node scripts/sync-leaderboard.mjs"
+    "sync:leaderboard": "node scripts/sync-leaderboard.mjs",
+    "cases:generate": "node scripts/generate-practice-cases.mjs"
   },
   "keywords": [],
   "author": "William",

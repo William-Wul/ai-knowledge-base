@@ -1,0 +1,1059 @@
+{
+  "capturedAt": "2026-09-23",
+  "sourceTotal": 1234,
+  "sourceFetched": 1206,
+  "sourceUnavailable": 28,
+  "selectionPolicy": "完整提示词、效果、来源与可复用性优先；语言不参与评分。同一质量区间交错展示不同类别；保留六个已审阅案例。",
+  "cases": [
+    {
+      "slug": "case-aa3e3c074ac1",
+      "rank": 1,
+      "category": "image",
+      "editorialScore": 97.8,
+      "sourcePromptSha256": "4f73614373f0a41804e06dfcfe31deb412ef934089a45c85b68632974b652677"
+    },
+    {
+      "slug": "real-case-07-techiebysa",
+      "rank": 2,
+      "category": "video",
+      "editorialScore": 97.5,
+      "sourcePromptSha256": "2207f08d3e4084e8069ff2c85a9079c8cd15140f260a9e80a4a6b11f23cc349f"
+    },
+    {
+      "slug": "celestial-renewal",
+      "rank": 3,
+      "category": "web",
+      "editorialScore": 98,
+      "sourcePromptSha256": "6ee7a251064e1c8bbd3dd8436a81fe4c358c545c31247a2dce7146b2567efebb"
+    },
+    {
+      "slug": "lumi-fcc36eede4ad",
+      "rank": 4,
+      "category": "web",
+      "editorialScore": 96.8,
+      "sourcePromptSha256": "8e047bfce54cc3036c7a09934483532af916e4edea4b0154a165efb10ddc969d"
+    },
+    {
+      "slug": "case-e435a002bb7d",
+      "rank": 5,
+      "category": "image",
+      "editorialScore": 97.1,
+      "sourcePromptSha256": "59d264d1c7d2ef6445b9f68522073b4f70f8314f9f257fce72972f4789db340d"
+    },
+    {
+      "slug": "shamiweb3-seedance-ai-5620b354e47d",
+      "rank": 6,
+      "category": "video",
+      "editorialScore": 97.0,
+      "sourcePromptSha256": "3ad91f4278989189636b07a3b9a95478c9b2f0c9789d14eac00d83a0dcd3f93e"
+    },
+    {
+      "slug": "daisy-wild",
+      "rank": 7,
+      "category": "web",
+      "editorialScore": 98,
+      "sourcePromptSha256": "e59966f9774a2061170e936f478d2351b6ea36a57a3efc647b0a8329cb7ec12d"
+    },
+    {
+      "slug": "real-case-05-goodmanprotocol",
+      "rank": 8,
+      "category": "image",
+      "editorialScore": 95.9,
+      "sourcePromptSha256": "1a935f08b5b5a17318f71b95ef5e42706e969b6267319266fc0e690d4b7fb0fb"
+    },
+    {
+      "slug": "minimax-h3-15-ae2cadd5c3f4",
+      "rank": 9,
+      "category": "video",
+      "editorialScore": 96.9,
+      "sourcePromptSha256": "e9eb073a0cb2dd22903b9ccba390ecc144192dbf4c4e3f245cc38af61878a08f"
+    },
+    {
+      "slug": "orbit-flora",
+      "rank": 10,
+      "category": "web",
+      "editorialScore": 98.0,
+      "sourcePromptSha256": "c25a9f505f78e99e92bdc96f0320dee2faa47cb5775ac2d45a89c4aba2f0cad2"
+    },
+    {
+      "slug": "case-7098c85a0922",
+      "rank": 11,
+      "category": "image",
+      "editorialScore": 95.8,
+      "sourcePromptSha256": "0fa40e0438b5d1d40d49e3dd7591e6088a446c142b81de3d9ef6c20aa167d096"
+    },
+    {
+      "slug": "bladesmith-competition-reality-tv-video",
+      "rank": 12,
+      "category": "video",
+      "editorialScore": 96.4,
+      "sourcePromptSha256": "5fe0ffe8f2ded67c17a9f8b51445150c276c4dafb6b2c0b94552fbf71933a416"
+    },
+    {
+      "slug": "signal-id",
+      "rank": 13,
+      "category": "web",
+      "editorialScore": 98,
+      "sourcePromptSha256": "997975007fda784c2422fb03b830ab6408a884771102591bdd6051950e347202"
+    },
+    {
+      "slug": "case-cbfe9176785a",
+      "rank": 14,
+      "category": "image",
+      "editorialScore": 95.4,
+      "sourcePromptSha256": "16c7e1b45f132a6d8a2412b44f4304651ee722464703bad53f00609a0d91d311"
+    },
+    {
+      "slug": "kresna-footer",
+      "rank": 15,
+      "category": "web",
+      "editorialScore": 97.9,
+      "sourcePromptSha256": "4104ca9bfced3612a974801f7c96614dd8121d2f264744568f3109af3e7ad2a2"
+    },
+    {
+      "slug": "cinematic-product-advertisement-with-spider-web",
+      "rank": 16,
+      "category": "image",
+      "editorialScore": 95.24,
+      "sourcePromptSha256": "c1f330158a8aaa0dd098328b5386923622352e5c791551622b1e691205e47945"
+    },
+    {
+      "slug": "cybersecurity-hero",
+      "rank": 17,
+      "category": "web",
+      "editorialScore": 97.8,
+      "sourcePromptSha256": "44646e05b1798f780dd3923e7c8fd1dd6081f137d31bf2587f32978ef5509b37"
+    },
+    {
+      "slug": "nike-hover",
+      "rank": 18,
+      "category": "web",
+      "editorialScore": 97.4,
+      "sourcePromptSha256": "b8a6ba55a8cef2b32bf85526b273637b8a147e2214c1872b99c728cad4492c77"
+    },
+    {
+      "slug": "gemini-vs-claude-velorah-1f09726b10d6",
+      "rank": 19,
+      "category": "web",
+      "editorialScore": 97.3,
+      "sourcePromptSha256": "fa55ecf599f40625a2df341a59bc65042e7547d69d26cf205a81c7a2042edbb6"
+    },
+    {
+      "slug": "neon-logic",
+      "rank": 20,
+      "category": "web",
+      "editorialScore": 97.2,
+      "sourcePromptSha256": "944ce50e32c77cd2f9e546d233582a1d79ec24aa6ae4c07b5856cd472f858177"
+    },
+    {
+      "slug": "claude-mythos-lithos-hero-df0603661e88",
+      "rank": 21,
+      "category": "web",
+      "editorialScore": 96.6,
+      "sourcePromptSha256": "9a23e77cb5361b68235528cb03a5be5722a21938be0cc5d40fa7b9359e766f31"
+    },
+    {
+      "slug": "innovation-lab",
+      "rank": 22,
+      "category": "web",
+      "editorialScore": 96.3,
+      "sourcePromptSha256": "90a5002fb4610d19cfeb39dfb7f37bcd8386892f1a66b49931a4cd370a4eeefa"
+    },
+    {
+      "slug": "prompt",
+      "rank": 23,
+      "category": "web",
+      "editorialScore": 96.0,
+      "sourcePromptSha256": "00ee092c5e29f6634fc49b9e3dfde68c77d21017cbf741081f8e58ed1ed3d9a3"
+    },
+    {
+      "slug": "case-5182e7e62bbb",
+      "rank": 24,
+      "category": "image",
+      "editorialScore": 94.88,
+      "sourcePromptSha256": "f67cc57a92a513db407a0fd547166bda54add2db1b88d785d9d965a6a280a001"
+    },
+    {
+      "slug": "fun-404-page",
+      "rank": 25,
+      "category": "web",
+      "editorialScore": 94.6,
+      "sourcePromptSha256": "65f0d73f34521a6a5c96a14d55ef88b60aeda0a67661aa1bd876ca7c33810470"
+    },
+    {
+      "slug": "lovable-1ab5b549beb5",
+      "rank": 26,
+      "category": "web",
+      "editorialScore": 93.09,
+      "sourcePromptSha256": "76a46bf24217b3d04713f76ccada50be8d24d704ca949d539c73ef0205582777"
+    },
+    {
+      "slug": "superhero-soda-promotional-posters",
+      "rank": 27,
+      "category": "image",
+      "editorialScore": 94.8,
+      "sourcePromptSha256": "e7b45d2deabb3dd07a0105f6db54b52fc2af27186a1ab7dae639bae17a30c326"
+    },
+    {
+      "slug": "ai-workflow-agents",
+      "rank": 28,
+      "category": "web",
+      "editorialScore": 92,
+      "sourcePromptSha256": "05ca5c8d3d49c544bfdf12a301863b23e800bc1780031b01daf8c9bf299c29e3"
+    },
+    {
+      "slug": "premium-black-and-white-editorial-poster",
+      "rank": 29,
+      "category": "image",
+      "editorialScore": 94.76,
+      "sourcePromptSha256": "f9fdb75377089899dffb7961d9570c5bb83aa68ca43714df0a911b3da4f052fe"
+    },
+    {
+      "slug": "email-marketing",
+      "rank": 30,
+      "category": "web",
+      "editorialScore": 92.0,
+      "sourcePromptSha256": "1d97d87ed65d76e23926a8829d04be25a6fe07f187477becfd3bd7f89b0948f1"
+    },
+    {
+      "slug": "gpt-image-2-isometric-vol-073-12b5fd775ada",
+      "rank": 31,
+      "category": "image",
+      "editorialScore": 94.41,
+      "sourcePromptSha256": "544be3db35c3c587849ec0b78b27cc3944d097d7905ad24f51f86f171ba1b01b"
+    },
+    {
+      "slug": "mind-body-healing",
+      "rank": 32,
+      "category": "web",
+      "editorialScore": 92,
+      "sourcePromptSha256": "0eda43f4b69ab508bf26d28a72573154bd80a9d65e873b6069eed6f9895f080a"
+    },
+    {
+      "slug": "human-fragments-d7c48a962c73",
+      "rank": 33,
+      "category": "image",
+      "editorialScore": 93.23,
+      "sourcePromptSha256": "f6ee4f9d9440478f2560060e28b95a1e1961760d436f30bbb94a5559530b853b"
+    },
+    {
+      "slug": "rare-gallery",
+      "rank": 34,
+      "category": "web",
+      "editorialScore": 92,
+      "sourcePromptSha256": "87ce7f906703c3ab8736c8fc406b92e450dbc504bc33ac66a563ac3a7d933dbf"
+    },
+    {
+      "slug": "case-7b69b37ecac0",
+      "rank": 35,
+      "category": "image",
+      "editorialScore": 93.13,
+      "sourcePromptSha256": "d8e85d62c1a5c5ef71d9216eb8c51a6654a8e25b58566eb035c0dc26649940f8"
+    },
+    {
+      "slug": "gpt-image-2-veo-3-lovable-cec7a074af1a",
+      "rank": 36,
+      "category": "web",
+      "editorialScore": 91.6,
+      "sourcePromptSha256": "6edefa29de200b39dcdc8c8209ec3d58f6cfeb93a372564e3cd63568bddb3838"
+    },
+    {
+      "slug": "case-5a706b064073",
+      "rank": 37,
+      "category": "image",
+      "editorialScore": 92.88,
+      "sourcePromptSha256": "91976171f11ee71e8cbc8be0375b2a0e1c87fa5c075e80cc05fa8e3768a38a67"
+    },
+    {
+      "slug": "claude-fable-aethera-fintech-42f59ca99541",
+      "rank": 38,
+      "category": "web",
+      "editorialScore": 91.2,
+      "sourcePromptSha256": "e191efec98111dec979e0118fc1e9874e5188c3002f6e96e7bf24475e48c719a"
+    },
+    {
+      "slug": "real-case-03-chesnyfcb",
+      "rank": 39,
+      "category": "image",
+      "editorialScore": 91.54,
+      "sourcePromptSha256": "946d5aa7059c5c80fad942b102844a2270a64ac865b1243cd5503a9dd37f7944"
+    },
+    {
+      "slug": "power-ai",
+      "rank": 40,
+      "category": "web",
+      "editorialScore": 90.9,
+      "sourcePromptSha256": "7da85cb611a91bdb080434dce20716b4efe5bd97224849594446e19d697ff009"
+    },
+    {
+      "slug": "case-38332d7c1f27",
+      "rank": 41,
+      "category": "image",
+      "editorialScore": 91.52,
+      "sourcePromptSha256": "9c8091dd5acf330ad0df6ee12289216d61937c1414b41f61b1809bfb783180b6"
+    },
+    {
+      "slug": "radial-diagram",
+      "rank": 42,
+      "category": "web",
+      "editorialScore": 90.6,
+      "sourcePromptSha256": "2e928d74cb6c4d56642e7a28a6be130dc5c4a3185741c7170385b05f00e1b784"
+    },
+    {
+      "slug": "alcohol-marker-travel-poster-prompt",
+      "rank": 43,
+      "category": "image",
+      "editorialScore": 91.4,
+      "sourcePromptSha256": "556b483d649d0534fbfe14b66eac723084898f68eabc312b9164dec0a1aebf6e"
+    },
+    {
+      "slug": "grok-imagine-grok-build-veldara-hero-d38c65fbe7af",
+      "rank": 44,
+      "category": "web",
+      "editorialScore": 90.0,
+      "sourcePromptSha256": "a9256988721ff8975478c2dcf20b909b83dcbff78a97cd91425cfe74e9525113"
+    },
+    {
+      "slug": "raspberry-shell-product-photography",
+      "rank": 45,
+      "category": "image",
+      "editorialScore": 90.92,
+      "sourcePromptSha256": "ccfb936ce44502d438010942e392faf8f74aee216a37af8f93f16e4a3901c41c"
+    },
+    {
+      "slug": "ai-5054adb51999",
+      "rank": 46,
+      "category": "image",
+      "editorialScore": 90.2,
+      "sourcePromptSha256": "e45cccca3189cc717369c432ba46414d918717877090b24222950d23025c7634"
+    },
+    {
+      "slug": "case-e1146d469636",
+      "rank": 47,
+      "category": "image",
+      "editorialScore": 90.1,
+      "sourcePromptSha256": "1be8ed457a41cfeb692ee52febeab7433dc16525f0add6512955f4d571e2e583"
+    },
+    {
+      "slug": "case-805ea1d189ef",
+      "rank": 48,
+      "category": "image",
+      "editorialScore": 90.0,
+      "sourcePromptSha256": "c57a08217d7a7614a9e8bc0c8f9b64d4bddc950eabf6de4f50c96520e9ba4591"
+    },
+    {
+      "slug": "case-f0b80272015b",
+      "rank": 49,
+      "category": "image",
+      "editorialScore": 89.96,
+      "sourcePromptSha256": "a1fb9b1887accb3eac9abd8f8dc56066b3dc88371f0406333c670e9cc6e312db"
+    },
+    {
+      "slug": "aiwithnatalia-seedance-ai-12c56e79550f",
+      "rank": 50,
+      "category": "video",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "9cc6279a1a83190371d9db0a8f86f3122207de9ddd794beec53ff52b85d45e37"
+    },
+    {
+      "slug": "designpro-academy",
+      "rank": 51,
+      "category": "web",
+      "editorialScore": 89,
+      "sourcePromptSha256": "06a79839ee295e9e0a8b7819fdb59d007c91062f0210f6955156bcf0662912aa"
+    },
+    {
+      "slug": "batch-product-poster-proposal-generator",
+      "rank": 52,
+      "category": "image",
+      "editorialScore": 89.51,
+      "sourcePromptSha256": "37fa7fbaf04ac5df95a5fddbf18b0faa62313077ea01dd64bf30381dd6aa6905"
+    },
+    {
+      "slug": "apartment-arrival-storyboard-animation",
+      "rank": 53,
+      "category": "video",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "7efac052cc99f0a59615635b554d32e786d88bc3d9c874a3e45a97b08127a683"
+    },
+    {
+      "slug": "nano-banana-saas-2a600998d9b0",
+      "rank": 54,
+      "category": "web",
+      "editorialScore": 89,
+      "sourcePromptSha256": "a428196027f3b656c2745e3dd9ee55ac491fdfb11a5a600f75feaa87bd800d7f"
+    },
+    {
+      "slug": "case-47d325c993e9",
+      "rank": 55,
+      "category": "image",
+      "editorialScore": 89.51,
+      "sourcePromptSha256": "0a78675def656fa3679d208bafb0821fa2b2bbbe599407436b0e4f5d4e12eca4"
+    },
+    {
+      "slug": "caliraval-minimax-h3-ai-ccf8d06fad6f",
+      "rank": 56,
+      "category": "video",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "955044173b35d7e277f0408d9f4d566f933dd498a8c066eaed3ec314f0807a63"
+    },
+    {
+      "slug": "usd-halo",
+      "rank": 57,
+      "category": "web",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "304fc87864be5186bb31beec502153a80b7f18c4f915b3479c0a430d5c3fd6aa"
+    },
+    {
+      "slug": "case-9eb937c02956",
+      "rank": 58,
+      "category": "image",
+      "editorialScore": 89.09,
+      "sourcePromptSha256": "bb4bc1c33a3cdbdbfe362671236ae118545eb346495832e3aad314b6a16eb4cb"
+    },
+    {
+      "slug": "case-58e736edb65c",
+      "rank": 59,
+      "category": "video",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "12cc6bb9bf29abd45158551b7546fae8b9cf6c9f394398dd0d820473a3aa1d81"
+    },
+    {
+      "slug": "wellness-balance",
+      "rank": 60,
+      "category": "web",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "6d5127d809b35cf3d08bba6e739a13327955d222045f809667854c37b6c444a6"
+    },
+    {
+      "slug": "case-2485fd339050",
+      "rank": 61,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "28ab3481bf351196322d8616a4aa051f27ba439f9473c552ff350af34ecd61c3"
+    },
+    {
+      "slug": "johnagi168-minimax-h3-ai-8117e2f5f769",
+      "rank": 62,
+      "category": "video",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "cd69bb37c7501ef6c9a434a6cb4b89ae18aee8b017c66ed5cb1a54feb92ef296"
+    },
+    {
+      "slug": "case-33a820efca19",
+      "rank": 63,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "4b3a62d599d556dccb819cfdfc007eade4d17bef5704cddb28d7b8fbbc24845e"
+    },
+    {
+      "slug": "case-749c98da9b7d",
+      "rank": 64,
+      "category": "video",
+      "editorialScore": 88.1,
+      "sourcePromptSha256": "c3abd2de5336d5649ac919bfa7fbf0a4721d04e853d74f9f97b6608983589407"
+    },
+    {
+      "slug": "case-44e71dbdabb9",
+      "rank": 65,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "a370d98ff8cdaf1589925ed4673414459f5bf3d4592fd5fcda79fe25772218c0"
+    },
+    {
+      "slug": "cyberpunk-holographic-dance-performance",
+      "rank": 66,
+      "category": "video",
+      "editorialScore": 87.86,
+      "sourcePromptSha256": "1d0a2ffabe7ecff669b947a55ad6cef49eb07d26119b8c6f5071223531eaae44"
+    },
+    {
+      "slug": "case-f707dbeeade9",
+      "rank": 67,
+      "category": "image",
+      "editorialScore": 88.89,
+      "sourcePromptSha256": "b346b93df6aefbd038b2f7140241bea8555568c90883de8bc377797f0a5a72e2"
+    },
+    {
+      "slug": "zyrellix-seedance-ai-cd1e800467b5",
+      "rank": 68,
+      "category": "video",
+      "editorialScore": 87.52,
+      "sourcePromptSha256": "3983e1d2bc3ce6240dd07be7757fe788823529ee63535f75b3ae3aea6ffa5de9"
+    },
+    {
+      "slug": "case-2ed7fbb78b7f",
+      "rank": 69,
+      "category": "image",
+      "editorialScore": 88.59,
+      "sourcePromptSha256": "c87863618f19001652714f390b9f5affebde54f90bb6509ca9d7ee043905e79c"
+    },
+    {
+      "slug": "case-146e12082f4d",
+      "rank": 70,
+      "category": "video",
+      "editorialScore": 87.5,
+      "sourcePromptSha256": "c96a047f3e8acd3fc6798ab496dd386375727dc570e854272bb812ffde0263f8"
+    },
+    {
+      "slug": "milkshake-5c0760224640",
+      "rank": 71,
+      "category": "image",
+      "editorialScore": 88.39,
+      "sourcePromptSha256": "cd1c0f9b875cc87f468dd632616671e64d1b02aec5f8ed717e13f84e1decfc97"
+    },
+    {
+      "slug": "seedance-25-kpop-mv-dual-idol",
+      "rank": 72,
+      "category": "video",
+      "editorialScore": 87.4,
+      "sourcePromptSha256": "fb84c805e33f255ed927f646f7044978cabb47e7071219a79824e041f53a9b31"
+    },
+    {
+      "slug": "case-bd2940e86fd9",
+      "rank": 73,
+      "category": "image",
+      "editorialScore": 88.07,
+      "sourcePromptSha256": "7698706b66a6d5c7a89a23b45d5cfbd269d170de372e585923bb6b04128e4e40"
+    },
+    {
+      "slug": "case-f62d402ccdf6",
+      "rank": 74,
+      "category": "video",
+      "editorialScore": 86.7,
+      "sourcePromptSha256": "c5b6803835c286487d40099bfce1e663974075983ab04e46444a28de78158ed9"
+    },
+    {
+      "slug": "case-9243db8ae17e",
+      "rank": 75,
+      "category": "image",
+      "editorialScore": 88.02,
+      "sourcePromptSha256": "de33c7418df8bc9383ef29303fdb50b3e848bac953f1de596ebc8292a9badea3"
+    },
+    {
+      "slug": "strength04-x-seedance-ai-be4ae9f1e375",
+      "rank": 76,
+      "category": "video",
+      "editorialScore": 86.67,
+      "sourcePromptSha256": "52497052d5aea203826ceff92e50fbebb75ecf17f24c4effe0de0ae9b47579d8"
+    },
+    {
+      "slug": "case-11a17d4d4b4c",
+      "rank": 77,
+      "category": "image",
+      "editorialScore": 87.81,
+      "sourcePromptSha256": "ba80de3e5d85074029e2bd8ac80da215df9c4ee8dd5115cd56d1262d1d26d307"
+    },
+    {
+      "slug": "strength04-x-gpt-image-ai-4ed05af607cd",
+      "rank": 78,
+      "category": "video",
+      "editorialScore": 86.2,
+      "sourcePromptSha256": "eee10713a6f660274a1423337b1fd39b55dd0c081ca167fd21b9de932e7bb24c"
+    },
+    {
+      "slug": "case-e2965bc59b6d",
+      "rank": 79,
+      "category": "image",
+      "editorialScore": 87.34,
+      "sourcePromptSha256": "c36b99647767a173ed56fbd04a37f99184e298a7625efd7d52624a433b8eb161"
+    },
+    {
+      "slug": "asmr-lego-technic-e5706a9a0319",
+      "rank": 80,
+      "category": "video",
+      "editorialScore": 85.9,
+      "sourcePromptSha256": "547b991c019b605805d27192ca36fe2351f4d59db9a282bf49b67383669dee94"
+    },
+    {
+      "slug": "case-fef0eda18e0c",
+      "rank": 81,
+      "category": "image",
+      "editorialScore": 87.21,
+      "sourcePromptSha256": "9f41315b40ca88a575a01b4ce5c4c85aa24ac9b1abf8c1a431a8034fcc65a3e3"
+    },
+    {
+      "slug": "case-34d77d97a79e",
+      "rank": 82,
+      "category": "video",
+      "editorialScore": 85.9,
+      "sourcePromptSha256": "2fbc5edfbd17852d51e256b139ce031c486881f8f6458e63669acc4e84cdc6fe"
+    },
+    {
+      "slug": "city-aesthetic-morning-poster-collage",
+      "rank": 83,
+      "category": "image",
+      "editorialScore": 87.21,
+      "sourcePromptSha256": "a09ee3de28cea8b568467e28a9604f9140df77b51bf4780415f9167f6400a20f"
+    },
+    {
+      "slug": "case-8c0ae7a2b563",
+      "rank": 84,
+      "category": "video",
+      "editorialScore": 85.7,
+      "sourcePromptSha256": "7b3d27eeb7b8a3136eed66155a7ddf42503c26f90b379d8df7098307f1ef1100"
+    },
+    {
+      "slug": "case-cdaaabdc9f7f",
+      "rank": 85,
+      "category": "image",
+      "editorialScore": 86.89,
+      "sourcePromptSha256": "e80274871da152ff501f3c5b3dfed3fde56d8328f885c22f5a5e367fc5deab8b"
+    },
+    {
+      "slug": "stylized-3d-animation-old-man-and-pigeon",
+      "rank": 86,
+      "category": "video",
+      "editorialScore": 85.7,
+      "sourcePromptSha256": "02284fd6873b4a5f1577df718369ea0c49bf3ceb62f6020e1a07bea7ae9b758d"
+    },
+    {
+      "slug": "case-89ac12ec6d58",
+      "rank": 87,
+      "category": "image",
+      "editorialScore": 86.79,
+      "sourcePromptSha256": "b53639408170c2e9abba65793a9cf06e07952f5b86d29504d60bd707761ccc91"
+    },
+    {
+      "slug": "real-case-06-aimikoda",
+      "rank": 88,
+      "category": "video",
+      "editorialScore": 85.6,
+      "sourcePromptSha256": "1d93b34c0b6356833280dbe71717be9e81edc8145a8b25635efb59e138e8b672"
+    },
+    {
+      "slug": "case-0511c6f3368b",
+      "rank": 89,
+      "category": "image",
+      "editorialScore": 85.83,
+      "sourcePromptSha256": "5d8bacff6e176ab5370f470c1e8d635caaeeb1f1eaa1f7bbcdd1d86adf34c25c"
+    },
+    {
+      "slug": "techhalla-ai-86909e778a49",
+      "rank": 90,
+      "category": "video",
+      "editorialScore": 85.6,
+      "sourcePromptSha256": "8f5bea15e012a3830c7b0228218a51455ea7f2e944e8768b159c8a628781d560"
+    },
+    {
+      "slug": "case-c922c66a0fe7",
+      "rank": 91,
+      "category": "image",
+      "editorialScore": 85.8,
+      "sourcePromptSha256": "a072722f8f37cc27789e3a7a0edf625305dacd0cb27e1f69320b08d50df13618"
+    },
+    {
+      "slug": "case-3bdeb046587d",
+      "rank": 92,
+      "category": "video",
+      "editorialScore": 85.4,
+      "sourcePromptSha256": "44c1cac9bc9cfc47cd02751b043cc0c09d5a9290980546fa82f05ddc00293f61"
+    },
+    {
+      "slug": "case-9cff1d540398",
+      "rank": 93,
+      "category": "image",
+      "editorialScore": 85.79,
+      "sourcePromptSha256": "0203f0346c4117ea2b89883ddd31bfd859e4581832ffdca65989f044beb05990"
+    },
+    {
+      "slug": "synthesarah-seedance-ai-636eef3e35c4",
+      "rank": 94,
+      "category": "video",
+      "editorialScore": 85.4,
+      "sourcePromptSha256": "4a1bdb5559a366bc8899800bb6271eaa1bda2d62c4c896cbbe1f860ca18db742"
+    },
+    {
+      "slug": "case-8f44a5bc4d83",
+      "rank": 95,
+      "category": "image",
+      "editorialScore": 85.61,
+      "sourcePromptSha256": "59afdabfb7951017dc8d21b0d6433f4d108e8f911f5f4392ba3e1d8c06a7d168"
+    },
+    {
+      "slug": "weeleey6-seedance-ai-b03a5481e168",
+      "rank": 96,
+      "category": "video",
+      "editorialScore": 85.4,
+      "sourcePromptSha256": "ecb7d8f18cd892fe422cc6bb8f1e24778d56dbe764a30a00bd9cea5d87479392"
+    },
+    {
+      "slug": "kigurumi-3732cc07e070",
+      "rank": 97,
+      "category": "image",
+      "editorialScore": 85.5,
+      "sourcePromptSha256": "be7306a88bf6a3bc04e15b10fe3ff3ee449d4d1d743bf016383eacd54aff58cf"
+    },
+    {
+      "slug": "seedance-2-5-ugc-7de9338ecfc9",
+      "rank": 98,
+      "category": "video",
+      "editorialScore": 85.38,
+      "sourcePromptSha256": "77a7a3fe5dbb0dca08f98ae875a9ae7f7203d2e2021152a4f653b5f8d36a80a9"
+    },
+    {
+      "slug": "case-7e29a0c188a4",
+      "rank": 99,
+      "category": "image",
+      "editorialScore": 85.4,
+      "sourcePromptSha256": "d5341dd0a2be3da84ef21e2652d9c891b3ee99114094bf19f49c3587347b216c"
+    },
+    {
+      "slug": "case-779580528a24",
+      "rank": 100,
+      "category": "video",
+      "editorialScore": 85.3,
+      "sourcePromptSha256": "80e9284d1bf49551942910a7c33cdeafeb8e132ef01b8af8adcec0931eac3b9c"
+    },
+    {
+      "slug": "case-d489150e5952",
+      "rank": 101,
+      "category": "image",
+      "editorialScore": 85.4,
+      "sourcePromptSha256": "00892fe64bd8a7b450c90ec0e9db3f8e0b95e00e49a49a97bdd8b2f9195d15c7"
+    },
+    {
+      "slug": "case-3d49f00e65c0",
+      "rank": 102,
+      "category": "video",
+      "editorialScore": 85.2,
+      "sourcePromptSha256": "a40b02b290a08dac35f58e51a63b2dac6692f32698357989c7575c5080d2426a"
+    },
+    {
+      "slug": "case-4110789f69a6",
+      "rank": 103,
+      "category": "image",
+      "editorialScore": 85.2,
+      "sourcePromptSha256": "0966a53b265ba6bdca75e806be49df221ed4bbc543dc8f0a34c7baeba504235e"
+    },
+    {
+      "slug": "case-448c27e5bf12",
+      "rank": 104,
+      "category": "video",
+      "editorialScore": 85.2,
+      "sourcePromptSha256": "292061cd86968a0c774c31261ba76a336d0bc81d16132f5c8154447a1d3f2ead"
+    },
+    {
+      "slug": "case-59c91a376d70",
+      "rank": 105,
+      "category": "image",
+      "editorialScore": 85.2,
+      "sourcePromptSha256": "be9d3e92f58c5986c1d969450bcebefa8c80a73ca94ed2859884266636da7fa2"
+    },
+    {
+      "slug": "oggii-0-seedance-ai-5ed8176ffb89",
+      "rank": 106,
+      "category": "video",
+      "editorialScore": 85.2,
+      "sourcePromptSha256": "7f578ee3f90760337cdf3d03da2be843d0bf19864984eaf450f2199af84e0515"
+    },
+    {
+      "slug": "mid-century-city-travel-picture-book",
+      "rank": 107,
+      "category": "image",
+      "editorialScore": 85.2,
+      "sourcePromptSha256": "e035a2fd39b79a2832e47d56c356874dbb8206de91cafdd0e1ec5eacfa710b92"
+    },
+    {
+      "slug": "case-80317051f9f3",
+      "rank": 108,
+      "category": "video",
+      "editorialScore": 85.1,
+      "sourcePromptSha256": "d35798c53bdda38ed3208330ae134348ecc8eeafcf74ded30c08f96ef52d0a36"
+    },
+    {
+      "slug": "cinematic-anime-martial-arts-training-ground",
+      "rank": 109,
+      "category": "video",
+      "editorialScore": 85.1,
+      "sourcePromptSha256": "a3b96968c08f2b3c3873a9e09ff43ea939a6392c4de6f7aef9042e5b7305ec86"
+    },
+    {
+      "slug": "seedance-2-5-d68024212dfc",
+      "rank": 110,
+      "category": "video",
+      "editorialScore": 85.0,
+      "sourcePromptSha256": "bfa66413dab3d93d8d4914819dd1d6f78ce1183290ceca06b567fe9907ceff2c"
+    },
+    {
+      "slug": "seedance-2-5-f3651857750b",
+      "rank": 111,
+      "category": "video",
+      "editorialScore": 85.0,
+      "sourcePromptSha256": "12dd008da1cc3e2749032e226c9f8669849f9c734d412bcb2574460be74844d8"
+    },
+    {
+      "slug": "zarairahh-seedance-ai-b7601661378a",
+      "rank": 112,
+      "category": "video",
+      "editorialScore": 85.0,
+      "sourcePromptSha256": "07198b3662c60658c0b9c9c5b88187466f717857a0fa7bdf198fdfebf419782b"
+    },
+    {
+      "slug": "case-b2269baeb516",
+      "rank": 113,
+      "category": "image",
+      "editorialScore": 84.7,
+      "sourcePromptSha256": "8910498cdfea8249fd0c7dd7cb01a60cde13e3e677bdd3b8fb1538ce03e59640"
+    },
+    {
+      "slug": "just-sharon7-seedance-ai-9c64e481a51d",
+      "rank": 114,
+      "category": "video",
+      "editorialScore": 84.9,
+      "sourcePromptSha256": "5e52f29d0a361a6efdbeb6788e6f81aa2a6b0c4bac72334aacea07d0b3a25fcb"
+    },
+    {
+      "slug": "file-upload",
+      "rank": 115,
+      "category": "web",
+      "editorialScore": 81.1,
+      "sourcePromptSha256": "5c47ae829b9062995f35250e4ab7ec543dce157a1117b27dbf4e4108a9ad8f2a"
+    },
+    {
+      "slug": "case-490a5435c063",
+      "rank": 116,
+      "category": "image",
+      "editorialScore": 84.6,
+      "sourcePromptSha256": "c92db16842dfa4f965ec567ae41c4c258a3390f0024520d94c067b778c159980"
+    },
+    {
+      "slug": "seedance-2-5-f1696dad13bc",
+      "rank": 117,
+      "category": "video",
+      "editorialScore": 84.9,
+      "sourcePromptSha256": "45277ab2574da47ef6feb50798dad923027f3a98a4942be7d6f10a56f4f51ba6"
+    },
+    {
+      "slug": "case-5943fd29e851",
+      "rank": 118,
+      "category": "image",
+      "editorialScore": 84.4,
+      "sourcePromptSha256": "a66bf918f2f7395b7e9ed1a9c28fdf9f6513fe66a0a6d5ff304f136358060b7b"
+    },
+    {
+      "slug": "seedance-2-5-gopro-94a73eef1dbf",
+      "rank": 119,
+      "category": "video",
+      "editorialScore": 84.9,
+      "sourcePromptSha256": "17a06af0cd166adc6ef96830562b6c0958590bde54a522af377b8534562ce2f2"
+    },
+    {
+      "slug": "case-19807a553385",
+      "rank": 120,
+      "category": "image",
+      "editorialScore": 84.3,
+      "sourcePromptSha256": "18eb6eac335d6afbd5b91c59fc1997c301d8b370eb6c00e9c8fc673d704e8c07"
+    },
+    {
+      "slug": "techhalla-seedance-ai-81e09066a66b",
+      "rank": 121,
+      "category": "video",
+      "editorialScore": 84.9,
+      "sourcePromptSha256": "f67e71f1a0bb5b0777ff337e0c7c9990c71812a75bbef10ce9066401ed3e4806"
+    },
+    {
+      "slug": "case-26389c764325",
+      "rank": 122,
+      "category": "image",
+      "editorialScore": 83.89,
+      "sourcePromptSha256": "f67a22ea6db59cd81a82d3944408a4eb655f934b388e3ea10e8297d18142cae5"
+    },
+    {
+      "slug": "youralphamom-seedance-ai-9afbf3248f50",
+      "rank": 123,
+      "category": "video",
+      "editorialScore": 84.9,
+      "sourcePromptSha256": "b703983808a559c27d25a187915663cf747396a0fc020b32b334061fa02497bb"
+    },
+    {
+      "slug": "urban-giant-mystery",
+      "rank": 124,
+      "category": "image",
+      "editorialScore": 83.7,
+      "sourcePromptSha256": "1971caac812d0092acebd8fb484766a1567cf713dc99d6371d8af4619087ed79"
+    },
+    {
+      "slug": "seedance-25-kpop-mv-zero-to-pop",
+      "rank": 125,
+      "category": "video",
+      "editorialScore": 84.8,
+      "sourcePromptSha256": "4e58b113973f1836b0e8912f60c29b5072d509d2ffaba18ea6c72745e2b66735"
+    },
+    {
+      "slug": "case-269ad44770bf",
+      "rank": 126,
+      "category": "image",
+      "editorialScore": 83.5,
+      "sourcePromptSha256": "402889a41f6a87b6c14a772fda39099dd4cec5862bb9a17731c59928a541f686"
+    },
+    {
+      "slug": "90s-west-coast-documentary-realism",
+      "rank": 127,
+      "category": "video",
+      "editorialScore": 84.7,
+      "sourcePromptSha256": "01aab0d0c769ebb02b75db737d49b5af67f3a1e67bb9b405a9ff6dfc0e7dd2b7"
+    },
+    {
+      "slug": "90-e61571b333db",
+      "rank": 128,
+      "category": "image",
+      "editorialScore": 82.47,
+      "sourcePromptSha256": "ed3a77efa7bfdd6ed86ab0a261ed6cde8247f96c299559e94c3fd8412389f788"
+    },
+    {
+      "slug": "case-579dd9bdd240",
+      "rank": 129,
+      "category": "video",
+      "editorialScore": 84.7,
+      "sourcePromptSha256": "6b49e9664ebe5a11fcba980e3e63fc9b370067b1ef60f0a711b37aed75588334"
+    },
+    {
+      "slug": "case-e35328ffea70",
+      "rank": 130,
+      "category": "image",
+      "editorialScore": 82.3,
+      "sourcePromptSha256": "41b178baea035c5eacba5dbcdf7441cca8c1305d70f1e76c8b7ff644a7105179"
+    },
+    {
+      "slug": "case-5eb5fac1e9eb",
+      "rank": 131,
+      "category": "image",
+      "editorialScore": 82.21,
+      "sourcePromptSha256": "dfc0b574923314af895bd495a7084fba996776eae408db5c33c06b3254226f30"
+    },
+    {
+      "slug": "case-533d46f6b1dc",
+      "rank": 132,
+      "category": "image",
+      "editorialScore": 81.71,
+      "sourcePromptSha256": "90dc9c89fc31c9eee3212d435ce61dd325e5a74b87406b725f98242676bd6e3c"
+    },
+    {
+      "slug": "case-1e27ee889af9",
+      "rank": 133,
+      "category": "image",
+      "editorialScore": 81.69,
+      "sourcePromptSha256": "74192c94322045e54ef7b2fecfcef57bfd32d796ad45bfdbc1824db627fbc959"
+    },
+    {
+      "slug": "case-265600f07f14",
+      "rank": 134,
+      "category": "image",
+      "editorialScore": 81.67,
+      "sourcePromptSha256": "ea49d04d535c3248980a17d61a3506f659a2573f7667073bd4ad1ab22993d721"
+    },
+    {
+      "slug": "case-42cc22c8eb26",
+      "rank": 135,
+      "category": "image",
+      "editorialScore": 81.43,
+      "sourcePromptSha256": "28b68abd64ba37e5bd46a8df8a30c2a9f6947f2ccba9b46f1ddd45858aa52223"
+    },
+    {
+      "slug": "case-dd0e6108eade",
+      "rank": 136,
+      "category": "image",
+      "editorialScore": 81.41,
+      "sourcePromptSha256": "c1f45675afb050018609230cddc4dbd9e6ca0bb0fdc940c2a339d135c3ff6224"
+    },
+    {
+      "slug": "case-c69378856fa6",
+      "rank": 137,
+      "category": "image",
+      "editorialScore": 81.23,
+      "sourcePromptSha256": "761fe40d1530ec23f7047d835458c33b1ff26c05a7286c17a2ba006746d42d7d"
+    },
+    {
+      "slug": "case-b5bc4520d333",
+      "rank": 138,
+      "category": "image",
+      "editorialScore": 81.02,
+      "sourcePromptSha256": "e9668237fe4fb77baec90a015ff36375b9a147bc263e2e7eab28ce794c0554d1"
+    },
+    {
+      "slug": "case-346fdb4f9c0f",
+      "rank": 139,
+      "category": "image",
+      "editorialScore": 81.01,
+      "sourcePromptSha256": "c44cdbb1f59a4fcbad9ebf407a6caa6d075410ed567b24fb5c13e7ca73f33588"
+    },
+    {
+      "slug": "gpt-image-gpt-image-2-5-on-higgsfield-91ec53391d3d",
+      "rank": 140,
+      "category": "image",
+      "editorialScore": 81.0,
+      "sourcePromptSha256": "a1104bf50c1ed75d5395d8c656592f0594805c352f80f4156f63e868089b013a"
+    },
+    {
+      "slug": "nano-banana-adf1b3e7ee46",
+      "rank": 141,
+      "category": "image",
+      "editorialScore": 81.0,
+      "sourcePromptSha256": "a1c34b6807581cc45ef95b4a42b95bb4eaed05c25041014176e4054c259ed6b7"
+    },
+    {
+      "slug": "y2k-ce804684d94d",
+      "rank": 142,
+      "category": "image",
+      "editorialScore": 80.98,
+      "sourcePromptSha256": "4b15389a932c4976dc112a1c0ec46d8a7e40d0c0561dfc030a43eeba9055a9f8"
+    },
+    {
+      "slug": "neon-jellyfish-scientific-specimen",
+      "rank": 143,
+      "category": "image",
+      "editorialScore": 80.79,
+      "sourcePromptSha256": "53ef68ba7e91825027b603fef9a9e87e3171ce4f99fb5b46be8abe9bfd749c95"
+    },
+    {
+      "slug": "youmind-character-identity-reference-chart",
+      "rank": 144,
+      "category": "image",
+      "editorialScore": 80.7,
+      "sourcePromptSha256": "4a0bf8444208535b734cb1bf649430006131c90f09634cdb1554d27f7ffce2bb"
+    },
+    {
+      "slug": "case-a29e3e9b3070",
+      "rank": 145,
+      "category": "image",
+      "editorialScore": 80.62,
+      "sourcePromptSha256": "49c76f5fdee36908e65e6bde206a201ff4e39bda362eea804e6e7a628e43d0c4"
+    },
+    {
+      "slug": "moody-cafe-chiaroscuro-portrait-0d581a45e97d",
+      "rank": 146,
+      "category": "image",
+      "editorialScore": 80.34,
+      "sourcePromptSha256": "785b2d4b890980359841194143cd269df0c179f8f9cfbed11c1c1647c59315f7"
+    },
+    {
+      "slug": "case-70c0c26586c3",
+      "rank": 147,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "088361ae08eb8f129500b2b064125c71e7a29ddd1ddb020067d585b28775ecb5"
+    },
+    {
+      "slug": "taskly",
+      "rank": 148,
+      "category": "web",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "f095b57babdba5d6d9807f765dd91d9db8f91bd6407bcb92d07187a4f4d49023"
+    },
+    {
+      "slug": "mountain-dew-spark-b16d4e23caef",
+      "rank": 149,
+      "category": "video",
+      "editorialScore": 68.0,
+      "sourcePromptSha256": "d2734eddf6ef3f135ee300509b219174da100805928ce36a65bb01591cdfdf84"
+    },
+    {
+      "slug": "2d-animation-sprite-sheet-generator",
+      "rank": 150,
+      "category": "image",
+      "editorialScore": 64.86,
+      "sourcePromptSha256": "b65a2a11763cae5ae7a33bcc5219896975891701da89c2bc0c4e6efe934e5c3c"
+    }
+  ]
+}

@@ -70,6 +70,7 @@ export const SECTIONS = {
 // stage-6 已整体废弃（唯一文章划归 AI 前沿），不在任何板块 dirs 内，新文章请勿再写入该目录。
 // videos = AI 视频课（B 站精选卡片墙，清单在 .vitepress/videosData.js，不按文件目录组织）
 export const BOARDS = {
+  cases:    { text: 'AI 实践案例集', link: '/cases/', dirs: ['cases'] },
   pulse:    { text: 'AI 最新动态', link: '/hot/',     dirs: ['hot', 'news', 'frontier'] },
   basics:   { text: 'AI 基础学习', link: '/stage-1/', dirs: ['stage-1', 'stage-2', 'stage-5'] },
   practice: { text: 'AI 进阶实践', link: '/stage-4/', dirs: ['stage-3', 'stage-4'] },

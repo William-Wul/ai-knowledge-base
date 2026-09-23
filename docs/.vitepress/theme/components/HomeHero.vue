@@ -98,7 +98,7 @@
                 <path d="M5 12h14M13 5l7 7-7 7"/>
               </svg>
             </a>
-            <a class="btn btn-ghost" href="/stage-4/">发现更多 AI 实践</a>
+            <a class="btn btn-ghost" href="/cases/">浏览 AI 实践案例</a>
           </div>
         </div>
 

@@ -1,3 +1,4 @@
+import { CASE_CATEGORIES } from './casesData.js'
 import { defineConfig } from 'vitepress'
 import { existsSync, readdirSync, readFileSync } from 'fs'
 import { resolve, join, basename, dirname } from 'path'
@@ -133,62 +134,7 @@ const STAGE_KNOWN_ITEMS = {
   ],
 }
 
-export default defineConfig({
-  base: '/',
-
-  title: 'AI 学习知识库',
-  description: '从零开始，掌握 AI 工作力',
-
-  lang: 'zh-CN',
-  cleanUrls: true,
-  // 2026-08：恢复深色模式开关。首次访问跟随系统偏好，
-  // 用户手动切换后 VitePress 自动写入 localStorage 记住选择。
-  appearance: true,
-
-  vite: {
-    build: {
-      minify: 'esbuild',
-      cssCodeSplit: true,
-    },
-  },
-
-  head: [
-    ['meta', { name: 'robots', content: 'noindex, nofollow' }],
-    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'AI 学习知识库' }],
-    ['meta', { property: 'og:description', content: '从零开始的 AI 学习路径' }],
-    ['meta', { property: 'og:image', content: 'https://ailinkstart.com/og-cover.png' }],
-    ['meta', { property: 'og:url', content: 'https://ailinkstart.com' }],
-    ['link', { rel: 'preconnect', href: 'https://fonts.loli.net' }],
-    ['link', { rel: 'preconnect', href: 'https://gstatic.loli.net', crossorigin: '' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap' }],
-    ['script', {}, `if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }`],
-    ['script', {}, `var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?a681b724c97970a6d082bec9d556c968"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();`],
-  ],
-
-  themeConfig: {
-    siteTitle: 'AI 学习知识库',
-
-    // 2026-07 改版：与首页导航一致的五大入口
-    nav: [
-      { text: 'AI 最新动态', link: '/hot/' },
-      { text: 'AI 基础学习', link: '/stage-1/' },
-      { text: 'AI 进阶实践', link: '/stage-4/' },
-      { text: 'AI 视频课', link: '/videos/' },
-      { text: 'AI 能力自测', link: '/exams/' },
-      { text: 'AI 学习词汇本', link: '/vocab-book' },
-    ],
-
-    // 2026-07-28 改版：侧边栏按四大板块重组（目录与 URL 不变，仅逻辑归组）
-    // 2026-07-28 内容重组：工具上手/注意事项/进阶实践按 stagesData.js 清单跨目录归组，
-    // 清单之外、目录里新增的文件仍由 autoItems 自动追加到对应模块末尾
-    // 注：板块标题不带图标，图标只留给二级模块——层级更清晰
-    // 前言居首、更新日志收尾，与四大板块同为一级标题（样式见 custom.css 按 href 定向）
-    // 板块与模块均默认折叠（collapsed: true），仅自动展开包含当前页的那一条链
-    sidebar: [
+const siteSidebar = [
       { text: '前言', link: '/preface' },
       {
         text: 'AI 最新动态',
@@ -246,6 +192,15 @@ export default defineConfig({
         ],
       },
       {
+        text: 'AI 实践案例集',
+        link: '/cases/',
+        collapsed: true,
+        items: [
+          { text: '全部案例', link: '/cases/' },
+          ...CASE_CATEGORIES.map(c => ({ text: c.name, link: `/cases/${c.id}/` })),
+        ],
+      },
+      {
         text: 'AI 视频课',
         collapsed: true,
         items: [
@@ -262,11 +217,82 @@ export default defineConfig({
         ],
       },
       { text: '更新日志', link: '/changelog' },
+    ]
+
+export default defineConfig({
+  base: '/',
+
+  title: 'AI 学习知识库',
+  description: '从零开始，掌握 AI 工作力',
+
+  lang: 'zh-CN',
+  cleanUrls: true,
+  // 2026-08：恢复深色模式开关。首次访问跟随系统偏好，
+  // 用户手动切换后 VitePress 自动写入 localStorage 记住选择。
+  appearance: true,
+
+  vite: {
+    build: {
+      minify: 'esbuild',
+      cssCodeSplit: true,
+    },
+  },
+
+  head: [
+    ['meta', { name: 'robots', content: 'noindex, nofollow' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'AI 学习知识库' }],
+    ['meta', { property: 'og:description', content: '从零开始的 AI 学习路径' }],
+    ['meta', { property: 'og:image', content: 'https://ailinkstart.com/og-cover.png' }],
+    ['meta', { property: 'og:url', content: 'https://ailinkstart.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.loli.net' }],
+    ['link', { rel: 'preconnect', href: 'https://gstatic.loli.net', crossorigin: '' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap' }],
+    ['script', {}, `if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }`],
+    ['script', {}, `var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?a681b724c97970a6d082bec9d556c968"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();`],
+  ],
+
+  themeConfig: {
+    siteTitle: 'AI 学习知识库',
+    sidebarMenuLabel: '目录',
+    returnToTopLabel: '返回顶部',
+
+    // 2026-07 改版：与首页导航一致的五大入口
+    nav: [
+      { text: 'AI 最新动态', link: '/hot/' },
+      { text: 'AI 基础学习', link: '/stage-1/' },
+      { text: 'AI 进阶实践', link: '/stage-4/' },
+      { text: 'AI 实践案例集', link: '/cases/' },
+      { text: 'AI 视频课', link: '/videos/' },
+      { text: 'AI 能力自测', link: '/exams/' },
+      { text: 'AI 学习词汇本', link: '/vocab-book' },
     ],
+
+    // 2026-07-28 改版：侧边栏按四大板块重组（目录与 URL 不变，仅逻辑归组）
+    // 2026-07-28 内容重组：工具上手/注意事项/进阶实践按 stagesData.js 清单跨目录归组，
+    // 清单之外、目录里新增的文件仍由 autoItems 自动追加到对应模块末尾
+    // 注：板块标题不带图标，图标只留给二级模块——层级更清晰
+    // 前言居首、更新日志收尾，与四大板块同为一级标题（样式见 custom.css 按 href 定向）
+    // 板块与模块均默认折叠（collapsed: true），仅自动展开包含当前页的那一条链
+    sidebar: {
+      '/': siteSidebar,
+      '/cases/': siteSidebar.map(group => group.text === 'AI 实践案例集' ? { ...group, collapsed: false } : group),
+    },
 
     search: {
       provider: 'local',
       options: {
+        miniSearch: {
+          options: {
+            // 原默认按空格切词，中文句中关键词无法命中；构建和浏览器共用分词。
+            tokenize: (text) => Array.from(new Intl.Segmenter('zh-CN', { granularity: 'word' }).segment(text))
+              .filter(part => part.isWordLike).map(part => part.segment),
+          },
+          searchOptions: { combineWith: 'AND' },
+        },
         locales: {
           root: {
             translations: {
