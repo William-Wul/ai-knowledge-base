@@ -4,24 +4,37 @@
   "rulesUrl": "https://aihot.virxact.com/leaderboard/rules",
   "sourceCount": 9,
   "evaluationCount": 20,
-  "sourceUpdatedAt": "09/23 14:42",
-  "syncedAt": "2026-09-23T08:30:58.911Z",
+  "sourceUpdatedAt": "09/24 15:26",
+  "syncedAt": "2026-09-24T08:23:34.235Z",
   "models": [
     {
       "rank": 1,
+      "slug": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-09-17",
+      "evidenceCount": 8,
+      "evidenceStatus": "持续积累",
+      "cachePrice": "¥1.34",
+      "inputPrice": "¥26.83",
+      "outputPrice": "¥134.15",
+      "score": 94.3
+    },
+    {
+      "rank": 2,
       "slug": "gpt-6-astra",
       "name": "GPT-6 Astra",
       "provider": "OpenAI",
       "releaseDate": "2026-09-03",
       "evidenceCount": 20,
-      "evidenceStatus": "较充分",
-      "cachePrice": "¥6.7",
-      "inputPrice": "¥67",
-      "outputPrice": "¥335.01",
-      "score": 94
+      "evidenceStatus": "证据敏感",
+      "cachePrice": "¥6.71",
+      "inputPrice": "¥67.07",
+      "outputPrice": "¥335.37",
+      "score": 94.2
     },
     {
-      "rank": 2,
+      "rank": 3,
       "slug": "claude-fable-5-1",
       "name": "Claude Fable 5.1",
       "provider": "Anthropic",
@@ -29,25 +42,25 @@
       "evidenceCount": 17,
       "evidenceStatus": "持续积累",
       "cachePrice": "¥1.68",
-      "inputPrice": "¥67",
-      "outputPrice": "¥335.01",
-      "score": 94
+      "inputPrice": "¥67.07",
+      "outputPrice": "¥335.37",
+      "score": 94.2
     },
     {
-      "rank": 3,
+      "rank": 4,
       "slug": "claude-fable-5",
       "name": "Claude Fable 5",
       "provider": "Anthropic",
       "releaseDate": "2026-06-09",
       "evidenceCount": 19,
       "evidenceStatus": "持续积累",
-      "cachePrice": "¥6.7",
-      "inputPrice": "¥67",
-      "outputPrice": "¥335.01",
-      "score": 93.6
+      "cachePrice": "¥6.71",
+      "inputPrice": "¥67.07",
+      "outputPrice": "¥335.37",
+      "score": 93.8
     },
     {
-      "rank": 4,
+      "rank": 5,
       "slug": "claude-opus-5",
       "name": "Claude Opus 5",
       "provider": "Anthropic",
@@ -55,12 +68,12 @@
       "evidenceCount": 20,
       "evidenceStatus": "较充分",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥33.5",
-      "outputPrice": "¥167.5",
-      "score": 93.5
+      "inputPrice": "¥33.54",
+      "outputPrice": "¥167.69",
+      "score": 93.7
     },
     {
-      "rank": 5,
+      "rank": 6,
       "slug": "muse-spark-1-3",
       "name": "Muse Spark 1.3",
       "provider": "Meta",
@@ -69,24 +82,24 @@
       "evidenceStatus": "较充分",
       "cachePrice": null,
       "inputPrice": "¥8.38",
-      "outputPrice": "¥28.48",
-      "score": 91.2
+      "outputPrice": "¥28.51",
+      "score": 91.4
     },
     {
-      "rank": 6,
+      "rank": 7,
       "slug": "gpt-6-sol",
       "name": "GPT-6 Sol",
       "provider": "OpenAI",
       "releaseDate": "2026-09-22",
-      "evidenceCount": 5,
+      "evidenceCount": 9,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥1.34",
-      "inputPrice": "¥13.4",
-      "outputPrice": "¥67",
-      "score": 88.9
+      "inputPrice": "¥13.41",
+      "outputPrice": "¥67.07",
+      "score": 89.3
     },
     {
-      "rank": 7,
+      "rank": 8,
       "slug": "gpt-5-6-sol",
       "name": "GPT-5.6 Sol",
       "provider": "OpenAI",
@@ -94,25 +107,25 @@
       "evidenceCount": 20,
       "evidenceStatus": "较充分",
       "cachePrice": "¥2.68",
-      "inputPrice": "¥26.8",
-      "outputPrice": "¥134",
-      "score": 87.9
+      "inputPrice": "¥26.83",
+      "outputPrice": "¥134.15",
+      "score": 87.5
     },
     {
-      "rank": 8,
+      "rank": 9,
       "slug": "grok-4-7",
       "name": "Grok 4.7",
       "provider": "xAI",
       "releaseDate": "2026-09-21",
-      "evidenceCount": 7,
+      "evidenceCount": 9,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥13.4",
-      "outputPrice": "¥40.2",
+      "inputPrice": "¥13.41",
+      "outputPrice": "¥40.24",
       "score": 85.7
     },
     {
-      "rank": 9,
+      "rank": 10,
       "slug": "qwen-3-8-max",
       "name": "Qwen3.8 Max",
       "provider": "Alibaba",
@@ -122,10 +135,10 @@
       "cachePrice": null,
       "inputPrice": "¥12",
       "outputPrice": "¥36",
-      "score": 84.3
+      "score": 84.2
     },
     {
-      "rank": 10,
+      "rank": 11,
       "slug": "glm-5-3",
       "name": "GLM-5.3",
       "provider": "Z.ai",
@@ -133,12 +146,12 @@
       "evidenceCount": 19,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥1.74",
-      "inputPrice": "¥9.38",
-      "outputPrice": "¥29.48",
+      "inputPrice": "¥9.39",
+      "outputPrice": "¥29.51",
       "score": 81.2
     },
     {
-      "rank": 11,
+      "rank": 12,
       "slug": "grok-4-6",
       "name": "Grok 4.6",
       "provider": "xAI",
@@ -146,25 +159,25 @@
       "evidenceCount": 18,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥13.4",
-      "outputPrice": "¥40.2",
+      "inputPrice": "¥13.41",
+      "outputPrice": "¥40.24",
       "score": 79.4
     },
     {
-      "rank": 12,
+      "rank": 13,
       "slug": "kimi-k-3",
       "name": "Kimi K3",
       "provider": "Moonshot AI",
       "releaseDate": "2026-07-16",
       "evidenceCount": 19,
-      "evidenceStatus": "证据敏感",
+      "evidenceStatus": "较充分",
       "cachePrice": "¥2",
       "inputPrice": "¥20",
       "outputPrice": "¥100",
       "score": 78.4
     },
     {
-      "rank": 13,
+      "rank": 14,
       "slug": "gpt-5-6-terra",
       "name": "GPT-5.6 Terra",
       "provider": "OpenAI",
@@ -172,25 +185,25 @@
       "evidenceCount": 20,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥1.34",
-      "inputPrice": "¥13.4",
-      "outputPrice": "¥80.4",
+      "inputPrice": "¥13.41",
+      "outputPrice": "¥80.49",
       "score": 75.9
     },
     {
-      "rank": 14,
+      "rank": 15,
       "slug": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "provider": "Anthropic",
       "releaseDate": "2026-05-28",
       "evidenceCount": 20,
-      "evidenceStatus": "较充分",
+      "evidenceStatus": "证据敏感",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥33.5",
-      "outputPrice": "¥167.5",
+      "inputPrice": "¥33.54",
+      "outputPrice": "¥167.69",
       "score": 74.3
     },
     {
-      "rank": 15,
+      "rank": 16,
       "slug": "gemini-3-8-flash",
       "name": "Gemini 3.8 Flash",
       "provider": "Google",
@@ -199,11 +212,11 @@
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥0.5",
       "inputPrice": "¥5.03",
-      "outputPrice": "¥25.13",
-      "score": 73.8
+      "outputPrice": "¥25.15",
+      "score": 73.7
     },
     {
-      "rank": 16,
+      "rank": 17,
       "slug": "qwen-3-8-max-0902",
       "name": "Qwen3.8 Max 0902",
       "provider": "Alibaba",
@@ -213,10 +226,10 @@
       "cachePrice": null,
       "inputPrice": "¥12",
       "outputPrice": "¥36",
-      "score": 73.3
+      "score": 73.2
     },
     {
-      "rank": 17,
+      "rank": 18,
       "slug": "glm-5-3-flash",
       "name": "GLM-5.3 Flash",
       "provider": "Z.ai",
@@ -226,23 +239,23 @@
       "cachePrice": "¥0.23",
       "inputPrice": "¥0.8",
       "outputPrice": "¥2.8",
-      "score": 72.8
+      "score": 72.6
     },
     {
-      "rank": 18,
+      "rank": 19,
       "slug": "claude-opus-4-7",
       "name": "Claude Opus 4.7",
       "provider": "Anthropic",
       "releaseDate": "2026-04-16",
       "evidenceCount": 18,
-      "evidenceStatus": "证据敏感",
+      "evidenceStatus": "较充分",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥33.5",
-      "outputPrice": "¥167.5",
-      "score": 71.8
+      "inputPrice": "¥33.54",
+      "outputPrice": "¥167.69",
+      "score": 71.7
     },
     {
-      "rank": 19,
+      "rank": 20,
       "slug": "qwen-3-8-flash-next",
       "name": "Qwen3.8 Flash Next",
       "provider": "Alibaba",
@@ -252,10 +265,10 @@
       "cachePrice": null,
       "inputPrice": "¥0.8",
       "outputPrice": "¥2.7",
-      "score": 70.2
+      "score": 70
     },
     {
-      "rank": 20,
+      "rank": 21,
       "slug": "muse-spark-1-2",
       "name": "Muse Spark 1.2",
       "provider": "Meta",
@@ -264,24 +277,24 @@
       "evidenceStatus": "证据敏感",
       "cachePrice": null,
       "inputPrice": "¥8.38",
-      "outputPrice": "¥28.48",
-      "score": 68.8
+      "outputPrice": "¥28.51",
+      "score": 68.6
     },
     {
-      "rank": 21,
+      "rank": 22,
       "slug": "deepseek-v-4-1-flash",
       "name": "DeepSeek V4.1 Flash",
       "provider": "DeepSeek",
       "releaseDate": "2026-09-10",
-      "evidenceCount": 7,
+      "evidenceCount": 10,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥0.0402",
       "inputPrice": "¥2.01",
-      "outputPrice": "¥8.04",
-      "score": 66.7
+      "outputPrice": "¥8.05",
+      "score": 66.3
     },
     {
-      "rank": 22,
+      "rank": 23,
       "slug": "gemini-3-7-flash",
       "name": "Gemini 3.7 Flash",
       "provider": "Google",
@@ -290,11 +303,11 @@
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥0.5",
       "inputPrice": "¥5.03",
-      "outputPrice": "¥25.13",
+      "outputPrice": "¥25.15",
       "score": 65.2
     },
     {
-      "rank": 23,
+      "rank": 24,
       "slug": "gpt-5-4",
       "name": "GPT-5.4",
       "provider": "OpenAI",
@@ -302,12 +315,12 @@
       "evidenceCount": 12,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥1.68",
-      "inputPrice": "¥16.75",
-      "outputPrice": "¥100.5",
+      "inputPrice": "¥16.77",
+      "outputPrice": "¥100.61",
       "score": 62.2
     },
     {
-      "rank": 24,
+      "rank": 25,
       "slug": "grok-4-5",
       "name": "Grok 4.5",
       "provider": "xAI",
@@ -315,12 +328,12 @@
       "evidenceCount": 18,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥2.01",
-      "inputPrice": "¥13.4",
-      "outputPrice": "¥40.2",
-      "score": 60.1
+      "inputPrice": "¥13.41",
+      "outputPrice": "¥40.24",
+      "score": 60
     },
     {
-      "rank": 25,
+      "rank": 26,
       "slug": "gpt-5-5",
       "name": "GPT-5.5",
       "provider": "OpenAI",
@@ -328,12 +341,12 @@
       "evidenceCount": 19,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥33.5",
-      "outputPrice": "¥201",
+      "inputPrice": "¥33.54",
+      "outputPrice": "¥201.22",
       "score": 59.9
     },
     {
-      "rank": 26,
+      "rank": 27,
       "slug": "claude-sonnet-5",
       "name": "Claude Sonnet 5",
       "provider": "Anthropic",
@@ -341,12 +354,12 @@
       "evidenceCount": 20,
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥1.34",
-      "inputPrice": "¥13.4",
-      "outputPrice": "¥67",
-      "score": 55.6
+      "inputPrice": "¥13.41",
+      "outputPrice": "¥67.07",
+      "score": 55.4
     },
     {
-      "rank": 27,
+      "rank": 28,
       "slug": "gpt-5-6-luna",
       "name": "GPT-5.6 Luna",
       "provider": "OpenAI",
@@ -355,47 +368,34 @@
       "evidenceStatus": "证据敏感",
       "cachePrice": "¥0.13",
       "inputPrice": "¥1.34",
-      "outputPrice": "¥8.04",
-      "score": 53
+      "outputPrice": "¥8.05",
+      "score": 52.7
     },
     {
-      "rank": 28,
+      "rank": 29,
       "slug": "gpt-6-luna",
       "name": "GPT-6 Luna",
       "provider": "OpenAI",
       "releaseDate": "2026-09-22",
-      "evidenceCount": 5,
+      "evidenceCount": 6,
       "evidenceStatus": "证据敏感",
-      "cachePrice": "¥0.067",
+      "cachePrice": "¥0.0671",
       "inputPrice": "¥0.67",
       "outputPrice": "¥3.35",
-      "score": 52.2
+      "score": 52.1
     },
     {
-      "rank": 29,
+      "rank": 30,
       "slug": "deepseek-v-4-pro-20260813",
       "name": "DeepSeek V4 Pro 0813",
       "provider": "DeepSeek",
       "releaseDate": "2026-08-13",
       "evidenceCount": 16,
-      "evidenceStatus": "证据敏感",
+      "evidenceStatus": "较充分",
       "cachePrice": "¥0.3",
       "inputPrice": "¥9",
       "outputPrice": "¥27",
-      "score": 51.1
-    },
-    {
-      "rank": 30,
-      "slug": "deepseek-v-4-flash-20260731",
-      "name": "DeepSeek V4 Flash 0731",
-      "provider": "DeepSeek",
-      "releaseDate": "2026-07-31",
-      "evidenceCount": 16,
-      "evidenceStatus": "证据敏感",
-      "cachePrice": "¥0.1",
-      "inputPrice": "¥3",
-      "outputPrice": "¥9",
-      "score": 47.3
+      "score": 51.2
     }
   ]
 }
