@@ -1,0 +1,619 @@
+{
+  "summer-skincare-product-photography": {
+    "title": "海滩光影中的护肤品摄影",
+    "summary": "把精华瓶放在沙滩与海浪之间，用光线、泡沫和瓶身质感表现夏日护肤主题。"
+  },
+  "gpt-image-2-a61e119c8951": {
+    "title": "照片与手绘插画对照海报",
+    "summary": "上半部分保留原照片，下半部分转成手绘插画，练习同一场景的两种表现方式。"
+  },
+  "seedance-16-9-widescreen-30-seconds-dola-continuous-engine-f6be640f9715": {
+    "title": "餐桌甜点世界里的迷你人物",
+    "summary": "把人物缩小到餐桌上的甜点世界，用连续动作和巨大日常物件制造比例反差。"
+  },
+  "task-engine": {
+    "title": "任务管理产品的拼块展示页",
+    "summary": "用大小不同的卡片组合任务、工具连接和数据图表，练习把产品功能排成一张清楚的首页。"
+  },
+  "gpt-image-2-create-a-vertical-hong-kong-travel-scrapbook-poster-based-on-the-reference-imag-9000d83ed5f9": {
+    "title": "香港街景手绘旅行海报",
+    "summary": "把香港街景照片与交通、建筑等手绘细节放在同一张旅行海报中。"
+  },
+  "seedance-cinematic-handheld-gimbal-feel-mixed-with-a-few-locked-off-tripod-inserts-30703e7bbacd": {
+    "title": "能量饮料的清晨广告短片",
+    "summary": "用起床后的动作、饮料特写和节奏变化，串起一段从困倦到活跃的清晨广告。"
+  },
+  "404-planet": {
+    "title": "星球背景的网页错误页",
+    "summary": "以地球与太空为背景，让找不到页面时的提示、返回入口和导航仍然清晰。"
+  },
+  "gpt-image-use-each-uploaded-image-as-the-only-visual-source-create-one-independent-poster-be07b4861636": {
+    "title": "照片与复古网点海报对照",
+    "summary": "保留原照片，再将相同主体变成网点印刷风格，练习复古配色与文字安排。"
+  },
+  "ugc-8fe211ff986b": {
+    "title": "汉堡试吃广告短片",
+    "summary": "用手持镜头、食物特写和自然反应，表现像日常分享一样的汉堡试吃过程。"
+  },
+  "adhd-planner": {
+    "title": "日程应用的舒缓风格首页",
+    "summary": "围绕日程应用组织产品介绍和使用入口，用留白与柔和视觉降低阅读负担。"
+  },
+  "gpt-image-using-the-uploaded-photo-create-a-vertical-3-4-before-and-after-comparison-p-ba90e0d7bd09": {
+    "title": "照片与几何插画对照海报",
+    "summary": "将同一人物或场景分别呈现为照片和几何色块插画，同时保留动作与构图。"
+  },
+  "agent-grove": {
+    "title": "数字员工产品的视频背景首页",
+    "summary": "用全屏视频、半透明导航和简洁标题，介绍可以处理任务的数字员工产品。"
+  },
+  "minimalist-travel-journal-posters": {
+    "title": "极简手绘旅行手账海报",
+    "summary": "将旅行照片转成带有手绘线条和纸张质感的海报，保留地标与画面留白。"
+  },
+  "arceage-stats": {
+    "title": "产品数据展示区块",
+    "summary": "把关键数字、解释文字和品牌图形放在一起，练习数据卡片的层次与动态展示。"
+  },
+  "gpt-image-create-a-vertical-2-3-fashion-editorial-poster-with-a-minimalist-modern-aesthe-7c763b7ba132": {
+    "title": "橙色宽檐帽人物海报",
+    "summary": "以白底和橙色竖向色块衬托人物，练习人物与几何背景的组合。"
+  },
+  "asme": {
+    "title": "视频背景的深色品牌首页",
+    "summary": "围绕动态背景排列品牌、导航和介绍文字，练习深色页面中的文字可读性。"
+  },
+  "beauty-categories": {
+    "title": "美妆产品分类展示区块",
+    "summary": "将脸部、工具、身体护理等类别并排呈现，学习图片与分类文字的对应关系。"
+  },
+  "bold-studio": {
+    "title": "创意工作室的红色首页",
+    "summary": "用醒目的红色背景、大标题和视频素材组织工作室首页，突出主要行动入口。"
+  },
+  "build-with-us": {
+    "title": "视频背景与联系表单页面",
+    "summary": "在全屏视频上放置项目联系表单，练习多选服务和提交反馈；原例只模拟提交。",
+    "preparation": "准备 AI 编程工具，以及自己的品牌文案和背景视频。原例提交按钮只有一秒模拟延迟，真正接收留言还需要连接表单服务。"
+  },
+  "cyber-layer": {
+    "title": "网络安全产品介绍页",
+    "summary": "用深色背景、对齐的标题与图形展示安全产品，练习信息层次和首屏布局。"
+  },
+  "datacore-booking": {
+    "title": "预订服务的介绍首页",
+    "summary": "围绕预订服务安排标题、说明与界面预览，练习字体分工和按钮层级。"
+  },
+  "deepthink": {
+    "title": "智能分析产品的双区块页面",
+    "summary": "将介绍与产品界面分成上下两个深色区块，练习只用基础网页代码完成布局。"
+  },
+  "digitwist-ai-builder": {
+    "title": "AI 建站工具的动态首页",
+    "summary": "用蓝色立体背景、标题和入口按钮介绍建站产品，练习动画与正文之间的主次关系。"
+  },
+  "duolingo-styleguide": {
+    "title": "语言学习品牌的网页样式指南",
+    "summary": "统一字体、颜色、按钮和区块，学习如何把一种品牌视觉整理为可复用的网页规则。"
+  },
+  "equilibrium": {
+    "title": "健康品牌的视频背景首页",
+    "summary": "用视频背景与半透明导航衬托健康主题标题，练习单屏页面的视觉重点。"
+  },
+  "faq-cta": {
+    "title": "常见问题与页脚组合区块",
+    "summary": "把咨询入口、常见问题和页脚整合在页面末尾，让读者看完介绍后有清楚的下一步。"
+  },
+  "growth-decisions": {
+    "title": "业务分析产品的介绍首页",
+    "summary": "用问题导向的标题、山形视觉和按钮展示产品，练习按明确规格控制单屏布局。"
+  },
+  "guardnet-benefits": {
+    "title": "产品优势说明区块",
+    "summary": "将产品优势围绕中心图形排布，用简洁的标题和短句说明每项价值。"
+  },
+  "halo-use-case": {
+    "title": "支付产品的使用场景区块",
+    "summary": "把不同支付用途整理成并排的图文卡片，练习场景名称、说明和配图的对应。"
+  },
+  "impact-ventures": {
+    "title": "设计机构的视频背景首页",
+    "summary": "围绕设计服务组织标题、导航和行动按钮，并规定电脑与手机上的排列方式。"
+  },
+  "lumina": {
+    "title": "沉浸式视频背景页脚",
+    "summary": "将品牌、导航和联系入口叠放在视频背景上，练习页面收尾区块的信息组织。"
+  },
+  "max-reed-portfolio": {
+    "title": "个人经历与作品介绍卡片",
+    "summary": "用多列卡片展示经历、客户评价、常用软件和联系方式，练习个人作品集排版。",
+    "exercise": "换成自己的经历、项目成果和联系信息；示例中的客户评价与数据也一并替换为真实内容。"
+  },
+  "modern-agency": {
+    "title": "设计机构的动态介绍页",
+    "summary": "结合动态首屏、机构介绍与作品区域，练习完整页面的视觉节奏。"
+  },
+  "nexacore-control": {
+    "title": "产品流程控制展示区块",
+    "summary": "将说明卡片与中间动态视觉组合，学习产品能力介绍中的对齐和空间分配。"
+  },
+  "nexacore-results": {
+    "title": "产品成果展示区块",
+    "summary": "用并排指标和起伏曲线表现产品成果，练习标题、数值与图形的层次关系。"
+  },
+  "nexora-automation": {
+    "title": "自动化产品的单屏首页",
+    "summary": "在一屏内放入导航、产品介绍和界面预览，练习固定高度下的布局取舍。"
+  },
+  "nexto-404": {
+    "title": "飞碟主题的网页错误页",
+    "summary": "通过飞碟插画、简洁提示和返回入口，设计友好的页面缺失提示。"
+  },
+  "orbis-hello": {
+    "title": "卡通角色项目介绍区块",
+    "summary": "用一组卡通角色衬托项目标题与说明，练习角色素材和网页文字的组合。"
+  },
+  "personal-showcase": {
+    "title": "简洁的个人作品集首页",
+    "summary": "用人物照片、超大姓名与少量介绍呈现个人作品集，练习留白和文字比例。"
+  },
+  "gpt-image-a-little-editorial-magic-with-gpt-image-2-5-a6282b83ec8e": {
+    "title": "照片与手工纸艺对照海报",
+    "summary": "上方保留原照片，下方重构为纸艺场景，练习在材质变化中维持人物与环境关系。"
+  },
+  "johnagi168-minimax-h3-ai-716052b6dcb0": {
+    "title": "点击菜单式换装短片",
+    "summary": "让同一人物随屏幕选项切换服装，练习人物一致性、点击音效与换装节奏。"
+  },
+  "case-512647ce560a": {
+    "title": "照片转建筑草图海报",
+    "summary": "将风景或建筑照片转成带草图与留白的海报，练习保留结构而简化细节。"
+  },
+  "minimax-h3-reaper-ui-b513e22a8c2e": {
+    "title": "游戏角色装备切换动画",
+    "summary": "用菜单选择、机械部件重组与进入场景的过渡，组织一段游戏角色装备演示。"
+  },
+  "3d-7b4cef6aae29": {
+    "title": "城市高楼的立体展示图",
+    "summary": "把城市中的三座高楼排成一张立体展示图，比较体量并加入名称、高度等文字。",
+    "exercise": "换成一座熟悉的城市；先核对建筑名称、高度和年份，再检查画面比例与文字，避免直接采用生成的数字。"
+  },
+  "techhalla-ai-468400e28ba6": {
+    "title": "剪纸风格的特洛伊故事短片",
+    "summary": "用剪纸人物和分层场景讲述特洛伊题材故事，练习材质、镜头与叙事节奏。"
+  },
+  "gpt-image-create-one-premium-3-4-vertical-washi-tape-collage-artwork-for-country-locat-ce31c974f64b": {
+    "title": "和纸胶带拼贴城市剪影",
+    "summary": "用不同纹理的纸条拼出城市或地点的轮廓，练习地标组合与纸张层次。"
+  },
+  "ciri-ai-seedance-ai-e714d09df6ce": {
+    "title": "京都夏日晚归录像",
+    "summary": "用门口、街巷和日常动作营造夏日晚归片段，练习家用摄像机的画面质感。"
+  },
+  "nano-banana-ultra-realistic-cinematic-beauty-portrait-of-a-stunning-young-woman-preserving-2d849d28ea71": {
+    "title": "人物表情与面具对照肖像",
+    "summary": "让真实表情与手持面具形成反差，同时固定参考人物的面部特征。"
+  },
+  "seedance-create-a-30-second-1080p-ultra-realistic-personal-home-video-of-a-young-korean-906969cda347": {
+    "title": "小公寓里的舞蹈练习短片",
+    "summary": "把跟学舞蹈、出错和继续尝试写成连续动作，练习室内日常录像的节奏。"
+  },
+  "gpt-image-create-a-charming-vintage-cross-stitch-embroidery-artwork-featuring-city-str-0839f9058274": {
+    "title": "城市地标十字绣纪念画",
+    "summary": "将地标转成亚麻布上的十字绣图案，练习针脚、布料纹理和纪念画排版。"
+  },
+  "vlog-c8171f712492": {
+    "title": "首尔夏夜生活录像",
+    "summary": "将夜间街区与人物日常编成短片，练习怀旧家庭录像的声音与镜头安排。"
+  },
+  "3d-5b77438c2dce": {
+    "title": "厚涂油画微缩城市海报",
+    "summary": "把城市照片变成厚涂油画质感的微缩景观，练习立体空间与颜料纹理。"
+  },
+  "caden-flux-seedance-ai-8ffb5f062951": {
+    "title": "高中初恋故事短片",
+    "summary": "用角色参考图、对白和分段镜头组织一分钟校园故事，练习跨镜头的人物一致性。"
+  },
+  "case-251215797a14": {
+    "title": "科幻角色动作剪辑",
+    "summary": "围绕同一科幻角色安排快节奏动作，练习镜头长短、速度变化和角色参考图的使用。"
+  },
+  "gpt-image-gpt-image-2-5-4fceb12b1655": {
+    "title": "建筑照片与半色调拼贴海报",
+    "summary": "保留建筑外观，再用网点、纸张与注释重构下半幅画面，形成旅行海报。"
+  },
+  "case-f6a1af7d22b1": {
+    "title": "藏身处突围动作短片",
+    "summary": "将人物在狭窄空间中的突围拆成镜头，练习动作方向与空间连续性。"
+  },
+  "case-b877188dc572": {
+    "title": "几何视窗商业海报",
+    "summary": "用几何形状框住产品或场景，结合文字和留白建立商业海报的视觉层次。"
+  },
+  "case-95c22c7a7e05": {
+    "title": "照片与水彩插画对照海报",
+    "summary": "在同一版面展示原照片与水彩版本，练习用柔和色彩和线条表现人物关系。"
+  },
+  "aqib-786ai-seedance-ai-9fcb27bab8b2": {
+    "title": "韩国青年夏日生活短片",
+    "summary": "用街区行走与日常细节记录一天，练习生活场景中的连贯动作与自然光线。"
+  },
+  "grok-bot-6fe064b0d0c3": {
+    "title": "照片转极简机器人头像",
+    "summary": "保留发型与标志性装饰，把人像简化为圆脸、胶囊形眼睛和少量色块。"
+  },
+  "just-sharon7-seedance-ai-0a85559bbf5e": {
+    "title": "酒店深夜关东煮试吃短片",
+    "summary": "用人物参考图固定外观，再安排展示食物、品尝和说话，练习产品与人物互动。"
+  },
+  "ai-logo-triple-cat-7eac3df5199d": {
+    "title": "三只小猫的咖啡馆标志",
+    "summary": "用三只小猫和手绘文字组成咖啡馆标志，练习简洁轮廓与品牌名称的搭配。"
+  },
+  "seedance-2-5-vlog-30-3b85f315bb08": {
+    "title": "三种机位的骑行日记",
+    "summary": "将运动相机、手机前摄与跟拍画面按时间组合，练习在提示词中安排剪辑顺序。"
+  },
+  "3d-cg-c35a17fc041c": {
+    "title": "东方奇幻角色立体肖像",
+    "summary": "用薄荷绿长发、服饰材质和梦幻花园构成角色肖像，练习造型与光线的协调。"
+  },
+  "youmind-rollercoaster-wig-time-freeze": {
+    "title": "过山车假发冻结与倒放短片",
+    "summary": "让飞起的假发定格、倒放，再接一个收尾动作，练习物体运动与时间变化。"
+  },
+  "case-e0a5ca61432d": {
+    "title": "复古粉彩涂鸦拼贴海报",
+    "summary": "将照片与粉彩涂鸦、纸张纹理结合，练习同一主题的照片和手绘表达。"
+  },
+  "3d-cg-seedance-2-5-2453b4b4307a": {
+    "title": "御剑修仙者与巨兽对战",
+    "summary": "将御剑、施法和封印拆成分镜，并安排配乐节奏，练习大场景中的动作衔接。"
+  },
+  "gpt-image-cinematic-ultra-realistic-portrait-of-a-young-man-use-image-for-face-reference-6aedd33cc32d": {
+    "title": "暖金侧光的男子肖像",
+    "summary": "用侧面构图、深色服装和暖金光线塑造人物轮廓，同时保留参考面孔。"
+  },
+  "techhalla-ai-ca287ccf42b1": {
+    "title": "纸艺风格的历史人物短片",
+    "summary": "把历史人物题材压缩成十五秒纸艺场景，练习分层布景与镜头衔接。"
+  },
+  "case-4c1226bfd0d2": {
+    "title": "牛肉塔可的产品展示图",
+    "summary": "把饼皮与不同食材分层排列，练习产品结构、色彩和食品质感的表达。"
+  },
+  "aiwithkhan-seedance-ai-5b1b7fa15e8f": {
+    "title": "首尔旧巷的清晨录像",
+    "summary": "用居家与巷道里的日常动作营造清晨氛围，练习生活录像的连续镜头。"
+  },
+  "gpt-image-gpt-image-2-0-on-chatgpt-9e41be11645d": {
+    "title": "照片与剪纸场景双联海报",
+    "summary": "把照片中的地点重构为层叠剪纸，练习保持地标、人物和构图的对应关系。"
+  },
+  "caden-flux-seedance-ai-40fe0c7229fc": {
+    "title": "从起床到遛狗的晨间短片",
+    "summary": "按起床、冲咖啡、出门遛狗安排动作，让普通日常形成有起止的小故事。"
+  },
+  "gpt-image-please-create-a-separate-independently-designed-premium-poster-from-each-uploa-a4750dc40de5": {
+    "title": "照片与图解双联海报",
+    "summary": "将真实场景与图解式插画并置，练习拆分地标、物件和说明文字。"
+  },
+  "mightyking-seedance-ai-7bbc1d4f9ad9": {
+    "title": "竖屏手机跟拍生活短片",
+    "summary": "用竖屏跟拍表现人物与朋友的日常活动，练习手机视角、环境声和自然反应。"
+  },
+  "noorlewisx-seedance-ai-b2d98861daf9": {
+    "title": "带连续对白的健身房日记",
+    "summary": "围绕十五秒健身片段安排对白和动作，练习声音、口型与镜头时长的配合。"
+  },
+  "case-365f2a3615b1": {
+    "title": "公交站偶遇故事短片",
+    "summary": "用黄昏公交站的一次帮助展开故事，练习人物互动与手机拍摄视角。"
+  },
+  "case-b079faa80f0f": {
+    "title": "雪崖营救的油画动画",
+    "summary": "把雪崖上的营救过程表现为油画质感动画，练习笔触、动作与情绪的一致。"
+  },
+  "youmind-surprise-visit-romance-trailer": {
+    "title": "惊喜探访故事短片",
+    "summary": "用短信、奔跑和见面安排故事转折，让对白与每个镜头的动作互相配合。"
+  },
+  "case-8bdac964f9d4": {
+    "title": "海岛港口微缩城市动画",
+    "summary": "通过组装和镜头变化展示海岛港口，练习建筑细节、微缩比例与光影。"
+  },
+  "yaml-629d172a4820": {
+    "title": "按时间分段的城市跑酷短片",
+    "summary": "把冲刺、翻越、蹬墙与最后一跃分成五段，练习动作顺序、重心和镜头跟随。"
+  },
+  "aiwithjessica-seedance-ai-8abd02dc4e6a": {
+    "title": "复古沙龙的彩虹染发短片",
+    "summary": "用进店、染发与完成造型组织过程，练习同一人物在外观变化前后的连续性。"
+  },
+  "seedance-use-the-visual-style-of-reference-image-to-generate-gray-model-video-fed9142bed66": {
+    "title": "室内漫游视频的材质转换",
+    "summary": "保留简模视频中的建筑、家具与镜头路径，只替换为参考图中的材质、壁画和暖光。",
+    "preparation": "准备室内简模漫游视频与材质参考图，以及支持参考视频编辑的工具。简模就是尚未添加真实材质的空间模型；原例还要求交付可编辑工程，需由对应制作工具配合完成。",
+    "steps": [
+      "准备镜头路径已经确定的室内简模视频。",
+      "提交材质与暖光参考图，明确只换外观，不移动建筑、家具或镜头。",
+      "逐镜头检查变形、闪烁和物体增减，仅重做有问题的片段。",
+      "按顺序拼接为十五秒视频，导出各镜头首帧，并在制作工具中整理工程文件。"
+    ]
+  },
+  "youmind-1980s-slasher-yacht-octopus": {
+    "title": "复古游艇怪物电影片段",
+    "summary": "按秒安排角色和怪物袭击镜头，用胶片颗粒与灯光营造复古类型片效果。"
+  },
+  "noorlewisx-seedance-ai-3a8b37309451": {
+    "title": "地中海山景别墅漫游",
+    "summary": "用室内外镜头展示别墅、庭院和泳池，练习建筑空间之间的平顺衔接。"
+  },
+  "crimson-cola-99e9ec88e937": {
+    "title": "复古汽水广告短片",
+    "summary": "用瓶身特写、沙漠日出与复古城市组合广告场景，练习产品在不同镜头中的统一形象。"
+  },
+  "minimax-h3-360-470c21e949ae": {
+    "title": "船匠角色的环绕出场动画",
+    "summary": "先准备角色与环境图，再安排场景拼装、环绕镜头和文字动效，制作角色介绍。"
+  },
+  "seedance-25-diner-frozen-time-rewind": {
+    "title": "餐厅咖啡冻结与倒放短片",
+    "summary": "让打翻的咖啡定格在空中，再倒放回原位，用收尾动作形成完整小故事。"
+  },
+  "case-b157d9c072bc": {
+    "title": "无线耳机产品评测短片",
+    "summary": "把人物介绍、佩戴和产品特写组合，练习评测片中的自然互动与细节展示。"
+  },
+  "doctorwasif-seedance-ai-117496b404a6": {
+    "title": "列车里的怪物惊险短片",
+    "summary": "将列车车厢中的突变与人物反应按时间拆分，练习多人场景和紧张节奏。"
+  },
+  "minimax-h3-13-aaa-29128a349d71": {
+    "title": "十三个镜头的游戏角色介绍",
+    "summary": "用角色设定图统一身份，再以十三个短镜头组织特写、动作与文字卡片。"
+  },
+  "luxury-rooftop-helicopter-party": {
+    "title": "屋顶派对时尚短片",
+    "summary": "将人物、屋顶露台与直升机背景组合，练习多镜头的时尚氛围与场景连续性。"
+  },
+  "bamboo-toy-car-transformation-vlog": {
+    "title": "竹制玩具触发汽车变形短片",
+    "summary": "用手持视角表现玩具、人物反应和汽车变形，练习复杂变化的动作先后关系。"
+  },
+  "oggii-0-seedance-ai-a473e1b2b456": {
+    "title": "穿越历史的列车短片",
+    "summary": "以列车乘客视角连接不同时代的景象，练习环境转场与持续的观察视角。"
+  },
+  "seedance-269d1fc95820": {
+    "title": "屋顶弹跳的奇幻特技短片",
+    "summary": "把助跑、下落、回弹和回到屋顶写成闭环动作，练习连续镜头中的空间位置。"
+  },
+  "case-24775a8dc979": {
+    "title": "多人音乐视频的角色与编舞",
+    "summary": "分别用图片固定人物身份、用视频提供节奏参考，练习多人动作和镜头配合。"
+  },
+  "y2k-33951954bde6": {
+    "title": "复古数码相机闪光灯肖像",
+    "summary": "用直闪、颗粒和镜面背景模拟早期数码相机抓拍，练习有意保留画面瑕疵。"
+  },
+  "case-16c214b85b27": {
+    "title": "咖啡馆里的自然人物肖像",
+    "summary": "用笑容、暖光与咖啡馆环境表现轻松状态，练习表情和背景氛围。"
+  },
+  "real-case-04-azed-ai": {
+    "title": "半透明玻璃水果",
+    "summary": "把水果的形状与玻璃的透明、反光质感结合，练习材质替换而不丢失主体特征。"
+  },
+  "case-6693b0463c5f": {
+    "title": "椰子水产品广告分镜图",
+    "summary": "围绕椰子水安排多个产品画面，用冷凝水、液体与水花表现清爽质感。"
+  },
+  "voxel-7ebd32723fe1": {
+    "title": "从杂志页面升起的立体场景",
+    "summary": "把杂志内容转成立体小场景，练习纸面文字与微缩模型之间的空间关系。"
+  },
+  "case-6ed1595b6d70": {
+    "title": "意大利面产品广告分镜图",
+    "summary": "围绕面条、食材与烹饪细节规划多个画面，练习食品广告的光线与质感。"
+  },
+  "case-d92be6503a84": {
+    "title": "茶杯里的螺旋银河",
+    "summary": "将银河缩进瓷杯，用微距视角连接日常器物与宇宙景象。"
+  },
+  "case-dbb1375c81bd": {
+    "title": "照片与结构草图对照海报",
+    "summary": "把参考对象重构为立体结构图和技术草图，练习外观、内部层次与注释的组织。"
+  },
+  "ai-logo-mame-cafe-2b73b3d79947": {
+    "title": "手绘咖啡馆品牌标志",
+    "summary": "用儿童涂鸦般的线条与文字设计咖啡馆标志，练习简单图形的识别度。"
+  },
+  "20-70-5074c310064d": {
+    "title": "七十年代风格装饰字母",
+    "summary": "为字母加入圆润轮廓、花朵和色彩装饰，练习整套字符的风格统一。"
+  },
+  "case-daf11fde350e": {
+    "title": "电梯里的人物与爱犬合影",
+    "summary": "用电梯反光、人物服装和爱犬的站位组织合影，练习多人或多主体构图。"
+  },
+  "case-2a9caf78561c": {
+    "title": "汽车内的时尚人物肖像",
+    "summary": "利用车窗、座椅和黄金时刻的光线拍摄式构图，练习环境与服装的协调。"
+  },
+  "case-0ade8f99f80d": {
+    "title": "枫糖浆产品广告分镜图",
+    "summary": "围绕瓶身、浇淋和食物细节规划画面，用暖色光线表现糖浆的质地。"
+  },
+  "gpt-image-create-a-premium-4-5-editorial-poster-using-the-provided-photograph-of-person-f45e4413a485": {
+    "title": "人物照片与纸雕场景海报",
+    "summary": "把真实人物照片与同场景纸雕放在上下两部分，练习材质转换与构图对应。"
+  },
+  "3d-0c5fb248a5b9": {
+    "title": "照片与立体纸艺微缩海报",
+    "summary": "保留上方的真实场景，下方重构为层叠纸艺模型，练习空间和细节的简化。"
+  },
+  "blackglass-ascendant-c88bb05a4db7": {
+    "title": "黑色材质与轮廓光提示词模板",
+    "summary": "先用文字模型整理主体、深色材质和光线关系，再把生成的提示词用于制作图片。",
+    "preparation": "先准备文字对话工具，将下方模板连同自己的主题或参考图交给它，得到生图提示词；再把提示词交给图片生成工具。",
+    "steps": [
+      "阅读模板，确定主体、材质和光线要求。",
+      "将模板与自己的主题交给文字对话工具，让它整理成生图提示词。",
+      "把整理后的提示词与参考图交给图片生成工具，先生成一张。",
+      "检查主体轮廓与暗部细节，针对问题调整光线或材质描述。"
+    ]
+  },
+  "case-5fe2c52283f0": {
+    "title": "自然风景中的胶片感人像",
+    "summary": "用草地、薄雾和柔和光线衬托人物，练习环境、服装与情绪的统一。"
+  },
+  "case-6e1bf0e0e1e1": {
+    "title": "超级英雄服装的都市自拍",
+    "summary": "将英雄服装与普通街头自拍视角结合，练习特殊造型与日常环境的融合。"
+  },
+  "case-a2c26da9cdc5": {
+    "title": "手机旅行合影",
+    "summary": "以景点为背景安排人物、自然光和随手拍构图，练习真实旅行照片的观感。"
+  },
+  "gpt-image-create-a-vertical-editorial-illustration-inspired-by-the-reference-images-depi-ad5add54a4ea": {
+    "title": "靛蓝线描的日本街巷",
+    "summary": "用深蓝与象牙白绘制密集街景，练习线条粗细、建筑层次和有限配色。"
+  },
+  "gpt-image-gpt-image-2-5-is-truly-amazing-42ee9b3464b2": {
+    "title": "同一人物的一天照片相册",
+    "summary": "用手机相册式布局呈现同一人物从早到晚的照片，练习跨场景身份一致性。"
+  },
+  "gpt-image-transform-the-provided-real-photograph-into-a-charming-hand-drawn-travel-journa-e95948740d53": {
+    "title": "城市风景手绘旅行日记",
+    "summary": "保留照片的透视和主要地标，再加入手绘线条、文字和旅行手账风格。"
+  },
+  "gpt-image-use-the-uploaded-image-as-the-primary-reference-and-transform-it-into-a-vertica-9cedcb5ccd93": {
+    "title": "照片流入手绘世界",
+    "summary": "让真实照片中的物件延伸成手绘场景，练习两种画面风格之间的自然连接。"
+  },
+  "gpt-image-use-the-uploaded-photo-as-the-exact-visual-reference-and-transform-it-into-a-no-dad5db12db3f": {
+    "title": "暖阳家庭记忆剪贴画",
+    "summary": "用家庭照片、纸张和手绘细节组合怀旧版面，练习生活瞬间与留白的安排。"
+  },
+  "nano-banana-use-the-uploaded-image-as-the-master-reference-for-the-woman-257bb64f8d8d": {
+    "title": "海岸人物与远方骏马",
+    "summary": "保持参考人物身份，将黑裙、海浪和远处马匹组织成有纵深的时尚肖像。"
+  },
+  "case-e906a54b97a9": {
+    "title": "故宫的分层剪纸场景",
+    "summary": "以故宫建筑、人物和春雪组成纸艺画面，练习前景、中景与背景的层叠关系。"
+  },
+  "case-9e55fb876ad4": {
+    "title": "男装镜面自拍",
+    "summary": "通过更衣室镜面、服装与光影组织自拍，练习反射中的人物比例和细节。"
+  },
+  "case-703d933900c5": {
+    "title": "照片上的手绘涂鸦标注",
+    "summary": "给照片加入箭头、手写文字和小图案，练习装饰与主体之间的主次关系。"
+  },
+  "dark-fantasy-battlefield-warrior": {
+    "title": "黑暗奇幻战场人物",
+    "summary": "用燃烧战场、服装与武器塑造人物状态，练习复杂背景中的主体突出。"
+  },
+  "case-73200dcd8dad": {
+    "title": "随手拍风格的手机人像",
+    "summary": "用低对比度、自然光和细小瑕疵模拟日常抓拍，减少过度修饰的观感。"
+  },
+  "midjourney-v8-2-7c8b28bfbf65": {
+    "title": "云海中的仙侠圆台概念图",
+    "summary": "用巨型白玉圆台、云海与人物背影形成尺度对比，练习东方幻想场景的构图。"
+  },
+  "case-07163cd3ebdb": {
+    "title": "海盐焦糖拿铁产品海报",
+    "summary": "用冰块、咖啡液体与醒目文字制作竖版产品海报，练习商品和促销信息的层级。"
+  },
+  "case-8da08964ae81": {
+    "title": "厨房里的自然光人像",
+    "summary": "用现代厨房与手机拍摄视角表现人物，练习自然光、皮肤和衣物质感。"
+  },
+  "3d-character-name-sculpture": {
+    "title": "角色与名字的立体雕塑",
+    "summary": "把角色名字变成立体文字，并把角色与装饰融入场景，练习文字造型和人物比例。"
+  },
+  "gpt-image-create-a-cute-neo-expressionist-cubist-minimal-vector-portrait-illustration-of-18e9f5a87a01": {
+    "title": "黑底几何色块人物肖像",
+    "summary": "用几何色块、简化线条与黑色背景重构人物，练习识别特征与夸张造型。"
+  },
+  "itasha-28cf57d4d335": {
+    "title": "角色主题汽车涂装",
+    "summary": "根据参考插画中的角色和配色设计汽车外观，练习平面图案在车身上的延展。"
+  },
+  "case-5a37ec622965": {
+    "title": "四种品牌的剪纸世界",
+    "summary": "把一张画面分成四个品牌主题区域，用不同纸艺结构保持各自特征和整体统一。"
+  },
+  "case-dff97551986e": {
+    "title": "照片与手绘速写分屏海报",
+    "summary": "将咖啡馆日常照片与纸上的速写并置，练习同一物件的写实和简化表达。"
+  },
+  "case-ba5c45f815a2": {
+    "title": "二十四节气主题海报",
+    "summary": "围绕节气主题组合自然元素与竖版文字，练习多层画面空间和色彩控制。"
+  },
+  "nano-banana-created-with-google-gemini-nano-banana-pro-d6671722fff5": {
+    "title": "暖色笔触人物油画",
+    "summary": "用松散笔触和边缘纹理重构人物，练习半写实肖像中的色彩与体积。"
+  },
+  "3-3-4d4d5ebdd1c8": {
+    "title": "一张参考图生成九格分镜",
+    "summary": "从同一参考主体出发安排远近不同的九个镜头，练习身份、服装与光线一致性。"
+  },
+  "case-61398db1b57a": {
+    "title": "显示器像素微距图",
+    "summary": "放大显示器的像素、灰尘与文字细节，练习微距画面中的材质与清晰度。"
+  },
+  "case-59b9154e52d3": {
+    "title": "日食海岸人物剪影",
+    "summary": "用日食、海面反光和两个人物的姿势组织剪影，练习逆光场景中的轮廓。"
+  },
+  "gpt-image-use-the-uploaded-reference-image-as-the-strict-identity-and-outfit-reference-c2f95e70c78c": {
+    "title": "人物与夸张涂鸦影子",
+    "summary": "保留参考人物和服装，让身旁影子变成夸张涂鸦，练习写实与手绘的对照。"
+  },
+  "case-f38cf80fed06": {
+    "title": "复古发明专利档案图",
+    "summary": "将发明画成带技术图纸、手写注释、印章和旧纸纹理的档案，练习信息与材质的组合。"
+  },
+  "portfolio-about": {
+    "title": "个人网站的自我介绍区块",
+    "summary": "把照片、自我介绍和联系入口组合成深色页面区块，练习个人信息的层次与动效。"
+  },
+  "gpt-image-2-minimax-h3-f6dfbd41c76d": {
+    "title": "球员数据面板开场动画",
+    "summary": "先生成球员数据面板，再以此为参考制作扫描线、数值滚动和技能卡点亮动画。"
+  },
+  "minimax-h3-2183164c2e20": {
+    "title": "游戏角色出场介绍模板",
+    "summary": "从细节、背影、面部到全身依次展示角色，练习四段镜头的节奏与身份一致性。"
+  },
+  "just-sharon7-minimax-h3-ai-1e358dbc78af": {
+    "title": "薄荷双丸子头角色出场动画",
+    "summary": "围绕角色参考图安排特写、动作与舞台光线，练习游戏角色登场片的统一视觉。"
+  },
+  "midjourney-v8-2-38e5bbd51374": {
+    "title": "云中白玉仙宫概念图",
+    "summary": "用白玉圆盘、宫殿群和天桥构建云中仙宫，练习巨大建筑与云海的空间关系。"
+  },
+  "oriental-fantasy-celestial-realm": {
+    "title": "通往天门的云海阶梯",
+    "summary": "以金玉阶梯、云海和天门构成东方幻想场景，练习纵深、尺度与光线。"
+  },
+  "gpt-image-create-an-ultra-realistic-full-body-fashion-portrait-of-the-same-woman-from-the-5c7fd72c0ecd": {
+    "title": "金色水岸的米白西装肖像",
+    "summary": "保持参考人物身份，用米白西装、水岸和金色光线组织全身时尚肖像。"
+  },
+  "case-418fd8de0f02": {
+    "title": "伦敦街头的巨型人物",
+    "summary": "把参考人物放大到城市建筑尺度，用无人机视角和微小街道元素制造比例反差。"
+  },
+  "midjourney-06a3aabe4747": {
+    "title": "竹梢上相对而立的武侠人物",
+    "summary": "用弯曲竹梢、两个人物和晨光安排武侠场景，练习空间关系与静止瞬间。"
+  }
+}

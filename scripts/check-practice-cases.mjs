@@ -5,9 +5,12 @@ import { loadCases } from './practice-cases-data.mjs'
 import { createHash } from 'node:crypto'
 const cases = loadCases()
 const selection = JSON.parse(readFileSync('docs/.vitepress/data/practice-cases-selection.json', 'utf8')).cases
-assert.equal(cases.length, 150)
+const expected = Number(process.argv[2] || 300)
+assert.equal(cases.length, expected)
+assert.equal(selection.length, expected)
+assert.equal(new Set(selection.map(c => c.slug)).size, expected)
 const index = JSON.parse(readFileSync('docs/.vitepress/data/cases-generated/index.json', 'utf8'))
-assert.equal(index.length, 150)
+assert.equal(index.length, expected)
 assert(index.every(c => !('promptZh' in c) && !('promptOriginal' in c)), '列表不应包含完整提示词')
 const ids = new Set()
 const dist = 'docs/.vitepress/dist'

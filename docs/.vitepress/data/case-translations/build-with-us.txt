@@ -1,0 +1,42 @@
+使用 React、TypeScript、Vite 和 Tailwind 制作单页网站：全屏视频背景，搭配联系表单。图标使用 lucide-react。
+
+布局与尺寸
+- 根容器使用 min-h-screen、白色背景，内边距 p-3 sm:p-4 md:p-6。
+- 内部是一张大圆角卡片：rounded-2xl sm:rounded-3xl、overflow-hidden。高度使用 min-h-[calc(100vh-24px)] sm:min-h-[calc(100vh-32px)] md:min-h-[calc(100vh-48px)] lg:h-[calc(100vh-48px)]。电脑端固定在可视区域内，手机和平板端随内容展开。
+- 视频填满卡片：absolute inset-0 w-full h-full object-cover，属性 autoPlay muted loop playsInline。视频地址：
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260602_150901_c45b90ec-18d7-42ff-90e2-b95d7109e330.mp4
+- 内容层 relative z-10 flex flex-col，沿用卡片的最小高度阶梯，加 lg:h-full；内边距 p-4 sm:p-6 md:p-8，gap-6。
+
+字体
+在 index.css 从 Google Fonts 导入 Inter（字重 300–700）与 Instrument Serif（正体、斜体）。全局设置 * { font-family: 'Inter', sans-serif; }。标题中一个强调词使用 Instrument Serif 斜体。
+
+顶部导航
+- 胶囊导航条：bg-white/60 backdrop-blur-md rounded-2xl shadow-sm，pl-3 sm:pl-4 pr-2 py-2，w-full sm:w-auto，flex items-center gap-3 sm:gap-6。
+- 标志为 32×32 内联 SVG，viewBox="0 0 256 256"，黑色路径组成 M：
+M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z
+- 手机端隐藏链接，从 sm:flex 开始显示：Our story、Expertise、Our work、Journal。样式 text-gray-800 text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap。
+- 右侧按钮文案 Start a project，使用 bg-black text-white text-sm font-medium px-4 sm:px-5 py-2 rounded-xl hover:bg-gray-800；手机端通过 ml-auto 靠右。
+- 导航与底部区域之间放置 <div className="flex-1 min-h-[2rem]" />。
+
+底部区域：左标题与右表单
+容器 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6。
+左侧标题使用白色 <p>，text-3xl sm:text-4xl xl:text-5xl font-medium leading-tight drop-shadow-lg lg:max-w-lg xl:max-w-2xl shrink-0。两行文案用 <br /> 分开：
+We craft bold ideas
+and ship them as products
+其中 products 用 span 包裹，内联样式 fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', fontWeight: 400。
+
+联系表单
+外层 w-full lg:w-[min(480px,45%)] shrink-0；卡片 bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden；内部 p-4 sm:p-6、flex flex-col gap-4。
+1. 标题 Say hello! 👋：text-xl sm:text-2xl font-semibold text-black tracking-tight。
+2. 邮箱和社交链接始终横排：flex flex-row items-center justify-between gap-3 bg-gray-50 rounded-2xl px-4 py-2.5。左侧灰色小字 Drop us a line，下方 mailto 链接 [已省略邮箱]，text-blue-600 font-semibold hover:underline truncate。右侧四个 32×32 按钮，w-8 h-8 rounded-xl flex items-center justify-center hover:opacity-80 transition-opacity，lucide 图标大小 13。Twitter 用 bg-gray-100 text-gray-800；Circle 用 bg-pink-100 text-pink-500；Instagram 用 bg-orange-100 text-orange-400；Linkedin 用 bg-blue-100 text-blue-600。抽成 SocialBtn 辅助组件。
+3. OR 分隔线：文字 text-gray-400 font-medium text-sm，两侧横线 flex-1 h-px bg-gray-200。
+4. 表单 flex flex-col gap-4。标签 Tell us about your vision，text-sm font-medium text-black。姓名、邮箱在 sm 及以上并排，容器 flex flex-col sm:flex-row gap-2，占位文字 Full name 和 Email；输入框 flex-1 min-w-0 text-sm px-3 py-2.5 rounded-xl border border-gray-200 bg-transparent placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition。
+文本框 4 行，占位 What are you looking to build or improve...，沿用输入样式并加 resize-none。
+服务标签标题 I need help with...；容器 flex flex-wrap gap-1.5；按钮 text-xs font-medium px-3 py-2 rounded-lg border transition-all。未选中 bg-white text-gray-700 border-gray-200 hover:border-gray-400，选中 bg-gray-100 text-black border-black，用状态实现多选切换。按顺序列出 Website、Mobile App、Web App、E-Commerce、Visual Identity、3D & Motion、Digital Marketing、Growth & Consulting、Other。
+提交按钮 w-full bg-black text-white text-sm font-semibold py-3 rounded-2xl hover:bg-gray-800 transition-colors disabled:opacity-60，文案 Send my message，提交时 Sending...。
+5. 提交行为：设置 sending=true，等待一秒模拟延迟 new Promise(r => setTimeout(r, 1000))，然后用成功状态替代表单：居中纵排 py-6 gap-3，48×48 绿色圆形对勾 w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-xl，内容 ✓；标题 You're all set!，text-base font-semibold text-gray-900；说明 Expect a reply within 24 hours.，text-sm text-gray-500。
+
+useState 状态：selected 为 string[]，记录多选服务；name、email、message 为字符串；sending、sent 为布尔值。
+所有交互使用 Tailwind transition-*（透明度、颜色、全部属性），不使用外部动画库；导航保留 backdrop-blur-md。
+文件顶部常量 VIDEO_URL 为上述视频地址，SERVICES 为服务数组。
+src/App.tsx 放完整组件和 SocialBtn；src/index.css 放 Google Fonts 导入、Tailwind 指令和全局字体。使用标准 Vite、Tailwind 配置，tailwind.config.js 扫描 ./index.html 与 ./src/**/*.{ts,tsx}。

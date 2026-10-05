@@ -1,0 +1,76 @@
+使用 React、TypeScript、Tailwind CSS 和 lucide-react 制作占满可视区域的深色个人作品集特色区块。
+
+布局
+全屏背景 #0a0a0a，白字，Inter 字体，开启字体抗锯齿。
+顶部左侧标题 Hi, I'm Max Reed!，text-[28px] sm:text-3xl md:text-4xl lg:text-[44px]，行高 1.15、font-normal、tracking-tight。下方介绍保留文案：
+A London-based independent creator shaping sharp visual systems, web-ready products, and story-first campaigns. With a decade of craft behind me, I help ideas move with focus and intention.
+介绍样式 text-sm md:text-[15px]、leading-[1.6]、text-white/60、max-w-3xl，标题容器 max-w-3xl。
+右侧液态玻璃圆角按钮 Let's Team Up Today：px-5 sm:px-6、py-2.5 sm:py-3。
+整体内边距 px-4 sm:px-6 md:px-10 lg:px-14 py-6 sm:py-8 md:py-10；电脑端 lg:h-screen。
+网格在 lg 三列、md 两列、手机一列，gap-4 md:gap-5。
+
+第一列：经历卡片
+rounded-2xl、bg-black，背景视频 absolute inset-0 object-cover，autoPlay loop muted playsInline：
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260507_150203_44a5bd32-516a-47ce-a077-8acbf9aa8991.mp4
+顶部居中 BACKGROUND，大写、tracking-[0.22em]、text-[11px]、text-white/70，两侧 Sparkle 图标 h-3 w-3、strokeWidth 1.5。
+底部职业时间线为四列网格 [auto_auto_1fr_auto]：
+2023-Now · Freelance Creative · Solo Studio
+2020-2023 · Head of Brand Design · Rove Studio
+2017-2020 · Visual Stylist · Ember Works
+年份与职务之间用 Sparkle 分隔，h-3 w-3、text-white/60。
+
+第二列：上下堆叠，md:grid-rows-[auto_1fr]
+上方客户评价卡：rounded-2xl、bg-[#324444]、p-5 md:p-6，带 noise-overlay。CLIENT VOICE 标签左对齐、配 Sparkle 图标，justify-start。
+引言保留：Max reshaped our image with a degree of finesse and vision that surpassed what we'd hoped for. The process felt graceful, and the outcomes speak for themselves.
+引言样式 text-[13px] sm:text-[13.5px]、leading-[1.6]、text-white/85。署名 Elena Brooks，Creative Director — Halcyon。
+下方 10M+ 卡片：rounded-2xl、bg-black，背景视频：
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260507_154543_d5b83fc1-9cea-44f3-b5e8-8f325935211a.mp4
+居中大字 10M+：text-5xl sm:text-6xl md:text-7xl lg:text-[88px]、font-light、tracking-tight、drop-shadow；底部居中 Raised for startups，text-white/85。
+
+第三列：上下堆叠
+上方日常软件卡片 rounded-2xl、bg-black；视频：
+https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260507_153148_d7a3e1dd-e5d0-4ce6-8306-00d7522ecc44.mp4
+顶部标签 DAILY SOFTWARE。底部两行滚动液态玻璃图标卡，h-14 w-14 md:h-16 md:w-16、rounded-xl。第一行向左滚动，图标 Figma、Framer、Palette、PenTool、Layers、Type、Aperture、Chrome；第二行向右滚动，图标 Camera、Brush、Box、Wand2、Figma、Framer、Type、Layers。各行复制一遍以无缝循环，两端渐隐：[mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]。
+下方联系卡片 rounded-2xl、bg-[#324444]、p-5 md:p-6、noise-overlay。标签 REACH ME，邮箱 [已省略邮箱]，电话 +44 207 81 63；右上角 ArrowUpRight 图标按钮 h-9 w-9 rounded-full。
+
+index.css 中的自定义样式（保留原始代码）：
+```css
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes marquee-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.animate-marquee-left { animation: marquee-left 22s linear infinite; }
+.animate-marquee-right { animation: marquee-right 26s linear infinite; }
+
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 240px 240px;
+}
+```
+
+字体 Inter，备用系统字体。lucide-react 图标：ArrowUpRight、Sparkle、Figma、Framer、Palette、PenTool、Layers、Type、Aperture、Chrome、Camera、Brush、Box、Wand2。所有图标 strokeWidth 1.5。

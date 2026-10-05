@@ -11,7 +11,7 @@ def one(d):
  if not url:return {'slug':d['slug'],'error':'missing-poster'}
  for attempt in range(2):
   try:
-   data=subprocess.check_output(['curl','-fsSL','--max-time','25','--max-filesize','16000000',url],stderr=subprocess.DEVNULL)
+   data=subprocess.check_output(['curl','-fsSL','--max-time','25','--max-filesize','16000000','-H','Referer: https://goodcase.ai/','-A','Mozilla/5.0',url],stderr=subprocess.DEVNULL)
    im=Image.open(io.BytesIO(data));im.seek(getattr(im,'n_frames',1)*2//3);im=ImageOps.exif_transpose(im).convert('RGB');im.thumbnail((800,600));im.save(target,'JPEG',quality=83,optimize=True)
    return None
   except Exception as e:

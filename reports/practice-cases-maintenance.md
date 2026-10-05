@@ -30,3 +30,13 @@
 - 当前展示分类仅 image（AI 生成图片）、video（AI 创作视频）、web（AI 做网站与工具）。文案分区删除，网页与工具共 30 条合并展示，总数仍为 150。
 - 来源候选中的 web/tool 仍用于内部选取配额和操作建议区分；导入时统一映射为站点 web 分类。原始来源与具体学习步骤保持不变。
 - 生成器清理自身生成的旧分类索引；导航、卡片、详情面包屑和返回链接使用新分类，不再接受保存的 copy/tool 分类返回地址。
+
+## 2026-10-05：增量新增 150 个（v1.69）
+
+- 总计 300：图片 150、视频 90、网站与工具 60。本批增加 75/45/30，旧 150 条内容与顺序保留。
+- 最新目录 1,656 条，详情缓存齐全；已有缓存复用，新目录条目补抓，不宣称全部重新获取。
+- 增量维护：`node scripts/collect-goodcase.mjs` → `python3 scripts/select-goodcase.py --add 150` → 人工审阅效果与文本 → `python3 scripts/prepare-case-covers.py` → `python3 scripts/import-practice-cases.py --append`。不要使用不带 `--append` 的旧覆盖流程缩减已经扩充的库。
+- `case-editorial-overrides.json` 保存本批 150 条中文标题、摘要和个别流程修订；`case-translations/` 新增 4 条完整中文译文与 `terminology.json` 常用术语对照。代码、地址、品牌和指定台词保留。
+- 选取脚本排除已存在的标识与规范化原文；导入器拒绝重复标识和不满 150 条的增量；来源原文摘要保留在选择清单。
+- 封面新增 150 张；三段角色视频取第 5 秒以改善开场预览。没有下载整库视频或调用付费生成。
+- 构建后 `node scripts/check-practice-cases.mjs` 默认校验 300 条；可传入显式预期总数。测试报告：`reports/practice-cases-300-test-report.md`。

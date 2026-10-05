@@ -1,4 +1,7 @@
-import json,re,collections
+import json,re,collections,argparse
+parser=argparse.ArgumentParser()
+parser.add_argument("--add",type=int,default=0)
+args=parser.parse_args()
 from pathlib import Path
 p=Path('docs/.vitepress/cache/goodcase')
 ds=[]
@@ -33,9 +36,20 @@ def topic(d):
    if re.search(regex,title):return key
  return '其他'
 exclude={'8-f-1-9578d4d0451d','nano-banana-flow-antigravity-423c21fb568e','arctic-mint-gum-debd6203b36e','golden-autumn-harvest-poster','product-poster-workflow','easy-product-relight','case-6d72adabab02','case-5b727d91b441'}
+exclude.update({'case-9c747054ceeb','ethancole-ai-seedance-ai-c8e1a1b52569'})
+# Editorial review: mismatched media, duplicate themes, or unsuitable emphasis for employee learning.
+exclude.update({'synapsex-3d-hero-44312666887a','gpt-image-a-sophisticated-minimalist-lifestyle-art-poster-featuring-person-subject-m-6f9f4b65ad5a','gpt-image-create-a-hyper-realistic-cinematic-cosplay-photograph-of-a-clearly-adult-woman-62b74321e905','boa-hancock-water-obstacle-race-prompt','johnagi168-ai-e3cbef38a6d1','case-35f04fe7df2d','case-3b1796c66ab4','gpt-image-create-a-highly-tactile-macro-visualization-using-a-continuous-viscous-fiber-fl-a0f44dc9087e','seedance-2-0-181cb461432f'})
 ranked=sorted((d for d in ds if d['slug'] not in exclude and category(d) in ['image','video','web','tool','copy'] and len(d.get('promptFull','').strip())>=180 and d.get('mediaUrl') and not re.fullmatch(r'https?://\S+',d.get('promptFull','').strip())),key=lambda d:(-score(d),d['slug']))
+existing=json.loads(Path('docs/.vitepress/data/practice-cases-imported.json').read_text())+curated
+existing_ids={d['slug'] for d in existing}
+existing_prompts={re.sub(r'\s+',' ',d['promptOriginal']).strip() for d in existing}
+if args.add:
+ if args.add != 150:raise SystemExit('增量模式目前支持 --add 150')
+ ranked=[d for d in ranked if d['slug'] not in existing_ids and re.sub(r'\s+',' ',d['promptFull']).strip() not in existing_prompts]
+ keep=set()
+if not args.add:existing_prompts={re.sub(r'\s+',' ',d['promptOriginal']).strip() for d in curated}
 selected=[];counts=collections.Counter();clusters=collections.Counter();sources=collections.Counter()
-quota={'image':75,'video':45,'web':27,'tool':3,'copy':0}
+quota={'image':75,'video':45,'web':30 if args.add else 27,'tool':0 if args.add else 3,'copy':0}
 for d in ranked:
  if d['slug'] in keep:selected.append(d); counts[category(d)]+=1;clusters[(category(d),topic(d))]+=1;sources[d.get('source')]+=1
 for d in ranked:
@@ -43,13 +57,16 @@ for d in ranked:
  if counts[cat]>=quota[cat] or d['slug'] in keep:continue
  if cat=='image' and top in ['海报','肖像','角色','空间','产品'] and clusters[(cat,top)]>=dict(海报=20,肖像=8,角色=14,空间=8,产品=16)[top]:continue
  if cat=='video' and top in ['广告','动作','日常','变身','动画','时尚'] and clusters[(cat,top)]>=dict(广告=14,动作=5,日常=6,变身=8,动画=12,时尚=2)[top]:continue
- selected.append(d); counts[cat]+=1;clusters[(cat,top)]+=1
+ normalized=re.sub(r'\s+',' ',d['promptFull']).strip()
+ if normalized in existing_prompts:continue
+ selected.append(d); existing_prompts.add(normalized); counts[cat]+=1;clusters[(cat,top)]+=1
 ordered=[]
 for band in sorted({int(score(d)//5) for d in selected},reverse=True):
  buckets={cat:sorted([d for d in selected if int(score(d)//5)==band and category(d)==cat],key=lambda d:(-score(d),d['slug'])) for cat in quota}
  while any(buckets.values()):
   for cat in ['image','video','web','tool','copy']:
    if buckets[cat]:ordered.append(buckets[cat].pop(0))
+assert dict(counts)=={k:v for k,v in quota.items() if v}, f"候选不足：{counts}"
 selected=ordered
 for i,d in enumerate(selected):d['selectionRank']=i+1;d['selectionScore']=score(d);d['siteCategory']=category(d)
 Path('docs/.vitepress/cache/goodcase/selection-candidates.json').write_text(json.dumps(selected,ensure_ascii=False,indent=2))

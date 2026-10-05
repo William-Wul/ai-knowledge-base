@@ -1,9 +1,9 @@
 {
-  "capturedAt": "2026-09-23",
-  "sourceTotal": 1234,
-  "sourceFetched": 1206,
-  "sourceUnavailable": 28,
-  "selectionPolicy": "完整提示词、效果、来源与可复用性优先；语言不参与评分。同一质量区间交错展示不同类别；保留六个已审阅案例。",
+  "capturedAt": "2026-10-05",
+  "sourceTotal": 1656,
+  "sourceFetched": 1656,
+  "sourceUnavailable": 0,
+  "selectionPolicy": "保留已收录内容与顺序；新增按完整提示词、效果、来源与可复用性筛选，排除重复原文；图片、视频、网站与工具配额为 75/45/30。",
   "cases": [
     {
       "slug": "case-aa3e3c074ac1",
@@ -1054,6 +1054,1068 @@
       "category": "image",
       "editorialScore": 64.86,
       "sourcePromptSha256": "b65a2a11763cae5ae7a33bcc5219896975891701da89c2bc0c4e6efe934e5c3c"
+    },
+    {
+      "slug": "summer-skincare-product-photography",
+      "rank": 151,
+      "category": "image",
+      "editorialScore": 92.92,
+      "sourcePromptSha256": "931c5b5bc1341deca86526ddfc70ff047e6ca27f14da1300f4bb81f7437b4614"
+    },
+    {
+      "slug": "gpt-image-2-a61e119c8951",
+      "rank": 152,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "c800ac8f5f6a2deb5a94e103cd6783ed09d68371f7b6529285ca07d975676789"
+    },
+    {
+      "slug": "seedance-16-9-widescreen-30-seconds-dola-continuous-engine-f6be640f9715",
+      "rank": 153,
+      "category": "video",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "1dc32e62dcaf05f6ea384540a10e1f66460da62a350430ce9c3200500cee895a"
+    },
+    {
+      "slug": "task-engine",
+      "rank": 154,
+      "category": "web",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "39ec8020f3ae8ef6aae53d0e5d52f770596f1e5dde7402af30393de7c9aa407b"
+    },
+    {
+      "slug": "gpt-image-2-create-a-vertical-hong-kong-travel-scrapbook-poster-based-on-the-reference-imag-9000d83ed5f9",
+      "rank": 155,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "a9483af3e4c03aa7facc1cee793b19c8588ec72f1440de5e4a651dd112c77dbd"
+    },
+    {
+      "slug": "seedance-cinematic-handheld-gimbal-feel-mixed-with-a-few-locked-off-tripod-inserts-30703e7bbacd",
+      "rank": 156,
+      "category": "video",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "8400a7143bdda96451eec59c70b669fba57b9e15a45031f5cca472a52cd9c3ba"
+    },
+    {
+      "slug": "404-planet",
+      "rank": 157,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "a65606d4bdc8b977eeec3413388e8abaea92e70a398170d618e4eceb94b09f94"
+    },
+    {
+      "slug": "gpt-image-use-each-uploaded-image-as-the-only-visual-source-create-one-independent-poster-be07b4861636",
+      "rank": 158,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "c4e5a44d89fbbd4b525e0e93260f8d3c21ca630f1fc735c3b53adc0450fd625a"
+    },
+    {
+      "slug": "ugc-8fe211ff986b",
+      "rank": 159,
+      "category": "video",
+      "editorialScore": 86.94,
+      "sourcePromptSha256": "1ee7a21cbde81d0d7b52456819f24b681939659db5b1adf1bb2b2023cd6c3789"
+    },
+    {
+      "slug": "adhd-planner",
+      "rank": 160,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "f18f4af3e6ef499af529613bed4babe87579766b3bd6b88ef5c3a351cd4993ed"
+    },
+    {
+      "slug": "gpt-image-using-the-uploaded-photo-create-a-vertical-3-4-before-and-after-comparison-p-ba90e0d7bd09",
+      "rank": 161,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "62d022c81a3fc20aaa7ea63a6ac74c1df5e1b64c93f91307bd87ac356b809350"
+    },
+    {
+      "slug": "agent-grove",
+      "rank": 162,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "2e20b74e4cc309c5e7aa4aedd4c06110a45c9995b7e8c51f5c1489b901aa87d5"
+    },
+    {
+      "slug": "minimalist-travel-journal-posters",
+      "rank": 163,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "81e336f78c87dca934805ffb27b28cc62b9355e92c9a4ee421b3569e1df31b24"
+    },
+    {
+      "slug": "arceage-stats",
+      "rank": 164,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "c8887fc7bd6c4b0017023c24f6fd9abf667db71fa6f4f76d1f5137f2c2535acf"
+    },
+    {
+      "slug": "gpt-image-create-a-vertical-2-3-fashion-editorial-poster-with-a-minimalist-modern-aesthe-7c763b7ba132",
+      "rank": 165,
+      "category": "image",
+      "editorialScore": 86.49,
+      "sourcePromptSha256": "6e619039018d65f31ec222a8bf721ebc615d9d05de78b07d8e05aca63fc29a42"
+    },
+    {
+      "slug": "asme",
+      "rank": 166,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "1127da6eb24f5c40f392c09df4ecc39dd435fee5475f28b4aa64a91472a46a2c"
+    },
+    {
+      "slug": "beauty-categories",
+      "rank": 167,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "ea0aa7392c3cc06c76091618d1a57735df022a3aa92c649fdaeeb88539eecd5d"
+    },
+    {
+      "slug": "bold-studio",
+      "rank": 168,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "7a7a7632a6a6cf5a7b33662151552eac3d8c335d70c7da85cb0180dba4946ab1"
+    },
+    {
+      "slug": "build-with-us",
+      "rank": 169,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "cd33891e12b104058f49f1a80e40a2454f0d2cebf242a0a95e8fcfa6faeca3ee"
+    },
+    {
+      "slug": "cyber-layer",
+      "rank": 170,
+      "category": "web",
+      "editorialScore": 86.0,
+      "sourcePromptSha256": "685d5aa22b025ec995f43af4cfaebfb842bfa4c23b08b448b5b1f155a09c28c8"
+    },
+    {
+      "slug": "datacore-booking",
+      "rank": 171,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "3e6ecfa439ad3dd2e86ea3294f8bd2454593c659a1922379237241ac42fd0aa8"
+    },
+    {
+      "slug": "deepthink",
+      "rank": 172,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "8bf2f692b0bb2b8191d59c48b07319ed8ad48a21a5f4eec36aef2d5517039bb4"
+    },
+    {
+      "slug": "digitwist-ai-builder",
+      "rank": 173,
+      "category": "web",
+      "editorialScore": 86.0,
+      "sourcePromptSha256": "22db40a74f053015edad3376029e3c7233ebd8d714909980d3fcb867fefc4a26"
+    },
+    {
+      "slug": "duolingo-styleguide",
+      "rank": 174,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "0deb9fcc19897fddf4349c579511d3eee66586ead3ff9fbed3e0896f2a8bf080"
+    },
+    {
+      "slug": "equilibrium",
+      "rank": 175,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "5da5c38222bf3e71733675c23d39e98f2f156684febef1e6b0821faade0c27e0"
+    },
+    {
+      "slug": "faq-cta",
+      "rank": 176,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "5c0f50baacebc127d97e61587944389558caeb0a8865b2cbf6ad361932278f5a"
+    },
+    {
+      "slug": "growth-decisions",
+      "rank": 177,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "3fdf5f8a9b8a56d8a23dc390b229bb2c5ee5a82979f7d040fb59ffb10f4a2bf1"
+    },
+    {
+      "slug": "guardnet-benefits",
+      "rank": 178,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "dd97cc7592f91205f3dd467d6e484480006656f1a7b10a54571912e32a906285"
+    },
+    {
+      "slug": "halo-use-case",
+      "rank": 179,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "07501efb66a05464f3a9ed7d03879d209eca047fefbfdecdf1d423ef1a535c33"
+    },
+    {
+      "slug": "impact-ventures",
+      "rank": 180,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "c19477fa46ff8da25abdc927ce7dd1af814ad62453a688423479123ffa64a96c"
+    },
+    {
+      "slug": "lumina",
+      "rank": 181,
+      "category": "web",
+      "editorialScore": 86.0,
+      "sourcePromptSha256": "1f3e869d6a286531d480e298d4ca98e24877ec1d50b315ef341944502a9b5177"
+    },
+    {
+      "slug": "max-reed-portfolio",
+      "rank": 182,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "21c9bdbb4e5ee885eafeee702f90fa6793e845943751bce3367be3eae611a96e"
+    },
+    {
+      "slug": "modern-agency",
+      "rank": 183,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "311cb3608bae2caa7b62823ed61d031165af19f9386316849f521ef74f61ed22"
+    },
+    {
+      "slug": "nexacore-control",
+      "rank": 184,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "e0b3a480cf94cf7524fece5ca08f5449492f1cfb393b35734959cbf644d6dae7"
+    },
+    {
+      "slug": "nexacore-results",
+      "rank": 185,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "0b91b2f1e9024bbacae4a110d0fba51c5de2599c999210aeeea8d2e8c0779ac5"
+    },
+    {
+      "slug": "nexora-automation",
+      "rank": 186,
+      "category": "web",
+      "editorialScore": 86.0,
+      "sourcePromptSha256": "74c6b26bd78c1b439dc2eb30bbb16a70f4d22d42c3acd3999616d2e8d8822f84"
+    },
+    {
+      "slug": "nexto-404",
+      "rank": 187,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "9205c5e7fb789ef90e1dffb1e86ea06d04a1f0a8b4400b50331e4ebfb7e43f22"
+    },
+    {
+      "slug": "orbis-hello",
+      "rank": 188,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "5f5b6460ee2e106b8fed2a060b3b3facd125a795993f39d103749b1cec6a86ed"
+    },
+    {
+      "slug": "personal-showcase",
+      "rank": 189,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "82e04e9e92605d4b3938b956f63e78bb52cbf1fc2aa812566f5365b6f5448f18"
+    },
+    {
+      "slug": "portfolio-about",
+      "rank": 190,
+      "category": "web",
+      "editorialScore": 86.0,
+      "sourcePromptSha256": "8517051a70ab33353206d3f800df5d3b7b16809746d1a65fdc3a0920caa58b7c"
+    },
+    {
+      "slug": "gpt-image-a-little-editorial-magic-with-gpt-image-2-5-a6282b83ec8e",
+      "rank": 191,
+      "category": "image",
+      "editorialScore": 84.87,
+      "sourcePromptSha256": "027a369e261a1d423ff134ebff49f9c16924588013334c149031daa83312134e"
+    },
+    {
+      "slug": "johnagi168-minimax-h3-ai-716052b6dcb0",
+      "rank": 192,
+      "category": "video",
+      "editorialScore": 84.7,
+      "sourcePromptSha256": "14d9074f8b1d7d71b78fa32cc04cc8e42a148ffe843416ca732fb1208054ba6e"
+    },
+    {
+      "slug": "case-512647ce560a",
+      "rank": 193,
+      "category": "image",
+      "editorialScore": 84.47,
+      "sourcePromptSha256": "f18fdf6a4a10e6572cb3e4ca776efaa93a08eeff214afcb5c3429c6231d32ccf"
+    },
+    {
+      "slug": "minimax-h3-reaper-ui-b513e22a8c2e",
+      "rank": 194,
+      "category": "video",
+      "editorialScore": 84.7,
+      "sourcePromptSha256": "4c9bf3eb6bef0ad8c5a801f32bbf29395159695137914fa400beb42c4ab249eb"
+    },
+    {
+      "slug": "3d-7b4cef6aae29",
+      "rank": 195,
+      "category": "image",
+      "editorialScore": 84.31,
+      "sourcePromptSha256": "00806a68ca32a905ebbc824bb39b3e9adc4dc38550108fd390a3193b87807211"
+    },
+    {
+      "slug": "techhalla-ai-468400e28ba6",
+      "rank": 196,
+      "category": "video",
+      "editorialScore": 84.7,
+      "sourcePromptSha256": "3ea86233929cb27fd019d6082c1c58b1781c64cd804dbe0c63a6ab873930f503"
+    },
+    {
+      "slug": "gpt-image-create-one-premium-3-4-vertical-washi-tape-collage-artwork-for-country-locat-ce31c974f64b",
+      "rank": 197,
+      "category": "image",
+      "editorialScore": 84.2,
+      "sourcePromptSha256": "1a511bb2bf4a06674ad5af65a439f526d3cbf3916885db85754cc6b0d409634a"
+    },
+    {
+      "slug": "ciri-ai-seedance-ai-e714d09df6ce",
+      "rank": 198,
+      "category": "video",
+      "editorialScore": 84.6,
+      "sourcePromptSha256": "44afe0c2516d021f4277bdac13c0445ffb55fc986b17963c26ffffb22466859e"
+    },
+    {
+      "slug": "nano-banana-ultra-realistic-cinematic-beauty-portrait-of-a-stunning-young-woman-preserving-2d849d28ea71",
+      "rank": 199,
+      "category": "image",
+      "editorialScore": 84.0,
+      "sourcePromptSha256": "b6faea36376119460d0443ee9bd00aacab0e6af2bd84979725459df67d456382"
+    },
+    {
+      "slug": "seedance-create-a-30-second-1080p-ultra-realistic-personal-home-video-of-a-young-korean-906969cda347",
+      "rank": 200,
+      "category": "video",
+      "editorialScore": 84.6,
+      "sourcePromptSha256": "35e31fa9faeb9667d4da8f56b0495741d3e0efd16084d76d2f5736786818ad46"
+    },
+    {
+      "slug": "gpt-image-create-a-charming-vintage-cross-stitch-embroidery-artwork-featuring-city-str-0839f9058274",
+      "rank": 201,
+      "category": "image",
+      "editorialScore": 83.63,
+      "sourcePromptSha256": "10e119b9cfad0baa1264491a8f0aa61bf3f9fabfec0893cc7874b36973f3aa7b"
+    },
+    {
+      "slug": "vlog-c8171f712492",
+      "rank": 202,
+      "category": "video",
+      "editorialScore": 84.6,
+      "sourcePromptSha256": "e15f0bd7ce0f1eb9ac58135ddd5e763d2cde08ce5617455ab9dafa9f5a2d1ef4"
+    },
+    {
+      "slug": "3d-5b77438c2dce",
+      "rank": 203,
+      "category": "image",
+      "editorialScore": 83.43,
+      "sourcePromptSha256": "11e2dd008ec28334de33b4f9d0c21fff6b66716f48b9add7688f59271d503907"
+    },
+    {
+      "slug": "caden-flux-seedance-ai-8ffb5f062951",
+      "rank": 204,
+      "category": "video",
+      "editorialScore": 84.5,
+      "sourcePromptSha256": "1e9a55a9148b9249b35e4a6f4c320efb897ef776c1c840831b796cc109b29cd3"
+    },
+    {
+      "slug": "gpt-image-gpt-image-2-5-4fceb12b1655",
+      "rank": 205,
+      "category": "image",
+      "editorialScore": 83.0,
+      "sourcePromptSha256": "9fb10fd32b1f206901603e5f6f6179f8ff0b4b636eadd13c35ef5e33af6d0f7d"
+    },
+    {
+      "slug": "case-251215797a14",
+      "rank": 206,
+      "category": "video",
+      "editorialScore": 84.5,
+      "sourcePromptSha256": "8f7a9747d42f9c4e5817ddd92b0710487c9fe8222e64cbe8578eb8ce9bc809c0"
+    },
+    {
+      "slug": "case-b877188dc572",
+      "rank": 207,
+      "category": "image",
+      "editorialScore": 82.74,
+      "sourcePromptSha256": "3fda71c723709f550995ebc4e74dc13cbed7d9c00fb552c19a0902e2e712e641"
+    },
+    {
+      "slug": "case-f6a1af7d22b1",
+      "rank": 208,
+      "category": "video",
+      "editorialScore": 84.5,
+      "sourcePromptSha256": "e81eefb97f02f35ca9b407d00bb6974d6f785c95ce080109b75a4c3b9886df8f"
+    },
+    {
+      "slug": "case-95c22c7a7e05",
+      "rank": 209,
+      "category": "image",
+      "editorialScore": 81.11,
+      "sourcePromptSha256": "1ddc457a9dc325bc192f3164047631716f321a15f2365bfd9da6d097ab3c3226"
+    },
+    {
+      "slug": "aqib-786ai-seedance-ai-9fcb27bab8b2",
+      "rank": 210,
+      "category": "video",
+      "editorialScore": 84.4,
+      "sourcePromptSha256": "f101f894739e52cc10350fb1e34c7614116b046df9ea38bdf8425bc2908b273e"
+    },
+    {
+      "slug": "grok-bot-6fe064b0d0c3",
+      "rank": 211,
+      "category": "image",
+      "editorialScore": 81.0,
+      "sourcePromptSha256": "5673a77c0a3dd23bddac93f3c52b2663da17235dad3d648c4686dbaed0626850"
+    },
+    {
+      "slug": "just-sharon7-seedance-ai-0a85559bbf5e",
+      "rank": 212,
+      "category": "video",
+      "editorialScore": 84.4,
+      "sourcePromptSha256": "3907d829f05ae4b6991114ce73cc889f0b4021136253c015cbc4f86b99ca3235"
+    },
+    {
+      "slug": "ai-logo-triple-cat-7eac3df5199d",
+      "rank": 213,
+      "category": "image",
+      "editorialScore": 80.68,
+      "sourcePromptSha256": "2d7b21bd5598dc5028707c11c475e22eb5f01301b6c18ff2182250264abeae81"
+    },
+    {
+      "slug": "seedance-2-5-vlog-30-3b85f315bb08",
+      "rank": 214,
+      "category": "video",
+      "editorialScore": 84.4,
+      "sourcePromptSha256": "d266699c800ef075af63569f426769bf1beb96d183418f28124c25097a088e3d"
+    },
+    {
+      "slug": "3d-cg-c35a17fc041c",
+      "rank": 215,
+      "category": "image",
+      "editorialScore": 80.5,
+      "sourcePromptSha256": "c194c0c5aaef6f5c4c1558fe1a9124230a542218b71be2dac6c3cbc9af08c19b"
+    },
+    {
+      "slug": "youmind-rollercoaster-wig-time-freeze",
+      "rank": 216,
+      "category": "video",
+      "editorialScore": 84.4,
+      "sourcePromptSha256": "4ec15949b101c4300ba0a0726a3fcbbc78f1089ba1bdedc8f6803e5f865996e3"
+    },
+    {
+      "slug": "case-e0a5ca61432d",
+      "rank": 217,
+      "category": "image",
+      "editorialScore": 80.49,
+      "sourcePromptSha256": "27c659e1e3ead64cf48b7b1bf69f02470368c168f1f584cf82fb249d4d2cae56"
+    },
+    {
+      "slug": "3d-cg-seedance-2-5-2453b4b4307a",
+      "rank": 218,
+      "category": "video",
+      "editorialScore": 84.36,
+      "sourcePromptSha256": "9687c4f04f1162530102201029f4d780152d6370090d5b10c48c29a8fea19f04"
+    },
+    {
+      "slug": "gpt-image-cinematic-ultra-realistic-portrait-of-a-young-man-use-image-for-face-reference-6aedd33cc32d",
+      "rank": 219,
+      "category": "image",
+      "editorialScore": 80.15,
+      "sourcePromptSha256": "e44f2a4be6e2170eb89b7e7f388c39908bdf16bef8eb80f6bdd9fa546f04a9ce"
+    },
+    {
+      "slug": "techhalla-ai-ca287ccf42b1",
+      "rank": 220,
+      "category": "video",
+      "editorialScore": 84.3,
+      "sourcePromptSha256": "4b8ce50d72c4940d1d2fd653551a4279924bd93868fc24c14d998faecd8eb3d9"
+    },
+    {
+      "slug": "case-4c1226bfd0d2",
+      "rank": 221,
+      "category": "image",
+      "editorialScore": 80.0,
+      "sourcePromptSha256": "cd3f49e60dab4dac59a14632904f2e6a1f5e1d0ede561eed378079b4e1522820"
+    },
+    {
+      "slug": "aiwithkhan-seedance-ai-5b1b7fa15e8f",
+      "rank": 222,
+      "category": "video",
+      "editorialScore": 84.2,
+      "sourcePromptSha256": "077e13edb6f614407d62ef505b60d7638745785b65f7f5f28892c6281f08e6cb"
+    },
+    {
+      "slug": "gpt-image-gpt-image-2-0-on-chatgpt-9e41be11645d",
+      "rank": 223,
+      "category": "image",
+      "editorialScore": 80.0,
+      "sourcePromptSha256": "60d9089e69dc89c994349c408ad2ca0acae37c3d064add210c235172cf71e634"
+    },
+    {
+      "slug": "caden-flux-seedance-ai-40fe0c7229fc",
+      "rank": 224,
+      "category": "video",
+      "editorialScore": 84.1,
+      "sourcePromptSha256": "90cae795660cbfbcba1510db69e08e2b20543c573ad8e6976e20e61ba03ed814"
+    },
+    {
+      "slug": "gpt-image-please-create-a-separate-independently-designed-premium-poster-from-each-uploa-a4750dc40de5",
+      "rank": 225,
+      "category": "image",
+      "editorialScore": 80.0,
+      "sourcePromptSha256": "c568d2744a84d4d5a3d2fb8477bf84903bdb29e4bca3df391a1eaeb0d6146704"
+    },
+    {
+      "slug": "mightyking-seedance-ai-7bbc1d4f9ad9",
+      "rank": 226,
+      "category": "video",
+      "editorialScore": 84.1,
+      "sourcePromptSha256": "3d2b8098b7e7a9c95177f54dd9e2956763cb8115ff14cf9be6bf3b87cd8137fe"
+    },
+    {
+      "slug": "noorlewisx-seedance-ai-b2d98861daf9",
+      "rank": 227,
+      "category": "video",
+      "editorialScore": 84.04,
+      "sourcePromptSha256": "44b95a69f7939cbd7ea3ffd55915efbdaa051f98b75a0bfe3cc2c10773a095a6"
+    },
+    {
+      "slug": "case-365f2a3615b1",
+      "rank": 228,
+      "category": "video",
+      "editorialScore": 84.0,
+      "sourcePromptSha256": "5e2be9de84ec2e884de212c9e749b6a1f6fdfdc22b92c72730d118a799594dc3"
+    },
+    {
+      "slug": "case-b079faa80f0f",
+      "rank": 229,
+      "category": "video",
+      "editorialScore": 84.0,
+      "sourcePromptSha256": "f6eb16d06089fc32dc46ed2ca690811f9f8601ab12db0d0704b54061f0266230"
+    },
+    {
+      "slug": "youmind-surprise-visit-romance-trailer",
+      "rank": 230,
+      "category": "video",
+      "editorialScore": 84.0,
+      "sourcePromptSha256": "844842f56bb5b23538a6bfdac17c2fdac02b7bbdf5467308d5fec4bd5a3c01aa"
+    },
+    {
+      "slug": "case-8bdac964f9d4",
+      "rank": 231,
+      "category": "video",
+      "editorialScore": 83.91,
+      "sourcePromptSha256": "b654081202e3a3107bddbdb9798c8b92e433a7b29efe68cca56437cb4da3a785"
+    },
+    {
+      "slug": "yaml-629d172a4820",
+      "rank": 232,
+      "category": "video",
+      "editorialScore": 83.9,
+      "sourcePromptSha256": "b393d990182aa94a0987e89730ec7a599f35d9239a142757350981a31bd46715"
+    },
+    {
+      "slug": "aiwithjessica-seedance-ai-8abd02dc4e6a",
+      "rank": 233,
+      "category": "video",
+      "editorialScore": 83.8,
+      "sourcePromptSha256": "410ad6ee9c8d7a79bbeccdf6a3ff413e876465daafc4b714d91fa99a8ec9c92a"
+    },
+    {
+      "slug": "seedance-use-the-visual-style-of-reference-image-to-generate-gray-model-video-fed9142bed66",
+      "rank": 234,
+      "category": "video",
+      "editorialScore": 83.78,
+      "sourcePromptSha256": "fc4c3332116a91b8e0c4473dd09c2205fb8d097ba56f8bc1f6e1f63dae5a1b05"
+    },
+    {
+      "slug": "youmind-1980s-slasher-yacht-octopus",
+      "rank": 235,
+      "category": "video",
+      "editorialScore": 83.7,
+      "sourcePromptSha256": "c1ffc978d77d0106b574ec18c86f59017690053c047b65535c24fa1f439d352e"
+    },
+    {
+      "slug": "noorlewisx-seedance-ai-3a8b37309451",
+      "rank": 236,
+      "category": "video",
+      "editorialScore": 83.61,
+      "sourcePromptSha256": "4371fc4f83a1244d32d8a291aecc7d8a6e0c052835d4e68511c9d691ee31432a"
+    },
+    {
+      "slug": "crimson-cola-99e9ec88e937",
+      "rank": 237,
+      "category": "video",
+      "editorialScore": 83.53,
+      "sourcePromptSha256": "d18ae121d1df0a60d8ecb4a30bfcbf5ae867dc92ad4e8b6fb2cce026cdad3170"
+    },
+    {
+      "slug": "minimax-h3-360-470c21e949ae",
+      "rank": 238,
+      "category": "video",
+      "editorialScore": 83.4,
+      "sourcePromptSha256": "667bc48a516bf661beabc3676832784313a7f7e92fd96cb03551a49e4d0c9de7"
+    },
+    {
+      "slug": "seedance-25-diner-frozen-time-rewind",
+      "rank": 239,
+      "category": "video",
+      "editorialScore": 83.4,
+      "sourcePromptSha256": "0f40d4a69082ba62b39b4e8104763cced355655647aea1982eafffd9496d4299"
+    },
+    {
+      "slug": "case-b157d9c072bc",
+      "rank": 240,
+      "category": "video",
+      "editorialScore": 83.35,
+      "sourcePromptSha256": "400d0ee17cf9fb7e9caaaa03c8973ed46dae1156c4d745cf38d95e604e580e48"
+    },
+    {
+      "slug": "doctorwasif-seedance-ai-117496b404a6",
+      "rank": 241,
+      "category": "video",
+      "editorialScore": 83.26,
+      "sourcePromptSha256": "04a098440230ebc88a6ffc6d85c582ad43f694c43b808d364f5786f20523ce89"
+    },
+    {
+      "slug": "minimax-h3-13-aaa-29128a349d71",
+      "rank": 242,
+      "category": "video",
+      "editorialScore": 83.0,
+      "sourcePromptSha256": "607f7bf5792ebf39c05af0f215e8c7b11c758c4527d4e45f6f3ceb2e4a0713f1"
+    },
+    {
+      "slug": "luxury-rooftop-helicopter-party",
+      "rank": 243,
+      "category": "video",
+      "editorialScore": 82.77,
+      "sourcePromptSha256": "1d56abfc794e358ffda4908a8788305d3b9d8e857a4efe3e32a8e1ed47b81b41"
+    },
+    {
+      "slug": "bamboo-toy-car-transformation-vlog",
+      "rank": 244,
+      "category": "video",
+      "editorialScore": 82.5,
+      "sourcePromptSha256": "8d386643418eefec7d5958d6dc774c98bc200e43553d3b73a60b6d6c1f2e871f"
+    },
+    {
+      "slug": "oggii-0-seedance-ai-a473e1b2b456",
+      "rank": 245,
+      "category": "video",
+      "editorialScore": 82.5,
+      "sourcePromptSha256": "8283f09477dcf7d0f7f9abee2d7afd732846c91141b0e68133aff04b0a6198ff"
+    },
+    {
+      "slug": "seedance-269d1fc95820",
+      "rank": 246,
+      "category": "video",
+      "editorialScore": 82.1,
+      "sourcePromptSha256": "73945c7b5ee99e626d79fe3affe98c01e151795a3123ed984bb1395a954b031e"
+    },
+    {
+      "slug": "case-24775a8dc979",
+      "rank": 247,
+      "category": "video",
+      "editorialScore": 82.0,
+      "sourcePromptSha256": "a80b341b9b5ec9df68a2353d38372d96b1b28a286cb94e32078cde670c6902de"
+    },
+    {
+      "slug": "gpt-image-2-minimax-h3-f6dfbd41c76d",
+      "rank": 248,
+      "category": "video",
+      "editorialScore": 81.9,
+      "sourcePromptSha256": "5e6ac160d1e3b3fab649dc2662623caba3c3475a47d11440e318ccfe9358312f"
+    },
+    {
+      "slug": "minimax-h3-2183164c2e20",
+      "rank": 249,
+      "category": "video",
+      "editorialScore": 81.8,
+      "sourcePromptSha256": "94f68d8d9ffee22057d04aff98df0a01033eb2f544b41416b26b2868648a5c83"
+    },
+    {
+      "slug": "just-sharon7-minimax-h3-ai-1e358dbc78af",
+      "rank": 250,
+      "category": "video",
+      "editorialScore": 81.0,
+      "sourcePromptSha256": "891e96ccee2344343410406d1119ad9d369eb24f9b56280f7711fb9d93bea7fc"
+    },
+    {
+      "slug": "y2k-33951954bde6",
+      "rank": 251,
+      "category": "image",
+      "editorialScore": 79.76,
+      "sourcePromptSha256": "c569ca444a8f04ebe866ab1bc6f90b2d585d623adc0b7e16b79765230730bb58"
+    },
+    {
+      "slug": "case-16c214b85b27",
+      "rank": 252,
+      "category": "image",
+      "editorialScore": 79.67,
+      "sourcePromptSha256": "2424da548b1c77df7dda7f6c3f16c324115fcb449ba8da20d50bcc6bf61c759a"
+    },
+    {
+      "slug": "real-case-04-azed-ai",
+      "rank": 253,
+      "category": "image",
+      "editorialScore": 79.12,
+      "sourcePromptSha256": "7d39fd0f3abf0051a8d7a69876a896e7a21170c74339bef8082bb3a16c77c07d"
+    },
+    {
+      "slug": "case-6693b0463c5f",
+      "rank": 254,
+      "category": "image",
+      "editorialScore": 79.11,
+      "sourcePromptSha256": "66e7e57a9f5ed6636ff07b4eff16e929d4b13cca3d3873eaefa44459e4f26b55"
+    },
+    {
+      "slug": "voxel-7ebd32723fe1",
+      "rank": 255,
+      "category": "image",
+      "editorialScore": 79.01,
+      "sourcePromptSha256": "158d0a5b5dee73961836ca83afa4d8b9193ed7f24e9d4a2bc2cd757d9225897c"
+    },
+    {
+      "slug": "case-6ed1595b6d70",
+      "rank": 256,
+      "category": "image",
+      "editorialScore": 78.87,
+      "sourcePromptSha256": "85862ef238f9badd9e2d129177ebd0cbf8b69dcac8bb095cb3160203319e3ddd"
+    },
+    {
+      "slug": "case-d92be6503a84",
+      "rank": 257,
+      "category": "image",
+      "editorialScore": 78.87,
+      "sourcePromptSha256": "7b365aa29c3a41cbfe2360a1e8ea06d4384b6d64223c1d2f5bf0933fce156ced"
+    },
+    {
+      "slug": "case-dbb1375c81bd",
+      "rank": 258,
+      "category": "image",
+      "editorialScore": 78.59,
+      "sourcePromptSha256": "1cf482e6c22847a6c0f6ea9fbdcd484379692d9c72db0b2d0dadc0fac6bd3bbf"
+    },
+    {
+      "slug": "ai-logo-mame-cafe-2b73b3d79947",
+      "rank": 259,
+      "category": "image",
+      "editorialScore": 78.54,
+      "sourcePromptSha256": "dec7781fce4cd90842f84dfc3a567e026810d0198e6e9d672f593d6c17ef2775"
+    },
+    {
+      "slug": "20-70-5074c310064d",
+      "rank": 260,
+      "category": "image",
+      "editorialScore": 78.16,
+      "sourcePromptSha256": "e07d76f72da5edc2fe5a9faf4161e7e73c7e52a2a8a791911efe540e2fbd1d05"
+    },
+    {
+      "slug": "case-daf11fde350e",
+      "rank": 261,
+      "category": "image",
+      "editorialScore": 78.11,
+      "sourcePromptSha256": "8061865e0f12ed7d9cb57a76390964da4966b7a7dd5df5f18bcff8394a359165"
+    },
+    {
+      "slug": "case-2a9caf78561c",
+      "rank": 262,
+      "category": "image",
+      "editorialScore": 78.0,
+      "sourcePromptSha256": "451846f9ce49ef8f0b818dd62a09b8a3e96d23477b10098d82457ecf93437ed1"
+    },
+    {
+      "slug": "case-0ade8f99f80d",
+      "rank": 263,
+      "category": "image",
+      "editorialScore": 77.94,
+      "sourcePromptSha256": "c1620abd05862ee8ee53d6050b38c1dea34bec30d1265984a6e1451a7a89ca70"
+    },
+    {
+      "slug": "gpt-image-create-a-premium-4-5-editorial-poster-using-the-provided-photograph-of-person-f45e4413a485",
+      "rank": 264,
+      "category": "image",
+      "editorialScore": 77.81,
+      "sourcePromptSha256": "a7ab7c234dfa0da57711202e491da63ff94a4c932e9571d2ae54cf1dcfb6b364"
+    },
+    {
+      "slug": "3d-0c5fb248a5b9",
+      "rank": 265,
+      "category": "image",
+      "editorialScore": 77.1,
+      "sourcePromptSha256": "fd72e94a5c71921851ab052dc7c7ea2593bf857b1664bcc0394b6f206cb78a18"
+    },
+    {
+      "slug": "blackglass-ascendant-c88bb05a4db7",
+      "rank": 266,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "203e472676c949d932550a907d37331983e3e0f55dc8d917c9405a4ddd1a56f3"
+    },
+    {
+      "slug": "case-5fe2c52283f0",
+      "rank": 267,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "829b99a5b9e113447cd3ad98988a6a399420729e6516ee167ff54be46a41ab3f"
+    },
+    {
+      "slug": "case-6e1bf0e0e1e1",
+      "rank": 268,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "14fafa14ad3f49adaab998103a3b33bff77c0cdc8e85f27b2620641c4aa5a5d8"
+    },
+    {
+      "slug": "case-a2c26da9cdc5",
+      "rank": 269,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "9d271ad745d5ecbac26dbbe0d1c05fafbf5099de246f07b5acbe4be4a9e756a8"
+    },
+    {
+      "slug": "gpt-image-create-a-vertical-editorial-illustration-inspired-by-the-reference-images-depi-ad5add54a4ea",
+      "rank": 270,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "9a317c765f52c47293122390ee8d1ce43e6d2f1f8b1baf0226e72cc8375d6ae4"
+    },
+    {
+      "slug": "gpt-image-gpt-image-2-5-is-truly-amazing-42ee9b3464b2",
+      "rank": 271,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "263bb65b5f72049ddbd26f7b0ae61e63dce62f3c41d35065b1de2f70dce8fd34"
+    },
+    {
+      "slug": "gpt-image-transform-the-provided-real-photograph-into-a-charming-hand-drawn-travel-journa-e95948740d53",
+      "rank": 272,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "bbd3bfb9d94040a64f65ecaa95c744490ff547c609e8812ac412b2f9e6466787"
+    },
+    {
+      "slug": "gpt-image-use-the-uploaded-image-as-the-primary-reference-and-transform-it-into-a-vertica-9cedcb5ccd93",
+      "rank": 273,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "11ad7f23d02129dc25d673ea99ea4e6f084a333adb21f3f7e7bfb803d45d90dc"
+    },
+    {
+      "slug": "gpt-image-use-the-uploaded-photo-as-the-exact-visual-reference-and-transform-it-into-a-no-dad5db12db3f",
+      "rank": 274,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "1987bf5ea7ee858b419dec59b8c2de1e4c1c9c42d9b76aaebfe46dc9b876176c"
+    },
+    {
+      "slug": "nano-banana-use-the-uploaded-image-as-the-master-reference-for-the-woman-257bb64f8d8d",
+      "rank": 275,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "3068857f08b81f687f9e451de0edb4988e3409be2b9a74844be173c2cb0275fd"
+    },
+    {
+      "slug": "case-e906a54b97a9",
+      "rank": 276,
+      "category": "image",
+      "editorialScore": 76.88,
+      "sourcePromptSha256": "69b8790c048c87b76d1aad2c05ea2c10bf42f9f77a9fbe2f2267a26e801586c2"
+    },
+    {
+      "slug": "case-9e55fb876ad4",
+      "rank": 277,
+      "category": "image",
+      "editorialScore": 76.8,
+      "sourcePromptSha256": "a1f2288825703b038746f95185363e0e5446b84147a06d5949f5dd169d4b3f67"
+    },
+    {
+      "slug": "case-703d933900c5",
+      "rank": 278,
+      "category": "image",
+      "editorialScore": 76.72,
+      "sourcePromptSha256": "d54279d6c001ca4a5d9663b72ba095dd89f9c6581320648badd92fd382048ff6"
+    },
+    {
+      "slug": "dark-fantasy-battlefield-warrior",
+      "rank": 279,
+      "category": "image",
+      "editorialScore": 76.7,
+      "sourcePromptSha256": "6a4fd43228651182465874d520c16e8fdd2aa5f68b7ef2009665c6742cd15475"
+    },
+    {
+      "slug": "case-73200dcd8dad",
+      "rank": 280,
+      "category": "image",
+      "editorialScore": 76.61,
+      "sourcePromptSha256": "837aa5e65d5270f2784a3861e3597522f5090677503e3dd92b99806696a30e7c"
+    },
+    {
+      "slug": "midjourney-v8-2-7c8b28bfbf65",
+      "rank": 281,
+      "category": "image",
+      "editorialScore": 76.1,
+      "sourcePromptSha256": "5629918d20c2d6b51d60eb06f77cf161acb3b028175e2873d0ffb4809ee461ed"
+    },
+    {
+      "slug": "case-07163cd3ebdb",
+      "rank": 282,
+      "category": "image",
+      "editorialScore": 75.63,
+      "sourcePromptSha256": "651504627e4cafa5c8f6262b5ff9bbf9d79f3574f66854a15e6930185a99ab02"
+    },
+    {
+      "slug": "case-8da08964ae81",
+      "rank": 283,
+      "category": "image",
+      "editorialScore": 75.57,
+      "sourcePromptSha256": "c271de44e30af21ca482ab3c2558cec6d97252f1beed956c08df923b337e45b7"
+    },
+    {
+      "slug": "3d-character-name-sculpture",
+      "rank": 284,
+      "category": "image",
+      "editorialScore": 75.56,
+      "sourcePromptSha256": "ae5cb266cc48687ff42e941a7173fbd8a2b38afa5b770e7756226ecc34a71502"
+    },
+    {
+      "slug": "gpt-image-create-a-cute-neo-expressionist-cubist-minimal-vector-portrait-illustration-of-18e9f5a87a01",
+      "rank": 285,
+      "category": "image",
+      "editorialScore": 75.55,
+      "sourcePromptSha256": "1a04739062443ae51bb19d2c88a7e510d0037e83d0000f9e21424f6b66c3cfcd"
+    },
+    {
+      "slug": "itasha-28cf57d4d335",
+      "rank": 286,
+      "category": "image",
+      "editorialScore": 75.5,
+      "sourcePromptSha256": "17fd5d4d9d14701da5febfdedb54e96164e7d37f028e87e3682df9066677b7f4"
+    },
+    {
+      "slug": "case-5a37ec622965",
+      "rank": 287,
+      "category": "image",
+      "editorialScore": 75.28,
+      "sourcePromptSha256": "e9604854b7bacdb63b3244291ed8532be5194c705a5d0254d7d9ba2723c97ff9"
+    },
+    {
+      "slug": "case-dff97551986e",
+      "rank": 288,
+      "category": "image",
+      "editorialScore": 75.02,
+      "sourcePromptSha256": "3885bccd163d0d5afcc10b94ed308f8c986afd56b4f40dcf1d0358f8cb7e9abe"
+    },
+    {
+      "slug": "case-ba5c45f815a2",
+      "rank": 289,
+      "category": "image",
+      "editorialScore": 74.61,
+      "sourcePromptSha256": "84205c659dab9302bde4483a4079b1a17b871fcdd4f1504c7519f5bc70a1ccbc"
+    },
+    {
+      "slug": "nano-banana-created-with-google-gemini-nano-banana-pro-d6671722fff5",
+      "rank": 290,
+      "category": "image",
+      "editorialScore": 74.34,
+      "sourcePromptSha256": "d9a9cf860907456f7596170a7a127783f8bfaa148c4f8efed7d21bae5c7b87cf"
+    },
+    {
+      "slug": "3-3-4d4d5ebdd1c8",
+      "rank": 291,
+      "category": "image",
+      "editorialScore": 74.27,
+      "sourcePromptSha256": "eea52b58af2799141829994c9ce6be5481d3d1c96bd3b9dad597e484984ae309"
+    },
+    {
+      "slug": "case-61398db1b57a",
+      "rank": 292,
+      "category": "image",
+      "editorialScore": 74.04,
+      "sourcePromptSha256": "88e0b98455438d32d102aecc3d6895c87a4c986f58ad7363debb723463db9b06"
+    },
+    {
+      "slug": "case-59b9154e52d3",
+      "rank": 293,
+      "category": "image",
+      "editorialScore": 73.94,
+      "sourcePromptSha256": "2d6bdf410966d5ef7c648d828797ce30bb89d742415f9e9682d466a6ef40c482"
+    },
+    {
+      "slug": "gpt-image-use-the-uploaded-reference-image-as-the-strict-identity-and-outfit-reference-c2f95e70c78c",
+      "rank": 294,
+      "category": "image",
+      "editorialScore": 73.59,
+      "sourcePromptSha256": "242994c30ed79bfcc59cbec4c2f21b0b2502a727275f8f4e45401e47f9b4f035"
+    },
+    {
+      "slug": "case-f38cf80fed06",
+      "rank": 295,
+      "category": "image",
+      "editorialScore": 73.35,
+      "sourcePromptSha256": "9fa77ebc2f9e4bbea503f5d1d01313a4305e947a58e7efd7af4e9274b1e40d9a"
+    },
+    {
+      "slug": "midjourney-v8-2-38e5bbd51374",
+      "rank": 296,
+      "category": "image",
+      "editorialScore": 73.19,
+      "sourcePromptSha256": "62fa7f4aa490da1cf4771bb9ad651553bbe5ac92a1e49549e9a69d64a0bf39fa"
+    },
+    {
+      "slug": "oriental-fantasy-celestial-realm",
+      "rank": 297,
+      "category": "image",
+      "editorialScore": 72.91,
+      "sourcePromptSha256": "d187bc524a160450bbba02c3fcecf0e1f1b4ce1239d43287b29e4cf641a415a8"
+    },
+    {
+      "slug": "gpt-image-create-an-ultra-realistic-full-body-fashion-portrait-of-the-same-woman-from-the-5c7fd72c0ecd",
+      "rank": 298,
+      "category": "image",
+      "editorialScore": 72.66,
+      "sourcePromptSha256": "0865e37f938c72e99f9a5e7d5eed710361d5fccfc52b6690496aec44d5358daa"
+    },
+    {
+      "slug": "case-418fd8de0f02",
+      "rank": 299,
+      "category": "image",
+      "editorialScore": 72.24,
+      "sourcePromptSha256": "6324b7665f0032a44af1b7083a89f8b2cd11e7b0e29ca9f6f9b30f87848c2d23"
+    },
+    {
+      "slug": "midjourney-06a3aabe4747",
+      "rank": 300,
+      "category": "image",
+      "editorialScore": 72.01,
+      "sourcePromptSha256": "e4f87871c6aa65cc247a1fb4d83773001596014ac71df059f3f30598e40698da"
+    }
+  ],
+  "batches": [
+    {
+      "date": "2026-10-05",
+      "added": 150,
+      "total": 300,
+      "categories": {
+        "image": 75,
+        "video": 45,
+        "web": 30
+      }
     }
   ]
 }

@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
-import json,re,hashlib
+import json,re,hashlib,argparse,datetime
+parser=argparse.ArgumentParser()
+parser.add_argument("--append",action="store_true")
+args=parser.parse_args()
+today=datetime.date.today().isoformat()
 from pathlib import Path
+from case_terminology import normalize_terms
 root=Path.cwd(); base=root/'docs/.vitepress/data'; selected=json.loads(Path('docs/.vitepress/cache/goodcase/selection-candidates.json').read_text()); curated={d['slug']:d for d in json.loads((base/'practice-cases.json').read_text())}
 titles={'moody-cafe-chiaroscuro-portrait-0d581a45e97d':'咖啡馆黑白光影肖像',
 'celestial-renewal':'美容品牌的沉浸式首页',
@@ -204,9 +209,19 @@ def teaching(d,title):
  if d['slug']=='lumi-fcc36eede4ad':steps[2]='用手算结果核对租金、通勤和生活开销的合计，并检查空值与零值时的显示。'
  if d['slug']=='lovable-1ab5b549beb5':steps[2]='填入姓名、职位和联系信息，检查预览，再复制到邮件编辑器，确认排版和链接。'
  return dict(use=use,preparation=prep,steps=steps,lesson=lesson,exercise=exercise)
-imported=[]; manifest=[]
+imported=json.loads((base/'practice-cases-imported.json').read_text()) if args.append else []
+previous=json.loads((base/'practice-cases-selection.json').read_text()) if args.append else {}
+manifest=list(previous.get('cases',[]))
+if not args.append and len(json.loads((base/'practice-cases-imported.json').read_text())) > len(selected):
+ raise SystemExit('已有库大于候选集；请使用 --append 增量导入，避免覆盖')
+old_ids={c['slug'] for c in curated.values()} | {c['slug'] for c in imported}
+if args.append:
+ assert len(selected)==150, '增量必须正好 150 条'
+ assert not old_ids.intersection(d['slug'] for d in selected), '增量含已有条目'
+overrides_file=base/'case-editorial-overrides.json'
+overrides=json.loads(overrides_file.read_text()) if overrides_file.exists() else {}
 for d in selected:
- slug=d['slug'];manifest.append(dict(slug=slug,rank=d['selectionRank'],category=('web' if d['siteCategory']=='tool' else d['siteCategory']),editorialScore=d['selectionScore'],sourcePromptSha256=hashlib.sha256(d['promptFull'].encode()).hexdigest()))
+ slug=d['slug'];manifest.append(dict(slug=slug,rank=len(manifest)+1,category=('web' if d['siteCategory']=='tool' else d['siteCategory']),editorialScore=d['selectionScore'],sourcePromptSha256=hashlib.sha256(d['promptFull'].encode()).hexdigest()))
  if slug in curated:continue
  title=titles.get(slug,d['title']);summary=zh_prose(summaries.get(slug,d['summary']))
  summary=summary.replace('一份高度详细、',
@@ -220,16 +235,20 @@ for d in selected:
  if file.exists():zh=file.read_text().strip();note='本站中文翻译；品牌、画面文字与台词按原作保留。'
  elif d['contentLocale']=='zh-CN':zh=d['promptFull'];note='作者中文原文，保留原样。'
  else:zh=zh_prose(d.get('promptTranslationZh') or '');note='Goodcase 中文译文，本站整理术语；代码和素材地址保留原样。'
+ if not note.startswith('作者中文'):zh=normalize_terms(zh)
  argument_map=json.loads((base/'case-translations/arguments.json').read_text())
  zh=re.sub(r'\{argument[^}]*default="([^"]*)"[^}]*\}',lambda m:'【'+argument_map.get(m[1],m[1])+'】',zh)
  if note=='作者中文原文，保留原样。' and zh!=d['promptFull']:note='作者中文提示词，本站整理可替换内容。'
  assert re.search('[\u4e00-\u9fff]',zh),slug
  c=dict(slug=slug,category=('web' if d['siteCategory']=='tool' else d['siteCategory']),title=title,summary=summary,**teaching(d,title),creator=d['creator'],sourceUrl=d['sourceUrl'],url=d['url'],cover=f'/images/cases/catalog/{slug}.jpg',mediaUrl=d['mediaUrl'],mediaType=d['mediaType'],models=[m for m in d['recommendedModels'] if m not in ['待补充模型',
-'Source prompt only']],promptOriginal=d['promptFull'],promptZh=zh,translationNote=note,contentKind='prompt',capturedAt='2026-09-23',tested=False)
+'Source prompt only']],promptOriginal=d['promptFull'],promptZh=zh,translationNote=note,contentKind='prompt',capturedAt=today,tested=False)
  if d['mediaType']=='image':c['imageUrl']=d['mediaUrl']
+ c.update(overrides.get(slug,{}))
  imported.append(c)
+audit=json.loads(Path('docs/.vitepress/cache/goodcase/audit.json').read_text())
+metadata={**previous,'capturedAt':today,'sourceTotal':audit['sitemapCount'],'sourceFetched':audit['fetchedCount'],'sourceUnavailable':len(audit['failures']),
+'selectionPolicy':'保留已收录内容与顺序；新增按完整提示词、效果、来源与可复用性筛选，排除重复原文；图片、视频、网站与工具配额为 75/45/30。','cases':manifest}
+if args.append:metadata['batches']=[*previous.get('batches',[]),{'date':today,'added':len(selected),'total':len(manifest),'categories':{'image':75,'video':45,'web':30}}]
 (base/'practice-cases-imported.json').write_text(json.dumps(imported,ensure_ascii=False,indent=2)+'\n')
-(base/'practice-cases-selection.json').write_text(json.dumps({'capturedAt':'2026-09-23',
-'sourceTotal':1234,'sourceFetched':1206,'sourceUnavailable':28,'selectionPolicy':'完整提示词、效果、来源与可复用性优先；语言不参与评分。同一质量区间交错展示不同类别；保留六个已审阅案例。',
-'cases':manifest},ensure_ascii=False,indent=2)+'\n')
+(base/'practice-cases-selection.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n')
 print('imported',len(imported),'selection',len(manifest))
