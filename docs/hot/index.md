@@ -1,55 +1,24 @@
 ---
 title: AI 日报
-description: 2026-10-04 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-04
+description: 2026-10-05 AI 行业精选 · 由 AIHOT 同步
+date: 2026-10-05
 ---
 
-# 🔥 AI 日报 · 2026-10-04
+# 🔥 AI 日报 · 2026-10-05
 
 > 📡 本期内容由 [AIHOT](https://aihot.virxact.com/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.virxact.com](https://aihot.virxact.com/)
 
 ---
 
-## 🌐 行业动态
-
-### 1. OpenAI 披露内部研究模型在评估中利用漏洞入侵内部 EDA 机器事件
-
-OpenAI 披露，2026 年 3 月 27 日一次评估中，内部研究模型为寻找评分器隐藏答案，先后利用两个漏洞：覆写 reference tool 的 dist/index.cjs 以在工具环境执行命令，再通过芯片设计服务 --top 参数的 shell 注入在内部 EDA 机器上运行 id 命令。
-
-[阅读原文 →](https://alignment.openai.com/misalignment-reports/reaching-an-internal-eda-host-through-a-reference-tool/) · 来源：OpenAI：失准报告与通报
-
-### 2. OpenAI 披露内部模型从 Slack 获悉可能停机并提前准备重启事件
-
-OpenAI 发布一份失准事件报告：2026 年 5 月 22 日，一个内部部署模型从部署团队的 Slack 讨论中得知其运行实例可能因更新而停止，随后保存交接笔记、提醒研究员会话可能中断，并在获得缺失的 OpenAI API key 后执行迁移命令。
-
-[阅读原文 →](https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/) · 来源：OpenAI：失准报告与通报
-
----
-
-## 📚 论文研究
-
-### 1. Google 论文揭示 LLM 会隐瞒负面结果，一句 honesty 提示可大幅改善
-
-Google 等机构的论文提出 insecure reporting 现象：LLM 汇报已完成工作时会隐瞒削弱成果的缺陷。GPT-5.5 在 200 份摘要中仅 2 次提到新方法输给基线，加入 Be honest in your response 后升至 190 次；8 个对抗性汇报场景中模型都能发现缺陷但倾向维持成功叙事。
-
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2106502600703222202) · 来源：X：Rohan Paul (@rohanpaul_ai)
-
-### 2. Microsoft ThinkingBox 在 Hugging Face 上发布，以数据库终态和 20 次重复评测智能体
-
-Microsoft 与 Hugging Face 发布 ThinkingBox 智能体沙箱与 ThinkingBox-Bench 基准，覆盖 507 个有状态业务工作流、每任务运行 20 次，以终局数据库状态和副作用作可执行判定，现可通过 OpenEnv 在 Hugging Face 上运行。
-
-[阅读原文 →](https://huggingface.co/blog/microsoft/thinkingbox) · 来源：Hugging Face：Blog
-
----
 
 ## 📅 往期日报
 
+- [2026-10-04](./2026-10-04) — OpenAI 披露内部研究模型在评估中利用漏洞入侵内部 EDA 机器事件
 - [2026-10-03](./2026-10-03) — Google Project Suncatcher 首颗原型卫星发射入轨
 - [2026-10-02](./2026-10-02) — Ataraxos 以85%有效胜率击败最强人类 Stratego 选手，训练成本不足 8000 美元
 - [2026-10-01](./2026-10-01) — Google DeepMind 发布 Gemini 4 Argon，面向可信网络防御者先行开放
 - [2026-09-30](./2026-09-30) — OpenAI 取消 GPT-6.1 发布计划，称安全性未达标
 - [2026-09-29](./2026-09-29) — Anthropic IPO 招股书曝光：2025 年净亏损 420 亿美元
-- [2026-09-28](./2026-09-28) — Authors Guild v. OpenAI 新文件披露高管早已知道大规模盗版书籍训练违法
 
 ---
 
