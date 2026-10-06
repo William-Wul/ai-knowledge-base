@@ -81,6 +81,7 @@ onMounted(() => {
   const stored = localStorage.getItem(STORAGE_KEY)
   if (stored === 'ok') {
     authenticated.value = true
+    window.dispatchEvent(new Event('kb-authenticated'))
     redirectIfNotFound()
   } else {
     nextTick(() => inputRef.value?.focus())
@@ -92,6 +93,7 @@ async function handleSubmit() {
   if (hash === CORRECT_HASH) {
     localStorage.setItem(STORAGE_KEY, 'ok')
     authenticated.value = true
+    window.dispatchEvent(new Event('kb-authenticated'))
     redirectIfNotFound()
   } else {
     hasError.value = true

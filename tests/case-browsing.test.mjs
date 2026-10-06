@@ -88,3 +88,13 @@ test('real case catalog contains preview media without exposing full prompts', (
   assert.equal(context.results.length, videos.length)
   assert.ok(context.previous && context.next)
 })
+
+
+test('preview deep links respect the existing password gate', async () => {
+  const { hasCaseAccess } = await import('../docs/.vitepress/theme/components/caseBrowsing.js')
+  assert.equal(hasCaseAccess({ getItem: () => null }), false)
+  assert.equal(hasCaseAccess({ getItem: () => 'invalid' }), false)
+  assert.equal(hasCaseAccess({ getItem: key => key === 'kb_auth_v1' ? 'ok' : null }), true)
+  assert.equal(hasCaseAccess({ getItem() { throw new Error('blocked storage') } }), false)
+  assert.equal(hasCaseAccess(), false, 'server rendering cannot open a preview')
+})

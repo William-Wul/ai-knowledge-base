@@ -3,7 +3,7 @@ import { computed, nextTick, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import cases from '../../data/cases-generated/index.json'
 import { CASE_CATEGORIES } from '../../casesData.js'
 import CaseViewer from './CaseViewer.vue'
-import { buildListPath, filterCases, buildCaseHref, buildPreviewHref, readListState, saveListState } from './caseBrowsing.js'
+import { buildListPath, filterCases, buildCaseHref, buildPreviewHref, readListState, saveListState, hasCaseAccess } from './caseBrowsing.js'
 const props = defineProps({ category: { type: String, default: 'all' } })
 const query = ref('')
 const limit = ref(12)
@@ -31,6 +31,7 @@ function remember(slug = anchorSlug) {
   saveListState(listPath.value, { y: savedY, limit: limit.value, anchorSlug })
 }
 function open(item) {
+  if (!hasCaseAccess()) return
   remember(item.slug)
   history.pushState({ ...history.state, casePreviewOrigin: listPath.value }, '', buildPreviewHref(item.slug, listPath.value))
   previewSlug.value = item.slug
@@ -63,7 +64,7 @@ async function restore() {
   anchorSlug = saved?.anchorSlug || ''
   await nextTick()
   await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))
-  if (run !== restoreRun) return
+  if (run !== restoreRun || !hasCaseAccess()) return
   window.scrollTo(0, savedY)
   const slug = params.get('view')
   if (slug && results.value.some(c => c.slug === slug)) {
@@ -84,8 +85,8 @@ watch(currentIndex, index => {
   const next = results.value[index + 1]
   if (next) { prefetch = new Image(); prefetch.src = next.thumbnail || next.cover }
 })
-onMounted(() => { restore(); window.addEventListener('popstate', restore) })
-onBeforeUnmount(() => { ++restoreRun; window.removeEventListener('popstate', restore); prefetch = null })
+onMounted(() => { restore(); window.addEventListener('popstate', restore); window.addEventListener('kb-authenticated', restore) })
+onBeforeUnmount(() => { ++restoreRun; window.removeEventListener('popstate', restore); window.removeEventListener('kb-authenticated', restore); prefetch = null })
 </script>
 <template>
   <div class="case-browser">

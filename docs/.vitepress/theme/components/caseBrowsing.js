@@ -108,3 +108,12 @@ export function saveListState(listPath, state, storage = browserStorage()) {
 export function pauseCaseMedia(scope = typeof document === 'undefined' ? null : document) {
   scope?.querySelectorAll?.('video, audio').forEach(media => media.pause())
 }
+
+// Match the existing password gate; an unauthenticated deep link must not
+// place a native top-layer dialog above the site's access screen.
+export function hasCaseAccess(storage) {
+  try {
+    const target = storage || (typeof window === 'undefined' ? null : window.localStorage)
+    return target?.getItem('kb_auth_v1') === 'ok'
+  } catch { return false }
+}
