@@ -5,8 +5,8 @@
 //   npm run sync:hot              全量同步（覆盖现有）
 //   node scripts/sync-aihot.mjs   同上
 
-import { writeFileSync, existsSync, mkdirSync } from 'fs'
-import { join, dirname } from 'path'
+import { writeFileSync, existsSync, mkdirSync, realpathSync } from 'fs'
+import { join, dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -14,8 +14,8 @@ const __dirname = dirname(__filename)
 const HOT_DIR = join(__dirname, '..', 'docs', 'hot')
 
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
-const API_BASE = 'https://aihot.virxact.com'
-const AIHOT_HOMEPAGE = 'https://aihot.virxact.com/'
+const API_BASE = 'https://aihot.news/api/v1'
+const AIHOT_HOMEPAGE = 'https://aihot.news/'
 const AUTHOR_ARTICLE = 'https://mp.weixin.qq.com/s/r6CE2U3Y0-pU05wF3_PuTQ'
 const KEEP_DAYS = 7
 
@@ -102,8 +102,28 @@ function renderSections(sections) {
   return lines.join('\n')
 }
 
+// 校验完整一期后再写文件，空白日报必须有来源明确提供的概述。
+export function normalizeDaily(payload, expectedDate) {
+  const d = payload?.report
+  if (payload?.schemaVersion !== 1 || !d || d.date !== expectedDate || !Array.isArray(d.sections) || !Array.isArray(d.flashes) || !d.lead || typeof d.lead.title !== 'string' || typeof d.lead.leadParagraph !== 'string' || !d.lead.leadParagraph.trim()) throw new Error(`日报结构或日期异常：${expectedDate}`)
+  const item = i => {
+    if (!i || typeof i.title !== 'string' || !i.title.trim() || (i.summary !== undefined && typeof i.summary !== 'string') || typeof i.source?.name !== 'string' || !safeUrl(i.links?.original)) throw new Error(`日报条目异常：${expectedDate}`)
+    return { ...i, sourceName: i.source.name, sourceUrl: i.links.original }
+  }
+  return { ...d, sections: d.sections.map(s => {
+    if (typeof s.label !== 'string' || !s.label.trim() || !Array.isArray(s.items)) throw new Error(`日报分类异常：${expectedDate}`)
+    return { ...s, items: s.items.map(item) }
+  }), flashes: d.flashes.map(item) }
+}
+
+function renderDaily(daily) {
+  const parts = [`## ${clean(daily.lead.title)}`, '', clean(daily.lead.leadParagraph), '', renderSections(daily.sections)]
+  if (daily.flashes.length) parts.push(renderSections([{ label: '快讯', items: daily.flashes }]))
+  return parts.join('\n')
+}
+
 // 单日详情页（往期点进来用）
-function dailyToMarkdown(daily) {
+export function dailyToMarkdown(daily) {
   const date = daily.date
   const lines = []
   lines.push('---')
@@ -114,11 +134,11 @@ function dailyToMarkdown(daily) {
   lines.push('')
   lines.push(`# ${date} · AI 日报`)
   lines.push('')
-  lines.push(`> 📡 本期内容由 [AIHOT](${AIHOT_HOMEPAGE}) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.virxact.com](${AIHOT_HOMEPAGE})`)
+  lines.push(`> 📡 本期内容由 [AIHOT](${AIHOT_HOMEPAGE}) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](${AIHOT_HOMEPAGE})`)
   lines.push('')
   lines.push('---')
   lines.push('')
-  lines.push(renderSections(daily.sections))
+  lines.push(renderDaily(daily))
   lines.push(`[← 返回 AI 日报](./)`)
   lines.push('')
   return lines.join('\n')
@@ -136,11 +156,11 @@ function indexToMarkdown(latestDaily, otherMetas) {
   lines.push('')
   lines.push(`# 🔥 AI 日报 · ${date}`)
   lines.push('')
-  lines.push(`> 📡 本期内容由 [AIHOT](${AIHOT_HOMEPAGE}) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.virxact.com](${AIHOT_HOMEPAGE})`)
+  lines.push(`> 📡 本期内容由 [AIHOT](${AIHOT_HOMEPAGE}) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](${AIHOT_HOMEPAGE})`)
   lines.push('')
   lines.push('---')
   lines.push('')
-  lines.push(renderSections(latestDaily.sections))
+  lines.push(renderDaily(latestDaily))
 
   if (otherMetas.length) {
     lines.push(`## 📅 往期日报`)
@@ -163,9 +183,9 @@ function indexToMarkdown(latestDaily, otherMetas) {
 async function main() {
   if (!existsSync(HOT_DIR)) mkdirSync(HOT_DIR, { recursive: true })
 
-  console.log('→ 拉取 AIHOT 归档列表 /api/public/dailies')
-  const list = await fetchJSON(`${API_BASE}/api/public/dailies`)
-  const all = Array.isArray(list.items) ? list.items : []
+  console.log('→ 拉取 AIHOT 归档列表 /dailies')
+  const list = await fetchJSON(`${API_BASE}/dailies`)
+  const all = list.schemaVersion === 1 && Array.isArray(list.items) ? list.items : []
   if (!all.length) {
     console.error('❌ 归档列表为空，停止')
     process.exit(1)
@@ -174,6 +194,7 @@ async function main() {
 
   // 日期会用作本地文件名，只接受 YYYY-MM-DD 格式，防止异常数据写到目录之外
   const valid = all.filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d.date || ''))
+  if (valid.length !== all.length || new Set(valid.map(d => d.date)).size !== valid.length) throw new Error('日报列表日期异常或重复')
   const sortedDesc = [...valid].sort((a, b) => b.date.localeCompare(a.date))
   const keep = sortedDesc.slice(0, KEEP_DAYS)
 
@@ -183,11 +204,11 @@ async function main() {
     const date = meta.date
     process.stdout.write(`  ${date} ... `)
     try {
-      const detail = await fetchJSON(`${API_BASE}/api/public/daily/${date}`)
+      const detail = normalizeDaily(await fetchJSON(`${API_BASE}/dailies/${date}`), date)
       details.push({ meta, detail })
       console.log('✓')
     } catch (err) {
-      console.log(`✗ ${err.message}`)
+      throw new Error(`拉取 ${date} 失败，保留原日报：${err.message}`)
     }
   }
 
@@ -211,7 +232,7 @@ async function main() {
   console.log(`\n✅ 完成 · 入口页 = ${latest.meta.date} · 往期 ${otherMetas.length} 期`)
 }
 
-main().catch(err => {
+if (process.argv[1] && __filename === realpathSync(resolve(process.argv[1]))) main().catch(err => {
   console.error('❌ 同步失败：', err.stack || err.message)
   process.exit(1)
 })

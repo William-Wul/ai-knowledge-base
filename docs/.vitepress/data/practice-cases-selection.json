@@ -1,9 +1,9 @@
 {
-  "capturedAt": "2026-10-05",
-  "sourceTotal": 1656,
-  "sourceFetched": 1656,
+  "capturedAt": "2026-10-06",
+  "sourceTotal": 1666,
+  "sourceFetched": 1666,
   "sourceUnavailable": 0,
-  "selectionPolicy": "保留已收录内容与顺序；新增按完整提示词、效果、来源与可复用性筛选，排除重复原文；图片、视频、网站与工具配额为 75/45/30。",
+  "selectionPolicy": "保留已收录内容与顺序；新增按完整提示词、效果、来源与可复用性筛选，排除重复原文；按本批指定分类与数量增量收录。",
   "cases": [
     {
       "slug": "case-aa3e3c074ac1",
@@ -2104,6 +2104,706 @@
       "category": "image",
       "editorialScore": 72.01,
       "sourcePromptSha256": "e4f87871c6aa65cc247a1fb4d83773001596014ac71df059f3f30598e40698da"
+    },
+    {
+      "slug": "seedance-create-a-premium-european-luxury-beauty-commercial-using-the-provided-character-498f8092c2f7",
+      "rank": 301,
+      "category": "video",
+      "editorialScore": 81.0,
+      "sourcePromptSha256": "44a911470b670e7531d60a310f9de2dd09682750698d5bce9056274d91310d42"
+    },
+    {
+      "slug": "johnagi168-seedance-ai-8424f361fbe0",
+      "rank": 302,
+      "category": "video",
+      "editorialScore": 80.93,
+      "sourcePromptSha256": "c31db2a6d8bc3263aec006c28c23bde6399001f9f83d6af6e1c7938aa7881939"
+    },
+    {
+      "slug": "case-179a06586ce5",
+      "rank": 303,
+      "category": "video",
+      "editorialScore": 80.58,
+      "sourcePromptSha256": "ceee78d3883e85902e1231cc271d41830dda094ac52f7cccbe7d4b20f51c8300"
+    },
+    {
+      "slug": "case-96017ad7706f",
+      "rank": 304,
+      "category": "video",
+      "editorialScore": 80.36,
+      "sourcePromptSha256": "f6f9342bd350ca86d84b29cbe5cafe1f0516553ea0345cd287cc54619f848c93"
+    },
+    {
+      "slug": "ayzalnooor24521-seedance-ai-4a336f514777",
+      "rank": 305,
+      "category": "video",
+      "editorialScore": 80.01,
+      "sourcePromptSha256": "6368d7428e7e271e29b3b9973246ffc0e5ee2e04c986e5f8badacd481527ba60"
+    },
+    {
+      "slug": "gpt-image-gpt-image-2-5-gemini-omni-flash-1-1-895e8cd2f548",
+      "rank": 306,
+      "category": "video",
+      "editorialScore": 80.0,
+      "sourcePromptSha256": "60e575ff16208d04cc568bf00d5d1086ee7e657f1dfc625f5fd6c3399272002d"
+    },
+    {
+      "slug": "seedance-cinematic-high-end-3d-anime-action-30-seconds-24fps-ultra-sharp-no-watermar-cdb929885bab",
+      "rank": 307,
+      "category": "video",
+      "editorialScore": 80.0,
+      "sourcePromptSha256": "0522464cccd2d44d738519931897528948d456224dfe5b88152678cb820a3469"
+    },
+    {
+      "slug": "seedance-create-a-13-second-ultra-realistic-cinematic-action-sequence-set-inside-a-messy-410ee9fa190c",
+      "rank": 308,
+      "category": "video",
+      "editorialScore": 80.0,
+      "sourcePromptSha256": "40cf73a298acf9b87cc8a29fd6c256e9cca824def179cc7f687d588c341e7e7f"
+    },
+    {
+      "slug": "seedance-create-a-30-second-pixar-quality-3d-animated-asmr-comedy-short-aboard-a-warm-l-0338f10f2018",
+      "rank": 309,
+      "category": "video",
+      "editorialScore": 80.0,
+      "sourcePromptSha256": "3d29365ef28f8b0775544cb8f3901827563d91f8b3be30dfea522808abd1a56a"
+    },
+    {
+      "slug": "seedance-seedance-2-5-dc01b3250bb4",
+      "rank": 310,
+      "category": "video",
+      "editorialScore": 80.0,
+      "sourcePromptSha256": "004383e511c9c83183a0909e14f1f86775306f8b6fe3bca7bbaa6f9e81a7e640"
+    },
+    {
+      "slug": "case-b12e365fe2ba",
+      "rank": 311,
+      "category": "video",
+      "editorialScore": 79.91,
+      "sourcePromptSha256": "d13509d13a2371eac56718b34d5b8263d0246c0fc27fdf8249cd227db3909293"
+    },
+    {
+      "slug": "vfx-47bf458a20a3",
+      "rank": 312,
+      "category": "video",
+      "editorialScore": 79.47,
+      "sourcePromptSha256": "646495032aa0993d749ef493971f92f853023495f14ff9d41c72c55aa1b3200c"
+    },
+    {
+      "slug": "case-fecae6e34928",
+      "rank": 313,
+      "category": "video",
+      "editorialScore": 79.3,
+      "sourcePromptSha256": "6697f4402a72a27775c50f87323ee20569350bd84d0186e6e425e2beb0787826"
+    },
+    {
+      "slug": "seedance-create-a-high-energy-15-second-commercial-using-the-provided-image-as-the-exact-4036c7836b02",
+      "rank": 314,
+      "category": "video",
+      "editorialScore": 79.09,
+      "sourcePromptSha256": "83bd2a2ed154f0d8203a5ed315fddbbb58f183d9d8fd770f94066adf1fd6da67"
+    },
+    {
+      "slug": "case-7aea1313f63b",
+      "rank": 315,
+      "category": "video",
+      "editorialScore": 79.04,
+      "sourcePromptSha256": "3dc757bd97a5d2d4b1249fd9f3a33e0a2c389908ddb4bbba5f7f19c50c2baf5c"
+    },
+    {
+      "slug": "case-3b061b619d01",
+      "rank": 316,
+      "category": "video",
+      "editorialScore": 77.7,
+      "sourcePromptSha256": "c857c513c713c737259dec73c95f892b6ec88f3e386c24fad63c20461adfd7a6"
+    },
+    {
+      "slug": "case-df45c3e85f06",
+      "rank": 317,
+      "category": "video",
+      "editorialScore": 77.5,
+      "sourcePromptSha256": "34f4783fd36d6d153734d8cfe8a5956f5573679bc2681a6e812d0b857aee5a1b"
+    },
+    {
+      "slug": "aiwithaliya-minimax-h3-ai-8a417a457e76",
+      "rank": 318,
+      "category": "video",
+      "editorialScore": 77.4,
+      "sourcePromptSha256": "4b570a45741845cd3117cc961c94997bc7e84465ef97313726adde3df2ddb1cb"
+    },
+    {
+      "slug": "zarairahh-seedance-ai-c2bb2f096591",
+      "rank": 319,
+      "category": "video",
+      "editorialScore": 77.2,
+      "sourcePromptSha256": "97fada249700dec80eac90ee8448b87b8e309a4a150971798be16d893c2d2d9a"
+    },
+    {
+      "slug": "90s-diner-time-freeze-effect",
+      "rank": 320,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "97bf193fff3915d08fd8c51864404bb16ab25bf2d1d42e6e622e0a89abf24550"
+    },
+    {
+      "slug": "aimikoda-minimax-h3-ai-57cc60bda504",
+      "rank": 321,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "f6657f147aa83870c40357b6f1c416a753faa703b910b2f357cb9b2499f2e7d3"
+    },
+    {
+      "slug": "aimikoda-seedance-ai-3e98e88a068f",
+      "rank": 322,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "fb53820cfdf9a71ca9b8fd3d49e15f02e8a641fb3be22669980900b8c691434a"
+    },
+    {
+      "slug": "aimikoda-seedance-ai-9b2a6b435fbd",
+      "rank": 323,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "44cfffa9347ef7439ee0212381d5bae776da7bcb89f389ebbe23fa7773ab040e"
+    },
+    {
+      "slug": "aiwithaliya-minimax-h3-ai-56501d37ff1f",
+      "rank": 324,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "ef361903406ca3281910e7b23375d626c7f1cf253a1088806e5b312bb92607da"
+    },
+    {
+      "slug": "aiwithkhan-seedance-ai-2ee8c62c7d26",
+      "rank": 325,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "c5d763a8758c6d3b892c0eb8badbc20c50477b384b5baae30c7b5a549df0698e"
+    },
+    {
+      "slug": "aiwithsynthia-seedance-ai-8dd82bc7e6f7",
+      "rank": 326,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "acb04bbb993306f14f289a8aadddbd4412f4a39e1c037945aaaf7ebab0764332"
+    },
+    {
+      "slug": "case-1d142b6d6241",
+      "rank": 327,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "06fc4c3fc23c24c8082dc36e4401f7ac5fd968c555144f83a933eda8cb0187e7"
+    },
+    {
+      "slug": "case-1e4f684b45b0",
+      "rank": 328,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "1bf70e1fe5b886d43da47b2acc175c7ef6739b4367c83ba937b697e9cfc0b3eb"
+    },
+    {
+      "slug": "case-1f7a27e4c448",
+      "rank": 329,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "0c595944252255242f7582ab8c128bcc4dd56d67d47e6424020dece6a9b4bfb3"
+    },
+    {
+      "slug": "case-30f9477f562c",
+      "rank": 330,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "688924bbaeb36fbdc61c8cfccb802dc9979ecdf8f1c2027d1f6e3e96e09ae880"
+    },
+    {
+      "slug": "case-348681e51fdd",
+      "rank": 331,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "217090bbf78485027300e97f53bc2a5756e52830480fb46896703965837f180b"
+    },
+    {
+      "slug": "case-50ba683413ff",
+      "rank": 332,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "a6312d7520ff3bebdb59791b6e2c08cf7576257faa085ddc0639653c96433217"
+    },
+    {
+      "slug": "case-5c4dcdbf9e99",
+      "rank": 333,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "44f5b8f3371e6f8582f4afac8760b0b240b831df949665229c423e763008a766"
+    },
+    {
+      "slug": "case-778d0c927488",
+      "rank": 334,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "cb8ed2737e9de481e274b09b2a4203d7fe464f84268b80618e229d8fdfa599a5"
+    },
+    {
+      "slug": "case-808a32ae79b3",
+      "rank": 335,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "1cfbfc46024aa8f41faa56de06397a7697a24d1d20e04a8d7fcd1640557ea2e2"
+    },
+    {
+      "slug": "case-b723c4e1858e",
+      "rank": 336,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "31ac0f64da49f985572207e4c86793620753d8fda52f7449175cd054a5a0b0b9"
+    },
+    {
+      "slug": "case-c290f40d8f85",
+      "rank": 337,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "361dc823709d56e6fe272b7aa0bdcf7316820b1cffd55ef1d125a5c73803a8e0"
+    },
+    {
+      "slug": "case-cbb9868317f8",
+      "rank": 338,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "6e43aa361536d0d53a537d4df8636ddb4f65af50de54e4e39098263207c7b608"
+    },
+    {
+      "slug": "chaemate-minimax-h3-ai-cfdd0fd595ca",
+      "rank": 339,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "d5ba35113237a848bf48bd26d01af0314a3856a71371924ce81443eb7ba46ea0"
+    },
+    {
+      "slug": "ciri-ai-seedance-ai-516d7626ef5d",
+      "rank": 340,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "cb275cbc3d69cc50669c6e10ec2067316a45e8e101089728a56c141ce62fb64c"
+    },
+    {
+      "slug": "ciri-ai-seedance-ai-6f0712601492",
+      "rank": 341,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "a925eaa4b2263690539344700be05de57b675443febfe0bd0f723862fdab3226"
+    },
+    {
+      "slug": "created-in-minimax-h3",
+      "rank": 342,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "e15bc6980d9d3a67f3110bed02f538b021b0b7379399162dbb4c29c5d299b1e9"
+    },
+    {
+      "slug": "elsasofia-ai-seedance-ai-48cf6dd47273",
+      "rank": 343,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "5aec2ee4b103dc89333754c24d35c01a9be388b35fb509d75255889ecec4891c"
+    },
+    {
+      "slug": "elsasofia-ai-seedance-ai-e087ab2aed4b",
+      "rank": 344,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "d1bbaeedbf6ac94d6b2d3d2b18020da9dbbe3b55164902ee06dfcc76631a994b"
+    },
+    {
+      "slug": "johnagi168-ai-0dce9b604da9",
+      "rank": 345,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "1a3ba0e085fa6a6a95a1b60c8461a0724c676bcf9aad9afcbd625cf12efd699d"
+    },
+    {
+      "slug": "johnagi168-ai-b0045917147c",
+      "rank": 346,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "76df2d72b98f180b64ae202fbaf6c2bec09c47c0265dceaca0aa07d749e2fbaf"
+    },
+    {
+      "slug": "johnagi168-minimax-ai-b34430096f96",
+      "rank": 347,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "71f7d220b8d4a318a5d96ff71cad535741e57b00d37ebcf5487f5248420f90d8"
+    },
+    {
+      "slug": "johnagi168-minimax-h3-ai-98aaf6b33e96",
+      "rank": 348,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "acfa15b2ae28aaa864ca4338012095e4e915a6586f21a235c2024014e5af5117"
+    },
+    {
+      "slug": "johnagi168-seedance-ai-140908f952bd",
+      "rank": 349,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "f93e4353f3154907fa2c7e0f615c5699db0b81a464626c62cfbf24bb2c452300"
+    },
+    {
+      "slug": "johnagi168-seedance-ai-6289b5b000a0",
+      "rank": 350,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "b4efe497e954ab9de1716a4e11d0c581b291f0613e97d0b2749786d12da75324"
+    },
+    {
+      "slug": "johnagi168-seedance-ai-d704aa5a63ac",
+      "rank": 351,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "9f91339c466cc4089a4ca5008cd5ad988ec1ff697a1ebde6f3d7a2135f7707e0"
+    },
+    {
+      "slug": "just-sharon7-seedance-ai-0109d7f993a1",
+      "rank": 352,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "e2ce6d1d1edad250e99ae7c98f20a02abb8df020681bac40c6a1d4badd698199"
+    },
+    {
+      "slug": "just-sharon7-seedance-ai-5f2b0c838698",
+      "rank": 353,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "03eb78c0845b29ee5d02602965ab559b2d8fe45c37c67c25a86d3bac6c5ca31b"
+    },
+    {
+      "slug": "just-sharon7-seedance-ai-8085c03efbb0",
+      "rank": 354,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "06f79ab6dd597baf7cfc1a8164070b769ff028a42d37b1f06b6f53d8d1ef5de5"
+    },
+    {
+      "slug": "kling-create-a-15-second-high-fashion-editorial-film-starring-the-adult-character-in-22356345b7aa",
+      "rank": 355,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "ca90b05184ec99458367a6e611c2b2d6ea3d01a8ed0b7b6d1b896fc3e34d2875"
+    },
+    {
+      "slug": "kling-pov-your-pizza-delivery-guy-ate-your-slice-and-ran-d44b0e2c60a7",
+      "rank": 356,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "82d731b7bad3cfe1c9c433243cabd6d5ec45da56a8e00408affa58af0b6b9a85"
+    },
+    {
+      "slug": "lianaalane-seedance-ai-c3e78794ed16",
+      "rank": 357,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "12902bea4744c053db59a982a2e19bb0299b1bca47293cf0ee0da42f56b394ea"
+    },
+    {
+      "slug": "liyue-ai-seedance-ai-dd263958ed42",
+      "rank": 358,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "b650818d9e4fd5756f9fad92c94e6367445864a73d4adf6871258ebac09844f4"
+    },
+    {
+      "slug": "minimax-h3-15-second-experimental-anime-fashion-film-401628f272b2",
+      "rank": 359,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "2622fa654d0fae364cc3048ade94c0c82f341123b29ec418d7cfe5ff34191eba"
+    },
+    {
+      "slug": "minimax-h3-a-cinematic-creation-film-follows-one-maker-reconstructing-the-main-subject-sho-779c59e726b4",
+      "rank": 360,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "db550a10cc2b74ad68dc260c7e4a463710ffbc7a6d3a040dcbdafa46da2c837b"
+    },
+    {
+      "slug": "minimax-h3-a-cinematic-tour-of-modern-luxury-and-timeless-elegance-ae0f321207bf",
+      "rank": 361,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "501ccbff6a4620de1ba51be5f0462614069ea3673fe38843a00604007eb14a1d"
+    },
+    {
+      "slug": "minimax-h3-be14aed5a842",
+      "rank": 362,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "894e8fc4fa1b6ee0ad18f5d00a08a3b34655007491e50ca98acaf777967786f1"
+    },
+    {
+      "slug": "minimax-h3-create-a-15-second-fast-paced-character-creation-timelapse-inside-a-professiona-241237731fca",
+      "rank": 363,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "e38933fcd05e585790fa3e8591343880587f2b185c05213291ee1a040b5dbe8f"
+    },
+    {
+      "slug": "minimax-h3-create-an-elegant-motion-graphics-driven-personality-reveal-short-in-16-9-exac-899747600e79",
+      "rank": 364,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "717e2b9f5a3f2face243478a7892dada2559ed0ed0cb75f2835e799e8dec98b4"
+    },
+    {
+      "slug": "minimax-h3-photorealistic-cinematic-aerial-video-of-a-modern-glass-skyscraper-assembling-i-2adb1ffc920f",
+      "rank": 365,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "fb06c58435c41a15daa35990a28a17a2063f55080d4bdd7b380afd06a37ccc01"
+    },
+    {
+      "slug": "missdelulu9-seedance-ai-82f2bf793076",
+      "rank": 366,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "5d3ae50314facf7a0c9da7264c4288a12a3c0f014e985beab570406b88db5dea"
+    },
+    {
+      "slug": "modern-action-comedy-video-prompt",
+      "rank": 367,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "317c51ec9cd2ffa8f57c489c3ade04a72054fb0c34fc40d9e84d03cab48db2bd"
+    },
+    {
+      "slug": "nvtdanh-seedance-ai-52f635503525",
+      "rank": 368,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "818cfa744a7d42f0a8f41bc5ba9a099673df8309164714a28fc6d85dca9558ab"
+    },
+    {
+      "slug": "oggii-0-seedance-ai-137e0e907dfd",
+      "rank": 369,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "05a0dac1e3b468c538b9af24b8c9d5488a668ffdd0470094159ede658ff267aa"
+    },
+    {
+      "slug": "pyona-ai-seedance-ai-47b0906eef64",
+      "rank": 370,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "b80a4a86105a59b44d52890a1b4bf0d2f329a0ca0cbfbd7bdce167cbc804e69e"
+    },
+    {
+      "slug": "rovvmut-seedance-ai-228f58be0ecb",
+      "rank": 371,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "2bd52bb50faa995fd4d17c8b79f00ed24a383e1f980fe83e926bdfa2b71614a8"
+    },
+    {
+      "slug": "seedance-1-c67289c7c2f0",
+      "rank": 372,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "acd5891f045fd10adc678e8cd89e934cfa058cb972b83f81323f7c6ab5ec96cf"
+    },
+    {
+      "slug": "seedance-15s-cinematic-fantasy-action-69629478b3c4",
+      "rank": 373,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "9dabb68325b60171d2a039914ddd82d6064f645f9f9b17a898beb13dce71f0c2"
+    },
+    {
+      "slug": "seedance-2-0-use-the-provided-character-image-as-the-strict-identity-and-styling-reference-ac3aa5983d35",
+      "rank": 374,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "57f05570eaefd75e92f8ef7506714ec3e73ec3e2eb5518e039f1f59829ee6543"
+    },
+    {
+      "slug": "seedance-2-5-ai-cabf3749d5b6",
+      "rank": 375,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "569c157fdcdcf24b4d60baee7f8e0c4d8ca214b8ee4329c0f116bd4d01d345ef"
+    },
+    {
+      "slug": "seedance-2-5-create-a-30-second-ultra-realistic-cinematic-fpv-travel-film-showcasing-the-fut-10f862c76c6a",
+      "rank": 376,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "74640f5842a4ea61c1b850ed1146beda61e8b3187c9ce7dbe84bf2b33c500581"
+    },
+    {
+      "slug": "seedance-2-5-seedance-2-5-prompt-drop-7b233ffed1d4",
+      "rank": 377,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "9023a0f64cea104c7c0e9ad17fea9004ac147261eed00639eefdbb17b258a035"
+    },
+    {
+      "slug": "seedance-2-5-ugc-69e79f387106",
+      "rank": 378,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "7183d8a1aceb64cd08d3933700d4eb163ecb4549d4b10ae16ecedc7be109fe4f"
+    },
+    {
+      "slug": "seedance-2-5-ui-228cf63ce8ff",
+      "rank": 379,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "debc808184220464cc338c9729b82277cb2efd5e34120653b25bb9607e560472"
+    },
+    {
+      "slug": "seedance-30-second-1080p-ultra-realistic-early-2000s-consumer-dv-home-video-in-rural-we-6b3c6132a462",
+      "rank": 380,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "d38f6361fd251a08f9052dd90f1e7d1586aa5eda08675ac8a6396153473a0fb5"
+    },
+    {
+      "slug": "seedance-30-second-ultra-realistic-4k-cinematic-winter-travel-vlog-set-in-england-6e26bca27e87",
+      "rank": 381,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "38a41493426bdeaff50c3159e68bc998da477f17a5454108946448825c9caf36"
+    },
+    {
+      "slug": "seedance-30-seconds-16-9-ultra-photorealistic-live-action-39bfaec91181",
+      "rank": 382,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "7a7fa2f2e02c9f97986292c532111fff764d5baa15be05ed6147f025229cce52"
+    },
+    {
+      "slug": "seedance-35-shot-30-second-cinematic-noir-rooftop-heist-9e1bb095d4c4",
+      "rank": 383,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "028e6a5e59502026505221760d8920d10806d6bc4845dc7b75307be19f2d2e80"
+    },
+    {
+      "slug": "seedance-3b9beb9a46d4",
+      "rank": 384,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "b61619f7c37a97c9678528af65fcf40da9e9ccd519385d79bc6709e956348cd2"
+    },
+    {
+      "slug": "seedance-a-20-year-old-east-asian-woman-spends-an-autumn-day-moving-through-a-big-city-b085b8a1bb11",
+      "rank": 385,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "625f5c42c97dbe9211b582248b8f526e0ecc51bb44420691a379653593bac982"
+    },
+    {
+      "slug": "seedance-a-cinematic-30-second-alpine-winter-vlog-montage-featuring-the-same-young-woman-cf96bc6f9a40",
+      "rank": 386,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "ccf837f68476e70b98d26ac0ec6ae46711724f9d95d17d746a7736cc450c2b82"
+    },
+    {
+      "slug": "seedance-a-young-japanese-woman-films-a-handheld-selfie-vlog-at-a-riverside-shrine-summe-1c4b78c5841a",
+      "rank": 387,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "b48b747c608dace72a40f0ad467862e9dad1901c3defec5415b40555fb160625"
+    },
+    {
+      "slug": "seedance-an-old-wooden-japanese-school-corridor-during-festival-prep-week-c86f23f6acfa",
+      "rank": 388,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "020dd3f7ea42f270d2fe1cebcbf2ff9139ba69310e996c4c6d303541921bde30"
+    },
+    {
+      "slug": "seedance-bedroom-chaos-turns-into-midnight-confidence-with-a-seamless-transition-that-hi-641d5d0012fa",
+      "rank": 389,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "ea3baaa01d7de48e3cf99cc3d3d5013679a63770478b241af75d00350dfc1bff"
+    },
+    {
+      "slug": "seedance-cinematic-live-action-rooftop-superhero-fight-featuring-the-exact-male-hero-fro-e5adf4ac41fa",
+      "rank": 390,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "547a8f55aa8d7aa1aff5ded59550171511bda678edd63ed6f1e8792d1ffd8e56"
+    },
+    {
+      "slug": "seedance-create-a-15-second-extremely-fast-paced-luxury-fashion-editorial-video-using-th-83bef02d5153",
+      "rank": 391,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "8db149d262a04d5848360e85645b80aa3bf9287d85977a6a0fd63a9500c0557f"
+    },
+    {
+      "slug": "seedance-create-a-15-second-fast-paced-high-end-huda-beauty-cosmetics-advertisement-fea-22da35548b45",
+      "rank": 392,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "13877b3bdb818c1977b4f513b8d5818c83ef5b603dce660063ad5a9de924cfe4"
+    },
+    {
+      "slug": "seedance-create-a-15-second-fast-paced-smooth-luxury-fashion-editorial-video-using-the-86b7f97bc9d3",
+      "rank": 393,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "4f0eb2dfa66f11acc17ba3ad049e1aae6103468d7d3128d5f70471888b8fe0d7"
+    },
+    {
+      "slug": "seedance-create-a-15-second-luxury-streetwear-fashion-film-combining-rapid-outfit-change-e7f858674b8c",
+      "rank": 394,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "cd85e62944acd6a72653560c515ab7b3c1e12b910df5ba7f0dd7a01d3c9b34ae"
+    },
+    {
+      "slug": "seedance-create-a-15-second-ultra-realistic-vertical-9-16-fashion-film-shot-entirely-fr-8a5224b777f2",
+      "rank": 395,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "87575b06e6473e914158a0c957d8e18a0801d01db82f9a1290815e2bc627aa2b"
+    },
+    {
+      "slug": "seedance-create-a-17-second-ultra-realistic-cinematic-vertical-video-featuring-the-woman-6be0338020cb",
+      "rank": 396,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "c63ebd4c14bc99aad1a2b66118c18952416d618b92734b129221667344772c69"
+    },
+    {
+      "slug": "seedance-create-a-30-second-1080p-ultra-realistic-early-2000s-consumer-dv-home-video-i-9723105bbada",
+      "rank": 397,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "0a76bf9b3762f2da09c7c16ae96c4cd63981eff0e708dca6428300328bfea93a"
+    },
+    {
+      "slug": "seedance-create-a-30-second-1080p-ultra-realistic-early-2000s-minidv-home-video-of-a-yo-fd4c78266003",
+      "rank": 398,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "c999cedd4359d186f64c480ab591f6f291616e190a2741a963f5afb03e55f00c"
+    },
+    {
+      "slug": "seedance-create-a-30-second-1080p-ultra-realistic-korean-subway-action-comedy-scene-usi-7d2531af4b66",
+      "rank": 399,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "0c68466702be79c1da6aed8af8fc66c0722dd3f1831920ed31cdbd07bdbcdf72"
+    },
+    {
+      "slug": "seedance-create-a-30-second-1080p-ultra-realistic-korean-subway-action-comedy-scene-usi-93b40e9db5b1",
+      "rank": 400,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "cd554e3c20dfd8790aec7a48fea2ebc3155ab7f9345bea8874075c6707298a63"
     }
   ],
   "batches": [
@@ -2115,6 +2815,14 @@
         "image": 75,
         "video": 45,
         "web": 30
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "added": 100,
+      "total": 400,
+      "categories": {
+        "video": 100
       }
     }
   ]

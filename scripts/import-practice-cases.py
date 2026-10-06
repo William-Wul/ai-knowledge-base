@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-import json,re,hashlib,argparse,datetime
+import json,re,hashlib,argparse,datetime,collections
 parser=argparse.ArgumentParser()
 parser.add_argument("--append",action="store_true")
+parser.add_argument("--expected-add",type=int,default=150)
 args=parser.parse_args()
 today=datetime.date.today().isoformat()
 from pathlib import Path
@@ -216,7 +217,12 @@ if not args.append and len(json.loads((base/'practice-cases-imported.json').read
  raise SystemExit('已有库大于候选集；请使用 --append 增量导入，避免覆盖')
 old_ids={c['slug'] for c in curated.values()} | {c['slug'] for c in imported}
 if args.append:
- assert len(selected)==150, '增量必须正好 150 条'
+ assert args.expected_add>0 and len(selected)==args.expected_add, f'增量必须正好 {args.expected_add} 条'
+ assert len({d['slug'] for d in selected})==len(selected), '候选标识重复'
+ normalized=lambda t:re.sub(r'\s+',' ',t).strip()
+ existing_prompts={normalized(c['promptOriginal']) for c in [*curated.values(),*imported]}
+ new_prompts=[normalized(d['promptFull']) for d in selected]
+ assert not existing_prompts.intersection(new_prompts) and len(set(new_prompts))==len(new_prompts), '增量原文重复'
  assert not old_ids.intersection(d['slug'] for d in selected), '增量含已有条目'
 overrides_file=base/'case-editorial-overrides.json'
 overrides=json.loads(overrides_file.read_text()) if overrides_file.exists() else {}
@@ -247,8 +253,8 @@ for d in selected:
  imported.append(c)
 audit=json.loads(Path('docs/.vitepress/cache/goodcase/audit.json').read_text())
 metadata={**previous,'capturedAt':today,'sourceTotal':audit['sitemapCount'],'sourceFetched':audit['fetchedCount'],'sourceUnavailable':len(audit['failures']),
-'selectionPolicy':'保留已收录内容与顺序；新增按完整提示词、效果、来源与可复用性筛选，排除重复原文；图片、视频、网站与工具配额为 75/45/30。','cases':manifest}
-if args.append:metadata['batches']=[*previous.get('batches',[]),{'date':today,'added':len(selected),'total':len(manifest),'categories':{'image':75,'video':45,'web':30}}]
+'selectionPolicy':'保留已收录内容与顺序；新增按完整提示词、效果、来源与可复用性筛选，排除重复原文；按本批指定分类与数量增量收录。','cases':manifest}
+if args.append:metadata['batches']=[*previous.get('batches',[]),{'date':today,'added':len(selected),'total':len(manifest),'categories':dict(collections.Counter('web' if d['siteCategory']=='tool' else d['siteCategory'] for d in selected))}]
 (base/'practice-cases-imported.json').write_text(json.dumps(imported,ensure_ascii=False,indent=2)+'\n')
 (base/'practice-cases-selection.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n')
 print('imported',len(imported),'selection',len(manifest))

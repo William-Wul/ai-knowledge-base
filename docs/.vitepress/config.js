@@ -150,8 +150,8 @@ const siteSidebar = [
             collapsed: true,
             items: [
               { text: '完整榜单', link: '/model-ranking/' },
-              { text: 'AIHOT 原榜 ↗', link: 'https://aihot.virxact.com/leaderboard' },
-              { text: '共识分计算规则 ↗', link: 'https://aihot.virxact.com/leaderboard/rules' },
+              { text: 'AIHOT 原榜 ↗', link: 'https://aihot.news/leaderboard' },
+              { text: 'AIHOT 评分规则 ↗', link: 'https://aihot.news/leaderboard/rules' },
             ],
           },
         ],

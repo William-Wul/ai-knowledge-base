@@ -5,7 +5,7 @@ import { loadCases } from './practice-cases-data.mjs'
 import { createHash } from 'node:crypto'
 const cases = loadCases()
 const selection = JSON.parse(readFileSync('docs/.vitepress/data/practice-cases-selection.json', 'utf8')).cases
-const expected = Number(process.argv[2] || 300)
+const expected = Number(process.argv[2] || 400)
 assert.equal(cases.length, expected)
 assert.equal(selection.length, expected)
 assert.equal(new Set(selection.map(c => c.slug)).size, expected)

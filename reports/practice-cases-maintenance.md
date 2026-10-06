@@ -40,3 +40,11 @@
 - 选取脚本排除已存在的标识与规范化原文；导入器拒绝重复标识和不满 150 条的增量；来源原文摘要保留在选择清单。
 - 封面新增 150 张；三段角色视频取第 5 秒以改善开场预览。没有下载整库视频或调用付费生成。
 - 构建后 `node scripts/check-practice-cases.mjs` 默认校验 300 条；可传入显式预期总数。测试报告：`reports/practice-cases-300-test-report.md`。
+
+## 2026-10-06：视频增量 100 个
+
+- 全库 400：图片 150、视频 190、网站与工具 60，原有 300 条数据及顺序保留。
+- 本批命令：`python3 scripts/select-goodcase.py --add 100 --category video`，审阅并备齐封面/译文后使用 `python3 scripts/import-practice-cases.py --append --expected-add 100`。重复导入会被拒绝。
+- 按真实详情保留完整原文和来源；新增 3 条完整中文译文，100 条独立中文标题/摘要。分镜图、视频指令与交互演示分开说明。
+- 封面逐张审阅；5 张改用视频第 5 秒画面。不在生成模型中实测作品。
+- 本批媒体检查结果保存在忽略缓存 `goodcase/video100-media-check.json`；最终结论见测试报告。

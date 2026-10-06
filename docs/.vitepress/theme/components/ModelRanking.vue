@@ -17,7 +17,7 @@
       <span class="c-date">上线日期</span>
       <span class="c-comp">评测证据</span>
       <span class="c-price">输入 / 输出成本</span>
-      <span class="c-score">共识指数</span>
+      <span class="c-score">AIHOT 评分</span>
     </div>
 
     <!-- 榜单行：点击跳转到 AIHOT 该模型的各榜明细页 -->
@@ -62,7 +62,7 @@
       </p>
       <div class="mr-links">
         <a class="mr-btn primary" :href="lb.sourceUrl" target="_blank" rel="noopener">查看实时原榜 →</a>
-        <a class="mr-btn" :href="lb.rulesUrl" target="_blank" rel="noopener">共识指数计算规则 →</a>
+        <a class="mr-btn" :href="lb.rulesUrl" target="_blank" rel="noopener">AIHOT 评分计算规则 →</a>
       </div>
     </div>
   </div>
@@ -132,9 +132,9 @@ const syncedText = (() => {
 /* ===== 表头 ===== */
 .mr-head {
   display: grid;
-  grid-template-columns: 56px minmax(0, 1.6fr) 110px 140px 150px 76px;
-  gap: 12px;
-  padding: 10px 16px;
+  grid-template-columns: 32px minmax(120px, 1.6fr) 80px 80px 132px 68px;
+  gap: 8px;
+  padding: 10px 12px;
   border-bottom: 1px solid var(--vp-c-divider);
   font-size: 11.5px;
   font-weight: 700;
@@ -149,10 +149,10 @@ const syncedText = (() => {
 /* ===== 榜单行 ===== */
 .mr-row {
   display: grid;
-  grid-template-columns: 56px minmax(0, 1.6fr) 110px 140px 150px 76px;
-  gap: 12px;
+  grid-template-columns: 32px minmax(120px, 1.6fr) 80px 80px 132px 68px;
+  gap: 8px;
   align-items: center;
-  padding: 12px 16px;
+  padding: 12px 12px;
   border-bottom: 1px solid var(--vp-c-divider);
   text-decoration: none;
   color: var(--vp-c-text-1);
@@ -190,9 +190,7 @@ const syncedText = (() => {
 .c-model strong {
   font-size: 14.5px;
   font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-wrap: anywhere;
 }
 .c-model small {
   font-size: 11.5px;
