@@ -3,6 +3,7 @@ title: "当代平面设计展览海报"
 description: "一份高度结构化、专业的提示词，用于生成具有大胆形状、极简纹理和特定构图规则的当代平面设计展览海报。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-33a820efca19
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-33a820efca19.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 当代平面设计展览海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-33a820efca19.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

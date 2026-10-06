@@ -3,6 +3,7 @@ title: "强制透视奢华产品广告"
 description: "利用强制透视技术突出耳机和香水等产品的奢华广告提示词，背景采用极简主义建筑风格。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-fef0eda18e0c
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-fef0eda18e0c.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 强制透视奢华产品广告
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-fef0eda18e0c.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

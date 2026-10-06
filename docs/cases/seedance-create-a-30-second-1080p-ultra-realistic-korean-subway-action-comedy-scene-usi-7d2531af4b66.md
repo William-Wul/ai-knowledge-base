@@ -3,6 +3,7 @@ title: "地铁门前的反差动作喜剧"
 description: "围绕地铁关门前后的角色反应组织动作，练习车内外空间关系与笑点节拍。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-create-a-30-second-1080p-ultra-realistic-korean-subway-action-comedy-scene-usi-7d2531af4b66
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-create-a-30-second-1080p-ultra-realistic-korean-subway-action-comedy-scene-usi-7d2531af4b66.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 地铁门前的反差动作喜剧
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-create-a-30-second
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

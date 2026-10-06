@@ -3,6 +3,7 @@ title: "照片变成微缩建筑海报"
 description: "上半幅保留照片，下半幅将主体变成带脚手架的等距微缩建筑。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-2-isometric-vol-073-12b5fd775ada
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-2-isometric-vol-073-12b5fd775ada.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 照片变成微缩建筑海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-2-isometric-vol-0
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "香水产品的撞色展示页"
 description: "香水产品展示区块，左半循环视频右半柠檬绿色块，撞色排版是记忆点。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: daisy-wild
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/daisy-wild.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 香水产品的撞色展示页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/daisy-wild.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

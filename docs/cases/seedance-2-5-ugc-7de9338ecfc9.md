@@ -3,6 +3,7 @@ title: "咖啡机开箱与试用短片"
 description: "Seedance 2.5 生成的竖屏咖啡机UGC广告，创作者从开箱、注水磨豆到出品试饮完整走一遍产品使用流程，中间穿插台词。分镜按秒数安排特写与转场，模拟真实博主口播带货的镜头语言。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-2-5-ugc-7de9338ecfc9
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-2-5-ugc-7de9338ecfc9.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 咖啡机开箱与试用短片
 
@@ -55,4 +59,4 @@ Seedance 2.5 生成的竖屏咖啡机UGC广告，创作者从开箱、注水磨�
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "手绘动画风牛角包烘焙坊"
 description: "先整理食材和角色参考，再把起酥、塑形与烘烤编排成温暖的动画片段。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: case-fecae6e34928
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-fecae6e34928.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 手绘动画风牛角包烘焙坊
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/case-fecae6e34928.json'
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

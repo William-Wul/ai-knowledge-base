@@ -3,6 +3,7 @@ title: "手工线艺可视化地图"
 description: "一个独特的提示词，可将照片转化为实体的线艺系统地图，融合了逼真的纹理、红线边缘以及手写标注。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-cdaaabdc9f7f
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-cdaaabdc9f7f.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 手工线艺可视化地图
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-cdaaabdc9f7f.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

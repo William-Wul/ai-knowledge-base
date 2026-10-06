@@ -3,6 +3,7 @@ title: "复古饮品的快节奏广告"
 description: "固定参考图中的人物、卡座和饮品，用快速特写与动作变化组织十五秒广告。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-create-a-high-energy-15-second-commercial-using-the-provided-image-as-the-exact-4036c7836b02
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-create-a-high-energy-15-second-commercial-using-the-provided-image-as-the-exact-4036c7836b02.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 复古饮品的快节奏广告
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-create-a-high-ener
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

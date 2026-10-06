@@ -3,6 +3,7 @@ title: "房间自拍的人物一致性练习"
 description: "固定人物、服装与房间环境，用小动作和手持镜头表现随性的自拍视频。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: aiwithsynthia-seedance-ai-8dd82bc7e6f7
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/aiwithsynthia-seedance-ai-8dd82bc7e6f7.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 房间自拍的人物一致性练习
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/aiwithsynthia-seedance-ai-8
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

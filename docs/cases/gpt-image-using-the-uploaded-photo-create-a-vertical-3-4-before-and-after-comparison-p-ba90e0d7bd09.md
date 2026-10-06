@@ -3,6 +3,7 @@ title: "照片与几何插画对照海报"
 description: "将同一人物或场景分别呈现为照片和几何色块插画，同时保留动作与构图。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-using-the-uploaded-photo-create-a-vertical-3-4-before-and-after-comparison-p-ba90e0d7bd09
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-using-the-uploaded-photo-create-a-vertical-3-4-before-and-after-comparison-p-ba90e0d7bd09.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 照片与几何插画对照海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-using-the-uploade
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

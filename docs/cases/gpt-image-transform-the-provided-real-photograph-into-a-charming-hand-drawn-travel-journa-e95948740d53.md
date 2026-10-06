@@ -3,6 +3,7 @@ title: "城市风景手绘旅行日记"
 description: "保留照片的透视和主要地标，再加入手绘线条、文字和旅行手账风格。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-transform-the-provided-real-photograph-into-a-charming-hand-drawn-travel-journa-e95948740d53
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-transform-the-provided-real-photograph-into-a-charming-hand-drawn-travel-journa-e95948740d53.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 城市风景手绘旅行日记
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-transform-the-pro
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "日式动画风的芦笋肉卷烹饪"
 description: "按备料、卷制和烹饪顺序安排镜头，重点描述接触动作与厨房物理细节。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: case-5c4dcdbf9e99
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-5c4dcdbf9e99.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 日式动画风的芦笋肉卷烹饪
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/case-5c4dcdbf9e99.json'
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

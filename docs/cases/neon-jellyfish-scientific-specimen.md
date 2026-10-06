@@ -3,6 +3,7 @@ title: "霓虹水母科学标本图"
 description: "用纯黑背景衬托发光水母，搭配色样与局部纹理，制作未来感科学标本图。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: neon-jellyfish-scientific-specimen
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/neon-jellyfish-scientific-specimen.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 霓虹水母科学标本图
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/neon-jellyfish-scientific-s
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

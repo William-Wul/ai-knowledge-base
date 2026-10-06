@@ -3,6 +3,7 @@ title: "无线耳机产品评测短片"
 description: "把人物介绍、佩戴和产品特写组合，练习评测片中的自然互动与细节展示。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: case-b157d9c072bc
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-b157d9c072bc.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 无线耳机产品评测短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/case-b157d9c072bc.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

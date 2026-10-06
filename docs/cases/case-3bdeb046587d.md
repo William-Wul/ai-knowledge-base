@@ -3,6 +3,7 @@ title: "电影感晨间健身日常"
 description: "一个 15 秒的电影感 出门前准备 视频提示词，用于户外晨间健身，并保持参考角色的身份一致性。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: case-3bdeb046587d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-3bdeb046587d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 电影感晨间健身日常
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/case-3bdeb046587d.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

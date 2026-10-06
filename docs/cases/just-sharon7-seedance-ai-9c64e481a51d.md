@@ -3,6 +3,7 @@ title: "Seedance 灾难现场拍还是跑：第一视角短片"
 description: "用第一视角表现灾难来临时的反应，学习环境变化和人物行动的连续性。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: just-sharon7-seedance-ai-9c64e481a51d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/just-sharon7-seedance-ai-9c64e481a51d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # Seedance 灾难现场拍还是跑：第一视角短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/just-sharon7-seedance-ai-9c
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

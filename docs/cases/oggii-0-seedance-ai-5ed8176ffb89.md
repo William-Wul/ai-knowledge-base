@@ -3,6 +3,7 @@ title: "韩国女生辣味挑战崩溃实录"
 description: "围绕辣味挑战安排人物反应、动作和镜头，模拟生活记录式短片。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: oggii-0-seedance-ai-5ed8176ffb89
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/oggii-0-seedance-ai-5ed8176ffb89.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 韩国女生辣味挑战崩溃实录
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/oggii-0-seedance-ai-5ed8176
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

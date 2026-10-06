@@ -3,6 +3,7 @@ title: "Seedance 三十秒健身房日常 vlog"
 description: "用三十秒记录健身房日常，安排运动、疲惫与收尾的动作节奏。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: zarairahh-seedance-ai-b7601661378a
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/zarairahh-seedance-ai-b7601661378a.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # Seedance 三十秒健身房日常 vlog
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/zarairahh-seedance-ai-b7601
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

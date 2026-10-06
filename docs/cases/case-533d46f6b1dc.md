@@ -3,6 +3,7 @@ title: "足球运动员“过去与现在”的蜕变"
 description: "一个分屏提示词，用于生成同一个人怀旧的童年肖像与现代成年版本的对比图，展现时光的流逝。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-533d46f6b1dc
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-533d46f6b1dc.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 足球运动员“过去与现在”的蜕变
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-533d46f6b1dc.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

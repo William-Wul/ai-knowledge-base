@@ -3,6 +3,7 @@ title: "角色主题汽车涂装"
 description: "根据参考插画中的角色和配色设计汽车外观，练习平面图案在车身上的延展。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: itasha-28cf57d4d335
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/itasha-28cf57d4d335.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 角色主题汽车涂装
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/itasha-28cf57d4d335.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

@@ -26,7 +26,7 @@ for (const file of readdirSync(resolve(root, 'docs/cases'))) {
 }
 const generated = resolve(root, 'docs/.vitepress/data/cases-generated')
 mkdirSync(generated, { recursive: true })
-const fields = ['slug', 'category', 'title', 'summary', 'use', 'models', 'creator', 'thumbnail', 'cover', 'mediaType', 'contentKind']
+const fields = ['slug', 'category', 'title', 'summary', 'use', 'models', 'creator', 'thumbnail', 'cover', 'mediaType', 'contentKind', 'mediaUrl', 'imageUrl', 'mediaNote']
 writeFileSync(resolve(generated, 'index.json'), JSON.stringify(cases.map(c => Object.fromEntries(fields.filter(k => c[k] !== undefined).map(k => [k, c[k]])))))
 const safeText = value => String(value || '').replace(/[&<>{}]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '{': '&#123;', '}': '&#125;' }[c])).replace(/([\\`*_[\]#!|])/g, '\\$1')
 const safeUrl = value => {
@@ -75,6 +75,7 @@ title: ${JSON.stringify(c.title)}
 description: ${JSON.stringify(c.summary)}
 pageClass: case-detail-page case-category-${c.category}
 caseCategory: ${c.category}
+caseSlug: ${c.slug}
 caseDetail: true
 prev: false
 next: false
@@ -84,8 +85,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/${c.slug}.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # ${safeText(c.title)}
 
@@ -124,7 +128,7 @@ ${safeText(c.exercise)}
 - 整理日期：${c.capturedAt}
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="${c.category}" />
+<CaseReturn :item="item" />
 `)
 }
 console.log(`已生成案例入口、${CASE_CATEGORIES.length} 个分类页与 ${cases.length} 篇详情。`)

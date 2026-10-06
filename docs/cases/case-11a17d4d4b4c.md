@@ -3,6 +3,7 @@ title: "复古蜡笔艺术海报"
 description: "一套用于创作治愈系美学海报的综合提示词，采用复古蜡笔与粉彩画风格，通过独特的上下分屏布局，将照片转化为艺术作品。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-11a17d4d4b4c
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-11a17d4d4b4c.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 复古蜡笔艺术海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-11a17d4d4b4c.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

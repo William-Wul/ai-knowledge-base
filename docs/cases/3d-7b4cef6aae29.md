@@ -3,6 +3,7 @@ title: "城市高楼的立体展示图"
 description: "把城市中的三座高楼排成一张立体展示图，比较体量并加入名称、高度等文字。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: 3d-7b4cef6aae29
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/3d-7b4cef6aae29.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 城市高楼的立体展示图
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/3d-7b4cef6aae29.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

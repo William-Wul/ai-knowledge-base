@@ -3,6 +3,7 @@ title: "带连续对白的健身房日记"
 description: "围绕十五秒健身片段安排对白和动作，练习声音、口型与镜头时长的配合。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: noorlewisx-seedance-ai-b2d98861daf9
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/noorlewisx-seedance-ai-b2d98861daf9.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 带连续对白的健身房日记
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/noorlewisx-seedance-ai-b2d9
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

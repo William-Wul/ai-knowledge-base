@@ -3,6 +3,7 @@ title: "预订服务的介绍首页"
 description: "围绕预订服务安排标题、说明与界面预览，练习字体分工和按钮层级。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: datacore-booking
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/datacore-booking.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 预订服务的介绍首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/datacore-booking.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

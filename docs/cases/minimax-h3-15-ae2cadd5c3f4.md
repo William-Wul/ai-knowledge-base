@@ -3,6 +3,7 @@ title: "十五秒科幻短片的情绪分镜"
 description: "把十五秒拆为四段，写清飞行员的动作、情绪变化、光线与现场声音。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: minimax-h3-15-ae2cadd5c3f4
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/minimax-h3-15-ae2cadd5c3f4.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 十五秒科幻短片的情绪分镜
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/minimax-h3-15-ae2cadd5c3f4.
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

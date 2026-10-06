@@ -3,6 +3,7 @@ title: "高端有机蜂蜜商业广告项目"
 description: "一份详细的有机蜂蜜商业广告项目提示词，包含微距镜头、液体质感及温暖的金色美学设计。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-e2965bc59b6d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-e2965bc59b6d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 高端有机蜂蜜商业广告项目
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-e2965bc59b6d.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

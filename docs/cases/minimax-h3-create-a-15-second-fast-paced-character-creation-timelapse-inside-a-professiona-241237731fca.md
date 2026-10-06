@@ -3,6 +3,7 @@ title: "从空白画布到角色的速绘"
 description: "把绘画过程压缩为十五秒，逐步呈现角色轮廓、结构和细节，检查制作顺序。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: minimax-h3-create-a-15-second-fast-paced-character-creation-timelapse-inside-a-professiona-241237731fca
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/minimax-h3-create-a-15-second-fast-paced-character-creation-timelapse-inside-a-professiona-241237731fca.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 从空白画布到角色的速绘
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/minimax-h3-create-a-15-seco
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

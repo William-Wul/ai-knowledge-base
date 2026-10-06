@@ -3,6 +3,7 @@ title: "金融产品的简洁介绍页"
 description: "围绕金融产品组织导航、介绍与行动按钮，练习简洁的产品排版。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: claude-fable-aethera-fintech-42f59ca99541
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/claude-fable-aethera-fintech-42f59ca99541.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 金融产品的简洁介绍页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/claude-fable-aethera-fintec
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

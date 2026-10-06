@@ -3,6 +3,7 @@ title: "手工烘焙坊电影感商业广告"
 description: "一份为烘焙坊定制的 30 秒商业广告提示词，聚焦于糕点制作过程与产品展示，呈现奢华的美学质感。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: case-f62d402ccdf6
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-f62d402ccdf6.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 手工烘焙坊电影感商业广告
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/case-f62d402ccdf6.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

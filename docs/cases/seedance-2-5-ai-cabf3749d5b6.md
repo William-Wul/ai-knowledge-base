@@ -3,6 +3,7 @@ title: "换装互动式动态壁纸短片"
 description: "用固定机位、中文对白和字幕时序模拟互动壁纸，按时间段展示三套服装。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-2-5-ai-cabf3749d5b6
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-2-5-ai-cabf3749d5b6.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 换装互动式动态壁纸短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-2-5-ai-cabf3749d5b
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

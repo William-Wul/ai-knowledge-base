@@ -3,6 +3,7 @@ title: "汉堡试吃广告短片"
 description: "用手持镜头、食物特写和自然反应，表现像日常分享一样的汉堡试吃过程。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: ugc-8fe211ff986b
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/ugc-8fe211ff986b.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 汉堡试吃广告短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/ugc-8fe211ff986b.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

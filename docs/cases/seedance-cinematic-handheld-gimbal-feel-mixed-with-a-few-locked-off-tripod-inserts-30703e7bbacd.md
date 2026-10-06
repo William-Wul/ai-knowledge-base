@@ -3,6 +3,7 @@ title: "能量饮料的清晨广告短片"
 description: "用起床后的动作、饮料特写和节奏变化，串起一段从困倦到活跃的清晨广告。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-cinematic-handheld-gimbal-feel-mixed-with-a-few-locked-off-tripod-inserts-30703e7bbacd
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-cinematic-handheld-gimbal-feel-mixed-with-a-few-locked-off-tripod-inserts-30703e7bbacd.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 能量饮料的清晨广告短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-cinematic-handheld
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

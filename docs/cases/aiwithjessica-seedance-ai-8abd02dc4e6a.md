@@ -3,6 +3,7 @@ title: "复古沙龙的彩虹染发短片"
 description: "用进店、染发与完成造型组织过程，练习同一人物在外观变化前后的连续性。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: aiwithjessica-seedance-ai-8abd02dc4e6a
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/aiwithjessica-seedance-ai-8abd02dc4e6a.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 复古沙龙的彩虹染发短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/aiwithjessica-seedance-ai-8
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

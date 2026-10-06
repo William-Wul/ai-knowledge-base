@@ -3,6 +3,7 @@ title: "纸艺风格的历史人物短片"
 description: "把历史人物题材压缩成十五秒纸艺场景，练习分层布景与镜头衔接。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: techhalla-ai-ca287ccf42b1
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/techhalla-ai-ca287ccf42b1.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 纸艺风格的历史人物短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/techhalla-ai-ca287ccf42b1.j
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

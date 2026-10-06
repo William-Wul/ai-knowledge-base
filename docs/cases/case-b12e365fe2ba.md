@@ -3,6 +3,7 @@ title: "祖母绿项链的八格广告分镜"
 description: "先安排首饰细节、佩戴画面和收尾主视觉，练习珠宝广告的镜头顺序与材质表达。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: case-b12e365fe2ba
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-b12e365fe2ba.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 祖母绿项链的八格广告分镜
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/case-b12e365fe2ba.json'
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

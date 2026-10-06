@@ -3,6 +3,7 @@ title: "宁静晨间日常的生活短片"
 description: "从醒来到开始一天安排生活镜头，用轻微表情和日常动作表现自然节奏。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-30-seconds-16-9-ultra-photorealistic-live-action-39bfaec91181
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-30-seconds-16-9-ultra-photorealistic-live-action-39bfaec91181.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 宁静晨间日常的生活短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-30-seconds-16-9-ul
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

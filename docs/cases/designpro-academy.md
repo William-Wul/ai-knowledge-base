@@ -3,6 +3,7 @@ title: "设计课程的全屏展示页"
 description: "用全屏视频背景、课程标题和按钮，组织设计教育平台的第一屏。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: designpro-academy
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/designpro-academy.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 设计课程的全屏展示页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/designpro-academy.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

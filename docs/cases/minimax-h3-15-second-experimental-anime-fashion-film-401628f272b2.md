@@ -3,6 +3,7 @@ title: "黄幕舞者的霓彩残影"
 description: "固定动漫角色，在黄色背景上叠加彩色残影与舞蹈动作，练习音乐片头的视觉节奏。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: minimax-h3-15-second-experimental-anime-fashion-film-401628f272b2
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/minimax-h3-15-second-experimental-anime-fashion-film-401628f272b2.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 黄幕舞者的霓彩残影
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/minimax-h3-15-second-experi
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

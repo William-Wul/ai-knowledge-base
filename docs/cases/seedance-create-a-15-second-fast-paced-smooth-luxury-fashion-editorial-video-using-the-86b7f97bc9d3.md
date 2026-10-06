@@ -3,6 +3,7 @@ title: "嫌犯照主题的时尚短片"
 description: "用角色设定图保持造型，结合嫌犯照视觉元素、表情与快速镜头制作时尚片。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-create-a-15-second-fast-paced-smooth-luxury-fashion-editorial-video-using-the-86b7f97bc9d3
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-create-a-15-second-fast-paced-smooth-luxury-fashion-editorial-video-using-the-86b7f97bc9d3.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 嫌犯照主题的时尚短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-create-a-15-second
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

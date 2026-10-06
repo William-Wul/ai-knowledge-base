@@ -3,6 +3,7 @@ title: "飞踢衔接午夜机车场景"
 description: "以鞋子撞击瞬间作为剪辑点，把卧室动作自然接到夜间机车画面。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-bedroom-chaos-turns-into-midnight-confidence-with-a-seamless-transition-that-hi-641d5d0012fa
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-bedroom-chaos-turns-into-midnight-confidence-with-a-seamless-transition-that-hi-641d5d0012fa.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 飞踢衔接午夜机车场景
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-bedroom-chaos-turn
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

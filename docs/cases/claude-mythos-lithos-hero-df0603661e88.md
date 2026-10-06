@@ -3,6 +3,7 @@ title: "地质品牌的纹理首页"
 description: "用地质纹理、品牌标题与留白，组织自然材料主题的首页。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: claude-mythos-lithos-hero-df0603661e88
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/claude-mythos-lithos-hero-df0603661e88.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 地质品牌的纹理首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/claude-mythos-lithos-hero-d
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

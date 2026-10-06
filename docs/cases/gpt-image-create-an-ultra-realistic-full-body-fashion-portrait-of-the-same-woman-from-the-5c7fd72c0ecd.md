@@ -3,6 +3,7 @@ title: "金色水岸的米白西装肖像"
 description: "保持参考人物身份，用米白西装、水岸和金色光线组织全身时尚肖像。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-create-an-ultra-realistic-full-body-fashion-portrait-of-the-same-woman-from-the-5c7fd72c0ecd
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-create-an-ultra-realistic-full-body-fashion-portrait-of-the-same-woman-from-the-5c7fd72c0ecd.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 金色水岸的米白西装肖像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-create-an-ultra-r
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

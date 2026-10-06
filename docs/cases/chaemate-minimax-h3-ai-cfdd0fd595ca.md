@@ -3,6 +3,7 @@ title: "粉彩图形中的情侣亮相"
 description: "用柔和色块、文字和双人动作制作人物介绍短片，保持两位角色的辨识度。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: chaemate-minimax-h3-ai-cfdd0fd595ca
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/chaemate-minimax-h3-ai-cfdd0fd595ca.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 粉彩图形中的情侣亮相
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/chaemate-minimax-h3-ai-cfdd
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

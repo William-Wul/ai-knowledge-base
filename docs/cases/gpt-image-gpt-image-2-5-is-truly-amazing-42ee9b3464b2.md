@@ -3,6 +3,7 @@ title: "同一人物的一天照片相册"
 description: "用手机相册式布局呈现同一人物从早到晚的照片，练习跨场景身份一致性。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-gpt-image-2-5-is-truly-amazing-42ee9b3464b2
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-gpt-image-2-5-is-truly-amazing-42ee9b3464b2.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 同一人物的一天照片相册
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-gpt-image-2-5-is-
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

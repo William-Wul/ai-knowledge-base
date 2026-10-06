@@ -3,6 +3,7 @@ title: "制作玻璃质感的产品首页"
 description: "浅色背景、透明导航和动态玻璃球，学习一张产品首页的视觉搭配。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: taskly
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/taskly.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 制作玻璃质感的产品首页
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/taskly.json'
 - 整理日期：2026-09-22
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

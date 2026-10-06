@@ -3,6 +3,7 @@ title: "人物照片与纸雕场景海报"
 description: "把真实人物照片与同场景纸雕放在上下两部分，练习材质转换与构图对应。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-create-a-premium-4-5-editorial-poster-using-the-provided-photograph-of-person-f45e4413a485
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-create-a-premium-4-5-editorial-poster-using-the-provided-photograph-of-person-f45e4413a485.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 人物照片与纸雕场景海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-create-a-premium-
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

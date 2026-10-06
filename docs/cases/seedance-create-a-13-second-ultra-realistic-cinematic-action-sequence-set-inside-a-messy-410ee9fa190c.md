@@ -3,6 +3,7 @@ title: "公寓近身格斗的镜头编排"
 description: "以凌乱公寓为固定场景，用环境、人物距离和镜头变化组织十三秒动作段落。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-create-a-13-second-ultra-realistic-cinematic-action-sequence-set-inside-a-messy-410ee9fa190c
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-create-a-13-second-ultra-realistic-cinematic-action-sequence-set-inside-a-messy-410ee9fa190c.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 公寓近身格斗的镜头编排
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-create-a-13-second
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

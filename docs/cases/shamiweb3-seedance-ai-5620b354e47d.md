@@ -3,6 +3,7 @@ title: "加州落日海滨香水广告"
 description: "以香水瓶为主角，用海滨落日、丝绸与闪光组织产品广告镜头。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: shamiweb3-seedance-ai-5620b354e47d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/shamiweb3-seedance-ai-5620b354e47d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 加州落日海滨香水广告
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/shamiweb3-seedance-ai-5620b
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

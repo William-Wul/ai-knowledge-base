@@ -3,6 +3,7 @@ title: "奇幻涂鸦艺术自拍"
 description: "一个将写实低角度自拍与趣味手绘涂鸦艺术及吉卜力工作室美学相结合的创意提示词。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-346fdb4f9c0f
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-346fdb4f9c0f.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 奇幻涂鸦艺术自拍
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-346fdb4f9c0f.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

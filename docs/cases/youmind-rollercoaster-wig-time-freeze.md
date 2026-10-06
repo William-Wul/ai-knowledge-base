@@ -3,6 +3,7 @@ title: "过山车假发冻结与倒放短片"
 description: "让飞起的假发定格、倒放，再接一个收尾动作，练习物体运动与时间变化。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: youmind-rollercoaster-wig-time-freeze
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/youmind-rollercoaster-wig-time-freeze.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 过山车假发冻结与倒放短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/youmind-rollercoaster-wig-t
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

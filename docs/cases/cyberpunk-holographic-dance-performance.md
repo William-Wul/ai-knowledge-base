@@ -3,6 +3,7 @@ title: "赛博朋克全息舞蹈表演"
 description: "一段复杂的视频提示词：在现代房间中呈现富有节奏感的手部与身体舞蹈，并加入交互式全息几何框架，以及现实世界与霓虹赛博朋克世界之间的无缝转场。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: cyberpunk-holographic-dance-performance
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/cyberpunk-holographic-dance-performance.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 赛博朋克全息舞蹈表演
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/cyberpunk-holographic-dance
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

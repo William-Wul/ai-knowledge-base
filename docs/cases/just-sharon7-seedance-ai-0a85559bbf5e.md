@@ -3,6 +3,7 @@ title: "酒店深夜关东煮试吃短片"
 description: "用人物参考图固定外观，再安排展示食物、品尝和说话，练习产品与人物互动。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: just-sharon7-seedance-ai-0a85559bbf5e
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/just-sharon7-seedance-ai-0a85559bbf5e.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 酒店深夜关东煮试吃短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/just-sharon7-seedance-ai-0a
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

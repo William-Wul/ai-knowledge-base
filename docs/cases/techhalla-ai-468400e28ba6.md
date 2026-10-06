@@ -3,6 +3,7 @@ title: "剪纸风格的特洛伊故事短片"
 description: "用剪纸人物和分层场景讲述特洛伊题材故事，练习材质、镜头与叙事节奏。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: techhalla-ai-468400e28ba6
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/techhalla-ai-468400e28ba6.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 剪纸风格的特洛伊故事短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/techhalla-ai-468400e28ba6.j
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

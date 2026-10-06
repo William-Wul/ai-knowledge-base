@@ -3,6 +3,7 @@ title: "视频背景与联系表单页面"
 description: "在全屏视频上放置项目联系表单，练习多选服务和提交反馈；原例只模拟提交。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: build-with-us
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/build-with-us.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 视频背景与联系表单页面
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/build-with-us.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

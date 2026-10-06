@@ -3,6 +3,7 @@ title: "第一视角情侣互动短片"
 description: "以手持手机视角记录两人的小动作和对话，减少夸张表情，突出自然反应。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: liyue-ai-seedance-ai-dd263958ed42
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/liyue-ai-seedance-ai-dd263958ed42.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 第一视角情侣互动短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/liyue-ai-seedance-ai-dd2639
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

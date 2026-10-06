@@ -3,6 +3,7 @@ title: "电梯里的人物与爱犬合影"
 description: "用电梯反光、人物服装和爱犬的站位组织合影，练习多人或多主体构图。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-daf11fde350e
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-daf11fde350e.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 电梯里的人物与爱犬合影
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-daf11fde350e.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

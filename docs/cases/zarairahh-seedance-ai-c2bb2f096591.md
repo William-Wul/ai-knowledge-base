@@ -3,6 +3,7 @@ title: "古堡吸血鬼爱情预告片"
 description: "用人物与城堡两组参考素材组织三十秒预告，保持角色身份和环境风格一致。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: zarairahh-seedance-ai-c2bb2f096591
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/zarairahh-seedance-ai-c2bb2f096591.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 古堡吸血鬼爱情预告片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/zarairahh-seedance-ai-c2bb2
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

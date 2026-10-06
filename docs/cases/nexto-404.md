@@ -3,6 +3,7 @@ title: "飞碟主题的网页错误页"
 description: "通过飞碟插画、简洁提示和返回入口，设计友好的页面缺失提示。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: nexto-404
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/nexto-404.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 飞碟主题的网页错误页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/nexto-404.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "复古发明专利档案图"
 description: "将发明画成带技术图纸、手写注释、印章和旧纸纹理的档案，练习信息与材质的组合。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-f38cf80fed06
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-f38cf80fed06.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 复古发明专利档案图
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-f38cf80fed06.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

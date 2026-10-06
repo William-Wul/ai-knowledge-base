@@ -3,6 +3,7 @@ title: "把手绘草图变成产品网页"
 description: "从手绘布局草图出发，将结构、文案和样式要求交给 AI 编程工具。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: nano-banana-saas-2a600998d9b0
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/nano-banana-saas-2a600998d9b0.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 把手绘草图变成产品网页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/nano-banana-saas-2a600998d9
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

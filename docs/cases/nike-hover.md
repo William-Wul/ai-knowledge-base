@@ -3,6 +3,7 @@ title: "运动品牌的悬停交互网页"
 description: "用鼠标悬停切换视觉效果，并分别规定电脑和手机的交互方式。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: nike-hover
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/nike-hover.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 运动品牌的悬停交互网页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/nike-hover.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

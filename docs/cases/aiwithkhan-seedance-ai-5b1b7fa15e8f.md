@@ -3,6 +3,7 @@ title: "首尔旧巷的清晨录像"
 description: "用居家与巷道里的日常动作营造清晨氛围，练习生活录像的连续镜头。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: aiwithkhan-seedance-ai-5b1b7fa15e8f
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/aiwithkhan-seedance-ai-5b1b7fa15e8f.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 首尔旧巷的清晨录像
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/aiwithkhan-seedance-ai-5b1b
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

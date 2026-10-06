@@ -3,6 +3,7 @@ title: "手绘咖啡馆品牌标志"
 description: "用儿童涂鸦般的线条与文字设计咖啡馆标志，练习简单图形的识别度。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: ai-logo-mame-cafe-2b73b3d79947
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/ai-logo-mame-cafe-2b73b3d79947.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 手绘咖啡馆品牌标志
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/ai-logo-mame-cafe-2b73b3d79
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

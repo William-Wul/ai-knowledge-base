@@ -3,6 +3,7 @@ title: "翼装跳伞的连续跟拍短片"
 description: "Seedance 2.5 生成的悬崖翼装跳伞一镜到底视频，角色跳崖开伞后贴海面高速穿梭躲避多艘游艇，落地脱装后走向摊位咬下一口热狗收尾。全程锁定角色参考图身形面部，用连续跟拍串联跳跃与降落。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-2-5-f1696dad13bc
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-2-5-f1696dad13bc.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 翼装跳伞的连续跟拍短片
 
@@ -55,4 +59,4 @@ Seedance 2.5 生成的悬崖翼装跳伞一镜到底视频，角色跳崖开伞�
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

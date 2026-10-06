@@ -3,6 +3,7 @@ title: "御剑修仙者与巨兽对战"
 description: "将御剑、施法和封印拆成分镜，并安排配乐节奏，练习大场景中的动作衔接。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: 3d-cg-seedance-2-5-2453b4b4307a
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/3d-cg-seedance-2-5-2453b4b4307a.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 御剑修仙者与巨兽对战
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/3d-cg-seedance-2-5-2453b4b4
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

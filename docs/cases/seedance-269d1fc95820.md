@@ -3,6 +3,7 @@ title: "屋顶弹跳的奇幻特技短片"
 description: "把助跑、下落、回弹和回到屋顶写成闭环动作，练习连续镜头中的空间位置。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-269d1fc95820
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-269d1fc95820.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 屋顶弹跳的奇幻特技短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-269d1fc95820.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

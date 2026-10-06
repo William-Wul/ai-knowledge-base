@@ -3,6 +3,7 @@ title: "从起床到遛狗的晨间短片"
 description: "按起床、冲咖啡、出门遛狗安排动作，让普通日常形成有起止的小故事。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: caden-flux-seedance-ai-40fe0c7229fc
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/caden-flux-seedance-ai-40fe0c7229fc.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 从起床到遛狗的晨间短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/caden-flux-seedance-ai-40fe
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

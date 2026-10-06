@@ -3,6 +3,7 @@ title: "Lovable 邮件签名生成器"
 description: "填写个人与公司信息，生成统一样式的邮件签名，练习表单和实时预览。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: lovable-1ab5b549beb5
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/lovable-1ab5b549beb5.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # Lovable 邮件签名生成器
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/lovable-1ab5b549beb5.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

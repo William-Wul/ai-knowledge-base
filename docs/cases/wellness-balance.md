@@ -3,6 +3,7 @@ title: "健康产品的清爽首页"
 description: "保健品牌 TerraElix 的单页 首屏，React + Tailwind + Lucide 图标，健康品类的清爽视觉参考。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: wellness-balance
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/wellness-balance.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 健康产品的清爽首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/wellness-balance.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

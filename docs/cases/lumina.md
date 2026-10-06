@@ -3,6 +3,7 @@ title: "沉浸式视频背景页脚"
 description: "将品牌、导航和联系入口叠放在视频背景上，练习页面收尾区块的信息组织。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: lumina
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/lumina.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 沉浸式视频背景页脚
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/lumina.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

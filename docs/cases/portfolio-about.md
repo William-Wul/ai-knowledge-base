@@ -3,6 +3,7 @@ title: "个人网站的自我介绍区块"
 description: "把照片、自我介绍和联系入口组合成深色页面区块，练习个人信息的层次与动效。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: portfolio-about
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/portfolio-about.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 个人网站的自我介绍区块
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/portfolio-about.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

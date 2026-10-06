@@ -3,6 +3,7 @@ title: "徒步者与猕猴的歪头较量"
 description: "徒步者与猕猴互相歪头回应，用连续反应和停顿制造幽默。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: synthesarah-seedance-ai-636eef3e35c4
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/synthesarah-seedance-ai-636eef3e35c4.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 徒步者与猕猴的歪头较量
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/synthesarah-seedance-ai-636
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

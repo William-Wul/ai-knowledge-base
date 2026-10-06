@@ -3,6 +3,7 @@ title: "固定俯拍下的秋日换装"
 description: "保持九十度俯拍机位，用吊扇掠影和服装变化制造转场，固定人物位置。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-create-a-15-second-ultra-realistic-vertical-9-16-fashion-film-shot-entirely-fr-8a5224b777f2
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-create-a-15-second-ultra-realistic-vertical-9-16-fashion-film-shot-entirely-fr-8a5224b777f2.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 固定俯拍下的秋日换装
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-create-a-15-second
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

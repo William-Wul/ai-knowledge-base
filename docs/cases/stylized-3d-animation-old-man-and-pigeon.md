@@ -3,6 +3,7 @@ title: "风格化 3D 动画：老人和鸽子"
 description: "一个温馨可爱的 3D 动画提示词，讲述一位古怪老人和一只淘气鸽子在阳台上共同经历的滑稽又甜蜜的时刻。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: stylized-3d-animation-old-man-and-pigeon
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/stylized-3d-animation-old-man-and-pigeon.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 风格化 3D 动画：老人和鸽子
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/stylized-3d-animation-old-m
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

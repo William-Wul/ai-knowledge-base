@@ -3,6 +3,7 @@ title: "人物与夸张涂鸦影子"
 description: "保留参考人物和服装，让身旁影子变成夸张涂鸦，练习写实与手绘的对照。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-use-the-uploaded-reference-image-as-the-strict-identity-and-outfit-reference-c2f95e70c78c
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-use-the-uploaded-reference-image-as-the-strict-identity-and-outfit-reference-c2f95e70c78c.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 人物与夸张涂鸦影子
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-use-the-uploaded-
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "夕阳下的现代住宅巡游"
 description: "用连续的空间展示镜头串联室内与建筑外观，练习光线一致性与镜头路线。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: minimax-h3-a-cinematic-tour-of-modern-luxury-and-timeless-elegance-ae0f321207bf
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/minimax-h3-a-cinematic-tour-of-modern-luxury-and-timeless-elegance-ae0f321207bf.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 夕阳下的现代住宅巡游
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/minimax-h3-a-cinematic-tour
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "薄荷双丸子头角色出场动画"
 description: "围绕角色参考图安排特写、动作与舞台光线，练习游戏角色登场片的统一视觉。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: just-sharon7-minimax-h3-ai-1e358dbc78af
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/just-sharon7-minimax-h3-ai-1e358dbc78af.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 薄荷双丸子头角色出场动画
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/just-sharon7-minimax-h3-ai-
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "竹制玩具触发汽车变形短片"
 description: "用手持视角表现玩具、人物反应和汽车变形，练习复杂变化的动作先后关系。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: bamboo-toy-car-transformation-vlog
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/bamboo-toy-car-transformation-vlog.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 竹制玩具触发汽车变形短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/bamboo-toy-car-transformati
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

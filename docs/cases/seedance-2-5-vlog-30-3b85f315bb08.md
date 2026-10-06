@@ -3,6 +3,7 @@ title: "三种机位的骑行日记"
 description: "将运动相机、手机前摄与跟拍画面按时间组合，练习在提示词中安排剪辑顺序。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-2-5-vlog-30-3b85f315bb08
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-2-5-vlog-30-3b85f315bb08.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 三种机位的骑行日记
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-2-5-vlog-30-3b85f3
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

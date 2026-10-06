@@ -3,6 +3,7 @@ title: "数字员工产品的视频背景首页"
 description: "用全屏视频、半透明导航和简洁标题，介绍可以处理任务的数字员工产品。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: agent-grove
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/agent-grove.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 数字员工产品的视频背景首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/agent-grove.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

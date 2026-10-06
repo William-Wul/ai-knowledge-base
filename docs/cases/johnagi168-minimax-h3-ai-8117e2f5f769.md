@@ -3,6 +3,7 @@ title: "酒店浴袍抛鞋变装"
 description: "用抛起的高跟鞋作为转场线索，将酒店浴袍造型衔接到礼服造型。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: johnagi168-minimax-h3-ai-8117e2f5f769
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/johnagi168-minimax-h3-ai-8117e2f5f769.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 酒店浴袍抛鞋变装
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/johnagi168-minimax-h3-ai-81
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

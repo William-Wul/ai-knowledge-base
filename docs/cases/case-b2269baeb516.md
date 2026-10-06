@@ -3,6 +3,7 @@ title: "夏日缘侧肖像"
 description: "这是一份纪录片风格的提示词，用于生成一张写实肖像，描绘一个人坐在传统日本民居夏日缘侧上的场景。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-b2269baeb516
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-b2269baeb516.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 夏日缘侧肖像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-b2269baeb516.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

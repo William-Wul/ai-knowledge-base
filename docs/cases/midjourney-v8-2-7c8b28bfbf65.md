@@ -3,6 +3,7 @@ title: "云海中的仙侠圆台概念图"
 description: "用巨型白玉圆台、云海与人物背影形成尺度对比，练习东方幻想场景的构图。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: midjourney-v8-2-7c8b28bfbf65
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/midjourney-v8-2-7c8b28bfbf65.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 云海中的仙侠圆台概念图
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/midjourney-v8-2-7c8b28bfbf6
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

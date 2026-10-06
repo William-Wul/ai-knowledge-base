@@ -3,6 +3,7 @@ title: "极简主义蓝色香水广告"
 description: "一个专业的极简主义产品广告提示词，展示了一款带有贝壳状瓶盖的天蓝色香水瓶，具有优雅的扭曲效果和花卉背景。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-5182e7e62bbb
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-5182e7e62bbb.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 极简主义蓝色香水广告
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-5182e7e62bbb.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

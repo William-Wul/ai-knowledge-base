@@ -3,6 +3,7 @@ title: "海岸人物与远方骏马"
 description: "保持参考人物身份，将黑裙、海浪和远处马匹组织成有纵深的时尚肖像。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: nano-banana-use-the-uploaded-image-as-the-master-reference-for-the-woman-257bb64f8d8d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/nano-banana-use-the-uploaded-image-as-the-master-reference-for-the-woman-257bb64f8d8d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 海岸人物与远方骏马
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/nano-banana-use-the-uploade
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

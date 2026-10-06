@@ -3,6 +3,7 @@ title: "餐厅里时间冻结又恢复"
 description: "先建立餐厅碰撞动作，再让角色穿行于悬停物体之间，最后衔接回正常运动。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: 90s-diner-time-freeze-effect
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/90s-diner-time-freeze-effect.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 餐厅里时间冻结又恢复
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/90s-diner-time-freeze-effec
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

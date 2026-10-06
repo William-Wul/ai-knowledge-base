@@ -3,6 +3,7 @@ title: "用动态背景做品牌展示页"
 description: "一段背景视频、简洁文案与展开导航，组成完整的首屏。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: rare-gallery
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/rare-gallery.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 用动态背景做品牌展示页
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/rare-gallery.json'
 - 整理日期：2026-09-22
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

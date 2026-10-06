@@ -3,6 +3,7 @@ title: "黑色材质与轮廓光提示词模板"
 description: "先用文字模型整理主体、深色材质和光线关系，再把生成的提示词用于制作图片。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: blackglass-ascendant-c88bb05a4db7
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/blackglass-ascendant-c88bb05a4db7.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 黑色材质与轮廓光提示词模板
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/blackglass-ascendant-c88bb0
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

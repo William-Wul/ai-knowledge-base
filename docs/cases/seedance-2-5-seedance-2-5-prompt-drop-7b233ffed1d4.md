@@ -3,6 +3,7 @@ title: "女剑士越过画面黑边"
 description: "固定上下黑边，让剑和人物局部跨越画框，学习前后图层关系与动作配合。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-2-5-seedance-2-5-prompt-drop-7b233ffed1d4
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-2-5-seedance-2-5-prompt-drop-7b233ffed1d4.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 女剑士越过画面黑边
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-2-5-seedance-2-5-p
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

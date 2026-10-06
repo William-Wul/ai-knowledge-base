@@ -3,6 +3,7 @@ title: "海岛港口微缩城市动画"
 description: "通过组装和镜头变化展示海岛港口，练习建筑细节、微缩比例与光影。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: case-8bdac964f9d4
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-8bdac964f9d4.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 海岛港口微缩城市动画
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/case-8bdac964f9d4.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

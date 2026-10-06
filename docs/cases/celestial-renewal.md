@@ -3,6 +3,7 @@ title: "美容品牌的沉浸式首页"
 description: "用全屏视频、柔和字体和滚动云层，搭建美容品牌的双屏展示页。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: celestial-renewal
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/celestial-renewal.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 美容品牌的沉浸式首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/celestial-renewal.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

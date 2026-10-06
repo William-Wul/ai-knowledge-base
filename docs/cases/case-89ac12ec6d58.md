@@ -3,6 +3,7 @@ title: "高端方便面广告项目"
 description: "一个高能量的美食广告项目提示词，专注于方便面的微距摄影和动态灯光效果。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-89ac12ec6d58
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-89ac12ec6d58.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 高端方便面广告项目
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-89ac12ec6d58.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

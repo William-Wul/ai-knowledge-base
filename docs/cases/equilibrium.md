@@ -3,6 +3,7 @@ title: "健康品牌的视频背景首页"
 description: "用视频背景与半透明导航衬托健康主题标题，练习单屏页面的视觉重点。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: equilibrium
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/equilibrium.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 健康品牌的视频背景首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/equilibrium.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

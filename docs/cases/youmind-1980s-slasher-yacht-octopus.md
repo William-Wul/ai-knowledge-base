@@ -3,6 +3,7 @@ title: "复古游艇怪物电影片段"
 description: "按秒安排角色和怪物袭击镜头，用胶片颗粒与灯光营造复古类型片效果。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: youmind-1980s-slasher-yacht-octopus
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/youmind-1980s-slasher-yacht-octopus.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 复古游艇怪物电影片段
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/youmind-1980s-slasher-yacht
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

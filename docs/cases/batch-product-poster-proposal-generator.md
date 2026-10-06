@@ -3,6 +3,7 @@ title: "一个产品生成八种海报方案"
 description: "围绕同一个产品提出八种海报方案，在保持品牌一致的前提下改变主题与角度。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: batch-product-poster-proposal-generator
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/batch-product-poster-proposal-generator.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 一个产品生成八种海报方案
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/batch-product-poster-propos
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

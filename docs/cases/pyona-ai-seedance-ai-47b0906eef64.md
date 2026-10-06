@@ -3,6 +3,7 @@ title: "夜间体育馆里的水系战斗"
 description: "锁定参考角色，在同一体育馆里安排水流特效和动作，保持场景与人物关系。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: pyona-ai-seedance-ai-47b0906eef64
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/pyona-ai-seedance-ai-47b0906eef64.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 夜间体育馆里的水系战斗
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/pyona-ai-seedance-ai-47b090
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

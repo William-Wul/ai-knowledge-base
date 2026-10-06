@@ -3,6 +3,7 @@ title: "公寓归家分镜动画"
 description: "一段基于分镜的电影感 3D 角色动画，描绘一名女性回到家中并与公寓环境互动。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: apartment-arrival-storyboard-animation
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/apartment-arrival-storyboard-animation.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 公寓归家分镜动画
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/apartment-arrival-storyboar
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

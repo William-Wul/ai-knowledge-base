@@ -3,6 +3,7 @@ title: "专业零食包装样机"
 description: "一个用于创建高分辨率包装样机的专业提示词，让您能够在逼真的袋装或盒装纹理上可视化标签和 标志，并呈现摄影棚灯光效果。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-8f44a5bc4d83
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-8f44a5bc4d83.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 专业零食包装样机
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-8f44a5bc4d83.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

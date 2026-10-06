@@ -3,6 +3,7 @@ title: "空气炸锅里的鸡腿与薯条"
 description: "从生食材到出锅摆盘安排镜头，练习烹饪过程、食物质感和声音的结合。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: lianaalane-seedance-ai-c3e78794ed16
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/lianaalane-seedance-ai-c3e78794ed16.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 空气炸锅里的鸡腿与薯条
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/lianaalane-seedance-ai-c3e7
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

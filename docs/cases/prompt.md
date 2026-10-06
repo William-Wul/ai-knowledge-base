@@ -3,6 +3,7 @@ title: "随滚动展开的时尚品牌网页"
 description: "时尚品牌 prmpt 的滚动驱动落地页，首屏之后靠滚动推进叙事，滚动阶段的编排是核心。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: prompt
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/prompt.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 随滚动展开的时尚品牌网页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/prompt.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

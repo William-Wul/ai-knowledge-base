@@ -3,6 +3,7 @@ title: "牛肉塔可的产品展示图"
 description: "把饼皮与不同食材分层排列，练习产品结构、色彩和食品质感的表达。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-4c1226bfd0d2
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-4c1226bfd0d2.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 牛肉塔可的产品展示图
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-4c1226bfd0d2.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "玫瑰香水的十格广告分镜"
 description: "先用十格故事板安排花瓣、瓶身和光线，再按画面顺序组织香水广告镜头。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: gpt-image-gpt-image-2-5-gemini-omni-flash-1-1-895e8cd2f548
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-gpt-image-2-5-gemini-omni-flash-1-1-895e8cd2f548.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 玫瑰香水的十格广告分镜
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-gpt-image-2-5-gem
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

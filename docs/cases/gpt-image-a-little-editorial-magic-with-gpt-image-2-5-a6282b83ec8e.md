@@ -3,6 +3,7 @@ title: "照片与手工纸艺对照海报"
 description: "上方保留原照片，下方重构为纸艺场景，练习在材质变化中维持人物与环境关系。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-a-little-editorial-magic-with-gpt-image-2-5-a6282b83ec8e
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-a-little-editorial-magic-with-gpt-image-2-5-a6282b83ec8e.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 照片与手工纸艺对照海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-a-little-editoria
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

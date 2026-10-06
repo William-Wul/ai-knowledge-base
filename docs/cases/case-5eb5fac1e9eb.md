@@ -3,6 +3,7 @@ title: "科幻书籍电影感立体模型"
 description: "创作一个照片级逼真的电影感立体模型，展现一个从打开的书本中物理浮现出的科幻世界，包含微缩人物和 3D 排版设计。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-5eb5fac1e9eb
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-5eb5fac1e9eb.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 科幻书籍电影感立体模型
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-5eb5fac1e9eb.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

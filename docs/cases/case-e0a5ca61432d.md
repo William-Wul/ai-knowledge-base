@@ -3,6 +3,7 @@ title: "复古粉彩涂鸦拼贴海报"
 description: "将照片与粉彩涂鸦、纸张纹理结合，练习同一主题的照片和手绘表达。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-e0a5ca61432d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-e0a5ca61432d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 复古粉彩涂鸦拼贴海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-e0a5ca61432d.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

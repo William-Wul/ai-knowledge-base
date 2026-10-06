@@ -3,6 +3,7 @@ title: "三只小猫的咖啡馆标志"
 description: "用三只小猫和手绘文字组成咖啡馆标志，练习简洁轮廓与品牌名称的搭配。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: ai-logo-triple-cat-7eac3df5199d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/ai-logo-triple-cat-7eac3df5199d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 三只小猫的咖啡馆标志
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/ai-logo-triple-cat-7eac3df5
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

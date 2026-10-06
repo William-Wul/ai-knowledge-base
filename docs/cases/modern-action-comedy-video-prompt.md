@@ -3,6 +3,7 @@ title: "追打与闪避的动作喜剧"
 description: "用连续追击、闪避和短促反应安排喜剧节奏，明确每次靠近与拉开的镜头路径。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: modern-action-comedy-video-prompt
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/modern-action-comedy-video-prompt.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 追打与闪避的动作喜剧
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/modern-action-comedy-video-
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

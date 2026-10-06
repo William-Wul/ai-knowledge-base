@@ -3,6 +3,7 @@ title: "高中初恋故事短片"
 description: "用角色参考图、对白和分段镜头组织一分钟校园故事，练习跨镜头的人物一致性。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: caden-flux-seedance-ai-8ffb5f062951
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/caden-flux-seedance-ai-8ffb5f062951.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 高中初恋故事短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/caden-flux-seedance-ai-8ffb
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

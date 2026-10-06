@@ -3,6 +3,7 @@ title: "创意工作室的红色首页"
 description: "用醒目的红色背景、大标题和视频素材组织工作室首页，突出主要行动入口。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: bold-studio
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/bold-studio.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 创意工作室的红色首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/bold-studio.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

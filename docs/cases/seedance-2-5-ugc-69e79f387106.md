@@ -3,6 +3,7 @@ title: "太阳镜开箱与试戴口播"
 description: "用固定的人物和产品参考组织开箱、试戴与细节展示，练习口播和动作同步。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-2-5-ugc-69e79f387106
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-2-5-ugc-69e79f387106.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 太阳镜开箱与试戴口播
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-2-5-ugc-69e79f3871
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "像素特效串起连续换装"
 description: "用像素化过渡连接多套服装，分别规定过渡效果和每套造型需要保留的细节。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: just-sharon7-seedance-ai-0109d7f993a1
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/just-sharon7-seedance-ai-0109d7f993a1.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 像素特效串起连续换装
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/just-sharon7-seedance-ai-01
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

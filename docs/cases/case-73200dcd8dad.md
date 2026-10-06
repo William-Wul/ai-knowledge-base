@@ -3,6 +3,7 @@ title: "随手拍风格的手机人像"
 description: "用低对比度、自然光和细小瑕疵模拟日常抓拍，减少过度修饰的观感。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-73200dcd8dad
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-73200dcd8dad.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 随手拍风格的手机人像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-73200dcd8dad.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

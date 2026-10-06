@@ -3,6 +3,7 @@ title: "业务分析产品的介绍首页"
 description: "用问题导向的标题、山形视觉和按钮展示产品，练习按明确规格控制单屏布局。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: growth-decisions
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/growth-decisions.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 业务分析产品的介绍首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/growth-decisions.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

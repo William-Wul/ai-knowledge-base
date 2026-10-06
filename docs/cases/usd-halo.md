@@ -3,6 +3,7 @@ title: "金融品牌的留白与排版"
 description: "稳定币产品 Halo 的金融风落地页，React + TypeScript + Tailwind，金融科技 质感靠排版和留白压出来。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: usd-halo
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/usd-halo.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 金融品牌的留白与排版
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/usd-halo.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "手机旅行合影"
 description: "以景点为背景安排人物、自然光和随手拍构图，练习真实旅行照片的观感。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-a2c26da9cdc5
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-a2c26da9cdc5.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 手机旅行合影
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-a2c26da9cdc5.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

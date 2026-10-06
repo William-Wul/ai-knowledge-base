@@ -3,6 +3,7 @@ title: "部落奇幻女战士与猫头鹰肖像"
 description: "一个高细节的奇幻提示词，用于描绘神秘森林背景下，部落女战士与巨型雄伟猫头鹰的肖像。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-dd0e6108eade
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-dd0e6108eade.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 部落奇幻女战士与猫头鹰肖像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-dd0e6108eade.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

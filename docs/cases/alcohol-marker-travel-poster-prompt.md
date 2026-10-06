@@ -3,6 +3,7 @@ title: "马克笔手绘旅行海报"
 description: "一份用于生成竖版旅行海报的综合提示词，采用中世纪现代风格的 Alcohol Marker 美学，并支持自定义城市名称和地标。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: alcohol-marker-travel-poster-prompt
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/alcohol-marker-travel-poster-prompt.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 马克笔手绘旅行海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/alcohol-marker-travel-poste
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

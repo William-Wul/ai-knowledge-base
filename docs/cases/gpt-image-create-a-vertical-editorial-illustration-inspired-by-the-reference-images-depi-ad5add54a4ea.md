@@ -3,6 +3,7 @@ title: "靛蓝线描的日本街巷"
 description: "用深蓝与象牙白绘制密集街景，练习线条粗细、建筑层次和有限配色。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-create-a-vertical-editorial-illustration-inspired-by-the-reference-images-depi-ad5add54a4ea
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-create-a-vertical-editorial-illustration-inspired-by-the-reference-images-depi-ad5add54a4ea.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 靛蓝线描的日本街巷
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-create-a-vertical
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

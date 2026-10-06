@@ -3,6 +3,7 @@ title: "等轴测微缩模型海报"
 description: "一个创意提示词，可将照片主体转化为精致的等轴测微缩模型或沙盘雕塑，并以精选艺术品的形式呈现在纸质背景上。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-f707dbeeade9
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-f707dbeeade9.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 等轴测微缩模型海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-f707dbeeade9.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

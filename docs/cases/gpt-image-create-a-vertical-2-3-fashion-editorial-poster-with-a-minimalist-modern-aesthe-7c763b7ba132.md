@@ -3,6 +3,7 @@ title: "橙色宽檐帽人物海报"
 description: "以白底和橙色竖向色块衬托人物，练习人物与几何背景的组合。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-create-a-vertical-2-3-fashion-editorial-poster-with-a-minimalist-modern-aesthe-7c763b7ba132
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-create-a-vertical-2-3-fashion-editorial-poster-with-a-minimalist-modern-aesthe-7c763b7ba132.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 橙色宽檐帽人物海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-create-a-vertical
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

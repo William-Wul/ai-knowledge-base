@@ -3,6 +3,7 @@ title: "日程应用的舒缓风格首页"
 description: "围绕日程应用组织产品介绍和使用入口，用留白与柔和视觉降低阅读负担。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: adhd-planner
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/adhd-planner.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 日程应用的舒缓风格首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/adhd-planner.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

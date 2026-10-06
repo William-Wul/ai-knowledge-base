@@ -3,6 +3,7 @@ title: "产品优势说明区块"
 description: "将产品优势围绕中心图形排布，用简洁的标题和短句说明每项价值。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: guardnet-benefits
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/guardnet-benefits.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 产品优势说明区块
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/guardnet-benefits.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

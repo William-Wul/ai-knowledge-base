@@ -3,6 +3,7 @@ title: "奶昔广告的八格分镜"
 description: "一个用于生成皮克斯风格奶昔商业广告信息图故事板的详细提示词，具有鲜艳的色彩和 3D 渲染效果。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: case-749c98da9b7d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-749c98da9b7d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 奶昔广告的八格分镜
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/case-749c98da9b7d.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

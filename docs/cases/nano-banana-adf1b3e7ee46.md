@@ -3,6 +3,7 @@ title: "保持人脸不变，重做棚拍光线"
 description: "作者用 Nano Banana 对上传照片做商业人像修饰，核心工作流是固定面部身份与比例，只重建柔和棚拍布光、纯白背景和自然皮肤质感，并明确列出禁止变脸的负向约束。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: nano-banana-adf1b3e7ee46
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/nano-banana-adf1b3e7ee46.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 保持人脸不变，重做棚拍光线
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/nano-banana-adf1b3e7ee46.js
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

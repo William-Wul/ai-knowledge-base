@@ -3,6 +3,7 @@ title: "用图片与视频搭建营销网页"
 description: "将图片、视频素材与建站要求组合，完成有动态效果的品牌展示网页。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: gpt-image-2-veo-3-lovable-cec7a074af1a
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-2-veo-3-lovable-cec7a074af1a.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 用图片与视频搭建营销网页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-2-veo-3-lovable-c
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

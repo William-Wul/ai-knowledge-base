@@ -3,6 +3,7 @@ title: "带动画的放射状信息图网页"
 description: "品牌方法论的放射状图解区块，React + TypeScript + Framer Motion，信息图和网页动效的结合。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: radial-diagram
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/radial-diagram.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 带动画的放射状信息图网页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/radial-diagram.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

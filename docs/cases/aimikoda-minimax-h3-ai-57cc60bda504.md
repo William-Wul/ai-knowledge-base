@@ -3,6 +3,7 @@ title: "油画颜料流动组成城市"
 description: "让厚重颜料在微距镜头中逐步构成城市地标，可替换城市名与指定短句。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: aimikoda-minimax-h3-ai-57cc60bda504
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/aimikoda-minimax-h3-ai-57cc60bda504.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 油画颜料流动组成城市
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/aimikoda-minimax-h3-ai-57cc
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

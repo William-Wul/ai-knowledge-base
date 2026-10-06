@@ -3,6 +3,7 @@ title: "蓝皮街头角色的动态片头"
 description: "固定角色外观，以图形、文字和运动节奏逐层呈现人物特点，适合片头设计练习。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: aiwithaliya-minimax-h3-ai-56501d37ff1f
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/aiwithaliya-minimax-h3-ai-56501d37ff1f.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 蓝皮街头角色的动态片头
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/aiwithaliya-minimax-h3-ai-5
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

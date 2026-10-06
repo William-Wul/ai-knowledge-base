@@ -3,6 +3,7 @@ title: "全息竞技场的双刃对决"
 description: "用青色和金色区分两名角色，练习连续动作、空间关系和能量特效的配合。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-cinematic-high-end-3d-anime-action-30-seconds-24fps-ultra-sharp-no-watermar-cdb929885bab
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-cinematic-high-end-3d-anime-action-30-seconds-24fps-ultra-sharp-no-watermar-cdb929885bab.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 全息竞技场的双刃对决
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-cinematic-high-end
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

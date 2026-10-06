@@ -3,6 +3,7 @@ title: "高端极简矢量旅行海报"
 description: "一份全面的提示词，用于创作精致、极简的扁平矢量旅行海报，捕捉城市独特的视觉特征，包括地标、生活瞬间和当地交通工具。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-aa3e3c074ac1
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-aa3e3c074ac1.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 高端极简矢量旅行海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-aa3e3c074ac1.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

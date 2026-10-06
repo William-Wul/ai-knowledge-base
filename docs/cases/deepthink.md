@@ -3,6 +3,7 @@ title: "智能分析产品的双区块页面"
 description: "将介绍与产品界面分成上下两个深色区块，练习只用基础网页代码完成布局。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: deepthink
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/deepthink.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 智能分析产品的双区块页面
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/deepthink.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

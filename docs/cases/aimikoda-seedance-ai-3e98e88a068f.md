@@ -3,6 +3,7 @@ title: "机器人与机械狗的飞行梦想"
 description: "用四张参考图固定伙伴和工厂场景，通过观察、装扮和尝试表现克制的情绪变化。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: aimikoda-seedance-ai-3e98e88a068f
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/aimikoda-seedance-ai-3e98e88a068f.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 机器人与机械狗的飞行梦想
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/aimikoda-seedance-ai-3e98e8
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

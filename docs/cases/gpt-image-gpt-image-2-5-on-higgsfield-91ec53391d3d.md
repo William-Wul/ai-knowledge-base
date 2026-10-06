@@ -3,6 +3,7 @@ title: "东京街头与复古摩托旅行海报"
 description: "higgsfield 上的 GPT image 2.5。提示词：创作一张受上传参考图启发的高级编辑风插画旅行海报。保持整体构图……"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-gpt-image-2-5-on-higgsfield-91ec53391d3d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-gpt-image-2-5-on-higgsfield-91ec53391d3d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 东京街头与复古摩托旅行海报
 
@@ -54,4 +58,4 @@ higgsfield 上的 GPT image 2.5。提示词：创作一张受上传参考图启�
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

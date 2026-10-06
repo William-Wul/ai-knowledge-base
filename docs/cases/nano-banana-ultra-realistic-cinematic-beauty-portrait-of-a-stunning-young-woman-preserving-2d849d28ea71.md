@@ -3,6 +3,7 @@ title: "人物表情与面具对照肖像"
 description: "让真实表情与手持面具形成反差，同时固定参考人物的面部特征。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: nano-banana-ultra-realistic-cinematic-beauty-portrait-of-a-stunning-young-woman-preserving-2d849d28ea71
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/nano-banana-ultra-realistic-cinematic-beauty-portrait-of-a-stunning-young-woman-preserving-2d849d28ea71.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 人物表情与面具对照肖像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/nano-banana-ultra-realistic
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

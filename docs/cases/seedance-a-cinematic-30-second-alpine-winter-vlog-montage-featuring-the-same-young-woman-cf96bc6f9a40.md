@@ -3,6 +3,7 @@ title: "雪山村庄的冬日度假"
 description: "围绕滑雪、村庄和室内休息安排旅行镜头，维持人物与冬季氛围一致。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-a-cinematic-30-second-alpine-winter-vlog-montage-featuring-the-same-young-woman-cf96bc6f9a40
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-a-cinematic-30-second-alpine-winter-vlog-montage-featuring-the-same-young-woman-cf96bc6f9a40.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 雪山村庄的冬日度假
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-a-cinematic-30-sec
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

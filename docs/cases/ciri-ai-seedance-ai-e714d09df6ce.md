@@ -3,6 +3,7 @@ title: "京都夏日晚归录像"
 description: "用门口、街巷和日常动作营造夏日晚归片段，练习家用摄像机的画面质感。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: ciri-ai-seedance-ai-e714d09df6ce
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/ciri-ai-seedance-ai-e714d09df6ce.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 京都夏日晚归录像
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/ciri-ai-seedance-ai-e714d09
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

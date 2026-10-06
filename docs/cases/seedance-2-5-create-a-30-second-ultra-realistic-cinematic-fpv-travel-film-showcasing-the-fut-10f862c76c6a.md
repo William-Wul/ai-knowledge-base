@@ -3,6 +3,7 @@ title: "土耳其城市与海岸的穿越旅行"
 description: "用第一视角飞行镜头连接古城、海岸与热气球天空，练习旅行蒙太奇的转场。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-2-5-create-a-30-second-ultra-realistic-cinematic-fpv-travel-film-showcasing-the-fut-10f862c76c6a
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-2-5-create-a-30-second-ultra-realistic-cinematic-fpv-travel-film-showcasing-the-fut-10f862c76c6a.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 土耳其城市与海岸的穿越旅行
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-2-5-create-a-30-se
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

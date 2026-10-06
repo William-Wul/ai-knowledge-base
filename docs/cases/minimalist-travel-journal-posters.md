@@ -3,6 +3,7 @@ title: "极简手绘旅行手账海报"
 description: "将旅行照片转成带有手绘线条和纸张质感的海报，保留地标与画面留白。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: minimalist-travel-journal-posters
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/minimalist-travel-journal-posters.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 极简手绘旅行手账海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/minimalist-travel-journal-p
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "Lumi 租房真实成本计算器"
 description: "输入租金与生活开销，比较租房的实际负担，学习小计算器的输入和结果设计。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: lumi-fcc36eede4ad
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/lumi-fcc36eede4ad.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # Lumi 租房真实成本计算器
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/lumi-fcc36eede4ad.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

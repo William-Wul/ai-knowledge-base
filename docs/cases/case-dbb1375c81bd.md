@@ -3,6 +3,7 @@ title: "照片与结构草图对照海报"
 description: "把参考对象重构为立体结构图和技术草图，练习外观、内部层次与注释的组织。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-dbb1375c81bd
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-dbb1375c81bd.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 照片与结构草图对照海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-dbb1375c81bd.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "照片流入手绘世界"
 description: "让真实照片中的物件延伸成手绘场景，练习两种画面风格之间的自然连接。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-use-the-uploaded-image-as-the-primary-reference-and-transform-it-into-a-vertica-9cedcb5ccd93
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-use-the-uploaded-image-as-the-primary-reference-and-transform-it-into-a-vertica-9cedcb5ccd93.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 照片流入手绘世界
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-use-the-uploaded-
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

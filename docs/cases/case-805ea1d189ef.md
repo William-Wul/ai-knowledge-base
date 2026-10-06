@@ -3,6 +3,7 @@ title: "动漫角色设定图生成器"
 description: "一个用于根据参考图创建标准化 2D 动漫角色设定图的综合提示词，包含正面、侧面、背面视图及设计指南。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-805ea1d189ef
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-805ea1d189ef.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 动漫角色设定图生成器
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-805ea1d189ef.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

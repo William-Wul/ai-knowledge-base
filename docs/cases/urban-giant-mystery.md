@@ -3,6 +3,7 @@ title: "都市巨人之谜"
 description: "一个精巧的提示词，用于创建照片级写实的城市场景，其中隐藏着一位融入环境的巨大人形。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: urban-giant-mystery
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/urban-giant-mystery.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 都市巨人之谜
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/urban-giant-mystery.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

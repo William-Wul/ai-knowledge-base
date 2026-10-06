@@ -3,6 +3,7 @@ title: "纽约街头接连出现的怪事"
 description: "用一个不中断的手机随拍镜头串起街头事件，明确每个事件的出现顺序。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: oggii-0-seedance-ai-137e0e907dfd
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/oggii-0-seedance-ai-137e0e907dfd.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 纽约街头接连出现的怪事
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/oggii-0-seedance-ai-137e0e9
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

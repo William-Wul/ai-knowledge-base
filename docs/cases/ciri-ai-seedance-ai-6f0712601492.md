@@ -3,6 +3,7 @@ title: "河畔野餐的计划外插曲"
 description: "先建立理想野餐画面，再加入意外和人物反应，练习日常喜剧的前后反差。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: ciri-ai-seedance-ai-6f0712601492
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/ciri-ai-seedance-ai-6f0712601492.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 河畔野餐的计划外插曲
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/ciri-ai-seedance-ai-6f07126
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

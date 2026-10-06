@@ -3,6 +3,7 @@ title: "紫色能量英雄的屋顶对决"
 description: "以参考人物固定英雄外观，通过对抗动作与能量效果组织屋顶战斗。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-cinematic-live-action-rooftop-superhero-fight-featuring-the-exact-male-hero-fro-e5adf4ac41fa
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-cinematic-live-action-rooftop-superhero-fight-featuring-the-exact-male-hero-fro-e5adf4ac41fa.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 紫色能量英雄的屋顶对决
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-cinematic-live-act
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

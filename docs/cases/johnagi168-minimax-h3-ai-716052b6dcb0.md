@@ -3,6 +3,7 @@ title: "点击菜单式换装短片"
 description: "让同一人物随屏幕选项切换服装，练习人物一致性、点击音效与换装节奏。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: johnagi168-minimax-h3-ai-716052b6dcb0
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/johnagi168-minimax-h3-ai-716052b6dcb0.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 点击菜单式换装短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/johnagi168-minimax-h3-ai-71
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

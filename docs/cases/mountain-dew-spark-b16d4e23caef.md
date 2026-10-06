@@ -3,6 +3,7 @@ title: "真人与手绘涂鸦的饮料广告"
 description: "跟着人物动作出现的闪电、星星和水果，让产品短片更有节奏。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: mountain-dew-spark-b16d4e23caef
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/mountain-dew-spark-b16d4e23caef.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 真人与手绘涂鸦的饮料广告
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/mountain-dew-spark-b16d4e23
 - 整理日期：2026-09-22
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

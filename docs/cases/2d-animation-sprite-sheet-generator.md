@@ -3,6 +3,7 @@ title: "制作角色的 16 格动作图"
 description: "把一个连续动作拆成 4 × 4 格，学习控制角色大小和位置。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: 2d-animation-sprite-sheet-generator
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/2d-animation-sprite-sheet-generator.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 制作角色的 16 格动作图
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/2d-animation-sprite-sheet-g
 - 整理日期：2026-09-22
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

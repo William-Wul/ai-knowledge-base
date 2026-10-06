@@ -3,6 +3,7 @@ title: "视频背景的深色品牌首页"
 description: "围绕动态背景排列品牌、导航和介绍文字，练习深色页面中的文字可读性。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: asme
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/asme.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 视频背景的深色品牌首页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/asme.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

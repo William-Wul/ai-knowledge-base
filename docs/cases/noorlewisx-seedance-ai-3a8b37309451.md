@@ -3,6 +3,7 @@ title: "地中海山景别墅漫游"
 description: "用室内外镜头展示别墅、庭院和泳池，练习建筑空间之间的平顺衔接。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: noorlewisx-seedance-ai-3a8b37309451
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/noorlewisx-seedance-ai-3a8b37309451.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 地中海山景别墅漫游
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/noorlewisx-seedance-ai-3a8b
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

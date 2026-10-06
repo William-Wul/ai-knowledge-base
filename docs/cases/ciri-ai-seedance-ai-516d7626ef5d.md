@@ -3,6 +3,7 @@ title: "秋日咖啡馆的小意外"
 description: "用家庭录像式镜头记录咖啡馆中的失误与反应，通过停顿和表情形成笑点。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: ciri-ai-seedance-ai-516d7626ef5d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/ciri-ai-seedance-ai-516d7626ef5d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 秋日咖啡馆的小意外
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/ciri-ai-seedance-ai-516d762
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

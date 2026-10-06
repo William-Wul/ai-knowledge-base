@@ -3,6 +3,7 @@ title: "数字员工平台介绍页"
 description: "数字员工平台 Axon 的单页 首屏，把部署数字工人这个抽象概念做成可视的首屏。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: ai-workflow-agents
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/ai-workflow-agents.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 数字员工平台介绍页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/ai-workflow-agents.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

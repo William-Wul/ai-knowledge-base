@@ -3,6 +3,7 @@ title: "汽车内的时尚人物肖像"
 description: "利用车窗、座椅和黄金时刻的光线拍摄式构图，练习环境与服装的协调。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-2a9caf78561c
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-2a9caf78561c.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 汽车内的时尚人物肖像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-2a9caf78561c.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

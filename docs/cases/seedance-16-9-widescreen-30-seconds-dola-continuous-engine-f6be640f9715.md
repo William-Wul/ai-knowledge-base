@@ -3,6 +3,7 @@ title: "餐桌甜点世界里的迷你人物"
 description: "把人物缩小到餐桌上的甜点世界，用连续动作和巨大日常物件制造比例反差。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-16-9-widescreen-30-seconds-dola-continuous-engine-f6be640f9715
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-16-9-widescreen-30-seconds-dola-continuous-engine-f6be640f9715.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 餐桌甜点世界里的迷你人物
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-16-9-widescreen-30
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

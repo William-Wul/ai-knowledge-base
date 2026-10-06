@@ -3,6 +3,7 @@ title: "GPT Image 2 + Seedance 深海惊魂战机飞行员短片"
 description: "将飞行员、战机与深海巨物组织成科幻短片，练习镜头衔接和角色一致性。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: weeleey6-seedance-ai-b03a5481e168
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/weeleey6-seedance-ai-b03a5481e168.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # GPT Image 2 + Seedance 深海惊魂战机飞行员短片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/weeleey6-seedance-ai-b03a54
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

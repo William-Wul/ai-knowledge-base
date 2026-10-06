@@ -3,6 +3,7 @@ title: "咖啡馆黑白光影肖像"
 description: "一款电影感黑白咖啡馆肖像提示词，呈现戏剧性的高对比度光影与复古胶片美学。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: moody-cafe-chiaroscuro-portrait-0d581a45e97d
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/moody-cafe-chiaroscuro-portrait-0d581a45e97d.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 咖啡馆黑白光影肖像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/moody-cafe-chiaroscuro-port
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

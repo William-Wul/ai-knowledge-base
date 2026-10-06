@@ -3,6 +3,7 @@ title: "刀匠竞技真人秀视频"
 description: "一段写实真人秀风格的视频提示词，展现一名刀匠用锻造的砍刀劈砍陶瓷地精进行测试，包含动态冲击物理效果和纪录片式 镜头运动。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: bladesmith-competition-reality-tv-video
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/bladesmith-competition-reality-tv-video.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 刀匠竞技真人秀视频
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/bladesmith-competition-real
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

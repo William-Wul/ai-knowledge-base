@@ -3,6 +3,7 @@ title: "十五秒分手场景的细微表演"
 description: "用一镜到底表现呼吸、视线和表情变化，练习情绪递进而非夸张动作。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-3b9beb9a46d4
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-3b9beb9a46d4.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 十五秒分手场景的细微表演
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-3b9beb9a46d4.json'
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

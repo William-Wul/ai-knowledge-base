@@ -3,6 +3,7 @@ title: "充满奇趣的动漫生活肖像与涂鸦阴影"
 description: "一个充满创意的动漫生活片段提示词：在黄金时刻的阳光下，女孩和猫咪的影子幻化为俏皮的手绘漫画涂鸦。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-1e27ee889af9
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-1e27ee889af9.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 充满奇趣的动漫生活肖像与涂鸦阴影
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-1e27ee889af9.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

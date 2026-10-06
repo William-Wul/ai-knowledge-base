@@ -3,6 +3,7 @@ title: "秋日都市的一天"
 description: "以公寓、地铁、公园和书店串起一天，用同一人物与自然光变化连接场景。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-a-20-year-old-east-asian-woman-spends-an-autumn-day-moving-through-a-big-city-b085b8a1bb11
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-a-20-year-old-east-asian-woman-spends-an-autumn-day-moving-through-a-big-city-b085b8a1bb11.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 秋日都市的一天
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-a-20-year-old-east
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

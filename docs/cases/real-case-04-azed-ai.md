@@ -3,6 +3,7 @@ title: "半透明玻璃水果"
 description: "把水果的形状与玻璃的透明、反光质感结合，练习材质替换而不丢失主体特征。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: real-case-04-azed-ai
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/real-case-04-azed-ai.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 半透明玻璃水果
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/real-case-04-azed-ai.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

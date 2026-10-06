@@ -3,6 +3,7 @@ title: "超级英雄服装的都市自拍"
 description: "将英雄服装与普通街头自拍视角结合，练习特殊造型与日常环境的融合。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-6e1bf0e0e1e1
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-6e1bf0e0e1e1.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 超级英雄服装的都市自拍
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-6e1bf0e0e1e1.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

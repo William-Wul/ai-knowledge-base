@@ -3,6 +3,7 @@ title: "黑暗奇幻战场人物"
 description: "用燃烧战场、服装与武器塑造人物状态，练习复杂背景中的主体突出。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: dark-fantasy-battlefield-warrior
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/dark-fantasy-battlefield-warrior.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 黑暗奇幻战场人物
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/dark-fantasy-battlefield-wa
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

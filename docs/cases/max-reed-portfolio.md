@@ -3,6 +3,7 @@ title: "个人经历与作品介绍卡片"
 description: "用多列卡片展示经历、客户评价、常用软件和联系方式，练习个人作品集排版。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: max-reed-portfolio
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/max-reed-portfolio.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 个人经历与作品介绍卡片
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/max-reed-portfolio.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

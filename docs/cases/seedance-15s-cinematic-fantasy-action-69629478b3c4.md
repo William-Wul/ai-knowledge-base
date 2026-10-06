@@ -3,6 +3,7 @@ title: "火焰长矛与石巨像的战斗"
 description: "按参考故事板顺序安排十五秒动作，明确英雄、巨像与火焰特效的相对位置。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: seedance-15s-cinematic-fantasy-action-69629478b3c4
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/seedance-15s-cinematic-fantasy-action-69629478b3c4.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 火焰长矛与石巨像的战斗
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/seedance-15s-cinematic-fant
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

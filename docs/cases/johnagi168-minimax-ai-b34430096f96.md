@@ -3,6 +3,7 @@ title: "摘眼镜触发的反差换装"
 description: "以摘眼镜作为明确动作节点，衔接日常造型与另一套服装，保持面部一致。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
+caseSlug: johnagi168-minimax-ai-b34430096f96
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/johnagi168-minimax-ai-b34430096f96.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 摘眼镜触发的反差换装
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/johnagi168-minimax-ai-b3443
 - 整理日期：2026-10-06
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="video" />
+<CaseReturn :item="item" />

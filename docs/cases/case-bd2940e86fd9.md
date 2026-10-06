@@ -3,6 +3,7 @@ title: "怀旧东亚旅行海报"
 description: "一款融合了历史悠久的河畔小镇复古胶片摄影与极简当代插画的编辑类旅行海报提示词。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-bd2940e86fd9
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-bd2940e86fd9.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 怀旧东亚旅行海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-bd2940e86fd9.json'
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

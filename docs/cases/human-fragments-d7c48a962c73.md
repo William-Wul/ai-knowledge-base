@@ -3,6 +3,7 @@ title: "用巨型文字框住人物故事"
 description: "一款为 Nano Banana Pro 设计的精致编辑海报提示词，利用超大排版作为场景窗口，展示主体执行特定任务的画面。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: human-fragments-d7c48a962c73
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/human-fragments-d7c48a962c73.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 用巨型文字框住人物故事
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/human-fragments-d7c48a962c7
 - 整理日期：2026-09-23
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

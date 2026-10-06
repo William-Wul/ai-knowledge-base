@@ -3,6 +3,7 @@ title: "网络安全产品介绍页"
 description: "用深色背景、对齐的标题与图形展示安全产品，练习信息层次和首屏布局。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: cyber-layer
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/cyber-layer.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 网络安全产品介绍页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/cyber-layer.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />

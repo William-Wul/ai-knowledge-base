@@ -3,6 +3,7 @@ title: "照片转极简机器人头像"
 description: "保留发型与标志性装饰，把人像简化为圆脸、胶囊形眼睛和少量色块。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: grok-bot-6fe064b0d0c3
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/grok-bot-6fe064b0d0c3.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 照片转极简机器人头像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/grok-bot-6fe064b0d0c3.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

@@ -3,6 +3,7 @@ title: "二十四节气主题海报"
 description: "围绕节气主题组合自然元素与竖版文字，练习多层画面空间和色彩控制。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: case-ba5c45f815a2
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/case-ba5c45f815a2.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 二十四节气主题海报
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/case-ba5c45f815a2.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

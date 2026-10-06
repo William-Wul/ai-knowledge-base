@@ -3,6 +3,7 @@ title: "黑底几何色块人物肖像"
 description: "用几何色块、简化线条与黑色背景重构人物，练习识别特征与夸张造型。"
 pageClass: case-detail-page case-category-image
 caseCategory: image
+caseSlug: gpt-image-create-a-cute-neo-expressionist-cubist-minimal-vector-portrait-illustration-of-18e9f5a87a01
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-create-a-cute-neo-expressionist-cubist-minimal-vector-portrait-illustration-of-18e9f5a87a01.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 黑底几何色块人物肖像
 
@@ -54,4 +58,4 @@ import item from '../.vitepress/data/cases-generated/gpt-image-create-a-cute-neo
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="image" />
+<CaseReturn :item="item" />

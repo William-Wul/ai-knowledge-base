@@ -3,6 +3,7 @@ title: "星球背景的网页错误页"
 description: "以地球与太空为背景，让找不到页面时的提示、返回入口和导航仍然清晰。"
 pageClass: case-detail-page case-category-web
 caseCategory: web
+caseSlug: 404-planet
 caseDetail: true
 prev: false
 next: false
@@ -12,8 +13,11 @@ next: false
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
+import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
 import item from '../.vitepress/data/cases-generated/404-planet.json'
 </script>
+
+<CaseNavigation :item="item" />
 
 # 星球背景的网页错误页
 
@@ -55,4 +59,4 @@ import item from '../.vitepress/data/cases-generated/404-planet.json'
 - 整理日期：2026-10-05
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 
-<CaseReturn category="web" />
+<CaseReturn :item="item" />
