@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,19 +29,25 @@ import item from '../.vitepress/data/cases-generated/2d-animation-sprite-sheet-g
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
-准备一张完整、清晰的角色参考图，以及支持参考图的生图工具。
+准备同一角色的参考图，选择一个连续动作，例如抬手挥两下。原文规定正方形画布、4 列 × 4 行共 16 格、白色背景，每格至少留 10 像素边距。
 
 参考工具：GPT Image 2.5。
 
 ## 怎么做
 
-1. 准备一张完整角色参考图，上传到支持参考图的生图工具。
-2. 将提示词中的动作改成挥手、走路或跳跃，生成一张 16 格图片。
-3. 依次检查每格的角色大小、脚底位置和动作衔接。生成的是图片，做成动画还需切图和播放。
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
-**值得学习的写法：** 把连续性拆成可检查的条件：相同格子、相同比例、同一条脚底基线。
+1. 把【填写动作】改成一个有明确起点和终点的动作，与角色参考图一起提交。
+2. 先数清 16 格，检查格子大小、从左到右再从上到下的顺序，以及没有网格线和文字的要求。
+3. 对齐观察各格脚底高度、角色大小和中心位置；手、头发与特效都需留在各自格子内。
+4. 按顺序查看各格姿势，找出跳动或缺少过渡的位置，再只修改对应姿势；拼成动图是本站可选的检查方式。
+
+**值得学习的写法：** 动作图既要姿势变化，也要大小与位置固定。原文在角色缩放、脚底高度和格内边距上给出了可检查的限制。
 
 ## 完整提示词
 
@@ -49,7 +55,9 @@ import item from '../.vitepress/data/cases-generated/2d-animation-sprite-sheet-g
 
 ## 改成自己的内容
 
-先用幅度小的挥手动作试一次，再尝试跳跃；观察角色是否被裁切。
+**本站练习建议：**
+
+先做挥手，再改成点头，其余 16 格规格不变。逐格记录是否有角色变大、脚底跳动或手越界，发现问题时指出格子位置。
 
 ## 作者与来源
 

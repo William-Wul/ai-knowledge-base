@@ -22,6 +22,7 @@ export const BASIC_MODULES = [
 export const TOOL_LINKS = [
   '/stage-2/doubao-guide',
   '/stage-2/marvis-guide',
+  '/stage-2/jev-play-guide',
   '/stage-2/how-to-prompt',
   '/stage-4/ppt-ai-tools',
   '/stage-5/workbuddy-guide',
@@ -50,7 +51,6 @@ export const PRACTICE_LINKS = [
   '/stage-4/multi-agent-teamwork',
   '/stage-4/ai-industry-research',
   '/stage-2/harness-diy',
-  '/stage-2/jev-play-guide',
 ]
 
 // 「AI 前沿」栏目的额外文章（物理在 stage-6 的趋势长文，按 date 与专题混排）

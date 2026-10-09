@@ -13,7 +13,7 @@ for (const entry of readdirSync(resolve(root, 'docs/cases'), { withFileTypes: tr
   const index = resolve(directory, 'index.md')
   if (!existsSync(index)) continue
   const text = readFileSync(index, 'utf8')
-  if (!text.includes('pageClass: cases-list-page') || !text.includes('<!-- 自动生成：修改 practice-cases.json / casesData.js')) continue
+  if (!text.includes('pageClass: cases-list-page') || !text.includes('<!-- 自动生成：修改 practice-cases.json')) continue
   unlinkSync(index)
   if (!readdirSync(directory).length) rmdirSync(directory)
 }
@@ -52,7 +52,7 @@ outline: false
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / casesData.js 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / casesData.js 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseLibrary from '${relative}.vitepress/theme/components/CaseLibrary.vue'
 </script>
@@ -80,7 +80,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -101,6 +101,8 @@ ${safeText(c.use)}
 
 <CaseMedia :item="item" />
 
+${c.tested !== true ? '**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。\n' : ''}
+
 ## 开始前准备
 
 ${safeText(c.preparation)}
@@ -108,6 +110,8 @@ ${safeText(c.preparation)}
 ${c.models.length ? `参考工具：${safeText(c.models.join('、'))}。` : `参考工具：${c.category === 'web' ? 'AI 编程工具' : '支持参考图的生图工具'}。`}
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 ${c.steps.map((s, i) => `${i + 1}. ${safeText(s)}`).join('\n')}
 
@@ -118,6 +122,8 @@ ${c.steps.map((s, i) => `${i + 1}. ${safeText(s)}`).join('\n')}
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 ${safeText(c.exercise)}
 

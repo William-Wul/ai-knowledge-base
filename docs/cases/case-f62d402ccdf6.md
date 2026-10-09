@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,6 +29,9 @@ import item from '../.vitepress/data/cases-generated/case-f62d402ccdf6.json'
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
 准备支持视频生成的工具，先确认可选时长、画幅和声音设置。
@@ -36,6 +39,8 @@ import item from '../.vitepress/data/cases-generated/case-f62d402ccdf6.json'
 参考工具：Seedance 2.5。
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 1. 先看视频，再阅读完整提示词，标出每段镜头的时长、主体动作和衔接位置。
 2. 替换人物、产品或场景时，同步检查全文的称呼、服装和外观描述，保持前后一致。
@@ -49,6 +54,8 @@ import item from '../.vitepress/data/cases-generated/case-f62d402ccdf6.json'
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 先保留镜头顺序，只替换一个主体或场景。若动作开始不连贯，减少同一段内的动作数量。
 

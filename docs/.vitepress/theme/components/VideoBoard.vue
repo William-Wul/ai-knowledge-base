@@ -1,5 +1,7 @@
 <template>
   <div class="video-board">
+    <p class="video-data-note">播放与收藏数据为收录时记录，非实时数据。</p>
+    <p class="learning-note">本站学习建议 · {{ VIDEO_LEARNING_NOTE }}</p>
     <section v-for="s in sections" :key="s.id" class="video-section">
       <div class="section-head">
         <h2 class="section-name">{{ s.name }}</h2>
@@ -7,15 +9,16 @@
       </div>
 
       <div class="card-grid">
-        <article v-for="v in s.videos" :key="v.id" class="video-card" @click="open(v)">
-          <div class="cover-box">
-            <img class="cover" :src="v.cover" :alt="v.title" loading="lazy" />
+        <article v-for="v in s.videos" :key="v.id" class="video-card">
+          <button class="cover-box" type="button" :aria-label="`播放：${v.title}`" @click="open(v, $event)">
+            <img class="cover no-zoom" :src="v.cover" alt="" loading="lazy" />
             <span class="duration">{{ v.duration }}</span>
-            <span class="play-overlay"><span class="play-btn">▶</span></span>
-          </div>
+            <span class="play-overlay" aria-hidden="true"><span class="play-btn">▶</span></span>
+          </button>
           <div class="card-body">
-            <h3 class="card-title">{{ v.cardTitle || v.title }}</h3>
+            <h3 class="card-title"><button type="button" class="card-title-button" :aria-label="`播放：${v.title}`" @click="open(v, $event)">{{ v.cardTitle || v.title }}</button></h3>
             <p class="card-meta">{{ v.up }} · {{ v.duration }} · {{ v.stats }}</p>
+            <p v-if="v.learning" class="card-audience">适合谁：{{ v.learning.audience }}</p>
             <p class="card-reason">{{ v.reason }}</p>
           </div>
         </article>
@@ -23,11 +26,10 @@
     </section>
 
     <!-- 大窗播放：点卡片弹出居中播放器，ESC / 点遮罩 / ✕ 关闭 -->
-    <Transition name="fade">
-      <div v-if="active" class="video-modal" @click.self="close">
+    <dialog v-if="active" ref="dialog" class="video-modal" aria-labelledby="video-modal-title" @cancel.prevent="close" @click="backdrop">
         <div class="modal-box">
           <div class="modal-head">
-            <span class="modal-title">{{ active.title }}</span>
+            <span id="video-modal-title" class="modal-title">{{ active.title }}</span>
             <div class="modal-actions">
               <a
                 class="act-origin"
@@ -35,7 +37,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >B 站打开 ↗</a>
-              <button class="modal-close" aria-label="关闭播放器" @click="close">✕</button>
+              <button ref="closeButton" class="modal-close" type="button" aria-label="关闭播放器" @click="close">✕</button>
             </div>
           </div>
           <div class="modal-player">
@@ -43,44 +45,101 @@
             <iframe
               :key="active.bvid"
               :src="playerSrc(active.bvid)"
+              :title="`${active.title} 视频播放器`"
               scrolling="no"
               frameborder="no"
               allowfullscreen
             ></iframe>
           </div>
+          <section v-if="active.learning" class="modal-learning" aria-labelledby="video-learning-title">
+            <h2 id="video-learning-title">本站学习建议</h2>
+            <dl>
+              <dt>适合谁</dt><dd>{{ active.learning.audience }}</dd>
+              <dt>先准备什么</dt><dd>{{ active.learning.preparation }}</dd>
+              <dt>看完做一次</dt><dd>{{ active.learning.practice }}</dd>
+            </dl>
+            <p>{{ VIDEO_LEARNING_NOTE }}</p>
+          </section>
         </div>
-      </div>
-    </Transition>
+    </dialog>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
-import { VIDEO_SECTIONS } from '../../videosData.js'
+import { ref, computed, nextTick, onMounted, onBeforeUnmount } from 'vue'
+import { VIDEO_SECTIONS, VIDEO_LEARNING_NOTE } from '../../videosData.js'
+import { hasCaseAccess } from './caseBrowsing.js'
 
 const sections = computed(() => VIDEO_SECTIONS.filter(s => s.videos.length))
 
 const active = ref(null)
-const open = v => (active.value = v)
-const close = () => (active.value = null)
+const allowed = ref(false)
+const dialog = ref(null)
+const closeButton = ref(null)
+let opener
+let originalOverflow
+let scrollLocked = false
+
+async function open(video, event) {
+  // 原生 dialog 会出现在页面最上层，与案例预览一样先检查访问状态。
+  if (!(allowed.value || hasCaseAccess()) || active.value) return
+  opener = event?.currentTarget || document.activeElement
+  originalOverflow = document.body.style.overflow
+  scrollLocked = true
+  document.body.style.overflow = 'hidden'
+  active.value = video
+  await nextTick()
+  if (!active.value || !dialog.value) return
+  dialog.value.showModal()
+  closeButton.value?.focus({ preventScroll: true })
+}
+
+function restoreScroll() {
+  if (!scrollLocked) return
+  document.body.style.overflow = originalOverflow
+  scrollLocked = false
+}
+
+function close() {
+  if (!active.value) return
+  dialog.value?.close()
+  active.value = null // 移除 iframe，关闭时停止播放。
+  restoreScroll()
+  const target = opener
+  nextTick(() => { if (target?.isConnected) target.focus({ preventScroll: true }) })
+}
+
+function backdrop(event) {
+  if (event.target !== dialog.value) return
+  const rect = dialog.value.getBoundingClientRect()
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) close()
+}
 
 const playerSrc = bvid =>
   `https://player.bilibili.com/player.html?bvid=${bvid}&high_quality=1&danmaku=0&autoplay=0`
 
-// ESC 关闭
-const onKey = e => { if (e.key === 'Escape') close() }
-onMounted(() => window.addEventListener('keydown', onKey))
-onBeforeUnmount(() => {
-  window.removeEventListener('keydown', onKey)
-  document.body.style.overflow = ''
+const onAuthenticated = () => { allowed.value = true }
+onMounted(() => {
+  allowed.value = hasCaseAccess()
+  window.addEventListener('kb-authenticated', onAuthenticated)
 })
-// 弹窗期间锁住页面滚动
-watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
+onBeforeUnmount(() => {
+  window.removeEventListener('kb-authenticated', onAuthenticated)
+  dialog.value?.close()
+  restoreScroll()
+})
 </script>
 
 <style scoped>
 .video-board {
   margin: 4px 0 24px;
+}
+.video-data-note { font-size: 12px; color: var(--vp-c-text-3); margin: 0 0 16px; }
+.learning-note {
+  margin: 0 0 18px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--vp-c-text-3);
 }
 
 /* ── 分类区块 ── */
@@ -117,7 +176,6 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   border-radius: 8px;
   overflow: hidden;
   background: var(--vp-c-bg);
-  cursor: pointer;
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 .video-card:hover {
@@ -133,7 +191,12 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   aspect-ratio: 16 / 9;
   background: #000;
   overflow: hidden;
+  display: block;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
+.cover-box:focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: -3px; }
 .cover {
   position: absolute;
   inset: 0;
@@ -165,7 +228,8 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   opacity: 0;
   transition: opacity 0.25s;
 }
-.video-card:hover .play-overlay {
+.video-card:hover .play-overlay,
+.cover-box:focus-visible .play-overlay {
   opacity: 1;
 }
 .play-btn {
@@ -201,11 +265,30 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   color: var(--vp-c-text-1);
   margin: 0;
 }
+.card-title-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.card-title-button:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; }
 .card-meta {
   margin: 4px 0 0;
   font-size: 11.5px;
   line-height: 1.4;
   color: var(--vp-c-text-3);
+}
+.card-audience {
+  margin: 7px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--vp-c-brand-1);
 }
 .card-reason {
   margin: 7px 0 0;
@@ -218,22 +301,30 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
 .video-modal {
   position: fixed;
   inset: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(0, 0, 0, 0.78);
-}
-.modal-box {
+  margin: auto;
   width: min(960px, 94vw);
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 24px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: auto;
+}
+.video-modal::backdrop { background: rgba(0, 0, 0, 0.78); }
+.modal-box {
+  width: 100%;
 }
 .modal-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 0 2px 10px;
+  padding: 8px 12px;
+  border-radius: 10px 10px 0 0;
+  background: #17251d;
 }
 .modal-title {
   font-size: 15px;
@@ -261,8 +352,8 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   border: none;
   background: rgba(255, 255, 255, 0.14);
   color: #fff;
-  width: 28px;
-  height: 28px;
+  width: 44px;
+  height: 44px;
   border-radius: 6px;
   font-size: 14px;
   line-height: 1;
@@ -271,6 +362,8 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
 .modal-close:hover {
   background: rgba(255, 255, 255, 0.26);
 }
+.modal-close:focus-visible,
+.act-origin:focus-visible { outline: 2px solid #a8d3b8; outline-offset: 3px; }
 .modal-player {
   position: relative;
   width: 100%;
@@ -287,15 +380,18 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
   height: 100%;
   border: none;
 }
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s;
+.modal-learning {
+  margin-top: 12px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
 }
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
+.modal-learning h2 { margin: 0 0 12px; border: 0; padding: 0; font-size: 15px; }
+.modal-learning dl { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 10px 12px; margin: 0; font-size: 13px; line-height: 1.7; }
+.modal-learning dt { font-weight: 600; color: var(--vp-c-text-2); }
+.modal-learning dd { margin: 0; }
+.modal-learning p { margin: 14px 0 0; font-size: 11.5px; color: var(--vp-c-text-3); }
 
 /* ── 列数随窗口宽度降级 ── */
 @media (max-width: 1279px) {
@@ -306,9 +402,11 @@ watch(active, v => (document.body.style.overflow = v ? 'hidden' : ''))
 }
 @media (max-width: 559px) {
   .card-grid { grid-template-columns: 1fr; }
-  .video-modal { padding: 0; }
-  .modal-box { width: 100vw; }
+  .video-modal { width: 100vw; max-width: 100vw; }
   .modal-head { padding: 10px 12px 8px; }
   .modal-player { border-radius: 0; }
+  .modal-learning { margin: 0; border-radius: 0; padding: 16px 12px; }
+  .modal-learning dl { grid-template-columns: 1fr; gap: 4px; }
+  .modal-learning dd + dt { margin-top: 6px; }
 }
 </style>

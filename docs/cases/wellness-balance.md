@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,6 +29,9 @@ import item from '../.vitepress/data/cases-generated/wellness-balance.json'
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
 准备 AI 编程工具，以及自己的品牌名、文案、图片或视频。提示词中的代码与素材地址可以一并交给编程工具。
@@ -36,6 +39,8 @@ import item from '../.vitepress/data/cases-generated/wellness-balance.json'
 参考工具：AI 编程工具。
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 1. 观看页面演示，确认要保留的布局与交互，再复制下方完整中文要求。
 2. 替换品牌、正文和素材地址；保留布局、尺寸与动画要求，让 AI 编程工具生成可预览页面。
@@ -49,6 +54,8 @@ import item from '../.vitepress/data/cases-generated/wellness-balance.json'
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 沿用页面结构，替换为自己的品牌与素材；保留一个主要行动按钮，检查它是否连接到正确位置。
 

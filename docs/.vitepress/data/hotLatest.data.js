@@ -1,5 +1,7 @@
-import { createContentLoader } from 'vitepress'
+import { createContentLoader, createMarkdownRenderer } from 'vitepress'
 import fs from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { extractDailyItems } from './hotHeadings.js'
 
 /**
  * 首页「AI 最新动态」数据源：
@@ -10,20 +12,10 @@ import fs from 'node:fs'
  * 正文直接按 URL 从 docs/hot/ 读取最新一期（每次构建只读 1 个文件）。
  */
 
-// 与 VitePress 标题锚点一致的 slug 规则（已按构建产物逐条核对）：
-// 小写 → 非字母/非数字的连续字符折叠为一个 - → 去掉首尾 - → 数字开头补 _
-function anchorSlug(text) {
-  let s = text.trim().toLowerCase()
-  s = s.replace(/[^\p{L}\p{N}]+/gu, '-')
-  s = s.replace(/^-+|-+$/g, '')
-  if (/^\d/.test(s)) s = '_' + s
-  return s
-}
-
 export default createContentLoader('hot/20*.md', {
   render: false,
   excerpt: false,
-  transform(raw) {
+  async transform(raw) {
     const files = raw
       .map((f) => {
         const m = f.url.match(/hot\/(\d{4}-\d{2}-\d{2})$/)
@@ -43,34 +35,15 @@ export default createContentLoader('hot/20*.md', {
     } catch {
       return { date: latest.date, url: latest.url, items: [] }
     }
-    src = src.replace(/^---[\s\S]*?---\s*\n/, '')
-
-    const items = []
-    let category = ''
-    let current = null
-
-    for (const rawLine of src.split('\n')) {
-      const line = rawLine.trim()
-      const h2 = line.match(/^##\s+(.+)/)
-      const h3 = line.match(/^###\s+(.+)$/)
-
-      if (h2) {
-        category = h2[1].trim()
-        continue
-      }
-      if (h3) {
-        if (current && current.title) items.push(current)
-        const raw = h3[1].trim()
-        current = {
-          category,
-          // 展示标题去掉序号（「1. 」），锚点用完整标题计算
-          title: raw.replace(/^\d+\s*[.、]?\s*/, ''),
-          anchor: anchorSlug(raw),
-        }
-        continue
-      }
-    }
-    if (current && current.title) items.push(current)
+    // 复用 createContentLoader 已初始化的站点渲染器，只解析最新一期正文。
+    // 读取实际 heading id，中文标点、重复标题和显式 id 均与正文一致。
+    const config = globalThis.VITEPRESS_CONFIG
+    const renderer = await createMarkdownRenderer(
+      fileURLToPath(new URL('../../', import.meta.url)),
+      config?.markdown || {},
+      config?.site?.base || '/',
+    )
+    const items = extractDailyItems(src, renderer)
 
     return {
       date: latest.date,

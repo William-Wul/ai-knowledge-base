@@ -61,6 +61,26 @@ test('direct details and mismatched origins fall back to the current category', 
   assert.equal(filterCases(cases, 'video', ' 小李 ').length, 25)
 })
 
+test('space-separated keywords match across fields without losing the list origin or position', () => {
+  assert.equal(filterCases(cases, 'video', ' 产品   广告\tSEEDANCE ').length, 25)
+  assert.equal(filterCases(cases, 'all', '灯光 小王').length, 1)
+  assert.equal(filterCases(cases, 'video', '产品 人物').length, 0)
+  assert.equal(filterCases(cases, 'video', '   ').length, 26)
+  const list = buildListPath('video', '产品 广告')
+  const detail = new URL(buildCaseHref('video-13', list), 'https://example.invalid')
+  const context = resolveCaseContext(cases[13], cases, detail.searchParams.get('from'))
+  assert.equal(context.hasOrigin, true)
+  assert.equal(context.index, 12)
+  assert.equal(context.results.length, 25)
+  assert.equal(context.previous.slug, 'video-12')
+  assert.equal(context.next.slug, 'video-14')
+  const saved = new Map()
+  const storage = { getItem: key => saved.get(key), setItem: (key, value) => saved.set(key, value) }
+  const state = { y: 1400, limit: 36, anchorSlug: 'video-13' }
+  assert.equal(saveListState(list, state, storage), true)
+  assert.deepEqual(readListState(buildPreviewHref('video-13', list), storage), state)
+})
+
 test('list positions are isolated by classification and search and tolerate broken storage', () => {
   const items = new Map()
   const storage = { getItem: key => items.get(key), setItem: (key, value) => items.set(key, value) }
@@ -97,4 +117,14 @@ test('preview deep links respect the existing password gate', async () => {
   assert.equal(hasCaseAccess({ getItem: key => key === 'kb_auth_v1' ? 'ok' : null }), true)
   assert.equal(hasCaseAccess({ getItem() { throw new Error('blocked storage') } }), false)
   assert.equal(hasCaseAccess(), false, 'server rendering cannot open a preview')
+})
+
+test('verified session survives blocked storage without bypassing explicitly supplied storage checks', async () => {
+  const { hasCaseAccess } = await import('../docs/.vitepress/theme/components/caseBrowsing.js')
+  const { grantAccess } = await import('../docs/.vitepress/theme/accessState.js')
+  grantAccess()
+  assert.equal(hasCaseAccess(), true, 'normal password validation grants access for the current page')
+  assert.equal(hasCaseAccess({ getItem: () => null }), false)
+  assert.equal(hasCaseAccess({ getItem: () => 'invalid' }), false)
+  assert.equal(hasCaseAccess({ getItem() { throw new Error('blocked storage') } }), false)
 })

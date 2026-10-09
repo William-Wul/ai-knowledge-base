@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,6 +29,9 @@ import item from '../.vitepress/data/cases-generated/blackglass-ascendant-c88bb0
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
 先准备文字对话工具，将下方模板连同自己的主题或参考图交给它，得到生图提示词；再把提示词交给图片生成工具。
@@ -36,6 +39,8 @@ import item from '../.vitepress/data/cases-generated/blackglass-ascendant-c88bb0
 参考工具：Nano Banana Pro。
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 1. 阅读模板，确定主体、材质和光线要求。
 2. 将模板与自己的主题交给文字对话工具，让它整理成生图提示词。
@@ -49,6 +54,8 @@ import item from '../.vitepress/data/cases-generated/blackglass-ascendant-c88bb0
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 保留原有构图，换成自己的主题做一版；再只调整配色或材质，比较哪个变化最影响画面。
 

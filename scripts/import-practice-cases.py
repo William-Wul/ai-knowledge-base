@@ -159,9 +159,12 @@ glossary={'landing page':'展示页',
 'hero 精确复刻':'首屏设计'}
 glossary={k.lower():v for k,v in glossary.items()}
 pattern=re.compile(r'\b('+ '|'.join(re.escape(k) for k in sorted(glossary,key=len,reverse=True))+r')\b',re.I)
-def zh_prose(s):
+def zh_prose(s, category=None):
  parts=re.split(r'(```[\s\S]*?```|`[^`]*`|\{argument[^}]*\}|https?://[^\s<>]+)',s)
- return ''.join(p if i%2 else pattern.sub(lambda m:glossary[m[0].lower()],p) for i,p in enumerate(parts))
+ def replace_prose(p):
+  if category=='video':p=re.sub(r'\bhero\s+shot\b','重点特写',p,flags=re.I)
+  return pattern.sub(lambda m:'主角' if category=='video' and m[0].lower()=='hero' else glossary[m[0].lower()],p)
+ return ''.join(p if i%2 else replace_prose(p) for i,p in enumerate(parts))
 def teaching(d,title):
  cat=d['siteCategory']; t=(d.get('promptTranslationZh') or d['promptFull']); reference=bool(re.search(r'参考|上传|reference|upload',t,re.I))
  if cat=='image':
@@ -224,12 +227,10 @@ if args.append:
  new_prompts=[normalized(d['promptFull']) for d in selected]
  assert not existing_prompts.intersection(new_prompts) and len(set(new_prompts))==len(new_prompts), '增量原文重复'
  assert not old_ids.intersection(d['slug'] for d in selected), '增量含已有条目'
-overrides_file=base/'case-editorial-overrides.json'
-overrides=json.loads(overrides_file.read_text()) if overrides_file.exists() else {}
 for d in selected:
  slug=d['slug'];manifest.append(dict(slug=slug,rank=len(manifest)+1,category=('web' if d['siteCategory']=='tool' else d['siteCategory']),editorialScore=d['selectionScore'],sourcePromptSha256=hashlib.sha256(d['promptFull'].encode()).hexdigest()))
  if slug in curated:continue
- title=titles.get(slug,d['title']);summary=zh_prose(summaries.get(slug,d['summary']))
+ title=titles.get(slug,d['title']);summary=zh_prose(summaries.get(slug,d['summary']),d['siteCategory'])
  summary=summary.replace('一份高度详细、',
 '一份').replace('极其详尽',
 '详细').replace('高端',
@@ -240,8 +241,8 @@ for d in selected:
  file=base/'case-translations'/f'{slug}.txt'
  if file.exists():zh=file.read_text().strip();note='本站中文翻译；品牌、画面文字与台词按原作保留。'
  elif d['contentLocale']=='zh-CN':zh=d['promptFull'];note='作者中文原文，保留原样。'
- else:zh=zh_prose(d.get('promptTranslationZh') or '');note='Goodcase 中文译文，本站整理术语；代码和素材地址保留原样。'
- if not note.startswith('作者中文'):zh=normalize_terms(zh)
+ else:zh=zh_prose(d.get('promptTranslationZh') or '',d['siteCategory']);note='Goodcase 中文译文，本站整理术语；代码和素材地址保留原样。'
+ if not note.startswith('作者中文'):zh=normalize_terms(zh,d['siteCategory'])
  argument_map=json.loads((base/'case-translations/arguments.json').read_text())
  zh=re.sub(r'\{argument[^}]*default="([^"]*)"[^}]*\}',lambda m:'【'+argument_map.get(m[1],m[1])+'】',zh)
  if note=='作者中文原文，保留原样。' and zh!=d['promptFull']:note='作者中文提示词，本站整理可替换内容。'
@@ -249,7 +250,7 @@ for d in selected:
  c=dict(slug=slug,category=('web' if d['siteCategory']=='tool' else d['siteCategory']),title=title,summary=summary,**teaching(d,title),creator=d['creator'],sourceUrl=d['sourceUrl'],url=d['url'],cover=f'/images/cases/catalog/{slug}.jpg',mediaUrl=d['mediaUrl'],mediaType=d['mediaType'],models=[m for m in d['recommendedModels'] if m not in ['待补充模型',
 'Source prompt only']],promptOriginal=d['promptFull'],promptZh=zh,translationNote=note,contentKind='prompt',capturedAt=today,tested=False)
  if d['mediaType']=='image':c['imageUrl']=d['mediaUrl']
- c.update(overrides.get(slug,{}))
+ # 教学编辑在 loadCases() 读取时覆盖；重新导入不写回、不抹掉编辑稿。
  imported.append(c)
 audit=json.loads(Path('docs/.vitepress/cache/goodcase/audit.json').read_text())
 metadata={**previous,'capturedAt':today,'sourceTotal':audit['sitemapCount'],'sourceFetched':audit['fetchedCount'],'sourceUnavailable':len(audit['failures']),

@@ -69,3 +69,4 @@ __pycache__/
 
 # Case payloads generated from the curated and imported snapshots before build
 docs/.vitepress/data/cases-generated/
+docs/public/kb-access-config.js

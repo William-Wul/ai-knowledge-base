@@ -1,5 +1,6 @@
 <script setup>
 import { computed, nextTick, ref, onMounted, onBeforeUnmount, watch } from 'vue'
+import { trackLearning } from './learningEvents.js'
 const props = defineProps({ item: { type: Object, required: true } })
 const item = computed(() => props.item)
 const language = ref('zh')
@@ -29,6 +30,7 @@ async function copy(text = prompt.value) {
   manual.value = ''
   try {
     await navigator.clipboard.writeText(text)
+    trackLearning('case-copy', item.value.category)
     status.value = '已复制完整内容。'
   } catch {
     manual.value = text
@@ -47,6 +49,7 @@ function download() {
   a.download = `${c.title}.txt`
   document.body.append(a)
   a.click()
+  trackLearning('case-download', c.category)
   a.remove()
   setTimeout(() => URL.revokeObjectURL(url), 1000)
 }

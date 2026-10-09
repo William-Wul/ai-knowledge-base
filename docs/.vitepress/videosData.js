@@ -12,6 +12,9 @@
 //
 // 分类：AI 基础科普 / AI 办公实操 / 提示词与 Agent 技巧 / AI 编程实战 / AI 创作实战
 
+// 根据现有标题与推荐语整理的本站练习，不代表作者的课程安排或工具复测结论。
+export const VIDEO_LEARNING_NOTE = '学习建议整理于 2026-10-09，未逐一复测视频中的工具。'
+
 export const VIDEO_SECTIONS = [
   {
     id: 'basics',
@@ -29,6 +32,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v010.jpg',
         reason:
           '做 PPT、审发票、面试、发视频，四组人机真实对比。看完明白：AI 是认知的镜子，拉开差距的是你，但背锅的也是你。',
+        learning: {
+          audience: '想判断哪些工作可以交给 AI 的同事',
+          preparation: '选一项熟悉的工作，准备一个你认为合格的结果样例。',
+          practice: '把这项工作拆成三步，分别写出 AI 能做什么、你要做什么，以及交付前必须核对的一处错误。',
+        },
       },
       {
         id: 'v009',
@@ -41,6 +49,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v009.jpg',
         reason:
           'token、上下文、MCP、Agent、Skill 天天听却说不清？坐电梯、USB 接口、工厂主管三组比喻，6 分半全讲清，适合当第一课。',
+        learning: {
+          audience: '刚接触 AI、经常被术语卡住的同事',
+          preparation: '记下三个你说不清的 AI 词，留一页空白笔记。',
+          practice: '选三个词，各写一句日常类比和一个工作例子，再试着向同事解释，检查自己能否说清。',
+        },
       },
       {
         id: 'v004',
@@ -53,6 +66,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v004.jpg',
         reason:
           'Token、上下文、Agent、Skill 这些词到底什么关系？从底层一层层搭到顶，听完能看懂 AI 圈大部分新产品。',
+        learning: {
+          audience: '用过聊天 AI，想理清模型、工具与 Agent 关系的同事',
+          preparation: '准备一个“整理文件并给出摘要”的需求。',
+          practice: '画出“接收要求 → 找到资料 → 使用工具 → 给出结果”四步，标出每一步需要模型、工具还是人的检查。',
+        },
       },
       {
         id: 'v012',
@@ -65,6 +83,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v012.jpg',
         reason:
           'AI 为什么需要沙箱、虚拟机和容器到底差在哪？7 分钟一条线讲透，顺带看懂腾讯开源的云沙箱 CubeSandbox 在做什么。',
+        learning: {
+          audience: '想理解 Agent 为什么要在隔离环境里工作的同事',
+          preparation: '想一个 AI 批量修改文件的场景，用纸笔记录即可。',
+          practice: '画出“原文件 → 练习副本 → 核对后合并”的流程，写清 AI 可以读写哪里、出现错误时怎样保留原文件。',
+        },
       },
     ],
   },
@@ -84,6 +107,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v006.jpg',
         reason:
           '公司配置的 WorkBuddy 从入门到提效：积分怎么算、资料怎么放、专家团分析、定时任务，一遍讲全。',
+        learning: {
+          audience: '已有 WorkBuddy、想用它处理办公任务的同事',
+          preparation: '准备五条不含敏感信息的工作进展，以及一份汇报格式。',
+          practice: '让 WorkBuddy 整理一页汇报草稿，逐条对照原材料，标出缺失或误写的信息，保留一份你修正后的结果。',
+        },
       },
       {
         id: 'v008',
@@ -95,7 +123,12 @@ export const VIDEO_SECTIONS = [
         stats: '2.7万播放',
         cover: '/videos/covers/v008.jpg',
         reason:
-          '五家 AI 做 PPT 横评：免费选千问、要图表选 Kimi、要省心选 Claude，还有会编造内容的避坑提醒。',
+          '按录制时版本比较五款工具，重点看内容准确性、图表和排版，也展示编造内容的例子。费用和导出能力以当前工具为准。',
+        learning: {
+          audience: '经常做 PPT，想判断 AI 结果是否可用的同事',
+          preparation: '准备三页汇报的大纲、两个已核实的数字，以及一款你已能使用的工具。',
+          practice: '用同一份材料生成三页 PPT，核对数字和结论，再记录内容、图表、排版各需修改的一处，判断是否省下时间。',
+        },
       },
       {
         id: 'v001',
@@ -108,6 +141,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v001.jpg',
         reason:
           '桌面 Agent 能替你干的八类活，从整理表格到跑复盘报告一次讲全。还在"跟 AI 聊天"的同事，拿它当第一课。',
+        learning: {
+          audience: '会与 AI 聊天，想尝试让它整理文件的同事',
+          preparation: '在练习文件夹里放三份自己编写的会议笔记，保留原文件副本。',
+          practice: '让已可用的桌面 AI 先列出按日期整理的方案，确认后只在练习目录操作，再逐项核对文件名和笔记内容。',
+        },
       },
     ],
   },
@@ -127,6 +165,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v003.jpg',
         reason:
           'AI 圈都在说的 Harness 到底是什么：套在模型外面、让它稳定干活的那层系统。概念、实战、争议一次讲清。',
+        learning: {
+          audience: '用过 Agent，想减少返工和失控的同事',
+          preparation: '选一个重复任务，写下曾遇到的三个失败例子。',
+          practice: '为这个任务写一张任务卡：目标、可用资料、允许的操作、完成后的检查、什么情况必须停下来问你。',
+        },
       },
     ],
   },
@@ -146,6 +189,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v011.jpg',
         reason:
           '国产开源的 AI 编程工具：一行命令装好，四个实战任务跑完不到 5 块钱，插件能换也能自己造。需要会开终端。',
+        learning: {
+          audience: '会使用终端、已有 AI 编程基础的同事',
+          preparation: '准备空练习项目和已配置好的工具环境；安装与费用按当前官方说明核对。',
+          practice: '让工具做一个本地待办页，提前约定新增、显示、删除三项标准，运行后逐项操作，并记录一次修正过程。',
+        },
       },
       {
         id: 'v005',
@@ -158,6 +206,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v005.jpg',
         reason:
           'Claude Code 从装到用：权限怎么给、省钱命令、给 AI 立规矩的 CLAUDE.md，跟着做出第一个项目。录制于 2026 年 5 月；此后 Fable 5 上线、订阅规则有调整，以官方最新说明为准。',
+        learning: {
+          audience: '愿意尝试 AI 编程、能打开终端的同事',
+          preparation: '准备空练习文件夹、可用的 Claude Code，以及一页工作笔记的需求。',
+          practice: '先写三条项目规则，再让 Claude Code 做一个工作笔记页；检查能否输入、保存、再次打开，并核对实际修改的文件。',
+        },
       },
       {
         id: 'v002',
@@ -170,6 +223,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v002.jpg',
         reason:
           '从订阅选档、权限怎么给，到自动提交代码、定时任务、手机遥控电脑，Codex 完整用法一条视频过一遍。录制于 Codex 独立 App 时期；2026 年 7 月起 Codex 并入 ChatGPT 桌面应用，入口以新版为准，方法仍然通用。',
+        learning: {
+          audience: '准备上手 Codex，想学会提出和验收修改的同事',
+          preparation: '准备一个只含示例文件的练习项目，以及一个小修改需求。',
+          practice: '要求 Codex 先说明修改计划，再完成一处改动；查看前后差异、运行结果，写下你接受或继续修改的理由。',
+        },
       },
     ],
   },
@@ -189,6 +247,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v007.jpg',
         reason:
           '用 AI 做一部能变现的短剧全流程：选题、剧本、分镜、配音、剪辑。适合想搞 AI 内容创作或副业的同事当参考。',
+        learning: {
+          audience: '想了解 AI 短片制作步骤的内容创作者',
+          preparation: '准备一个三句话的原创故事，以及主人公的外貌描述。',
+          practice: '把故事拆成三个镜头，分别写画面、台词和时长，总长约十五秒；检查角色是否一致、故事是否有开始和结束。',
+        },
       },
       {
         id: 'v013',
@@ -201,6 +264,11 @@ export const VIDEO_SECTIONS = [
         cover: '/videos/covers/v013.jpg',
         reason:
           '嫌 AI 视频按量付费贵？跟 UP 在云 GPU 上自部署视频模型，每秒成本约 6 分钱，还能批量出片。Akamai 商单，价格数字听个参考。',
+        learning: {
+          audience: '会使用云服务器，想比较视频生成成本的同事',
+          preparation: '记录一个实际需求的分辨率、视频时长和数量，准备当前报价或自己的费用记录。',
+          practice: '列出租用、等待、生成、失败重试四项成本，用自己的需求估算一次；缺少的数据留空，不直接套用视频里的价格。',
+        },
       },
     ],
   },

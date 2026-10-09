@@ -10,7 +10,7 @@
         <li>答案没有对错，按真实习惯选，结果才有参考价值</li>
         <li>题目从 {{ bankSize }} 道题库里随机抽取，每次测评不完全相同</li>
         <li>大约需要 3 分钟</li>
-        <li>算分全部在你自己的浏览器里完成，不上传、不记录</li>
+        <li>答案和得分在当前浏览器计算，报告只保存在这里，不上传</li>
       </ul>
       <div v-if="lastResult" class="last-note">
         <span>上次测评（{{ lastResult.date }}）结果：<strong>{{ lastResult.name }}</strong></span>
@@ -152,6 +152,7 @@
 import { computed, nextTick, onMounted, reactive, ref } from 'vue'
 import { dimensions, levels, questionBank } from './aiQuizBank.js'
 import { resolveLinks } from './topicMap.js'
+import { trackLearning } from './learningEvents.js'
 
 const STORAGE_KEY = 'ai_ability_quiz_last_result_v4'
 const LEVEL_THRESHOLDS = [0.18, 0.38, 0.58, 0.78]
@@ -382,6 +383,7 @@ function prevQuestion() {
 }
 
 function finishQuiz() {
+  trackLearning('quiz-finish', 'quiz')
   const percent = maxScore.value ? totalScore.value / maxScore.value : 0
   let levelIndex = LEVEL_THRESHOLDS.findIndex(threshold => percent < threshold)
   if (levelIndex === -1) levelIndex = levels.length - 1

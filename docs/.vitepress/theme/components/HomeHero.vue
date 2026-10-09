@@ -134,16 +134,18 @@
         <div class="daily-panel">
           <div class="daily-header">
             <div class="daily-title">
-              <span class="live-dot"></span>
+              <span class="live-dot" :class="{ 'is-stale': dailyStale }" aria-hidden="true"></span>
               AI 最新动态
             </div>
             <a class="daily-more" href="/hot/">
-              {{ daily.date }} · 查看全部
+              查看全部日报
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
                 <path d="M5 12h14M13 5l7 7-7 7"/>
               </svg>
             </a>
           </div>
+          <p class="daily-date">日报日期：<time :datetime="daily.date">{{ daily.date || '日期暂缺' }}</time> · 来源 AIHOT</p>
+          <p v-if="dailyStale" class="data-stale" role="status">日报超过两天未更新，当前显示历史内容。<a href="https://aihot.news/" target="_blank" rel="noopener noreferrer">查看来源 →</a></p>
           <ul class="daily-list">
             <!-- AI 模型排行榜：置顶第一条，金色徽章与下方标签列对齐，2 列网格展示前 10 名（scripts/sync-leaderboard.mjs 每日同步） -->
             <li v-if="lbTop.length" key="leaderboard" :style="{ animationDelay: '0.9s' }">
@@ -152,6 +154,8 @@
                   <span class="daily-cat lb-cat">🏆 AI 模型排行榜</span>
                   <span class="lb-all">查看完整榜单 →</span>
                 </span>
+                <span class="lb-date">原榜更新：{{ lb.sourceUpdatedAt || '日期暂缺' }} · 本站同步：<time :datetime="lb.syncedAt">{{ syncedText }}</time></span>
+                <span v-if="rankingStale" class="data-stale" role="status">榜单超过两天未同步，当前显示历史数据。</span>
                 <span class="lb-grid">
                   <span v-for="m in lbTop" :key="m.slug" class="lb-cell">
                     <b class="lb-no" :class="`top-${m.rank}`">No.{{ m.rank }}</b>
@@ -181,15 +185,27 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
 import { data as daily } from '../../data/hotLatest.data.js'
 import { data as frontier } from '../../data/frontierLatest.data.js'
 import lb from '../../data/leaderboard.json'
+import { formatSyncTime, isDailyStale, isTimestampStale } from '../dataFreshness.js'
 
 // 头条固定给最新 AI 前沿专题，日报条目相应减为 5 条，面板总条数保持 6 条不变
 const dailyItems = computed(() => (daily.items || []).slice(0, 5))
 // 首页排行榜条目展示前 10 名
 const lbTop = (lb.models || []).slice(0, 10)
+const syncedText = formatSyncTime(lb.syncedAt)
+const clockTime = ref(0)
+const dailyStale = computed(() => clockTime.value > 0 && isDailyStale(daily.date, clockTime.value))
+const rankingStale = computed(() => clockTime.value > 0 && isTimestampStale(lb.syncedAt, clockTime.value))
+let freshnessTimer
+onMounted(() => {
+  const update = () => { clockTime.value = Date.now() }
+  update()
+  freshnessTimer = setInterval(update, 60_000)
+})
+onBeforeUnmount(() => clearInterval(freshnessTimer))
 </script>
 
 <style scoped>
@@ -374,6 +390,22 @@ const lbTop = (lb.models || []).slice(0, 10)
   transition: all 0.2s ease;
 }
 .daily-more:hover { background: var(--green-100); color: var(--green-900); }
+.daily-date,
+.lb-date { font-size: 11px; line-height: 1.6; color: var(--ink-soft); }
+.daily-date { margin: 0 8px 8px; }
+.live-dot.is-stale { background: var(--vp-c-warning-1); animation: none; box-shadow: none; }
+.data-stale {
+  display: block;
+  margin: 0 8px 8px;
+  padding: 7px 9px;
+  border-radius: 6px;
+  background: var(--vp-c-warning-soft);
+  color: var(--vp-c-warning-1);
+  font-size: 11.5px;
+  line-height: 1.6;
+}
+.data-stale a { color: inherit; text-decoration: underline; }
+.lb-item .data-stale { margin: 0; }
 
 .daily-list {
   list-style: none;

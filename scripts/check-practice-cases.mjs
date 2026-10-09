@@ -41,6 +41,8 @@ for (const c of cases) {
   assert.equal(createHash('sha256').update(c.promptOriginal).digest('hex'), selected.sourcePromptSha256, `原文偏离来源：${c.slug}`)
   assert(!html.includes('**值得学习'))
   assert(html.includes('作者原文') || html.includes('完整源码'))
+  assert(html.includes('以下步骤与练习由本站整理') && html.includes('本站练习建议'), `缺少本站教学来源说明：${c.slug}`)
+  if (c.tested !== true) assert(html.includes('本站未实测生成效果'), `未实测状态缺少读者提示：${c.slug}`)
   const markdown = readFileSync(`docs/cases/${c.slug}.md`, 'utf8')
   assert(markdown.includes('值得学习的写法') && markdown.includes('## 开始前准备'), '学习内容未进入可搜索的 Markdown')
   if (c.promptParts) {

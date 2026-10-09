@@ -13,6 +13,7 @@ import ReadingControls from './components/ReadingControls.vue'
 import SidebarHeader from './components/SidebarHeader.vue'
 import ModelRanking from './components/ModelRanking.vue'
 import VideoBoard from './components/VideoBoard.vue'
+import ContentReviewNote from './components/ContentReviewNote.vue'
 import './custom.css'
 import './components/cases.css'
 
@@ -67,7 +68,7 @@ export default {
       [
         h(DefaultTheme.Layout, null, {
           // 把面包屑塞进文章正文上方
-          'doc-before': () => h(Breadcrumb),
+          'doc-before': () => [h(Breadcrumb), h(ContentReviewNote)],
           // 侧栏顶部:本站导航(折叠) + 沉浸 + 搜索
           'sidebar-nav-before': () => h(SidebarHeader),
         }),

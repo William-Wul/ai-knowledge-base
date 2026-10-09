@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>AI 学习词汇本</title>
+<script>
+try {
+  const embedded = window.self !== window.top;
+  const appearance = localStorage.getItem('vitepress-theme-appearance');
+  const dark = embedded ? parent.document.documentElement.classList.contains('dark') : (appearance === 'dark' || (appearance !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches));
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+} catch (_) { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+</script>
 <style>
 :root {
   --bg: #f7faf7;
@@ -31,8 +39,7 @@
   --shadow: 0 22px 70px rgba(31, 67, 50, 0.13);
   --card-shadow: 0 14px 38px rgba(31, 67, 50, 0.09);
 }
-@media (prefers-color-scheme: dark) {
-  :root {
+html[data-theme="dark"] {
     --bg: #10170f;
     --surface: rgba(31,37,31,0.92);
     --surface-2: rgba(45,52,45,0.9);
@@ -51,7 +58,6 @@
     --warning-bg: rgba(255,156,47,0.17);
     --success: #7be0ae;
     --success-bg: rgba(40,178,111,0.16);
-  }
 }
 * { box-sizing: border-box; }
 html, body { min-height: 100%; }
@@ -79,15 +85,17 @@ body::before {
   pointer-events: none;
   mask-image: radial-gradient(circle at 50% 42%, black, transparent 78%);
 }
-@media (prefers-color-scheme: dark) {
-  body {
+html[data-theme="dark"] body {
     background:
       radial-gradient(circle at 12% 8%, rgba(74,139,99,0.20), transparent 34%),
       radial-gradient(circle at 90% 14%, rgba(45,90,61,0.16), transparent 38%),
       radial-gradient(circle at 78% 84%, rgba(109,191,138,0.12), transparent 36%),
       linear-gradient(135deg, #10170f 0%, #121a14 52%, #0f1712 100%);
-  }
 }
+html[data-theme="light"].embedded body,
+html[data-theme="light"].embedded .app-shell { background: #ffffff; }
+html[data-theme="dark"].embedded body,
+html[data-theme="dark"].embedded .app-shell { background: #1b1b1f; }
 .app {
   min-height: 100vh;
   padding: 18px;
@@ -355,12 +363,10 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 .tag-code { background: #E1F5EE; color: #085041; }
 .tag-product { background: #FAECE7; color: #712B13; }
 .tag-other { background: #F1EFE8; color: #444441; }
-@media (prefers-color-scheme: dark) {
-  .tag-ai { background: rgba(109,191,138,0.16); color: #6dbf8a; }
-  .tag-code { background: #085041; color: #9FE1CB; }
-  .tag-product { background: #712B13; color: #F5C4B3; }
-  .tag-other { background: #444441; color: #D3D1C7; }
-}
+html[data-theme="dark"] .tag-ai { background: rgba(109,191,138,0.16); color: #6dbf8a; }
+html[data-theme="dark"] .tag-code { background: #085041; color: #9FE1CB; }
+html[data-theme="dark"] .tag-product { background: #712B13; color: #F5C4B3; }
+html[data-theme="dark"] .tag-other { background: #444441; color: #D3D1C7; }
 .pending-badge, .freq-badge { font-size: 10px; padding: 2px 6px; border-radius: 999px; background: var(--warning-bg); color: var(--warning); font-weight: 650; }
 .freq-hot { background: var(--danger-bg); color: var(--danger); }
 .phonetic { font-size: 13px; color: var(--text-secondary); font-family: ui-serif, "Times New Roman", serif; font-weight: 400; }
@@ -463,6 +469,10 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 .prompt-box { background: var(--surface-2); border-radius: var(--radius-md); padding: 12px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.6; white-space: pre-wrap; word-break: break-word; max-height: 200px; overflow-y: auto; margin-bottom: 8px; }
 .modal-content textarea { width: 100%; min-height: 140px; resize: vertical; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; line-height: 1.5; }
 .modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; flex-wrap: wrap; }
+.backup-file-label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.backup-file { width: 100%; margin-bottom: 14px; color: var(--text-primary); }
+.backup-preview { font-size: 13px; color: var(--text-secondary); }
+.backup-preview ul { max-height: 180px; overflow: auto; padding-left: 24px; }
 .tab-bar { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 0.5px solid var(--border); }
 .tab { padding: 8px 14px; border: none; background: transparent; cursor: pointer; font-size: 13px; color: var(--text-secondary); border-bottom: 2px solid transparent; height: auto; border-radius: 0; }
 .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
@@ -519,21 +529,19 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 }
 .result-panel .word-card.open .word-body { padding: 30px 38px 34px; }
 .result-panel .word-card.open .word-term { font-size: 42px; }
-@media (prefers-color-scheme: dark) {
-  .highlight-box { background: linear-gradient(135deg, rgba(30,40,33,0.96), rgba(26,38,30,0.96)); }
-  .example-box { background: rgba(28,36,30,0.92); }
-  .result-panel .word-card.open .word-head {
+html[data-theme="dark"] .highlight-box { background: linear-gradient(135deg, rgba(30,40,33,0.96), rgba(26,38,30,0.96)); }
+html[data-theme="dark"] .example-box { background: rgba(28,36,30,0.92); }
+html[data-theme="dark"] .result-panel .word-card.open .word-head {
     background:
       radial-gradient(circle at 88% 18%, rgba(109,191,138,0.14), transparent 32%),
       linear-gradient(140deg, rgba(45,90,61,0.16), rgba(24,32,26,0.86) 48%, rgba(74,139,99,0.10));
   }
   /* 暗色下侧边栏压深：与暗色页面融为一体，保持深绿气质 */
-  .sidebar {
+html[data-theme="dark"] .sidebar {
     background:
       radial-gradient(circle at 82% 14%, rgba(255,255,255,0.08), transparent 22%),
       linear-gradient(155deg, rgba(18,30,22,0.99), rgba(24,40,29,0.98) 48%, rgba(30,52,38,0.96));
   }
-}
 @media (max-width: 780px) {
   .app { padding: 0; }
   .app-shell { height: auto; min-height: 100vh; grid-template-columns: 1fr; border-radius: 0; overflow: visible; }
@@ -596,11 +604,12 @@ html.embedded .word-card { border-color: var(--border); }
     <p class="ailinkstart-gate__hint">如忘记密码，请联系管理员</p>
   </div>
 </div>
+<script src="/kb-access-config.js"></script>
 <script>
 (function(){
-  var STORAGE_KEY = 'kb_auth_v1';
-  var CORRECT = 'ai2026';
-  try { if (localStorage.getItem(STORAGE_KEY) === 'ok') return; } catch(e) {}
+  var config = window.KB_ACCESS_CONFIG;
+  var STORAGE_KEY = config && config.storageKey;
+  try { if (config && localStorage.getItem(STORAGE_KEY) === config.storageValue) return; } catch(e) {}
   var gate = document.getElementById('ailinkstart-gate');
   var card = document.getElementById('ailinkstart-gate-card');
   var form = document.getElementById('ailinkstart-gate-form');
@@ -609,17 +618,29 @@ html.embedded .word-card { border-color: var(--border); }
   var err = document.getElementById('ailinkstart-gate-error');
   if (!gate) return;
   gate.style.display = 'flex';
+  if (!config) err.textContent = '访问配置暂时无法加载，请刷新后重试。';
   document.documentElement.style.overflow = 'hidden';
   setTimeout(function(){ try { input.focus(); } catch(e){} }, 50);
   input.addEventListener('input', function(){
-    btn.disabled = !input.value;
+    btn.disabled = !input.value || !config;
     input.classList.remove('error');
     err.textContent = '';
   });
-  form.addEventListener('submit', function(ev){
+  form.addEventListener('submit', async function(ev){
     ev.preventDefault();
-    if (input.value === CORRECT) {
-      try { localStorage.setItem(STORAGE_KEY, 'ok'); } catch(e) {}
+    if (!config || !input.value || btn.disabled) return;
+    btn.disabled = true;
+    var hash;
+    try {
+      var digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input.value));
+      hash = Array.from(new Uint8Array(digest)).map(function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+    } catch(e) {
+      err.textContent = '当前浏览器无法校验密码，请使用 HTTPS 或更新浏览器后重试。';
+      btn.disabled = false;
+      return;
+    }
+    if (hash === config.hash) {
+      try { localStorage.setItem(STORAGE_KEY, config.storageValue); } catch(e) {}
       gate.parentNode && gate.parentNode.removeChild(gate);
       document.documentElement.style.overflow = '';
     } else {
@@ -660,6 +681,7 @@ html.embedded .word-card { border-color: var(--border); }
         <div class="config-bar">
           <span class="api-status"><span class="status-dot" id="api-dot"></span><span id="api-status-text">deepseek-chat 在线解读</span></span>
           <button class="export-btn" id="export-btn" type="button">导出词库</button>
+          <button class="export-btn" id="import-btn" type="button">恢复备份</button>
         </div>
         <div id="lookup-error"></div>
       </div>
@@ -730,7 +752,23 @@ html.embedded .word-card { border-color: var(--border); }
   </div>
 </div>
 
-<script>
+<div class="modal" id="backup-modal" role="dialog" aria-modal="true" aria-labelledby="backup-title">
+  <div class="modal-content">
+    <h3 id="backup-title">恢复词库备份</h3>
+    <p>选择「导出词库」生成的 JSON 文件，先预览再合并。同名词条保留当前记录，备份不会覆盖已有解读和学习状态。</p>
+    <label class="backup-file-label" for="backup-file">选择备份文件</label>
+    <input class="backup-file" id="backup-file" type="file" accept="application/json,.json">
+    <div id="backup-preview" class="backup-preview" aria-live="polite">尚未选择文件</div>
+    <div id="backup-error" role="alert"></div>
+    <div class="modal-actions">
+      <button id="backup-cancel" type="button">取消</button>
+      <button id="backup-merge" type="button" class="primary" disabled>确认合并</button>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { recoverInterruptedWords, parseBackup, mergeBackup, requestWithTimeout } from './notebook-state.mjs';
 (function() {
   const STORAGE_KEY = 'ailinkstart:vocab:words';
   const API_ENDPOINT = '/api/vocab/interpret';
@@ -744,6 +782,10 @@ html.embedded .word-card { border-color: var(--border); }
   let activeWordId = null;
   let currentWordId = null;
   let supplementaryLoading = null;
+  const activeRequests = new Map();
+  let pendingBackup = null;
+  let backupReadVersion = 0;
+  let backupReturnFocus = null;
   let customQuestionWordId = null;
   const expandedMasteryHistory = new Set();
   const DEFAULT_CONFIG = { provider: 'worker', model: MODEL_NAME, baseUrl: API_ENDPOINT };
@@ -752,13 +794,37 @@ html.embedded .word-card { border-color: var(--border); }
 
   const TAG_LABELS = { ai: 'AI', code: '编程', product: '产品', other: '其他' };
 
+  const systemTheme = matchMedia('(prefers-color-scheme: dark)');
+  function syncStandaloneTheme() {
+    if (window.self !== window.top) return;
+    let appearance;
+    try { appearance = localStorage.getItem('vitepress-theme-appearance'); } catch (_) {}
+    document.documentElement.dataset.theme = appearance === 'dark' || (appearance !== 'light' && systemTheme.matches) ? 'dark' : 'light';
+  }
+  window.addEventListener('message', event => {
+    if (event.origin !== location.origin || event.source !== parent || window.self === window.top) return;
+    if (event.data?.type === 'ailinkstart:vocab:theme' && typeof event.data.dark === 'boolean') document.documentElement.dataset.theme = event.data.dark ? 'dark' : 'light';
+  });
+  systemTheme.addEventListener('change', syncStandaloneTheme);
+  window.addEventListener('storage', event => { if (event.key === 'vitepress-theme-appearance') syncStandaloneTheme(); });
+  if (window.self !== window.top) parent.postMessage({ type: 'ailinkstart:vocab:ready' }, location.origin);
+
   function loadWords() {
-    try { words = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
+    try {
+      const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      words = Array.isArray(stored) ? stored.filter(w => w && typeof w.term === 'string' && typeof w.id === 'string') : [];
+      const interrupted = words.some(w => w.status === 'loading');
+      words = recoverInterruptedWords(words);
+      if (interrupted) saveWords();
+    }
     catch (e) { words = []; }
   }
-  function saveWords() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(words)); }
-    catch (e) { console.error('Save failed', e); }
+  function saveWords(nextWords = words) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(nextWords)); return true; }
+    catch (e) {
+      document.getElementById('lookup-error').innerHTML = '<div class="error-msg">浏览器未能保存词库。当前记录仍可查看，请先导出备份。</div>';
+      return false;
+    }
   }
 
   // 加载内置词典（公共词条，只读，不存 localStorage、不调 AI）
@@ -821,6 +887,69 @@ html.embedded .word-card { border-color: var(--border); }
     a.click();
     document.body.removeChild(a);
     setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  function openBackupModal() {
+    backupReturnFocus = document.activeElement;
+    pendingBackup = null;
+    backupReadVersion++;
+    document.getElementById('backup-file').value = '';
+    document.getElementById('backup-preview').textContent = '尚未选择文件';
+    document.getElementById('backup-error').textContent = '';
+    document.getElementById('backup-merge').disabled = true;
+    document.getElementById('backup-modal').classList.add('open');
+    document.getElementById('backup-file').focus();
+  }
+  async function previewBackup(event) {
+    const version = ++backupReadVersion;
+    const file = event.target.files[0];
+    pendingBackup = null;
+    const preview = document.getElementById('backup-preview');
+    const error = document.getElementById('backup-error');
+    const merge = document.getElementById('backup-merge');
+    preview.textContent = '正在检查备份…';
+    error.textContent = '';
+    merge.disabled = true;
+    if (!file) { preview.textContent = '尚未选择文件'; return; }
+    try {
+      if (file.size > 10 * 1024 * 1024) throw new Error('备份文件超过 10 MB，请选择较小的词库备份。');
+      const incoming = parseBackup(await file.text());
+      if (version !== backupReadVersion) return;
+      const result = mergeBackup(words, incoming);
+      pendingBackup = incoming;
+      preview.replaceChildren();
+      const summary = document.createElement('p');
+      summary.textContent = '文件「' + file.name + '」有 ' + incoming.length + ' 条记录：将新增 ' + result.added.length + ' 条，跳过 ' + result.duplicates + ' 条同名记录；当前 ' + words.length + ' 条全部保留。';
+      preview.append(summary);
+      if (result.added.length) {
+        const list = document.createElement('ul');
+        result.added.slice(0, 50).forEach(word => { const item = document.createElement('li'); item.textContent = word.term; list.append(item); });
+        preview.append(list);
+        if (result.added.length > 50) { const note = document.createElement('p'); note.textContent = '预览显示前 50 条，确认后合并全部新增记录。'; preview.append(note); }
+      }
+      merge.disabled = result.added.length === 0;
+    } catch (err) {
+      if (version !== backupReadVersion) return;
+      preview.textContent = '当前词库未改动。';
+      error.className = 'error-msg';
+      error.textContent = err.message;
+    }
+  }
+  function confirmBackupMerge() {
+    if (!pendingBackup) return;
+    try {
+      // 预览后仍可能有新词进入词库，确认时按最新记录重新去重。
+      const result = mergeBackup(words, pendingBackup);
+      if (!saveWords(result.words)) throw new Error('浏览器未能保存备份内容，请先导出当前词库并检查浏览器存储空间。');
+      words = result.words;
+      selectDefaultCurrent();
+      closeAllModals();
+      render();
+      document.getElementById('lookup-error').innerHTML = '<div class="success-msg">已新增 ' + result.added.length + ' 条，跳过 ' + result.duplicates + ' 条同名记录；已有词条保留。</div>';
+    } catch (err) {
+      const error = document.getElementById('backup-error');
+      error.className = 'error-msg';
+      error.textContent = err.message;
+    }
   }
   function selectDefaultCurrent() {
     if (currentWordId && words.some(w => w.id === currentWordId)) return;
@@ -1284,6 +1413,9 @@ html.embedded .word-card { border-color: var(--border); }
     container.querySelectorAll('[data-action="fetch"]').forEach(el => {
       el.addEventListener('click', e => { e.stopPropagation(); processWord(ensureOperable(el.dataset.id), { countInterpretation: true }); });
     });
+    container.querySelectorAll('[data-action="cancel-request"]').forEach(el => {
+      el.addEventListener('click', e => { e.stopPropagation(); activeRequests.get(el.dataset.id)?.abort(); });
+    });
     container.querySelectorAll('[data-action="manual"]').forEach(el => {
       el.addEventListener('click', e => { e.stopPropagation(); openPromptModal(ensureOperable(el.dataset.id)); });
     });
@@ -1389,6 +1521,8 @@ html.embedded .word-card { border-color: var(--border); }
             button('example', '🎬 举例子') +
             '<button data-action="custom-open" data-id="' + w.id + '" ' + (loadingKey ? 'disabled' : '') + '>💬 我自己问</button>' +
           '</div>' +
+          (loadingKey ? '<p class="mastery-note">正在生成补充解释… <button data-action="cancel-request" data-id="' + w.id + '">停止等待</button></p>' : '') +
+          (w.supplementError ? '<p class="error-msg">' + escapeHtml(w.supplementError) + '</p>' : '') +
           customBox +
           renderSupplementaryList(w, true) +
         '</div>' +
@@ -1408,7 +1542,8 @@ html.embedded .word-card { border-color: var(--border); }
     const viewCount = w.viewCount || 0;
     let body = '';
     if (loading) {
-      body = '<div class="loading-card"><span class="spinner"></span>调用 ' + (config.model || 'AI') + ' 生成解释...</div>';
+      body = '<div class="loading-card"><span class="spinner"></span>调用 ' + (config.model || 'AI') + ' 生成解释...</div>' +
+        '<div class="action-row"><button data-action="cancel-request" data-id="' + w.id + '">停止等待</button></div>';
     } else if (errored) {
       const deleteBtn = options.hideDelete ? '' : '<button class="delete-btn" data-action="delete" data-id="' + w.id + '">删除</button>';
       body = '<div class="error-msg">' + escapeHtml(w.error || '生成失败') + '</div>' +
@@ -1531,17 +1666,21 @@ html.embedded .word-card { border-color: var(--border); }
   }
   async function addSupplementary(id, angle, question) {
     const w = words.find(x => x.id === id);
-    if (!w || supplementaryLoading) return;
+    if (!w || supplementaryLoading || activeRequests.has(id)) return;
     ensureLearningFields(w);
     if (angle === 'custom' && !question) {
       alert('先写下你具体卡在哪里');
       return;
     }
     normalizeConfig();
+    const controller = new AbortController();
+    activeRequests.set(id, controller);
     supplementaryLoading = { id, angle };
+    w.supplementError = '';
     render();
     try {
-      const content = await supplementWithWorker(w, angle, question);
+      const content = await supplementWithWorker(w, angle, question, controller.signal);
+      if (!words.includes(w)) return;
       w.supplementary.push({
         id: 'sup_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
         angle,
@@ -1554,8 +1693,9 @@ html.embedded .word-card { border-color: var(--border); }
       customQuestionWordId = null;
       w.lastInterpretedAt = Date.now();
     } catch (err) {
-      alert('补充解释生成失败：' + (err.message || '未知错误'));
+      if (words.includes(w)) w.supplementError = '补充解释未完成：' + (err.message || '未知错误') + ' 点击上方按钮可手动重试。';
     } finally {
+      if (activeRequests.get(id) === controller) activeRequests.delete(id);
       supplementaryLoading = null;
       saveWords();
       render();
@@ -1571,39 +1711,30 @@ html.embedded .word-card { border-color: var(--border); }
   }
   function deleteWord(id) {
     if (!confirm('确定删除这个词条？')) return;
+    activeRequests.get(id)?.abort();
     words = words.filter(w => w.id !== id);
     if (currentWordId === id) currentWordId = words[0] ? words[0].id : null;
     saveWords(); render();
   }
 
   // ===== API call layer =====
-  async function callWorker(payload) {
-    const res = await fetch(API_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    const raw = await res.text();
-    let data = null;
-    try { data = raw ? JSON.parse(raw) : null; }
-    catch (e) { throw new Error('接口返回不是有效 JSON：' + raw.slice(0, 160)); }
-    if (!res.ok) {
-      throw new Error((data && (data.error || data.message)) || ('接口请求失败：' + res.status));
-    }
-    return data;
+  async function callWorker(payload, signal) {
+    return requestWithTimeout(API_ENDPOINT, payload, { signal });
   }
 
-  async function interpretWithWorker(w) {
+  async function interpretWithWorker(w, signal) {
     const data = await callWorker({
       mode: 'interpret',
       term: w.term,
       tag: w.tag || 'ai',
       context: w.context || ''
-    });
-    return data && data.result ? data.result : data;
+    }, signal);
+    const parsed = data && data.result ? data.result : data;
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) throw new Error('接口未返回有效解释，请手动重试。');
+    return parsed;
   }
 
-  async function supplementWithWorker(w, angle, question) {
+  async function supplementWithWorker(w, angle, question, signal) {
     const data = await callWorker({
       mode: 'supplement',
       term: w.term,
@@ -1618,7 +1749,7 @@ html.embedded .word-card { border-color: var(--border); }
         explanation: w.explanation || '',
         example: w.example || ''
       }
-    });
+    }, signal);
     if (typeof data === 'string') return data;
     if (data && typeof data.content === 'string') return data.content;
     if (data && data.result && typeof data.result.content === 'string') return data.result.content;
@@ -1635,9 +1766,11 @@ html.embedded .word-card { border-color: var(--border); }
 
   async function processWord(id, options) {
     const w = words.find(x => x.id === id);
-    if (!w) return;
+    if (!w || activeRequests.has(id)) return;
     options = options || {};
     normalizeConfig();
+    const controller = new AbortController();
+    activeRequests.set(id, controller);
     if (options.countInterpretation && (!isPending(w) || getInterpretationCount(w) === 0)) {
       recordInterpretation(w);
     }
@@ -1646,7 +1779,8 @@ html.embedded .word-card { border-color: var(--border); }
     w.lastInterpretedAt = Date.now();
     saveWords(); render();
     try {
-      const parsed = await interpretWithWorker(w);
+      const parsed = await interpretWithWorker(w, controller.signal);
+      if (!words.includes(w)) return;
       w.isRecognizedTerm = parsed.isRecognizedTerm !== false;
       w.confidence = parsed.confidence || (w.isRecognizedTerm ? 'medium' : 'low');
       w.uncertaintyReason = parsed.uncertaintyReason || '';
@@ -1662,6 +1796,7 @@ html.embedded .word-card { border-color: var(--border); }
       w.error = null;
       w.lastInterpretedAt = Date.now();
     } catch (err) {
+      if (!words.includes(w)) return;
       w.status = 'error';
       const msg = err.message || '未知错误';
       if (msg.includes('Failed to fetch') || msg.includes('NetworkError') || msg.includes('CORS') || err.name === 'TypeError') {
@@ -1669,8 +1804,10 @@ html.embedded .word-card { border-color: var(--border); }
       } else {
         w.error = msg;
       }
+    } finally {
+      if (activeRequests.get(id) === controller) activeRequests.delete(id);
+      saveWords(); render();
     }
-    saveWords(); render();
   }
 
   function applyParsedToWord(w, parsed) {
@@ -1737,9 +1874,14 @@ html.embedded .word-card { border-color: var(--border); }
     document.getElementById('prompt-modal').classList.add('open');
   }
   function closeAllModals() {
+    const backupWasOpen = document.getElementById('backup-modal').classList.contains('open');
     document.querySelectorAll('.modal').forEach(m => m.classList.remove('open'));
     document.getElementById('paste-error').innerHTML = '';
     document.getElementById('json-input').value = '';
+    pendingBackup = null;
+    backupReadVersion++;
+    if (backupWasOpen && backupReturnFocus?.isConnected) backupReturnFocus.focus();
+    backupReturnFocus = null;
   }
   function copyPrompt() {
     const text = document.getElementById('prompt-text').textContent;
@@ -1808,6 +1950,10 @@ html.embedded .word-card { border-color: var(--border); }
     scrollLibraryListTo(target);
   });
   document.getElementById('export-btn').addEventListener('click', exportWords);
+  document.getElementById('import-btn').addEventListener('click', openBackupModal);
+  document.getElementById('backup-file').addEventListener('change', previewBackup);
+  document.getElementById('backup-cancel').addEventListener('click', closeAllModals);
+  document.getElementById('backup-merge').addEventListener('click', confirmBackupMerge);
   document.getElementById('copy-prompt').addEventListener('click', copyPrompt);
   document.getElementById('prompt-cancel').addEventListener('click', closeAllModals);
   document.getElementById('prompt-next').addEventListener('click', () => {
@@ -1823,6 +1969,20 @@ html.embedded .word-card { border-color: var(--border); }
   document.getElementById('paste-save').addEventListener('click', parseJsonInput);
   document.querySelectorAll('.modal').forEach(m => {
     m.addEventListener('click', e => { if (e.target === m) closeAllModals(); });
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeAllModals();
+    const backup = document.getElementById('backup-modal');
+    if (event.key !== 'Tab' || !backup.classList.contains('open')) return;
+    const controls = Array.from(backup.querySelectorAll('input, button')).filter(el => !el.disabled);
+    const first = controls[0], last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
+  window.addEventListener('pagehide', () => {
+    for (const controller of activeRequests.values()) controller.abort();
+    words = recoverInterruptedWords(words);
+    saveWords();
   });
   document.querySelectorAll('.pill').forEach(p => {
     p.addEventListener('click', () => {

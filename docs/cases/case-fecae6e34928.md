@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,6 +29,9 @@ import item from '../.vitepress/data/cases-generated/case-fecae6e34928.json'
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
 准备生图工具、视频工具与自己的角色或产品参考图。先按原文制作分镜或视觉参考，再将确认后的画面用于视频生成。
@@ -36,6 +39,8 @@ import item from '../.vitepress/data/cases-generated/case-fecae6e34928.json'
 参考工具：Seedance 2.0。
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 1. 阅读完整提示词，标出分镜图与视频动作分别对应的部分。
 2. 先用生图工具制作故事板或参考素材，核对每格主体与前后关系。
@@ -49,6 +54,8 @@ import item from '../.vitepress/data/cases-generated/case-fecae6e34928.json'
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 先保留镜头顺序，只替换一个主体或场景。若动作开始不连贯，减少同一段内的动作数量。
 

@@ -4,6 +4,7 @@ import { existsSync, readdirSync, readFileSync } from 'fs'
 import { resolve, join, basename, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { CAUTION_LINKS, TOOL_LINKS, PRACTICE_LINKS, FRONTIER_EXTRA_LINKS } from './stagesData.js'
+import { SITE_NAV } from './navigationData.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -260,16 +261,8 @@ export default defineConfig({
     sidebarMenuLabel: '目录',
     returnToTopLabel: '返回顶部',
 
-    // 2026-07 改版：与首页导航一致的五大入口
-    nav: [
-      { text: 'AI 最新动态', link: '/hot/' },
-      { text: 'AI 基础学习', link: '/stage-1/' },
-      { text: 'AI 进阶实践', link: '/stage-4/' },
-      { text: 'AI 实践案例集', link: '/cases/' },
-      { text: 'AI 视频课', link: '/videos/' },
-      { text: 'AI 能力自测', link: '/exams/' },
-      { text: 'AI 学习词汇本', link: '/vocab-book' },
-    ],
+    // 与首页共用入口清单，避免新增栏目后有一处漏掉。
+    nav: SITE_NAV,
 
     // 2026-07-28 改版：侧边栏按四大板块重组（目录与 URL 不变，仅逻辑归组）
     // 2026-07-28 内容重组：工具上手/注意事项/进阶实践按 stagesData.js 清单跨目录归组，

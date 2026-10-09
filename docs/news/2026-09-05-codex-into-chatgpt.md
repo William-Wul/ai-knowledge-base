@@ -39,7 +39,7 @@ date: 2026-09-05
   </div>
   <div style="border:2px solid #2D5A3D; border-left:6px solid #2D5A3D; border-radius:8px; padding:14px 16px; background:#eef5f0; margin-left:56px;">
     <strong style="color:#2D5A3D;">9 月 4 日 · 换引擎</strong><br>
-    <span style="font-size:14px; color:#33503c;">GPT-6 Astra 发布，Codex 随之再升级一轮，长任务加了"笔记本"机制（干活间隙主动把重点记到上下文窗口外，需要时再检索回来），治 agent 一干长活就忘事的老毛病。详见站内<a href="/frontier/gpt6-astra-after-claude-ban-wave">《GPT-6 Astra 发布》</a>。</span>
+    <span style="font-size:14px; color:#33503c;">GPT-6 Astra 发布，Codex 随之再升级一轮，长任务加了"笔记本"机制（干活间隙主动把重点记到上下文窗口外，需要时再检索回来），治 agent 一干长活就忘事的老毛病。实际长任务仍需要清楚的目标、资料范围和检查标准，不能只依赖模型自动记住全部细节。</span>
   </div>
 </div>
 <p class="figcaption">两个月里的完整时间线：先合并、再补能力、同时砍掉 Atlas，最后换上新一代模型。</p>
@@ -82,7 +82,7 @@ date: 2026-09-05
 
 **如果你是 ChatGPT 用户**：你免费多了两个模式。Codex 不再只是程序员工具。OpenAI 官方披露，Codex 周活超过 500 万，其中 100 多万人在用它干开发以外的活（做网页、整理文件、数据分析），这正是把它并进主应用的原因。如果你装的是旧版桌面应用（现在叫 ChatGPT Classic），建议换新版，旧版不再有新功能。
 
-**如果你是国内用户、没有 ChatGPT 账号**：第三方接入方案（Codex++、改 config.toml、CCX 中转那一套）作用在**命令行版 Codex** 上，这次合并不动它们，照旧可用。受影响的是桌面图形界面：想在新版 ChatGPT 桌面应用里用国产模型，目前没有现成方案，得看第三方工具后续的适配。详细的三条接入路线，站内 [Codex 保姆级教程](/stage-5/codex-guide) 第九章已按合并后的现状重写。
+**如果你是国内用户、没有 ChatGPT 账号**：第三方接入方案（Codex++、改 config.toml、CCX 中转那一套）作用在**命令行版 Codex** 上，这次合并不动它们，照旧可用。受影响的是桌面图形界面：想在新版 ChatGPT 桌面应用里用国产模型，目前没有现成方案，得看第三方工具后续的适配。选择方案时先分清命令行工具和桌面应用，再核对服务范围、账号条款、资料权限和计费方式；第三方能否适配，要看具体版本，不能由这次新闻推断。
 
 ---
 

@@ -24,7 +24,7 @@ export const dimensions = [
       '会给目标和部分材料，但标准和红线经常漏掉。',
       '目标、材料、约束、验收标准会一次给齐。',
     ],
-    topics: ['prompt-advanced', 'write-skill'],
+    topics: ['context-management', 'define-done'],
   },
   {
     key: 'workflow', label: '流程力', color: '#386f82',
@@ -33,7 +33,7 @@ export const dimensions = [
       '会拆任务，但验收和返工环节还不稳定。',
       '会拆流程、定验收，让 AI 分步推进。',
     ],
-    topics: ['loop-engineering', 'multi-agent'],
+    topics: ['define-done', 'loop-engineering', 'multi-agent'],
   },
   {
     key: 'agent', label: 'Agent 力', color: '#6f5c9c',

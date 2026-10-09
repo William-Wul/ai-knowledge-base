@@ -62,6 +62,10 @@ else
   fi
 fi
 
+# 本地发布入口先验证，任何检查失败都不会提交或推送。
+echo -e "${GREEN}🔍 验证测试、构建、案例与站内链接...${NC}"
+npm run docs:check
+
 # 暂存所有变更
 echo -e "${GREEN}➕ 暂存变更...${NC}"
 git add .

@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,6 +29,9 @@ import item from '../.vitepress/data/cases-generated/mountain-dew-spark-b16d4e23
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
 准备人物与产品参考素材，使用能生成视频的工具。原提示词为两段各 15 秒；可用时长以工具实际支持为准。
@@ -36,6 +39,8 @@ import item from '../.vitepress/data/cases-generated/mountain-dew-spark-b16d4e23
 参考工具：Seedance 2.0。
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 1. 先读两段分镜，准备人物和产品参考素材。将品牌、包装及人物描述改为自己的内容。
 2. 原文是两段各 15 秒的提示词。按工具支持的时长分段提交，后一段沿用前一段的人物与服装参考。
@@ -48,6 +53,8 @@ import item from '../.vitepress/data/cases-generated/mountain-dew-spark-b16d4e23
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 先只做开罐的前 4 秒，检查产品文字和涂鸦互动，再扩展后续动作。
 

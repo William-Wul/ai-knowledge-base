@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,19 +29,25 @@ import item from '../.vitepress/data/cases-generated/batch-product-poster-propos
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
-准备支持图片生成的 AI 工具，确定主题、画幅比例和需要出现的文字。
+准备一张包装和标志清楚的产品图，填好产品名、用途和发布平台。原文要求 8 张不同方案，画幅 3:4，产品外观保持准确。
 
 参考工具：GPT Image 2。
 
 ## 怎么做
 
-1. 先看效果图，找出主体位置、配色和需要保留的细节。
-2. 复制下方中文提示词，把主体、品牌、地点或画面文字换成自己的内容；有【占位内容】时一并替换。
-3. 按提示词的要求提交参考图，先生成一张；对照要求检查主体、文字和构图，再针对问题修改。
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
-**值得学习的写法：** 先固定产品形状与标识，再描述背景、材质和光线，避免主体在换场景时被改掉。
+1. 先写下包装形状、产品颜色和标志位置三个固定项，填入产品名、用途与平台后提交参考图。
+2. 按原文八种风格方向生成方案；工具不支持一次多张时，分次使用相同产品图，分别指定风格。
+3. 先检查每张的产品外观，再比较场景、摆放角度、光线与构图是否确实不同，剔除只换背景的重复方案。
+4. 选两张与产品用途最贴近的方案做细改；正式使用前核对包装文字与自己提供的素材。
+
+**值得学习的写法：** 原文固定产品识别点，同时让场景、角度、光线与构图一起变化，让方案之间形成可比较的差异。
 
 ## 完整提示词
 
@@ -49,7 +55,9 @@ import item from '../.vitepress/data/cases-generated/batch-product-poster-propos
 
 ## 改成自己的内容
 
-保留原有构图，换成自己的主题做一版；再只调整配色或材质，比较哪个变化最影响画面。
+**本站练习建议：**
+
+用同一瓶饮料做夏日清爽、早餐场景和暗调质感三版，这是本站缩小范围的练习。比较包装是否一致，以及每版能否一眼看清产品用途。
 
 ## 作者与来源
 

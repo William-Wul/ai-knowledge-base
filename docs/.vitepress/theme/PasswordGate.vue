@@ -33,8 +33,8 @@
             </svg>
           </button>
         </div>
-        <p v-if="hasError" class="error-msg">密码错误，请重试</p>
-        <button type="submit" class="submit-btn" :class="{ disabled: !password }" @click.prevent="password && handleSubmit()">
+        <p v-if="hasError" class="error-msg" role="alert">{{ errorMessage }}</p>
+        <button type="submit" class="submit-btn" :disabled="!password || submitting">
           进入知识库 →
         </button>
       </form>
@@ -46,12 +46,10 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
+import { ACCESS_CONFIG } from '../accessConfig.js'
+import { grantAccess, hasSessionAccess } from './accessState.js'
 
-// ⚠️ 修改密码：把新密码用 SHA-256 算一下，把十六进制摘要填到这里。
-// 算法：printf '%s' '你的密码' | shasum -a 256
-// 明文不进代码，避免被 F12 一眼看穿。
-const CORRECT_HASH = '743392a6cfca212568fbd1ca6b693f91f583f67672f2698b000dc20e062ddf6e'
-const STORAGE_KEY = 'kb_auth_v1'
+const { hash: CORRECT_HASH, storageKey: STORAGE_KEY, storageValue } = ACCESS_CONFIG
 
 const authenticated = ref(false)
 const password = ref('')
@@ -59,6 +57,8 @@ const hasError = ref(false)
 const shaking = ref(false)
 const showPassword = ref(false)
 const inputRef = ref(null)
+const submitting = ref(false)
+const errorMessage = ref('密码错误，请重试')
 
 // SHA-256 摘要（用浏览器原生 Web Crypto API，不引入依赖）
 async function sha256(text) {
@@ -78,8 +78,10 @@ function redirectIfNotFound() {
 }
 
 onMounted(() => {
-  const stored = localStorage.getItem(STORAGE_KEY)
-  if (stored === 'ok') {
+  let stored
+  try { stored = localStorage.getItem(STORAGE_KEY) } catch {}
+  if (stored === storageValue || hasSessionAccess()) {
+    grantAccess()
     authenticated.value = true
     window.dispatchEvent(new Event('kb-authenticated'))
     redirectIfNotFound()
@@ -89,13 +91,24 @@ onMounted(() => {
 })
 
 async function handleSubmit() {
-  const hash = await sha256(password.value)
+  if (!password.value || submitting.value) return
+  submitting.value = true
+  let hash
+  try { hash = await sha256(password.value) } catch {
+    hasError.value = true
+    errorMessage.value = '当前浏览器无法校验密码，请使用 HTTPS 或更新浏览器后重试。'
+    submitting.value = false
+    return
+  }
+  submitting.value = false
   if (hash === CORRECT_HASH) {
-    localStorage.setItem(STORAGE_KEY, 'ok')
+    grantAccess()
+    try { localStorage.setItem(STORAGE_KEY, storageValue) } catch {}
     authenticated.value = true
     window.dispatchEvent(new Event('kb-authenticated'))
     redirectIfNotFound()
   } else {
+    errorMessage.value = '密码错误，请重试'
     hasError.value = true
     shaking.value = true
     password.value = ''

@@ -12,6 +12,8 @@ export const topicMap = {
   // —— 维度补短板推荐（按能力维度）——
   'prompt-basic':      { text: '跟 AI 说话的基本方法',         link: '/stage-2/how-to-prompt' },
   'prompt-advanced':   { text: 'Prompt 进阶技巧',              link: '/stage-2/prompt-cases' },
+  'context-management': { text: '上下文管理：给 AI 喂对资料', link: '/stage-2/context-management' },
+  'define-done':       { text: '给 AI 派活：把完成定义明白', link: '/stage-2/define-done' },
   'write-skill':       { text: '如何写好一个 Skill',           link: '/stage-3/write-good-skill' },
   'loop-engineering':  { text: 'Loop Engineering：让 AI 自己干完', link: '/stage-3/loop-engineering' },
   'multi-agent':       { text: '多 AI 协同：带一队 AI 做项目',  link: '/stage-4/multi-agent-teamwork' },

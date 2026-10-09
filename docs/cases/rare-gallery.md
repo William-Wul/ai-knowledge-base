@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,6 +29,9 @@ import item from '../.vitepress/data/cases-generated/rare-gallery.json'
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
 准备品牌名称、介绍、按钮目标地址和有使用权限的背景视频，再交给 AI 编程工具制作。
@@ -36,6 +39,8 @@ import item from '../.vitepress/data/cases-generated/rare-gallery.json'
 参考工具：AI 编程工具。
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 1. 准备自己的品牌名称、介绍和有使用权限的背景视频。
 2. 把提示词交给 AI 编程工具，替换其中的品牌文案、视频地址和按钮去向。
@@ -48,6 +53,8 @@ import item from '../.vitepress/data/cases-generated/rare-gallery.json'
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 先保留布局，只替换背景视频与品牌文案，观察画面与文字是否协调。
 

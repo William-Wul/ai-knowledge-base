@@ -9,20 +9,15 @@
         </svg>
         <span>AI 学习知识库</span>
       </a>
-      <button class="nav-search" @click="triggerSearch" aria-label="打开搜索">
+      <button class="nav-search" type="button" @click="triggerSearch" aria-label="打开搜索">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
         </svg>
-        <span>搜索</span>
+        <span class="search-label">搜索</span>
         <span class="kbd">{{ shortcutKey }}</span>
       </button>
       <ul class="nav-links">
-        <li><a href="/hot/">AI 最新动态</a></li>
-        <li><a href="/stage-1/">AI 基础学习</a></li>
-        <li><a href="/stage-4/">AI 进阶实践</a></li>
-        <li><a href="/cases/">AI 实践案例集</a></li>
-        <li><a href="/exams/">AI 能力自测</a></li>
-        <li><a href="/vocab-book">AI 学习词汇本</a></li>
+        <li v-for="item in SITE_NAV" :key="item.link"><a :href="item.link">{{ item.text }}</a></li>
       </ul>
       <button
         class="nav-theme"
@@ -55,6 +50,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useData } from 'vitepress'
+import { SITE_NAV } from '../../navigationData.js'
 
 const { isDark } = useData()
 const toggleTheme = () => { isDark.value = !isDark.value }
@@ -148,6 +144,7 @@ function triggerSearch() {
   list-style: none;
   margin-block: 0;
   padding-inline-start: 0;
+  min-width: 0;
 }
 .nav-links > li { position: relative; flex-shrink: 0; }
 .nav-links a {
@@ -184,12 +181,40 @@ function triggerSearch() {
   background: var(--green-100);
 }
 
-@media (max-width: 960px) {
-  .nav-inner { padding: 12px 20px; gap: 12px; }
-  .nav-search { display: none; }
-  /* 窄屏下链接可横向滑动，不再整体隐藏 */
-  .nav-links { overflow-x: auto; scrollbar-width: none; }
+@media (max-width: 1180px) {
+  .nav-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px 44px;
+    height: auto;
+    padding: 10px 20px 6px;
+    gap: 4px 8px;
+  }
+  .nav-search {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    padding: 0;
+  }
+  .nav-search .search-label,
+  .nav-search .kbd { display: none; }
+  .nav-search svg { width: 18px; height: 18px; }
+  .nav-theme { grid-column: 3; grid-row: 1; width: 44px; height: 44px; margin-left: 0; }
+  /* 入口另占一行可横向滑动，手机上的搜索和主题按钮始终可见。 */
+  .nav-links {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-left: 0;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
   .nav-links::-webkit-scrollbar { display: none; }
-  .nav-links a { padding: 6px 9px; font-size: 12.5px; }
+  .nav-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 10px; font-size: 12.5px; }
 }
+.nav-search:focus-visible,
+.nav-theme:focus-visible,
+.nav-links a:focus-visible { outline: 2px solid var(--green-700); outline-offset: 2px; }
 </style>

@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,6 +29,9 @@ import item from '../.vitepress/data/cases-generated/file-upload.json'
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
 需要一个 React 项目，或让 AI 编程工具先创建预览项目。原组件依赖动画、拖拽和图标库，交给 AI 检查依赖后接入。
@@ -36,6 +39,8 @@ import item from '../.vitepress/data/cases-generated/file-upload.json'
 参考工具：AI 编程工具。
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 1. 复制下方中文使用指令与完整源码，交给 AI 编程工具。
 2. 告诉 AI 选中文件后要做什么，例如检查格式或交给现有处理功能。
@@ -48,6 +53,8 @@ import item from '../.vitepress/data/cases-generated/file-upload.json'
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 要求 AI 限制只能选择图片，并为不支持的格式显示中文提示。
 

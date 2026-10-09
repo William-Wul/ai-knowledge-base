@@ -1,3 +1,5 @@
+import { hasSessionAccess } from '../accessState.js'
+
 const LIST_CATEGORIES = new Set(['all', 'image', 'video', 'web'])
 const SLUG_PATTERN = /^[a-z0-9-]+$/
 const STORAGE_PREFIX = 'case-list-state:'
@@ -37,11 +39,12 @@ export function getListContext(path) {
 }
 
 export function filterCases(cases, category = 'all', query = '') {
-  const needle = String(query || '').trim().toLowerCase()
-  return cases.filter(item =>
-    (category === 'all' || item.category === category) &&
-    `${item.title} ${item.summary} ${item.use} ${(item.models || []).join(' ')} ${item.creator}`.toLowerCase().includes(needle)
-  )
+  const needles = String(query || '').trim().toLowerCase().split(/\s+/).filter(Boolean)
+  return cases.filter(item => {
+    if (category !== 'all' && item.category !== category) return false
+    const text = `${item.title} ${item.summary} ${item.use} ${(item.models || []).join(' ')} ${item.creator}`.toLowerCase()
+    return needles.every(needle => text.includes(needle))
+  })
 }
 
 export function resolveCaseContext(item, cases, fromPath) {
@@ -112,6 +115,7 @@ export function pauseCaseMedia(scope = typeof document === 'undefined' ? null : 
 // Match the existing password gate; an unauthenticated deep link must not
 // place a native top-layer dialog above the site's access screen.
 export function hasCaseAccess(storage) {
+  if (arguments.length === 0 && hasSessionAccess()) return true
   try {
     const target = storage || (typeof window === 'undefined' ? null : window.localStorage)
     return target?.getItem('kb_auth_v1') === 'ok'

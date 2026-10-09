@@ -8,7 +8,7 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
@@ -29,6 +29,9 @@ import item from '../.vitepress/data/cases-generated/taskly.json'
 
 <CaseMedia :item="item" />
 
+**验证状态：本站未实测生成效果。** 这里展示的是来源作品；生成工具的可选设置和实际输出需另行核对。
+
+
 ## 开始前准备
 
 准备产品名、介绍和真实用户反馈；用 AI 编程工具制作。原文引用了外部动态素材，使用前确认可以访问和使用。
@@ -36,6 +39,8 @@ import item from '../.vitepress/data/cases-generated/taskly.json'
 参考工具：AI 编程工具。
 
 ## 怎么做
+
+以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
 1. 准备产品名、介绍和真实的用户反馈。原文中的评分和客户数量是示例，不代表你的产品数据。
 2. 将完整提示词交给 AI 编程工具，替换品牌文案和素材地址。
@@ -48,6 +53,8 @@ import item from '../.vitepress/data/cases-generated/taskly.json'
 <CasePrompt :item="item" />
 
 ## 改成自己的内容
+
+**本站练习建议：**
 
 把主色改成自己的品牌色，保留透明度与阴影关系，比较页面层次。
 
