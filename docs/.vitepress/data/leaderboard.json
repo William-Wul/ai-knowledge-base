@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 7,
   "evaluationCount": 35,
-  "sourceUpdatedAt": "10/08 14:06",
-  "syncedAt": "2026-10-08T10:29:14.024Z",
+  "sourceUpdatedAt": "10/09 14:06",
+  "syncedAt": "2026-10-09T10:28:10.330Z",
   "models": [
     {
       "rank": 1,
@@ -16,9 +16,9 @@
       "evidenceCount": 33,
       "evidenceStatus": "覆盖96%",
       "cachePrice": "¥1.34",
-      "inputPrice": "¥26.82",
-      "outputPrice": "¥134.09",
-      "score": 73.8
+      "inputPrice": "¥26.81",
+      "outputPrice": "¥134.05",
+      "score": 73.9
     },
     {
       "rank": 2,
@@ -42,25 +42,12 @@
       "evidenceCount": 35,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥1.68",
-      "inputPrice": "¥67.05",
-      "outputPrice": "¥335.23",
-      "score": 72.3
+      "inputPrice": "¥67.02",
+      "outputPrice": "¥335.12",
+      "score": 72.2
     },
     {
       "rank": 4,
-      "slug": "gpt-6-astra",
-      "name": "GPT-6 Astra",
-      "provider": "OpenAI",
-      "releaseDate": "2026-09-03",
-      "evidenceCount": 35,
-      "evidenceStatus": "覆盖100%",
-      "cachePrice": "¥6.7",
-      "inputPrice": "¥67.05",
-      "outputPrice": "¥335.23",
-      "score": 71.4
-    },
-    {
-      "rank": 5,
       "slug": "claude-sonnet-5-5",
       "name": "Claude Sonnet 5.5",
       "provider": "Anthropic",
@@ -68,8 +55,21 @@
       "evidenceCount": 33,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥1.34",
-      "inputPrice": "¥13.41",
-      "outputPrice": "¥67.05",
+      "inputPrice": "¥13.4",
+      "outputPrice": "¥67.02",
+      "score": 71.4
+    },
+    {
+      "rank": 5,
+      "slug": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "provider": "OpenAI",
+      "releaseDate": "2026-09-03",
+      "evidenceCount": 35,
+      "evidenceStatus": "覆盖100%",
+      "cachePrice": "¥6.7",
+      "inputPrice": "¥67.02",
+      "outputPrice": "¥335.12",
       "score": 71.3
     },
     {
@@ -81,8 +81,8 @@
       "evidenceCount": 30,
       "evidenceStatus": "覆盖89%",
       "cachePrice": "¥6.7",
-      "inputPrice": "¥67.05",
-      "outputPrice": "¥335.23",
+      "inputPrice": "¥67.02",
+      "outputPrice": "¥335.12",
       "score": 69.9
     },
     {
@@ -94,8 +94,8 @@
       "evidenceCount": 34,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥0.67",
-      "inputPrice": "¥13.41",
-      "outputPrice": "¥67.05",
+      "inputPrice": "¥13.4",
+      "outputPrice": "¥67.02",
       "score": 69
     },
     {
@@ -107,8 +107,8 @@
       "evidenceCount": 35,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥33.52",
-      "outputPrice": "¥167.62",
+      "inputPrice": "¥33.51",
+      "outputPrice": "¥167.56",
       "score": 68.9
     },
     {
@@ -120,9 +120,9 @@
       "evidenceCount": 33,
       "evidenceStatus": "覆盖93%",
       "cachePrice": "¥2.68",
-      "inputPrice": "¥26.82",
-      "outputPrice": "¥134.09",
-      "score": 66
+      "inputPrice": "¥26.81",
+      "outputPrice": "¥134.05",
+      "score": 65.9
     },
     {
       "rank": 10,
@@ -133,9 +133,9 @@
       "evidenceCount": 32,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥1.34",
-      "inputPrice": "¥13.41",
-      "outputPrice": "¥67.05",
-      "score": 65.7
+      "inputPrice": "¥13.4",
+      "outputPrice": "¥67.02",
+      "score": 65.6
     },
     {
       "rank": 11,
@@ -147,7 +147,7 @@
       "evidenceStatus": "覆盖89%",
       "cachePrice": "¥1.01",
       "inputPrice": "¥8.38",
-      "outputPrice": "¥28.49",
+      "outputPrice": "¥28.48",
       "score": 65.4
     },
     {
@@ -160,8 +160,8 @@
       "evidenceStatus": "覆盖96%",
       "cachePrice": "¥0.5",
       "inputPrice": "¥5.03",
-      "outputPrice": "¥25.14",
-      "score": 64.4
+      "outputPrice": "¥25.13",
+      "score": 64.5
     },
     {
       "rank": 13,
@@ -174,7 +174,7 @@
       "cachePrice": "¥2",
       "inputPrice": "¥20",
       "outputPrice": "¥100",
-      "score": 63.3
+      "score": 63.2
     },
     {
       "rank": 14,
@@ -185,8 +185,8 @@
       "evidenceCount": 30,
       "evidenceStatus": "覆盖89%",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥33.52",
-      "outputPrice": "¥167.62",
+      "inputPrice": "¥33.51",
+      "outputPrice": "¥167.56",
       "score": 63
     },
     {
@@ -212,7 +212,7 @@
       "evidenceStatus": "覆盖93%",
       "cachePrice": "¥0.5",
       "inputPrice": "¥5.03",
-      "outputPrice": "¥25.14",
+      "outputPrice": "¥25.13",
       "score": 62.8
     },
     {
@@ -224,8 +224,8 @@
       "evidenceCount": 34,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥1.74",
-      "inputPrice": "¥9.39",
-      "outputPrice": "¥29.5",
+      "inputPrice": "¥9.38",
+      "outputPrice": "¥29.49",
       "score": 62.4
     },
     {
@@ -237,8 +237,8 @@
       "evidenceCount": 28,
       "evidenceStatus": "覆盖86%",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥33.52",
-      "outputPrice": "¥201.14",
+      "inputPrice": "¥33.51",
+      "outputPrice": "¥201.07",
       "score": 62.3
     },
     {
@@ -250,8 +250,8 @@
       "evidenceCount": 19,
       "evidenceStatus": "覆盖64%",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥33.52",
-      "outputPrice": "¥167.62",
+      "inputPrice": "¥33.51",
+      "outputPrice": "¥167.56",
       "score": 62.1
     },
     {
@@ -263,8 +263,8 @@
       "evidenceCount": 33,
       "evidenceStatus": "覆盖96%",
       "cachePrice": "¥1.34",
-      "inputPrice": "¥13.41",
-      "outputPrice": "¥80.46",
+      "inputPrice": "¥13.4",
+      "outputPrice": "¥80.43",
       "score": 62.1
     },
     {
@@ -276,8 +276,8 @@
       "evidenceCount": 31,
       "evidenceStatus": "覆盖96%",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥13.41",
-      "outputPrice": "¥40.23",
+      "inputPrice": "¥13.4",
+      "outputPrice": "¥40.21",
       "score": 61.6
     },
     {
@@ -289,8 +289,8 @@
       "evidenceCount": 35,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥3.35",
-      "inputPrice": "¥13.41",
-      "outputPrice": "¥40.23",
+      "inputPrice": "¥13.4",
+      "outputPrice": "¥40.21",
       "score": 61.3
     },
     {
@@ -303,11 +303,24 @@
       "evidenceStatus": "覆盖82%",
       "cachePrice": "¥1.01",
       "inputPrice": "¥8.38",
-      "outputPrice": "¥28.49",
+      "outputPrice": "¥28.48",
       "score": 61.1
     },
     {
       "rank": 24,
+      "slug": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-10-07",
+      "evidenceCount": 28,
+      "evidenceStatus": "覆盖86%",
+      "cachePrice": "待核验",
+      "inputPrice": "待核验",
+      "outputPrice": "待核验",
+      "score": 60.8
+    },
+    {
+      "rank": 25,
       "slug": "step-5-preview",
       "name": "Step 5 Preview",
       "provider": "StepFun",
@@ -317,10 +330,10 @@
       "cachePrice": "待核验",
       "inputPrice": "待核验",
       "outputPrice": "待核验",
-      "score": 60.7
+      "score": 60.5
     },
     {
-      "rank": 25,
+      "rank": 26,
       "slug": "deepseek-v-4-1-flash",
       "name": "DeepSeek V4.1 Flash",
       "provider": "DeepSeek",
@@ -329,21 +342,8 @@
       "evidenceStatus": "覆盖93%",
       "cachePrice": "¥0.0402",
       "inputPrice": "¥2.01",
-      "outputPrice": "¥8.05",
+      "outputPrice": "¥8.04",
       "score": 60.1
-    },
-    {
-      "rank": 26,
-      "slug": "claude-haiku-5-5",
-      "name": "Claude Haiku 5.5",
-      "provider": "Anthropic",
-      "releaseDate": "2026-10-07",
-      "evidenceCount": 18,
-      "evidenceStatus": "覆盖61%",
-      "cachePrice": "待核验",
-      "inputPrice": "待核验",
-      "outputPrice": "待核验",
-      "score": 59
     },
     {
       "rank": 27,
@@ -367,9 +367,9 @@
       "evidenceCount": 32,
       "evidenceStatus": "覆盖93%",
       "cachePrice": "¥1.34",
-      "inputPrice": "¥13.41",
-      "outputPrice": "¥67.05",
-      "score": 58.8
+      "inputPrice": "¥13.4",
+      "outputPrice": "¥67.02",
+      "score": 58.7
     },
     {
       "rank": 29,
@@ -394,7 +394,7 @@
       "evidenceStatus": "覆盖71%",
       "cachePrice": "¥1.01",
       "inputPrice": "¥8.38",
-      "outputPrice": "¥28.49",
+      "outputPrice": "¥28.48",
       "score": 58.5
     }
   ]
