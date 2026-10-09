@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/johnagi168-minimax-h3-ai-98aaf6b33e96.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 拒拍表情切换到甜笑写真
+
+<CaseTags :item="item" />
 
 用短促表情变化和照片式画面建立反差，练习人物反应与拍摄节奏。
 

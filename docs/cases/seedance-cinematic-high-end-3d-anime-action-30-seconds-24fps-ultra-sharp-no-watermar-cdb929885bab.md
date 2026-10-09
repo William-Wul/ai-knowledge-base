@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/seedance-cinematic-high-end-3d-anime-action-30-seconds-24fps-ultra-sharp-no-watermar-cdb929885bab.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 全息竞技场的双刃对决
+
+<CaseTags :item="item" />
 
 用青色和金色区分两名角色，练习连续动作、空间关系和能量特效的配合。
 

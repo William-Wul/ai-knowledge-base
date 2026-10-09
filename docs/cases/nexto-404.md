@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/nexto-404.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 飞碟主题的网页错误页
+
+<CaseTags :item="item" />
 
 通过飞碟插画、简洁提示和返回入口，设计友好的页面缺失提示。
 

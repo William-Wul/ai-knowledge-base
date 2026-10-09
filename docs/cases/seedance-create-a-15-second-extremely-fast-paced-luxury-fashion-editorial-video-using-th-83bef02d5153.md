@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/seedance-create-a-15-second-extremely-fast-paced-luxury-fashion-editorial-video-using-th-83bef02d5153.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 报纸背景中的固定姿势时尚片
+
+<CaseTags :item="item" />
 
 保持人物躺姿不变，通过景别、光线和报纸运动制造十五秒画面变化。
 

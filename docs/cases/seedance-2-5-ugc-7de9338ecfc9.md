@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/seedance-2-5-ugc-7de9338ecfc9.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 咖啡机开箱与试用短片
+
+<CaseTags :item="item" />
 
 Seedance 2.5 生成的竖屏咖啡机UGC广告，创作者从开箱、注水磨豆到出品试饮完整走一遍产品使用流程，中间穿插台词。分镜按秒数安排特写与转场，模拟真实博主口播带货的镜头语言。
 

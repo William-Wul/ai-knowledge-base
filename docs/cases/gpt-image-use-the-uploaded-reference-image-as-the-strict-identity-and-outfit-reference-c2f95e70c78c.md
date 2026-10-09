@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-use-the-uploaded-reference-image-as-the-strict-identity-and-outfit-reference-c2f95e70c78c.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 人物与夸张涂鸦影子
+
+<CaseTags :item="item" />
 
 保留参考人物和服装，让身旁影子变成夸张涂鸦，练习写实与手绘的对照。
 

@@ -1,9 +1,10 @@
 import { writeFileSync, mkdirSync, readdirSync, readFileSync, unlinkSync, existsSync, rmdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
-import { loadCases, root } from './practice-cases-data.mjs'
+import { root } from './practice-cases-data.mjs'
+import { loadTaggedCases } from './case-tags-data.mjs'
 import { CASE_CATEGORIES } from '../docs/.vitepress/casesData.js'
 
-const cases = loadCases()
+const cases = loadTaggedCases()
 const selectedSlugs = new Set(cases.map(c => c.slug))
 const categoryIds = new Set(CASE_CATEGORIES.map(c => c.id))
 // Retire only category indexes produced by this generator, leaving other files intact.
@@ -26,7 +27,7 @@ for (const file of readdirSync(resolve(root, 'docs/cases'))) {
 }
 const generated = resolve(root, 'docs/.vitepress/data/cases-generated')
 mkdirSync(generated, { recursive: true })
-const fields = ['slug', 'category', 'title', 'summary', 'use', 'models', 'creator', 'thumbnail', 'cover', 'mediaType', 'contentKind', 'mediaUrl', 'imageUrl', 'mediaNote']
+const fields = ['slug', 'category', 'title', 'summary', 'use', 'models', 'creator', 'thumbnail', 'cover', 'mediaType', 'contentKind', 'mediaUrl', 'imageUrl', 'mediaNote', 'tags']
 writeFileSync(resolve(generated, 'index.json'), JSON.stringify(cases.map(c => Object.fromEntries(fields.filter(k => c[k] !== undefined).map(k => [k, c[k]])))))
 const safeText = value => String(value || '').replace(/[&<>{}]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '{': '&#123;', '}': '&#125;' }[c])).replace(/([\\`*_[\]#!|])/g, '\\$1')
 const safeUrl = value => {
@@ -52,7 +53,7 @@ outline: false
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / casesData.js 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json / casesData.js 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseLibrary from '${relative}.vitepress/theme/components/CaseLibrary.vue'
 </script>
@@ -80,18 +81,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/${c.slug}.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # ${safeText(c.title)}
+
+<CaseTags :item="item" />
 
 ${safeText(c.summary)}
 

@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-10-06",
-  "sourceTotal": 1666,
-  "sourceFetched": 1666,
+  "capturedAt": "2026-10-09",
+  "sourceTotal": 1716,
+  "sourceFetched": 1716,
   "sourceUnavailable": 0,
   "selectionPolicy": "保留已收录内容与顺序；新增按完整提示词、效果、来源与可复用性筛选，排除重复原文；按本批指定分类与数量增量收录。",
   "cases": [
@@ -2804,6 +2804,1056 @@
       "category": "video",
       "editorialScore": 77.0,
       "sourcePromptSha256": "cd554e3c20dfd8790aec7a48fea2ebc3155ab7f9345bea8874075c6707298a63"
+    },
+    {
+      "slug": "gpt-image-2-5-create-one-independent-high-end-editorial-poster-for-each-uploaded-photo-0f4da33ca46e",
+      "rank": 401,
+      "category": "image",
+      "editorialScore": 89.0,
+      "sourcePromptSha256": "e56b622050ecc6d38b7963b25db6e14f782b2c97ca2cf98952f9a3257586aff9"
+    },
+    {
+      "slug": "prisma-creative-studio",
+      "rank": 402,
+      "category": "web",
+      "editorialScore": 86.0,
+      "sourcePromptSha256": "4fc7f6c5021dfbf0662047d5ca32bd83291f7d06645f539c0ec99766c56c5128"
+    },
+    {
+      "slug": "real-case-12-viktoroddy",
+      "rank": 403,
+      "category": "web",
+      "editorialScore": 86,
+      "sourcePromptSha256": "f8c850dc232379f779b108f7708d8cad4ee8ad7f05b1f00a90bf600d4d678c8d"
+    },
+    {
+      "slug": "cozypaws",
+      "rank": 404,
+      "category": "web",
+      "editorialScore": 85.9,
+      "sourcePromptSha256": "bafa6b2af5f0a290f17c922f798f46e2e7a6fdfbb7c25208c3ccae1c73e74074"
+    },
+    {
+      "slug": "gemini-formula-1-5fb69c5e1530",
+      "rank": 405,
+      "category": "web",
+      "editorialScore": 85.9,
+      "sourcePromptSha256": "59f1a3e0e4b6c52c4406ac8e719e4a221773e53dae412257c031ae7e18afa360"
+    },
+    {
+      "slug": "intelligence-layer",
+      "rank": 406,
+      "category": "web",
+      "editorialScore": 85.9,
+      "sourcePromptSha256": "c604cf57aceff45ac77ec77b990aeea449dae1b781bea927a25b8c0028db0f7c"
+    },
+    {
+      "slug": "neuralyn",
+      "rank": 407,
+      "category": "web",
+      "editorialScore": 85.9,
+      "sourcePromptSha256": "2268d689489cc9ef20b5acf32baed1f3cc26a9564f1537d11115cacc3064698f"
+    },
+    {
+      "slug": "ai-trip-planner",
+      "rank": 408,
+      "category": "web",
+      "editorialScore": 85.8,
+      "sourcePromptSha256": "7474b033ca4375628195dc7171975ddf4ca66c03b8cb022a784651788086bfdf"
+    },
+    {
+      "slug": "creative-studio",
+      "rank": 409,
+      "category": "web",
+      "editorialScore": 85.8,
+      "sourcePromptSha256": "3520f044ab716f4599c9c6e0a7e8558c6bab0d83c0964030b7af41e14ca52f82"
+    },
+    {
+      "slug": "haul",
+      "rank": 410,
+      "category": "web",
+      "editorialScore": 85.8,
+      "sourcePromptSha256": "beb34a74f829f70f04c9cf562fcc0f9d3950bb3988e980ec1bba2bd1621ae33a"
+    },
+    {
+      "slug": "liquid-glass-cta",
+      "rank": 411,
+      "category": "web",
+      "editorialScore": 85.8,
+      "sourcePromptSha256": "c2b930af8e18e1793374297475e356008a360bdf3138298ca9ef3e6c7b5a2050"
+    },
+    {
+      "slug": "contact-cybernetic",
+      "rank": 412,
+      "category": "web",
+      "editorialScore": 85.7,
+      "sourcePromptSha256": "ee41379434e1ab522038323a340c45c209677fdeefc9df4a184167c837e08ba1"
+    },
+    {
+      "slug": "dot",
+      "rank": 413,
+      "category": "web",
+      "editorialScore": 85.7,
+      "sourcePromptSha256": "b614b6f76ad13973a13b4b0f84bd52690615fb74faab019d428f0bb9336ddd31"
+    },
+    {
+      "slug": "church-community",
+      "rank": 414,
+      "category": "web",
+      "editorialScore": 85.6,
+      "sourcePromptSha256": "45cac4b9fd553db4f6b63868ee85f2c14e06c51d8752f7862c1512bebdd0b211"
+    },
+    {
+      "slug": "f1-racing-hub",
+      "rank": 415,
+      "category": "web",
+      "editorialScore": 85.6,
+      "sourcePromptSha256": "b66e75479032c3380ea155b3c4053f62898ffefd629f2b441fab12986063c175"
+    },
+    {
+      "slug": "bloom-ai",
+      "rank": 416,
+      "category": "web",
+      "editorialScore": 85.5,
+      "sourcePromptSha256": "d821c5196a8f4039bd0de4235c2e94de55bb4867b6fe37088430720ea9aa19d5"
+    },
+    {
+      "slug": "data-signal",
+      "rank": 417,
+      "category": "web",
+      "editorialScore": 85.5,
+      "sourcePromptSha256": "02db0f4e46dfc97ca85f4ddc51b0472d8fe801e34b5518a63b6ecd59dab0db0b"
+    },
+    {
+      "slug": "digital-director",
+      "rank": 418,
+      "category": "web",
+      "editorialScore": 85.2,
+      "sourcePromptSha256": "66cee4f848e3813f1ee500379e3d8f88d75696d38a19caf31c25909af01a51c4"
+    },
+    {
+      "slug": "intelligentx",
+      "rank": 419,
+      "category": "web",
+      "editorialScore": 85.2,
+      "sourcePromptSha256": "290841aaf028b821eebcff51ef7fca9947566ea967b269ab51edfd499845358a"
+    },
+    {
+      "slug": "codenest-coding-platform",
+      "rank": 420,
+      "category": "web",
+      "editorialScore": 85.1,
+      "sourcePromptSha256": "aecd9a57ef07ea90a50e99364f6fc1c2eb9cbaaa6de4cb6853f62bb7643697ec"
+    },
+    {
+      "slug": "forecast-center",
+      "rank": 421,
+      "category": "web",
+      "editorialScore": 85.1,
+      "sourcePromptSha256": "8ba702f22fa97849ca898cfdd147a5dc130dee03e205bae866c811671c65e8e2"
+    },
+    {
+      "slug": "nano-banana-veo-3-lovable-a22361354031",
+      "rank": 422,
+      "category": "web",
+      "editorialScore": 85.0,
+      "sourcePromptSha256": "64ed4f61b4b8c5d926d4079e448088c36e3379524b2e6ca391bc6cd8b53f932e"
+    },
+    {
+      "slug": "rocket-cta",
+      "rank": 423,
+      "category": "web",
+      "editorialScore": 84.9,
+      "sourcePromptSha256": "f7b2e5aec6965f491513fc005249e66099cd0de8e61e5011e6da8244281c9331"
+    },
+    {
+      "slug": "case-7444fd18a8a8",
+      "rank": 424,
+      "category": "web",
+      "editorialScore": 84.87,
+      "sourcePromptSha256": "87a61cd3b9ed265f67ec37b2cc145a6b9b82eda12358b0018baf8e0b4b829d9b"
+    },
+    {
+      "slug": "pixel-grid-hover",
+      "rank": 425,
+      "category": "web",
+      "editorialScore": 84.7,
+      "sourcePromptSha256": "0425cf6f76e0251cb91da5a3dcfe2b4f2c5532983ac5ba33d9eefe98f107b64b"
+    },
+    {
+      "slug": "chatgpt-image-react-native-3042b25ce192",
+      "rank": 426,
+      "category": "web",
+      "editorialScore": 84.6,
+      "sourcePromptSha256": "141aa72b70e261f3f2a9dafc8a2a8515934ba4d71561a595f6d8066dd3cb4bdf"
+    },
+    {
+      "slug": "no-code-waitlist",
+      "rank": 427,
+      "category": "web",
+      "editorialScore": 84.4,
+      "sourcePromptSha256": "601cc396470b69406eaa041848e3ec2eebf0bacb86394ff2f1261d7f7d038a63"
+    },
+    {
+      "slug": "aetheris-voyage",
+      "rank": 428,
+      "category": "web",
+      "editorialScore": 84.1,
+      "sourcePromptSha256": "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694"
+    },
+    {
+      "slug": "case-9d30de23150b",
+      "rank": 429,
+      "category": "web",
+      "editorialScore": 84.08,
+      "sourcePromptSha256": "49869db0189d83fc045e77b89fac2c3e23c21701e139024df51091865df60913"
+    },
+    {
+      "slug": "codex-waitlist-355ad30d5a45",
+      "rank": 430,
+      "category": "web",
+      "editorialScore": 84.0,
+      "sourcePromptSha256": "afd0b3a8d2c04f18d18669b0120dae7de9268f77219e6986a708879b80d3fd52"
+    },
+    {
+      "slug": "email-landing-page",
+      "rank": 431,
+      "category": "web",
+      "editorialScore": 84,
+      "sourcePromptSha256": "f5f6bf8cf3390db3f457b12c7a8fd25b4cd1e9419c73da4102f848e0c74a85d9"
+    },
+    {
+      "slug": "nano-banana-nano-banana-2-1-feels-less-like-image-generation-and-more-like-art-direction-92b7479329b8",
+      "rank": 432,
+      "category": "image",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "a0a4843b8397110c9121990b93cdbf6c75b6eabfcda1f3e4c03ea29d9106161f"
+    },
+    {
+      "slug": "seedance-2-5-create-an-ultra-realistic-cinematic-commercial-for-a-fictional-premium-wireless-4edc18232149",
+      "rank": 433,
+      "category": "video",
+      "editorialScore": 79.27,
+      "sourcePromptSha256": "f2eda2911034e6647f44bcbf0e93763b82b859568f676ef1d9e7a8888f7d69ba"
+    },
+    {
+      "slug": "case-9d64f52eb770",
+      "rank": 434,
+      "category": "image",
+      "editorialScore": 75.42,
+      "sourcePromptSha256": "3632912cf00332d5cb3e8208ff4acb413c2874c9d094e1d24759144703686dee"
+    },
+    {
+      "slug": "seedance-2-5-15-second-cinematic-16-9-ultra-realistic-live-action-tokyo-street-style-dance-v-2f821bb72e06",
+      "rank": 435,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "8cf529ce1b5f52a429ee9843dfc3cc95d62d6db691c22fccfb02bd7e3df5ea41"
+    },
+    {
+      "slug": "real-case-10-harboriis",
+      "rank": 436,
+      "category": "image",
+      "editorialScore": 75.15,
+      "sourcePromptSha256": "cbe535bfa4d26edbf2560cb745228eb6889990db9e6fe0d0dc1b019734df6d73"
+    },
+    {
+      "slug": "seedance-2-5-30-second-ultra-realistic-documentary-slice-of-life-video-early-2000s-consumer-c3a9eabe6881",
+      "rank": 437,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "029feb5f21e0143cf28932afa2c4c9203284e4802ac38555260042a2f5388af6"
+    },
+    {
+      "slug": "seedance-2-5-create-a-photorealistic-cinematic-fashion-sports-video-set-on-a-pink-tennis-cou-b27f2c8361f5",
+      "rank": 438,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "b688b8985a6bcdfa48a9ccec6056c5ceebeef0155cb37b2fc09d40cf7d3a3981"
+    },
+    {
+      "slug": "seedance-2-5-created-a-30s-woodland-fantasy-scene-straight-out-of-a-forgotten-90s-fantasy-mo-e3f1b8f9e73c",
+      "rank": 439,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "55dd15d4af19aa9f574eb1b00237de35130092e40d6ff9ea32c3210dbcaa9405"
+    },
+    {
+      "slug": "seedance-2-5-made-with-seedance-2-5-e1a0ed3f28c2",
+      "rank": 440,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "0209459fe6291a3e2d0ad8b19bd36d402c0d2bd4b49cbaa4fdf582081505f196"
+    },
+    {
+      "slug": "seedance-2-5-three-besties-documenting-a-very-unserious-safari-c9c22cdfc07b",
+      "rank": 441,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "a8cb7cc85c082014b5bb0d3c8eb7e16a5ca57511acfadc5c480f9272792ab4b2"
+    },
+    {
+      "slug": "seedance-create-a-30-second-1080p-ultra-realistic-personal-home-video-showing-an-ordina-15e6e9903657",
+      "rank": 442,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "6875651d5c8303fd42ee70ae127990b4e09eb924ded9eeda5600d52a5610fbb1"
+    },
+    {
+      "slug": "seedance-create-a-30-second-fast-paced-cinematic-japanese-anime-cooking-video-showing-th-236ad940a8f1",
+      "rank": 443,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "de0425beb3e022d2a02e3486fc68fe489d3eb35f35e25306b411211bff5ec9de"
+    },
+    {
+      "slug": "seedance-create-a-30-second-ultra-realistic-4k-cinematic-winter-travel-vlog-in-russia-a77fdcb20b8c",
+      "rank": 444,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "49772939a96882538995f0f277dd47141de95db9a8003a1fc20d5982e61258cd"
+    },
+    {
+      "slug": "seedance-create-a-30-second-ultra-realistic-aaa-third-person-open-world-gameplay-sequenc-70896856a838",
+      "rank": 445,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "3ef32ccec0ba9bad3ce2d5ae79bebfa9731069c0d35207dbcd64c141fd44c46e"
+    },
+    {
+      "slug": "aimikoda-minimax-h3-ai-c30a47a239f6",
+      "rank": 446,
+      "category": "video",
+      "editorialScore": 75.9,
+      "sourcePromptSha256": "602f3d8ed7de5224cfac0bf1885ad7d900dcb8ce9c1938a1e23849f59502c723"
+    },
+    {
+      "slug": "seedance-create-a-30-second-ultra-realistic-personal-home-video-of-a-young-korean-woman-0c54e55df8b9",
+      "rank": 447,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "116c43dd2234b31135935cf28bc812ebbc578c300f2059d5ce6cfad0378bb93e"
+    },
+    {
+      "slug": "seedance-create-a-30-second-ultra-realistic-personal-home-video-of-a-young-korean-woman-b2425539d28a",
+      "rank": 448,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "0ed5c7fba733238f508567298fa1b59334ec20cec3b013faf782f28e0bba859c"
+    },
+    {
+      "slug": "seedance-create-a-cute-polished-cinematic-3d-animated-video-exactly-15-seconds-long-u-690962672ddc",
+      "rank": 449,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "5e9a075706ef4a81bea37abc23d5ca231c0a812265c36df4dfa2c17d22fbf5bf"
+    },
+    {
+      "slug": "seedance-create-a-hyper-realistic-cinematic-action-sequence-on-a-bright-urban-road-in-da-7d6b917b4327",
+      "rank": 450,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "bae2532327d03bc0167c06df162dc9f998c2cae98ade703c62cf77bada9f784d"
+    },
+    {
+      "slug": "seedance-create-a-premium-photorealistic-cinematic-30-second-live-action-food-commercial-67403ea43ed5",
+      "rank": 451,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "d8edd8f14406d6c6179bb5db251e0a10b1497e789947b9c995ec78e6cb6fd763"
+    },
+    {
+      "slug": "seedance-create-a-single-page-premium-hollywood-disaster-action-storyboard-in-16-9-wide-7cc2f22eaa0c",
+      "rank": 452,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "7ccfab128669d48aab126dc1d8af033d886658be71395efb380df10313f72faf"
+    },
+    {
+      "slug": "seedance-create-a-ultra-realistic-early-2000s-consumer-dv-camcorder-home-video-of-a-youn-19a579fa3d7a",
+      "rank": 453,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "e1a53bddd07a6a8da789833d351b87c28cd79cda6261a5315073ab05ed20e7f9"
+    },
+    {
+      "slug": "seedance-create-exactly-30-seconds-of-photorealistic-live-action-japanese-travel-memorie-4c285efc3fa2",
+      "rank": 454,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "c3678fc1b071faa5e63731cfce09cba2689d23643e1c50bc3289a080c2f20c70"
+    },
+    {
+      "slug": "seedance-create-one-continuous-12-second-9-16-ultra-photorealistic-live-action-luxury-68fb630de30b",
+      "rank": 455,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "03d388c8556dcf5ad324399b2a6a09ed59c91b1c11aa03011110a466af38e270"
+    },
+    {
+      "slug": "seedance-created-a-complete-red-bull-commercial-using-seedance-2-5-on-3ee7e5338cba",
+      "rank": 456,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "372e79e659d9c9c24e5b6f547acbff2100a3d82a8cb427dc90760baa36795cc9"
+    },
+    {
+      "slug": "seedance-dv-16mm-tape-camcorder-handheld-feel-3c6411732b9b",
+      "rank": 457,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "0bea5195eafb5f8b1fb62d1793384525e628a594fb45f2f5d81b28b0b6baf973"
+    },
+    {
+      "slug": "seedance-exploring-south-indian-commercial-cinema-not-just-the-action-but-the-hero-s-s-245243176858",
+      "rank": 458,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "631d9ca7b22580dfcbde8d720052e4b38f426cf0062e180e9f5be8c980b07a9e"
+    },
+    {
+      "slug": "seedance-get-ready-for-a-pure-adrenaline-rush-a8a9f11d2ea3",
+      "rank": 459,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "4f70292654f712b933d25966950bb26ea4eb34269f0d6dc6d72b6bfb01ffa131"
+    },
+    {
+      "slug": "seedance-global-photorealistic-cinematic-16-9-5664e8f27fb3",
+      "rank": 460,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "c5d1e6fb2ad9932e04065aaa84ecce45a42859d5fff2195fe2d706155d0fc8c2"
+    },
+    {
+      "slug": "seedance-grandpa-saw-it-25cbcf811a44",
+      "rank": 461,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "f756b238121302371937582d21c1f88c4fccc5594652d7a044d17af0d8afe109"
+    },
+    {
+      "slug": "3d-5cb0f8fdaefb",
+      "rank": 462,
+      "category": "video",
+      "editorialScore": 72.83,
+      "sourcePromptSha256": "f1d2f23bffce66abb386d71440d9cebcdf4dbdc83ac889c7d82a448a87d778a9"
+    },
+    {
+      "slug": "case-ce63bf146d4e",
+      "rank": 463,
+      "category": "video",
+      "editorialScore": 62.0,
+      "sourcePromptSha256": "e33cf6b3e547e666e43053e374b3ae7e3ee2a66051acede3c0b24068f4380098"
+    },
+    {
+      "slug": "seedance-made-with-seedance-2-5-6b9d1c8cec22",
+      "rank": 464,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "2e48f4433962b786c612e373797a320db6c5cd405233330925dbb7c0b50374fa"
+    },
+    {
+      "slug": "seedance-made-with-seedance-2-91732a69f379",
+      "rank": 465,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "f272e786a1e33d1a24aa0b47da2e3c5f3c68e033bcdd5b9f5788cb0d748f3df6"
+    },
+    {
+      "slug": "seedance-magic-pen-beach-boardwalk-vlog-15-seconds-vertical-9-16-ea4714e1706f",
+      "rank": 466,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "0e3441b8806f1ecff29d19af1c994af2dd5027e6836faccb7043c610b26a9cce"
+    },
+    {
+      "slug": "seedance-magic-pen-street-transport-vlog-28d80bd05eda",
+      "rank": 467,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "f6df9d402a424f4a112ca13752129aef9fd2a32fa815ba85ae61f89445480986"
+    },
+    {
+      "slug": "seedance-mark-antony-as-basketball-players-in-an-epic-cartoon-showdown-with-bgm-eb4a6e19a56e",
+      "rank": 468,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "1870726f8fb61094b68056f90d2d81a4109a5606c591e854d44f7c3f0224747a"
+    },
+    {
+      "slug": "seedance-one-continuous-modern-american-office-entrance-security-desk-badge-gate-d42d0ee6b30a",
+      "rank": 469,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "5f3111d31e6c42b85f2df715c5e051f0feed39a9659fd0ff901187cbbea24c2c"
+    },
+    {
+      "slug": "seedance-pace-extremely-fast-continuous-combat-zero-pauses-zero-idle-moments-action-f9513a8db08a",
+      "rank": 470,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "2830087e5ceb8658680c0170aafdccc015984b789c50b14bafcb6706c2568958"
+    },
+    {
+      "slug": "seedance-part-1-0-30s-0e5b77e47efa",
+      "rank": 471,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "6b2a873aa308bbef4435f120175b34f7781450e9a4ea9e2411a3d1c79e76a799"
+    },
+    {
+      "slug": "seedance-pov-korean-couple-spends-a-lazy-summer-morning-wandering-their-neighborhood-0d246cd8363d",
+      "rank": 472,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "7dbf6426ae6e9a0d1a559ba4bd6edf0d9878e11d52447f3f219e421ec36df52f"
+    },
+    {
+      "slug": "seedance-pov-you-try-to-make-a-cute-kitten-vlog-and-your-kitten-chooses-violence-d052169bcc1d",
+      "rank": 473,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "f4d49f740c88e3d7017889fd6c2736904a96deb1e7a6595423855fbed8aa7219"
+    },
+    {
+      "slug": "seedance-pov-you-wanted-a-cute-mirror-selfie-but-your-dog-wanted-to-be-the-main-charac-3d3e83219d46",
+      "rank": 474,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "f6789b60ec58b40e93f00cd4e7c99c57ed1a9eddde6f34c86523ea2c7b14fe95"
+    },
+    {
+      "slug": "seedance-preserve-the-exact-facial-features-identity-skin-tone-and-natural-facial-pro-1c752f954b52",
+      "rank": 475,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "5bf99dd680eddd807a7f00f8400f730404d3b6142ec0f53dd5bc0fad608a8435"
+    },
+    {
+      "slug": "seedance-rainy-streets-green-hills-black-sand-beaches-and-a-little-adventure-across-n-0476951b6e15",
+      "rank": 476,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "7019e7a55cf07b6ac47c82aa68b18cfddb987d45b6f7478c32d78733ddfafff5"
+    },
+    {
+      "slug": "seedance-create-a-cinematic-realistic-educational-video-set-inside-a-modern-university-961b27c23385",
+      "rank": 477,
+      "category": "video",
+      "editorialScore": 64.5,
+      "sourcePromptSha256": "4fac46b32a6b47232b5580d78ecc3d7e12a4107ee9a30e8fbb1b628e0ac56384"
+    },
+    {
+      "slug": "claude-opus-5-5-max-higgsfield-85f82d3beb87",
+      "rank": 478,
+      "category": "video",
+      "editorialScore": 64.96,
+      "sourcePromptSha256": "fd113ee1e62109fc2dab241f93f8f9f1a2cd10ee0754128de466a61e92dd324f"
+    },
+    {
+      "slug": "seedance-she-thought-it-was-going-to-be-a-peaceful-rainy-day-selfie-f0bf765977dd",
+      "rank": 479,
+      "category": "video",
+      "editorialScore": 77.0,
+      "sourcePromptSha256": "86d3100bc806e9a283a0271d735cbf00a2c84ff556bcb71baff216e0b5e64a95"
+    },
+    {
+      "slug": "midjourney-e1f021598204",
+      "rank": 480,
+      "category": "image",
+      "editorialScore": 74.13,
+      "sourcePromptSha256": "7e8c545c7f81bf5b791b9cb78d0322dea22bc732d7a98288192c199ff7a4090b"
+    },
+    {
+      "slug": "gpt-image-create-an-authentic-1980s-retro-vintage-portrait-in-a-4-5-vertical-aspect-ratio-215e429bd37e",
+      "rank": 481,
+      "category": "image",
+      "editorialScore": 73.86,
+      "sourcePromptSha256": "de0536e38dd9c57d678b76d53dfa8ee36d678e87245d5cca8fdbcaf4e442ce63"
+    },
+    {
+      "slug": "midjourney-5475b32d9681",
+      "rank": 482,
+      "category": "image",
+      "editorialScore": 73.73,
+      "sourcePromptSha256": "8894fc9c9c98c5cc9e664efe6de7371438bf23d8096425504fab9032956fcec8"
+    },
+    {
+      "slug": "nano-banana-nano-banana-c23be9c3dc0d",
+      "rank": 483,
+      "category": "image",
+      "editorialScore": 72.71,
+      "sourcePromptSha256": "ab78d50f82d6a3ccad715881afb18872065bd53d60a094df48dbaaac3b05b90b"
+    },
+    {
+      "slug": "midjourney-082b67cb59b7",
+      "rank": 484,
+      "category": "image",
+      "editorialScore": 71.81,
+      "sourcePromptSha256": "8d629cf6d09f9498e8157d7d222662fc43966d80d910affd74b39dc52ceca1b2"
+    },
+    {
+      "slug": "midjourney-f970a9f97c89",
+      "rank": 485,
+      "category": "image",
+      "editorialScore": 71.78,
+      "sourcePromptSha256": "e711ce652b424b875cad2b382825543159487461dbbde11790f86c179fbfea4d"
+    },
+    {
+      "slug": "gpt-image-2-5-ultra-realistic-night-street-photograph-on-the-istanbul-bosphorus-waterfront-32aaea7a7805",
+      "rank": 486,
+      "category": "image",
+      "editorialScore": 57.24,
+      "sourcePromptSha256": "1a04eb81ee0c802907f5525833b714d12c7c3964abe5167e23a0994c15d93fde"
+    },
+    {
+      "slug": "gpt-image-a-high-resolution-photorealistic-eyelevel-portrait-of-a-stylish-young-caucasian-315087f03010",
+      "rank": 487,
+      "category": "image",
+      "editorialScore": 71.74,
+      "sourcePromptSha256": "5c8854a7f71e3526406ffaa4bb1aea3c2fdd59d605c6ab80d5a67a6c5aae3c70"
+    },
+    {
+      "slug": "midjourney-f1c1b3dbd38f",
+      "rank": 488,
+      "category": "image",
+      "editorialScore": 71.6,
+      "sourcePromptSha256": "723a9e80c49756654acb1fdfdd5d46f5515f62ead29910a9c1d2a0954bdf99c4"
+    },
+    {
+      "slug": "gpt-image-create-a-highly-realistic-portrait-of-a-beautiful-south-asian-woman-wearing-an-93f73b00ed6b",
+      "rank": 489,
+      "category": "image",
+      "editorialScore": 71.57,
+      "sourcePromptSha256": "bfcab14070e0a87fe9e4474de1ac596c22e6d5d6915fdd264ae215efb190c04d"
+    },
+    {
+      "slug": "midjourney-9fed26a6a2dc",
+      "rank": 490,
+      "category": "image",
+      "editorialScore": 71.57,
+      "sourcePromptSha256": "8a82821dd4f5091c3850402e325e7b8e0aca1f106cac9640bbf7402ff5f03dcb"
+    },
+    {
+      "slug": "prompt-292c711a28e1",
+      "rank": 491,
+      "category": "image",
+      "editorialScore": 71.53,
+      "sourcePromptSha256": "cd6c62528f1564877f8ac7c55d8344d2e3fa55e2610d768f72d815a51fcd7194"
+    },
+    {
+      "slug": "midjourney-bd4a0c2a1ace",
+      "rank": 492,
+      "category": "image",
+      "editorialScore": 71.51,
+      "sourcePromptSha256": "d3f7481795d73c80f1dce99ceb0a2f18a40ca18c31f52a2c6703d58e19cf2bda"
+    },
+    {
+      "slug": "create-a-photorealistic-cinematic-close-up-portrait-of-a-beautiful-young-woman-d7cb35418e8a",
+      "rank": 493,
+      "category": "image",
+      "editorialScore": 71.35,
+      "sourcePromptSha256": "3845848a85178193631203586efaf057f3b208ec10e87982aae9d8ce361fec94"
+    },
+    {
+      "slug": "midjourney-0180760ef4f5",
+      "rank": 494,
+      "category": "image",
+      "editorialScore": 71.34,
+      "sourcePromptSha256": "90dbddc491fe48c4b21eb00e8e592f798a019c1475e51e3dfcbaa160df274b7a"
+    },
+    {
+      "slug": "midjourney-36cce51c5882",
+      "rank": 495,
+      "category": "image",
+      "editorialScore": 71.22,
+      "sourcePromptSha256": "94f9e416e0872422ab703af24008935818bb5b030b37db3a48b9761f675cc36a"
+    },
+    {
+      "slug": "midjourney-f0168c94fab9",
+      "rank": 496,
+      "category": "image",
+      "editorialScore": 71.15,
+      "sourcePromptSha256": "ba1d3f6da92ac9d9375b66f26822ead15df48585e6de714ffd3712f94fbb8a3c"
+    },
+    {
+      "slug": "midjourney-7823d960575f",
+      "rank": 497,
+      "category": "image",
+      "editorialScore": 71.07,
+      "sourcePromptSha256": "4dda4593b01be01823f1f31540d724bc03fac2aedd61f6fd3ea2389059057099"
+    },
+    {
+      "slug": "nano-banana-pro-a-full-body-editorial-fashion-photograph-of-a-beautiful-young-woman-with-the-sa-2bef4affc730",
+      "rank": 498,
+      "category": "image",
+      "editorialScore": 71.03,
+      "sourcePromptSha256": "f7674effb74e9527fa6cc6cc68c3200b0f47ae653c0465f823ac65ba2af49696"
+    },
+    {
+      "slug": "midjourney-64ce1536d39e",
+      "rank": 499,
+      "category": "image",
+      "editorialScore": 71.01,
+      "sourcePromptSha256": "5b2ee6410ba31993955da448e5a8eb817ee921b25443e21a92bcff4c9baf4e98"
+    },
+    {
+      "slug": "3d-de7f41148805",
+      "rank": 500,
+      "category": "image",
+      "editorialScore": 71.0,
+      "sourcePromptSha256": "1ed6959b723a0074790a990ac15d0f45e366c8ed869829b912ba8cacc17e90d8"
+    },
+    {
+      "slug": "case-d17519ec36a7",
+      "rank": 501,
+      "category": "image",
+      "editorialScore": 71.0,
+      "sourcePromptSha256": "fb187ff8b3a1969fa7ec802d1967c92cebfb7db846a58916d4eb2064dc0ee937"
+    },
+    {
+      "slug": "gpt-image-a-high-fashion-studio-portrait-of-an-elegant-blonde-woman-standing-on-an-ornate-7bbeeaccd74d",
+      "rank": 502,
+      "category": "image",
+      "editorialScore": 70.91,
+      "sourcePromptSha256": "e16d88421f4c1ed4d5b5cab6bc512d46f11d4f83cc9d2631ed27d389f30441aa"
+    },
+    {
+      "slug": "case-dc302e39731e",
+      "rank": 503,
+      "category": "image",
+      "editorialScore": 70.89,
+      "sourcePromptSha256": "daa219bb8ee78851644b3e9c46aacb753a43b59a953b2d7c888a2aecd783ab60"
+    },
+    {
+      "slug": "midjourney-56fb8736541d",
+      "rank": 504,
+      "category": "image",
+      "editorialScore": 70.87,
+      "sourcePromptSha256": "7d424f891c4c01b977f3fc0335e09c12add3259db7df08b2a53aa2775814419c"
+    },
+    {
+      "slug": "midjourney-b4addfb09653",
+      "rank": 505,
+      "category": "image",
+      "editorialScore": 70.77,
+      "sourcePromptSha256": "6ecfb936bd04dcf67a48c252dcea64a1aa7de0d6473678009da3cb577b4372b7"
+    },
+    {
+      "slug": "2d-6c28b3fe47c1",
+      "rank": 506,
+      "category": "image",
+      "editorialScore": 70.74,
+      "sourcePromptSha256": "be7a216b705c0c7ffe2a0b89a85e536631490d8450ed5c357a186affffdda8a3"
+    },
+    {
+      "slug": "midjourney-0b7968577021",
+      "rank": 507,
+      "category": "image",
+      "editorialScore": 70.67,
+      "sourcePromptSha256": "5ec1cbf6626014ae8f0f7964caf8fec0ce5859f9119173bf92293037206d4d5f"
+    },
+    {
+      "slug": "case-f50cfa404ee2",
+      "rank": 508,
+      "category": "image",
+      "editorialScore": 70.66,
+      "sourcePromptSha256": "c2ace82a64d5e280d5c31b696badae7ab962258855ae2f2824ff8892732b46f3"
+    },
+    {
+      "slug": "3d-bjd-64299322825d",
+      "rank": 509,
+      "category": "image",
+      "editorialScore": 70.61,
+      "sourcePromptSha256": "97e580db6ac5adaa6f1b3158b0ee6fe73b53e93c53c05029a9bd85c3d87092c0"
+    },
+    {
+      "slug": "case-00e0183f964e",
+      "rank": 510,
+      "category": "image",
+      "editorialScore": 70.57,
+      "sourcePromptSha256": "392929821185f6198c4240530a2dd90fd64bbd30089dd07f7a0a76df3b2cbc66"
+    },
+    {
+      "slug": "midjourney-c31b574a59a1",
+      "rank": 511,
+      "category": "image",
+      "editorialScore": 70.45,
+      "sourcePromptSha256": "499f6baa56af570bd71ec79974087a1b1dec5fb4d497283b6dddc8983ba76226"
+    },
+    {
+      "slug": "midjourney-7553fa428e1e",
+      "rank": 512,
+      "category": "image",
+      "editorialScore": 70.31,
+      "sourcePromptSha256": "04c0258548d68971e2eebecb3de6e5a98d121bcbb4de14104641111a9677634f"
+    },
+    {
+      "slug": "midjourney-33b47043176c",
+      "rank": 513,
+      "category": "image",
+      "editorialScore": 70.05,
+      "sourcePromptSha256": "de65996087317cbac0f2679330c4b35747a44a77515e002e4a17c272fce8a32f"
+    },
+    {
+      "slug": "midjourney-6420ca945b62",
+      "rank": 514,
+      "category": "image",
+      "editorialScore": 70.05,
+      "sourcePromptSha256": "c456496979879334b608b43ca53da8c997613485ac49e87fe0b072498c7d71e6"
+    },
+    {
+      "slug": "case-4ba8b7522001",
+      "rank": 515,
+      "category": "image",
+      "editorialScore": 69.98,
+      "sourcePromptSha256": "b5443141d9782c103a5ac2a388c21799f0c5da34ec8ed625547345d2371c0e19"
+    },
+    {
+      "slug": "flux-07a857c81c71",
+      "rank": 516,
+      "category": "image",
+      "editorialScore": 69.87,
+      "sourcePromptSha256": "402366b3d653ab198e871ecd23f7cffc80fe461f7f4311d8870f1552493bc3bb"
+    },
+    {
+      "slug": "midjourney-b2d5f2dd9b53",
+      "rank": 517,
+      "category": "image",
+      "editorialScore": 69.79,
+      "sourcePromptSha256": "192ba168cf13d8afc396286aec3b82bf7a996e079f62ef9b589b7c7ce9de14ab"
+    },
+    {
+      "slug": "nano-banana-2-1-2-5ddf8b69926b",
+      "rank": 518,
+      "category": "image",
+      "editorialScore": 69.58,
+      "sourcePromptSha256": "13d60cda3e31459911a6bd1e67ea5006edd9cc735d036bedabf32dab83e6d5cf"
+    },
+    {
+      "slug": "midjourney-678799ea3672",
+      "rank": 519,
+      "category": "image",
+      "editorialScore": 69.38,
+      "sourcePromptSha256": "1cca560349f301412ff73440a58694b0b09fc0fa29c2df7cf8ce936576fd7d04"
+    },
+    {
+      "slug": "nano-banana-created-with-google-gemini-nano-banana-pro-51c94da26bdb",
+      "rank": 520,
+      "category": "image",
+      "editorialScore": 69.35,
+      "sourcePromptSha256": "59dd42d1e3bb35e4eb090e4c1853180180e6ed3c2fee81f9e81ae45f1834eda5"
+    },
+    {
+      "slug": "midjourney-b23ca0cdb27b",
+      "rank": 521,
+      "category": "image",
+      "editorialScore": 69.23,
+      "sourcePromptSha256": "8cc9123101cc706f598febad148d86b11c64977aaa7f3f1fcb15c7bf02cc1564"
+    },
+    {
+      "slug": "midjourney-a00959481847",
+      "rank": 522,
+      "category": "image",
+      "editorialScore": 69.08,
+      "sourcePromptSha256": "c277f54a0dc9504c4a48c7971619c84de88ebf80d4fb559aac1d29bc8c1336ce"
+    },
+    {
+      "slug": "midjourney-e60eec6349fb",
+      "rank": 523,
+      "category": "image",
+      "editorialScore": 68.94,
+      "sourcePromptSha256": "4ee30016c97966743a9ce92579b8261fbfa8565ad57b113b845d7af5f7496155"
+    },
+    {
+      "slug": "midjourney-40862c7e345c",
+      "rank": 524,
+      "category": "image",
+      "editorialScore": 68.39,
+      "sourcePromptSha256": "47d8245e41a19205b7fe288617f31afe2c5ecb0843cb67534ab5ce5cf7a0897f"
+    },
+    {
+      "slug": "case-c11e0f098acf",
+      "rank": 525,
+      "category": "image",
+      "editorialScore": 68.05,
+      "sourcePromptSha256": "aedb42bacd8572143b0bb945aa00fed0b4635263863a0d75d4068beed44f213d"
+    },
+    {
+      "slug": "aimikoda-gpt-image-ai-5d36e7bb3281",
+      "rank": 526,
+      "category": "image",
+      "editorialScore": 68.0,
+      "sourcePromptSha256": "8518ec82f548e997ed526b8126d02b738474c78d29cde71ee3db093f8bfb07cf"
+    },
+    {
+      "slug": "gpt-image-2-5-create-a-premium-ultra-photorealistic-cinematic-vertical-9-16-waist-up-portrait-5404d6add6ba",
+      "rank": 527,
+      "category": "image",
+      "editorialScore": 68.0,
+      "sourcePromptSha256": "36d94adab6abb27e972cd19c48cb6f3293601f4b34465ad569df87daace10066"
+    },
+    {
+      "slug": "midjourney-dv-c46028201c02",
+      "rank": 528,
+      "category": "image",
+      "editorialScore": 67.89,
+      "sourcePromptSha256": "eac532a0c8c270ea92bd747ffdb4069c0591e2c3f98bcfd09af88f0d84d5d94d"
+    },
+    {
+      "slug": "vibeshot-gpt-image-2-10-ins-43ca3f9a9dd9",
+      "rank": 529,
+      "category": "image",
+      "editorialScore": 67.05,
+      "sourcePromptSha256": "3e1dabacd01d5f4a935256d0aebcd4e87532e54fb5e7b97abd0efe6ad13f7973"
+    },
+    {
+      "slug": "gpt-image-create-a-vertical-9-16-y2k-collage-with-exactly-3-clearly-separated-equal-panel-8a21cbcf1c7a",
+      "rank": 530,
+      "category": "image",
+      "editorialScore": 66.81,
+      "sourcePromptSha256": "d351741d3f7c8643a2e22790f44f6f53d3ec41405306dca9c4ae79a1eb9e2e69"
+    },
+    {
+      "slug": "nano-banana-pro-create-a-photorealistic-luxury-fashion-portrait-of-an-elegant-young-woman-seate-ed257f2c2df6",
+      "rank": 531,
+      "category": "image",
+      "editorialScore": 66.3,
+      "sourcePromptSha256": "974038e29d2be5e5f3b444668eb7a18c3553c1aa1e8fcb3ce5859d1d48810a0d"
+    },
+    {
+      "slug": "gpt-image-a-high-resolution-photorealistic-eye-level-portrait-of-a-young-east-asian-woman-5e4aa28eecbb",
+      "rank": 532,
+      "category": "image",
+      "editorialScore": 65.06,
+      "sourcePromptSha256": "bd6d75d16815bdba98f0e6747ebda3b36f78dd36dd215f9a0775f26e8f43128f"
+    },
+    {
+      "slug": "midjourney-7cc1657bcb9b",
+      "rank": 533,
+      "category": "image",
+      "editorialScore": 64.96,
+      "sourcePromptSha256": "6abd4c3ce50325838c6bba3312ea64309db378e262fc08f78a1b82a21116992d"
+    },
+    {
+      "slug": "midjourney-28c303b19cd6",
+      "rank": 534,
+      "category": "image",
+      "editorialScore": 64.83,
+      "sourcePromptSha256": "311b13d6cf1483cbdceb1a3a847f0c8b862849f850bc364aa27a0a77354f4f75"
+    },
+    {
+      "slug": "midjourney-6634ed8da68b",
+      "rank": 535,
+      "category": "image",
+      "editorialScore": 64.54,
+      "sourcePromptSha256": "637d317e5bb43e3d2dc222c2493dc82a10fb6b345c66f09cd93836c836738a2f"
+    },
+    {
+      "slug": "midjourney-rec-341b21a355df",
+      "rank": 536,
+      "category": "image",
+      "editorialScore": 64.23,
+      "sourcePromptSha256": "8157b2a67fad0941f345532c4d63c775fafe45e29aec0baaad8e1eb5c68eafc3"
+    },
+    {
+      "slug": "midjourney-6a017a66a90d",
+      "rank": 537,
+      "category": "image",
+      "editorialScore": 63.71,
+      "sourcePromptSha256": "39cf63a6187497a3d917bfd7dbf5c5531bf90f1558b9dd5102c529d8d0d136ec"
+    },
+    {
+      "slug": "midjourney-de9c696daaec",
+      "rank": 538,
+      "category": "image",
+      "editorialScore": 63.7,
+      "sourcePromptSha256": "42abfc7da9662c56f5201e892b81676445a9d43a07938d59364abf0d9b0ff209"
+    },
+    {
+      "slug": "midjourney-c9c7ce54894d",
+      "rank": 539,
+      "category": "image",
+      "editorialScore": 63.61,
+      "sourcePromptSha256": "d9cc528c51c09f5059f31bd79d798e8d4dad93ed11145f56c095930a041173d4"
+    },
+    {
+      "slug": "midjourney-3fcb3f6140df",
+      "rank": 540,
+      "category": "image",
+      "editorialScore": 63.59,
+      "sourcePromptSha256": "0f2972a8b55659f363d312fe5d1db4bf321edcb2f87f96f2d1672f82f85c5b5f"
+    },
+    {
+      "slug": "case-d49e624b6918",
+      "rank": 541,
+      "category": "image",
+      "editorialScore": 63.39,
+      "sourcePromptSha256": "be19ad05e40d2f6481eed19395134869db39311d4427a4b181cca2e6354609f8"
+    },
+    {
+      "slug": "midjourney-bbaa9ebe3dc9",
+      "rank": 542,
+      "category": "image",
+      "editorialScore": 63.33,
+      "sourcePromptSha256": "14649c40d2a371fb09b49c81dd7849297bd31942e48e6eef124930ca14aa8477"
+    },
+    {
+      "slug": "case-44ce700abede",
+      "rank": 543,
+      "category": "image",
+      "editorialScore": 63.31,
+      "sourcePromptSha256": "96174fd75b00378c335d064a3594d6378fc58ac8abe73a7869b00184b2730596"
+    },
+    {
+      "slug": "midjourney-85f63785119e",
+      "rank": 544,
+      "category": "image",
+      "editorialScore": 63.31,
+      "sourcePromptSha256": "39dc3ffb97f31b45f27c6d3975f473c9eaa1081c359d33c76900f331d2654b13"
+    },
+    {
+      "slug": "midjourney-f3b085a79b73",
+      "rank": 545,
+      "category": "image",
+      "editorialScore": 63.26,
+      "sourcePromptSha256": "e9729dcc137438258a266f503e4b01ba02285d3c0ae618a632fd8aa18149ce8d"
+    },
+    {
+      "slug": "case-aa1951b3a295",
+      "rank": 546,
+      "category": "image",
+      "editorialScore": 63.17,
+      "sourcePromptSha256": "5bbf4ed060e6ab7e6842b30045468ef845732b4b14eae53093e6f9b4c3fc1a47"
+    },
+    {
+      "slug": "midjourney-57170811eb93",
+      "rank": 547,
+      "category": "image",
+      "editorialScore": 63.17,
+      "sourcePromptSha256": "177e816b966fa8e3e1f04cf15a59fb6aeefdd87aa2a6e55ec8656e653fb01640"
+    },
+    {
+      "slug": "midjourney-326e7c92ff54",
+      "rank": 548,
+      "category": "image",
+      "editorialScore": 63.1,
+      "sourcePromptSha256": "cb6426cc25c0d2e3b3c194de6b5ef136fb7c4c263507bf9e34263471d45732a7"
+    },
+    {
+      "slug": "einstein-handwritten-essay-style",
+      "rank": 549,
+      "category": "image",
+      "editorialScore": 63.07,
+      "sourcePromptSha256": "32ce6fbc39f7201fc69812ce3f7e99bc12e7605a6b70b6175b53a7c32dd7ad36"
+    },
+    {
+      "slug": "midjourney-d74b0d27aba2",
+      "rank": 550,
+      "category": "image",
+      "editorialScore": 63.04,
+      "sourcePromptSha256": "0c2ddef950714e0ef043d75cc8ce5cc149cc103a2b9db715830c509149431adf"
     }
   ],
   "batches": [
@@ -2823,6 +3873,16 @@
       "total": 400,
       "categories": {
         "video": 100
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "added": 150,
+      "total": 550,
+      "categories": {
+        "image": 75,
+        "web": 30,
+        "video": 45
       }
     }
   ]

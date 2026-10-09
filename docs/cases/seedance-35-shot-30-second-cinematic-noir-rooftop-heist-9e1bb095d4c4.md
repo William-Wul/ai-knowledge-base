@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/seedance-35-shot-30-second-cinematic-noir-rooftop-heist-9e1bb095d4c4.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 霓虹屋顶劫案的密集分镜
+
+<CaseTags :item="item" />
 
 把三十秒拆为三十五个镜头，用行动目标和统一装备连接夜间屋顶场景。
 

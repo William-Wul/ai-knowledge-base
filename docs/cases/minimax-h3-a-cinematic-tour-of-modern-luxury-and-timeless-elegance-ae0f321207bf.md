@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/minimax-h3-a-cinematic-tour-of-modern-luxury-and-timeless-elegance-ae0f321207bf.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 夕阳下的现代住宅巡游
+
+<CaseTags :item="item" />
 
 用连续的空间展示镜头串联室内与建筑外观，练习光线一致性与镜头路线。
 

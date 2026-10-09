@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-cinematic-ultra-realistic-portrait-of-a-young-man-use-image-for-face-reference-6aedd33cc32d.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 暖金侧光的男子肖像
+
+<CaseTags :item="item" />
 
 用侧面构图、深色服装和暖金光线塑造人物轮廓，同时保留参考面孔。
 

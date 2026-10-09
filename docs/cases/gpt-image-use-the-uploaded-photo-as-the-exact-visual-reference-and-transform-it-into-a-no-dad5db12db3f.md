@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-use-the-uploaded-photo-as-the-exact-visual-reference-and-transform-it-into-a-no-dad5db12db3f.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 暖阳家庭记忆剪贴画
+
+<CaseTags :item="item" />
 
 用家庭照片、纸张和手绘细节组合怀旧版面，练习生活瞬间与留白的安排。
 

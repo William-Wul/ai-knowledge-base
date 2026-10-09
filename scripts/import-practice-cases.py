@@ -107,7 +107,7 @@ summaries={'case-7098c85a0922':'把多个产品排列为密集的三维组合，
 'youralphamom-seedance-ai-9afbf3248f50':'分别制作两个十五秒片段，再手动拼接，用承接动作和相同设定连接故事。',
 'neon-jellyfish-scientific-specimen':'用纯黑背景衬托发光水母，搭配色样与局部纹理，制作未来感科学标本图。',
 'youmind-character-identity-reference-chart':'用多角度、表情和局部细节整理同一角色的外观，作为后续创作的参考。'}
-# Only edit ordinary explanatory prose; code, URLs and inline identifiers remain intact.
+# Only edit explanatory prose; preserve source-specified text, dialogue, code and references.
 glossary={'landing page':'展示页',
 'hero heading':'首屏标题',
 'quote text':'引言文字',
@@ -160,7 +160,7 @@ glossary={'landing page':'展示页',
 glossary={k.lower():v for k,v in glossary.items()}
 pattern=re.compile(r'\b('+ '|'.join(re.escape(k) for k in sorted(glossary,key=len,reverse=True))+r')\b',re.I)
 def zh_prose(s, category=None):
- parts=re.split(r'(```[\s\S]*?```|`[^`]*`|\{argument[^}]*\}|https?://[^\s<>]+)',s)
+ parts=re.split(r'(```[\s\S]*?```|`[^`]*`|\{argument[^}]*\}|https?://[^\s<>]+|@\[[^\]]+\]|"(?:\\.|[^"\\\n])*"|“[^”\n]+”)',s)
  def replace_prose(p):
   if category=='video':p=re.sub(r'\bhero\s+shot\b','重点特写',p,flags=re.I)
   return pattern.sub(lambda m:'主角' if category=='video' and m[0].lower()=='hero' else glossary[m[0].lower()],p)

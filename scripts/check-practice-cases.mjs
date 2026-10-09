@@ -3,14 +3,14 @@ import { readFileSync, existsSync } from 'node:fs'
 import { CASE_CATEGORIES } from '../docs/.vitepress/casesData.js'
 import { loadCases } from './practice-cases-data.mjs'
 import { createHash } from 'node:crypto'
+import { expectedCatalogSize, validateCatalog } from './case-catalog-integrity.mjs'
 const cases = loadCases()
 const selection = JSON.parse(readFileSync('docs/.vitepress/data/practice-cases-selection.json', 'utf8')).cases
-const expected = Number(process.argv[2] || 400)
-assert.equal(cases.length, expected)
-assert.equal(selection.length, expected)
-assert.equal(new Set(selection.map(c => c.slug)).size, expected)
+const expected = expectedCatalogSize(selection, process.argv[2])
+validateCatalog({ cases, selection }, expected)
 const index = JSON.parse(readFileSync('docs/.vitepress/data/cases-generated/index.json', 'utf8'))
 assert.equal(index.length, expected)
+assert.deepEqual(index.map(item => item.slug), selection.map(item => item.slug), '列表与清单顺序不一致')
 assert(index.every(c => !('promptZh' in c) && !('promptOriginal' in c)), '列表不应包含完整提示词')
 const ids = new Set()
 const dist = 'docs/.vitepress/dist'

@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/mid-century-city-travel-picture-book.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 世纪中叶城市旅行绘本
+
+<CaseTags :item="item" />
 
 一份精巧的提示词，用于生成迷人的竖版城市插画，灵感源自 1950s-60s 欧洲旅行书籍，采用手绘纹理和简化剪影。
 

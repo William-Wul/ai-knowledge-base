@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/kling-pov-your-pizza-delivery-guy-ate-your-slice-and-ran-d44b0e2c60a7.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 偷吃披萨的猫咪外卖员
+
+<CaseTags :item="item" />
 
 围绕送餐、被发现和骑车逃跑组织二十秒喜剧，用动物动作制造反差。
 

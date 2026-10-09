@@ -6,7 +6,7 @@ outline: false
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / casesData.js 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json / casesData.js 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseLibrary from '../.vitepress/theme/components/CaseLibrary.vue'
 </script>

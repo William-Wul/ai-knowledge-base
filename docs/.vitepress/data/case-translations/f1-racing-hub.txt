@@ -1,0 +1,129 @@
+# 精确复刻这个页面 — Lewis Hamilton / Silverstone F1 首屏
+
+## 技术栈
+- React + TypeScript + Vite
+- Tailwind CSS（配置扩展 `fontFamily.sans` = `['"Albert Sans"', 'sans-serif']`，以及自定义 `f1.dark = rgb(41,41,41)` 和 `f1.yellow = rgb(237,180,11)`）
+- 使用 lucide-react 图标（用到 X、Menu）
+- Google Font：**Albert Sans**，字重 300;400;500;600;700;800，在 index.html 中通过 `https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700;800&display=swap` 加载
+- 页面背景：`#0a0e1c`，文字抗锯齿
+
+## 整体布局
+全屏首屏区域（`relative w-full overflow-hidden font-sans`），先放页面背景图与深色遮罩，再提供两种响应式布局。
+
+**页面背景图（页面与手机内部屏幕都使用这张图）：**
+```
+https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260709_152331_bd312d1a-1f20-46b9-9b68-12bcdcf6d53e.png&w=1280&q=85
+```
+- 页面：`<img>` 使用 absolute inset-0 w-full h-full object-cover z-0，再覆盖 `<div className="absolute inset-0 bg-black/70 z-[1]" />`
+
+**电脑端（md+）：** `hidden md:flex relative z-[2] w-full h-screen items-center justify-center py-6` → 内部为 `items-end justify-center gap-[2vw]` 的横向布局，放三台手机模型，每台外包 `animate-fade-slide-up`，延迟分别为 300/500/700。中间手机添加 `-mb-6`。
+
+**手机端（低于 md）：** `md:hidden relative z-[2] flex flex-col items-center gap-[50px] py-[20px] px-[20px]` → 纵向放同样三台手机，延迟为 300/500/700。
+
+## PhoneMockup 组件
+可复用的 iPhone 风格外框：
+- 外层：`flex flex-col items-center`
+- 外框：`relative rounded-[clamp(30px,4vw,54px)] bg-black p-[clamp(6px,1vw,12px)] shadow-2xl shadow-black/60`；内部描边为 `absolute inset-0 rounded-[clamp(30px,4vw,54px)] ring-1 ring-white/15`
+- 屏幕：`relative w-full h-full rounded-[clamp(24px,3.2vw,44px)] overflow-hidden bg-[#0a0e1c]`
+- 顶部灵动岛开孔：`absolute top-[3%] left-1/2 -translate-x-1/2 w-[30%] h-[4%] bg-black rounded-full z-50`
+- 内容缩放：内部 div 尺寸为 `390px × contentH`（通过 ResizeObserver 测量 contentH），按 `scale = screenW / 390` 缩放，transform-origin 设为 top-left
+- 侧边按钮（neutral-700）：左侧三个，位于顶部 19%/26%/35.5%（高度 4.5%/7.3%/7.3%）；右侧一个，位于 30.8%，高度 11.4%
+
+**手机外框尺寸（CSS）：**
+- `.phone-frame { aspect-ratio: 390/844; width: clamp(200px, 75vw, 340px); }`
+- `@media (min-width:768px) { width: min(25vw, 42vh); }`
+- `@media (min-width:1280px) { width: min(28vw, 48vh, 430px); }`
+
+## 手机导航（各屏共用）
+顶部导航为 `absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-5 h-14 mt-[20px]`：
+- 左侧：F1 标志 `<img src="https://framerusercontent.com/images/NZPITJ6zDBvxVT7rc1NH2sOU.png" className="h-7 w-auto object-contain" />`
+- 右侧：两个 14×14（h-14 w-14）的方形按钮，不加圆角：
+  - 白色按钮，使用头像图标 `https://framerusercontent.com/images/JIl4japgQlMAQRvh1gDHszRvkUY.png?width=92&height=92`（w-5 h-5）
+  - 玻璃按钮：`background: rgba(255,255,255,0.15); backdropFilter: blur(12px)`；里面放两条白色横线（宽 21px 与 10px，高 2px，rounded-full，间距 5px）
+
+**菜单遮罩（z-50，全屏）：** `linear-gradient(160deg, #1a0000 0%, #8B0000 40%, #E10600 100%)`，淡入淡出过渡 400ms。链接显示 Biography、Statistics、Career，样式 text-3xl font-bold tracking-tight，错开滑入（translateX -20px→0，延迟 0.1 + i*0.08s，cubic-bezier(0.16,1,0.3,1)）。悬停颜色为 `#EDB40B`。底部放白色 "Sign in" 按钮。
+
+## 第一屏 — Lewis Hamilton 首屏
+`relative w-full h-full flex flex-col px-5 pb-0 pt-[76px] overflow-hidden`
+- 背景：ScreenBackground（背景图 + `bg-black/60`）
+- PhoneNav
+- 地点区（z-10，mt-4 mb-2，animate-fade-slide-up delay-300）："United Kingdom" 使用 text-white/60 text-[16px]，旁边英国国旗 `https://framerusercontent.com/images/pqUTggaeyOivtzDImRzkBRdww.png`（w-6 h-6）。标题使用 text-white font-normal leading-[0.95] tracking-[-0.05em] text-[48px]，显示 "Silverstone" / "England"
+- **车手照片容器**（z-[5]，绝对定位铺满，flex items-end justify-center）：
+  - `<img src="https://framerusercontent.com/images/m5IyHuJeOQ5P0GOvWx1xv0IR9Y.png" className="w-[calc(140%-5px)] max-w-none h-auto object-contain animate-scale-in delay-500 origin-bottom" />`
+  - **模糊遮罩**（关键玻璃效果）：`absolute bottom-0 left-0 right-0 h-[50%] pointer-events-none`，内联样式为：
+    ```
+    backdropFilter: 'blur(6px)',
+    WebkitBackdropFilter: 'blur(6px)',
+    mask: 'linear-gradient(to bottom, transparent 0%, black 50%)',
+    WebkitMask: 'linear-gradient(to bottom, transparent 0%, black 50%)'
+    ```
+- 底部内容（z-10，absolute bottom-0 px-5 pb-5）：
+  - 车手头像选择条 `https://framerusercontent.com/images/dAAdqktZVxBDjPKk97YCjZjsE.png`（h-12 w-auto，animate-fade-slide-up delay-700，mb-3）
+  - 姓名：text-white font-semibold leading-[0.82] tracking-[-0.05em] text-[64px] animate-speed-reveal delay-800，显示 "Lewis" / "Hamilton"
+
+## 第二屏 — Silverstone 赛道与积分
+`relative w-full h-full flex flex-col px-5 pb-8 pt-[76px] overflow-hidden`
+- 背景 + PhoneNav
+- 地点区（z-10，mb-4，animate-fade-slide-up delay-400）：与第一屏相同的 UK、国旗、Silverstone England
+- 赛道图片（z-10，flex-1 flex items-center justify-center -mx-5 px-2 min-h-0，animate-scale-in delay-600）：`https://framerusercontent.com/images/raKAG2bJP9xeqi118VMniPLvbAA.png`，w-full h-full object-contain
+- 积分区（z-10，mt-auto pt-4，animate-fade-slide-up delay-800）："Season Points" 标签与奖章图标 `https://framerusercontent.com/images/pIXUcwyAF0xzCIaKjtNLahHpasQ.png`（w-6 h-6）。三个递增数字，均为 font-semibold tracking-[-0.06em]，fontSize 110px，lineHeight 0.72：
+  - 227（延迟 800）— 通过 bg-clip-text text-transparent 使用渐变文字 `linear-gradient(to bottom, white 0%, rgba(255,255,255,0.4) 50%, transparent 85%)`
+  - 374（延迟 1000）— 同样渐变
+  - 4987（延迟 1200）— 纯色 `#EDB40B`
+- 数字递增动画：useCountUp hook，三次方渐缓结束（1-(1-t)³），持续 2200ms，延迟后开始，使用 requestAnimationFrame
+
+## 第三屏 — Scuderia Ferrari 车队
+`relative w-full h-full overflow-hidden`
+- 背景 + PhoneNav
+- 车队标题（absolute top-[100px] left-5 z-10，animate-fade-slide-up delay-300）："Team Name" 使用 text-white/60 text-[15px]，旁边 Ferrari 图标 `https://framerusercontent.com/images/sUDhzMuxKIOvqjSH5U1fn0QSXqI.png`（w-5 h-5）。标题使用 text-white font-normal leading-[0.83] text-[52px]，letterSpacing -0.08em，显示 "Scuderia" / "Ferrari"
+- 底盘区（absolute top-[245px] left-5 z-10，animate-fade-slide-up delay-500）：底盘图标 `https://framerusercontent.com/images/zIA1tYDOAdZo3k6IXX9gBC5FGbY.png`（w-5 h-5）与 "Chassis" 标签。型号使用 text-[#EDB40B] font-semibold leading-[0.79] text-[120px]，letterSpacing -0.08em，显示 "SF-26"
+- 赛车图片（absolute top-[390px] left-3 right-3 z-10 w-[calc(100%-24px)] h-auto object-contain animate-fade-slide-left delay-700）：`https://framerusercontent.com/images/MzKCSYB4uVt9psQq[已省略].png`
+- 底部车手卡（absolute bottom-0 flex，animate-fade-slide-up delay-900）：两张并排卡片，各为 w-1/2 h-200px rounded-t-2xl p-3，玻璃样式：
+  ```
+  background: rgba(20,20,30,0.8),
+  border: 1px solid rgba(255,255,255,0.1),
+  borderBottom: none,
+  backdropFilter: blur(16px)
+  ```
+  - Leclerc 卡片："Charles Leclerc" 使用 text-white/60 text-[13px]，旁边头像图标（w-4 h-4 opacity-60），统计图 `https://framerusercontent.com/images/MJfqhcmEoIBnfimJNhKqoZpq0.png`（h-5）；大号 "16" 使用 text-white font-semibold leading-[0.79] text-[110px]，letterSpacing -0.08em
+  - Hamilton 卡片："Lewis Hamilton" 与头像图标，统计图 `https://framerusercontent.com/images/3EwXxC1QutaGnlNDZMlAN66ZmTU.png`（h-5）；大号数字 "44"
+
+## 动画（CSS 关键帧，全部使用 `both` 填充模式）
+- **fadeSlideUp**：opacity 0→1，translateY 30px→0，0.9s cubic-bezier(0.16,1,0.3,1)
+- **fadeSlideDown**：translateY -20px→0，0.7s
+- **fadeSlideLeft**：translateX 40px→0，0.9s
+- **fadeSlideRight**：translateX -40px→0，0.9s
+- **scaleIn**：opacity 0→1，scale 0.92→1，1s
+- **fadeIn**：opacity 0→1，0.8s ease-out
+- **speedReveal**（姓名出现）：0% opacity 0 translateX(-100%) skewX(-8deg) blur(8px) → 60% opacity 1 translateX(4%) skewX(-2deg) blur(0) → 100% translateX(0) skewX(0) blur(0)，0.8s
+- **raceLineLeft**：从左侧 scaleX 0→1.1→1
+- 延迟工具类：delay-100 至 delay-1600（每档 0.1s）
+
+## 精确素材地址（原样使用）
+- 页面与手机背景：`https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260709_152331_bd312d1a-1f20-46b9-9b68-12bcdcf6d53e.png&w=1280&q=85`
+- F1 标志：`https://framerusercontent.com/images/NZPITJ6zDBvxVT7rc1NH2sOU.png`
+- 头像/搜索图标：`https://framerusercontent.com/images/JIl4japgQlMAQRvh1gDHszRvkUY.png?width=92&height=92`
+- 英国国旗：`https://framerusercontent.com/images/pqUTggaeyOivtzDImRzkBRdww.png`
+- Lewis Hamilton 照片：`https://framerusercontent.com/images/m5IyHuJeOQ5P0GOvWx1xv0IR9Y.png`
+- 车手头像选择条：`https://framerusercontent.com/images/dAAdqktZVxBDjPKk97YCjZjsE.png`
+- Silverstone 赛道：`https://framerusercontent.com/images/raKAG2bJP9xeqi118VMniPLvbAA.png`
+- 赛季积分奖章：`https://framerusercontent.com/images/pIXUcwyAF0xzCIaKjtNLahHpasQ.png`
+- Ferrari 车队图标：`https://framerusercontent.com/images/sUDhzMuxKIOvqjSH5U1fn0QSXqI.png`
+- 底盘图标：`https://framerusercontent.com/images/zIA1tYDOAdZo3k6IXX9gBC5FGbY.png`
+- Ferrari SF-26 赛车：`https://framerusercontent.com/images/MzKCSYB4uVt9psQq[已省略].png`
+- Leclerc 统计图：`https://framerusercontent.com/images/MJfqhcmEoIBnfimJNhKqoZpq0.png`
+- Hamilton 统计图：`https://framerusercontent.com/images/3EwXxC1QutaGnlNDZMlAN66ZmTU.png`
+
+## 颜色变量
+- 深色背景：`#0a0e1c`
+- F1 红色（菜单渐变）：`#E10600`，深红 `#8B0000`，近黑 `#1a0000`
+- 金黄强调色：`#EDB40B`
+- 玻璃卡片：`rgba(20,20,30,0.8)` + `backdropFilter: blur(16px)` + `border: 1px solid rgba(255,255,255,0.1)`
+- 导航玻璃按钮：`rgba(255,255,255,0.15)` + `blur(12px)`
+- 照片底部模糊：`blur(6px)`，配合纵向遮罩渐变，在 50% 处从透明变为黑色
+
+## 字体规则
+- 全部使用 Albert Sans
+- 标题使用 font-normal 或 font-semibold，紧密字距（-0.05em 至 -0.08em），紧密行高（0.72–0.95）
+- 大号展示数字：110–120px，lineHeight 0.72–0.79
+- 标签：text-white/60，13–16px，font-normal

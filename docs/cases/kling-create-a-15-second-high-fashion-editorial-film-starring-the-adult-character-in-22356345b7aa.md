@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/kling-create-a-15-second-high-fashion-editorial-film-starring-the-adult-character-in-22356345b7aa.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 闪光影棚里的十组时尚姿势
+
+<CaseTags :item="item" />
 
 在统一影棚中安排十组定格姿势，用闪光和节奏变化连接人物造型。
 

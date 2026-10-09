@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/bladesmith-competition-reality-tv-video.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 刀匠竞技真人秀视频
+
+<CaseTags :item="item" />
 
 一段写实真人秀风格的视频提示词，展现一名刀匠用锻造的砍刀劈砍陶瓷地精进行测试，包含动态冲击物理效果和纪录片式 镜头运动。
 

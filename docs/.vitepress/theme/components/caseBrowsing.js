@@ -1,15 +1,19 @@
 import { hasSessionAccess } from '../accessState.js'
+import { normalizeTagFilters, caseTagLabels } from '../../caseTags.js'
 
 const LIST_CATEGORIES = new Set(['all', 'image', 'video', 'web'])
 const SLUG_PATTERN = /^[a-z0-9-]+$/
 const STORAGE_PREFIX = 'case-list-state:'
 const PAGE_SIZE = 12
 
-export function buildListPath(category = 'all', query = '') {
+export function buildListPath(category = 'all', query = '', filters = {}) {
   const id = LIST_CATEGORIES.has(category) ? category : 'all'
   const path = id === 'all' ? '/cases/' : `/cases/${id}/`
   const text = String(query || '').trim()
-  return text ? `${path}?${new URLSearchParams({ q: text })}` : path
+  const params = new URLSearchParams()
+  if (text) params.set('q', text)
+  for (const [key, value] of Object.entries(normalizeTagFilters(filters))) if (value) params.set(key, value)
+  return params.size ? `${path}?${params}` : path
 }
 
 // A return URL is a local case list only. Query and preview IDs must never
@@ -21,7 +25,9 @@ export function normalizeListPath(value) {
     const url = new URL(value, 'https://case-list.invalid')
     const match = url.pathname.match(/^\/cases(?:\/(image|video|web))?\/?$/)
     if (!match || url.origin !== 'https://case-list.invalid') return null
-    return buildListPath(match[1] || 'all', url.searchParams.get('q') || '')
+    return buildListPath(match[1] || 'all', url.searchParams.get('q') || '', {
+      purpose: url.searchParams.get('purpose'), topic: url.searchParams.get('topic'),
+    })
   } catch {
     return null
   }
@@ -35,25 +41,28 @@ export function getListContext(path) {
     path: normalized,
     category: url.pathname.split('/')[2] || 'all',
     query: url.searchParams.get('q') || '',
+    ...normalizeTagFilters(Object.fromEntries(url.searchParams)),
   }
 }
 
-export function filterCases(cases, category = 'all', query = '') {
+export function filterCases(cases, category = 'all', query = '', filters = {}) {
   const needles = String(query || '').trim().toLowerCase().split(/\s+/).filter(Boolean)
+  const tags = normalizeTagFilters(filters)
   return cases.filter(item => {
     if (category !== 'all' && item.category !== category) return false
-    const text = `${item.title} ${item.summary} ${item.use} ${(item.models || []).join(' ')} ${item.creator}`.toLowerCase()
+    for (const [group, id] of Object.entries(tags)) if (id && !item.tags?.[group]?.includes(id)) return false
+    const text = `${item.title} ${item.summary} ${item.use} ${(item.models || []).join(' ')} ${item.creator} ${caseTagLabels(item.tags).map(tag => tag.name).join(' ')}`.toLowerCase()
     return needles.every(needle => text.includes(needle))
   })
 }
 
 export function resolveCaseContext(item, cases, fromPath) {
   let context = getListContext(fromPath)
-  let results = context ? filterCases(cases, context.category, context.query) : []
+  let results = context ? filterCases(cases, context.category, context.query, context) : []
   const hasOrigin = !!context && results.some(candidate => candidate.slug === item.slug)
   if (!hasOrigin) {
     context = getListContext(buildListPath(item.category))
-    results = filterCases(cases, context.category, context.query)
+    results = filterCases(cases, context.category, context.query, context)
   }
   const index = results.findIndex(candidate => candidate.slug === item.slug)
   return {

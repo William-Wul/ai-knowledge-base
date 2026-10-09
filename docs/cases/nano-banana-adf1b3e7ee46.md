@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/nano-banana-adf1b3e7ee46.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 保持人脸不变，重做棚拍光线
+
+<CaseTags :item="item" />
 
 作者用 Nano Banana 对上传照片做商业人像修饰，核心工作流是固定面部身份与比例，只重建柔和棚拍布光、纯白背景和自然皮肤质感，并明确列出禁止变脸的负向约束。
 

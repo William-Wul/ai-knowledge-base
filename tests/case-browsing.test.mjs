@@ -22,7 +22,7 @@ test('origin links retain Chinese search and strip preview state', () => {
   const preview = buildPreviewHref('video-8', list)
   assert.equal(new URL(preview, 'https://example.invalid').searchParams.get('view'), 'video-8')
   assert.equal(normalizeListPath(preview), list)
-  assert.deepEqual(getListContext(list), { path: list, category: 'video', query: '产品 灯光' })
+  assert.deepEqual(getListContext(list), { path: list, category: 'video', query: '产品 灯光', purpose: '', topic: '' })
 })
 
 test('return path cannot escape known local case lists', () => {
@@ -99,7 +99,9 @@ test('list positions are isolated by classification and search and tolerate brok
 
 test('real case catalog contains preview media without exposing full prompts', () => {
   const realCases = JSON.parse(readFileSync(new URL('../docs/.vitepress/data/cases-generated/index.json', import.meta.url)))
-  assert.ok(realCases.length >= 400)
+  const selection = JSON.parse(readFileSync(new URL('../docs/.vitepress/data/practice-cases-selection.json', import.meta.url))).cases
+  assert.equal(realCases.length, selection.length)
+  assert.deepEqual(realCases.map(item => item.slug), selection.map(item => item.slug))
   const videos = filterCases(realCases, 'video')
   assert.ok(videos.every(item => item.mediaType !== 'video' || /^https:\/\//.test(item.mediaUrl)))
   assert.ok(realCases.every(item => !('promptOriginal' in item) && !('promptZh' in item)))

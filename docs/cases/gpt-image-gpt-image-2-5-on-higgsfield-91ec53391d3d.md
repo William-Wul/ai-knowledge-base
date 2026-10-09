@@ -8,18 +8,21 @@ caseDetail: true
 prev: false
 next: false
 ---
-<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json 后运行 npm run cases:generate。 -->
+<!-- 自动生成：修改 practice-cases.json / case-editorial-overrides.json / case-tags.json 后运行 npm run cases:generate。 -->
 <script setup>
 import CaseMedia from '../.vitepress/theme/components/CaseMedia.vue'
 import CasePrompt from '../.vitepress/theme/components/CasePrompt.vue'
 import CaseReturn from '../.vitepress/theme/components/CaseReturn.vue'
 import CaseNavigation from '../.vitepress/theme/components/CaseNavigation.vue'
+import CaseTags from '../.vitepress/theme/components/CaseTags.vue'
 import item from '../.vitepress/data/cases-generated/gpt-image-gpt-image-2-5-on-higgsfield-91ec53391d3d.json'
 </script>
 
 <CaseNavigation :item="item" />
 
 # 东京街头与复古摩托旅行海报
+
+<CaseTags :item="item" />
 
 higgsfield 上的 GPT image 2.5。提示词：创作一张受上传参考图启发的高级编辑风插画旅行海报。保持整体构图……
 

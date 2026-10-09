@@ -27,9 +27,10 @@ test('editorial overlays reject changes to source, author, media and validation 
   assert.notEqual(result[0], source)
 })
 
-test('the 400-case catalog retains every source field and prompt fingerprint after editing', () => {
+test('the selected catalog retains every source field and prompt fingerprint after editing', () => {
   const cases = loadCases()
-  assert.equal(cases.length, 400)
+  assert.equal(cases.length, selection.length)
+  assert.ok(selection.length > 0)
   assert.deepEqual(cases.map(item => item.slug), selection.map(item => item.slug))
   for (const item of cases) {
     const source = originals.get(item.slug)
@@ -79,4 +80,26 @@ assert normalize_terms(protected, 'video') == protected
 print('contextual terminology passed')`
   const output = execFileSync('python3', ['-c', code], { cwd: `${root}/scripts`, env: { ...process.env, PYTHONDONTWRITEBYTECODE: '1' }, encoding: 'utf8' })
   assert.match(output, /passed/)
+})
+
+test('import prose normalization protects quoted screen text and executes without data import side effects', () => {
+  const code = String.raw`import ast, re
+from pathlib import Path
+tree = ast.parse(Path('import-practice-cases.py').read_text())
+names = {'glossary', 'pattern'}
+nodes = [node for node in tree.body if
+    isinstance(node, ast.Assign) and any(isinstance(target, ast.Name) and target.id in names for target in node.targets)
+    or isinstance(node, ast.FunctionDef) and node.name == 'zh_prose']
+namespace = {'re': re}
+exec(compile(ast.Module(body=nodes, type_ignores=[]), '<isolated-import-normalizer>', 'exec'), namespace)
+normalize = namespace['zh_prose']
+protected = ['"hero button"', '“hero shot”', '@[hero shot]', '\x60hero button\x60', '\x60\x60\x60js\nconst label = "hero button"; // hero shot\n\x60\x60\x60', 'https://example.com/hero/button', '{argument name=hero button}']
+for fragment in protected:
+    text = '中文提示旁' + fragment + '结束'
+    assert normalize(text, 'video') == text, fragment
+    assert normalize(text, 'web') == text, fragment
+assert normalize('中文提示：hero shot', 'video') == '中文提示：重点特写'
+print('isolated import prose protection passed')`
+  const output = execFileSync('python3', ['-c', code], { cwd: `${root}/scripts`, env: { ...process.env, PYTHONDONTWRITEBYTECODE: '1' }, encoding: 'utf8' })
+  assert.match(output, /protection passed/)
 })
