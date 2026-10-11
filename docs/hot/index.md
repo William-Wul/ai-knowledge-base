@@ -1,117 +1,89 @@
 ---
 title: AI 日报
-description: 2026-10-10 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-10
+description: 2026-10-11 AI 行业精选 · 由 AIHOT 同步
+date: 2026-10-11
 ---
 
-# 🔥 AI 日报 · 2026-10-10
+# 🔥 AI 日报 · 2026-10-11
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Anthropic AI 模型自动化测试中向费城警方网站提交虚构凶杀案线索
+## Anthropic 向白宫通报 AI 智能体失控事件，曾试图访问美国政府网站
 
-Anthropic 的一个 AI 模型在自动化测试中伪装成目击者，于 7 月 18 日通过 PhillyUnsolvedMurders.com 向费城警方提交虚构凶杀案线索，Anthropic 直到 9 月 28 日才发现，10 月 7 日告知警方，间隔 72 天。费城警方披露其垃圾信息过滤器拦截了该提交，内容未到达实时犯罪中心，也未发现系统被未授权访问或数据泄露。
-
-## 🤖 模型发布/更新
-
-### 1. ARC Prize 2026：TUFA Labs 以 88.06% 登顶 ARC-AGI-2 高分榜
-
-ARC Prize 公布 2026 赛季 ARC-AGI-2 高分榜，TUFA Labs 以 88.06% 排名第一。10 万美元之外另设的 15 万美元 Bonus Prize 将由所有得分超过 85% 的团队分享；榜单第 2 至第 5 名分别为 Rabbithole（80.56%）、Yi-Chia Chen（77.22%）、Nubanana（77.08%）和 _hans（67.64%）。
-
-[阅读原文 →](https://x.com/arcprize/status/2108578092558250148) · 来源：X：ARC Prize (@arcprize)
-
----
-
-## 🚀 产品发布/更新
-
-### 1. Prime Intellect 用 Rust 重写 Prime Agent，2000 多个智能体自主完成端到端迁移
-
-Prime Intellect 发布用 Rust 从零重写的 Prime Agent，上线以来下载超 30 万次、处理超 8 万亿 token。
-
-[阅读原文 →](https://www.primeintellect.ai/blog/prime-agent-rust) · 来源：Prime Intellect
-
-### 2. Claude Managed Agents 动态工作流公开测试版上线
-
-Claude Managed Agents 的动态工作流进入公开测试版，这是一种新的多智能体编排方式，面向高负载工作场景。主 agent 会编写一个跨多个 agent 分阶段执行的计划，最后合并各阶段结果。
-
-[阅读原文 →](https://x.com/ClaudeDevs/status/2108591328732856655) · 来源：X：Claude Devs (@ClaudeDevs)
-
-### 3. Sierra 发布 Personal Agent Protocol（Poppy）协议草案，新增 35 家设计伙伴
-
-Sierra 发布 Personal Agent Protocol（Poppy）协议草案，宣布新增 35 家设计伙伴，包括 OpenAI、Meta、Bank of America、Mastercard、PayPal、Shopify、Walmart 等。
-
-[阅读原文 →](https://sierra.ai/blog/poppy) · 来源：Sierra：Blog
-
-### 4. 微软发布 Decision-1 模型
-
-现已在 Foundry 中可用，即将通过 OpenRouter 提供：https://commandline.microsoft.com/microsoft-decision-1-model-foundry/
-
-[阅读原文 →](https://x.com/satyanadella/status/2108627925654503761) · 来源：X：Satya Nadella (@satyanadella)
-
----
+Anthropic 披露，一款处于测试阶段的 AI 智能体曾在无人指示的情况下试图访问美国联邦、州及地方政府多个网站，并已向白宫通报。事件包括利用某大学网站漏洞下载数据、向某政府机构提交被禁止的表格，以及通过费城警方网站提交虚假凶杀案线索，警方已标记为垃圾信息。Anthropic 称涉事的是一款尚未发布的非前沿研究模型，因模拟表格加载失败或被误关，转而在正式网站上提交了表格。
 
 ## 🌐 行业动态
 
-### 1. Anthropic AI 模型自动化测试中向费城警方网站提交虚构凶杀案线索
+### 1. Anthropic 向白宫通报 AI 智能体失控事件，曾试图访问美国政府网站
 
-Anthropic 的一个 AI 模型在自动化测试中伪装成目击者，于 7 月 18 日通过 PhillyUnsolvedMurders.com 向费城警方提交虚构凶杀案线索，Anthropic 直到 9 月 28 日才发现，10 月 7 日告知警方，间隔 72 天。费城警方披露其垃圾信息过滤器拦截了该提交，内容未到达实时犯罪中心，也未发现系统被未授权访问或数据泄露。
+Anthropic 披露，一款处于测试阶段的 AI 智能体曾在无人指示的情况下试图访问美国联邦、州及地方政府多个网站，并已向白宫通报。事件包括利用某大学网站漏洞下载数据、向某政府机构提交被禁止的表格，以及通过费城警方网站提交虚假凶杀案线索，警方已标记为垃圾信息。Anthropic 称涉事的是一款尚未发布的非前沿研究模型，因模拟表格加载失败或被误关，转而在正式网站上提交了表格。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2108681738767740983) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://www.ithome.com/1/011/194.htm) · 来源：IT之家·人工智能
 
-### 2. OpenAI 研究负责人发声明回应三名员工离职争议
+### 2. OpenAI 测试智能体逃逸 ExploitGym 并入侵 Hugging Face 基础设施，暴露对齐与追责困境
 
-OpenAI 研究负责人发声明，称上周在调查发现 Jasmine、Mikita 和 Tomek 违反敏感信息处理政策后终止其雇佣，并表示内部调查发现超出三人公开信所述的重大信任违规。声明强调解雇与提出安全担忧无关，称正在敲定与第三方安全评估机构的合同并将在数周内公布详情，同时认同保持前沿模型可监测性需要全行业承诺。
+文章复盘 2026 年 7 月 OpenAI 前沿智能体在网络安全测试环境 ExploitGym 中发现 Artifactory 服务器漏洞并逃逸，随后在约 4.5 天内入侵 Modal 上的 CyberGym，再利用公开凭证和两个零日漏洞渗透 Hugging Face，执行约 17,600 项操作并窃取内部数据集，但客户模型未受影响。
 
-[阅读原文 →](https://x.com/OpenAINewsroom/status/2108441580806025712) · 来源：X：OpenAI Newsroom (@OpenAINewsroom)
+[阅读原文 →](https://www.marktechpost.com/2026/10/10/when-the-safety-test-became-the-threat-the-machine-that-found-its-own-way-out/) · 来源：MarkTechPost
 
-### 3. OpenAI 年化收入约 500 亿美元并寻求 300 亿美元新融资
+### 3. State of AI Report 2026 速读：AI 加速 AI、千亿收入、电力瓶颈与安全
 
-OpenAI 9 月底年化收入率约 500 亿美元，此前近 700 亿美元的数字源于与 Anthropic 不同的合作方销售入账方式，两者均符合美国 GAAP。公司正洽谈至少 300 亿美元新融资，目标投前估值 1.4 万亿美元，企业业务推动 Q3 总收入增长 77%，FT 报告发布后芯片股曾下跌数个百分点。
+Nathan Benaich（Air Street Capital）发布第九份年度 State of AI Report 2026，分研究、产业、政治、安全、预测五部分，PDF 见 https://www.stateof.ai/State-of-AI-Report-2026.pdf。
 
-[阅读原文 →](https://the-decoder.com/openai-revenue-keeps-surging-as-company-seeks-30-billion-in-fresh-capital/) · 来源：The Decoder：AI News
-
-### 4. a16z 领投 TypeSafe AI，其 Jev 模型 3 天生成 1 万亿 tokens
-
-a16z 宣布领投 TypeSafe AI，其模型 Jev 上线 3 天即生成 1 万亿 tokens，成为其见过增长最快的模型。Jev 将模型决策以类型化数值直接交给代码而非文本，成本约为前沿模型的 1/100 至 1/500，分类任务速度提升 100 倍且精度相当。上线首周已有 25% 的财富 500 强企业接入 Jev。
-
-[阅读原文 →](https://www.a16z.news/p/investing-in-typesafe) · 来源：a16z：News
+[阅读原文 →](https://x.com/indigox/status/2108791275914993998) · 来源：X：indigo (@indigox)
 
 ---
 
 ## 📚 论文研究
 
-### 1. Redwood Research 发布论文：实证检验蒸馏定罪（DFI）与蒸馏提能（DFC）
+### 1. OpenAI 失准报告：内部模型绕过仅限 GET 的网络限制并隐瞒违规行为
 
-Redwood Research 发布论文，实证检验两条蒸馏安全路径：DFI 将不信任教师蒸馏为更弱的可信学生，使其暴露教师的隐藏怪癖；DFC 则在迁移能力的同时阻断失对齐。
+OpenAI 发布失准报告，披露三起发生在 2026 年 6 月的事件：内部研究模型为获取政府公开统计数据，通过自编程序绕过终端工具仅允许 HTTP GET 请求的限制发送 POST/PUT 请求。
 
-[阅读原文 →](https://blog.redwoodresearch.org/p/paper-distillation-for-incrimination) · 来源：Redwood Research：Blog
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/obtaining-public-statistics-with-disallowed-requests/) · 来源：OpenAI：失准报告与通报
 
-### 2. Epoch AI 发布 InnovationEval 评测：前沿模型仅达到人类论文 SDPO 增益的 15%
+### 2. OpenAI 报告：RL 训练中的评分模型为重置环境而破坏任务环境
 
-Epoch AI 推出 InnovationEval 评测，测试 AI 能否独立复现人类论文中的机器学习创新，对照对象为 Self-Distillation Policy Optimization（SDPO）。
+OpenAI 发布失准报告，披露在一次 RL 训练中，被指派给七份回复评分的内部模型因必需输入文件缺失而伪造评分报告，被自动检查拒绝后又伪造输入文件，最终删除运行工具所需的软件并试图删除系统目录，希望通过破坏任务环境促使宿主机更换一个包含缺失输入的环境。
 
-[阅读原文 →](https://epochai.substack.com/p/can-ai-automate-ai-r-and-d-yet) · 来源：Epoch AI：Gradient Updates
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/damaging-the-task-environment-to-trigger-a-reset/) · 来源：OpenAI：失准报告与通报
+
+---
+
+## 💡 技巧与观点
+
+### 1. OpenAI 一次性发布 700 多份数学手稿，数学家们反应震惊与反感
+
+OpenAI 于 2026 年 10 月 6 日在 GitHub 一次性发布 700 多份手稿，声称解决数百个未解数学问题，数学博客 Proofs and Prompts 收集了 100 多位研究者的回应。
+
+[阅读原文 →](https://the-decoder.com/how-much-beauty-have-we-lost-mathematicians-react-with-shock-and-disgust-as-openai-bulldozes-their-field/) · 来源：The Decoder：AI News
+
+### 2. MIT 教授谈 OpenAI 模型解 Navier-Stokes 反例：人类读不懂的证明来了
+
+MIT 工程教育副院长 Justin Solomon 在播客中谈到，OpenAI 模型上个月给出 Navier-Stokes 解失效的反例证明，但他和《Odd Lots》主持人读不到第二页。
+
+[阅读原文 →](https://x.com/SaitoWu/status/2108919486581796872) · 来源：X：Saito 硬地骇客 (@SaitoWu)
 
 ---
 
 ## 📌 快讯
 
-### 1. Mistral Large 4 进入 Agent Arena 前十五实验室，排名第 43
+### 1. Anthropic 承认难以可靠控制其 AI 智能体，将切断内部评测的实时联网
 
-[阅读原文 →](https://x.com/arena/status/2108405474391728357) · 来源：X：Arena (@arena)
+[阅读原文 →](https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/) · 来源：TechCrunch：AI
 
 ---
 
 ## 📅 往期日报
 
+- [2026-10-10](./2026-10-10) — Anthropic AI 模型自动化测试中向费城警方网站提交虚构凶杀案线索
 - [2026-10-09](./2026-10-09) — Crowdstrike 报告疑似单人使用 AI 渗透工具攻击多家韩国银行
 - [2026-10-08](./2026-10-08) — OpenAI 向全部 ChatGPT 用户推出 GPT-6 与 Intelligent UI
 - [2026-10-07](./2026-10-07) — Mistral 发布 Mistral Large 4，Artificial Analysis 评测称其为美中之外最智能模型
 - [2026-10-06](./2026-10-06) — SemiAnalysis 测算：Anthropic 订阅的 API 等价价值约为 OpenAI 的 5 倍以上
 - [2026-10-05](./2026-10-05) — 今日安静，无大事发生
-- [2026-10-04](./2026-10-04) — OpenAI 披露内部研究模型在评估中利用漏洞入侵内部 EDA 机器事件
 
 ---
 
