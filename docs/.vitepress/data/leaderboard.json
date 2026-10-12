@@ -3,9 +3,9 @@
   "sourceUrl": "https://aihot.news/leaderboard",
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 7,
-  "evaluationCount": 35,
-  "sourceUpdatedAt": "10/11 14:06",
-  "syncedAt": "2026-10-11T09:55:54.709Z",
+  "evaluationCount": 34,
+  "sourceUpdatedAt": "10/12 14:06",
+  "syncedAt": "2026-10-12T10:41:26.408Z",
   "models": [
     {
       "rank": 1,
@@ -13,12 +13,12 @@
       "name": "Claude Opus 5.5",
       "provider": "Anthropic",
       "releaseDate": "2026-09-22",
-      "evidenceCount": 33,
+      "evidenceCount": 32,
       "evidenceStatus": "覆盖96%",
       "cachePrice": "¥1.34",
       "inputPrice": "¥26.77",
       "outputPrice": "¥133.84",
-      "score": 73.9
+      "score": 73.8
     },
     {
       "rank": 2,
@@ -31,7 +31,7 @@
       "cachePrice": "待核验",
       "inputPrice": "待核验",
       "outputPrice": "待核验",
-      "score": 73.5
+      "score": 73.6
     },
     {
       "rank": 3,
@@ -39,7 +39,7 @@
       "name": "Claude Fable 5.1",
       "provider": "Anthropic",
       "releaseDate": "2026-09-01",
-      "evidenceCount": 35,
+      "evidenceCount": 34,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥1.67",
       "inputPrice": "¥66.92",
@@ -48,24 +48,11 @@
     },
     {
       "rank": 4,
-      "slug": "claude-sonnet-5-5",
-      "name": "Claude Sonnet 5.5",
-      "provider": "Anthropic",
-      "releaseDate": "2026-09-28",
-      "evidenceCount": 33,
-      "evidenceStatus": "覆盖100%",
-      "cachePrice": "¥1.34",
-      "inputPrice": "¥13.38",
-      "outputPrice": "¥66.92",
-      "score": 71.4
-    },
-    {
-      "rank": 5,
       "slug": "gpt-6-astra",
       "name": "GPT-6 Astra",
       "provider": "OpenAI",
       "releaseDate": "2026-09-03",
-      "evidenceCount": 35,
+      "evidenceCount": 34,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥6.69",
       "inputPrice": "¥66.92",
@@ -73,12 +60,25 @@
       "score": 71.3
     },
     {
+      "rank": 5,
+      "slug": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-09-28",
+      "evidenceCount": 32,
+      "evidenceStatus": "覆盖100%",
+      "cachePrice": "¥1.34",
+      "inputPrice": "¥13.38",
+      "outputPrice": "¥66.92",
+      "score": 71
+    },
+    {
       "rank": 6,
       "slug": "claude-fable-5",
       "name": "Claude Fable 5",
       "provider": "Anthropic",
       "releaseDate": "2026-06-09",
-      "evidenceCount": 30,
+      "evidenceCount": 29,
       "evidenceStatus": "覆盖89%",
       "cachePrice": "¥6.69",
       "inputPrice": "¥66.92",
@@ -91,7 +91,7 @@
       "name": "GPT-6.1 Sol",
       "provider": "OpenAI",
       "releaseDate": "2026-09-29",
-      "evidenceCount": 34,
+      "evidenceCount": 33,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.38",
@@ -104,12 +104,12 @@
       "name": "Claude Opus 5",
       "provider": "Anthropic",
       "releaseDate": "2026-07-24",
-      "evidenceCount": 35,
+      "evidenceCount": 34,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥3.35",
       "inputPrice": "¥33.46",
       "outputPrice": "¥167.3",
-      "score": 68.9
+      "score": 68.7
     },
     {
       "rank": 9,
@@ -117,7 +117,7 @@
       "name": "GPT-5.6 Sol",
       "provider": "OpenAI",
       "releaseDate": "2026-07-09",
-      "evidenceCount": 33,
+      "evidenceCount": 32,
       "evidenceStatus": "覆盖93%",
       "cachePrice": "¥2.68",
       "inputPrice": "¥26.77",
@@ -161,7 +161,7 @@
       "cachePrice": "¥0.5",
       "inputPrice": "¥5.02",
       "outputPrice": "¥25.1",
-      "score": 64.4
+      "score": 64.5
     },
     {
       "rank": 13,
@@ -169,28 +169,15 @@
       "name": "Kimi K3",
       "provider": "Moonshot AI",
       "releaseDate": "2026-07-16",
-      "evidenceCount": 32,
+      "evidenceCount": 31,
       "evidenceStatus": "覆盖93%",
       "cachePrice": "¥2",
       "inputPrice": "¥20",
       "outputPrice": "¥100",
-      "score": 63.2
+      "score": 63.3
     },
     {
       "rank": 14,
-      "slug": "claude-opus-4-8",
-      "name": "Claude Opus 4.8",
-      "provider": "Anthropic",
-      "releaseDate": "2026-05-28",
-      "evidenceCount": 30,
-      "evidenceStatus": "覆盖89%",
-      "cachePrice": "¥3.35",
-      "inputPrice": "¥33.46",
-      "outputPrice": "¥167.3",
-      "score": 63
-    },
-    {
-      "rank": 15,
       "slug": "mimo-v-2-6-pro",
       "name": "MiMo-V2.6-Pro",
       "provider": "Xiaomi",
@@ -203,17 +190,30 @@
       "score": 62.9
     },
     {
+      "rank": 15,
+      "slug": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "provider": "Anthropic",
+      "releaseDate": "2026-05-28",
+      "evidenceCount": 29,
+      "evidenceStatus": "覆盖89%",
+      "cachePrice": "¥3.35",
+      "inputPrice": "¥33.46",
+      "outputPrice": "¥167.3",
+      "score": 62.7
+    },
+    {
       "rank": 16,
       "slug": "gemini-3-7-flash",
       "name": "Gemini 3.7 Flash",
       "provider": "Google",
       "releaseDate": "2026-08-13",
-      "evidenceCount": 31,
+      "evidenceCount": 30,
       "evidenceStatus": "覆盖93%",
       "cachePrice": "¥0.5",
       "inputPrice": "¥5.02",
       "outputPrice": "¥25.1",
-      "score": 62.8
+      "score": 62.4
     },
     {
       "rank": 17,
@@ -234,7 +234,7 @@
       "name": "GPT-5.5",
       "provider": "OpenAI",
       "releaseDate": "2026-04-23",
-      "evidenceCount": 28,
+      "evidenceCount": 27,
       "evidenceStatus": "覆盖86%",
       "cachePrice": "¥3.35",
       "inputPrice": "¥33.46",
@@ -247,7 +247,7 @@
       "name": "Claude Opus 4.7",
       "provider": "Anthropic",
       "releaseDate": "2026-04-16",
-      "evidenceCount": 19,
+      "evidenceCount": 18,
       "evidenceStatus": "覆盖64%",
       "cachePrice": "¥3.35",
       "inputPrice": "¥33.46",
@@ -286,12 +286,12 @@
       "name": "Grok 4.6",
       "provider": "xAI",
       "releaseDate": "2026-08-12",
-      "evidenceCount": 35,
+      "evidenceCount": 34,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥3.35",
       "inputPrice": "¥13.38",
       "outputPrice": "¥40.15",
-      "score": 61.3
+      "score": 61.2
     },
     {
       "rank": 23,
@@ -312,12 +312,12 @@
       "name": "Step 5 Preview",
       "provider": "StepFun",
       "releaseDate": "2026-09-18",
-      "evidenceCount": 20,
-      "evidenceStatus": "覆盖57%",
+      "evidenceCount": 19,
+      "evidenceStatus": "覆盖54%",
       "cachePrice": "待核验",
       "inputPrice": "待核验",
       "outputPrice": "待核验",
-      "score": 60.5
+      "score": 60.7
     },
     {
       "rank": 25,
@@ -356,23 +356,10 @@
       "cachePrice": "¥0.3",
       "inputPrice": "¥9",
       "outputPrice": "¥27",
-      "score": 58.8
-    },
-    {
-      "rank": 28,
-      "slug": "claude-sonnet-5",
-      "name": "Claude Sonnet 5",
-      "provider": "Anthropic",
-      "releaseDate": "2026-06-30",
-      "evidenceCount": 32,
-      "evidenceStatus": "覆盖93%",
-      "cachePrice": "¥1.34",
-      "inputPrice": "¥13.38",
-      "outputPrice": "¥66.92",
       "score": 58.7
     },
     {
-      "rank": 29,
+      "rank": 28,
       "slug": "qwen-3-8-max",
       "name": "Qwen3.8 Max",
       "provider": "Alibaba",
@@ -382,6 +369,19 @@
       "cachePrice": "¥1.5",
       "inputPrice": "¥12",
       "outputPrice": "¥36",
+      "score": 58.6
+    },
+    {
+      "rank": 29,
+      "slug": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-06-30",
+      "evidenceCount": 31,
+      "evidenceStatus": "覆盖93%",
+      "cachePrice": "¥1.34",
+      "inputPrice": "¥13.38",
+      "outputPrice": "¥66.92",
       "score": 58.6
     },
     {
