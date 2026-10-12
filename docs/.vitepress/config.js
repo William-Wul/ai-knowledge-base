@@ -1,4 +1,4 @@
-import { CASE_CATEGORIES } from './casesData.js'
+import { CASE_CATEGORIES, CASE_COLLECTIONS } from './casesData.js'
 import { defineConfig } from 'vitepress'
 import { existsSync, readdirSync, readFileSync } from 'fs'
 import { resolve, join, basename, dirname } from 'path'
@@ -199,6 +199,7 @@ const siteSidebar = [
         items: [
           { text: '全部案例', link: '/cases/' },
           ...CASE_CATEGORIES.map(c => ({ text: c.name, link: `/cases/${c.id}/` })),
+          ...CASE_COLLECTIONS.map(c => ({ text: c.name, link: `/cases/${c.id}/` })),
         ],
       },
       {

@@ -3854,6 +3854,96 @@
       "category": "image",
       "editorialScore": 63.04,
       "sourcePromptSha256": "0c2ddef950714e0ef043d75cc8ce5cc149cc103a2b9db715830c509149431adf"
+    },
+    {
+      "slug": "opus-55-goodcase-promo-30s-no-ai-media",
+      "rank": 551,
+      "category": "video",
+      "sourcePromptSha256": "fac31535347d52289f7fb42957e3d1a9bb9c6a05abbaf4daa4d3de2dd7859069"
+    },
+    {
+      "slug": "seedance-make-a-modern-slick-and-punchy-video-for-a-modern-startup-that-works-on-infere-07ba4673539c",
+      "rank": 552,
+      "category": "video",
+      "sourcePromptSha256": "36a742bbca7e41dc7ba83802d7109afa668d014f90cc4ea6a0a3a4c1f7fc80cb"
+    },
+    {
+      "slug": "seedance-celem-jest-wykonanie-maksymalnie-90-sekundowego-klipu-promocyjnego-pod-tytu-11f2fef80247",
+      "rank": 553,
+      "category": "video",
+      "sourcePromptSha256": "432a709adc6002b39866a0ee20d3fa378c4f78f3a110782165988886901342c3"
+    },
+    {
+      "slug": "case-0e7eb2796775",
+      "rank": 554,
+      "category": "video",
+      "sourcePromptSha256": "4f950bd173fb86a58b6ce29889b1877ab461fb46ff384382e8a62294f09eadfd"
+    },
+    {
+      "slug": "case-df71349792f3",
+      "rank": 555,
+      "category": "video",
+      "sourcePromptSha256": "486d0f34fc27624f80cadeba8c591acb0b4b1eda8d0e5e80147cbdd56285e816"
+    },
+    {
+      "slug": "room-to-quarks-8828fb5f29d0",
+      "rank": 556,
+      "category": "video",
+      "sourcePromptSha256": "3ac790c64399b2ba7222002d442a6b5de20c667798e26f7838971067f1af0681"
+    },
+    {
+      "slug": "tts-tts-b8b9c0125d11",
+      "rank": 557,
+      "category": "video",
+      "sourcePromptSha256": "3815f29e1cc0d78e9910985bf833c018fd0252833818c594ed1a930ace396690"
+    },
+    {
+      "slug": "runway-create-a-60-second-motion-graphic-explainer-video-about-the-history-of-ice-c-7e24d2b97918",
+      "rank": 558,
+      "category": "video",
+      "sourcePromptSha256": "88b76f5758f32284a768df9925010a561accff9a9a073718d7af670e86beb3c6"
+    },
+    {
+      "slug": "food-craving-product-launch-film",
+      "rank": 559,
+      "category": "video",
+      "sourcePromptSha256": "eb6978a155c7911bd758cf1f22b6c395f34e00d2f7f0dc5066478f84a4e816b1"
+    },
+    {
+      "slug": "case-e2b0260a6a94",
+      "rank": 560,
+      "category": "video",
+      "sourcePromptSha256": "eee97e3857da34fb47a3318b86c5f3902728e67324b57c2015fe25edf04894c8"
+    },
+    {
+      "slug": "3d-480d142beda4",
+      "rank": 561,
+      "category": "video",
+      "sourcePromptSha256": "48e2963af46528893f1e40c2268e7404e9ee1c191b205c25e76d9254a6e510a5"
+    },
+    {
+      "slug": "case-48175d8e8ac4",
+      "rank": 562,
+      "category": "video",
+      "sourcePromptSha256": "d8b188ae00fad385ff866a255141b2c04a5f37fab3e252f092ffef038954f394"
+    },
+    {
+      "slug": "transformer-explainer-7d2aa7449fc4",
+      "rank": 563,
+      "category": "video",
+      "sourcePromptSha256": "c65368b6b1764636b4f27d90e54d0a0a80b4a414f9692be07d16f5218697c95d"
+    },
+    {
+      "slug": "ui-5921e0916a9f",
+      "rank": 564,
+      "category": "video",
+      "sourcePromptSha256": "85434958ccdc0c246f5b0b73a6977c6bede956be6e107d19c771285d0f4bf134"
+    },
+    {
+      "slug": "case-c370a0c054b8",
+      "rank": 565,
+      "category": "video",
+      "sourcePromptSha256": "46b3346fdd82a4572706da9de9fe8aac3defe63dd8b3a3a63a99fe2a42e2ca73"
     }
   ],
   "batches": [

@@ -1,4 +1,6 @@
 // One category vocabulary for navigation, generated pages and the case browser.
+import { OPUS55_COLLECTION } from './opus55Collection.js'
+export const CASE_COLLECTIONS = [OPUS55_COLLECTION]
 export const CASE_CATEGORIES = [
   { id: 'image', name: 'AI 生成图片', description: '从一张作品开始，学习画面描述、参考图和风格控制。' },
   { id: 'video', name: 'AI 创作视频', description: '看成片、读分镜，学习人物、动作和镜头如何配合。' },

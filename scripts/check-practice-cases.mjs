@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { readFileSync, existsSync } from 'node:fs'
-import { CASE_CATEGORIES } from '../docs/.vitepress/casesData.js'
+import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../docs/.vitepress/casesData.js'
 import { loadCases } from './practice-cases-data.mjs'
 import { createHash } from 'node:crypto'
 import { expectedCatalogSize, validateCatalog } from './case-catalog-integrity.mjs'
@@ -51,4 +51,10 @@ for (const c of cases) {
 }
 checkPage('index')
 for (const category of CASE_CATEGORIES) checkPage(`${category.id}/index`)
+for (const collection of CASE_COLLECTIONS) {
+  const html = checkPage(`${collection.id}/index`)
+  assert(html.includes(collection.name), `专题标题缺失：${collection.id}`)
+  assert(html.includes(`${collection.slugs.length} 个案例`), `专题数量不符：${collection.id}`)
+  assert(collection.slugs.every(slug => ids.has(slug)), `专题案例缺失：${collection.id}`)
+}
 console.log(`通过：${cases.length} 个案例、${CASE_CATEGORIES.length} 个分类、完整正文、资源和页面实际引用的案例样式。`)

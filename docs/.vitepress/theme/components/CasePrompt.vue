@@ -58,12 +58,12 @@ function download() {
   <div v-if="item" class="case-prompt-block">
     <div class="case-prompt-toolbar">
       <div class="case-language" aria-label="提示词语言">
-        <button type="button" :aria-pressed="language === 'zh'" @click="switchLanguage('zh')">{{ item.contentKind === 'code' ? '中文使用指令' : '中文提示词' }}</button>
-        <button type="button" :aria-pressed="language === 'original'" @click="switchLanguage('original')">{{ item.contentKind === 'code' ? '完整源码' : '作者原文' }}</button>
+        <button type="button" :aria-pressed="language === 'zh'" @click="switchLanguage('zh')">{{ item.sourcePromptStatus === 'excerpt' ? '中文节选' : item.contentKind === 'code' ? '中文使用指令' : '中文提示词' }}</button>
+        <button type="button" :aria-pressed="language === 'original'" @click="switchLanguage('original')">{{ item.sourcePromptStatus === 'excerpt' ? '作者原文节选' : item.contentKind === 'code' ? '完整源码' : '作者原文' }}</button>
       </div>
       <button type="button" class="case-button case-primary" @click="copy()">复制完整内容</button>
     </div>
-    <p class="case-prompt-note">{{ language === 'zh' ? item.translationNote : `Goodcase 收录的 ${item.creator} 原文，保留原样。` }}</p>
+    <p class="case-prompt-note">{{ language === 'zh' ? item.translationNote : `Goodcase 收录的 ${item.creator} ${item.sourcePromptStatus === 'excerpt' ? '公开节选，末尾存在截断' : '原文'}，保留原样。` }}</p>
     <pre ref="promptBox" class="case-prompt-content" :class="{ 'is-collapsed': needsExpansion && !expanded }" tabindex="0" aria-label="完整可复制内容">{{ prompt }}</pre>
     <button v-if="needsExpansion" type="button" class="case-expand" :aria-expanded="expanded" @click="expanded = !expanded">{{ expanded ? '收起长内容 ↑' : '展开阅读全文 ↓' }}</button>
     <div v-if="segments.length" class="case-segments"><span>按分镜分别复制：</span><button v-for="s in segments" :key="s.title" type="button" class="case-button" @click="copy(s.text)">{{ s.title }}</button></div>

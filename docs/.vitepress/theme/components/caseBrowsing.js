@@ -1,7 +1,8 @@
 import { hasSessionAccess } from '../accessState.js'
 import { normalizeTagFilters, caseTagLabels } from '../../caseTags.js'
+import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../../casesData.js'
 
-const LIST_CATEGORIES = new Set(['all', 'image', 'video', 'web'])
+const LIST_CATEGORIES = new Set(['all', ...CASE_CATEGORIES.map(c => c.id), ...CASE_COLLECTIONS.map(c => c.id)])
 const SLUG_PATTERN = /^[a-z0-9-]+$/
 const STORAGE_PREFIX = 'case-list-state:'
 const PAGE_SIZE = 12
@@ -23,8 +24,9 @@ export function normalizeListPath(value) {
   if (value.includes('\\') || value.includes('#')) return null
   try {
     const url = new URL(value, 'https://case-list.invalid')
-    const match = url.pathname.match(/^\/cases(?:\/(image|video|web))?\/?$/)
+    const match = url.pathname.match(/^\/cases(?:\/([a-z0-9-]+))?\/?$/)
     if (!match || url.origin !== 'https://case-list.invalid') return null
+    if (match[1] && !LIST_CATEGORIES.has(match[1])) return null
     return buildListPath(match[1] || 'all', url.searchParams.get('q') || '', {
       purpose: url.searchParams.get('purpose'), topic: url.searchParams.get('topic'),
     })
@@ -46,10 +48,12 @@ export function getListContext(path) {
 }
 
 export function filterCases(cases, category = 'all', query = '', filters = {}) {
+  const collection = CASE_COLLECTIONS.find(c => c.id === category)
+  const members = collection && new Set(collection.slugs)
   const needles = String(query || '').trim().toLowerCase().split(/\s+/).filter(Boolean)
   const tags = normalizeTagFilters(filters)
   return cases.filter(item => {
-    if (category !== 'all' && item.category !== category) return false
+    if (members ? !members.has(item.slug) : category !== 'all' && item.category !== category) return false
     for (const [group, id] of Object.entries(tags)) if (id && !item.tags?.[group]?.includes(id)) return false
     const text = `${item.title} ${item.summary} ${item.use} ${(item.models || []).join(' ')} ${item.creator} ${caseTagLabels(item.tags).map(tag => tag.name).join(' ')}`.toLowerCase()
     return needles.every(needle => text.includes(needle))

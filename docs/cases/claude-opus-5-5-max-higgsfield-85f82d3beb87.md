@@ -1,6 +1,6 @@
 ---
-title: "印刷术讲解：静图、动效与文字分工"
-description: "60秒报纸拼贴讲解，静态图不含文字，信息由后续动态排版添加。"
+title: "Opus与Higgsfield制作印刷术历史动画"
+description: "Higgsfield 负责静态图片，Opus 负责拼贴画面的运动和文字动画。"
 pageClass: case-detail-page case-category-video
 caseCategory: video
 caseSlug: claude-opus-5-5-max-higgsfield-85f82d3beb87
@@ -20,13 +20,13 @@ import item from '../.vitepress/data/cases-generated/claude-opus-5-5-max-higgsfi
 
 <CaseNavigation :item="item" />
 
-# 印刷术讲解：静图、动效与文字分工
+# Opus与Higgsfield制作印刷术历史动画
 
 <CaseTags :item="item" />
 
-60秒报纸拼贴讲解，静态图不含文字，信息由后续动态排版添加。
+Higgsfield 负责静态图片，Opus 负责拼贴画面的运动和文字动画。
 
-适合练习先审史实再制作培训讲解片的流程。
+适合有历史资料的知识讲解。
 
 ## 效果展示
 
@@ -37,7 +37,7 @@ import item from '../.vitepress/data/cases-generated/claude-opus-5-5-max-higgsfi
 
 ## 开始前准备
 
-原文60秒，不是一次直接生成视频的指令：Higgsfield只制作静态图，另一个执行者做动效与动画。未提供完整史实、日期、镜头表、画幅或音轨；需要自己查证内容并制作，本站未调用这些工具。
+准备经核对的印刷术时间线。作者原文明确：Higgsfield 只生成静态图片，编程助手制作全部动效；需要图片工具与动画渲染流程，不是直接向视频模型交一句提示词。
 
 参考工具：支持参考图的生图工具。
 
@@ -45,12 +45,12 @@ import item from '../.vitepress/data/cases-generated/claude-opus-5-5-max-higgsfi
 
 以下步骤与练习由本站整理，供学习时参考；作者原文保留在下方。
 
-1. 本站步骤建议：先列出经过核对的印刷术事件与日期，再安排自己的60秒讲解结构；这一步为本站补充流程。
-2. 让图像步骤只生成报纸剪贴、撕边、半色调与阴影的无字静图，不把历史文字烘焙到图片里。
-3. 在后续制作中添加动态文字与动画，保持纸张拼贴风格；结尾回到开场画面，形成循环，不硬切。
-4. 验收四项：事件与日期有查证依据；静图不含字；动画文字可辨认且与讲解对应；尾帧接回首帧。
+1. 先整理从起源到现代的关键事件和准确日期。
+2. 按报纸拼贴风格准备分镜，让 Higgsfield 只制作不含文字的静态图片。
+3. 把文字和图片运动交给编程助手，保持纸张、阴影、排版风格一致。
+4. 导出60秒样片，核对事实与字幕，再检查最后一帧能否衔接开场。
 
-**值得学习的写法：** 原文可学之处：先分开事实、画面和文字制作，再验收循环衔接；原文没有提供可直接复用的历史讲稿。
+**值得学习的写法：** 把静态画面与运动拆开交给不同工具，同时要求图中文字由代码添加。
 
 ## 完整提示词
 
@@ -60,7 +60,7 @@ import item from '../.vitepress/data/cases-generated/claude-opus-5-5-max-higgsfi
 
 **本站练习建议：**
 
-本站练习（非作者原文）：只做一条已核对事件的无字拼贴图，再加一行日期文字并让末帧回到首帧，不扩成整部历史片。
+改为另一项发明史，先核对五个关键日期，再检查视频和资料是否逐条对应。
 
 ## 作者与来源
 

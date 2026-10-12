@@ -1,7 +1,7 @@
 <script setup>
 import { computed, nextTick, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import cases from '../../data/cases-generated/index.json'
-import { CASE_CATEGORIES } from '../../casesData.js'
+import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../../casesData.js'
 import { CASE_TAG_GROUPS, caseTagLabels, normalizeTagFilters } from '../../caseTags.js'
 import CaseViewer from './CaseViewer.vue'
 import { buildListPath, filterCases, buildCaseHref, buildPreviewHref, readListState, saveListState, hasCaseAccess } from './caseBrowsing.js'
@@ -137,7 +137,7 @@ onBeforeUnmount(() => { ++restoreRun; window.removeEventListener('popstate', res
   <div class="case-browser">
     <nav class="case-mobile-categories" aria-label="案例分类">
       <a :href="buildListPath('all', query, filters)" :aria-current="category === 'all' ? 'page' : undefined">全部</a>
-      <a v-for="c in CASE_CATEGORIES" :key="c.id" :href="buildListPath(c.id, query, filters)" :aria-current="category === c.id ? 'page' : undefined">{{ c.name }}</a>
+      <a v-for="c in [...CASE_CATEGORIES, ...CASE_COLLECTIONS]" :key="c.id" :href="buildListPath(c.id, query, filters)" :aria-current="category === c.id ? 'page' : undefined">{{ c.name }}</a>
     </nav>
     <div class="case-toolbar">
       <label class="case-search">
@@ -169,7 +169,7 @@ onBeforeUnmount(() => { ++restoreRun; window.removeEventListener('popstate', res
           <span class="case-play">{{ c.mediaType === 'video' ? '▶ 视频预览' : '放大预览' }}</span>
         </button>
         <div class="case-card-body">
-          <span class="case-type">{{ categoryName(c.category) }}{{ c.contentKind === 'code' ? ' · 组件' : '' }}</span>
+          <span class="case-type">{{ categoryName(c.category) }}{{ c.sourcePromptStatus === 'excerpt' ? ' · 灵感参考／公开节选' : c.contentKind === 'code' ? ' · 组件' : '' }}</span>
           <h2><a :href="buildCaseHref(c.slug, listPath)" @click="remember(c.slug)">{{ c.title }}</a></h2>
           <p>{{ c.summary }}</p>
           <div class="case-card-tags" aria-label="案例标签"><button v-for="tag in cardTags(c)" :key="`${tag.group}-${tag.id}`" type="button" :aria-label="`筛选${tag.name}案例`" @click="selectTag(tag.group, tag.id, true)">{{ tag.name }}</button></div>

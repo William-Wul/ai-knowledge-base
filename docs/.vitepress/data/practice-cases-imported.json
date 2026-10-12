@@ -16825,5 +16825,593 @@
     "capturedAt": "2026-10-09",
     "tested": false,
     "imageUrl": "https://media.goodcase.ai/cases/eb2d18662dcf.webp"
+  },
+  {
+    "slug": "opus-55-goodcase-promo-30s-no-ai-media",
+    "category": "video",
+    "title": "用真实网站素材做30秒宣传片",
+    "summary": "从本地代码和网站寻找截图、案例与品牌素材，再用代码制作动画和配乐。",
+    "use": "适合已有网站、希望展示真实功能的产品介绍。",
+    "preparation": "准备自己的品牌、网站和可使用的本地素材。来源说明称未接入 AI 影音模型，画面仍使用真实网站素材；不是所有图片都由代码画出。",
+    "steps": [
+      "核对网站与代码，列出可展示的功能、品牌名称和素材位置。",
+      "沿用开头3秒展示效果、介绍使用过程、结尾展示网站的30秒结构，先做16:9版本。",
+      "让编程工具制作动画与代码配乐，再调整为9:16；检查文字大小和截图裁切。",
+      "播放导出文件，核对功能真实性、总时长、两个画幅及声音。"
+    ],
+    "lesson": "先核对真实界面，再决定分镜，能减少虚构功能和错误截图。",
+    "exercise": "把目标换成自己的网站，列出三个可核对的功能，检查成片是否逐个展示。",
+    "creator": "卡尔的AI沃茨",
+    "sourceUrl": "https://x.com/aiwarts/status/2103419586964316483",
+    "url": "https://goodcase.ai/cases/opus-55-goodcase-promo-30s-no-ai-media",
+    "cover": "/images/cases/catalog/opus-55-goodcase-promo-30s-no-ai-media.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/0bbe195e5996.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "为GoodCase. ai制作一支30秒的网站宣传片，并完成配乐。\n\n你可以读取当前Mac mini上的代码和素材，也可以使用浏览器访问goodcase. ai。从代码和真实网站自行寻找品牌Logo、案例内容、图片、影片及适合拍摄的页面，取得所需截图。先核对线上网站与本地代码，再决定影片展示哪些内容。网站功能、界面文字和案例效果必须有实际依据。\n\n影片面向对 AI 案例感兴趣的创作者。开头3秒展示最抓人的真实案例效果；接著用连贯、有趣的视觉动线，呈现从发现案例到深入查看的过程；结尾清楚展示GoodCase. ai的名称和网站。整体约30秒，节奏轻快，适合社交平台发布。优先完成16:9成片，同时制作适合9:16的版本。画面文字要少，并保持可读。\n\n用代码生成音乐就好",
+    "promptZh": "为GoodCase. ai制作一支30秒的网站宣传片，并完成配乐。\n\n你可以读取当前Mac mini上的代码和素材，也可以使用浏览器访问goodcase. ai。从代码和真实网站自行寻找品牌Logo、案例内容、图片、影片及适合拍摄的页面，取得所需截图。先核对线上网站与本地代码，再决定影片展示哪些内容。网站功能、界面文字和案例效果必须有实际依据。\n\n影片面向对 AI 案例感兴趣的创作者。开头3秒展示最抓人的真实案例效果；接著用连贯、有趣的视觉动线，呈现从发现案例到深入查看的过程；结尾清楚展示GoodCase. ai的名称和网站。整体约30秒，节奏轻快，适合社交平台发布。优先完成16:9成片，同时制作适合9:16的版本。画面文字要少，并保持可读。\n\n用代码生成音乐就好",
+    "translationNote": "作者中文原文保留；步骤与练习由本站整理，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 30.116281,
+    "mediaNote": "来源效果演示，点击播放；来源视频约30秒"
+  },
+  {
+    "slug": "seedance-make-a-modern-slick-and-punchy-video-for-a-modern-startup-that-works-on-infere-07ba4673539c",
+    "category": "video",
+    "title": "一句话制作推理服务发布片",
+    "summary": "作者用一句简短要求，展示一家推理服务初创公司的动效发布片。",
+    "use": "适合练习把开放的创意要求补成可验收的产品短片。",
+    "preparation": "准备业务介绍、品牌和真实卖点。来源摘要称使用 Opus 5.5，工具标签却写 Seedance，两处不一致，模型与制作分工未独立核验；作者所述时间与费用也不是本站测量。",
+    "steps": [
+      "阅读作者原句，标出“现代、精致、有冲击力”这三个风格要求。",
+      "把推理服务换成自己的业务，另外提供真实卖点、品牌和期望时长。",
+      "先让编程工具给出分镜与素材需求，再制作一个短样片。",
+      "核对文字准确性与动效节奏；制作方式和耗时以本次实际结果记录。"
+    ],
+    "lesson": "短提示词给了创作自由，但没有限定时长、画幅或事实，需要使用者补充。",
+    "exercise": "保留原句，补上自己的受众和一个真实卖点，比对补充前后的信息是否清楚。",
+    "creator": "@deedydas",
+    "sourceUrl": "https://x.com/deedydas/status/2102787937482252537",
+    "url": "https://goodcase.ai/cases/seedance-make-a-modern-slick-and-punchy-video-for-a-modern-startup-that-works-on-infere-07ba4673539c",
+    "cover": "/images/cases/catalog/seedance-make-a-modern-slick-and-punchy-video-for-a-modern-startup-that-works-on-infere-07ba4673539c.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/de4294dfea47.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "“make a modern slick and punchy video for a modern startup that works on inference”",
+    "promptZh": "“为一家做推理的现代初创公司制作一支现代、精致、有冲击力的视频”",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Seedance"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 26.052789,
+    "mediaNote": "来源效果演示，点击播放；来源视频约26秒"
+  },
+  {
+    "slug": "seedance-celem-jest-wykonanie-maksymalnie-90-sekundowego-klipu-promocyjnego-pod-tytu-11f2fef80247",
+    "category": "video",
+    "title": "Opus统筹的波兰旅行宣传片",
+    "summary": "以波兰风景和文化为主题，由编程助手统筹并调用 Higgsfield 制作素材。",
+    "use": "适合学习编程助手与外部影像工具的任务分工。",
+    "preparation": "准备地点、文化事实与素材清单，以及可用的 Higgsfield 接入。来源摘要称 Opus 5.5 统筹，原文写 Codex 与 Higgsfield，平台模型标签写 Seedance，具体模型组合仍待核验。",
+    "steps": [
+      "将原文目标整理成最长90秒、真实风景与文化、电影式画面的需求。",
+      "列出地点与场景，分别标出真实资料和需要制作的示意素材。",
+      "让统筹工具通过 Higgsfield 接入制作素材，再安排镜头与导出。",
+      "核对地标、文化事实、声音与总时长；生成画面不作为真实旅行记录。"
+    ],
+    "lesson": "明确统筹工具和影像工具的职责，避免把整个成片都归为一种生成方式。",
+    "exercise": "改为自己熟悉的城市，逐条核对地标与文化描述是否真实。",
+    "creator": "@KinasRemek",
+    "sourceUrl": "https://x.com/KinasRemek/status/2102728913579327722",
+    "url": "https://goodcase.ai/cases/seedance-celem-jest-wykonanie-maksymalnie-90-sekundowego-klipu-promocyjnego-pod-tytu-11f2fef80247",
+    "cover": "/images/cases/catalog/seedance-celem-jest-wykonanie-maksymalnie-90-sekundowego-klipu-promocyjnego-pod-tytu-11f2fef80247.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/3fb2f495050f.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5",
+      "Higgsfield（来源描述）"
+    ],
+    "promptOriginal": "```Celem jest wykonanie maksymalnie 90 sekundowego klipu promocyjnego pod tytułem \"Poland is so beautiful\". Ma to być film promujący Polskę jej najpiękniejsze miejsca, obyczaje kulturowe, spokój, bezpieczeństwo, dorobek historyczny. Używaj rzeczywistych scen i obrazów. Przy generowaniu filmu  użyj Higgsfield plugin lub serwera MCP do tej aplikacji. Realistyczny film, cinematic, ujęcia obiektywem anamorficznym.```\n\nHarness: Codex i  Higgsfield\nZadanie: Model ma wykonać zadanie bzez pomoicy ze strony człowieka.",
+    "promptZh": "```目标是制作一支最长 90 秒、题为“Poland is so beautiful”的宣传短片。影片应宣传波兰，展示其最美的地方、文化习俗、宁静、安全和历史成就。使用真实场景和影像。生成影片时，使用 Higgsfield plugin 或该应用的 MCP 服务器。影片要真实，电影式，采用变形宽银幕镜头拍摄。```\n\nHarness: Codex 和  Higgsfield\n任务：模型必须在没有人类帮助的情况下完成任务。",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Seedance"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 86.058667,
+    "mediaNote": "来源效果演示，点击播放；来源视频约86秒"
+  },
+  {
+    "slug": "case-0e7eb2796775",
+    "category": "video",
+    "title": "橙色圆点串起15秒动效短片",
+    "summary": "一个圆点贯穿开关、文字、弹簧曲线、几何形状和结束卡片。",
+    "use": "适合品牌动效与个人作品集练习。",
+    "preparation": "准备开场标签、主视觉单词、图表数字、品牌色和有清晰节拍的音乐。HTML 是浏览器页面文件；seek(t) 是按指定时间重画画面的函数，像把播放器拖到同一秒时总看到同一画面。",
+    "steps": [
+      "按作者要求填写标签、主词、数字、结尾和音乐。",
+      "先列出约15秒的六段结构，确认橙色圆点如何从上一段进入下一段。",
+      "让编程工具按时间重画画面，先抽查点击、图表峰值和形状变化的静帧。",
+      "对齐音乐节拍，检查文字可读性和首尾一致后再导出。"
+    ],
+    "lesson": "用同一物体接力连接多个场景，比堆叠独立转场更容易形成连续感。",
+    "exercise": "只换强调色和结束卡片，保留圆点的运动路径，检查首尾能否无缝循环。",
+    "creator": "@rossaxbt",
+    "sourceUrl": "https://x.com/rossaxbt/status/2107121188027707651",
+    "url": "https://goodcase.ai/cases/case-0e7eb2796775",
+    "cover": "/images/cases/catalog/case-0e7eb2796775.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/978987ba036f.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "<inputs>\nAsk me for: a short label for the opening toggle, one hero word, a percentage for the graph, the text for the final card, one accent color, and a track with a clear beat.\n</inputs>\n\n<direction>\nA 2D motion design film in 16:9. Use a warm off-white canvas, near-black backgrounds, bold typography and one vivid orange accent. The orange dot connects every scene: it starts in the UI, becomes the dot over a letter, traces a spring graph, grows into a shape and returns on the end card. A cursor makes the opening click feel real. Keep the motion sharp and controlled, with small spring overshoots and no dead time.\nBanned: stock footage, gradients, glows, particle bursts, random transitions and motion that isn't connected to an element already on screen.\n</direction>\n\n<structure>\nAround 15 seconds, with a visual change on every major beat.\nOpen: a cursor clicks the orange toggle beside \"Reduce Motion\". The letters bend and move into place until only \"Motion\" remains, with the orange dot above the \"i\".\nSpring: the dot jumps away from the word and lands on a graph. Its path draws a spring response, overshoots the target and settles beside a \"+22%\" callout.\nShape: the dot shoots across a line, grows into an orange circle and fills the frame. A black rounded square rotates inside it, then stretches into a pill. The scene contracts to a single orange dot on black.\nType: words like \"SPRINGS\", \"EASING\", \"KINETIC TYPE\", \"3D\" and \"SOUND\" orbit the dot. The circle of type opens out into a field of tiny dots.\nReveal: the halftone field expands and flips to black, revealing the final card: \"Opus 5.5\", \"Motion designer.\" and \"0 keyframes\".\nReturn: the orange dot moves back through the halftone, graph and toggle. Match the final frame to the first so the video loops cleanly.\n</structure>\n\n<build>\n1. One HTML file, 1920x1080 at 60fps. Compute every visual from time inside seek(t): no CSS transitions, timers or state carried between frames.\n2. Use closed-form springs for the toggle, bouncing dot and graph. Draw the graph from the same spring function that moves the dot.\n3. Animate letters individually for the \"Reduce Motion\" to \"Motion\" transformation. Keep the orange dot attached to the \"i\" until it begins its jump.\n4. Make the orange circle, rotating square and pill different states of the same shape. Preserve its position and motion through each transformation.\n5. Place the orbiting words along a circular path, then move their letters outward to hand the frame over to the halftone grid.\n6. Draw the halftone as a grid of dots whose sizes respond to the orange dot. Let it grow past the frame edges before revealing the end card.\n7. Sync the click, dot landing, graph peak, shape changes and final title to measured beats.",
+    "promptZh": "<inputs>\n请向我询问：开场开关的简短标签、一个主视觉单词、图表的百分比、结束卡片的文字、一种强调色，以及一首节拍清晰的曲目。\n</inputs>\n\n<direction>\n一部 16:9 的 2D 动态设计短片。使用暖米白色画布、近黑色背景、醒目的字体排版和一种鲜亮的橙色强调色。橙色圆点串联所有场景：它从 UI 中出现，变成字母上方的圆点，描绘弹簧响应图，扩大成形状，最后回到结束卡片。用光标让开场点击显得真实。动作要利落、可控，带有轻微的弹簧过冲，不留空档。\n禁止：素材库视频、渐变、辉光、粒子爆发、随机转场，以及与屏幕上已有元素无关联的运动。\n</direction>\n\n<structure>\n时长约 15 秒，每个主要节拍都要有视觉变化。\n开场：光标点击“Reduce Motion”旁的橙色开关。字母弯曲并移动到位，直到只剩“Motion”，橙色圆点位于“i”上方。\n弹簧：圆点从单词旁跃起，落到图表上。它的运动轨迹画出弹簧响应曲线，越过目标后，在“+22%”标注旁稳定下来。\n形状：圆点沿一条线飞驰，扩大成橙色圆形并铺满画面。一个黑色圆角方形在其中旋转，随后拉伸成胶囊形。场景收缩为黑色背景上的单个橙色圆点。\n字体：“spring”“ease”“kinetic type”“3D”和“sound”等词围绕圆点运行。环形文字向外展开，变成一片细小圆点。\n揭示：半调网点区域扩大并翻转为黑色，露出结束卡片：“Opus 5.5”“Motion Designer.”和“0 keyframes”。\n回归：橙色圆点穿过半调网点、图表和开关，返回原处。让最后一帧与第一帧一致，使视频无缝循环。\n</structure>\n\n<build>\n1. 使用一个 HTML 文件，1920x1080，60fps。在 seek(t) 中根据时间计算所有视觉效果：不使用 CSS transitions、计时器或帧间保留的状态。\n2. 为开关、弹跳圆点和图表使用闭式弹簧函数。使用驱动圆点运动的同一个弹簧函数绘制图表。\n3. 为“Reduce Motion”到“Motion”的变换逐个字母制作动画。让橙色圆点始终附着在“i”上，直到它开始跳跃。\n4. 将橙色圆形、旋转方形和胶囊形设为同一形状的不同状态。每次变换都保持其位置和运动连续。\n5. 将环绕的单词沿圆形路径排列，再让字母向外移动，将画面交给半调网格。\n6. 将半调效果绘制成圆点网格，圆点大小随橙色圆点变化。在揭示结束卡片前，让网格扩展到画面边缘之外。\n7. 将点击、圆点落地、图表峰值、形状变化和最终标题与测量出的节拍同步。",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 15.125333,
+    "mediaNote": "来源效果演示，点击播放；来源视频约15秒"
+  },
+  {
+    "slug": "case-df71349792f3",
+    "category": "video",
+    "title": "五个场景讲清业务的30秒动画",
+    "summary": "用一个页面文件串起客户问题、业务介绍、三步流程、证据和品牌结尾。",
+    "use": "适合服务介绍与小企业产品说明。",
+    "preparation": "准备卖什么、卖给谁、品牌颜色和可核对的证据。原提示词要求一个 HTML 动画页面；要拿到 MP4，还需要另外安排视频导出。",
+    "steps": [
+      "填写业务描述、目标用户和品牌颜色。",
+      "按客户问题、业务、三步流程、证据、品牌结尾写出五段文案。",
+      "让编程工具制作30秒页面动画，先在浏览器核对文字和转场。",
+      "若需要视频文件，补充导出要求，并播放检查时长、字幕和画幅。"
+    ],
+    "lesson": "把业务叙述拆成五个固定场景，能避免只谈风格而没有内容顺序。",
+    "exercise": "替换为自己的服务，检查每个场景是否只表达一件事，证据是否有真实来源。",
+    "creator": "@alex_prompter",
+    "sourceUrl": "https://x.com/alex_prompter/status/2103499977632997524",
+    "url": "https://goodcase.ai/cases/case-df71349792f3",
+    "cover": "/images/cases/catalog/case-df71349792f3.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/23fa6c689abf.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "Adopt the role of an expert motion designer. Build a 30-second animated explainer for my business as a single HTML page. 5 scenes. The customer's problem, what I do, how it works in 3 steps, one proof point, and my name at the end. Bold text, smooth transitions, my brand colours. My business {argument name=\"business_description\" default=\"[DESCRIBE WHAT YOU SELL, WHO IT'S FOR AND YOUR COLOURS]\"}",
+    "promptZh": "担任专业动态设计师。用单个 HTML 页面，为我的业务制作一段 30 秒动画解说。共 5 个场景：客户的问题、我做什么、分 3 步说明运作方式、一项佐证，以及结尾出现我的名字。使用醒目的文字、流畅的转场和我的品牌配色。我的业务 {argument name=\"business_description\" default=\"[DESCRIBE WHAT YOU SELL, WHO IT'S FOR AND YOUR COLOURS]\"}",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 34.5,
+    "mediaNote": "来源效果演示，点击播放；来源视频约34秒"
+  },
+  {
+    "slug": "room-to-quarks-8828fb5f29d0",
+    "category": "video",
+    "title": "从房间一路放大到夸克",
+    "summary": "按房间、电脑、芯片、原子、夸克的顺序，制作连续缩放的三维示意动画。",
+    "use": "适合学习尺度变化和镜头接力。",
+    "preparation": "准备五个尺度层级的说明。Three.js 是在网页里搭三维场景的工具，类似虚拟摄影棚；原文是视觉演示要求，没有给出真实比例或科学模型。",
+    "steps": [
+      "保留房间、MacBook、M4芯片、原子、夸克的层级顺序。",
+      "让编程工具给出各层构图和镜头进入位置。",
+      "先制作相邻两层的过渡，检查遮挡、尺度感和画面方向。",
+      "完成各层后检查首尾与导出；微观层标为示意，另行核对科学概念。"
+    ],
+    "lesson": "连续缩放需要明确每一层进入下一层的位置，而不仅是写“镜头放大”。",
+    "exercise": "先做房间到芯片三层，检查进入位置是否稳定，再决定是否扩展。",
+    "creator": "@VictorTaelin",
+    "sourceUrl": "https://x.com/VictorTaelin/status/2103299766473875778",
+    "url": "https://goodcase.ai/cases/room-to-quarks-8828fb5f29d0",
+    "cover": "/images/cases/catalog/room-to-quarks-8828fb5f29d0.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/2383d2856499.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "Create an animated sequence that starts in a room, zooms into a MacBook, then into an Apple M4 chip, followed by atoms, and finally quarks. Use HTML and Three.js for rendering.",
+    "promptZh": "创建一段动画序列，从房间开始，逐层放大进入 一台 MacBook，再进入 Apple M4 芯片，接着进入原子，最后进入夸克。使用 HTML 和 Three.js 渲染。",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 209.706667,
+    "mediaNote": "来源效果演示，点击播放；来源视频约210秒"
+  },
+  {
+    "slug": "tts-tts-b8b9c0125d11",
+    "category": "video",
+    "title": "线稿动画讲解大气环流",
+    "summary": "用线稿、双语字幕和文字转语音解说，展示高中地理的大气环流。",
+    "use": "适合准备教学材料、动画说明和解说稿。",
+    "preparation": "准备地理教材与 TTS 文档。TTS 是把文字读成声音的服务；原文中的 TTS.md、APIKEY 和 VOICE 是文档与配置名称，要替换为实际配置。作者的密钥保护建议原样保留，但需要在自己的工具中验证权限是否生效。",
+    "steps": [
+      "根据教材整理大气环流的知识点和解说稿。",
+      "准备 TTS 文档与音色配置，确认工具能调用服务且不会把密钥写进提示词。",
+      "让编程助手制作线稿、双语字幕、音乐和语音，先导出一个短片段。",
+      "逐句检查地理概念、气流方向和字幕时序，再扩展完整视频。"
+    ],
+    "lesson": "教学动画要同时规划知识顺序、图形、字幕和语音，而不是只追求画面好看。",
+    "exercise": "先制作30秒赤道上升气流片段，检查箭头、字幕和配音是否一致。",
+    "creator": "@akokoi1",
+    "sourceUrl": "https://x.com/akokoi1/status/2102606609574941028",
+    "url": "https://goodcase.ai/cases/tts-tts-b8b9c0125d11",
+    "cover": "/images/cases/catalog/tts-tts-b8b9c0125d11.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/01cf6791d692.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5",
+      "TTS 配音服务"
+    ],
+    "promptOriginal": "“做一个动画，讲解高中地理知识点“大气环流”。风格轻松有趣，动画格式为线稿，添加合适的音乐，请务必做到引人入胜，字幕用中英双语，解说用TTS，如果 TTS 接口有关闭水印的参数就关掉，文档在TTS.md，API KEY 和音色分别是 .env 里的 APIKEY 和 VOICE，最终视频要能直接导出。”\n\n提示词可以根据自己的需求微调，另外有一点安全事项需要注意，在 .claude/settings.json 里加一条 \"deny\": [\"Read(./.env)\"]，Claude 就读不到你的 key",
+    "promptZh": "“做一个动画，讲解高中地理知识点“大气环流”。风格轻松有趣，动画格式为线稿，添加合适的音乐，请务必做到引人入胜，字幕用中英双语，解说用TTS，如果 TTS 接口有关闭水印的参数就关掉，文档在TTS.md，API KEY 和音色分别是 .env 里的 APIKEY 和 VOICE，最终视频要能直接导出。”\n\n提示词可以根据自己的需求微调，另外有一点安全事项需要注意，在 .claude/settings.json 里加一条 \"deny\": [\"Read(./.env)\"]，Claude 就读不到你的 key",
+    "translationNote": "作者中文原文保留；步骤与练习由本站整理，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "待补充模型"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 288.133333,
+    "mediaNote": "来源效果演示，点击播放；来源视频约288秒"
+  },
+  {
+    "slug": "runway-create-a-60-second-motion-graphic-explainer-video-about-the-history-of-ice-c-7e24d2b97918",
+    "category": "video",
+    "title": "Opus与Runway制作冰淇淋历史短片",
+    "summary": "Runway 制作视觉图片，编程助手负责让剪报风画面和文字动起来。",
+    "use": "适合历史专题与品牌故事讲解。",
+    "preparation": "准备冰淇淋历史资料和可用的 Runway 接入。原文明确分工，来源说明提到 Opus 5.5 配合 Runway；不是只用 Opus 制作全部视觉素材。",
+    "steps": [
+      "整理从起源到现代的冰淇淋历史，用资料核对事件。",
+      "把方括号内的时长、主题和风格替换成自己的要求。",
+      "让 Runway 制作视觉图片，再交给编程助手完成排版、运动与衔接。",
+      "导出后核对事实、画风统一性和60秒时长。"
+    ],
+    "lesson": "把主题、时长、静态素材来源和动画职责写进同一条需求，协作方式更清楚。",
+    "exercise": "把主题换成咖啡史，保留60秒和剪报风格，核对每个事件与日期。",
+    "creator": "@notiansans",
+    "sourceUrl": "https://x.com/notiansans/status/2104676565829505527",
+    "url": "https://goodcase.ai/cases/runway-create-a-60-second-motion-graphic-explainer-video-about-the-history-of-ice-c-7e24d2b97918",
+    "cover": "/images/cases/catalog/runway-create-a-60-second-motion-graphic-explainer-video-about-the-history-of-ice-c-7e24d2b97918.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/855a7e34abfd.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5",
+      "Runway"
+    ],
+    "promptOriginal": "Create a [60 second] motion graphic explainer video about [the history of ice cream from the inception, to present day]. All of the visual images should be handled by Runway, and all the motion graphics elements and animations should be handled by you. The art style should be [newspaper cutout / mixed media aesthetic] with a high degree of polish. This piece is for your portfolio, so make sure to make it great.",
+    "promptZh": "创作一段 [60 second] 的动态图形解说视频，主题为 [the history of ice cream from the inception, to present day]。所有视觉图像都应由 Runway 处理，所有动态图形元素和动画都应由你处理。美术风格应为 [报纸剪贴／混合媒介拼贴风格]，并具有高度精致的完成度。这件作品将用于你的作品集，所以务必把它做好。",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Runway"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 60.053333,
+    "mediaNote": "来源效果演示，点击播放；来源视频约60秒"
+  },
+  {
+    "slug": "food-craving-product-launch-film",
+    "category": "video",
+    "title": "用点餐流程做15秒产品发布片",
+    "summary": "输入需求、寻找菜品、推荐、下单和配送，通过一个连续镜头连接。",
+    "use": "适合展示应用流程和按音乐节拍安排动效。",
+    "preparation": "准备产品、输入句子、6至8张菜品图、约130 BPM的音乐和品牌标记。BPM 是每分钟的拍数；原文要求32拍约14.8秒。界面下单只是演示，不能据此认定应用能真实下单。",
+    "steps": [
+      "填写产品、用户输入、图片、音乐和结尾标记，核对素材使用范围。",
+      "按0至6拍输入、6至12拍思考、12拍展示结果、16至21拍确认、21至32拍结尾安排分镜。",
+      "先做一个连续转场，检查按钮、气泡、卡片是否在交接处对齐。",
+      "按原文抽帧检查快速动作，播放声音与画面，确认约15秒、1920×1080的导出。"
+    ],
+    "lesson": "把界面中的按钮、气泡和品牌标记变成下一幕的主体，能让流程自然衔接。",
+    "exercise": "换成订咖啡流程，先写真实可用的操作，检查卡片、确认文字和结尾是否一致。",
+    "creator": "@ultimaxbt",
+    "sourceUrl": "https://x.com/ultimaxbt/status/2108210884799549714",
+    "url": "https://goodcase.ai/cases/food-craving-product-launch-film",
+    "cover": "/images/cases/catalog/food-craving-product-launch-film.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/0eaabc265730.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "<inputs>\nAsk me for: my product, the exact request a user types into it, 6 to 8 photos for the result cards, a royalty-free song around 130 BPM with a clear drop (Mixkit, free for commercial use), and my brand mark for the end card. If I skip anything, use the defaults: the food-ordering story below, food photos from Pexels (fire noodles, birria tacos, hot chicken, buffalo wings, smash burger, spicy ramen), and Mixkit \"Cat Walk\".\n</inputs>\n\n<direction>\nA 15-second product launch film, 1920x1080 at 60fps. 2D only, one continuous take. No fades, blurs or cuts: each scene grows from the last. Text rises from a mask line, buttons expand into pages, and color floods from one object before shrinking into another. Give the camera one eased move per scene, and never zoom in and out consecutively.\n\nLook: warm white canvas (#f5f5f2), black UI (#0e0e10), lime accent (#cdf24f), orange (#ff6a2a), and a blue send button (#2f6bff). Add an Apple Intelligence-style iridescent glow around the input: a blurred conic gradient rotating through pink, orange, lime, cyan and violet. Use real food photography on dark cards, Geist for UI and a serif for the product name on the end card.\n\nBanned: crossfades, blur-ins, 3D, particles, camera moves that reverse direction, holds longer than 1s, anything that feels like a template.\n</direction>\n\n<structure>\n130 BPM, 32 beats (14.8s). Start the song 12 beats before its drop.\n\nBeats 0-6, ask: push slowly into the glowing composer, about 3x zoom. Type the request over three fixed lines with a natural keystroke rhythm:\n\"I'm really hungry, I don't know\nwhat I want but something\nspicy, crispy and filling\"\n\nBeat 6, send: press the send button. A lime ripple spreads from it and transforms the message into a chat bubble. Pull back once to reveal the phone around it (428x900 screen, 11px black bezel, 9:41 status bar).\n\nBeats 6-12, think: the send button grows into an orange wok, a half-disc with a thin handle. It tosses 6 colorful ingredients on beats 8, 9, 10 and 11 beneath the shimmering text \"Finding something for you…\".\n\nBeat 12, the drop: a lime circle expands from the wok to fill the frame in about 0.35s. Dark food cards (330x440, radius 28, photo on top, name, one-line description, price and rating) burst in from the center. Slide the strip across three cards and land on \"Fire Noodles\", which lifts with a \"Best match\" pill.\n\nBeats 16-21, chat: the lime contracts back into the user's bubble, carrying its words as the chosen card flies into its slot. \"Found it. Fire Noodles from Wok & Fire, smoky, spicy and seriously filling.\" rises in, followed by \"Want me to order it for you?\" Then show two pills: \"Order now\" in black and \"More options\" outlined. The cursor clicks Order now → spinner → \"✓ Ordered\".\n\nBeats 21-32, outro: the black button expands into the page, staying pill-shaped as it reaches the edges while the camera pushes into it. Its label grows to headline size, then slides away. Bring in \"You were craving noodles.\" and \"Now it's on the way.\" word by word (92px, white on black). A courier dot follows a route to a pin. The pin becomes the brand mark, and the wordmark wipes out from behind it, with \"made with\" above and the product name below.\n</structure>\n\n<build>\n1. One HTML file, 1920x1080. Compute every style from time inside seek(t): no CSS transitions, timers or state carried between frames.\n2. Use one camera transform on a container, keyed by [time, zoom, x, y] with eased segments and zoom interpolated in log space.\n3. Use closed-form step-response springs for every pop and settle.\n4. Make every handoff a shared element: the lime flood carries a copy of the bubble's words, and the button carries its label into the page.\n5. Sound: use a downloaded Mixkit SFX for each event - typing, send pop, each toss, drop impact, card swoosh, click, success tone, page-fill whoosh and mark sparkle. Place each by its measured peak and loudnorm to -14 LUFS.\n6. Render with Playwright at 60fps using 8 subframes per frame, blended with ffmpeg tmix. Review every fast moment frame by frame and scan the full video frame by frame.\n</build>",
+    "promptZh": "<inputs>\n请向我询问：产品名称、用户输入的准确请求、用于结果卡片的6至8张照片、一首约130 BPM且有明显高潮落点的免版税音乐（Mixkit，可免费商用），以及结尾的品牌标记。如果我没有提供，就使用默认的点餐故事、Pexels上的菜品照片（火辣面条、墨西哥炖肉塔可、辣鸡、布法罗鸡翅、碎压牛肉汉堡、辣拉面）和 Mixkit 的“Cat Walk”。\n</inputs>\n\n<direction>\n15秒产品发布片，1920×1080，60fps。仅使用二维画面，一个连续镜头。不要淡入淡出、模糊转场或切镜；每幕从前一幕生长出来。文字从遮罩线升起，按钮扩展成页面，颜色从一个物体铺满画面，再收缩成另一个物体。每幕只安排一次有缓动的镜头运动，不要连续推近再拉远。\n\n外观：暖白画布 #f5f5f2、黑色界面 #0e0e10、青柠强调色 #cdf24f、橙色 #ff6a2a、蓝色发送按钮 #2f6bff。输入框周围添加 Apple Intelligence 风格的虹彩光晕：模糊的圆锥渐变在粉、橙、青柠、青和紫色之间旋转。深色卡片使用真实美食摄影，界面使用 Geist 字体，结尾产品名使用衬线字体。\n\n禁止：交叉淡化、模糊出现、三维、粒子、反向镜头运动、超过1秒的停留、任何像模板的东西。\n</direction>\n\n<structure>\n130 BPM，32拍（14.8秒）。音乐从高潮落点前12拍开始。\n\n第0至6拍，提问：慢慢推近发光输入框，约放大3倍。用自然打字节奏在固定三行中输入以下英文：\n\"I'm really hungry, I don't know\nwhat I want but something\nspicy, crispy and filling\"\n（意思是：我很饿，不知道想吃什么，但想要辣、脆、管饱的东西。）\n\n第6拍，发送：按下发送按钮。青柠色波纹从按钮扩散，把消息变成聊天气泡。只拉远一次，露出气泡周围的手机：428×900屏幕、11像素黑色边框、9:41状态栏。\n\n第6至12拍，思考：发送按钮变成橙色炒锅，形状是带细手柄的半圆盘。在第8、9、10、11拍翻炒6种彩色食材，上方闪烁文字“Finding something for you…”（正在为你寻找）。\n\n第12拍，高潮：一个青柠圆从炒锅扩展，约0.35秒内铺满画面。深色美食卡片从中央涌出：330×440，圆角28，顶部照片，以及名称、一句描述、价格和评分。横向滑过三张卡片，停在“Fire Noodles”，卡片抬起并显示“Best match”。\n\n第16至21拍，对话：青柠色收回用户气泡，携带原句文字，选中的卡片飞入对应位置。“Found it. Fire Noodles from Wok & Fire, smoky, spicy and seriously filling.”升起，随后是“Want me to order it for you?”。再显示两个胶囊按钮：“Order now”为黑色，“More options”为描边。光标点击 Order now → 加载动画 → “✓ Ordered”。\n\n第21至32拍，结尾：黑色按钮扩展成页面，抵达边缘时仍保持胶囊形，镜头同时推近。按钮文字变大到标题尺寸，再滑出。“You were craving noodles.”和“Now it's on the way.”逐词出现，92像素，黑底白字。一个配送员圆点沿路线走向地图图钉。图钉变成品牌标记，品牌文字从它后面揭开，上方为“made with”，下方为产品名。\n</structure>\n\n<build>\n1. 一个1920×1080的 HTML 文件。所有样式在 seek(t) 中按时间计算，不使用 CSS 过渡、计时器或帧间保留的状态。\n2. 在容器上只使用一个镜头变换，以[时间、缩放、x、y]为关键点，每段使用缓动，缩放在对数空间插值。\n3. 每次弹出和落稳都使用闭式阶跃响应弹簧函数，即能按指定时间直接计算位置。\n4. 每次交接都使用共享元素：青柠色铺满时携带气泡文字的副本，按钮把自己的文字带入页面。\n5. 声音：为打字、发送、每次翻炒、高潮冲击、卡片滑动、点击、成功提示、页面填满和标记闪亮分别下载 Mixkit 音效。按测出的峰值安排时机，用 loudnorm 归一到 -14 LUFS。\n6. 使用 Playwright 按60fps渲染，每帧取8个子帧，交给 ffmpeg 的 tmix 混合。逐帧审查每个快速动作，再逐帧检查完整视频。\n</build>",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 16.256,
+    "mediaNote": "来源效果演示，点击播放；来源视频约16秒"
+  },
+  {
+    "slug": "case-e2b0260a6a94",
+    "category": "video",
+    "title": "对比最短路与最快路的下坡动画",
+    "summary": "用小球沿不同轨道滑落的动画，解释最短路径未必用时最少。",
+    "use": "适合物理和数学概念的可视化。",
+    "preparation": "准备最速降线的准确解释与可比较的起终点。Canvas 2D 是网页里的二维画板；原文的历史陈述需另行核对，演示不能仅凭视觉快慢替代计算。",
+    "steps": [
+      "核对直线、圆弧、摆线的概念和题目条件。",
+      "要求各轨道使用同一起终点与同一物理假设。",
+      "让编程助手用二维画板制作轨道与小球，标出时间。",
+      "检查轨道、到达顺序和计算结果，再用于教学。"
+    ],
+    "lesson": "把比较条件固定，才能用运动解释差异，避免动画速度随意设置。",
+    "exercise": "用同一高度差比较直线和摆线，记录到达时间，并检查动画与计算是否一致。",
+    "creator": "@AIMevzulari",
+    "sourceUrl": "https://x.com/AIMevzulari/status/2106052083040256293",
+    "url": "https://goodcase.ai/cases/case-e2b0260a6a94",
+    "cover": "/images/cases/catalog/case-e2b0260a6a94.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/52f2c5bb0e59.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "Bu herhangi bir görüntü üretim modeli kullanmadan, yaratıcı olarak yapabileceğin en iyi şekilde Canvas 2D ile animasyona çevir. Konu: Galileo 1638'de sorduğu Bir top A noktasından B'ye en hızlı hangi yoldan iner? sorusuna karşılık kendi çözümü olan Düz rampa en kısa yol ama en hızlısı değil! Galileo çember yayının daha hızlı olduğunu gösterdi. Asıl cevabı (cycloid) 1696'da Bernoulli buldu.",
+    "promptZh": "不要使用任何图像生成模型，用 Canvas 2D 尽你所能，以最有创意的方式将其制作成动画。主题：Galileo 在 1638 年提出的问题——一个球从 A 点下降到 B 点，走哪条路径最快？他自己的解答是：直线斜坡是最短路径，但并不是最快的！Galileo 证明了圆弧路径更快。真正的答案（摆线）由 Bernoulli 于 1696 年发现。",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 128.042667,
+    "mediaNote": "来源效果演示，点击播放；来源视频约128秒"
+  },
+  {
+    "slug": "3d-480d142beda4",
+    "category": "video",
+    "title": "三维房屋从地基到完工",
+    "summary": "按地基、骨架、内部系统、围护结构和完工展示建筑过程，并提供透视查看。",
+    "use": "适合空间讲解和分层结构演示。",
+    "preparation": "准备房屋结构示意与阶段清单。WebGPU 是浏览器调用显卡绘图的方式，设备支持不同；原文要求可交互的三维动画，视频是效果演示，未提供工程源码。",
+    "steps": [
+      "列出五个施工阶段和要展示的内部管线。",
+      "让编程助手按阶段搭建三维示意，提供进度与透视控制。",
+      "检查管线位置、阶段顺序和结构衔接；示意不替代施工图。",
+      "在目标浏览器检查交互；另有视频需要时再安排录制与导出。"
+    ],
+    "lesson": "用阶段与透视视图解释内部结构，比只展示完工外观更能说明关系。",
+    "exercise": "先做地基、骨架和管线三层，检查开启透视后是否仍能辨认。",
+    "creator": "@techartist_",
+    "sourceUrl": "https://x.com/techartist_/status/2105350783416021472",
+    "url": "https://goodcase.ai/cases/3d-480d142beda4",
+    "cover": "/images/cases/catalog/3d-480d142beda4.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/468068dfb710.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "Create an interactive 3D house animation showing the construction process from Foundation through Skeleton, Systems and Envelope to Finished. Include an X-ray view that reveals the plumbing, power and air inside. Use Three.js and WebGPU.",
+    "promptZh": "创建一个交互式 3D 房屋动画，展示从地基到骨架、系统、外围护结构，再到完工的建造过程。加入 X 射线透视视图，显示内部的管道、电力和空气。使用 Three.js 和 WebGPU。",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 36.672,
+    "mediaNote": "来源效果演示，点击播放；来源视频约37秒"
+  },
+  {
+    "slug": "case-48175d8e8ac4",
+    "category": "video",
+    "title": "代码动效制作与评审流程参考",
+    "summary": "一份覆盖参考研究、分镜、动画、三维、声音和独立评审的制作要求节选。",
+    "use": "适合学习完整制作流程的检查项。",
+    "preparation": "来源原文以“</”结束，缺少末尾闭合内容，只作为公开节选和灵感参考；不补写为完整作者提示词。GSAP 是安排网页动画节奏的工具，Three.js 用来搭三维场景；原文还依赖外部工具包，使用前需核查链接与文件。",
+    "steps": [
+      "阅读公开节选，分别标出参考、事实、素材、分镜、画面和声音要求。",
+      "核查原文外部工具包与实际依赖，缺失部分回到作者出处查询。",
+      "借鉴先做5秒流程测试和逐场景检查的思路，建立自己的验收表。",
+      "用一段已有视频练习抽帧评审，记录问题与修正结果。"
+    ],
+    "lesson": "先做5秒流程测试，再把事实核对、画面测量和评审纳入每轮制作。",
+    "exercise": "从节选中提炼自己的五项验收条件，先检查一段已有视频，不直接套用未核实的工具包。",
+    "creator": "@everestchris6",
+    "sourceUrl": "https://x.com/everestchris6/status/2104965415164399895",
+    "url": "https://goodcase.ai/cases/case-48175d8e8ac4",
+    "cover": "/images/cases/catalog/case-48175d8e8ac4.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/f0b654c82794.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "<role>\nyou design and build motion videos entirely in code, with gsap for the animation and three.js for any 3d. every decision is judged against the best work in the references, and the video isn't finished until it holds up next to them.\n</role>\n\n<brief>\n- what the video is for: [product, service or business]\n- who's watching: [who the viewer is and what they care about]\n- what they should do at the end: [call to action]\n- length and sizes: [e.g. 30 seconds, 16:9 and 9:16]\n- brand: [name, logo files, colours, fonts]\n- facts file: [path]. this is the only source for any number, name or claim that appears on screen\n- assets: [footage, photos, screenshots, product files]\n- style references: [links or a folder of videos whose motion i like]\n\ni'm away and won't answer questions. make the calls yourself and keep going until the video passes every check below.\n</brief>\n\n<kit>\nbefore anything else, clone and read https://t.co/FMs1prnPP0. read SKILL.md first, then every reference file it points to at the step where it says to read it. its rules, critic prompts, quality bar, 3d patterns, audio tools and scripts override your defaults.\n</kit>\n\n<setup>\n- build every scene as an html page animated on a single gsap timeline, with three.js for any 3d, all as pinned local files\n- render the timeline to video frame by frame using the renderer in the kit\n- use ffmpeg for frames, contact sheets and audio measurement\n- keep every api key in environment variables. never write a key into any file\n- render a 5 second test first and confirm it works before building the real video\n</setup>\n\n<study_the_references>\nif i gave you references, study them before planning anything.\n- run a fast numeric pass over every frame: how much changed from the last frame, brightness and edge detail, to find every cut and every fast moment\n- make one overview contact sheet per video, and a dense sheet of one second at 16 to 20 frames a second around every transition\n- write a note per video: the key moment, how it works, and how it could be used in this video\n- pull out the motion rules and named techniques that hold across the best ones\n- references are for study only. never copy their footage, logos, layouts or music\nif i gave you no references, use the motion notes in the kit.\n</study_the_references>\n\n<motion_principles>\n1. the thing in the front of the shot becomes the transition. a title, logo or object moves towards the camera while the next scene is already waiting underneath\n2. one object carries the story across shots and keeps its identity, so it reads as one continuous piece\n3. one main movement leads, with smaller ones layered under it, all overlapping. the frame never stops and starts all at once\n4. the speed always changes. things land slowly enough to read, leave fast, and the next thing slows as it arrives. no linear motion\n5. cuts are allowed only when size, direction and subject match on both sides\n6. every action produces a visible result. a scan makes findings, a tap makes a new state, a request makes a confirmation\n7. type is motion too. big words enter from opposite sides, reveal the next scene, and never sit over busy picture without something behind them to stay readable\n8. vary the scale from close, to wide, to overhead, to full-frame type. never repeat the same layout, like a heading over three cards\n</motion_principles>\n\n<storyboard>\nwrite a brief and a storyboard before any animation.\n- one table: time, what's on screen, what this moment is for, how it leaves, and which object carries into the next shot\n- around 12 to 15 compositions per 30 seconds, each lasting about 1.4 to 3.5 seconds\n- the main subject fills most of the frame. no small cards floating in empty space\n- frame one is a finished picture, never a word halfway through flying in\n- name three signature moments you can describe without using effect names\n- the video must make sense with the sound off\n- send the storyboard to a fresh critic and fix what it finds before building\n</storyboard>\n\n<build>\n- every animated value is a function of timeline time only. no timers, no real-time animation, no unseeded randomness. any frame must render the same every time\n- write the shared pieces first: colours, fonts, shared 3d models and the exact pixel position of every handoff between scenes\n- build each scene as its own component with its own test page, rendered to stills and a short clip, and send it to a critic before it joins the film\n- carried objects land on exactly the same pixels on both sides of a cut\n- run several builders in parallel on separate sections once the shared pieces exist\n- don't stop to ask for approval between steps\n</build>\n\n<3d>\n- only use 3d where it explains something physical or spatial, like layers, parts, placement or scale\n- light it like a product shoot, with a soft key light from one side and a rim light behind\n- keep the camera between about 35 and 55 degrees. never look straight down on a large surface, and never end tight on a flat one\n- style buildings like a premium architectural model with real materials and a base\n- no floating parts, no gaps where parts meet, no flat black glass, no repeating textures\n- labels are html positioned from the 3d scene every frame, never text inside the 3d\n- measure the rendered background pixel and adjust until it matches the brand colour\n- anything that moves like a real product is measured from real footage frame by frame, and those measurements are the curve\n</3d>\n\n<images_and_footage>\n- prefer building shots in code. use generated images or clips only for supporting shots, and label anything generated as a concept\n- upscale and smooth any generated clip to match the rest, and regenerate anything that warps\n- never generate a fake finished job, fake customer, fake review or fake result\n</images_and_footage>\n\n<audio>\n- match the music's energy to the picture and the viewer, and keep it low\n- prefer clean library music and sound effects over generated ones. never name a brand in a music prompt\n- one short, soft whoosh per real scene change, and small clicks or pops only on real on-screen actions\n- screen effects for boom, hiss and length before using them, and set each one just above the music in its own frequency range, with a cap so nothing gets harsh\n- cut every scene change on a beat\n- always export a music-only version\n</audio>\n\n<critic_loop>\nthe builder never judges its own work.\n- after the storyboard, each component and each full render, send the render, the brief and the references to a fresh critic that has seen none of the building\n- never tell a critic what you think you fixed or what you believe about the references. it pulls its own frames and measures for itself\n- the critic makes a contact sheet every 0.2 seconds plus dense frames around every transition, measures frozen time and loudness, and returns a ranked list of problems with timestamps, ending with ship or one more pass\n- fix the biggest problem first, render, then send to a new critic that checks every previous item as fixed, partly fixed or still there, and hunts for anything new that broke\n- keep a ledger of every round: what was found, what changed, and the numbers before and after\n</critic_loop>\n\n<quality_bar>\nthe video isn't done until all of these pass, measured:\n- no more than about 1 second of frozen screen per 30 seconds, and no still stretch longer than about half a second\n- frame one is a finished composition\n- all text meets at least 4.5:1 contrast, and nothing collides with or flies through other text\n- brand colours in 3d renders match the brand values\n- loudness is steady and comfortable for web, with no clipping, and effects never louder than the music\n- a first-time viewer understands it with the sound off\n- a critic would put it next to the references without it looking weaker. a video with no bugs is not the same as a good video\n</",
+    "promptZh": "<role>\n你完全用代码设计并制作动态视频，动画用 gsap，任何 3D 部分用 three.js。每一个决定都拿参考作品中最好的来衡量，视频只有在和它们并排放在一起也站得住时，才算完成。\n</role>\n\n<brief>\n- 视频的用途：[产品、服务或业务]\n- 观众是谁：[观众是谁，他们在意什么]\n- 看完后要做什么：[行动号召]\n- 时长与尺寸：[例如 30 秒，16:9 和 9:16]\n- 品牌：[名称、logo 文件、颜色、字体]\n- 事实文件：[路径]。这是画面上出现的任何数字、名称或说法的唯一来源\n- 素材：[实拍片段、照片、截图、产品文件]\n- 风格参考：[链接，或存放了我喜欢其动效的视频的文件夹]\n\n我不在，不会回答问题。你自己拿主意，一直做到视频通过下面每一项检查为止。\n</brief>\n\n<kit>\n在做任何事之前，先克隆并阅读 https://t.co/FMs1prnPP0. 先读 SKILL.md，再在它指示要读的那一步，读它指向的每一个参考文件。其中的规则、评审提示词、质量标准、3D 做法、音频工具和脚本，优先于你自己的默认做法。\n</kit>\n\n<setup>\n- 把每个场景都做成一个 html 页面，由同一条 gsap 时间线驱动动画，任何 3D 用 three.js，所有依赖都是固定版本的本地文件\n- 用 kit 里的渲染器，按时间线逐帧渲染成视频\n- 用 ffmpeg 处理帧、联系表和音频测量\n- 所有 api key 都放在环境变量里，绝不把 key 写进任何文件\n- 先渲染一段 5 秒的测试，确认能跑通，再去做正式视频\n</setup>\n\n<study_the_references>\n如果我给了参考，先研究它们，再做任何规划。\n- 对每一帧跑一遍快速的数值分析：和上一帧相比变了多少、亮度和边缘细节，借此找出每一个剪切点和每一个快节奏时刻\n- 每个视频做一张总览联系表，再针对每个转场，在前后一秒内以每秒 16 帧到 20 帧做一张密集联系表\n- 每个视频写一份笔记：关键时刻、它是怎么做到的、在本视频里可以怎么用\n- 提炼出在最好的那些作品里都成立的动效规则和有名字的技法\n- 参考只用于学习，绝不照搬它们的素材、logo、版式或音乐\n如果我没给参考，就用 kit 里的动效笔记。\n</study_the_references>\n\n<motion_principles>\n1. 镜头前景里的东西本身就是转场。标题、logo 或物体朝镜头移动，下一个场景已经在它下面等着\n2. 一个物体贯穿多个镜头，始终保持自己的身份，让整体读起来是连续的一件作品\n3. 一个主运动领头，更小的运动叠在下面，彼此交叠。画面绝不在同一时刻全部停下又全部启动\n4. 速度始终在变。东西落定时慢到能看清，离开时快，下一个东西到来时再放慢。不要线性运动\n5. 只有当两侧的大小、方向和主体都对得上时，才允许硬切\n6. 每个动作都要产生看得见的结果。扫描出发现，点击出新状态，请求出确认\n7. 文字也是运动。大字从相反方向进入，揭开下一个场景，并且绝不压在杂乱的画面上，除非背后有东西托着让它保持可读\n8. 景别要变化：从近景到远景、俯拍、再到满屏文字。绝不重复同一种版式，比如一个标题下面摆三张卡片\n</motion_principles>\n\n<storyboard>\n在做任何动画之前，先写好 brief 和分镜。\n- 一张表：时间、画面上有什么、这一刻的作用、怎么离开、哪个物体带入下一个镜头\n- 每 30 秒大约十二到十五个构图，每个持续约一点四到三点五秒\n- 主体占满大部分画面。不要让小卡片飘在空荡荡的空间里\n- 第一帧是一幅完整的画面，绝不是一个飞到一半的词\n- 说出三个标志性时刻，描述它们时不能用特效的名字\n- 视频必须在关掉声音时也能看懂\n- 把分镜发给一个全新的评审，先修掉它找出的问题，再动手制作\n</storyboard>\n\n<build>\n- 每一个动画数值都只是时间线时间的函数。不用计时器，不用实时动画，不用没有固定种子的随机数。任何一帧每次渲染的结果都必须一样\n- 先写共享的部分：颜色、字体、共享的 3D 模型，以及场景之间每一次交接的精确像素位置\n- 每个场景都做成独立组件，带自己的测试页，渲染成静帧和一小段片子，发给评审后才能并入整片\n- 被带过去的物体，在剪切两侧必须落在完全相同的像素上\n- 共享部分做好后，可以让多个构建者并行制作各自独立的段落\n- 步骤之间不要停下来等我批准\n</build>\n\n<3d>\n- 只在需要解释实物或空间关系时才用 3D，比如分层、零件、摆放位置或尺度\n- 像拍产品一样打光：一侧一盏柔和的主光，后面一盏轮廓光\n- 相机角度保持在大约 35 度到 55 度之间。绝不垂直向下俯视大面积的物体，也绝不在一个平面上收成特写结尾\n- 建筑做成高端建筑模型的样子，有真实的材质和底座\n- 不要有悬浮的零件，零件相接处不要有缝隙，不要有死黑的玻璃，不要有重复的纹理\n- 标签是 html，每一帧根据 3D 场景定位，绝不把文字放进 3D 里\n- 测量渲染出来的背景像素，反复调整直到和品牌色一致\n- 任何像真实产品那样运动的东西，都要从真实视频里逐帧测量，这些测量值就是曲线\n</3d>\n\n<images_and_footage>\n- 优先用代码做镜头。生成的图片或片段只用于辅助镜头，并且凡是生成的内容都要标明是概念示意\n- 把生成的片段放大并平滑处理，使之和其余部分匹配，出现扭曲的就重新生成\n- 绝不生成虚假的成品案例、虚假的客户、虚假的评价或虚假的结果\n</images_and_footage>\n\n<audio>\n- 音乐的能量要和画面、观众相匹配，音量保持低\n- 优先用干净的素材库音乐和音效，而不是生成的。绝不在音乐提示词里写品牌名\n- 每次真实的场景切换配一声短而轻的呼啸声，只有真实的屏幕动作才配小的点击或爆破声\n- 先检查音效的低频轰鸣、嘶嘶声和时长，再给每个音效设置音量，让它在自己的频段里刚好高于音乐，并加上上限，避免任何刺耳的地方\n- 每一次场景切换都踩在节拍上\n- 始终导出一个纯音乐版本\n</audio>\n\n<critic_loop>\n构建者绝不评判自己的作品。\n- 在分镜之后、每个组件之后、每次完整渲染之后，把渲染结果、brief 和参考发给一个全新的评审，它没有见过任何构建过程\n- 绝不告诉评审你认为自己修好了什么，也绝不告诉它你对参考的看法。它自己抽帧、自己测量\n- 评审每 0.2 秒做一张联系表，并在每个转场前后做密集帧，测量静止时间和响度，返回一份按严重程度排序、带时间戳的问题清单，最后给出结论：可以发布，或者再来一轮\n- 先修最大的问题，渲染，再发给一个新的评审，由它把之前的每一项标为已修好、部分修好或仍然存在，并找出新出现的问题\n- 为每一轮记一本账：发现了什么、改了什么、改动前后的数字\n</critic_loop>\n\n<quality_bar>\n下面这些全部通过并且经过测量，视频才算完成：\n- 每 30 秒的静止画面不超过大约 1 秒，且任何一段静止都不超过大约半秒\n- 第一帧是一幅完整的构图\n- 所有文字的对比度至少达到 4.5:1，并且没有任何东西和其他文字碰撞或从其他文字中穿过\n- 3D 渲染里的品牌色和品牌数值一致\n- 响度稳定，适合网页播放，没有削波，且音效绝不比音乐更响\n- 第一次看的观众关掉声音也能看懂\n- 评审会把它放在参考作品旁边，而不会觉得它更弱。没有 bug 的视频不等于好视频\n</",
+    "translationNote": "来源公开节选，原文在末尾截断；中文同样保留缺口，不能作为完整提示词直接复现。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "excerpt",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "mediaNote": "来源作品，仅作流程与动效灵感参考；来源视频约40秒",
+    "sourceVideoDurationSeconds": 40.042667
+  },
+  {
+    "slug": "transformer-explainer-7d2aa7449fc4",
+    "category": "video",
+    "title": "用动画讲解Transformer",
+    "summary": "用 JavaScript 动画讲清注意力机制和相关数学概念，面向高中生。",
+    "use": "适合把抽象概念改成可以看到的过程。",
+    "preparation": "准备准确的概念材料。Transformer 是许多语言模型使用的结构，能让模型结合上下文处理信息；原文要求通俗与细节兼顾，没有指定时长、声音或画幅。",
+    "steps": [
+      "列出高中生需要理解的概念，先选一个短句作为贯穿例子。",
+      "把整体处理流程、注意力机制和一个简单数学例子排成分镜。",
+      "让编程助手制作 JavaScript 动画，补上需要的时长、声音和导出要求。",
+      "核对权重与概念解释，关闭声音检查图形和字幕能否独立说明。"
+    ],
+    "lesson": "先明确读者能理解到哪一步，再要求整体思路和关键细节都讲清。",
+    "exercise": "先用一句短话解释词语之间的关系，做一个30秒注意力权重变化片段。",
+    "creator": "@dotey",
+    "sourceUrl": "https://x.com/dotey/status/2103683057689522564",
+    "url": "https://goodcase.ai/cases/transformer-explainer-7d2aa7449fc4",
+    "cover": "/images/cases/catalog/transformer-explainer-7d2aa7449fc4.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/68536239806b.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "帮我用js制作一个视频，主题是：什么是 Transformer\n要深入浅出，让高中生也能看得懂，不仅high level说的清楚，也要有细节，包括注意力机制，甚至一些数学概念\n\n你可以用任何工具或者安装工具，可以联网检索\n\n请给我惊喜",
+    "promptZh": "帮我用js制作一个视频，主题是：什么是 Transformer\n要深入浅出，让高中生也能看得懂，不仅high level说的清楚，也要有细节，包括注意力机制，甚至一些数学概念\n\n你可以用任何工具或者安装工具，可以联网检索\n\n请给我惊喜",
+    "translationNote": "作者中文原文保留；步骤与练习由本站整理，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 732.330667,
+    "mediaNote": "来源效果演示，点击播放；来源视频约732秒"
+  },
+  {
+    "slug": "ui-5921e0916a9f",
+    "category": "video",
+    "title": "一个形状变成多种界面组件",
+    "summary": "按钮、加载器、播放器、滑块、标签和图表由同一个形状连续变化而来。",
+    "use": "适合界面动效和循环演示。",
+    "preparation": "准备8至12种界面状态、颜色和约120 BPM的音乐。原文要求1440×1440、60fps；seek(t) 是按时间重画画面的函数，便于重复渲染同一帧。",
+    "steps": [
+      "选定界面状态与音乐，先画出按节拍排列的状态表。",
+      "让编程助手把尺寸、圆角、颜色与光标操作连接在同一条时间线上。",
+      "先每拍抽一帧，检查文字替换有没有重叠、滑块是否跟随拖拽。",
+      "检查首尾的光标位置和速度一致，再导出循环视频。"
+    ],
+    "lesson": "让形状与光标动作相互对应，状态变化才有因果关系。",
+    "exercise": "只保留按钮、加载器、成功提示和返回按钮四种状态，检查点击与变化是否同步。",
+    "creator": "@twoclipping",
+    "sourceUrl": "https://x.com/twoclipping/status/2103273003555402193",
+    "url": "https://goodcase.ai/cases/ui-5921e0916a9f",
+    "cover": "/images/cases/catalog/ui-5921e0916a9f.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/197e843ef6c7.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "<inputs>\nAsk me for: 8 to 12 UI states I want the shape to become (e.g. button, loader, player, slider, toggle, tabs, chart, command palette, toast), pure black and white or one accent color, and a royalty-free song around 120 BPM (e.g. Mixkit, free for commercial use).\n</inputs>\n\n<direction>\nDribbble-level UI motion. One shape, never cut: every state is the same element morphing its size, radius and color while its content swaps with a short blur. A cursor drives every change with real clicks and drags. Light warm-gray canvas, black and white components, one clean UI font (Geist). Springs everywhere, a tiny overshoot at most. The camera zooms so each state fills the frame. The last frame is the first frame, so it loops.\nBanned: bouncy easing, particle bursts, glows, gradients on UI chrome, mismatched icon strokes, dead time, anything that looks like a template.\n</direction>\n\n<structure>\n120 BPM, 7 bars, something happens on every beat.\nButton → loader → check → dynamic island → music player with a play/pause morph → scrub the progress bar → it becomes a volume slider that stretches when dragged past max → a toggle flips on the beat → the knob becomes a liquid tab indicator → the tabs open into a chart that draws itself, with a tooltip on hover → it collapses into ⌘K → type to filter → enter → toast → back to the button.\n</structure>\n\n<build>\n1. One HTML file, square 1440x1440. Every style is computed from time inside seek(t): no CSS transitions, no timers, no state carried between frames.\n2. Springs are closed-form step responses. A value that changes target many times is the sum of one spring per change, so it stays a pure function of time.\n3. The tab indicator's two edges ride different springs, so the leading edge stretches ahead of the trailing one. Same trick for the toggle knob.\n4. Drags are direct manipulation: while the cursor is held, the value is computed from its position. On release it springs back from wherever it was.\n5. Analyze the song with numpy for the beat grid and start on a downbeat. Place every UI sound by its measured peak.\n6. Render with Playwright: 4 subframes per frame, blended with ffmpeg tmix for motion blur at 60fps.\n7. Render one frame per beat before the full render. Fix anything off the grid, cramped or hard to read.\n</build>\n\n<gotchas>\nNever put will-change on anything the camera scales or the text renders blurry. Text that swaps inside a morphing container needs its own enter and exit timing or it overlaps. Make the last frame identical to the first, cursor position and speed included, or the loop stutters.\n</gotchas>\n\n<start>\nAsk me for the inputs, then show me the state list on the beat grid before you write any code.\n</start>",
+    "promptZh": "<inputs>\n向我索要：我希望这个形状变成的八到十二种界面状态（例如按钮、加载器、播放器、滑块、开关、标签页、图表、命令面板、提示条），纯黑白还是一个强调色，以及一首约 120 BPM 的免版税歌曲（例如 Mixkit，可免费商用）。\n</inputs>\n\n<direction>\nDribbble 水准的界面动效。一个形状，永不切镜：每个状态都是同一个元素在变化尺寸、圆角和颜色，同时内容用一次短暂的模糊来替换。每一次变化都由光标驱动，有真实的点击和拖拽。浅暖灰的画布，黑白两色的组件，一款干净的界面字体（Geist）。处处是弹簧，最多只有一点点过冲。镜头缩放，让每个状态都充满画面。最后一帧就是第一帧，所以可以循环。\n禁用：弹跳缓动、粒子爆发、发光、界面外框上的渐变、描边粗细不一致的图标、死时间、任何看起来像模板的东西。\n</direction>\n\n<structure>\n120 BPM，7 个小节，每一拍都有事情发生。\n按钮 → 加载器 → 对勾 → 灵动岛 → 带播放/暂停形变的音乐播放器 → 拖动进度条 → 变成音量滑块，拖过最大值时会被拉伸 → 开关在节拍上翻到开 → 旋钮变成液态的标签指示器 → 标签页展开成一张自己画出来的图表，悬停时出现提示框 → 收起成 ⌘K → 输入过滤 → 回车 → 提示条 → 回到按钮。\n</structure>\n\n<build>\n1. 一个 HTML 文件，正方形 1440x1440。所有样式都在 seek(t) 里根据时间计算：不用 CSS 过渡，不用计时器，帧与帧之间不携带状态。\n2. 弹簧用闭式阶跃响应。一个多次改变目标的值，等于每次改变各加一根弹簧后的总和，因此它始终是时间的纯函数。\n3. 标签指示器的两条边骑在不同的弹簧上，所以前缘会比后缘先伸出去。开关的旋钮用同样的技巧。\n4. 拖拽是直接操作：光标按住期间，数值由它的位置算出。松开后，从它所在的位置弹回。\n5. 用 numpy 分析歌曲，得到节拍网格，并从强拍开始。每个界面音效都按测量出的峰值来放置。\n6. 用 Playwright 渲染：每帧 4 个子帧，用 ffmpeg tmix 混合，得到 60fps 的动态模糊。\n7. 正式渲染前，先每拍渲染一帧。凡是不在网格上、显得拥挤或难以阅读的地方都要修好。\n</build>\n\n<gotchas>\n绝不要对镜头会缩放的东西使用 will-change，否则文字渲染会发糊。在变形容器里替换的文字，需要各自的进入和退出时机，否则会重叠。让最后一帧和第一帧完全一致，包括光标的位置和速度，否则循环会卡一下。\n</gotchas>\n\n<start>\n先向我索要这些输入，然后在写任何代码之前，给我看一份落在节拍网格上的状态列表。\n</start>",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 14.058667,
+    "mediaNote": "来源效果演示，点击播放；来源视频约14秒"
+  },
+  {
+    "slug": "case-c370a0c054b8",
+    "category": "video",
+    "title": "真实素材与界面结合的产品发布片",
+    "summary": "将界面操作、实拍片段、结果数字和品牌结尾按节拍编排。",
+    "use": "适合已有素材的产品发布与功能介绍。",
+    "preparation": "准备产品名称、3至5个真实界面片段、10至20条自有竖版视频和约120 BPM的音乐。原文用10个小节、每小节2秒安排结构；需要核对实际歌曲节拍，不能只按文本机械拼接。",
+    "steps": [
+      "提交产品、真实界面、强调色、视频与音乐，先核对宣传事实。",
+      "按作者结构给出踩节拍的分镜，标出真实素材与界面动画的交接。",
+      "让编程助手将片段抽帧与动画结合，先检查20帧以上的关键位置。",
+      "核对文字可读、素材来源、音效音量和镜头节奏后导出。"
+    ],
+    "lesson": "画面里的素材与结果必须真实，每个镜头只传达一个信息。",
+    "exercise": "改成自己的产品，先删去没有事实支持的数字，再制作三幕短版。",
+    "creator": "@twoclipping",
+    "sourceUrl": "https://x.com/twoclipping/status/2102554209166000267",
+    "url": "https://goodcase.ai/cases/case-c370a0c054b8",
+    "cover": "/images/cases/catalog/case-c370a0c054b8.jpg",
+    "mediaUrl": "https://media.goodcase.ai/cases/63462b8ba852.mp4",
+    "mediaType": "video",
+    "models": [
+      "Claude Opus 5.5"
+    ],
+    "promptOriginal": "<inputs>\nAsk me for: the product name and a one-line promise, 3 to 5 UI moments to show, one accent color, 10 to 20 real vertical clips I own, and a royalty-free song with a clear drop (e.g. Mixkit, free for commercial use).\n</inputs>\n\n<direction>\nHigh-end minimal. One idea per shot, lots of empty space, one accent color, one clean sans (Geist or Inter) with tight tracking. Masked type reveals, match cuts, one smooth camera language. Real footage only, never placeholder cards. No full stops in on-screen text.\nBanned: shockwave rings, particle bursts, RGB split, camera shake, lens flares, neon glows, grid floors, flashing backgrounds, bouncy easing.\n</direction>\n\n<structure>\n10 bars at 120 BPM, 2 seconds each.\nBar 1: the hook lands word by word on the beats.\nBar 2: one hook word morphs into the product UI. A cursor types and clicks.\nThe drop: a circle opens out of the button into a dark scene.\nThen one move per bar: a wall of real clips with a scan line and 3 winners, the key output as big type, a 3D carousel of real videos with floor reflections and a motion-blurred whip onto one hero clip, the hero in a phone next to a panel that flips into results, big stats on push cuts, a 3-word ticker, a logo reveal, a fade to black.\n</structure>\n\n<build>\n1. One HTML file at 1920x1080. Every style is computed from time inside seek(t): no CSS animations, no timers, no state between frames.\n2. Real video: extract clips to 30fps JPEG sequences with ffmpeg and swap img sources per frame. seek awaits the image decodes.\n3. Analyze the song with numpy: tempo, beat grid, energy per bar, the drop. Calibrate the grid to the real kick hits. Every cut sits on a downbeat, every UI hit on a beat.\n4. Render with Playwright: 3 subframes per frame at t minus, at, and plus 1/240s, then blend with ffmpeg tmix for real motion blur at 60fps.\n5. Place each sound effect so its measured peak, not its file start, lands on the event. Keep the effects quiet under the music. Loudnorm to -14 LUFS.\n6. Probe 20 or more frames before the full render. Fix anything cluttered, overlapping or hard to read.\n</build>\n\n<gotchas>\nNever set opacity or filter on a preserve-3d element, because it flattens and both faces show. Fade its wrapper instead. Measure element positions at runtime for match cuts. Only use music and sound effects whose license allows commercial use.\n</gotchas>\n\n<start>\nAsk me for the inputs, then show me a storyboard with every timing on the beat grid before you write any code.\n</start>",
+    "promptZh": "<inputs>\n向我索要：产品名称和一句话承诺、三到五个要展示的界面时刻、一个强调色、十到二十条我自己拥有的真实竖版片段，以及一首有明确 drop 的免版税歌曲（例如 Mixkit，可免费商用）。\n</inputs>\n\n<direction>\n高端极简。每个镜头只有一个想法，大量留白，一个强调色，一款干净的无衬线字体（Geist 或 Inter），字距收紧。遮罩式文字揭示、匹配剪辑、统一流畅的镜头语言。只用真实素材，绝不用占位卡片。屏幕文字里不加句号。\n禁用：冲击波圆环、粒子爆发、RGB 分离、镜头抖动、镜头光斑、霓虹发光、网格地板、闪烁的背景、弹跳缓动。\n</direction>\n\n<structure>\n120 BPM 下的 10 个小节，每小节 2 秒。\n第 1 小节：钩子文案逐词踩着节拍落下。\n第 2 小节：钩子里的一个词变形成产品界面。光标输入并点击。\nDrop：一个圆从按钮里扩开，进入一个深色场景。\n之后每小节一个动作：一面真实片段墙，扫描线扫过并选出 3 个赢家；关键产出变成大字；一个由真实视频组成的 3D 旋转木马，带地面倒影，并以动态模糊的快速甩镜甩到一条主角片段上；主角片段放进手机里，旁边一块面板翻转成结果；大数字用推切登场；一条 3 个词的滚动字幕；logo 揭示；淡出到黑。\n</structure>\n\n<build>\n1. 一个 1920x1080 的 HTML 文件。所有样式都在 seek(t) 里根据时间计算：不用 CSS 动画，不用计时器，帧与帧之间不保留状态。\n2. 真实视频：用 ffmpeg 把片段抽成 30fps 的 JPEG 序列，每一帧替换 img 的 src。seek 要等图片解码完成。\n3. 用 numpy 分析歌曲：速度、节拍网格、每小节的能量、drop。把网格校准到真实的底鼓点上。每一次剪切都落在强拍上，每一次界面点击都落在节拍上。\n4. 用 Playwright 渲染：每帧 3 个子帧，分别在 t 减、t、t 加 1/240s 处取样，再用 ffmpeg tmix 混合，得到 60fps 的真实动态模糊。\n5. 放置每个音效时，让它测量出的峰值而不是文件开头落在事件上。音效在音乐下面保持安静。用 loudnorm 归一到 -14 LUFS。\n6. 正式渲染前先抽查 20 帧或更多。凡是杂乱、重叠或难以阅读的地方都要修好。\n</build>\n\n<gotchas>\n绝不要给 preserve-3d 元素设置 opacity 或 filter，否则它会被压平，两个面都会显示出来。改为淡化它外面的包裹层。匹配剪辑要在画面实际运行时测量元素位置。只使用许可允许商用的音乐和音效。\n</gotchas>\n\n<start>\n先向我索要这些输入，然后在写任何代码之前，给我看一份分镜，每个时间点都落在节拍网格上。\n</start>",
+    "translationNote": "中文提示词由本站核对整理；作者原文保留原样。步骤与练习是本站学习建议，本站尚未复现生成效果。",
+    "contentKind": "prompt",
+    "capturedAt": "2026-10-12",
+    "tested": false,
+    "sourceName": "Goodcase",
+    "sourcePromptStatus": "complete",
+    "sourceModels": [
+      "Claude Opus 5.5"
+    ],
+    "modelAttribution": "来源描述，本站未独立核验模型与制作分工",
+    "sourceVideoDurationSeconds": 20.062041,
+    "mediaNote": "来源效果演示，点击播放；来源视频约20秒"
   }
 ]

@@ -2,11 +2,11 @@ import { writeFileSync, mkdirSync, readdirSync, readFileSync, unlinkSync, exists
 import { resolve, dirname } from 'node:path'
 import { root } from './practice-cases-data.mjs'
 import { loadTaggedCases } from './case-tags-data.mjs'
-import { CASE_CATEGORIES } from '../docs/.vitepress/casesData.js'
+import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../docs/.vitepress/casesData.js'
 
 const cases = loadTaggedCases()
 const selectedSlugs = new Set(cases.map(c => c.slug))
-const categoryIds = new Set(CASE_CATEGORIES.map(c => c.id))
+const categoryIds = new Set([...CASE_CATEGORIES, ...CASE_COLLECTIONS].map(c => c.id))
 // Retire only category indexes produced by this generator, leaving other files intact.
 for (const entry of readdirSync(resolve(root, 'docs/cases'), { withFileTypes: true })) {
   if (!entry.isDirectory() || categoryIds.has(entry.name)) continue
@@ -27,7 +27,7 @@ for (const file of readdirSync(resolve(root, 'docs/cases'))) {
 }
 const generated = resolve(root, 'docs/.vitepress/data/cases-generated')
 mkdirSync(generated, { recursive: true })
-const fields = ['slug', 'category', 'title', 'summary', 'use', 'models', 'creator', 'thumbnail', 'cover', 'mediaType', 'contentKind', 'mediaUrl', 'imageUrl', 'mediaNote', 'tags']
+const fields = ['slug', 'category', 'title', 'summary', 'use', 'models', 'creator', 'thumbnail', 'cover', 'mediaType', 'contentKind', 'mediaUrl', 'imageUrl', 'mediaNote', 'tags', 'sourcePromptStatus']
 writeFileSync(resolve(generated, 'index.json'), JSON.stringify(cases.map(c => Object.fromEntries(fields.filter(k => c[k] !== undefined).map(k => [k, c[k]])))))
 const safeText = value => String(value || '').replace(/[&<>{}]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '{': '&#123;', '}': '&#125;' }[c])).replace(/([\\`*_[\]#!|])/g, '\\$1')
 const safeUrl = value => {
@@ -62,11 +62,16 @@ import CaseLibrary from '${relative}.vitepress/theme/components/CaseLibrary.vue'
 
 ${description}
 
+${category?.slugs ? '这些案例按来源说明整理。多数由 Opus 编写动画代码，再把画面逐帧合成为视频；部分还调用图片或配音工具。每条详情说明所需素材、制作分工与公开资料缺口，本站尚未复现生成效果。\n' : ''}
 <CaseLibrary${category ? ` category="${category.id}"` : ''} />
 `
 }
 write('index.md', listPage())
 for (const category of CASE_CATEGORIES) write(`${category.id}/index.md`, listPage(category))
+for (const collection of CASE_COLLECTIONS) {
+  if (new Set(collection.slugs).size !== collection.slugs.length || collection.slugs.some(slug => !selectedSlugs.has(slug))) throw new Error(`专题清单重复或缺少案例：${collection.id}`)
+  write(`${collection.id}/index.md`, listPage(collection))
+}
 for (const c of cases) {
   if (!/^[a-z0-9-]+$/.test(c.slug) || ids.has(c.slug) || !categoryName(c.category)) throw new Error(`案例标识或分类无效：${c.slug}`)
   ids.add(c.slug)
@@ -121,7 +126,7 @@ ${c.steps.map((s, i) => `${i + 1}. ${safeText(s)}`).join('\n')}
 
 **值得学习的写法：** ${safeText(c.lesson)}
 
-## ${c.contentKind === 'code' ? '使用指令与源码' : '完整提示词'}
+## ${c.sourcePromptStatus === 'excerpt' ? '公开提示词节选' : c.contentKind === 'code' ? '使用指令与源码' : '完整提示词'}
 
 <CasePrompt :item="item" />
 
