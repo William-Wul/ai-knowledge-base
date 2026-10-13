@@ -102,30 +102,27 @@
           </div>
         </div>
 
+        <a v-if="lastReadItem" class="continue-read" :href="lastReadItem.path">
+          <span class="continue-label">继续上次阅读</span>
+          <span class="continue-title">{{ lastReadItem.title }}</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- 新手路线：认识 → 上手 → 自测，第一次来的人知道从哪开始 -->
         <div class="hero-tools">
-          <div class="tools-label">AI 学习小工具</div>
-          <div class="tools-cards">
-            <a class="tool-card" href="/exams/">
-              <div class="tool-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="12" width="3" height="4" rx="1"/><rect x="12" y="8" width="3" height="8" rx="1"/><rect x="17" y="4" width="3" height="12" rx="1"/></svg>
-              </div>
-              <div class="tool-content">
-                <div class="tool-title">AI 能力自测</div>
-                <div class="tool-desc">12 道场景题，测出你的 AI 使用水平</div>
-              </div>
-              <svg class="tool-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-            <a class="tool-card" href="/vocab-book">
-              <div class="tool-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M4 17a3 3 0 0 1 3-3h12"/><line x1="9" y1="8" x2="14" y2="8"/><line x1="9" y1="11" x2="14" y2="11"/></svg>
-              </div>
-              <div class="tool-content">
-                <div class="tool-title">AI 学习词汇本</div>
-                <div class="tool-desc">收录陌生术语，AI 帮你拆解记忆</div>
-              </div>
-              <svg class="tool-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-          </div>
+          <div class="tools-label">新手三步上手</div>
+          <ol class="tools-cards steps">
+            <li v-for="(step, i) in STEPS" :key="step.link">
+              <a class="tool-card" :href="step.link">
+                <div class="tool-icon step-no">{{ i + 1 }}</div>
+                <div class="tool-content">
+                  <div class="tool-title">{{ step.title }}</div>
+                  <div class="tool-desc">{{ step.desc }}</div>
+                </div>
+                <svg class="tool-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </li>
+          </ol>
         </div>
       </div>
 
@@ -190,6 +187,17 @@ import { data as daily } from '../../data/hotLatest.data.js'
 import { data as frontier } from '../../data/frontierLatest.data.js'
 import lb from '../../data/leaderboard.json'
 import { formatSyncTime, isDailyStale, isTimestampStale } from '../dataFreshness.js'
+import { lastRead, initLearningProgress } from '../learningProgress.js'
+
+const STEPS = [
+  { title: '认识 AI', desc: '搞懂 AI 是什么、常见词', link: '/stage-1/' },
+  { title: '用起来', desc: '从豆包等常用工具开始', link: '/stage-2/' },
+  { title: '测一测', desc: '12 道题测出你的水平', link: '/exams/' },
+]
+
+// 「继续上次阅读」只在浏览器里读本机记录，挂载后才显示，避免预渲染不一致
+const mounted = ref(false)
+const lastReadItem = computed(() => (mounted.value && lastRead.value?.path ? lastRead.value : null))
 
 // 头条固定给最新 AI 前沿专题，日报条目相应减为 5 条，面板总条数保持 6 条不变
 const dailyItems = computed(() => (daily.items || []).slice(0, 5))
@@ -201,6 +209,8 @@ const dailyStale = computed(() => clockTime.value > 0 && isDailyStale(daily.date
 const rankingStale = computed(() => clockTime.value > 0 && isTimestampStale(lb.syncedAt, clockTime.value))
 let freshnessTimer
 onMounted(() => {
+  initLearningProgress()
+  mounted.value = true
   const update = () => { clockTime.value = Date.now() }
   update()
   freshnessTimer = setInterval(update, 60_000)
@@ -583,6 +593,38 @@ onBeforeUnmount(() => clearInterval(freshnessTimer))
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.tools-cards.steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tools-cards.steps .tool-card { height: 100%; padding: 12px 14px; gap: 10px; }
+.tools-cards.steps .tool-arrow { display: none; }
+.step-no {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 900;
+}
+.continue-read {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 8px;
+  max-width: 100%;
+  margin-top: 22px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--green-300);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--green-900);
+  font-size: 13px;
+  text-decoration: none;
+  opacity: 0; animation: fadeUp 0.8s 0.7s ease forwards;
+}
+.continue-read:hover { border-color: var(--green-600); background: white; }
+.continue-label { flex-shrink: 0; color: var(--green-700); font-weight: 600; }
+.continue-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dark .continue-read { background: rgba(31, 46, 36, 0.55); }
+.dark .continue-read:hover { background: rgba(40, 58, 44, 0.8); }
 .tool-card {
   display: flex; align-items: center; gap: 12px;
   padding: 14px 16px;
@@ -658,10 +700,18 @@ onBeforeUnmount(() => clearInterval(freshnessTimer))
   .hero h1 { font-size: 34px; }
   .daily-panel { max-width: none; margin-left: 0; }
 }
+@media (max-width: 960px) {
+  .tools-cards.steps { grid-template-columns: 1fr; }
+  .tools-cards.steps .tool-arrow { display: block; }
+}
 @media (max-width: 640px) {
   .hero h1 { font-size: 28px; }
   .tools-cards { grid-template-columns: 1fr; }
   .daily-panel { padding: 14px 14px 10px; }
+  /* 手机上排行榜改单列只看前 5 名，模型名不再被截断成「Claude O…」 */
+  .lb-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+  .lb-cell:nth-child(n + 6) { display: none; }
+  .lb-name { font-size: 12.5px; }
 }
 
 /* ============ 深色模式：山水画夜景 + 玻璃面板深色化 ============

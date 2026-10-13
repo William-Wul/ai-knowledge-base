@@ -214,6 +214,11 @@ function triggerSearch() {
   .nav-links::-webkit-scrollbar { display: none; }
   .nav-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 10px; font-size: 12.5px; }
 }
+/* 手机：入口自动换行全部露出（以前横向滑动但没有任何提示，后 3 项藏在屏幕外） */
+@media (max-width: 640px) {
+  .nav-links { flex-wrap: wrap; overflow: visible; gap: 0 2px; }
+  .nav-links a { min-height: 38px; padding: 6px 8px; }
+}
 .nav-search:focus-visible,
 .nav-theme:focus-visible,
 .nav-links a:focus-visible { outline: 2px solid var(--green-700); outline-offset: 2px; }

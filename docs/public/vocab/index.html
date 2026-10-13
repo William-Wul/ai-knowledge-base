@@ -570,6 +570,24 @@ html.embedded .word-card { border-color: var(--border); }
   html.embedded body { background: #1b1b1f; }
   html.embedded .app-shell { background: #1b1b1f; }
 }
+/* 手机单栏 + 站内嵌入：不再锁死 100vh。
+   锁死时侧栏「学习历史 / 常见热词」会被压成 0 高、解读区挤成一个小滚动框、空状态虚线框底部被截断。
+   改为内容自然撑高，父页面（VocabEmbed）按上报的高度调整 iframe，整页只有一个滚动条。 */
+@media (max-width: 780px) {
+  html.embedded .app,
+  html.embedded .app-shell { height: auto; min-height: 0; }
+  html.embedded .main { overflow: visible; }
+}
+/* 深链定位（/vocab-book#Agent）：被点名的词条描边并闪两下 */
+@keyframes deeplink-flash {
+  0% { box-shadow: 0 0 0 0 rgba(74,139,99,0.5); }
+  70% { box-shadow: 0 0 0 12px rgba(74,139,99,0); }
+  100% { box-shadow: 0 0 0 0 rgba(74,139,99,0); }
+}
+.word-card.deeplink-hit {
+  border-color: var(--accent) !important;
+  animation: deeplink-flash 1.1s ease-out 2;
+}
 </style>
 <script>if (window.self !== window.top) { try { document.documentElement.classList.add('embedded'); } catch (e) {} }</script>
 </head>
@@ -844,7 +862,107 @@ import { recoverInterruptedWords, parseBackup, mergeBackup, requestWithTimeout }
         console.warn('内置词典加载失败：', err.message);
         dictionary = [];
         render();
+      })
+      .finally(() => { dictionaryLoaded = true; applyDeepLink(); });
+  }
+
+  // ===== 深链：/vocab-book#Agent（或直开 /vocab/#Agent）直接打开某个词条 =====
+  // 键用词条英文名 term（URL 编码；不区分大小写，空格/连字符/下划线可互换，如 #vibe-coding）；
+  // 也兼容 displayTerm、全称、中文译名（如 #智能体）。词典 id（dict_N）随顺序变化，不作为链接键。
+  // 只是"看"，不会把热词写进个人词库；查不到的词预填进上方输入框，点「解读」即可。
+  let dictionaryLoaded = false;
+  const isStacked = matchMedia('(max-width: 780px)');   // 手机单栏布局
+  function normalizeKey(s) { return String(s || '').toLowerCase().replace(/[\s\-_·.]+/g, ''); }
+  function readHashTerm() {
+    const raw = location.hash.slice(1);
+    if (!raw) return '';
+    try { return decodeURIComponent(raw).trim(); } catch (e) { return raw.trim(); }
+  }
+  function matchesKey(w, key) {
+    const names = [w.term, w.displayTerm, w.fullName]
+      .concat(String(w.translation || '').split(/[\/／、]/).map(s => s.replace(/[（(].*?[）)]/g, '')));   // 「幻觉（AI 胡说八道）」也能用 #幻觉 命中
+    return names.some(n => n && normalizeKey(n) === key);
+  }
+  // 把元素带到可视区：单栏时整页滚动（嵌入时交给父页面滚，它知道顶部导航有多高）；双栏时右侧面板回顶
+  function revealElement(el) {
+    if (!el) return;
+    if (isStacked.matches) {
+      // 等这一帧布局完成、新高度先上报给父页面后再定位，否则父页面按旧的 iframe 高度滚动会被截住
+      requestAnimationFrame(() => setTimeout(() => {
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        if (window.self !== window.top) parent.postMessage({ type: 'ailinkstart:vocab:reveal', top }, location.origin);
+        else window.scrollTo({ top: Math.max(0, top - 12), behavior: 'smooth' });
+      }, 0));
+    } else {
+      document.querySelector('.main')?.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+  function flashCards(id) {
+    document.querySelectorAll('.word-card[data-id="' + id + '"]').forEach(el => {
+      el.classList.remove('deeplink-hit');
+      void el.offsetWidth;
+      el.classList.add('deeplink-hit');
+    });
+  }
+  function applyDeepLink() {
+    if (!dictionaryLoaded) return;   // 词典还没到，加载完成后会再调一次
+    const term = readHashTerm();
+    if (!term) return;
+    const key = normalizeKey(term);
+    const dictWord = dictionary.find(w => matchesKey(w, key));
+    const adopted = dictWord ? findAdopted(dictWord.id) : null;
+    const own = adopted || (dictWord ? null : words.find(w => matchesKey(w, key)));
+    // 清掉搜索词，确保左侧列表里能看到目标词条
+    searchTerm = '';
+    const search = document.getElementById('search');
+    if (search) search.value = '';
+    let targetId = null;
+    if (own) {
+      sidebarMode = 'history';
+      currentWordId = own.id;
+      targetId = own.id;
+    } else if (dictWord) {
+      sidebarMode = 'dictionary';
+      currentDictId = dictWord.id;
+      targetId = dictWord.id;
+    } else {
+      // 词库里没有：预填到输入框，用户点「解读」即可（不自动调 AI、不抢焦点弹键盘）
+      const input = document.getElementById('lookup-word');
+      if (input) input.value = term;
+      revealElement(input);
+      return;
+    }
+    render();
+    const listCard = document.querySelector('#word-list .word-card[data-id="' + targetId + '"]');
+    scrollLibraryListTo(listCard);
+    revealElement(document.querySelector('.main'));
+    flashCards(targetId);
+  }
+  window.addEventListener('hashchange', applyDeepLink);
+
+  // ===== 嵌入时向父页面上报内容高度 =====
+  // 手机单栏时父页面据此把 iframe 调成内容同高（不出现框中框的双层滚动）；双栏时父页面忽略高度、用固定视口高
+  if (window.self !== window.top) {
+    const shell = document.querySelector('.app-shell');
+    const reportSize = () => {
+      if (!shell) return;
+      parent.postMessage({
+        type: 'ailinkstart:vocab:size',
+        stacked: isStacked.matches,
+        height: Math.ceil(shell.getBoundingClientRect().height)
+      }, location.origin);
+    };
+    if (shell && 'ResizeObserver' in window) new ResizeObserver(reportSize).observe(shell);
+    isStacked.addEventListener?.('change', reportSize);
+    window.addEventListener('load', reportSize);
+    // iframe 被撑高后，fixed 弹窗会居中在很长的 iframe 中间，可能不在屏幕里：打开时请父页面滚过去
+    const modalObserver = new MutationObserver(records => {
+      if (!isStacked.matches) return;
+      records.forEach(r => {
+        if (r.target.classList.contains('open')) revealElement(r.target.querySelector('.modal-content'));
       });
+    });
+    document.querySelectorAll('.modal').forEach(m => modalObserver.observe(m, { attributes: true, attributeFilter: ['class'] }));
   }
   function loadConfig() {
     updateApiStatus();

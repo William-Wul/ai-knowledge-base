@@ -5,6 +5,7 @@ import { resolve, join, basename, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { CAUTION_LINKS, TOOL_LINKS, PRACTICE_LINKS, FRONTIER_EXTRA_LINKS } from './stagesData.js'
 import { SITE_NAV } from './navigationData.js'
+import { ACCESS_CONFIG } from './accessConfig.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -122,8 +123,26 @@ function mergedItems(dirs, { limit = 0, extraLinks = [] } = {}) {
   }
   all.sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.text.localeCompare(b.text))
   const list = limit > 0 ? all.slice(0, limit) : all
-  return list.map(({ text, link }) => ({ text, link }))
+  return list.map(({ text, link, date }) => ({ text, link, date }))
 }
+
+// 按月分组（「2026 年 10 月」），最新一个月默认展开，其余折叠；缺 date 的归入「更早」
+function groupByMonth(items) {
+  const groups = []
+  for (const { text, link, date } of items) {
+    const m = /^(\d{4})-(\d{2})/.exec(date || '')
+    const label = m ? `${m[1]} 年 ${Number(m[2])} 月` : '更早'
+    let g = groups.find(x => x.text === label)
+    if (!g) groups.push(g = { text: label, collapsed: groups.length > 0, items: [] })
+    g.items.push({ text, link })
+  }
+  return groups
+}
+
+// 日报全部期数（新→旧），供单日页的上一期/下一期使用
+const HOT_DATES = existsSync(join(docsRoot, 'hot'))
+  ? readdirSync(join(docsRoot, 'hot')).filter(f => /^\d{4}-\d{2}-\d{2}\.md$/.test(f)).map(f => basename(f, '.md')).sort().reverse()
+  : []
 
 // 各模块需要固定排序的已知文章（新文件会由 autoItems 自动追加到末尾）
 // 注：2026-07-28 内容重组后，工具上手 / 注意事项 / 进阶实践的文章顺序由
@@ -141,20 +160,12 @@ const siteSidebar = [
         text: 'AI 最新动态',
         collapsed: true,
         items: [
-          { text: '🔥 AI 日报', link: '/hot/', collapsed: true, items: autoItems('hot', [], { reverse: true, limit: 7 }) },
+          { text: '🔥 AI 日报', link: '/hot/', collapsed: true, items: [...autoItems('hot', [], { reverse: true, limit: 7, exclude: ['/hot/archive'] }), { text: '全部往期 →', link: '/hot/archive' }] },
           // AI 前沿 = frontier/ 深度专题 + 原 news/ AI 新闻 + 目录外趋势长文，按日期倒序混排
-          { text: '🔭 AI 前沿', link: '/frontier/', collapsed: true, items: mergedItems(['frontier', 'news'], { extraLinks: FRONTIER_EXTRA_LINKS }) },
+          { text: '🔭 AI 前沿', link: '/frontier/', collapsed: true, items: groupByMonth(mergedItems(['frontier', 'news'], { extraLinks: FRONTIER_EXTRA_LINKS })) },
           // AI 模型排行榜：AIHOT 榜单每日同步（scripts/sync-leaderboard.mjs 生成数据）
-          {
-            text: '🏆 AI 模型排行榜',
-            link: '/model-ranking/',
-            collapsed: true,
-            items: [
-              { text: '完整榜单', link: '/model-ranking/' },
-              { text: 'AIHOT 原榜 ↗', link: 'https://aihot.news/leaderboard' },
-              { text: 'AIHOT 评分规则 ↗', link: 'https://aihot.news/leaderboard/rules' },
-            ],
-          },
+          // 外站原榜/评分规则链接放在榜单页正文，避免进入「上一篇/下一篇」
+          { text: '🏆 AI 模型排行榜', link: '/model-ranking/' },
         ],
       },
       {
@@ -221,6 +232,34 @@ const siteSidebar = [
       { text: '更新日志', link: '/changelog' },
     ]
 
+// ===== 上一篇 / 下一篇 =====
+// VitePress 默认把整棵侧栏拍平后取相邻项，会跨板块乱跳（前言→AI 日报、排行榜→外站），
+// 不在侧栏里的页面（旧日报、搬家页）还会把「下一篇」算成侧栏第一项。
+// 这里按板块分段：只在同一段内取相邻文章，段首段尾不显示；「AI 最新动态」再细分到日报/前沿/排行榜。
+function pagerSegments(sidebar) {
+  const segs = new Map()
+  const walk = (items, key) => {
+    for (const it of items) {
+      if (it.link && !/^https?:/.test(it.link)) {
+        const list = segs.get(key) || []
+        if (!list.some(x => x.link === it.link)) list.push({ text: it.text, link: it.link })
+        segs.set(key, list)
+      }
+      if (it.items) walk(it.items, key)
+    }
+  }
+  for (const top of sidebar) {
+    if (top.text === 'AI 最新动态') for (const sub of top.items) walk([sub], sub.text)
+    else walk([top], top.text)
+  }
+  return [...segs.values()]
+}
+const PAGER_SEGMENTS = pagerSegments(siteSidebar)
+
+function pageLink(relativePath) {
+  return '/' + relativePath.replace(/\.md$/, '').replace(/(^|\/)index$/, '$1')
+}
+
 export default defineConfig({
   base: '/',
 
@@ -232,6 +271,35 @@ export default defineConfig({
   // 2026-08：恢复深色模式开关。首次访问跟随系统偏好，
   // 用户手动切换后 VitePress 自动写入 localStorage 记住选择。
   appearance: true,
+
+  // 侧栏分段计算上一篇/下一篇；旧日报按日期串成上一期/下一期；搬家页不显示
+  transformPageData(pageData) {
+    const fm = pageData.frontmatter
+    if ('prev' in fm || 'next' in fm) return
+    const link = pageLink(pageData.relativePath)
+    const day = /^\/hot\/(\d{4}-\d{2}-\d{2})$/.exec(link)
+    if (day) {
+      const i = HOT_DATES.indexOf(day[1])
+      // 上一篇 = 前一天，下一篇 = 后一天（HOT_DATES 是新→旧）
+      fm.prev = i >= 0 && i < HOT_DATES.length - 1 ? { text: `${HOT_DATES[i + 1]} 日报`, link: `/hot/${HOT_DATES[i + 1]}` } : false
+      fm.next = i > 0 ? { text: `${HOT_DATES[i - 1]} 日报`, link: `/hot/${HOT_DATES[i - 1]}` } : false
+      return
+    }
+    for (const seg of PAGER_SEGMENTS) {
+      const i = seg.findIndex(x => x.link === link)
+      if (i === -1) continue
+      fm.prev = i > 0 ? seg[i - 1] : false
+      fm.next = i < seg.length - 1 ? seg[i + 1] : false
+      return
+    }
+    fm.prev = false
+    fm.next = false
+  },
+
+  // 文章图片默认懒加载，手机上不再一打开就下载整篇所有图
+  markdown: {
+    image: { lazyLoading: true },
+  },
 
   vite: {
     build: {
@@ -252,7 +320,10 @@ export default defineConfig({
     ['meta', { property: 'og:url', content: 'https://ailinkstart.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.loli.net' }],
     ['link', { rel: 'preconnect', href: 'https://gstatic.loli.net', crossorigin: '' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap' }],
+    // 字体非阻塞加载：先用系统字体出字，网络字体到了再替换，弱网下不白屏
+    ['link', { rel: 'stylesheet', href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@400;500&display=swap', media: 'print', onload: "this.media='all'" }],
+    // 已登录过的访客：在页面渲染前就标记，避免每次打开先闪一下密码框（样式见 custom.css）
+    ['script', {}, `try { if (localStorage.getItem(${JSON.stringify(ACCESS_CONFIG.storageKey)}) === ${JSON.stringify(ACCESS_CONFIG.storageValue)}) document.documentElement.classList.add('kb-authed') } catch (e) {}`],
     ['script', {}, `if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }`],
     ['script', {}, `var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?a681b724c97970a6d082bec9d556c968"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();`],
   ],
@@ -279,6 +350,18 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        // 案例详情（有自己的筛选浏览器）、往期日报和搬家页不进搜索索引：
+        // 索引从 6MB 降下来，手机第一次搜索更快，结果也不再被案例提示词淹没
+        _render(src, env, md) {
+          // 先渲染才能拿到 env.frontmatter
+          const html = md.render(src, env)
+          const path = env.relativePath || ''
+          const fm = env.frontmatter || {}
+          if (fm.search === false || fm.caseDetail) return ''
+          if (/^hot\/\d{4}-/.test(path)) return ''
+          if (/^(stage-3|stage-5|stage-6|news)\/index\.md$/.test(path)) return ''
+          return html
+        },
         miniSearch: {
           options: {
             // 原默认按空格切词，中文句中关键词无法命中；构建和浏览器共用分词。
@@ -304,7 +387,21 @@ export default defineConfig({
 
     docFooter: { prev: '上一篇', next: '下一篇' },
     outline: { label: '本页目录', level: [2, 3] },
-    lastUpdated: { text: '最后更新于' },
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: { dateStyle: 'medium', forceLocale: true },
+    },
+    darkModeSwitchLabel: '深色模式',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
+    langMenuLabel: '语言',
+    notFound: {
+      title: '这个页面找不到了',
+      quote: '可能是链接打错了，或者文章已经搬到了新位置。可以回到首页，或用顶部的搜索找一找。',
+      linkLabel: '回到首页',
+      linkText: '回到首页',
+      code: '404',
+    },
 
     footer: {
       message: '仅用作个人 AI 学习，请勿商用',

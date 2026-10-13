@@ -134,3 +134,13 @@ export function hasCaseAccess(storage) {
     return target?.getItem('kb_auth_v1') === 'ok'
   } catch { return false }
 }
+
+// 托管在海外平台（如 X/Twitter 的 video.twimg.com）的媒体，在中国大陆网络下
+// 通常无法加载；用于提前提示读者，并在失败时给出更明确的说明。
+const OVERSEAS_MEDIA_HOSTS = ['twimg.com', 'twitter.com', 'x.com', 'youtube.com', 'youtu.be', 'googlevideo.com']
+export function isOverseasMedia(url) {
+  try {
+    const host = new URL(url).hostname.toLowerCase()
+    return OVERSEAS_MEDIA_HOSTS.some(domain => host === domain || host.endsWith(`.${domain}`))
+  } catch { return false }
+}

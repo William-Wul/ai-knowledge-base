@@ -35,7 +35,7 @@ Claude Code（以下简称 CC）的工作方式跟你熟悉的 AI 聊天完全�
 
 CC 的工作方式：你交代一件事，它自己规划步骤、自己调工具、自己看结果、自己再决定下一步——反复循环，直到任务完成或卡住为止。这个过程叫 **Agent Loop（循环执行）**。
 
-![](/images/stage-5/cc-llm-loop-diagram.png)
+![CC的工作循环示意图](/images/stage-5/cc-llm-loop-diagram.png)
 
 *CC 的工作流：你说"帮我整理文件夹"，它自己决定先读文件、再归类、再创建文件夹……一步步做完，而不是等你每步都下指令*
 
@@ -104,7 +104,7 @@ CC 本质上是一个 **Agent 框架**，它本身不绑定任何特定的大模
 
 按下回车后，它会先问你电脑的开机密码（输入的时候屏幕不会显示你输的字符，这是正常的安全设计，不要慌，输完按回车），然后列出要安装到哪些目录，最后让你按一下回车确认开始：
 
-![](/images/stage-5/cc-mac-brew-confirm.webp)
+![Homebrew安装确认提示](/images/stage-5/cc-mac-brew-confirm.webp)
 
 *依次会经过：(1) Password: 输入你的开机密码，(2) 列出要安装的目录，(3) "Press RETURN/ENTER to continue"，按一下回车继续*
 
@@ -114,7 +114,7 @@ CC 本质上是一个 **Agent 框架**，它本身不绑定任何特定的大模
 
 装完之后，屏幕上会出现 "Installation successful!"，然后还有一段叫 "Next steps" 的内容，里面**有三行命令**：
 
-![](/images/stage-5/cc-mac-brew-path-nextsteps.webp)
+![Homebrew的Next steps命令](/images/stage-5/cc-mac-brew-path-nextsteps.webp)
 
 *红框里那三行命令，是要把 Homebrew 加进系统路径——这步不做的话，后面输入 `brew` 命令会找不到*
 
@@ -158,7 +158,7 @@ Windows 有自己的官方软件管理工具叫 **winget**（类似 Mac 的 Home
 
 在 Windows 任务栏的搜索框里输入"终端"，找到结果里的"终端"应用，点击打开（不要选"命令提示符"，要选"终端"或"Windows PowerShell"）：
 
-![](/images/stage-5/cc-win-search-terminal.webp)
+![在搜索框里找到终端](/images/stage-5/cc-win-search-terminal.webp)
 
 *在 Windows 搜索栏搜"终端"，点最佳匹配里的那个紫色图标应用*
 
@@ -170,7 +170,7 @@ Windows 有自己的官方软件管理工具叫 **winget**（类似 Mac 的 Home
 winget install Anthropic.ClaudeCode
 ```
 
-![](/images/stage-5/cc-win-winget-install.webp)
+![用winget安装Claude Code](/images/stage-5/cc-win-winget-install.webp)
 
 *winget 会自动从微软的官方源下载 Claude Code（大约 233MB），下载完自动安装，整个过程几分钟搞定*
 
@@ -184,7 +184,7 @@ claude
 
 按回车，看到橙色小机器人的欢迎界面就装好了：
 
-![](/images/stage-5/cc-win-cc-welcome.webp)
+![Claude Code欢迎界面](/images/stage-5/cc-win-cc-welcome.webp)
 
 *看到"Welcome to Claude Code" + 橙色小机器人 + 月亮图案就说明 CC 在你电脑上跑起来了*
 
@@ -204,7 +204,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 稍等十几秒到一分钟，看到如下界面就说明装好了：
 
-![](/images/stage-5/cc-mac-install-success.png)
+![Mac安装成功界面](/images/stage-5/cc-mac-install-success.png)
 
 *装好的样子：绿色的 ✓ + "Claude Code successfully installed!" + 版本号*
 
@@ -285,7 +285,7 @@ brew install --cask cc-switch
 
 等待安装完成，屏幕上会出现"cc-switch was successfully installed!"：
 
-![](/images/stage-5/cc-mac-ccswitch-install.webp)
+![CC Switch安装成功](/images/stage-5/cc-mac-ccswitch-install.webp)
 
 *CC Switch 在 Mac 上通过 Homebrew 安装完成，最后一行的"cc-switch was successfully installed!"是成功标志*
 
@@ -303,7 +303,7 @@ Windows 需要去 GitHub 下载安装包。
 
 打开浏览器，访问：`https://github.com/farion1231/cc-switch/releases`
 
-![](/images/stage-5/cc-ccswitch-github-releases.webp)
+![CC Switch的GitHub下载页](/images/stage-5/cc-ccswitch-github-releases.webp)
 
 *CC Switch 的 GitHub 发布页面。在列表里找带 "Windows.msi" 字样的那个文件下载（图中红框标注的）*
 
@@ -313,7 +313,7 @@ Windows 需要去 GitHub 下载安装包。
 
 下载完后双击 `.msi` 安装包，按向导一路点 Next 装完：
 
-![](/images/stage-5/cc-ccswitch-win-wizard.webp)
+![CC Switch安装向导](/images/stage-5/cc-ccswitch-win-wizard.webp)
 
 *CC Switch 的 Windows 安装向导，点 Next 一路装完就行*
 
@@ -325,7 +325,7 @@ Windows 需要去 GitHub 下载安装包。
 
 第一次打开 CC Switch，你会看到这个主界面：
 
-![](/images/stage-5/cc-ccswitch-main-ui.webp)
+![CC Switch主界面](/images/stage-5/cc-ccswitch-main-ui.webp)
 
 *CC Switch 主界面：顶部是 Claude / Codex / Gemini / OpenCode / OpenClaw 等标签，下方是已添加的供应商列表。右上角橙色的 ➕ 号就是"添加新供应商"*
 
@@ -333,7 +333,7 @@ Windows 需要去 GitHub 下载安装包。
 
 CC Switch 贴心地内置了大量**预设供应商**——你不需要自己去查什么 URL、什么参数，**直接点你想用的那个就行**：
 
-![](/images/stage-5/cc-ccswitch-presets.webp)
+![CC Switch预设供应商](/images/stage-5/cc-ccswitch-presets.webp)
 
 *预设供应商列表，包含 Zhipu GLM、DeepSeek、Kimi、MiniMax、DouBaoSeed 等十几个常用国产模型。直接点你要用的那个（这里以 Zhipu GLM 为例）*
 
@@ -341,7 +341,7 @@ CC Switch 贴心地内置了大量**预设供应商**——你不需要自己去
 
 点完预设供应商，进入填写表单页面。**对小白来说，整个表单实际只有两个红框里的字段必须自己填**：
 
-![](/images/stage-5/cc-ccswitch-form-clear.webp)
+![供应商表单必填字段](/images/stage-5/cc-ccswitch-form-clear.webp)
 
 *整个表单里被红框框出的就是关键字段：**最上面那框**是供应商名称（你随便起，比如 "我的GLM"）；**中间那框**是 API Key（粘贴你去官网申请到的密钥）；**下面那框**是请求地址（**选了预设供应商这里会自动填好，直接用就行**；只有"自定义配置"才需要自己填）；**右下角那框**是"+ 添加"按钮（最后保存用）*
 
@@ -365,13 +365,13 @@ GLM、Kimi、MiniMax 等其他平台流程类似——**核心都是：注册 �
 
 然后往下滚，在"模型映射"部分填好你要用的模型名称：
 
-![](/images/stage-5/cc-ccswitch-models-and-add.webp)
+![填写模型映射并添加](/images/stage-5/cc-ccswitch-models-and-add.webp)
 
 *"模型映射"部分有 5 个字段：主模型 / 推理模型 (Thinking) / Haiku / Sonnet / Opus 默认模型。图里的填法是 `glm-5.1` 和 `glm-5` 混填（截图时的版本，现在 GLM 已更新到 `glm-5.3`）——**对小白来说，5 个字段全部填同一个最新模型名更省事**，效果一样。模型名以你充值时各平台公布的为准，填完点右下角红框的 **"+ 添加"** 按钮保存*
 
 填完点"+ 添加"保存，回到 CC Switch 主界面。**关键的最后一步：把刚加的这个供应商点亮（变成"使用中"）**：
 
-![](/images/stage-5/cc-ccswitch-using.webp)
+![启用供应商为使用中](/images/stage-5/cc-ccswitch-using.webp)
 
 *配好之后，主界面会出现你刚加的这一行。**鼠标移到那一行，点一下让它显示"✓ 使用中"**（图中那个灰色的"使用中"标记）——这一步不做的话，CC 还是会去找你原来的配置*
 
@@ -395,7 +395,7 @@ GLM、Kimi、MiniMax 等其他平台流程类似——**核心都是：注册 �
 /login
 ```
 
-![](/images/stage-5/cc-login-screen.webp)
+![Claude官方账号登录界面](/images/stage-5/cc-login-screen.webp)
 
 *输入 /login 后，CC 让你选登录方式：1. Claude 订阅账号 / 2. API 按量计费 / 3. 第三方平台*
 
@@ -445,7 +445,7 @@ cd 你的工作区文件夹路径
 
 **打开工作区：** 装完打开 Cursor，会看到这个欢迎界面：
 
-![](/images/stage-5/cc-cursor-open-project-win.webp)
+![Cursor欢迎界面](/images/stage-5/cc-cursor-open-project-win.webp)
 
 *Cursor 的欢迎界面（这是 Windows 截图，Mac 上 UI 几乎一样）。**点中间那个 "Open project" 按钮**（图中虚线框出的），选一个文件夹作为你跟 CC 的工作区——比如刚才在桌面建的"CC工作区"*
 
@@ -453,7 +453,7 @@ cd 你的工作区文件夹路径
 
 **认识 Cursor 主界面：** 打开工作区之后长这样：
 
-![](/images/stage-5/cc-cursor-ui-annotated.webp)
+![Cursor主界面标注图](/images/stage-5/cc-cursor-ui-annotated.webp)
 
 *Cursor 的主界面四块区域：**左侧**是文件列表，**中间上方**是文件内容（点开文件可以看/改），**底部**是终端窗口，**右侧**是 Cursor 自带的 AI 助手——**这个 AI 助手不是 CC**，CC 要在底部终端里启动*
 
@@ -467,13 +467,13 @@ cd 你的工作区文件夹路径
 
 第一次运行 `claude`，CC 会让你选一个颜色主题（适应你终端的背景颜色）：
 
-![](/images/stage-5/cc-mac-theme-select.webp)
+![选择终端颜色主题](/images/stage-5/cc-mac-theme-select.webp)
 
 *首次启动会让你选颜色主题。如果你的终端是深色背景，选 1 "Dark mode"；浅色背景选 2 "Light mode"——按数字键或按回车选中带 ✓ 的那一项。（图为 Mac 截图，Windows 上界面一模一样）*
 
 然后会出现欢迎界面 + Security notes（安全提示），按一下 Enter 继续：
 
-![](/images/stage-5/cc-mac-welcome-claude.webp)
+![欢迎界面与安全提示](/images/stage-5/cc-mac-welcome-claude.webp)
 
 *"Welcome to Claude Code v2.1.107" + 安全提示，最下面 "Press Enter to continue" 就是让你按回车继续。这两个界面 Mac 和 Windows 完全一致*
 
@@ -562,7 +562,7 @@ cd 你的工作区文件夹路径
 
 CC 会先理解你的意思，可能会追问一些细节（比如你叫什么名字、桌面是哪个路径……），回答之后它会开始干活：
 
-![](/images/stage-5/cc-first-demo-done.webp)
+![第一个任务完成效果](/images/stage-5/cc-first-demo-done.webp)
 
 *CC 完成任务后的样子（这是选项 A 的实际效果）：左侧文件区出现了 index.html，中间区域展示了文件内容，底部终端显示任务已完成。这个状态说明 CC 真的干活了，不是聊天*
 
@@ -624,7 +624,7 @@ CC 有三种工作模式，按 **Shift + Tab** 在它们之间循环切换（按
 
 > ⚠️ **注意**：必须是**英文键盘下的半角 `@`**（按 `Shift + 2` 出来的那个），中文键盘下打的"＠"（全角，更宽）CC 识别不了，不会弹出列表。如果你弹不出来，先把输入法切到英文再敲。
 
-![](/images/stage-5/cc-at-skill-list.webp)
+![输入@弹出的列表](/images/stage-5/cc-at-skill-list.webp)
 
 *输入 `@` 后弹出的列表里包含两类东西：**前面带 `+` 号的是文件**（图中 `+ index.html`）、**前面带 `*` 号的是 Skills/Agent**（后面会讲）。这一节先只看文件——选中某个文件，就把它的内容精准给到 CC*
 
@@ -674,7 +674,7 @@ CC 有三种工作模式，按 **Shift + Tab** 在它们之间循环切换（按
 
 `/compact` 运行起来是这个样子：
 
-![](/images/stage-5/cc-compact-command.webp)
+![/compact命令运行效果](/images/stage-5/cc-compact-command.webp)
 
 *`/compact` 执行中：CC 正在压缩会话内容。底部还提示"Double-tap ESC to rewind"——快速按两下 ESC 键，相当于"撤销"，把会话和文件回退到几步之前的状态，是你的后悔药*
 

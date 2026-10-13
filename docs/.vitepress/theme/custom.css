@@ -86,6 +86,15 @@
   border-bottom: 1px solid var(--kb-border-soft) !important;
 }
 
+/* 手机端：backdrop-filter 会让 fixed 定位的汉堡菜单面板（.VPNavScreen）被困在
+   导航栏 65px 高度内，点开看不到。手机端去掉模糊（底色本身 0.92 不透明，观感无差）。 */
+@media (max-width: 767px) {
+  .VPNav {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
 .VPNavBarTitle .title {
   font-weight: 700 !important;
   color: var(--kb-brand) !important;
@@ -449,15 +458,22 @@ html.kb-zen .VPDoc .aside {
   color-scheme: dark;
 }
 
-/* ===== 文章内联彩色块的深色兼容（不改文章源码）=====
-   多篇深度文章（world-model、loop-engineering 等）用内联 style 写了浅色卡片块
-   （绿底、红底、蓝底等对比框）。深色模式下这些浅色块会刺眼漏白。
-   用一条全局滤镜把它们整体压暗+反转，再轻微校正色相，文字保持可读。
-   只命中 .vp-doc 内带内联 background 的 div/p，不影响图片和代码块。 */
-.dark .vp-doc div[style*="background"],
-.dark .vp-doc p[style*="background"] {
-  /* 轻微提亮文字保证可读性，再压暗背景 */
-  filter: brightness(0.82) contrast(1.05);
+/* ===== 文章内联浅色图示的深色兼容（不改文章源码）=====
+   约 36 篇文章用内联 style 画了浅底深字的 HTML 图示（套娃图、对照卡、表格）。
+   旧做法是整体压暗 82%：嵌套一层暗一层，没写颜色的文字还会继承深色模式的浅色正文，
+   结果浅灰底配浅色字几乎看不见。
+   新做法：只对「最外层、且自己或内部带底色」的内联图示整体做一次反色 + 色相回转
+   （浅底变深底、深字变浅字，绿色仍是绿色），并把它的基准文字色设回浅色主题的深色，
+   反色后正好变成浅色。内部图片/视频再反转回来，避免照片变底片。 */
+.dark .vp-doc :is(div, p, section, table, span)[style]:not(.vp-doc [style] *):is([style*="background"], :has([style*="background"])) {
+  filter: invert(0.9) hue-rotate(180deg);
+  color: #1a2e20;
+}
+.dark .vp-doc :is(div, p, section, table, span)[style]:not(.vp-doc [style] *):is([style*="background"], :has([style*="background"])) a {
+  color: #2D5A3D;
+}
+.dark .vp-doc [style]:not(.vp-doc [style] *):is([style*="background"], :has([style*="background"])) :is(img, video, iframe, picture) {
+  filter: invert(1) hue-rotate(180deg);
 }
 
 /* 深色下首页大背景渐变：夜空感墨绿 */
@@ -781,4 +797,32 @@ body:has(.home-wrapper) .VPContent {
   line-height: 1.5;
   padding-top: 4px;
   padding-bottom: 4px;
+}
+
+/* ===== 已登录访客不闪密码框 =====
+   head 里的内联脚本在渲染前给 html 加 kb-authed（见 config.js），
+   预渲染 HTML 里自带的密码层直接隐藏，等 PasswordGate 挂载后再由它接管 */
+html.kb-authed .password-gate {
+  display: none !important;
+}
+
+/* ===== 字号调节（文章顶部「A A」按钮，见 ArticleMeta.vue）===== */
+html.kb-fs-1 .vp-doc { font-size: 17.5px; }
+html.kb-fs-2 .vp-doc { font-size: 19.5px; }
+html.kb-fs-1 .vp-doc :is(p, li, summary, td, th),
+html.kb-fs-2 .vp-doc :is(p, li, summary, td, th) {
+  line-height: 1.8;
+}
+html.kb-fs-1 .vp-doc :is(p, li, td, th) { font-size: 17.5px; }
+html.kb-fs-2 .vp-doc :is(p, li, td, th) { font-size: 19.5px; }
+
+/* 组件内部的封面/图标图片不吃文章图片的外边距、限高和放大镜光标 */
+.vp-doc img.no-zoom {
+  margin: 0;
+  max-height: none;
+  box-shadow: none;
+  cursor: auto;
+}
+.vp-doc img.no-zoom:hover {
+  box-shadow: none;
 }

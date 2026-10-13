@@ -113,31 +113,31 @@ AI只会越来越强
 
 第一步，我们先试试把之前的文档直接丢给豆包：
 
-![](/images/stage-4/U8UkbyeBJoiZ2sxO0bNcs52znAf.png)
+![将文稿直接交给豆包](/images/stage-4/U8UkbyeBJoiZ2sxO0bNcs52znAf.png)
 
 豆包自己思考后确认了不需要修改我的文字稿，但实际上还是忍不住在我文稿基础上做了部分补充，好在我的内容都没丢，尚且可以接受，至于美观度，只能说非常基础
 
-![](/images/stage-4/OoDmbaMeNooDyux41vocP2lnnvb.png)
+![豆包确认保留原文](/images/stage-4/OoDmbaMeNooDyux41vocP2lnnvb.png)
 
-![](/images/stage-4/MmhSb7gpGoP0FAxMXsHchyPQnzf.png)
+![豆包生成的PPT初稿](/images/stage-4/MmhSb7gpGoP0FAxMXsHchyPQnzf.png)
 
 好在有AI修改环节，可以点击每页的AI编辑图标来提出你的修改需求，也可以直接选择直接修改
 
-![](/images/stage-4/Ser5bA0EpoLt8fxfk5ccE1iTnIe.png)
+![豆包逐页AI编辑入口](/images/stage-4/Ser5bA0EpoLt8fxfk5ccE1iTnIe.png)
 
 我让他去掉多余描述，调整排版，基本都做到了，虽然按照我的文本做了些发挥，但意思还是一样的
 
-![](/images/stage-4/SQGAbTvS7ocwbQxxhCdc3a9JnAc.png)
+![豆包修改后的页面](/images/stage-4/SQGAbTvS7ocwbQxxhCdc3a9JnAc.png)
 
 如果你真的一个字都不想让豆包改，那就在一开始约定好纪律，豆包的指令遵从性会变好很多
 
 风格你也可以做要求，豆包内置了一些基本的风格，比如我规定了极简黑，那豆包就会按这个风格去筛选模版
 
-![](/images/stage-4/BxeMbsDgAo1NvqxwWwvcvTGnndf.png)
+![豆包选择极简黑风格](/images/stage-4/BxeMbsDgAo1NvqxwWwvcvTGnndf.png)
 
 让我们再看下生成效果，基本做到了可以直接用的程度，没有太高的审美要求的话，日常就够了
 
-![](/images/stage-4/HOEmbfyDKoNSFtxZWTccEmGvnFd.png)
+![豆包生成的PPT效果](/images/stage-4/HOEmbfyDKoNSFtxZWTccEmGvnFd.png)
 
 如果你发现指令遵从还是有问题的话就加强下提示词约束，直接复制粘贴使用以下约束就可以，但实际验证下来，页面多了豆包执行的一致性就会下降，好在整体理解还是正确的，哪页没遵从，再具体改哪页
 
@@ -174,13 +174,13 @@ AI只会越来越强
 
 如果你还有图片要加的话，直接在豆包的界面操作插入图片和调整排版就可以，其他要加、要改的同理
 
-![](/images/stage-4/CZeGb9ZY5oRbhtxvKwIcbRpLnFh.png)
+![在豆包界面调整排版](/images/stage-4/CZeGb9ZY5oRbhtxvKwIcbRpLnFh.png)
 
 当时使用的账号可以直接下载，未见水印；当前下载条件本次未核验。
 
 作为对比，我们看看千问会怎么样
 
-![](/images/stage-4/FMtTbvBMDolec6xZE55cN5Jknjb.png)
+![千问生成的PPT页面](/images/stage-4/FMtTbvBMDolec6xZE55cN5Jknjb.png)
 
 当时这次输出做了改写，也遗漏了内容：原大纲是“五个判断”，结果只保留了四个。原记录没有逐项计分，不能给出准确的一致性百分比。这个结果提示我们逐页核对；它不代表该产品现在的所有输出。
 
@@ -190,21 +190,21 @@ AI只会越来越强
 
 同上，我们还是先试试把之前的文档直接丢给coze：
 
-![](/images/stage-4/Uq8mbztSsoXQsQxkjugc9JN1njd.png)
+![将文稿交给Coze](/images/stage-4/Uq8mbztSsoXQsQxkjugc9JN1njd.png)
 
 比豆包省心多了，一致性很好，风格也比较好看
 
-![](/images/stage-4/Wnblb9umMo6RfFxITYLcja1cn6g.png)
+![Coze生成的PPT页面](/images/stage-4/Wnblb9umMo6RfFxITYLcja1cn6g.png)
 
 可以直接针对具体某一页进行描述修改，也可以操作界面里的插入、擦除、无痕改字
 
-![](/images/stage-4/FlX2bJMPTojkZsxpm9zcNx6lnhb.png)
+![Coze单页修改功能](/images/stage-4/FlX2bJMPTojkZsxpm9zcNx6lnhb.png)
 
 当时使用免费积分导出的文件带有小水印；当前条件未复测。
 
-![](/images/stage-4/DBhNb3bsMohPwYx0lsvcA31Onpw.png)
+![Coze导出PPT选项](/images/stage-4/DBhNb3bsMohPwYx0lsvcA31Onpw.png)
 
-![](/images/stage-4/O3TEbQ99Ro3aUJx91E0cQZIdnxA.png)
+![Coze导出的PPT封面](/images/stage-4/O3TEbQ99Ro3aUJx91E0cQZIdnxA.png)
 
 ## 三、美图设计室：原试用的模板与导出
 
@@ -214,25 +214,25 @@ AI只会越来越强
 
 然后我们还是直接把文档粘贴进去
 
-![](/images/stage-4/M6iNbyMQwopr3xxNLimc9EaHnFg.png)
+![粘贴文稿到美图设计室](/images/stage-4/M6iNbyMQwopr3xxNLimc9EaHnFg.png)
 
 可以选是否需要AI扩写或精简原文，这点很好，我们直接点保留原文
 
-![](/images/stage-4/C4AmbVwWgo2N16x94PTcv3mUnFh.png)
+![选择保留原文](/images/stage-4/C4AmbVwWgo2N16x94PTcv3mUnFh.png)
 
 接下来是选择模板，不能说审美很顶尖，但也还算中上可用的程度
 
-![](/images/stage-4/Y8aYbyARaoUxzdxv2XmcWICxnuS.png)
+![美图设计室模板选择](/images/stage-4/Y8aYbyARaoUxzdxv2XmcWICxnuS.png)
 
 接下来很快就可以生成一份ppt，整体还不错，缺点是比较套模板，好处是有大量的修改工具
 
-![](/images/stage-4/X7sJbmQgmopnk6x621YcSVCDnvd.png)
+![美图设计室生成的PPT](/images/stage-4/X7sJbmQgmopnk6x621YcSVCDnvd.png)
 
 当时导出的文件带有水印；当前版本、账号限制和价格未核验。
 
-![](/images/stage-4/TQtQbqqNUoUN5Qx7i1tcs5ZOnWd.png)
+![美图设计室下载选项](/images/stage-4/TQtQbqqNUoUN5Qx7i1tcs5ZOnWd.png)
 
-![](/images/stage-4/MbMObMHEOoEpSbx1fOgc8Hkknsc.png)
+![美图PPT成品页面](/images/stage-4/MbMObMHEOoEpSbx1fOgc8Hkknsc.png)
 
 ## 四、NotebookLM：原试用的页面效果
 
@@ -242,23 +242,23 @@ AI只会越来越强
 
 把我们准备好的内容复制进去，这些内容就会成为一个知识库来源
 
-![](/images/stage-4/Ssd7b2sj8oVmbdxyNT6csoxvnFe.png)
+![NotebookLM添加来源](/images/stage-4/Ssd7b2sj8oVmbdxyNT6csoxvnFe.png)
 
 直接点击右边的“演示文稿”，Notebooklm就会生成一份PPT
 
-![](/images/stage-4/W4OVbOareoV3BmxJg2FcE6ZknMf.png)
+![NotebookLM演示文稿入口](/images/stage-4/W4OVbOareoV3BmxJg2FcE6ZknMf.png)
 
 等他完成后我们来看看效果
 
 你不得不说，虽然他也在自由发挥，但效果真的很好
 
-![](/images/stage-4/O9L8bSmFdo2eXtxhQPich3Jbnmd.png)
+![NotebookLM生成的封面](/images/stage-4/O9L8bSmFdo2eXtxhQPich3Jbnmd.png)
 
-![](/images/stage-4/ILHVbI7y6ob9bQxKO2rcGFalnoh.png)
+![NotebookLM生成的内容页](/images/stage-4/ILHVbI7y6ob9bQxKO2rcGFalnoh.png)
 
 当时下载的结果右下角带有标识；本次未确认当前额度与下载格式。
 
-![](/images/stage-4/L11BbXTMuoQLABxYciAc4tJDnZe.png)
+![NotebookLM下载的PPT](/images/stage-4/L11BbXTMuoQLABxYciAc4tJDnZe.png)
 
 ## 五、编程助手：另一份文稿的制作示范
 
@@ -266,35 +266,35 @@ AI只会越来越强
 
 把skill粘贴给你的agent，让他直接安装：
 
-![](/images/stage-4/XJYibQ8GfoC4DLxRmzWcwf9enm6.png)
+![让Agent安装Skill](/images/stage-4/XJYibQ8GfoC4DLxRmzWcwf9enm6.png)
 
 这里使用了另一份固定文案，与前面各工具的输入不同，因此不能直接比较内容保留率或成品质量。原记录展示的是先确认场景、时长、约束，再生成文件的制作方式。
 
-![](/images/stage-4/AE7AbTq0Mo4FipxTtiNcCZRjnSe.png)
+![Agent先确认制作需求](/images/stage-4/AE7AbTq0Mo4FipxTtiNcCZRjnSe.png)
 
-![](/images/stage-4/U49ubxSuioK2eZx922HcALZ1nhl.png)
+![Agent规划的页面结构](/images/stage-4/U49ubxSuioK2eZx922HcALZ1nhl.png)
 
 产出效果还不错，文案也没有改动。
 
 首页是有流动效果的。
 
-![](/images/stage-4/YxNhbaqubofDVKxAngscWAQYn1F.png)
+![杂志风PPT首页](/images/stage-4/YxNhbaqubofDVKxAngscWAQYn1F.png)
 
-![](/images/stage-4/El2TbA8YToGCWqx6aysczUx6nzf.png)
+![杂志风PPT内容页](/images/stage-4/El2TbA8YToGCWqx6aysczUx6nzf.png)
 
-![](/images/stage-4/Fcuob0dVNoCzcZxfzVacA33vndf.png)
+![杂志风PPT章节页](/images/stage-4/Fcuob0dVNoCzcZxfzVacA33vndf.png)
 
 当然，如果你只是想做一个传统风格的PPT格式，也可以，直接告诉Claude code你要什么，PPT做好就直接躺在你指定的文件夹里啦
 
-![](/images/stage-4/PJoKb7WMUoosikx0T1JcyDiunTY.png)
+![向Claude Code提需求](/images/stage-4/PJoKb7WMUoosikx0T1JcyDiunTY.png)
 
-![](/images/stage-4/IHBhbOV7voTDyqxv7QScKRPfnYg.png)
+![Claude Code生成结果](/images/stage-4/IHBhbOV7voTDyqxv7QScKRPfnYg.png)
 
-![](/images/stage-4/TcEMbYOY2o4utjxoJZxcmB2fnNb.png)
+![传统风格PPT封面](/images/stage-4/TcEMbYOY2o4utjxoJZxcmB2fnNb.png)
 
-![](/images/stage-4/CgOab0X0PoYIvqxGXllcapi6nGh.png)
+![传统风格PPT内容页](/images/stage-4/CgOab0X0PoYIvqxGXllcapi6nGh.png)
 
-![](/images/stage-4/HwXUbdf35oyCrZxcQUvcHiPynPf.png)
+![传统风格PPT介绍页](/images/stage-4/HwXUbdf35oyCrZxcQUvcHiPynPf.png)
 
 ## 现在选择工具，可以先做这五项检查
 

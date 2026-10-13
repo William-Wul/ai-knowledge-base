@@ -128,7 +128,7 @@ Windows、macOS、安卓、iPhone 四端都有（iOS 版是 2026 年 7 月初刚
 - **本地知识库**：应用、文档、图库、此电脑四个子项，授权后它会把你电脑里的东西梳理归类（第七节讲）。
 - **办公室**：一个彩蛋页面，能看到几只小马"在工位上干活"的实时画面，谁在忙谁在摸鱼一目了然，也能看到 Token 消耗情况。没事可以点开看看，挺解压。
 
-![Marvis 办公室页面：以虚拟办公室形式展示各个 Agent 的工作状态，Marvis、Computer Agent、App Agent 都有自己的工位](/images/stage-2/2026-07-03/marvis-office.gif)
+![Marvis 办公室页面：以虚拟办公室形式展示各个 Agent 的工作状态，Marvis、Computer Agent、App Agent 都有自己的工位](/images/stage-2/2026-07-03/marvis-office.webp)
 
 <div class="figcaption">"办公室"页面：每个内部角色一个工位，正在干活的小马会坐在电脑前忙碌。（图源：Marvis 产品界面）</div>
 

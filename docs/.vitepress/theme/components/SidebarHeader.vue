@@ -2,7 +2,7 @@
   <div class="kb-sb-header">
     <a class="kb-sb-brand" href="/" title="回到首页">
       <svg viewBox="9 7 41 43" width="16" height="17" aria-hidden="true">
-        <rect x="13" y="10" width="9" height="36" rx="2.5" fill="#1f4332" />
+        <rect x="13" y="10" width="9" height="36" rx="2.5" fill="currentColor" />
         <rect x="25" y="10" width="9" height="36" rx="2.5" fill="#3a7050" />
         <rect x="38" y="14" width="7" height="32" rx="2.5" transform="rotate(12 41.5 30)" fill="#6dbf8a" />
       </svg>
@@ -94,7 +94,7 @@ const toggleTheme = () => { isDark.value = !isDark.value }
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: #1f4332;
+    color: var(--kb-brand-strong);
     text-decoration: none;
     white-space: nowrap;
     padding: 4px 0;

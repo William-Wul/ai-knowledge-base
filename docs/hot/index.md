@@ -33,6 +33,8 @@ Tibo 宣布 GPT-6.1 Sol 在 Codex 与 Work 中的默认上下文长度从 272k �
 - [2026-10-07](./2026-10-07) — Mistral 发布 Mistral Large 4，Artificial Analysis 评测称其为美中之外最智能模型
 - [2026-10-06](./2026-10-06) — SemiAnalysis 测算：Anthropic 订阅的 API 等价价值约为 OpenAI 的 5 倍以上
 
+[查看全部往期日报 →](./archive)
+
 ---
 
 > 数据精选策略由 AIHOT 维护（5 维度打分 + 公式权重 + 事件聚类）。如需了解信源筛选 / 评分机制，可阅读[作者介绍原文](https://mp.weixin.qq.com/s/r6CE2U3Y0-pU05wF3_PuTQ)。

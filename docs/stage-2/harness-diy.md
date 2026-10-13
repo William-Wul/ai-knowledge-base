@@ -68,17 +68,17 @@ description: 进阶实战：拆开 AI 工具外面那层"壳"（Harness），看
 
 <div style="display:flex; gap:12px; flex-wrap:wrap; margin:18px 0;">
   <div style="flex:1; min-width:200px;">
-    <img src="/images/stage-2/harness-diy/game-dsh.png" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
+    <img loading="lazy" src="/images/stage-2/harness-diy/game-dsh.png" alt="DeepSeek Harness 版滑沙游戏" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
     <div style="font-size:13px; color:#2D5A3D; font-weight:600; margin-top:6px;">DeepSeek Harness 版</div>
     <div style="font-size:13px; color:#555;">黄昏沙漠、金字塔、绿洲湖泊，氛围完整，玩家自动滑行穿过每个门</div>
   </div>
   <div style="flex:1; min-width:200px;">
-    <img src="/images/stage-2/harness-diy/game-reasonix.png" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
+    <img loading="lazy" src="/images/stage-2/harness-diy/game-reasonix.png" alt="Reasonix 版滑沙游戏" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
     <div style="font-size:13px; color:#9a4a4a; font-weight:600; margin-top:6px;">Reasonix 版</div>
     <div style="font-size:13px; color:#555;">能玩，但金字塔、人物、天空都渲染得粗糙，不像一款 3D 游戏</div>
   </div>
   <div style="flex:1; min-width:200px;">
-    <img src="/images/stage-2/harness-diy/game-codex.png" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
+    <img loading="lazy" src="/images/stage-2/harness-diy/game-codex.png" alt="Codex 版滑沙游戏" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
     <div style="font-size:13px; color:#666; font-weight:600; margin-top:6px;">Codex 版</div>
     <div style="font-size:13px; color:#555;">画面明亮干净，但整体更简单，沉浸感不如自家 Harness</div>
   </div>
@@ -213,11 +213,11 @@ DeepSeek Harness 不绑定 DeepSeek 自家模型。设置里可以接入 Kimi、
 
 <div style="display:flex; gap:12px; flex-wrap:wrap; margin:18px 0;">
   <div style="flex:1; min-width:240px;">
-    <img src="/images/stage-2/harness-diy/at-file-plugin.png" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
+    <img loading="lazy" src="/images/stage-2/harness-diy/at-file-plugin.png" alt="文件提及插件界面" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
     <div style="font-size:13px; color:#555; margin-top:6px;">文件提及插件：输入 @ 弹出文件选择器，随手把文件喂给 Agent</div>
   </div>
   <div style="flex:1; min-width:240px;">
-    <img src="/images/stage-2/harness-diy/explorer-plugin.png" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
+    <img loading="lazy" src="/images/stage-2/harness-diy/explorer-plugin.png" alt="类 VS Code 文件工作台插件" style="width:100%; border-radius:8px; border:1px solid #e3e8e3;">
     <div style="font-size:13px; color:#555; margin-top:6px;">界面改造插件：把界面改成类 VS Code 的文件工作台，右侧是项目文件树</div>
   </div>
 </div>

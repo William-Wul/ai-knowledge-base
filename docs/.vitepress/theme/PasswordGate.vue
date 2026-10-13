@@ -20,9 +20,16 @@
             :type="showPassword ? 'text' : 'password'"
             placeholder="输入访问密码"
             autocomplete="current-password"
+            enterkeyhint="go"
             @input="hasError = false"
           />
-          <button type="button" class="toggle-btn" @click.stop.prevent="showPassword = !showPassword" tabindex="-1">
+          <button
+            type="button"
+            class="toggle-btn"
+            :aria-label="showPassword ? '隐藏密码' : '显示密码'"
+            :aria-pressed="showPassword ? 'true' : 'false'"
+            @click.stop.prevent="showPassword = !showPassword"
+          >
             <svg v-if="!showPassword" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
               <circle cx="12" cy="12" r="3"/>
@@ -69,14 +76,6 @@ async function sha256(text) {
     .join('')
 }
 
-function redirectIfNotFound() {
-  setTimeout(() => {
-    if (document.title.startsWith('404')) {
-      window.location.replace('/')
-    }
-  }, 300)
-}
-
 onMounted(() => {
   let stored
   try { stored = localStorage.getItem(STORAGE_KEY) } catch {}
@@ -84,7 +83,6 @@ onMounted(() => {
     grantAccess()
     authenticated.value = true
     window.dispatchEvent(new Event('kb-authenticated'))
-    redirectIfNotFound()
   } else {
     nextTick(() => inputRef.value?.focus())
   }
@@ -106,7 +104,6 @@ async function handleSubmit() {
     try { localStorage.setItem(STORAGE_KEY, storageValue) } catch {}
     authenticated.value = true
     window.dispatchEvent(new Event('kb-authenticated'))
-    redirectIfNotFound()
   } else {
     errorMessage.value = '密码错误，请重试'
     hasError.value = true
@@ -215,6 +212,7 @@ async function handleSubmit() {
 }
 
 .toggle-btn:hover { color: #2D5A3D; }
+.toggle-btn:focus-visible { outline: 2px solid #2D5A3D; outline-offset: 2px; border-radius: 6px; }
 
 .error-msg {
   color: #dc2626;

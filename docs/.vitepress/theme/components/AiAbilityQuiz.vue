@@ -42,6 +42,7 @@
             :key="option.id"
             type="button"
             :class="['choice-btn', isSelected(currentQuestion, option.id) && 'selected']"
+            :aria-pressed="isSelected(currentQuestion, option.id) ? 'true' : 'false'"
             @click="selectOption(currentQuestion, option.id)"
           >
             <span class="choice-mark">{{ choiceMark(currentQuestion, option.id) }}</span>
@@ -145,11 +146,27 @@
         </div>
       </div>
     </div>
+
+    <!-- 分享图预览：微信/飞书内置浏览器里复制、分享、下载都不可用，直接把图片摆出来让用户长按保存 -->
+    <div
+      v-if="previewUrl"
+      class="share-preview"
+      role="dialog"
+      aria-modal="true"
+      aria-label="分享图预览"
+      @click.self="closePreview"
+    >
+      <div class="share-preview-card">
+        <img :src="previewUrl" class="share-preview-img" alt="AI 能力自测分享图" />
+        <p class="share-preview-hint">{{ previewHint }}</p>
+        <button ref="previewCloseBtn" type="button" class="btn-primary share-preview-close" @click="closePreview">关闭</button>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup>
-import { computed, nextTick, onMounted, reactive, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref } from 'vue'
 import { dimensions, levels, questionBank } from './aiQuizBank.js'
 import { resolveLinks } from './topicMap.js'
 import { trackLearning } from './learningEvents.js'
@@ -588,36 +605,83 @@ function triggerDownload(blob) {
   window.setTimeout(() => URL.revokeObjectURL(url), 4000)
 }
 
+// 微信 / 飞书 / 钉钉内置浏览器：剪贴板写图片、系统分享、<a download> 基本都不生效（而且不报错），
+// 只能把图片展示出来让用户长按保存
+function isInAppBrowser() {
+  return /MicroMessenger|Lark|Feishu|DingTalk/i.test(navigator.userAgent || '')
+}
+
+// ---- 分享图预览浮层 ----
+const previewUrl = ref('')
+const previewCloseBtn = ref(null)
+const previewHint = computed(() =>
+  (typeof window !== 'undefined' && window.matchMedia?.('(hover: none)').matches)
+    ? '长按图片保存，或直接转发给朋友'
+    : '右键图片「另存为」即可保存'
+)
+
+function blobToDataUrl(blob) {
+  // 用 data URL 而不是 blob: 链接——微信长按「保存图片」认不出 blob: 地址
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = () => resolve(reader.result)
+    reader.onerror = () => reject(reader.error)
+    reader.readAsDataURL(blob)
+  })
+}
+
+function onPreviewKeydown(event) {
+  if (event.key === 'Escape') closePreview()
+}
+
+async function openPreview(blob) {
+  previewUrl.value = await blobToDataUrl(blob)
+  window.addEventListener('keydown', onPreviewKeydown)
+  await nextTick()
+  previewCloseBtn.value?.focus()
+}
+
+function closePreview() {
+  previewUrl.value = ''
+  window.removeEventListener('keydown', onPreviewKeydown)
+}
+
+onBeforeUnmount(() => window.removeEventListener('keydown', onPreviewKeydown))
+
 async function copyShareImage() {
   if (sharing.value) return
   sharing.value = true
   try {
-    // 优先直接写入剪贴板：粘贴出去就是一张图。
-    // Safari 要求在用户手势内同步创建 ClipboardItem，所以图片以 Promise 形式传入。
-    if (typeof ClipboardItem !== 'undefined' && navigator.clipboard?.write) {
-      await navigator.clipboard.write([new ClipboardItem({ 'image/png': buildShareBlob() })])
-      flashShareState('已复制，去聊天里粘贴吧')
+    // 内置浏览器：各种 API 都会"静默失败"，直接出预览浮层
+    if (isInAppBrowser()) {
+      await openPreview(await buildShareBlob())
       return
     }
-    throw new Error('clipboard image unsupported')
-  } catch {
-    try {
-      const blob = await buildShareBlob()
-      const file = new File([blob], shareFileName(), { type: 'image/png' })
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        try {
-          await navigator.share({ files: [file], title: 'AI 能力自测' })
-          flashShareState('已发起分享')
-        } catch (error) {
-          if (error?.name !== 'AbortError') throw error
-        }
-      } else {
-        triggerDownload(blob)
-        flashShareState('无法直接复制，已下载图片')
-      }
-    } catch {
-      flashShareState('生成失败，请重试')
+    // 1. 优先直接写入剪贴板：粘贴出去就是一张图。
+    //    Safari 要求在用户手势内同步创建 ClipboardItem，所以图片以 Promise 形式传入。
+    if (typeof ClipboardItem !== 'undefined' && navigator.clipboard?.write) {
+      try {
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': buildShareBlob() })])
+        flashShareState('已复制，去聊天里粘贴吧')
+        return
+      } catch {}
     }
+    // 2. 系统分享（手机浏览器）
+    const blob = await buildShareBlob()
+    const file = new File([blob], shareFileName(), { type: 'image/png' })
+    if (navigator.canShare?.({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file], title: 'AI 能力自测' })
+        flashShareState('已发起分享')
+        return
+      } catch (error) {
+        if (error?.name === 'AbortError') return   // 用户自己取消了分享面板，不再打扰
+      }
+    }
+    // 3. 都不行：展示图片让用户自己保存（只有 API 真正成功才提示"已复制/已分享"）
+    await openPreview(blob)
+  } catch {
+    flashShareState('生成失败，请重试')
   } finally {
     sharing.value = false
   }
@@ -627,7 +691,12 @@ async function downloadShareImage() {
   if (sharing.value) return
   sharing.value = true
   try {
-    triggerDownload(await buildShareBlob())
+    const blob = await buildShareBlob()
+    // 内置浏览器里 <a download> 不生效，改为展示图片长按保存
+    if (isInAppBrowser()) await openPreview(blob)
+    else triggerDownload(blob)
+  } catch {
+    flashShareState('生成失败，请重试')
   } finally {
     sharing.value = false
   }
@@ -1109,6 +1178,56 @@ async function downloadShareImage() {
 .action-btns {
   display: flex;
   gap: 12px;
+}
+
+/* 分享图预览浮层 */
+.share-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(10, 18, 12, 0.72);
+}
+
+.share-preview-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 420px;
+  width: 100%;
+  max-height: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--kb-surface, #fff);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.share-preview-img {
+  display: block;
+  min-height: 0;
+  max-width: 100%;
+  max-height: calc(100vh - 170px);
+  max-height: calc(100dvh - 170px);
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  /* 允许长按弹出「保存图片」菜单（部分主题会全局禁用） */
+  -webkit-touch-callout: default;
+  user-select: auto;
+}
+
+.share-preview-hint {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.share-preview-close {
+  min-width: 120px;
 }
 
 @media (max-width: 640px) {

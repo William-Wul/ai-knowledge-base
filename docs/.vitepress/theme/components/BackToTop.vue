@@ -125,12 +125,11 @@ watch(() => route.path, () => {
   transform: translateY(8px);
 }
 
+/* 手机端只收窄边距，尺寸保持 44×44（手指点击目标的下限，不再缩到 40） */
 @media (max-width: 640px) {
   .kb-back-to-top {
     right: 16px;
     bottom: 16px;
-    width: 40px;
-    height: 40px;
   }
 }
 </style>

@@ -19,4 +19,12 @@ description: 市面上最常用的 AI 工具上手教程：通用对话、办公
 
 不追求大而全的工具介绍，只聚焦**最新、最实用**的 AI 上手与使用。
 
-本模块的文章见左侧目录。
+## 本模块的文章
+
+<ModuleArticles link="/stage-2/" />
+
+## AI 使用注意事项
+
+用 AI 之前先读这几篇：哪些信息不能交给 AI、数据会流向哪里、该学哪些工具。
+
+<ModuleArticles link="/stage-2/safety-guidelines" />

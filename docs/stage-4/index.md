@@ -18,4 +18,8 @@ description: 不绑定任何一个工具的 AI 使用技巧、思路和方法
 
 > 具体某个工具（WorkBuddy、Claude Code、Codex 等）的教程，都在「AI 基础学习 · 工具快速上手」。
 
-挑和你相关的读即可，所有文章见左侧目录。
+挑和你相关的读即可。
+
+## 本板块的文章
+
+<ModuleArticles link="/stage-4/" />

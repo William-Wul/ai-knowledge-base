@@ -170,6 +170,8 @@ function indexToMarkdown(latestDaily, otherMetas) {
       lines.push(`- [${d.date}](./${d.date})${lead}`)
     }
     lines.push('')
+    lines.push(`[查看全部往期日报 →](./archive)`)
+    lines.push('')
   }
 
   lines.push('---')

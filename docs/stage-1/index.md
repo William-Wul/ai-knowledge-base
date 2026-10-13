@@ -17,4 +17,8 @@ ChatGPT、DeepSeek、豆包、文生图、Agent、多模态……这些名词你
 
 读完你会得到一个**完整的 AI 世界观**。后面所有的学习都建立在这个世界观之上。
 
-本模块的文章见左侧目录。
+## 本模块的文章
+
+<ModuleArticles link="/stage-1/" start-here />
+
+读完这两篇，可以接着看 [AI 工具快速上手](/stage-2/)，把 AI 真正用起来；用之前记得先读 [AI 使用注意事项](/stage-2/safety-guidelines)。
