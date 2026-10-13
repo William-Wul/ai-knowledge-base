@@ -4,6 +4,7 @@ import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../docs/.vitepress/casesData.
 import { loadCases } from './practice-cases-data.mjs'
 import { createHash } from 'node:crypto'
 import { expectedCatalogSize, validateCatalog } from './case-catalog-integrity.mjs'
+import { caseSourceName, hasValidCaseSource } from '../docs/.vitepress/caseSources.js'
 const cases = loadCases()
 const selection = JSON.parse(readFileSync('docs/.vitepress/data/practice-cases-selection.json', 'utf8')).cases
 const expected = expectedCatalogSize(selection, process.argv[2])
@@ -28,11 +29,12 @@ for (const c of cases) {
   ids.add(c.slug)
   assert(CASE_CATEGORIES.some(category => category.id === c.category))
   for (const field of ['title', 'summary', 'creator', 'preparation', 'promptOriginal', 'promptZh', 'translationNote']) assert(c[field]?.trim(), `${c.slug} 缺少 ${field}`)
-  assert(c.url.startsWith('https://goodcase.ai/cases/'))
+  assert(hasValidCaseSource(c), `来源名与地址不匹配：${c.slug}`)
   assert(c.sourceUrl?.startsWith('https://'))
   assert(c.steps.length >= 3)
   for (const path of [c.cover, c.thumbnail].filter(Boolean)) assert(existsSync(`docs/public${path}`), `图片不存在：${path}`)
   const html = checkPage(c.slug)
+  assert(html.includes(caseSourceName(c)), `来源署名缺失：${c.slug}`)
   for (const heading of ['效果展示', '开始前准备', '怎么做', '改成自己的内容', '作者与来源']) assert(html.includes(`id="${heading}"`), `缺少可定位的正文标题：${heading}`)
   assert(html.includes('复制完整内容') && html.includes('下载完整案例笔记'))
   assert(html.includes('参考工具') && !html.includes('来源标注的工具') && !html.includes('尚未在生成工具中复现'))

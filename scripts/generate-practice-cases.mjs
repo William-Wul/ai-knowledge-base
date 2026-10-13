@@ -3,6 +3,7 @@ import { resolve, dirname } from 'node:path'
 import { root } from './practice-cases-data.mjs'
 import { loadTaggedCases } from './case-tags-data.mjs'
 import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../docs/.vitepress/casesData.js'
+import { caseSourceName, hasValidCaseSource } from '../docs/.vitepress/caseSources.js'
 
 const cases = loadTaggedCases()
 const selectedSlugs = new Set(cases.map(c => c.slug))
@@ -27,7 +28,7 @@ for (const file of readdirSync(resolve(root, 'docs/cases'))) {
 }
 const generated = resolve(root, 'docs/.vitepress/data/cases-generated')
 mkdirSync(generated, { recursive: true })
-const fields = ['slug', 'category', 'title', 'summary', 'use', 'models', 'creator', 'thumbnail', 'cover', 'mediaType', 'contentKind', 'mediaUrl', 'imageUrl', 'mediaNote', 'tags', 'sourcePromptStatus']
+const fields = ['slug', 'category', 'title', 'summary', 'use', 'models', 'creator', 'thumbnail', 'cover', 'mediaType', 'contentKind', 'mediaUrl', 'imageUrl', 'mediaNote', 'tags', 'sourcePromptStatus', 'sourceName']
 writeFileSync(resolve(generated, 'index.json'), JSON.stringify(cases.map(c => Object.fromEntries(fields.filter(k => c[k] !== undefined).map(k => [k, c[k]])))))
 const safeText = value => String(value || '').replace(/[&<>{}]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '{': '&#123;', '}': '&#125;' }[c])).replace(/([\\`*_[\]#!|])/g, '\\$1')
 const safeUrl = value => {
@@ -73,6 +74,7 @@ for (const collection of CASE_COLLECTIONS) {
   write(`${collection.id}/index.md`, listPage(collection))
 }
 for (const c of cases) {
+  if (!hasValidCaseSource(c)) throw new Error(`案例来源名与地址不匹配：${c.slug}`)
   if (!/^[a-z0-9-]+$/.test(c.slug) || ids.has(c.slug) || !categoryName(c.category)) throw new Error(`案例标识或分类无效：${c.slug}`)
   ids.add(c.slug)
   writeFileSync(resolve(generated, `${c.slug}.json`), JSON.stringify(c))
@@ -139,7 +141,7 @@ ${safeText(c.exercise)}
 ## 作者与来源
 
 - 作者：${safeText(c.creator)}
-- 案例收录：[Goodcase](${safeUrl(c.url)}) · [原始出处](${safeUrl(c.sourceUrl || c.url)})
+- 案例收录：[${safeText(caseSourceName(c))}](${safeUrl(c.url)}) · [原始出处](${safeUrl(c.sourceUrl || c.url)})
 - 整理日期：${c.capturedAt}
 - 中文说明和操作建议由本站整理；作者原文保留，供对照与复制。
 

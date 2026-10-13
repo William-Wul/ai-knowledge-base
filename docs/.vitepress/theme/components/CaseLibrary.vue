@@ -2,6 +2,7 @@
 import { computed, nextTick, onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import cases from '../../data/cases-generated/index.json'
 import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../../casesData.js'
+import { caseSourceName } from '../../caseSources.js'
 import { CASE_TAG_GROUPS, caseTagLabels, normalizeTagFilters } from '../../caseTags.js'
 import CaseViewer from './CaseViewer.vue'
 import { buildListPath, filterCases, buildCaseHref, buildPreviewHref, readListState, saveListState, hasCaseAccess } from './caseBrowsing.js'
@@ -15,6 +16,7 @@ const previewSlug = ref('')
 const filters = computed(() => ({ purpose: purpose.value, topic: topic.value }))
 const hasFilters = computed(() => !!(query.value || purpose.value || topic.value))
 const results = computed(() => filterCases(cases, props.category, query.value, filters.value))
+const sourceNames = computed(() => [...new Set(filterCases(cases, props.category).map(caseSourceName))].join('、'))
 const visible = computed(() => results.value.slice(0, limit.value))
 const listPath = computed(() => buildListPath(props.category, query.value, filters.value))
 const filterGroups = computed(() => CASE_TAG_GROUPS.map(group => {
@@ -184,7 +186,7 @@ onBeforeUnmount(() => { ++restoreRun; window.removeEventListener('popstate', res
       <a v-else href="/cases/">浏览全部案例 →</a>
     </div>
     <div v-if="results.length" class="case-list-progress"><p role="status">已显示 {{ visible.length }} / {{ results.length }} 个案例</p><button v-if="results.length > limit" type="button" class="case-button case-more" @click="limit += 12">再看 {{ Math.min(12, results.length - limit) }} 个案例</button></div>
-    <p class="case-library-source">案例来源：Goodcase。中文说明与分类标签由本站整理，作者和原始出处见各案例页。</p>
+    <p class="case-library-source">案例来源：{{ sourceNames }}。中文说明与分类标签由本站整理，作者和原始出处见各案例页。</p>
     <CaseViewer v-if="currentItem" :item="currentItem" :index="currentIndex" :total="results.length" :detail-href="buildCaseHref(currentItem.slug, listPath)" @previous="move(-1)" @next="move(1)" @close="close" @learn="remember()" />
   </div>
 </template>

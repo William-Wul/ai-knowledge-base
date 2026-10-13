@@ -1,6 +1,7 @@
 <script setup>
 import { computed, nextTick, ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { trackLearning } from './learningEvents.js'
+import { caseSourceName } from '../../caseSources.js'
 const props = defineProps({ item: { type: Object, required: true } })
 const item = computed(() => props.item)
 const language = ref('zh')
@@ -42,7 +43,7 @@ async function copy(text = prompt.value) {
 }
 function download() {
   const c = item.value
-  const content = `${c.title}\n\n适用场景\n${c.use}\n\n开始前准备\n${c.preparation}\n\n本站整理的操作建议\n${c.steps.map((s,i)=>`${i+1}. ${s}`).join('\n')}\n\n值得学习的写法\n${c.lesson}\n\n改成自己的内容\n${c.exercise}\n\n${c.translationNote}\n${c.promptZh}\n\n作者完整原文${c.contentKind === 'code' ? '（源码）' : ''}\n${c.promptOriginal}\n\n作者：${c.creator}\nGoodcase：${c.url}\n原始出处：${c.sourceUrl || c.url}\n整理日期：${c.capturedAt}\n`
+  const content = `${c.title}\n\n适用场景\n${c.use}\n\n开始前准备\n${c.preparation}\n\n本站整理的操作建议\n${c.steps.map((s,i)=>`${i+1}. ${s}`).join('\n')}\n\n值得学习的写法\n${c.lesson}\n\n改成自己的内容\n${c.exercise}\n\n${c.translationNote}\n${c.promptZh}\n\n作者完整原文${c.contentKind === 'code' ? '（源码）' : ''}\n${c.promptOriginal}\n\n作者：${c.creator}\n${caseSourceName(c)}：${c.url}\n原始出处：${c.sourceUrl || c.url}\n整理日期：${c.capturedAt}\n`
   const url = URL.createObjectURL(new Blob(['\ufeff', content], { type: 'text/plain;charset=utf-8' }))
   const a = document.createElement('a')
   a.href = url
@@ -63,7 +64,7 @@ function download() {
       </div>
       <button type="button" class="case-button case-primary" @click="copy()">复制完整内容</button>
     </div>
-    <p class="case-prompt-note">{{ language === 'zh' ? item.translationNote : `Goodcase 收录的 ${item.creator} ${item.sourcePromptStatus === 'excerpt' ? '公开节选，末尾存在截断' : '原文'}，保留原样。` }}</p>
+    <p class="case-prompt-note">{{ language === 'zh' ? item.translationNote : `${caseSourceName(item)} 收录的 ${item.creator} ${item.sourcePromptStatus === 'excerpt' ? '公开节选，末尾存在截断' : '原文'}，保留原样。` }}</p>
     <pre ref="promptBox" class="case-prompt-content" :class="{ 'is-collapsed': needsExpansion && !expanded }" tabindex="0" aria-label="完整可复制内容">{{ prompt }}</pre>
     <button v-if="needsExpansion" type="button" class="case-expand" :aria-expanded="expanded" @click="expanded = !expanded">{{ expanded ? '收起长内容 ↑' : '展开阅读全文 ↓' }}</button>
     <div v-if="segments.length" class="case-segments"><span>按分镜分别复制：</span><button v-for="s in segments" :key="s.title" type="button" class="case-button" @click="copy(s.text)">{{ s.title }}</button></div>
