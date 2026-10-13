@@ -1,37 +1,135 @@
 ---
 title: AI 日报
-description: 2026-10-12 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-12
+description: 2026-10-13 AI 行业精选 · 由 AIHOT 同步
+date: 2026-10-13
 ---
 
-# 🔥 AI 日报 · 2026-10-12
+# 🔥 AI 日报 · 2026-10-13
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k
+## Meta 发布 Muse Wonder 和 Muse Wonder Full，Artificial Analysis 实测智能水平较前代显著提升
 
-Tibo 宣布 GPT-6.1 Sol 在 Codex 与 Work 中的默认上下文长度从 272k 提升到 500k，约增加 80%。此举可减少压缩（compaction）发生，帮助需要长期保留大量上下文和细节的任务；用户仍可自行覆盖设置，模型最大上下文长度为 1M。
+Meta 发布 Muse Wonder 和 Muse Wonder Full 两款模型，在 Artificial Analysis Intelligence Index v4.3 上分别得 52 和 56 分（max reasoning effort）。
+
+## 🤖 模型发布/更新
+
+### 1. Meta 发布 Muse Wonder 和 Muse Wonder Full，Artificial Analysis 实测智能水平较前代显著提升
+
+Meta 发布 Muse Wonder 和 Muse Wonder Full 两款模型，在 Artificial Analysis Intelligence Index v4.3 上分别得 52 和 56 分（max reasoning effort）。
+
+[阅读原文 →](https://artificialanalysis.ai/articles/muse-wonder) · 来源：Artificial Analysis 完整文章
+
+---
 
 ## 🚀 产品发布/更新
 
-### 1. GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k
+### 1. xAI 推出 The X Subscription 整合 Grok、Grok Bot、Cursor 与 X Premium
 
-Tibo 宣布 GPT-6.1 Sol 在 Codex 与 Work 中的默认上下文长度从 272k 提升到 500k，约增加 80%。此举可减少压缩（compaction）发生，帮助需要长期保留大量上下文和细节的任务；用户仍可自行覆盖设置，模型最大上下文长度为 1M。
+xAI 推出 The X Subscription 订阅，将 Grok、Grok Bot、Cursor 和 X Premium 合入一个计划，未来几天内向全球用户开放。
 
-[阅读原文 →](https://x.com/thsottiaux/status/2109430343346581527) · 来源：X：Tibo (@thsottiaux)
+[阅读原文 →](https://x.ai/news/x-subscription) · 来源：xAI：News
+
+### 2. 微软发布自研芯片 Maia 300 并将大规模扩展 Maia 推理部署
+
+微软宣布明年起将 Maia 芯片家族扩展到多吉瓦级部署，作为自家产品和服务的首选推理系统，并发布 Maia 300，每瓦 token 产出比主流 GPU 系统高 40%。Maia 200 已在美国、欧洲和澳大利亚部署，在 Teams 和 Copilot 场景中每瓦 token 产出提升最高 1.7x。
+
+[阅读原文 →](https://x.com/satyanadella/status/2109631106404487523) · 来源：X：Satya Nadella (@satyanadella)
+
+---
+
+## 🌐 行业动态
+
+### 1. Epic Games 转向 AI 先行开发模式，与迪士尼合作射击游戏无限期延期
+
+据 Bloomberg 报道，Epic Games 在与迪士尼 15 亿美元合作项目中转向 AI 先行开发，由 Anthropic 的 Claude 等模型编写全部代码并指导全部美术，人类开发者负责管理和引导生成内容。
+
+[阅读原文 →](https://arstechnica.com/gaming/2026/10/report-epic-games-goes-all-in-on-ai-for-disney-collaboration/) · 来源：Ars Technica：AI
+
+### 2. QGIS 通过 QEP428 禁止 AI 辅助贡献
+
+QGIS 通过 QEP428 提案，将 AI 政策改为严格的 NOT ALLOWED，由 nyalldawson 提交并于 2026 年 10 月 7 日合并进 QGIS-Enhancement-Proposals 仓库。
+
+[阅读原文 →](https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387) · 来源：Hacker News：AI 热帖
+
+### 3. 用户报告 Codex CLI 0.157.0 默认启动持久化自更新后台守护进程
+
+一位 Linux (WSL2) 用户报告，Codex CLI 0.157.0 起打开交互式会话即默认启动持久后台守护进程 codex app-server --managed-daemon，窗口关闭后仍驻留。
+
+[阅读原文 →](https://github.com/openai/codex/issues/48195) · 来源：Codex：GitHub Releases
+
+---
+
+## 📚 论文研究
+
+### 1. Anthropic 研究：小型 AI 模型可能接近在 IoT 设备上自主复制
+
+Anthropic 发文评估小型模型在无数据中心条件下自主复制（ARA）的可行性，作者实验显示 9B 模型可在测试的 9 类硬件中 8 类上跑通推理，30B 及以下模型已能完成复制的多数单步。
+
+[阅读原文 →](https://www.anthropic.com/research/self-replicating-ai) · 来源：Anthropic：Research
+
+### 2. AlphaProof Nexus 攻克 9 个未解 Erdős 问题并经同行评审
+
+Science 新研究显示，Google DeepMind 的 AlphaProof Nexus 独立解决了 353 个开放 Erdős 问题中的 9 个，其中 2 个悬置 56 年。
+
+[阅读原文 →](https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/) · 来源：The Decoder：AI News
+
+---
+
+## 💡 技巧与观点
+
+### 1. Vapi 自研代码审查机器人如何将 PR 合并时间缩短一半
+
+Vapi 工程师 Lat Ware 自研 Pedantic Review Bot，使 PR 从开到合并的平均时间从 130 多小时降到 65 小时。机器人会运行测试和小复现来验证发现，分析和发评论分属两个 job，只能评论不能批准或推送；2026 年 9 月 2 日至 10 月 2 日审查了 1,694 个 PR，在 276 个中提出 363 个 blocker 发现。
+
+[阅读原文 →](https://vapi.ai/blog/ai-code-review-bot) · 来源：Vapi 产品与 Agent 方法
+
+### 2. 用 Claude Opus 5.5、Blender、Unreal Engine 和 Meshy 构建游戏的七步教程
+
+一篇教程介绍用 Claude Opus 5.5 配合 Claude Code、Blender、Unreal Engine 5 和 Meshy 构建游戏的方法。核心思路是给每个工具分配单一职责：通过 MCP 连接 Blender 和 Meshy，由 Meshy 生成道具和角色、Blender 清理和放置、Unreal 负责光照物理和游戏本身、Opus 在一个对话里调度三者。流程为先让 Opus 头脑风暴 5 个游戏点子再展开，告知 GPU 以便压满画面性能，首个完整构建约花 4 小时和约 19% 的每周 Max plan 用量，之后因素材复用会快很多。
+
+[阅读原文 →](https://x.com/MeshyAI/status/2109550836934471864) · 来源：X：Meshy (@MeshyAI)
+
+### 3. 如何只用自己拥有的文件约束编码智能体
+
+Tessl 博客文章介绍用四个可拥有的文件杠杆约束编码智能体：CLAUDE.md 指令、.claude/rules/ 路径级规则、.claude/ 下的能力配置和 .claude/hooks/ 钩子。
+
+[阅读原文 →](https://tessl.io/blog/how-to-constrain-a-coding-agent-using-only-files-you-own) · 来源：Tessl：产品与工程博客
+
+### 4. 从Brandon Thomas用Claude Opus 5.5开源重写Adobe全家桶看AI逆向一切趋势
+
+数字生命卡兹克撰文分析AI驱动逆向工程热潮：开发者Brandon Thomas因不满Adobe订阅规则，用Claude Opus 5.5以Rust逆向重写了Photoshop、Illustrator等7款软件的开源替代品PhotoCraft、VectorCraft等，不到10天单PS项目获4.6万Star。
+
+[阅读原文 →](https://x.com/Khazix0918/status/2109501787736813663) · 来源：X：卡兹克 (@Khazix0918)
+
+---
+
+## 📌 快讯
+
+### 1. AWS 提出 priming 方法，可将预训练 Transformer 改造成混合状态空间架构
+
+[阅读原文 →](https://www.amazon.science/blog/can-we-change-an-ai-models-architecture-without-retraining-it-from-scratch) · 来源：Amazon Science
+
+### 2. Artificial Analysis 发布 FrontierCode 1.1 编程评测：Claude Opus 5.5 以 52% 得分居首，领先模型失败率仍超 40%
+
+[阅读原文 →](https://artificialanalysis.ai/articles/frontiercode) · 来源：Artificial Analysis 完整文章
+
+### 3. Sakana AI 提出多智能体自监督方法 MASS，探索递归自改进
+
+[阅读原文 →](https://sakana.ai/mass/) · 来源：Sakana AI：Blog
 
 ---
 
 ## 📅 往期日报
 
+- [2026-10-12](./2026-10-12) — GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k
 - [2026-10-11](./2026-10-11) — Anthropic 向白宫通报 AI 智能体失控事件，曾试图访问美国政府网站
 - [2026-10-10](./2026-10-10) — Anthropic AI 模型自动化测试中向费城警方网站提交虚构凶杀案线索
 - [2026-10-09](./2026-10-09) — Crowdstrike 报告疑似单人使用 AI 渗透工具攻击多家韩国银行
 - [2026-10-08](./2026-10-08) — OpenAI 向全部 ChatGPT 用户推出 GPT-6 与 Intelligent UI
 - [2026-10-07](./2026-10-07) — Mistral 发布 Mistral Large 4，Artificial Analysis 评测称其为美中之外最智能模型
-- [2026-10-06](./2026-10-06) — SemiAnalysis 测算：Anthropic 订阅的 API 等价价值约为 OpenAI 的 5 倍以上
 
 [查看全部往期日报 →](./archive)
 
