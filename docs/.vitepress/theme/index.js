@@ -16,7 +16,6 @@ import VideoBoard from './components/VideoBoard.vue'
 import ContentReviewNote from './components/ContentReviewNote.vue'
 import ArticleMeta from './components/ArticleMeta.vue'
 import ModuleArticles from './components/ModuleArticles.vue'
-import { initLearningProgress, recordVisit } from './learningProgress.js'
 import './custom.css'
 import './components/cases.css'
 
@@ -33,7 +32,7 @@ export default {
   },
   setup() {
     const route = useRoute()
-    const { frontmatter, title } = useData()
+    const { frontmatter } = useData()
 
     // 全站只建一个放大实例，切页时换绑当前页图片（以前每次切页新建一个、从不释放）
     let zoom = null
@@ -42,8 +41,6 @@ export default {
       zoom.detach()
       zoom.attach('.vp-doc :not(a) > img:not(.no-zoom)')
     }
-
-    const trackProgress = () => recordVisit(route.path.replace(/\.html$/, ''), frontmatter.value.title || title.value)
 
     // 文章页(带侧栏)在桌面端隐藏顶部导航栏,导航统一走侧栏;
     // 首页等无侧栏页面保持原样。CSS 按 html.kb-docs 生效
@@ -57,15 +54,12 @@ export default {
     onMounted(() => {
       initZoom()
       updateDocsClass()
-      initLearningProgress()
-      trackProgress()
     })
     watch(
       () => route.path,
       () => nextTick(() => {
         initZoom()
         updateDocsClass()
-        trackProgress()
         if (typeof window !== 'undefined' && window._hmt) {
           window._hmt.push(['_trackPageview', window.location.pathname])
         }

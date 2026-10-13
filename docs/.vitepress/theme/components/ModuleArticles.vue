@@ -1,13 +1,13 @@
 <template>
   <div class="kb-module-articles">
     <p v-if="total" class="kb-module-progress">
-      共 {{ total }} 篇<template v-if="readCount"> · 你已读 {{ readCount }} 篇</template>
+      共 {{ total }} 篇
     </p>
     <template v-for="group in groups" :key="group.title || 'all'">
       <h3 v-if="group.title" class="kb-module-group">{{ group.title }}</h3>
       <ol class="kb-module-list">
         <li v-for="(a, i) in group.items" :key="a.link">
-          <a :href="a.link" class="kb-module-card" :class="{ read: isRead(a.link) }">
+          <a :href="a.link" class="kb-module-card">
             <span class="kb-module-head">
               <span v-if="startHere && group === groups[0] && i === 0" class="kb-module-start">从这篇开始</span>
               <span class="kb-module-title">{{ a.title }}</span>
@@ -16,7 +16,6 @@
             <span class="kb-module-foot">
               <span v-if="showDate && a.date">{{ a.date }}</span>
               <span v-if="a.minutes">约 {{ a.minutes }} 分钟</span>
-              <span v-if="isRead(a.link)" class="kb-module-read">✓ 已读</span>
             </span>
           </a>
         </li>
@@ -28,10 +27,9 @@
 <script setup>
 // 模块首页的文章卡片列表：文章清单直接取侧栏配置（与侧栏永远一致），
 // 说明和阅读时长来自 articles.data.js。手机上没有左侧目录，这里就是入口。
-import { computed, onMounted } from 'vue'
+import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { data as articles } from '../articles.data.js'
-import { readPaths, initLearningProgress } from '../learningProgress.js'
 
 const props = defineProps({
   // 侧栏里该模块的 link，如 '/stage-1/'、'/frontier/'
@@ -69,10 +67,6 @@ const groups = computed(() => {
 })
 
 const total = computed(() => groups.value.reduce((n, g) => n + g.items.length, 0))
-const isRead = link => Boolean(readPaths.value[link])
-const readCount = computed(() => groups.value.reduce((n, g) => n + g.items.filter(a => isRead(a.link)).length, 0))
-
-onMounted(initLearningProgress)
 </script>
 
 <style scoped>
@@ -153,14 +147,5 @@ onMounted(initLearningProgress)
   gap: 12px;
   font-size: 12px;
   color: var(--kb-text-3);
-}
-
-.kb-module-read {
-  color: var(--kb-brand);
-  font-weight: 600;
-}
-
-.kb-module-card.read .kb-module-title {
-  color: var(--kb-text-2);
 }
 </style>
