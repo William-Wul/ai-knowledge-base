@@ -110,8 +110,8 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="12" width="3" height="4" rx="1"/><rect x="12" y="8" width="3" height="8" rx="1"/><rect x="17" y="4" width="3" height="12" rx="1"/></svg>
               </div>
               <div class="tool-content">
-                <div class="tool-title">AI 能力自测</div>
-                <div class="tool-desc">12 道场景题，测出你的 AI 使用水平</div>
+                <div class="tool-title">AI 协作力测评</div>
+                <div class="tool-desc">测出你的 AI 协作类型和认知盲区</div>
               </div>
               <svg class="tool-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>

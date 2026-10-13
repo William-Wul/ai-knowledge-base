@@ -225,7 +225,7 @@ const siteSidebar = [
         text: 'AI 学习小工具',
         collapsed: true,
         items: [
-          { text: '📝 AI 能力自测', link: '/exams/', collapsed: true, items: autoItems('exams', []) },
+          { text: '📝 AI 协作力测评', link: '/exams/', collapsed: true, items: autoItems('exams', []) },
           { text: '📓 AI 学习词汇本', link: '/vocab-book' },
         ],
       },

@@ -39,8 +39,8 @@ let io = null
 
 const zones = [
   {
-    title: 'AI 能力自测',
-    desc: '12 道场景题，测出你现在的 AI 使用水平和下一步该学什么',
+    title: 'AI 协作力测评',
+    desc: '测出你的 AI 协作类型、认知盲区，以及下一步该练什么',
     link: '/exams/',
     icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><rect x="7" y="12" width="3" height="4" rx="1"/><rect x="12" y="8" width="3" height="8" rx="1"/><rect x="17" y="4" width="3" height="12" rx="1"/></svg>`,
   },

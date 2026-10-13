@@ -5,7 +5,7 @@ export const SITE_NAV = [
   { text: 'AI 进阶实践', link: '/stage-4/' },
   { text: 'AI 实践案例集', link: '/cases/' },
   { text: 'AI 视频课', link: '/videos/' },
-  { text: 'AI 能力自测', link: '/exams/' },
+  { text: 'AI 协作力测评', link: '/exams/' },
   { text: 'AI 学习词汇本', link: '/vocab-book' },
 ]
 
