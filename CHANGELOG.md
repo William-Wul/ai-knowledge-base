@@ -2,6 +2,19 @@
 
 ---
 
+## v1.79 · 2026-10-13
+
+### 体验优化批次（手机端、深色模式、学习路径、加载速度）
+
+- 修复：手机汉堡菜单被 `.VPNav` backdrop-filter 困住（≤767px 去掉模糊）；深色模式内联图示改为最外层整体 invert+hue-rotate，替代旧的逐层 brightness 滤镜；PasswordGate 404 静默跳首页改为中文 notFound 页；head 内联脚本加 `kb-authed` 消除已登录密码层闪现。
+- 导航：`transformPageData` 按侧栏板块分段计算 prev/next，日报单日页按日期串联；新增 `/hot/archive`（hotArchive.data.js）；AI 前沿侧栏按月分组；排行榜外链移入榜单正文。
+- 学习路径：ModuleArticles（侧栏驱动的模块首页文章卡片 + articles.data.js）、learningProgress.js（已读 ✓、继续上次阅读，localStorage）、首页新手三步、ArticleMeta（发布日期 + 字号三档）。
+- 性能：markdown 图片懒加载；38 张大图压缩、2 个 GIF 与 4 张照片类 PNG 转 WebP（约 25MB）；搜索 `_render` 排除案例详情/往期日报/搬家页，索引 6.2MB→1.2MB；字体非阻塞加载并去掉 Noto Sans SC。
+- 组件：案例复制反馈、手机紧凑卡片、海外视频提示与 15s 卡顿兜底、滑动切换、详情计数口径；词汇本 `#词条` 深链与手机自适应高度；自测分享图内置浏览器长按保存浮层；Bilibili 按钮化 + autoplay + 高清外链；无障碍若干。
+- 未做：GIF pcb-demo/tcell-demo 未转（WebP 收益不足）；预览「打开原帖」需在生成脚本加 sourceUrl 字段。
+
+---
+
 ## v1.78 · 2026-10-13
 
 ### AI 前沿新增《AI逆向复刻一切软件，解读爆火的REA》
