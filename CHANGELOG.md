@@ -2,6 +2,15 @@
 
 ---
 
+## v1.78 · 2026-10-13
+
+### AI 前沿新增《AI逆向复刻一切软件，解读爆火的REA》
+
+- 新增 `docs/frontier/rea-reverse-engineering.md`，基于素材 A270–A273，并对照 REA 官方 README、官网 DX-Ball 案例页与 GitHub 接口核实星标数、案例验证口径和使用声明。
+- 配图 10 张（`docs/public/images/frontier/2026-10-13/`）+ 2 个 HTML 图示；纠正传播中“作者在逆向 Office”的误读。
+
+---
+
 ## v1.77 · 2026-10-13
 
 ### Opus 5.5案例集扩至50例
