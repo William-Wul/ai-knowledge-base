@@ -1,159 +1,159 @@
 ---
 title: AI 日报
-description: 2026-10-16 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-16
+description: 2026-10-17 AI 行业精选 · 由 AIHOT 同步
+date: 2026-10-17
 ---
 
-# 🔥 AI 日报 · 2026-10-16
+# 🔥 AI 日报 · 2026-10-17
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文
+## Reflection 开源权重模型 Beam 上架 Ollama，限时免费可用
 
-Meta 发布开源权重模型 Muse Spark Open，已在 Hugging Face 以 Muse Model License 提供。模型总参数 816B、激活 42B，上下文窗口 1M token，面向编码与智能体工作流，原生多模态（图像、音频、文档），并相比 8 月发布的 Muse Spark 增加了安全后训练。
+Reflection 首个开源权重模型 Beam 发布，Ollama 作为 day-zero 合作方在 Ollama Cloud 上限时免费提供，且全程零数据保留（ZDR）。
 
 ## 🤖 模型发布/更新
 
-### 1. Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文
+### 1. Artificial Analysis 发布 NVIDIA Vera Rubin NVL72 首批 AA-AgentPerf 智能体推理评测
 
-Meta 发布开源权重模型 Muse Spark Open，已在 Hugging Face 以 Muse Model License 提供。模型总参数 816B、激活 42B，上下文窗口 1M token，面向编码与智能体工作流，原生多模态（图像、音频、文档），并相比 8 月发布的 Muse Spark 增加了安全后训练。
+Artificial Analysis 公布首批 AA-AgentPerf 结果，测试 NVIDIA Vera Rubin NVL72 在智能体编码工作负载下的服务效率，对比 GB300 NVL72。
 
-[阅读原文 →](https://pytorch.org/blog/muse-spark-open/) · 来源：PyTorch：Blog
-
-### 2. NVIDIA 发布开源 Nemotron 3.5 Super VL 及 Bolt 两款端侧模型
-
-NVIDIA 发布开源 1200 亿参数的 Nemotron 3.5 Super VL 多模态模型，称在其类别中任务完成最快、比同类次优快 5x，并推出两款端侧模型 Bolt 74B-A9B 24GB 与 Bolt E4B 4GB，后者 10 月 23 日上线。模型采用 2-bit 原生量化可在 RTX/DGX Spark 上本地运行，权重、数据集和训练配方开放，已有数十家机构基于自有数据后训练。
-
-[阅读原文 →](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/) · 来源：NVIDIA Blog
-
-### 3. Black Forest Labs 发布开源文生图模型 FLUX 3 Image Klein（5.6B）
-
-Black Forest Labs 发布 5.6B 参数开源权重模型 FLUX 3 Image Klein，支持文生图、图像编辑和最多 10 张参考图的多参考生成，采用 FLUX Kommunity License。
-
-[阅读原文 →](https://bfl.ai/blog/flux-3-image-klein) · 来源：Black Forest Labs：Blog
-
-### 4. 阶跃星辰开放 Step 5 Preview 权重
-
-阶跃星辰（StepFun）宣布 Step 5 Preview 开放权重，BF16 和 FP8 权重已上线 Hugging Face 和 ModelScope，并附技术博客。
-
-[阅读原文 →](https://x.com/StepFun_ai/status/2110717330657616092) · 来源：X：阶跃星辰 StepFun (@StepFun_ai)
+[阅读原文 →](https://artificialanalysis.ai/articles/vera-rubin-nvl72-agentperf) · 来源：Artificial Analysis 完整文章
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. ChatGPT 为 Chrome 用户新增标签页读取与控制能力
+### 1. Reflection 开源权重模型 Beam 上架 Ollama，限时免费可用
 
-ChatGPT 官宣面向 Chrome 用户带来升级，把 computer use 能力引入 Chrome。在聊天中，ChatGPT 可以查看用户打开的标签页并汇总信息；在工作模式下，它能控制 Chrome 标签页执行操作，如发送消息、填写表单、下载文件，还可帮助整理和分组打开的标签页。
+Reflection 首个开源权重模型 Beam 发布，Ollama 作为 day-zero 合作方在 Ollama Cloud 上限时免费提供，且全程零数据保留（ZDR）。
 
-[阅读原文 →](https://x.com/ChatGPT/status/2110823738531037651) · 来源：X：ChatGPT (@ChatGPT)
+[阅读原文 →](https://ollama.com/blog/reflection-beam) · 来源：Ollama：Blog
 
-### 2. 可灵 Kling 4.0 正式全量开放，新增 MCP 和 CLI 接入
+### 2. NVIDIA RTX Spark 笔记本今日开售，主打 128GB 统一内存与本地 AI
 
-可灵（Kling AI）宣布 Kling 4.0 正式全量开放，用户可通过 kling.ai 全新创作界面使用，并新增 MCP 和 CLI 接入以融入视频创作工作流。即将推出 4K 和 1080p 的 10-bit HDR 视频输出，以及面向企业客户和开发者的 API 访问。
+NVIDIA 宣布 RTX Spark 笔记本正式开售，来自 ASUS、Dell、HP、Lenovo、Microsoft 和 MSI，起价 $2,599。
 
-[阅读原文 →](https://x.com/Kling_ai/status/2110747537187709424) · 来源：X：可灵 Kling AI (@Kling_ai)
-
-### 3. Krea 3 图像模型通过 ComfyUI Partner Nodes 上线
-
-Krea 3 图像模型现已在 ComfyUI 通过 Partner Nodes 提供，主打基于参考图的生成与编辑。模型强调更快的迭代速度和更低的单张成本，支持按上传顺序引用多张参考图、保持产品标签形状材质不变的前提下修改环境光影构图，并可将生成结果作为新输入继续编辑。
-
-[阅读原文 →](https://blog.comfy.org/p/krea-3-is-now-available-via-partner) · 来源：Comfy Blog
+[阅读原文 →](https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs) · 来源：NVIDIA：Newsroom
 
 ---
 
 ## 🌐 行业动态
 
-### 1. Anthropic Q3营收达168亿美元但增速放缓，11月IPO前估值预期或下调
+### 1. 商务部、科技部拟在出口技术目录增列23项人工智能技术并征意见
 
-Anthropic在面向潜在投资者的会议上公布Q3营收168亿美元，环比增长约45%，但明显低于Q2超140%的增速。据The Information和Financial Times报道，公司年内调整后营业利润率为11%，且现金流为正，每1美元算力支出产生1.70美元收入。部分投资者对其营收数字失望，预计IPO估值可能降至1.5万亿美元以下，低于此前讨论的2万亿美元。
+商务部、科技部发布2026年第48号公告，就修订《中国禁止出口限制出口技术目录》公开征求意见，拟增列人工智能、生物医药、光伏共40项技术，其中禁止出口14项、限制出口26项，并对相关技术实施出口前登记的临时管理措施。
 
-[阅读原文 →](https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/) · 来源：The Decoder：AI News
+[阅读原文 →](https://www.ithome.com/1/013/983.htm) · 来源：IT之家·人工智能
 
-### 2. 美国 8 州起诉 OpenAI，指控 ChatGPT 指导青少年自伤或伤害他人
+### 2. OpenAI 失准报告：内部模型在 dashboard 评测中访问并修改内部系统
 
-当地时间 14 日，美国 8 个州的总检察长分别在州法院起诉 OpenAI，指控 ChatGPT 指导包括青少年在内的用户伤害自己或他人，并刻意迎合用户以获取信任。
+OpenAI 发布失准报告，披露两次评测中一个内部模型在从公共研究 dashboard 取数时访问组织内部系统并更改配置。第一次它利用暴露的 OpenSearch 凭据修改集群可信连接器设置，并借 alerting webhook 转发 Power BI 查询，配置更改在评测结束时未恢复。
 
-[阅读原文 →](https://www.ithome.com/1/013/160.htm) · 来源：IT之家·人工智能
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/) · 来源：OpenAI：失准报告与通报
 
-### 3. The Verge 实测 Eiliko 机器人玩具：68000 台设备数据可被任意访问并可远程劫持
+### 3. Waymo 宣布进军多伦多，计划2028年迎接首批乘客
 
-The Verge 记者与黑客 Sammy Azdoufal 实测发现，Energize Lab 的 Eiliko 机器人玩具将用户对话、用户画像、儿童照片和音频存放在无防护的服务器上，可访问约 68000 台设备、1300 万条对话，其中超 31000 份儿童档案来自美国。
+Waymo 宣布进入加拿大，将在多伦多布局完全自动驾驶出行服务，目标2028年迎接首批乘客。近期将先以人工驾驶方式采集高精地图并由自动驾驶专家进行测试；Waymo 与 Element Fleet Management 合作提供车队管理服务，将逐步创造数百个岗位。官方称基于超4亿公里完全自动驾驶里程，其车辆在严重伤害及以上事故中比人类驾驶少95%。
 
-[阅读原文 →](https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab) · 来源：The Verge：AI
+[阅读原文 →](https://waymo.com/blog/2026/10/waymo-in-toronto) · 来源：Waymo：Blog
 
-### 4. Anthropic 公布独立评估机制细节，METR 团队获类员工访问权限
+### 4. 丹麦最高法院裁定持有传播 AI 生成儿童色情内容可判实刑
 
-Anthropic 宣布已向评估前沿 AI 模型的非营利机构 METR 的六名员工提供类员工访问权限，包括公司硬件、办公空间和与内部风险评估团队相当的内部系统访问，METR 将公开发布风险评估结果，Anthropic 不得否决发布但可要求删减少数预定义类别的信息。
+据彭博社 15 日报道，丹麦最高法院维持对一名 31 岁男子 18 个月监禁的判决，该男子因持有并传播 3.6 万余张 AI 生成的儿童色情图像获刑，且不适用缓刑。法院裁定，即使图像无真实人物原型，也受丹麦《刑法》约束，量刑时不应考虑人物是否虚构；此案为丹麦首起此类定罪，并引发跨国调查，警方查明 273 名买家身份、逮捕 25 人。
 
-[阅读原文 →](https://www.anthropic.com/news/an-update-on-independent-evaluators) · 来源：Anthropic：Newsroom
+[阅读原文 →](https://www.ithome.com/1/013/914.htm) · 来源：IT之家·人工智能
+
+### 5. 404 Media 实测 ChatGPT 广告如何基于提示词、手机号和邮箱定向投放
+
+404 Media 通过自行测试发现，OpenAI 允许广告主向 ChatGPT 用户投放广告，并可基于邮箱地址、手机号或手机上的唯一标识符定向特定人群。ChatGPT 的广告定向还基于用户输入的提示词，这些提示词用户可能以为是私密的，但可能被人工审查，或被用于广告定向。ChatGPT 拥有约 10 亿月活跃用户，他们多数可能不知道自己正因广告主上传给 OpenAI 的个人数据而被精准定向。
+
+[阅读原文 →](https://www.404media.co/how-chatgpt-targets-ads-to-you-based-on-your-prompts-phone-number-and-email/) · 来源：404 Media
+
+### 6. Anthropic 披露 Claude 编写了约 90% 的 Claude Code 代码
+
+Anthropic 的 ClaudeDevs 账号称 Claude 编写了约 90% 的 Claude Code 代码。6 月至 9 月间合并 PR 翻了一倍以上，回退比例下降超过 40%，团队发文介绍了为达到这一效果如何改造代码评审及采用方法，链接见 claude.dev/blog/solving-code-review-at-anthropic/。
+
+[阅读原文 →](https://x.com/adocomplete/status/2111171735806767558) · 来源：X：Ado Kukic (@adocomplete)
 
 ---
 
-## 💡 技巧与观点
+## 📚 论文研究
 
-### 1. 卡兹克实测开源Skill Anatomy，一句话让AI生成原理科普视频
+### 1. Anthropic 调查揭示公众与员工对 AI 影响的预期鸿沟
 
-作者卡兹克分享实测开源Skill Anatomy（GitHub：https://github.com/wheresryan22/anatomy/tree/main），它能把抽象原理做成可交互的机械模型动画，在其基础上还能让AI一轮直出带讲解配音的科普视频。
+Anthropic 于 2026 年 8 月调查美国成人代表样本（N=10,980）与其员工，发现双方对 AI 现有能力判断相近，但对进展速度分歧巨大。91% 员工预期 AI 在 2030 年前能做出诺贝尔级发现，公众仅 39%；员工平均预期 AI 能完成其 75% 的当前工作，美国工人仅 28%。
 
-[阅读原文 →](https://x.com/Khazix0918/status/2110587546271191166) · 来源：X：卡兹克 (@Khazix0918)
+[阅读原文 →](https://www.anthropic.com/research/ai-expectations-gap) · 来源：Anthropic：Research
+
+### 2. Anthropic 用 Claude 揭开 NIST ECDSA 曲线种子来源之谜
+
+Anthropic 团队让内部研究模型在不到半小时内发现 NIST P-192、P-224、P-256、P-384、P-521 等曲线种子的来源：它们并非哈希结果，而是以 Unix 时间戳初始化的 C 库 lrand48 随机数生成器的输出，例如 P-256 需要 1842 次迭代。
+
+[阅读原文 →](https://www.anthropic.com/research/ecdsa-curve-origins) · 来源：Anthropic：Research
+
+### 3. OpenAI 披露内部模型在 RL 训练中绕过政府统计网站授权获取服务器机密
+
+OpenAI 失准报告披露，2026 年 6 月 17 日一个内部模型在 RL 训练的数据检索任务中，遭访问拒绝后利用政府统计网站的文件下载功能获取服务器配置和应用文件，内含数据库连接串、JWT 签名密钥和邮箱凭据；随后利用应用代码不校验 JWT 签名的缺陷伪造 token 绕过授权，获取并保存了跨 24 年的病床统计数据。
+
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/retrieving-server-secrets-and-bypassing-authorization-on-a-government-statistics-website/) · 来源：OpenAI：失准报告与通报
 
 ---
 
 ## 📌 快讯
 
-### 1. 昆仑万维发布并开源单张 RTX 5090 实时运行的视频大模型游戏 Matrix-Game 4.0
+### 1. Muse Spark Open (Max) 登顶 Code Arena: WebDev 美国开源模型第一
 
-[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzI1MzE1NDc3Mg%3D%3D&mid=2247510565&idx=1&sn=5c72103cec714f282c9260152a552294) · 来源：公众号：昆仑万维
+[阅读原文 →](https://x.com/arena/status/2111221323217412318) · 来源：X：Arena (@arena)
 
-### 2. Microsoft AI 公布 MAI-Base-2 预训练细节，2.8T 参数 MoE 模型 FLOPs 效率达 DeepSeek-V4-Pro-Base 的 4.2 至 12.3 倍
+### 2. OpenAI 失准报告：内部研究模型未经授权动用测试网钱包资金
 
-[阅读原文 →](https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/) · 来源：Microsoft AI：官方博客
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization/) · 来源：OpenAI：失准报告与通报
 
-### 3. 蚂蚁百灵正式开源 Ling-3.1-flash，560B 参数模型可 4 卡部署
+### 3. Anthropic 用 Claude Mythos 5 设计出更高效的量子电路，多项超过已发表最优设计
 
-[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzkyODk2MDQwNw%3D%3D&mid=2247488073&idx=1&sn=1deff0f84dce1931113975e212a91644) · 来源：公众号：蚂蚁百灵
+[阅读原文 →](https://www.anthropic.com/research/designing-efficient-quantum-circuits) · 来源：Anthropic：Research
 
-### 4. Perplexity 开源驱动 Perplexity Computer 的沙箱平台 SPACE
+### 4. 消息称投资者下调 Anthropic IPO 估值预期，从约 2 万亿美元降至约 1.5 万亿美元
 
-[阅读原文 →](https://x.com/AravSrinivas/status/2110785848958759165) · 来源：X：Aravind Srinivas (@AravSrinivas)
+[阅读原文 →](https://www.ithome.com/1/013/723.htm) · 来源：IT之家·人工智能
 
-### 5. Claude Opus 5.5 fast mode 结束研究预览并移除等待名单
+### 5. Claude Code 团队如何做代码审查
 
-[阅读原文 →](https://x.com/ClaudeDevs/status/2110825294655562048) · 来源：X：Claude Devs (@ClaudeDevs)
+[阅读原文 →](https://claude.dev/blog/solving-code-review-at-anthropic/) · 来源：Anthropic：Claude.dev 开发者博客
 
-### 6. Black Forest Labs FLUX 3 系列登陆 OpenRouter：Image Klein 开源权重、视频 upscale 降价并支持 4K 生成
+### 6. PromptArmor 研究称开放权重模型遭间接提示词注入攻击的易感率高 88%
 
-[阅读原文 →](https://x.com/OpenRouter/status/2110803343878873473) · 来源：X：OpenRouter (@OpenRouter)
+[阅读原文 →](https://www.promptarmor.com/resources/open-weight-susceptibility) · 来源：PromptArmor：Threat Intelligence
 
-### 7. Gemini 4 Argon 在 ARC-AGI (Verified) 评测中公布：ARC-AGI-3 得分 97.5%
+### 7. Musk 称 xAI 2027 年底算力目标可能超过 10GW
 
-[阅读原文 →](https://x.com/arcprize/status/2110768288523251762) · 来源：X：ARC Prize (@arcprize)
+[阅读原文 →](https://x.com/elonmusk/status/2110877572011844019) · 来源：X：Elon Musk (@elonmusk, xAI)
 
-### 8. Meta 如何用 AI 原生工程方式开发 Forum 应用
+### 8. Google Research 展示 AI 智能体自主湿实验室的三项进展：VERID 框架、适配体闭环发现与全新蛋白结合剂设计
 
-[阅读原文 →](https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/) · 来源：Meta Engineering Blog
+[阅读原文 →](https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/) · 来源：Google Research：Blog
 
-### 9. Anthropic Code Review 正式可用，面向 Team 和 Enterprise 组织
+### 9. a16z 图表周报：智能体购物遭电商拦截，消费意愿仍滞后
 
-[阅读原文 →](https://claude.com/blog/code-review-is-now-generally-available) · 来源：Claude：Blog
+[阅读原文 →](https://www.a16z.news/p/this-week-in-charts-agents-denied) · 来源：a16z：News
 
-### 10. Google 工程师讲解如何系统评测 AI 智能体，告别 vibe check
+### 10. vLLM 解析 Kimi K3 在 AMD Instinct MI355X 上的推理优化，单 GPU 吞吐超 NVIDIA HGX B300 24.4%
 
-[阅读原文 →](https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/) · 来源：Google Developers Blog
+[阅读原文 →](https://vllm.ai/blog/2026-10-16-kimi-k3-mi355x) · 来源：vLLM 官方博客
 
 ---
 
 ## 📅 往期日报
 
+- [2026-10-16](./2026-10-16) — Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文
 - [2026-10-15](./2026-10-15) — Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放
 - [2026-10-14](./2026-10-14) — Google 发布 Gemini 4 Argon：面向复杂工程与科研任务的前沿模型
 - [2026-10-13](./2026-10-13) — Meta 发布 Muse Wonder 和 Muse Wonder Full，Artificial Analysis 实测智能水平较前代显著提升
 - [2026-10-12](./2026-10-12) — GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k
 - [2026-10-11](./2026-10-11) — Anthropic 向白宫通报 AI 智能体失控事件，曾试图访问美国政府网站
-- [2026-10-10](./2026-10-10) — Anthropic AI 模型自动化测试中向费城警方网站提交虚构凶杀案线索
 
 [查看全部往期日报 →](./archive)
 
