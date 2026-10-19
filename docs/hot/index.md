@@ -1,55 +1,61 @@
 ---
 title: AI 日报
-description: 2026-10-18 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-18
+description: 2026-10-19 AI 行业精选 · 由 AIHOT 同步
+date: 2026-10-19
 ---
 
-# 🔥 AI 日报 · 2026-10-18
+# 🔥 AI 日报 · 2026-10-19
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## DeepSeek-V4.1-Flash-1017 发布，多基准成绩提升且 API 价格不变
+## Anthropic 内部研究显示初级技术岗位占比下降，AI Agent 工时达员工六倍
 
-DeepSeek 将 V4.1 Flash 升级至 DeepSeek-V4.1-Flash-1017，网页端与 APP 同步更新，API 调用方式与价格不变，仍用 deepseek-flash 访问。
+Anthropic 发布内部研究称，技术部门初级岗位占比从 2025 年初的 21% 降至 14%，新招初级占比从 27% 降至 9%，空缺初级职位降至 6%，非技术部门基本稳定。
 
-## 🤖 模型发布/更新
+## 🌐 行业动态
 
-### 1. DeepSeek-V4.1-Flash-1017 发布，多基准成绩提升且 API 价格不变
+### 1. Anthropic 内部研究显示初级技术岗位占比下降，AI Agent 工时达员工六倍
 
-DeepSeek 将 V4.1 Flash 升级至 DeepSeek-V4.1-Flash-1017，网页端与 APP 同步更新，API 调用方式与价格不变，仍用 deepseek-flash 访问。
+Anthropic 发布内部研究称，技术部门初级岗位占比从 2025 年初的 21% 降至 14%，新招初级占比从 27% 降至 9%，空缺初级职位降至 6%，非技术部门基本稳定。
 
-[阅读原文 →](https://api-docs.deepseek.com/zh-cn/updates/#deepseek-v41-flash-1017-更新) · 来源：DeepSeek：API 更新日志
+[阅读原文 →](https://the-decoder.com/anthropic-has-nearly-stopped-hiring-junior-staff-because-ai-agents-now-work-six-times-as-many-hours/) · 来源：The Decoder：AI News
+
+### 2. 德国两家法院先后裁定 Google 须为其 AI Overview 内容负责
+
+慕尼黑地区法院 I 五月底裁定 Google 的 AI 搜索摘要属于公司自己的陈述而非中立转述，Google 须为错误内容担责；Google 公开宣布上诉后实际以和解结案，未获上级法院裁决。
+
+[阅读原文 →](https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/) · 来源：The Decoder：AI News
 
 ---
 
-## 🚀 产品发布/更新
+## 💡 技巧与观点
 
-### 1. DeepSeek 开放自研搜索 API
+### 1. Browser Use 讲解浏览器智能体的工作原理与使用时机
 
-DeepSeek 开放自研搜索 API，底层由 AI 原生的 DeepSeek 搜索引擎提供，每天稳定处理数亿次搜索请求。该引擎索引全球千亿级网页、支持多语言，并通过识别机制过滤 SEO 作弊、GEO 操纵和低质 AIGC，使用方式见网页搜索与抓取指南。
+Browser Use 发布科普文章，讲解浏览器智能体由模型、harness 和浏览器三部分组成，通过观察页面、选择动作、执行并检查结果的循环完成任务，可通过 DOM、无障碍树或截图读取页面。
 
-[阅读原文 →](https://api-docs.deepseek.com/zh-cn/updates/#开放自研搜索-api) · 来源：DeepSeek：API 更新日志
+[阅读原文 →](https://browser-use.com/posts/browser-agents) · 来源：Browser Use
 
 ---
 
 ## 📌 快讯
 
-### 1. 卡兹克实测37999元RTX Spark轻薄本：一周实现本地Token自由
+### 1. DeepSeek-V4.1-Flash-20261017 登顶 Code Arena: WebDev 开源模型榜首
 
-[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647687354&idx=1&sn=dea0d54dc3b71b361e36199db6cf4a86) · 来源：公众号：数字生命卡兹克
+[阅读原文 →](https://x.com/arena/status/2111894091168682086) · 来源：X：Arena (@arena)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-10-18](./2026-10-18) — DeepSeek-V4.1-Flash-1017 发布，多基准成绩提升且 API 价格不变
 - [2026-10-17](./2026-10-17) — Reflection 开源权重模型 Beam 上架 Ollama，限时免费可用
 - [2026-10-16](./2026-10-16) — Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文
 - [2026-10-15](./2026-10-15) — Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放
 - [2026-10-14](./2026-10-14) — Google 发布 Gemini 4 Argon：面向复杂工程与科研任务的前沿模型
 - [2026-10-13](./2026-10-13) — Meta 发布 Muse Wonder 和 Muse Wonder Full，Artificial Analysis 实测智能水平较前代显著提升
-- [2026-10-12](./2026-10-12) — GPT-6.1 Sol 在 Codex 与 Work 中默认上下文长度提升至 500k
 
 [查看全部往期日报 →](./archive)
 
