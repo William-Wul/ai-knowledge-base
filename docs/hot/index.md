@@ -1,151 +1,159 @@
 ---
 title: AI 日报
-description: 2026-10-20 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-20
+description: 2026-10-21 AI 行业精选 · 由 AIHOT 同步
+date: 2026-10-21
 ---
 
-# 🔥 AI 日报 · 2026-10-20
+# 🔥 AI 日报 · 2026-10-21
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## 美国国土安全部下令所有联邦文职机构移除 DeepSeek 及基于其开发的产品
+## DeepSeek 全面开源内部推理框架 DeepInfer
 
-美国国土安全部依据 2018 年供应链法发布 2026-01 号命令，要求所有联邦文职机构立即停止采购 DeepSeek 及其关联公司产品，并从 IT 系统中移除相关产品，包括使用 DeepSeek 实现开发的第三方产品与服务。
+DeepSeek 宣布将内部推理框架 DeepInfer 全面开源，并同步开源生产级 Token 编解码组件 deepseek-recipe。
 
 ## 🤖 模型发布/更新
 
-### 1. MiniMax 发布 M3.1 Flash，推理提速近三倍、用量成本降低 70%
+### 1. Inception Labs 发布扩散大语言模型 Mercury 3，速度达 1068 tokens/秒
 
-MiniMax 发布 MiniMax M3.1 Flash，匿名模型 Space Bunny 是其早期版本，曾处理超过 200 万亿 token。
+Inception Labs 发布扩散式大语言模型 Mercury 3，称其在多项基准上超过 GPT-6 Luna 和 Claude Haiku 5.5，速度达 1068 tokens/秒，参数量较 Mercury 1 扩大 40 倍以上。
 
-[阅读原文 →](https://www.minimax.io/blog/minimax-m31f) · 来源：MiniMax：Blog
-
-### 2. 蚂蚁 inclusionAI 开源 Ming-3.0-tts 语音合成模型
-
-蚂蚁 inclusionAI 在 GitHub 发布 Ming-3.0-tts，包含 0.5b dense 和基于 Ling V3 的 tiny（7.9B 总参数、1.3B 激活）两个语音生成模型，MIT 协议开源，权重可在 Hugging Face 和 ModelScope 下载。
-
-[阅读原文 →](https://github.com/inclusionAI/Ming-3.0-tts) · 来源：蚂蚁 inclusionAI：GitHub 新仓库
-
-### 3. OpenAI 发布 MultiLangBench 与 COBOL 迁移评测，GPT-6 系列大幅提升低资源编程语言能力
-
-OpenAI 宣布其最新模型在 COBOL、Fortran、Visual Basic 等低资源编程语言上的构建与迁移能力显著提升，并开源评测套件。
-
-[阅读原文 →](https://openai.com/index/low-resource-programming-languages) · 来源：OpenAI：官网动态
-
-### 4. fal 联合 bfl_ai 发布后训练视频模型 FLUX 3 Max
-
-fal 发布与 @bfl_ai 合作的最新后训练视频模型 FLUX 3 Max，在第三方 image-to-video 质量评测中并列第一，生成 10 秒 720/768p 视频约需 12 秒。未来三周该模型 75% 折扣，标注为同质量级别最便宜的前沿视频模型。
-
-[阅读原文 →](https://x.com/fal/status/2112251022047412492) · 来源：X：fal (@fal)
+[阅读原文 →](https://www.inceptionlabs.ai/blog/introducing-mercury-3) · 来源：Inception Labs：Blog
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. Inception 扩散模型 Mercury 3 上线 OpenRouter
+### 1. DeepSeek 全面开源内部推理框架 DeepInfer
 
-Inception 的扩散模型 Mercury 3 上线 OpenRouter，生成速度超 1,000 tok/s，支持 1M 上下文，是 Mercury 2.5 的 4 倍。Inception 报告其在 IFBench、GPQA Diamond 和 SWE-Bench Atlas 上超过 GPT-6 Luna 和 Haiku 5.5；上线期五折，价格 $0.10/M 输入、$0.35/M 输出。
+DeepSeek 宣布将内部推理框架 DeepInfer 全面开源，并同步开源生产级 Token 编解码组件 deepseek-recipe。
 
-[阅读原文 →](https://x.com/OpenRouter/status/2112225779782398131) · 来源：X：OpenRouter (@OpenRouter)
+[阅读原文 →](https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&mid=2247485884&idx=1&sn=d457981abe7db1f1b5d600fc109dc836) · 来源：公众号：DeepSeek
 
-### 2. AWS 发布 TorchNeuron：Trainium 的原生 PyTorch 后端
+### 2. Google 与 Meta 发布 TorchTPU：PyTorch 原生 TPU 后端
 
-AWS 发布 TorchNeuron，一个面向 AWS Trainium 的开源原生 PyTorch 后端，将于 10 月 20 日在 PyTorch Conference North America 上以 Apache 2.0 协议开放公开 Beta，代码位于 github.com/aws-neuron/torch-neuronx。
+Google 与 Meta 发布开源项目 TorchTPU，为 Google TPU 提供原生 PyTorch 后端，模型迁移只需把 .to("cuda") 改为 .to("tpu")。
 
-[阅读原文 →](https://pytorch.org/blog/introducing-torchneuron-native-pytorch-backend-for-aws-trainium/) · 来源：PyTorch：Blog
+[阅读原文 →](https://pytorch.org/blog/introducing-torchtpu/) · 来源：PyTorch：Blog
 
-### 3. Claude 推出 Dashboards 和 Motion 两款新工具并转正 Docs、Slides、Design
+### 3. ChatGPT 推出 Locked Chats，可用 PIN 或生物识别锁定敏感对话
 
-Claude 宣布 Dashboards 和 Motion 进入 beta。Dashboards 可连接数据平台或 CRM，生成随数据变化实时更新的仪表盘，面向所有付费计划；Motion 把报告或图表变成动画讲解短片，以代码方式生成、无视频模型参与，可修改文字、数字和节奏后导出 MP4，面向 Team 和 Enterprise 计划。
+ChatGPT 推出 Locked Chats 功能，把敏感对话从常规历史记录和搜索中移入受保护空间。用户在网页端和桌面端可用 PIN 解锁，支持的移动设备上可用 PIN、Face ID、Touch ID 或设备解锁；锁定会话中的新消息不会更新常规对话使用的记忆。该功能即日起向 Free、Go、Plus、Pro、Business、Enterprise 和 Edu 套餐推出。
 
-[阅读原文 →](https://www.youtube.com/shorts/_Ui4ZkYm4ho) · 来源：Claude：YouTube
+[阅读原文 →](https://x.com/ChatGPT/status/2112597766333673624) · 来源：X：ChatGPT (@ChatGPT)
+
+### 4. Google 发布 vLLM 与 SGLang 的 TorchTPU 原生推理引擎
+
+Google 在 PyTorch 相关公告中推出基于 TorchTPU 的 vLLM 和 SGLang 原生 PyTorch 推理引擎，分别与 Inferact、RadixArk 合作开发，让开发者用熟悉的 PyTorch 工具在 TPU 上部署模型。
+
+[阅读原文 →](https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/) · 来源：Google Developers Blog
 
 ---
 
 ## 🌐 行业动态
 
-### 1. 美国国土安全部下令所有联邦文职机构移除 DeepSeek 及基于其开发的产品
+### 1. 路透：OpenAI 拟在 Anthropic 上市前加速融资约 300 亿美元，估值超 1.4 万亿美元
 
-美国国土安全部依据 2018 年供应链法发布 2026-01 号命令，要求所有联邦文职机构立即停止采购 DeepSeek 及其关联公司产品，并从 IT 系统中移除相关产品，包括使用 DeepSeek 实现开发的第三方产品与服务。
+据 Reuters 报道，OpenAI 正赶在 Anthropic 上市前洽谈融资约 300 亿美元，估值超 1.4 万亿美元，比 3 月的 8520 亿美元至少高 64%。
 
-[阅读原文 →](https://madrobot.blog/2026/10/19/us-bans-deepseek-federal-agencies-dhs-order-remove-third-party/) · 来源：Hacker News：AI 热帖
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2112455383356989598) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
-### 2. 黑客用 AI 智能体入侵 John Deere、SharkNinja 等超 100 家网站
+### 2. SpaceX 财报显示 AI 业务超预期，占收入 52%
 
-AI 安全公司 Norforge 发现一名黑客用开源 AI 平台 Cairn 编排的智能体入侵了超过 100 个网站，据 Reuters 报道受害者包括 John Deere、SharkNinja 和 Cummins。
+SpaceX 发布第三季度监管文件，披露营收 146 亿美元、净利润 44 亿美元，扭转去年同期 10 亿美元亏损。其更名的“Super Intelligence”业务线（含 Cursor、Grok 和 neocloud 算力业务）表现好于投资者预期，AI 目前占公司收入 52%，算力规模达 1.7 GW。
 
-[阅读原文 →](https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins) · 来源：The Verge：AI
+[阅读原文 →](https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/) · 来源：TechCrunch：AI
+
+### 3. 美国陆军网络司令部 ECHOTRIBBLE 项目拟将 AI 智能体变成自主扩散的网络武器
+
+据 The Intercept 获取的文件，美国陆军网络司令部（ARCYBER）正在开发代号 ECHOTRIBBLE 的平台，让 AI 智能体自主在网络间移动、识别并清除威胁目标，之后自毁，且须在极少人工监督下运行。
+
+[阅读原文 →](https://the-decoder.com/army-cyber-commands-echotribble-would-turn-ai-agents-into-self-spreading-cyberweapons/) · 来源：The Decoder：AI News
+
+### 4. Redact 调查：WhatsApp 帮助页面隐藏 LLM 指令，让 AI 不推荐监管机构、不提 GDPR
+
+Redact 发现 WhatsApp 帮助中心页面向 LLM 发送用户看不到的隐藏指令，指示其支持聊天机器人不推荐数据保护监管机构，并在用户提到律师或法律行动后不引用 GDPR、LGPD 或 CCPA。
+
+[阅读原文 →](https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions) · 来源：Hacker News：AI 热帖
+
+### 5. OpenAI 收购药物研发平台 Orchestra Bio 并入 Rosalind 生命科学体系
+
+OpenAI 宣布收购 Orchestra Bio，一个帮助生物制药团队协调药物研发复杂流程的平台，其团队和技术将与 Rosalind 整合。Orchestra 的智能体可帮助团队追踪研究和项目进展，分析如生产批次失败对临床试验时间线的影响并提出应对方案。文中还提到与 Novo Nordisk 和 Moderna 的合作，以及新药研发平均需要 10 到 15 年的背景。
+
+[阅读原文 →](https://openai.com/index/openai-to-acquire-orchestra-bio) · 来源：OpenAI：官网动态
+
+### 6. Anthropic 云合作生变：AWS、Google、微软视其为竞争者
+
+据泄露给华尔街日报的 S-1 文件，Anthropic 难以从 AWS、Google 和 Microsoft 获得足够云算力，这些厂商日益将其视为竞争者而非客户。
+
+[阅读原文 →](https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/) · 来源：TechCrunch：AI
 
 ---
 
-## 💡 技巧与观点
+## 📚 论文研究
 
-### 1. Meta 详解 Prometheus 吉瓦级超集群：一期已完成并用于训练 Muse 模型
+### 1. Anthropic 用 Claude 设计出针对蝎子神经毒素的蛋白质迷你结合剂
 
-Meta 介绍其位于俄亥俄州 New Albany 的吉瓦级超集群 Prometheus，一期已建成并用于训练 Muse 系列基础模型，目标扩展到约 100 万张 GPU。
+Anthropic 让内部研究模型在 Claude Science 中主要自主运行 64 小时，设计针对五种蝎子神经毒素的蛋白质迷你结合剂，共生成 318,484 个设计、筛选出 180 个。
 
-[阅读原文 →](https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/) · 来源：Meta Engineering Blog
-
-### 2. Meta 详解 Thin Orchestrator 模式：让路由少干活提升 AI 智能体可靠性
-
-Meta 工程团队介绍其数据管道智能体采用的瘦编排器（thin orchestrator）模式：一个约 1300 行的编排器只负责路由和可靠性检查，将 20+ 工作流分派给 14 个上下文隔离的专项子智能体，自身不做任何领域推理。
-
-[阅读原文 →](https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/) · 来源：Meta Engineering Blog
-
-### 3. n8n 教程：在 NVIDIA DGX Spark 上离线运行全套 AI 工作流
-
-n8n 博客发布教程，讲解如何在一台 NVIDIA DGX Spark（128GB 统一内存）上部署七个本地模型，通过 LiteLLM 单一 OpenAI 兼容端点驱动 n8n 工作流，全程不调用云 API。
-
-[阅读原文 →](https://blog.n8n.io/n8n-nvidia-dgx-spark/) · 来源：n8n Blog
+[阅读原文 →](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design) · 来源：Anthropic：Research
 
 ---
 
 ## 📌 快讯
 
-### 1. DeepSeek V4.1 Flash 1017 发布，Artificial Analysis 智能指数得分 45 并列开源模型第二
+### 1. Perplexity Computer 现可在 Mac 上完全本地运行，无需云端推理
 
-[阅读原文 →](https://x.com/ArtificialAnlys/status/2112218661432000694) · 来源：X：Artificial Analysis (@ArtificialAnlys)
+[阅读原文 →](https://x.com/AravSrinivas/status/2112583333825950207) · 来源：X：Aravind Srinivas (@AravSrinivas)
 
-### 2. FBI 称前 OpenAI 工程师涉嫌窃密，手机中发现 Saudi Gov Docs 文件夹
+### 2. Apate.ai 用35万个AI反诈拖住骗子，国内年轻人用AI视频反制AI卖惨账号
 
-[阅读原文 →](https://arstechnica.com/tech-policy/2026/10/accused-openai-spy-had-folder-called-saudi-gov-docs-fbi-says/) · 来源：Ars Technica：AI
+[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647687365&idx=1&sn=4102098fb8725531aa2f783fa2f20f20) · 来源：公众号：数字生命卡兹克
 
-### 3. Disney 拟通过破产程序收购 Character.AI 团队与技术、绕开其诉讼
+### 3. Google 发布 TorchTitan TPU 分叉并给出模型优化 Playbook
 
-[阅读原文 →](https://arstechnica.com/tech-policy/2026/10/disney-found-a-way-to-buy-character-ai-without-buying-its-lawsuits/) · 来源：Ars Technica：AI
+[阅读原文 →](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/) · 来源：Google Developers Blog
 
-### 4. Google ADK 教程：用流式工具与响应调度构建永不冷场的语音智能体
+### 4. Waymo 宣布进军西班牙，2027 年在马德里大区迎接首批乘客
 
-[阅读原文 →](https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/) · 来源：Google Developers Blog
+[阅读原文 →](https://waymo.com/blog/2026/10/waymo-in-madrid-region) · 来源：Waymo：Blog
 
-### 5. Numan 如何用 LangGraph 和 LangSmith 构建评测优先的 AI 健康教练 Nu
+### 5. METR 评测 Anthropic 2026 年 8 月风险报告对齐章节，认可低风险结论但质疑评估方法
 
-[阅读原文 →](https://www.langchain.com/blog/how-numan-built-an-eval-first-ai-health-coach-with-langgraph-and-langsmith) · 来源：LangChain：Blog
+[阅读原文 →](https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/) · 来源：METR：Blog
 
-### 6. Meta Muse Wonder Full (Max) 登上 Code Arena: WebDev 第 6 名，1726 分
+### 6. Meta 开源权重模型 Muse Spark Open 在 Fireworks 上线，主打长上下文编码与 Agent 工作
 
-[阅读原文 →](https://x.com/arena/status/2112215825944117361) · 来源：X：Arena (@arena)
+[阅读原文 →](https://fireworks.ai/blog/meta-muse-spark-open) · 来源：Fireworks AI
 
-### 7. Microsoft 如何用 Project Perception 守护企业内部的 agentic insider
+### 7. 斯坦福 HAI 发布 MedHELM、PhysicianBench 与 HealthAdminBench，测出医疗 AI Agent 实际完成率不足一半
 
-[阅读原文 →](https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/) · 来源：Microsoft：Official Blog
+[阅读原文 →](https://hai.stanford.edu/news/measuring-what-medical-ai-can-actually-do) · 来源：Stanford HAI News
 
-### 8. Grok Bot 支持 iPhone 操作按钮
+### 8. Ai2 发布 FairStress 基准：测量 LLM 决策中被隐藏的公平性不对称
 
-[阅读原文 →](https://x.com/bot/status/2112252507762368684) · 来源：X：Grok Bot (@bot)
+[阅读原文 →](https://allenai.org/blog/fairstress) · 来源：Ai2 / Allen Institute for AI
+
+### 9. 面壁智能解析前瞻专家调度 LES 如何让 35B MoE 在手机端侧实时无损运行
+
+[阅读原文 →](https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247499532&idx=1&sn=db2949b48bf8909d80def369b51a81ea) · 来源：公众号：面壁智能
+
+### 10. Databricks 发布 MemCurrent 生产级 Agent 持久记忆架构
+
+[阅读原文 →](https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents) · 来源：Databricks：Blog
 
 ---
 
 ## 📅 往期日报
 
+- [2026-10-20](./2026-10-20) — 美国国土安全部下令所有联邦文职机构移除 DeepSeek 及基于其开发的产品
 - [2026-10-19](./2026-10-19) — Anthropic 内部研究显示初级技术岗位占比下降，AI Agent 工时达员工六倍
 - [2026-10-18](./2026-10-18) — DeepSeek-V4.1-Flash-1017 发布，多基准成绩提升且 API 价格不变
 - [2026-10-17](./2026-10-17) — Reflection 开源权重模型 Beam 上架 Ollama，限时免费可用
 - [2026-10-16](./2026-10-16) — Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文
 - [2026-10-15](./2026-10-15) — Gemini 4 Argon 向全球 Google AI Pro 和 Ultra 订阅者开放
-- [2026-10-14](./2026-10-14) — Google 发布 Gemini 4 Argon：面向复杂工程与科研任务的前沿模型
 
 [查看全部往期日报 →](./archive)
 
