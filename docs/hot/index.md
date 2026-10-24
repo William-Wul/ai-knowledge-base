@@ -1,143 +1,135 @@
 ---
 title: AI 日报
-description: 2026-10-23 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-23
+description: 2026-10-24 AI 行业精选 · 由 AIHOT 同步
+date: 2026-10-24
 ---
 
-# 🔥 AI 日报 · 2026-10-23
+# 🔥 AI 日报 · 2026-10-24
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## AI 挖出潜伏十几年的 PHP 底层漏洞，PHP2Shell 事件全景复盘
+## 月之暗面发布 Kimi K3.1 Pro，100 万 token 上下文，开放权重将于 11 月 4 日前释出
 
-作者复盘 PHP2Shell 事件：两个 CVSS 满分定为 9.2 分的 PHP 远程代码执行漏洞（CVE-2026-109618 和 CVE-2026-109619）在补丁发布前泄露，攻击演示视频外流，多国政府网站预防性下线，OpenAI 认领漏洞由 GPT-5.6 Sol 辅助发现。
+月之暗面发布 Kimi K3.1 系列首个模型 Kimi K3.1 Pro，为 3T 级开放权重模型，上下文窗口 100 万 token，并同步推出速度快 2-3 倍的 Kimi K3.1 Pro Highspeed。
+
+## 🤖 模型发布/更新
+
+### 1. 月之暗面发布 Kimi K3.1 Pro，100 万 token 上下文，开放权重将于 11 月 4 日前释出
+
+月之暗面发布 Kimi K3.1 系列首个模型 Kimi K3.1 Pro，为 3T 级开放权重模型，上下文窗口 100 万 token，并同步推出速度快 2-3 倍的 Kimi K3.1 Pro Highspeed。
+
+[阅读原文 →](https://www.kimi.com/blog/kimi-k3-1-pro) · 来源：Moonshot AI：Kimi Blog
+
+### 2. MiniMax 开放 M3.1 Flash 权重：428B 总参数、每 token 激活 23B
+
+MiniMax 宣布 M3.1 Flash 权重公开，总参数 428B、每 token 激活 23B，提供 Hugging Face 和 ModelScope 下载。
+
+[阅读原文 →](https://x.com/MiniMax_AI/status/2113436864904610008) · 来源：X：MiniMax (@MiniMax_AI)
+
+---
 
 ## 🚀 产品发布/更新
 
-### 1. OpenAI 正式发布 Decisions API，面向低延迟低成本小决策
+### 1. Kling 4.0 在 fal 上线并向所有客户开放 API 访问
 
-OpenAI 宣布基于 GPT-6 Luna 的 Decisions API 正式可用，用于分类、路由、评分等有界答案问题，速度最高比通过 Responses API 使用 GPT-6 Luna 快 10x。
+fal 宣布 Kling 4.0 正式向公众开放，所有客户均可通过 API 访问。该模型支持最长 30 秒带音频的原生视频生成、最多 15 个图像/视频/元素参考、最多 10 个关键帧的精确控制，并提升了运动、角色一致性和电影感叙事表现。
 
-[阅读原文 →](https://openai.com/index/decisions-api) · 来源：OpenAI：官网动态
+[阅读原文 →](https://x.com/fal/status/2113646807997620396) · 来源：X：fal (@fal)
 
-### 2. Claude 网页、桌面和移动端将默认启用 auto mode
+### 2. 禾赛发布三维世界数据引擎 Kosmo 及 8K AI 空间相机 Kosmo One
 
-Claude 官方宣布，下周起 Pro、Max 和 Team 套餐在 Claude 网页、桌面和移动端应用中的会话将默认以 auto mode 运行。auto mode 不再逐步请求用户批准，而是由自动检查拦截高风险操作，用户可随时切回手动模式。其引用的 Claude Code 更新提到 auto mode 用独立分类器审查 shell 命令，测试中拦截了 89% 的危险命令，手动批准为 14%。
+10 月 14 日，禾赛科技正式发布三维世界数据引擎 Kosmo，同步推出集成 8K 影像系统的 AI 空间相机 Kosmo One 和云平台 Kosmo World，瞄准具身智能与世界模型的真实世界数据需求。
 
-[阅读原文 →](https://x.com/claudeai/status/2113360845409583307) · 来源：X：Claude (@claudeai)
-
-### 3. Replit 发布 Monitoring Agent，为应用提供可自动修复并部署的值班智能体
-
-Replit 发布 Monitoring Agent，为应用提供相当于自主值班工程师的监控智能体。它可以读取生产日志和指标调查错误、变慢和部署失败，在启用 autofix 后验证修复并邮件汇报，启用 auto-publish 后可自动部署修复。该能力建立在早前上线的 App Monitoring 之上，用户可在应用的 Publishing 设置中开启。
-
-[阅读原文 →](https://replit.com/blog/replit-monitoring-agent) · 来源：Replit：Blog
+[阅读原文 →](https://www.hesaitech.com/cn/news/1526) · 来源：禾赛科技
 
 ---
 
 ## 🌐 行业动态
 
-### 1. AI 挖出潜伏十几年的 PHP 底层漏洞，PHP2Shell 事件全景复盘
+### 1. OpenAI 详解前沿模型训练环境的安全加固与红队测试
 
-作者复盘 PHP2Shell 事件：两个 CVSS 满分定为 9.2 分的 PHP 远程代码执行漏洞（CVE-2026-109618 和 CVE-2026-109619）在补丁发布前泄露，攻击演示视频外流，多国政府网站预防性下线，OpenAI 认领漏洞由 GPT-5.6 Sol 辅助发现。
+OpenAI 介绍其前沿模型训练与评估环境的安全加固措施，包括训练期间不接入互联网、构建离线缓存网页世界、以纵深防御多层隔离，并用最强模型（含即将推出的 GPT‑6 Astra Cyber）组成智能体团队进行高算力红队测试。
 
-[阅读原文 →](https://x.com/Khazix0918/status/2113096414469464281) · 来源：X：卡兹克 (@Khazix0918)
+[阅读原文 →](https://openai.com/index/securing-our-frontier-model-training-environment) · 来源：OpenAI：官网动态
 
-### 2. Bloomberg 报道 DeepSeek 新一轮融资约 150 亿美元
+### 2. iPhone Duo 全球 Apple Store 正式开售，首台可折叠 iPhone 上架
 
-据 Bloomberg，DeepSeek 最新一轮融资约 150 亿美元，为中国最大规模私募融资之一。谈判期间融资目标至少两次上调，从约 75 亿美元提高到 120 亿美元；CATL 和腾讯是最大投资方之一，CATL 据报出资约 15 亿美元。投前估值约 748 亿美元，加上 6 月完成的首轮超 75 亿美元，DeepSeek 约 6 个月内共募资约 225 亿美元。
+10 月 23 日，iPhone Duo 在全球 Apple Store 门店正式开售，顾客可现场体验首款可折叠 iPhone。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2113106318659928525) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://www.apple.com/newsroom/2026/10/iphone-duo-arrives-at-apple-store-locations-worldwide/) · 来源：Apple：Newsroom
 
-### 3. WSJ：马斯克希望以 AI 为核心推动 SpaceX 与 Tesla 合并
+### 3. 国务院办公厅印发意见：增强 AI 创造就业正面效应，减缓就业替代影响
 
-WSJ 报道，马斯克希望以 AI 为核心将估值约 $2T 的 SpaceX 与约 $1.5T 的 Tesla 合并。SpaceX 的 AI 业务已成其最大业务，Q3 营收 $7.56B（一年前仅 $813M），季度 $19.6B 资本开支中超过 $16.4B 投向 AI，推动 SpaceX 实现季度利润 $4.4B（上年同期亏损 $1.05B）。
+国务院办公厅 10 月 23 日印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》，提出增强 AI 创造就业机会、赋能传统岗位的正面效应，有效减缓 AI 应用的就业替代影响。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2113107154219741231) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://www.ithome.com/1/017/113.htm) · 来源：IT之家·人工智能
 
-### 4. Anthropic 将 Agent Skills 开放标准捐赠给 Linux Foundation 旗下 Agentic AI Foundation
+### 4. Latent Space 梳理 PHP2Shell 漏洞事件：OpenAI Patch the Planet 与 Wiz 各自发现 PHP 核心漏洞
 
-Anthropic 宣布把 Agent Skills 开放标准捐赠给 Linux Foundation 旗下的 Agentic AI Foundation（AAIF），此前已向其捐赠 MCP。
+Latent Space 的 AINews 汇总梳理了 PHP 核心漏洞 PHP2Shell（CVE-2026-109618、CVE-2026-109619）的披露时间线，研究者在 PHP 引擎的内存溢出和致命错误处理中发现缺陷，演示了对 WordPress、Drupal、Joomla 的预认证 RCE 和远程内存泄露。
 
-[阅读原文 →](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation) · 来源：Anthropic：Newsroom
+[阅读原文 →](https://latent.space/p/ainews-openais-patch-the-planet-program/) · 来源：Latent Space
 
-### 5. Anthropic 股权表内幕：风投迟到多年，如今无人持股超 2%
+### 5. WSJ：OpenAI 因 Signal 阅后即焚聊天解雇 3 名安全研究员
 
-Newcomer 长文复盘 Anthropic 从 OpenAI 出走团队到即将 IPO 的股权演变。据投资人文件和多位知情人士，多年来风投因公司治理结构和安全优先路线而观望，目前没有任何风投机构持股超过 2%，Anthropic 曾向投资人明确将单一投资人持股控制在该水平以避免话语权集中。
+据 WSJ 报道，OpenAI 安全人员发现 3 名安全研究员与一名外部安全研究员使用阅后即焚的 Signal 聊天后将其解雇。
 
-[阅读原文 →](https://www.newcomer.co/p/the-story-of-anthropics-cap-table) · 来源：Newcomer 新闻长文
-
-### 6. Wiz 披露 ARTEX 智能体被 Storm-0940 用于攻击 IT 和软件厂商
-
-Wiz 披露 2026 年 10 月有攻击者使用开源自主渗透测试框架 ARTEX 针对多家 IT 和软件厂商，活动与微软报告的中国国家级关联组织 Storm-0940 重叠，并已扩展到其他软件领域的供应链攻击尝试。
-
-[阅读原文 →](https://www.wiz.io/blog/artex-in-the-wild-storm-0940-expands-targeting-of-it-and-software-vendors) · 来源：Wiz：Research
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2113511968112042349) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
 ---
 
 ## 📚 论文研究
 
-### 1. Microsoft AI 发布 SDBench 基准与 MAI-DxO 诊断系统，登 Science
+### 1. Anthropic 分析 Claude Mythos 5 在 UK AISI CTF 测试中的对齐失当行为
 
-Microsoft AI 发布 Sequential Diagnosis Benchmark（SDBench）和 AI 诊断系统 MAI-DxO，论文发表于 Science。
+Anthropic 发布对 Claude Mythos 5 对齐问题的评估报告。
 
-[阅读原文 →](https://microsoft.ai/news/building-medical-superintelligence/) · 来源：Microsoft AI：官方博客
+[阅读原文 →](https://www.anthropic.com/research/alignment-assessment-ukaisi) · 来源：Anthropic：Research
 
-### 2. METR 与 Redwood Research 红队测试 OpenAI 内部智能体监控系统，发现多个漏洞
+### 2. Anthropic 介绍 Claude Duet 智能体的安全、隐私与凭证隔离设计
 
-METR 与 Redwood Research 各派一名员工，于 7 月 21 日至 8 月 11 日对 OpenAI 内部失准监测系统开展三周高权限试点压力测试，产出 61 页内部报告。
+Anthropic 发文介绍处于研究预览阶段的 Claude Duet 智能体的安全与隐私设计。重要操作如发消息、付款、删除需用户在审批卡上确认，独立于模型之外的分类器检查操作是否符合意图；密码、cookie 和登录令牌不经过模型，支付使用一次性虚拟卡；敏感信息分为绝不共享和需同意共享两级，由独立分类器在发送前检查。
 
-[阅读原文 →](https://blog.redwoodresearch.org/p/red-teaming-openais-internal-agent) · 来源：Redwood Research：Blog
+[阅读原文 →](https://claude.com/blog/claude-duet-safety-privacy-and-security) · 来源：Claude：Blog
 
-### 3. Anthropic 用 Claude 对 123 个开源库完成汇编级形式化安全证明
+---
 
-Anthropic 与 Theorem 合作，用 Claude 将 OSS-Fuzz 模糊测试转化为规格，对 123 个开源库的 239 个入口点证明了任意 64 MB 以下输入不崩溃，生成约 1.8 亿行 Rocq 证明。
+## 💡 技巧与观点
 
-[阅读原文 →](https://www.anthropic.com/research/formal-verification) · 来源：Anthropic：Research
+### 1. Sundar Pichai 解释 Demis Hassabis 退出 DeepMind 日常管理与 Jeff Dean 离职
+
+Sundar Pichai 在访谈中解释 Demis Hassabis 逐步退出 DeepMind 日常管理和 Jeff Dean 离开 Google 的原因，称前沿模型开发已成为一项从数据、算力到团队管理都全消耗的规模化工作。
+
+[阅读原文 →](https://x.com/alexeheath/status/2113706585348600220) · 来源：X：Alex Heath (@alexeheath)
 
 ---
 
 ## 📌 快讯
 
-### 1. 消息称 Anthropic 最快本周五公开提交 S-1 招股书，或创史上最大 IPO
+### 1. OpenAI 下调估值目标至 1.25 万亿美元，拟融资至多 300 亿美元
 
-[阅读原文 →](https://www.ithome.com/1/016/243.htm) · 来源：IT之家·人工智能
+[阅读原文 →](https://the-decoder.com/openai-lowers-valuation-target-raises-up-to-30-billion/) · 来源：The Decoder：AI News
 
-### 2. Symantec 披露“Skynet 模式”AI 智能体劫持无防护大语言模型发起自持续网络攻击
+### 2. Uber 向全体员工部署 ChatGPT Work
 
-[阅读原文 →](https://the-decoder.com/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sustaining-cyberattacks/) · 来源：The Decoder：AI News
+[阅读原文 →](https://openai.com/index/uber-chatgpt-work-rollout) · 来源：OpenAI：官网动态
 
-### 3. MiniMax Code 桌面端推出 Mini App 长运行应用功能
+### 3. Grok Bot 新增保存登录与支付信息
 
-[阅读原文 →](https://www.minimax.io/blog/minimax-code-mini-app-1792650729) · 来源：MiniMax：Blog
-
-### 4. Anthropic 指南：何时把子智能体合并进主 Agent 循环
-
-[阅读原文 →](https://claude.com/blog/building-agents-when-to-fold-subagents-into-your-main-agent-loop) · 来源：Claude：Blog
-
-### 5. Kling 4.0 上线 OpenArt，支持首中尾帧引导与最多 10 张参考图
-
-[阅读原文 →](https://x.com/Kling_ai/status/2113156632134005040) · 来源：X：可灵 Kling AI (@Kling_ai)
-
-### 6. Sierra 发布 𝜏-Entity 基准，检验语音智能体能否准确采集姓名、电话等实体信息
-
-[阅读原文 →](https://sierra.ai/blog/tau-entity-can-voice-agents-get-the-details-right) · 来源：Sierra：Blog
-
-### 7. Kling 4.0 现已上线 OnSolo
-
-[阅读原文 →](https://x.com/Kling_ai/status/2113142473145078041) · 来源：X：可灵 Kling AI (@Kling_ai)
+[阅读原文 →](https://x.com/bot/status/2113717946019397910) · 来源：X：Grok Bot (@bot)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-10-23](./2026-10-23) — AI 挖出潜伏十几年的 PHP 底层漏洞，PHP2Shell 事件全景复盘
 - [2026-10-22](./2026-10-22) — OpenAI 披露 Patch the Planet 计划借助 GPT-5.6 Sol 发现 PHP 关键漏洞并协调全球修复
 - [2026-10-21](./2026-10-21) — DeepSeek 全面开源内部推理框架 DeepInfer
 - [2026-10-20](./2026-10-20) — 美国国土安全部下令所有联邦文职机构移除 DeepSeek 及基于其开发的产品
 - [2026-10-19](./2026-10-19) — Anthropic 内部研究显示初级技术岗位占比下降，AI Agent 工时达员工六倍
 - [2026-10-18](./2026-10-18) — DeepSeek-V4.1-Flash-1017 发布，多基准成绩提升且 API 价格不变
-- [2026-10-17](./2026-10-17) — Reflection 开源权重模型 Beam 上架 Ollama，限时免费可用
 
 [查看全部往期日报 →](./archive)
 
