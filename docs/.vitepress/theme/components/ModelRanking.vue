@@ -1,5 +1,5 @@
 <template>
-  <div class="mr">
+  <div class="mr" :data-synced-at="lb.syncedAt">
     <!-- 元信息条 -->
     <div class="mr-meta">
       <span class="mr-meta-item">数据来源：<a :href="lb.sourceUrl" target="_blank" rel="noopener">{{ lb.source }}</a></span>

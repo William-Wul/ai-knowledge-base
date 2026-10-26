@@ -64,7 +64,13 @@ export function parse(html) {
   const table = candidates[0]
   const headers = [...pick(/<thead[^>]*>([\s\S]*?)<\/thead>/, table, '表头').matchAll(/<th\b[^>]*>([\s\S]*?)<\/th>/g)].map(m => text(m[1]))
   const labels = ['名次', '模型', '上线日期', '评测证据', '缓存价格', '输入价格', '输出价格', 'AIHOT 评分']
-  const columns = labels.map(label => headers.findIndex(h => h.startsWith(label)))
+  // 上游曾将“评测证据”改名为“评测覆盖”；仅兼容已核对含义一致的名称。
+  // 未知列、缺列和重复列仍须失败，避免把错误字段当成有效数据发布。
+  const columns = labels.map(label => {
+    const aliases = label === '评测证据' ? ['评测证据', '评测覆盖'] : [label]
+    const matches = headers.flatMap((header, index) => aliases.some(alias => header.startsWith(alias)) ? [index] : [])
+    return matches.length === 1 ? matches[0] : -1
+  })
   if (headers.length !== labels.length || columns.some(i => i < 0) || new Set(columns).size !== labels.length) throw new Error('榜单列结构异常')
   const body = pick(/<tbody[^>]*>([\s\S]*?)<\/tbody>/, table, '榜单内容')
   const rows = [...body.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g)]

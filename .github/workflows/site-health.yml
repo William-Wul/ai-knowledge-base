@@ -1,0 +1,39 @@
+name: 网站自动更新巡检
+
+on:
+  schedule:
+    # 北京时间 12:47、18:47；避开整点，但不承诺准时启动。
+    - cron: '47 4,10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-health
+  cancel-in-progress: false
+
+jobs:
+  check-online:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: 检出最新仓库
+        uses: actions/checkout@v4
+      - name: 设置 Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 核对上游、仓库和线上数据
+        shell: bash
+        run: node scripts/check-site-health.mjs 2>&1 | tee /tmp/site-health.log
+      - name: 保留巡检摘要
+        if: always()
+        shell: bash
+        run: |
+          echo '### 网站自动更新巡检' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f /tmp/site-health.log ]; then
+            cat /tmp/site-health.log >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo '巡检尚未开始，请检查任务准备步骤。' >> "$GITHUB_STEP_SUMMARY"
+          fi

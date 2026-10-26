@@ -9,7 +9,8 @@ const renderer = await createMarkdownRenderer(resolve('docs'), { highlight: sour
 test.after(() => disposeMdItInstance())
 
 test('日报标题保留 VitePress 的中文标点锚点，修复 ts-rust 首页跳转', () => {
-  const source = readFileSync('docs/hot/2026-10-09.md', 'utf8')
+  // 固定回归样本不能放在会被自动同步覆盖的 docs/hot/ 中。
+  const source = readFileSync(new URL('./fixtures/hot-headings-2026-10-09.md', import.meta.url), 'utf8')
   const item = extractDailyItems(source, renderer).find(item => item.title.startsWith('ts-rust 发布'))
   assert.equal(item.anchor, '_3-ts-rust-发布-由-llm-将-typescript-编译器、检查器和-lsp-移植到-rust')
   assert.equal(item.category, '🚀 产品发布/更新')
@@ -31,11 +32,16 @@ test('首页数据加载器保留实际锚点与分类，只展示最新一期�
   }
   try {
     const { default: loader } = await import('../docs/.vitepress/data/hotLatest.data.js')
-    const data = await loader.load([resolve('docs/hot/2026-10-08.md'), resolve('docs/hot/2026-10-09.md')])
-    assert.equal(data.date, '2026-10-09')
-    assert.equal(data.url, '/hot/2026-10-09')
-    assert.equal(data.items.length, 6)
-    assert.equal(data.items[2].anchor, '_3-ts-rust-发布-由-llm-将-typescript-编译器、检查器和-lsp-移植到-rust')
+    // 集成检查跟随实际最新一期，包括没有新闻的正常日期，不断言具体新闻或条目顺序。
+    const files = readdirSync('docs/hot').filter(file => /^20\d{2}-\d{2}-\d{2}\.md$/.test(file)).sort()
+    assert(files.length > 0)
+    const latest = files.at(-1)
+    const data = await loader.load(files.map(file => resolve('docs/hot', file)))
+    assert.equal(data.date, latest.slice(0, -3))
+    assert.equal(data.url, `/hot/${data.date}`)
+    const source = readFileSync(resolve('docs/hot', latest), 'utf8')
+    const expected = extractDailyItems(source, renderer).slice(0, 6)
+    assert.deepEqual(data.items, expected)
     assert.deepEqual(await loader.load([]), { date: '', url: '/hot/', items: [] })
   } finally {
     globalThis.VITEPRESS_CONFIG = previous

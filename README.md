@@ -29,7 +29,14 @@ npm run docs:build
 
 # 发布前完整检查（测试、构建、案例、链接与资源）
 npm run docs:check
+
+# 发布后核对上游、仓库数据、部署快照和线上实际页面（只读）
+npm run check:online
 ```
+
+自动更新的固定回归样本统一放在 `tests/fixtures/`，不要断言 `docs/hot/` 中必须一直存在某条具体新闻。真实日报只检查结构、日期与正文锚点的一致性，允许上游修订和无新闻日期。
+
+构建会生成 `/site-health.json`，记录当期日报、榜单时间及内容指纹。发布验收需同时确认 GitHub Pages 部署成功和 `npm run check:online` 通过；单独的“抓取成功”不能代表网站已更新。首次上线巡检功能之前，线上缺少快照会明确报错。完整检查和后续自动巡检方案见 [2026-10-27 修复报告](reports/site-update-fix-2026-10-27.md)。
 
 ## 内容结构
 

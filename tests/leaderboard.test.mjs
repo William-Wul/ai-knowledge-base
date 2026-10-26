@@ -6,6 +6,7 @@ import { join } from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { parse } from '../scripts/sync-leaderboard.mjs'
 const html = readFileSync(new URL('./fixtures/leaderboard-2026-10-05.html', import.meta.url), 'utf8')
+const currentHtml = readFileSync(new URL('./fixtures/leaderboard-2026-10-26.html', import.meta.url), 'utf8')
 test('真实新版原榜的元信息、排名、证据和三种价格', () => {
   const d = parse(html)
   assert.equal(d.models.length, 30)
@@ -20,6 +21,29 @@ test('真实新版原榜的元信息、排名、证据和三种价格', () => {
   assert.equal(d.models[0].inputPrice, '¥26.82')
   assert.equal(d.models[0].outputPrice, '¥134.09')
   assert.equal(d.models[1].cachePrice, '待核验')
+})
+test('兼容原榜改名为评测覆盖，保留当前实际页面的全部字段', () => {
+  const d = parse(currentHtml)
+  assert.equal(d.models.length, 30)
+  assert.equal(d.sourceCount, 7)
+  assert.equal(d.evaluationCount, 35)
+  assert.equal(d.sourceUpdatedAt, '10/26 20:05')
+  assert.equal(d.models[0].name, 'Claude Opus 5.5')
+  assert.equal(d.models[0].provider, 'Anthropic')
+  assert.equal(d.models[0].evidenceCount, 34)
+  assert.equal(d.models[0].evidenceStatus, '覆盖96%')
+  assert.equal(d.models[0].cachePrice, '¥1.33')
+  assert.equal(d.models[0].inputPrice, '¥26.68')
+  assert.equal(d.models[0].outputPrice, '¥133.4')
+  assert.equal(d.models[0].score, 73.2)
+  assert.equal(d.models[1].provider, 'Google')
+})
+test('兼容已知列名仍拒绝未知列名、缺列、重复列和错误覆盖率', () => {
+  assert.throws(() => parse(currentHtml.replace('评测覆盖', '未知字段')), /列结构异常/)
+  assert.throws(() => parse(currentHtml.replace('缓存价格', '评测覆盖')), /列结构异常/)
+  assert.throws(() => parse(currentHtml.replace(/<th\b[^>]*>[\s\S]*?<\/th>/, '')), /列结构异常/)
+  const withoutComments = currentHtml.replace(/<!--[\s\S]*?-->/g, '')
+  assert.throws(() => parse(withoutComments.replaceAll('覆盖 96%', '覆盖 196%')), /覆盖率异常/)
 })
 test('拒绝截断、重复模型、错误价格和不连续排名', () => {
   assert.throws(() => parse(html.replace(/<tbody>[\s\S]*?<\/tbody>/, '<tbody></tbody>')), /行数异常/)
