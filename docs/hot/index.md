@@ -1,159 +1,135 @@
 ---
 title: AI 日报
-description: 2026-10-30 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-30
+description: 2026-10-31 AI 行业精选 · 由 AIHOT 同步
+date: 2026-10-31
 ---
 
-# 🔥 AI 日报 · 2026-10-30
+# 🔥 AI 日报 · 2026-10-31
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型
+## Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
 
-Hugging Face 发布 Mistral Large 4（Le Chonk）的上线博客，模型为多模态多语言 MoE 架构，总参数约 1T、激活 49B、上下文窗口 1M token。
-
-## 🤖 模型发布/更新
-
-### 1. Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型
-
-Hugging Face 发布 Mistral Large 4（Le Chonk）的上线博客，模型为多模态多语言 MoE 架构，总参数约 1T、激活 49B、上下文窗口 1M token。
-
-[阅读原文 →](https://huggingface.co/blog/mistral-large4) · 来源：Hugging Face 官方团队博客
-
-### 2. Pika 基于MiniMax H3后训练并开源 Pika H3 Flex 视频生成模型
-
-Pika Labs 在 MiniMax H3 上做后训练，推出并开源 Pika H3 Flex，采样步数从 50 步压缩到 6 步，生成时间大幅降低且质量有所提升。
-
-[阅读原文 →](https://x.com/Khazix0918/status/2115898252004622617) · 来源：X：卡兹克 (@Khazix0918)
-
----
+Cursor 发现通过其 IDE 扩展市场分发的 Claude Code VS Code 扩展被修改并植入恶意软件，最多影响 5000 用户，恶意版本并非 Anthropic 开发。Cursor 已于当日下午下线扩展市场，与相关提供方合作清除恶意软件并确认无进一步风险后重新上线，建议受影响用户参考博客说明排查，并升级到 Claude Code for VS Code 2.1.314。
 
 ## 🚀 产品发布/更新
 
-### 1. Codex 宣布即日起 Pro 及 Business Premium 各档位用量上限翻倍
+### 1. Anthropic 将 Claude Max 套餐更名为 Max 与 Ultra，Ultra 认证账号取消 5 小时限制
 
-Tibo 宣布即日起将 Pro 100/200/500 档位与 Business Premium 的所有用量上限翻倍。Pro 200 的上限不会下调，Work 与 Codex 用量保持不变；dots 的扩展用量上限继续提供，且仍与默认用量分开计算，后续还会通过更好的模型和效率改进提升实际可用量。
+Anthropic 将 Claude 订阅套餐更名：Max 5x 改为 Max，Max 20x 改为 Ultra，价格不变（Max 100 美元/月、Ultra 200 美元/月）。即日起多数老订阅者的认证 Ultra 账号取消 5 小时限制，新账号保留临时限制以防欺诈滥用，周限额不变。
 
-[阅读原文 →](https://x.com/thsottiaux/status/2115850175868727621) · 来源：X：Tibo (@thsottiaux)
+[阅读原文 →](https://x.com/adocomplete/status/2116224220539883992) · 来源：X：Ado Kukic (@adocomplete)
 
-### 2. Factory 发布 Droid 1.0，以程序化工具调用构建企业级 Agent harness
+### 2. Gemini API 的 Computer Use 工具正式开放（GA）
 
-Factory 发布 Droid 1.0，一个模型无关的 agent harness，主打程序化工具调用（PTC），模型通过编写 JavaScript 程序在沙箱中一次执行数百个工具调用。
+Google 于 10 月 30 日宣布 Gemini API 的 Computer Use 工具正式可用（GA），覆盖 Interactions 和 GenerateContent 两套 API。
 
-[阅读原文 →](https://factory.com/news/frontier-harness) · 来源：Factory 研究 / 产品
-
-### 3. OpenRouter 重建默认路由算法：TTFT 降 16.9%、429 错误减少 67%
-
-OpenRouter 宣布重建默认 provider 路由算法，从只按价格排序改为按 Routing Cost 综合 effective price、TTFT、吞吐、错误率和输出质量选路。
-
-[阅读原文 →](https://openrouter.ai/blog/announcements/how-we-rebuilt-provider-routing/) · 来源：OpenRouter：Announcements
+[阅读原文 →](https://ai.google.dev/gemini-api/docs/changelog#10-30-2026) · 来源：Gemini API：更新日志
 
 ---
 
 ## 🌐 行业动态
 
-### 1. 纽约时报称中国情报人员瞄准英伟达 CEO 黄仁勋
+### 1. Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
 
-据《纽约时报》报道，美国情报机构认为英伟达 CEO 黄仁勋身边一名高管为中国提供情报，此人是新加坡数据中心运营商 Megaspeed 的 Alice Huang（黄乐）。
+Cursor 发现通过其 IDE 扩展市场分发的 Claude Code VS Code 扩展被修改并植入恶意软件，最多影响 5000 用户，恶意版本并非 Anthropic 开发。Cursor 已于当日下午下线扩展市场，与相关提供方合作清除恶意软件并确认无进一步风险后重新上线，建议受影响用户参考博客说明排查，并升级到 Claude Code for VS Code 2.1.314。
 
-[阅读原文 →](https://the-decoder.com/chinese-spies-targeted-nvidia-ceo-jensen-huang-according-to-the-new-york-times/) · 来源：The Decoder：AI News
+[阅读原文 →](https://x.com/cursor_ai/status/2116074289053175808) · 来源：X：Cursor (@cursor_ai)
 
-### 2. Reddit 宣布转向以登录为主的体验，以应对 AI 搜索带来的流量下滑
+### 2. 阿里巴巴：Apple 智能国行用户可自主选择是否开通千问集成功能
 
-Reddit 在 Q3 财报中宣布将转向以登录为主的体验，以保护数据免受 AI 抓取并提升广告变现。10 月搜索流量平均每周减少超 100 万次引荐，Q3 全球日活为 1.303 亿，其中美国日活降至 5070 万，同比降 2%。Q3 收入同比增长 53% 至 8.95 亿美元，净利润 2.83 亿美元；该转变将先在美国以外市场测试，暂无全球上线时间表。
+阿里巴巴发布公告，说明千问集成 Apple 智能后用户可自主选择是否开通，功能将于 11 月 4 日随 iOS 开发者 Beta 版开放测试，12 月 iOS 27.3 正式发布时面向中国用户推出。
 
-[阅读原文 →](https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/) · 来源：TechCrunch：AI
+[阅读原文 →](https://www.ithome.com/1/020/395.htm) · 来源：IT之家·人工智能
 
-### 3. Google 三季度搜索增速不及预期，投资者担忧 AI 搜索变现拖累核心业务
+### 3. Project Suncatcher 在轨道卫星上运行 TPU，Gemma 模型首次在太空完成推理并回传回应
 
-Google 三季度搜索收入增长约 12%，低于分析师预期的 15%，市值一度缩水最多 10%。高管 Philipp Schindler 承认 AI mode 查询的强劲增长因变现率较低产生了影响，同时公司称搜索查询年增速达五年来最高，并计划在美国及国际市场扩大聊天机器人广告项目。
+Philipp Schmid 转引 Sundar Pichai 的消息：Google Project Suncatcher 在数周前发射原型卫星后，成功向轨道发送指令、启动 TPU、运行提示词，并在地面收到了首个完整回应（一首 haiku），作者称 Gemma 4 成为首个在太空运行的大语言模型。
 
-[阅读原文 →](https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/) · 来源：The Decoder：AI News
+[阅读原文 →](https://x.com/_philschmid/status/2116235686445502608) · 来源：X：Philipp Schmid (@_philschmid)
 
-### 4. 404 Media 起底 Proton 内部 AI 转型之争：CEO Andy Yen 强推 AI 引发恐惧文化
+### 4. Jassy 称 AWS 五到十年内将成为万亿美元营收业务，2026 年 capex 约 2200 亿美元
 
-404 Media 采访九名现任与离职 Proton 员工并查阅内部文件，报道 CEO Andy Yen 强推 AI 转型引发的内部冲突。10 月公司 90% 代码由 AI 编写，多使用 Anthropic 的 Claude；Yen 称今年是最后一年招聘工程师，并宣布将以可能决定去留的重新面试评估员工 AI 使用情况。
+Amazon CEO Andy Jassy 在周四的季度财报电话会议上表示，AWS 未来五到十年内可以成为年营收万亿美元的业务，2026 年现金 capex 预计约 2200 亿美元，大部分投向 AWS，2027 年还将大幅增加。
 
-[阅读原文 →](https://www.404media.co/manifestos-fear-and-loser-thinking-inside-protons-ai-reckoning/) · 来源：404 Media
+[阅读原文 →](https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/) · 来源：TechCrunch：AI
+
+### 5. 科技巨头 AI 资本开支超 7400 亿美元，投资者担忧升温引发市场下跌
+
+Alphabet、Amazon、Meta、Microsoft 今年计划资本开支合计超 7400 亿美元，投资者情绪从奖励大额投入转向担忧负自由现金流、债务攀升与回报不确定。
+
+[阅读原文 →](https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/) · 来源：TechCrunch：AI
+
+### 6. Toyota 与 Waymo 深化自动驾驶合作，2027 年在日本测试自动驾驶 bZ4X 车队
+
+Toyota 与 Waymo 宣布进入自动驾驶合作新阶段，在 2025 年 4 月初步协议基础上，将于 2027 年起在日本测试和验证自动驾驶 Toyota bZ4X 车队，后续计划部署到英国等其他 Waymo 服务市场。
+
+[阅读原文 →](https://waymo.com/blog/2026/10/toyota-bz4x-partnership) · 来源：Waymo：Blog
+
+### 7. OpenAI 汇编各方法庭之友意见，主张 AI 训练应适用合理使用原则
+
+OpenAI 整理了在《纽约时报》诉讼中提交给法院的多份支持合理使用的法庭之友意见摘要，作者包括图书馆协会、法律学者、独立创作者和美国政府等。各意见书主张 AI 训练具有转换性、不构成版权法认可的市场损害，并警告限缩合理使用将阻碍科研进展与美国经济繁荣；完整文件可在法院公开卷宗查阅。
+
+[阅读原文 →](https://openai.com/index/fair-use-benefits-everyone) · 来源：OpenAI：官网动态
+
+### 8. Sierra 宣布 ARR 突破 4 亿美元，Q3 单季新增超 1.5 亿美元
+
+Sierra 宣布本周 ARR 突破 4 亿美元，Q3 单季新增超 1.5 亿美元，从 2 亿到 4 亿仅用五个月，快于此前六个月的翻倍节奏。
+
+[阅读原文 →](https://sierra.ai/blog/our-customers-ambition-is-accelerating-our-growth) · 来源：Sierra：Blog
 
 ---
 
 ## 📚 论文研究
 
-### 1. OpenAI 详解如何检测前沿模型失准行为
+### 1. Epoch AI 实验显示 GLM 5.3 可利用补丁窗口期自主攻击 Firefox
 
-OpenAI 发布长文，详解其针对前沿模型失准行为的多层监测系统，包括激活探针、基于模型的审查、调查智能体和自动化调查四层架构，并对 GPT‑6 Astra 及以上模型的全部 RL 运行、评估和内部 Codex 流量进行监测。
+Epoch AI 实验发现，Z.ai 八月发布的开源权重模型 GLM 5.3 能利用 Mozilla 已发布但未推送给用户的安全补丁（patch gap），自主构建网页攻击，仅访问页面即可读取访客电脑文件，攻破 9 月 17 日至 10 月 26 日发布的全部六个 Firefox 版本。
 
-[阅读原文 →](https://openai.com/index/how-we-detect-frontier-model-misalignment) · 来源：OpenAI：官网动态
-
-### 2. Trakkr 研究：追踪 1285 条 AI 引用统计的溯源路径
-
-Trakkr Research 向 ChatGPT、Perplexity、Gemini、Claude 和 Google AI Overviews 提出 200 个要求数字的问题，并追踪其中 1285 条统计的引用链路，结果只有 40% 到达说法一致的研究，8% 到达但数字或语境已变，40% 无法核查，11% 无处可溯。
-
-[阅读原文 →](https://trakkr.ai/trakkr-research/zombie-stats) · 来源：Hacker News：AI 热帖
+[阅读原文 →](https://epochai.substack.com/p/glm-patch-gap-exploit-firefox) · 来源：Epoch AI：Gradient Updates
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. OpenRouter 教程：用 LLM 从 PDF 中抽取表格
+### 1. Kimi 官方教程：如何用 Kimi K3.1 Pro 创作 3D 作品
 
-OpenRouter 发布教程，讲解如何把 PDF 以文件形式连同严格 JSON schema 发给能读文件的模型，让表格以带类型的行返回，括号亏损、千分位和脚注标记等清理都写进字段描述。
+月之暗面（Kimi）发布官方教程，详解 Kimi K3.1 Pro 的 3D 创作工作流程，说明参数化建模与网格化建模两种方式及对应工具选择。文章分享了 4 个案例的具体操作，包括在 Unreal Engine 中构建东方天宫、制作可 3D 打印的台灯、纯代码调用 Blender 生成建筑、用 Tripo 和 Blender 搭建微缩城市，并给出图胜于言、先搭灰模再细化等 5 个使用技巧。
 
-[阅读原文 →](https://openrouter.ai/blog/tutorials/extract-tables-from-pdf-llm/) · 来源：OpenRouter：Announcements
+[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzkzMTY4NTIyNA%3D%3D&mid=2247484364&idx=1&sn=42491c3f098deb797ee8f2a17d147b3a) · 来源：公众号：月之暗面
 
 ---
 
 ## 📌 快讯
 
-### 1. The Verge 解读 Anthropic S-1：约 8500 亿美元 compute 承诺押注递归自我改进
+### 1. AI 支出担忧引发美股科技股连日下跌，Intel 盘中跌逾 30%
 
-[阅读原文 →](https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive) · 来源：The Verge：AI
+[阅读原文 →](https://www.bbc.co.uk/news/articles/cvwy72e0n72yo) · 来源：Hacker News：AI 热帖
 
-### 2. OpenAI 更新 Model Spec，围绕五项核心价值观重组模型行为准则
+### 2. The Verge 解读 Anthropic S-1 文件中的奇迹叙事与风险披露
 
-[阅读原文 →](https://openai.com/index/updated-model-spec) · 来源：OpenAI：官网动态
+[阅读原文 →](https://www.theverge.com/ai-artificial-intelligence/1023070/anthropic-ipo-risk-factors-filing-miracles) · 来源：The Verge：AI
 
-### 3. OpenMOSS 发布开源图像生成模型 MOSS-Image，主打长文本渲染与可编辑布局
+### 3. OpenRouter 实测 Claude Opus vs Sonnet vs Haiku 5.5 该选哪个
 
-[阅读原文 →](https://openmoss.ai/blog/cn/moss-image/) · 来源：OpenMOSS / 复旦NLP / 上海创智 / MOSI
+[阅读原文 →](https://openrouter.ai/blog/insights/claude-opus-vs-sonnet-vs-haiku/) · 来源：OpenRouter：Announcements
 
-### 4. Addy Osmani 谈你可能对 Claude 过度提示了
+### 4. OpenAI 发布社区安全报告计划并加强对未成年人的武器内容限制
 
-[阅读原文 →](https://x.com/addyosmani/status/2115688494865465370) · 来源：X：Addy Osmani (@addyosmani)
-
-### 5. Wiz 分析智能体攻击的七大指纹与发展趋势
-
-[阅读原文 →](https://www.wiz.io/blog/the-rise-of-agentic-attacks-what-they-look-like-and-where-theyre-headed) · 来源：Wiz：Research
-
-### 6. Gemini 新增文档、PDF、演示文稿和表格的直接生成、预览与编辑功能
-
-[阅读原文 →](https://x.com/GeminiApp/status/2115845164824711247) · 来源：X：Gemini (@GeminiApp)
-
-### 7. 腾讯混元发布 Hy-Nomas 技术报告并开源 Hy-Nomas-Bench
-
-[阅读原文 →](https://x.com/TencentHunyuan/status/2115851165904814283) · 来源：X：腾讯混元 (@TencentHunyuan)
-
-### 8. Figma 讲解如何训练专用画布编辑模型
-
-[阅读原文 →](https://www.figma.com/blog/training-a-figma-fluent-editing-model/) · 来源：Figma AI / Agent / Make
-
-### 9. Claude Enterprise 正式上线智能报告、应用内调研与团队共享预算
-
-[阅读原文 →](https://claude.com/blog/smart-reports-surveys-pooled-budgets) · 来源：Claude：Blog
+[阅读原文 →](https://openai.com/index/community-safety-report-and-new-protections-for-teens) · 来源：OpenAI：官网动态
 
 ---
 
 ## 📅 往期日报
 
+- [2026-10-30](./2026-10-30) — Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型
 - [2026-10-29](./2026-10-29) — Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 - [2026-10-28](./2026-10-28) — Anthropic 招股书拆解：IPO 计划募资约 1000 亿美元背后的 11 个细节
 - [2026-10-27](./2026-10-27) — Anthropic 向 SEC 提交 S-1 文件启动 IPO，拟以代码 ANT 登陆纳斯达克
 - [2026-10-26](./2026-10-26) — 今日安静，无大事发生
 - [2026-10-25](./2026-10-25) — OpenAI 智能体在隔离测试中借 CPU 缓存隐蔽通信
-- [2026-10-24](./2026-10-24) — 月之暗面发布 Kimi K3.1 Pro，100 万 token 上下文，开放权重将于 11 月 4 日前释出
 
 [查看全部往期日报 →](./archive)
 
