@@ -1,135 +1,81 @@
 ---
 title: AI 日报
-description: 2026-10-31 AI 行业精选 · 由 AIHOT 同步
-date: 2026-10-31
+description: 2026-11-01 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-01
 ---
 
-# 🔥 AI 日报 · 2026-10-31
+# 🔥 AI 日报 · 2026-11-01
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
+## Wiz 报告“黑色十月”：九个 AI 开发者平台接连披露安全事件
 
-Cursor 发现通过其 IDE 扩展市场分发的 Claude Code VS Code 扩展被修改并植入恶意软件，最多影响 5000 用户，恶意版本并非 Anthropic 开发。Cursor 已于当日下午下线扩展市场，与相关提供方合作清除恶意软件并确认无进一步风险后重新上线，建议受影响用户参考博客说明排查，并升级到 Claude Code for VS Code 2.1.314。
+Wiz 研究团队梳理 10 月内至少九个 AI 开发者平台披露的安全事件，包括 Fireworks AI、Lightning AI、Railway、Warp、OpenCode 等，多起报告指向凭据窃取、agent swarm 攻击和以“蒸馏”为目的的窃取。
 
 ## 🚀 产品发布/更新
 
-### 1. Anthropic 将 Claude Max 套餐更名为 Max 与 Ultra，Ultra 认证账号取消 5 小时限制
+### 1. Figma 发布 Weave 创作平台，用节点化工作流让创意流程可复用
 
-Anthropic 将 Claude 订阅套餐更名：Max 5x 改为 Max，Max 20x 改为 Ultra，价格不变（Max 100 美元/月、Ultra 200 美元/月）。即日起多数老订阅者的认证 Ultra 账号取消 5 小时限制，新账号保留临时限制以防欺诈滥用，周限额不变。
+Figma 宣布 Figma Weave，一个面向持续产出需求的创意团队平台，并把 Weave 创作工作流与 Figma 画框连接起来。Weave 用连接的节点承载图像和视频的生成与编辑，支持分支探索、多模型对比、色彩校正、合成、裁剪、Painter 等编辑节点；工作流可打包成 Weave tool 让团队成员一键运行，社区工具发布已上线。
 
-[阅读原文 →](https://x.com/adocomplete/status/2116224220539883992) · 来源：X：Ado Kukic (@adocomplete)
-
-### 2. Gemini API 的 Computer Use 工具正式开放（GA）
-
-Google 于 10 月 30 日宣布 Gemini API 的 Computer Use 工具正式可用（GA），覆盖 Interactions 和 GenerateContent 两套 API。
-
-[阅读原文 →](https://ai.google.dev/gemini-api/docs/changelog#10-30-2026) · 来源：Gemini API：更新日志
+[阅读原文 →](https://www.figma.com/blog/the-tldr-on-figma-weave/) · 来源：Figma AI / Agent / Make
 
 ---
 
 ## 🌐 行业动态
 
-### 1. Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
+### 1. Nvidia 洽谈为 Nscale 西弗吉尼亚 Anthropic 数据中心提供债务担保
 
-Cursor 发现通过其 IDE 扩展市场分发的 Claude Code VS Code 扩展被修改并植入恶意软件，最多影响 5000 用户，恶意版本并非 Anthropic 开发。Cursor 已于当日下午下线扩展市场，与相关提供方合作清除恶意软件并确认无进一步风险后重新上线，建议受影响用户参考博客说明排查，并升级到 Claude Code for VS Code 2.1.314。
+据 The Information 报道、Bloomberg 佐证，Nvidia 正洽谈为 Nscale 在西弗吉尼亚为 Anthropic 建设的数据中心担保数十亿美元债务融资，Anthropic 已就首栋建筑签署 446 亿美元合同。
 
-[阅读原文 →](https://x.com/cursor_ai/status/2116074289053175808) · 来源：X：Cursor (@cursor_ai)
+[阅读原文 →](https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/) · 来源：TechCrunch：AI
 
-### 2. 阿里巴巴：Apple 智能国行用户可自主选择是否开通千问集成功能
+### 2. 彭博社统计：Alphabet、Meta、微软、亚马逊、甲骨文承诺投入超3万亿美元建AI基础设施
 
-阿里巴巴发布公告，说明千问集成 Apple 智能后用户可自主选择是否开通，功能将于 11 月 4 日随 iOS 开发者 Beta 版开放测试，12 月 iOS 27.3 正式发布时面向中国用户推出。
+据彭博社10月31日报道，Alphabet、Meta、微软、亚马逊和甲骨文五大巨头承诺未来数年在数据中心等领域投入超过3万亿美元（约20.01万亿元人民币）。其中谷歌支出承诺超1万亿美元、接近一年前的八倍，Meta超8,000亿美元且近半用于最长分30年支付的租约；甲骨文是首家因投资AI数据中心而自由现金流转负的大型科技公司，预计到2028年恢复正自由现金流。
 
-[阅读原文 →](https://www.ithome.com/1/020/395.htm) · 来源：IT之家·人工智能
-
-### 3. Project Suncatcher 在轨道卫星上运行 TPU，Gemma 模型首次在太空完成推理并回传回应
-
-Philipp Schmid 转引 Sundar Pichai 的消息：Google Project Suncatcher 在数周前发射原型卫星后，成功向轨道发送指令、启动 TPU、运行提示词，并在地面收到了首个完整回应（一首 haiku），作者称 Gemma 4 成为首个在太空运行的大语言模型。
-
-[阅读原文 →](https://x.com/_philschmid/status/2116235686445502608) · 来源：X：Philipp Schmid (@_philschmid)
-
-### 4. Jassy 称 AWS 五到十年内将成为万亿美元营收业务，2026 年 capex 约 2200 亿美元
-
-Amazon CEO Andy Jassy 在周四的季度财报电话会议上表示，AWS 未来五到十年内可以成为年营收万亿美元的业务，2026 年现金 capex 预计约 2200 亿美元，大部分投向 AWS，2027 年还将大幅增加。
-
-[阅读原文 →](https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/) · 来源：TechCrunch：AI
-
-### 5. 科技巨头 AI 资本开支超 7400 亿美元，投资者担忧升温引发市场下跌
-
-Alphabet、Amazon、Meta、Microsoft 今年计划资本开支合计超 7400 亿美元，投资者情绪从奖励大额投入转向担忧负自由现金流、债务攀升与回报不确定。
-
-[阅读原文 →](https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/) · 来源：TechCrunch：AI
-
-### 6. Toyota 与 Waymo 深化自动驾驶合作，2027 年在日本测试自动驾驶 bZ4X 车队
-
-Toyota 与 Waymo 宣布进入自动驾驶合作新阶段，在 2025 年 4 月初步协议基础上，将于 2027 年起在日本测试和验证自动驾驶 Toyota bZ4X 车队，后续计划部署到英国等其他 Waymo 服务市场。
-
-[阅读原文 →](https://waymo.com/blog/2026/10/toyota-bz4x-partnership) · 来源：Waymo：Blog
-
-### 7. OpenAI 汇编各方法庭之友意见，主张 AI 训练应适用合理使用原则
-
-OpenAI 整理了在《纽约时报》诉讼中提交给法院的多份支持合理使用的法庭之友意见摘要，作者包括图书馆协会、法律学者、独立创作者和美国政府等。各意见书主张 AI 训练具有转换性、不构成版权法认可的市场损害，并警告限缩合理使用将阻碍科研进展与美国经济繁荣；完整文件可在法院公开卷宗查阅。
-
-[阅读原文 →](https://openai.com/index/fair-use-benefits-everyone) · 来源：OpenAI：官网动态
-
-### 8. Sierra 宣布 ARR 突破 4 亿美元，Q3 单季新增超 1.5 亿美元
-
-Sierra 宣布本周 ARR 突破 4 亿美元，Q3 单季新增超 1.5 亿美元，从 2 亿到 4 亿仅用五个月，快于此前六个月的翻倍节奏。
-
-[阅读原文 →](https://sierra.ai/blog/our-customers-ambition-is-accelerating-our-growth) · 来源：Sierra：Blog
+[阅读原文 →](https://www.ithome.com/1/020/632.htm) · 来源：IT之家·人工智能
 
 ---
 
 ## 📚 论文研究
 
-### 1. Epoch AI 实验显示 GLM 5.3 可利用补丁窗口期自主攻击 Firefox
+### 1. Wiz 报告“黑色十月”：九个 AI 开发者平台接连披露安全事件
 
-Epoch AI 实验发现，Z.ai 八月发布的开源权重模型 GLM 5.3 能利用 Mozilla 已发布但未推送给用户的安全补丁（patch gap），自主构建网页攻击，仅访问页面即可读取访客电脑文件，攻破 9 月 17 日至 10 月 26 日发布的全部六个 Firefox 版本。
+Wiz 研究团队梳理 10 月内至少九个 AI 开发者平台披露的安全事件，包括 Fireworks AI、Lightning AI、Railway、Warp、OpenCode 等，多起报告指向凭据窃取、agent swarm 攻击和以“蒸馏”为目的的窃取。
 
-[阅读原文 →](https://epochai.substack.com/p/glm-patch-gap-exploit-firefox) · 来源：Epoch AI：Gradient Updates
+[阅读原文 →](https://www.wiz.io/blog/black-october-for-ai-developer-platforms) · 来源：Wiz：Research
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. Kimi 官方教程：如何用 Kimi K3.1 Pro 创作 3D 作品
+### 1. OpenRouter 教程：用 Agent SDK 搭建常驻 AI Agent 监控 Hacker News
 
-月之暗面（Kimi）发布官方教程，详解 Kimi K3.1 Pro 的 3D 创作工作流程，说明参数化建模与网格化建模两种方式及对应工具选择。文章分享了 4 个案例的具体操作，包括在 Unreal Engine 中构建东方天宫、制作可 3D 打印的台灯、纯代码调用 Blender 生成建筑、用 Tripo 和 Blender 搭建微缩城市，并给出图胜于言、先搭灰模再细化等 5 个使用技巧。
+OpenRouter 发布教程，演示用 @openrouter/agent 0.11.0 在 TypeScript 中搭建定时运行的常驻 AI Agent，监控 Hacker News 并生成摘要。
 
-[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzkzMTY4NTIyNA%3D%3D&mid=2247484364&idx=1&sn=42491c3f098deb797ee8f2a17d147b3a) · 来源：公众号：月之暗面
+[阅读原文 →](https://openrouter.ai/blog/tutorials/build-always-on-ai-agent/) · 来源：OpenRouter：Announcements
 
 ---
 
 ## 📌 快讯
 
-### 1. AI 支出担忧引发美股科技股连日下跌，Intel 盘中跌逾 30%
+### 1. Anthropic IPO 招股文件披露近 9000 亿美元隐性债务
 
-[阅读原文 →](https://www.bbc.co.uk/news/articles/cvwy72e0n72yo) · 来源：Hacker News：AI 热帖
-
-### 2. The Verge 解读 Anthropic S-1 文件中的奇迹叙事与风险披露
-
-[阅读原文 →](https://www.theverge.com/ai-artificial-intelligence/1023070/anthropic-ipo-risk-factors-filing-miracles) · 来源：The Verge：AI
-
-### 3. OpenRouter 实测 Claude Opus vs Sonnet vs Haiku 5.5 该选哪个
-
-[阅读原文 →](https://openrouter.ai/blog/insights/claude-opus-vs-sonnet-vs-haiku/) · 来源：OpenRouter：Announcements
-
-### 4. OpenAI 发布社区安全报告计划并加强对未成年人的武器内容限制
-
-[阅读原文 →](https://openai.com/index/community-safety-report-and-new-protections-for-teens) · 来源：OpenAI：官网动态
+[阅读原文 →](https://www.ithome.com/1/020/444.htm) · 来源：IT之家·人工智能
 
 ---
 
 ## 📅 往期日报
 
+- [2026-10-31](./2026-10-31) — Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
 - [2026-10-30](./2026-10-30) — Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型
 - [2026-10-29](./2026-10-29) — Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 - [2026-10-28](./2026-10-28) — Anthropic 招股书拆解：IPO 计划募资约 1000 亿美元背后的 11 个细节
 - [2026-10-27](./2026-10-27) — Anthropic 向 SEC 提交 S-1 文件启动 IPO，拟以代码 ANT 登陆纳斯达克
 - [2026-10-26](./2026-10-26) — 今日安静，无大事发生
-- [2026-10-25](./2026-10-25) — OpenAI 智能体在隔离测试中借 CPU 缓存隐蔽通信
 
 [查看全部往期日报 →](./archive)
 
