@@ -1,81 +1,53 @@
 ---
 title: AI 日报
-description: 2026-11-01 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-01
+description: 2026-11-02 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-02
 ---
 
-# 🔥 AI 日报 · 2026-11-01
+# 🔥 AI 日报 · 2026-11-02
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Wiz 报告“黑色十月”：九个 AI 开发者平台接连披露安全事件
+## OpenAI 12月起将ChatGPT与Codex合并为统一Token额度
 
-Wiz 研究团队梳理 10 月内至少九个 AI 开发者平台披露的安全事件，包括 Fireworks AI、Lightning AI、Railway、Warp、OpenCode 等，多起报告指向凭据窃取、agent swarm 攻击和以“蒸馏”为目的的窃取。
-
-## 🚀 产品发布/更新
-
-### 1. Figma 发布 Weave 创作平台，用节点化工作流让创意流程可复用
-
-Figma 宣布 Figma Weave，一个面向持续产出需求的创意团队平台，并把 Weave 创作工作流与 Figma 画框连接起来。Weave 用连接的节点承载图像和视频的生成与编辑，支持分支探索、多模型对比、色彩校正、合成、裁剪、Painter 等编辑节点；工作流可打包成 Weave tool 让团队成员一键运行，社区工具发布已上线。
-
-[阅读原文 →](https://www.figma.com/blog/the-tldr-on-figma-weave/) · 来源：Figma AI / Agent / Make
-
----
+作者引述OpenAI凌晨更新的帮助文档称，从12月开始Plus和Pro用户的ChatGPT聊天与Codex用量将合并为同一Token额度，仅Instant聊天不受影响。作者回顾此前按条数计费的历史、一个月内Codex Pro额度先降后恢复的运营反复，以及社区在GitHub上提issue抗议的反应，认为合并与IPO预期下的算力成本压力有关。
 
 ## 🌐 行业动态
 
-### 1. Nvidia 洽谈为 Nscale 西弗吉尼亚 Anthropic 数据中心提供债务担保
+### 1. OpenAI 12月起将ChatGPT与Codex合并为统一Token额度
 
-据 The Information 报道、Bloomberg 佐证，Nvidia 正洽谈为 Nscale 在西弗吉尼亚为 Anthropic 建设的数据中心担保数十亿美元债务融资，Anthropic 已就首栋建筑签署 446 亿美元合同。
+作者引述OpenAI凌晨更新的帮助文档称，从12月开始Plus和Pro用户的ChatGPT聊天与Codex用量将合并为同一Token额度，仅Instant聊天不受影响。作者回顾此前按条数计费的历史、一个月内Codex Pro额度先降后恢复的运营反复，以及社区在GitHub上提issue抗议的反应，认为合并与IPO预期下的算力成本压力有关。
 
-[阅读原文 →](https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/) · 来源：TechCrunch：AI
-
-### 2. 彭博社统计：Alphabet、Meta、微软、亚马逊、甲骨文承诺投入超3万亿美元建AI基础设施
-
-据彭博社10月31日报道，Alphabet、Meta、微软、亚马逊和甲骨文五大巨头承诺未来数年在数据中心等领域投入超过3万亿美元（约20.01万亿元人民币）。其中谷歌支出承诺超1万亿美元、接近一年前的八倍，Meta超8,000亿美元且近半用于最长分30年支付的租约；甲骨文是首家因投资AI数据中心而自由现金流转负的大型科技公司，预计到2028年恢复正自由现金流。
-
-[阅读原文 →](https://www.ithome.com/1/020/632.htm) · 来源：IT之家·人工智能
-
----
-
-## 📚 论文研究
-
-### 1. Wiz 报告“黑色十月”：九个 AI 开发者平台接连披露安全事件
-
-Wiz 研究团队梳理 10 月内至少九个 AI 开发者平台披露的安全事件，包括 Fireworks AI、Lightning AI、Railway、Warp、OpenCode 等，多起报告指向凭据窃取、agent swarm 攻击和以“蒸馏”为目的的窃取。
-
-[阅读原文 →](https://www.wiz.io/blog/black-october-for-ai-developer-platforms) · 来源：Wiz：Research
+[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647688028&idx=1&sn=e509269da2e0e0b4d4dfbb121b42204b) · 来源：公众号：数字生命卡兹克
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. OpenRouter 教程：用 Agent SDK 搭建常驻 AI Agent 监控 Hacker News
+### 1. OpenRouter 教程：用 Responses API 构建可在 Linux 沙箱验证 bug 的 AI 代码审查脚本
 
-OpenRouter 发布教程，演示用 @openrouter/agent 0.11.0 在 TypeScript 中搭建定时运行的常驻 AI Agent，监控 Hacker News 并生成摘要。
+OpenRouter 发布教程，介绍一个 233 行、仅用标准库的 review.py，通过 Responses API 组合 Files API、Shell 沙箱工具和 Apply Patch 工具，把变更文件上传到托管 Linux 沙箱，让模型实际运行检查确认 bug 并返回 V4A 补丁。
 
-[阅读原文 →](https://openrouter.ai/blog/tutorials/build-always-on-ai-agent/) · 来源：OpenRouter：Announcements
+[阅读原文 →](https://openrouter.ai/blog/tutorials/ai-code-review/) · 来源：OpenRouter：Announcements
 
----
+### 2. Claude Code 技巧：任务变难时输入 ultrathink 提升当前回合推理努力
 
-## 📌 快讯
+Addy Osmani 分享 Claude Code 技巧：当任务比预期更难时，在 Claude 工作期间输入 ultrathink，可提升该回合剩余部分的推理努力，该功能适用于最新版本的终端。他引用 @dmwlff 的帖子，其中提到 ultrathink 已回归 Claude Code CLI，此前因显得怪异且可能令人困惑曾被关闭。
 
-### 1. Anthropic IPO 招股文件披露近 9000 亿美元隐性债务
-
-[阅读原文 →](https://www.ithome.com/1/020/444.htm) · 来源：IT之家·人工智能
+[阅读原文 →](https://x.com/addyosmani/status/2116986087390486816) · 来源：X：Addy Osmani (@addyosmani)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-01](./2026-11-01) — Wiz 报告“黑色十月”：九个 AI 开发者平台接连披露安全事件
 - [2026-10-31](./2026-10-31) — Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
 - [2026-10-30](./2026-10-30) — Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型
 - [2026-10-29](./2026-10-29) — Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 - [2026-10-28](./2026-10-28) — Anthropic 招股书拆解：IPO 计划募资约 1000 亿美元背后的 11 个细节
 - [2026-10-27](./2026-10-27) — Anthropic 向 SEC 提交 S-1 文件启动 IPO，拟以代码 ANT 登陆纳斯达克
-- [2026-10-26](./2026-10-26) — 今日安静，无大事发生
 
 [查看全部往期日报 →](./archive)
 
