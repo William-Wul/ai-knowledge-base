@@ -1,7 +1,7 @@
 {
-  "capturedAt": "2026-10-09",
-  "sourceTotal": 1716,
-  "sourceFetched": 1716,
+  "capturedAt": "2026-11-03",
+  "sourceTotal": 2051,
+  "sourceFetched": 2051,
   "sourceUnavailable": 0,
   "selectionPolicy": "保留已收录内容与顺序；新增按完整提示词、效果、来源与可复用性筛选，排除重复原文；按本批指定分类与数量增量收录。",
   "cases": [
@@ -4148,6 +4148,706 @@
       "rank": 599,
       "category": "video",
       "sourcePromptSha256": "445e468c63eb504d37610368a6ba87a7f42a418f07fd9b8e59c3438a789eb118"
+    },
+    {
+      "slug": "photo-to-retro-blue-yellow-print-poster-lch1776244",
+      "rank": 600,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "9437ba5f24b641c1cd3ac5b8edf7c1017a71a167fde1850acf0a1f5d5e48fb2e"
+    },
+    {
+      "slug": "ugc-6f13437e4b40",
+      "rank": 601,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "1849c1c502fdd64feb720bdda54f34e29756ff2a0c3c6e6ffaa0c4c2515945f2"
+    },
+    {
+      "slug": "zeroframe-7edf1b40ae27",
+      "rank": 602,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "9294a3ee0284b663318aece45bb84dac3eada2d6691c971b462a5fdc48dbd85e"
+    },
+    {
+      "slug": "real-case-09-oggii-0",
+      "rank": 603,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "43aaae80c2e9f1e3c3568afd1198125e6f49e03a977b3bf39f8d8c3b0a108a85"
+    },
+    {
+      "slug": "seedance-cinematic-skincare-commercial-vertical-9-16-aspect-ratio-8640fa586f63",
+      "rank": 604,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "fa6bc33ebe5917057b3f7ac68c07bde1ccdb18b738e55eb3b2b3f77ea49df1ec"
+    },
+    {
+      "slug": "galaxyscale-demo-3f7f2a5a7888",
+      "rank": 605,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "690245347009bd5082f5480e7219a924c084dcdc8a3e935820fc5275654cb9cf"
+    },
+    {
+      "slug": "grok-bot-ai-c10a164196c1",
+      "rank": 606,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "33894b41b5f255ff5d219525471de3851db72ef46f26a5a879c7910ecd26d7b3"
+    },
+    {
+      "slug": "idli-4a8ed49d4ad9",
+      "rank": 607,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "bd03eed6b75dcb003fb2cf08393f40db4ec3c75a1ff74ed68504322af9554dfa"
+    },
+    {
+      "slug": "gemini-54727989bd6e",
+      "rank": 608,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "0c4b01fe44f070457c6b573bfdae67e521b55e69848abdd521014ea1175542ac"
+    },
+    {
+      "slug": "photo-to-poetic-halftone-print-poster-lch1776244",
+      "rank": 609,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "912dd66570c412814fd7b7b4c82cbc9219708310ae1fb4c5c5eaf3f2f4ab4f42"
+    },
+    {
+      "slug": "case-65e546a006dc",
+      "rank": 610,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "e86aafab96ef11110f3b92659da20aa9d77b5d2a462ed22699be76eed6d43cdd"
+    },
+    {
+      "slug": "minimax-gateflow-cli-686018a56185",
+      "rank": 611,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "c45e311a21eceb1548f5e40edea28afcd6cc0e1f9a395b9566992fcfa5d1a7f1"
+    },
+    {
+      "slug": "case-44da872a0d87",
+      "rank": 612,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "97d9efc79e603cefb31d939f3b9078e0589413866221c823ee11a37ff4c216aa"
+    },
+    {
+      "slug": "vlog-4317b7fdff57",
+      "rank": 613,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "73e307020bc340e3f36ace785129692d46b25a4e4cc6310b5bf224458b52756b"
+    },
+    {
+      "slug": "3d-saas-2b0c021f6a2f",
+      "rank": 614,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "ff5be29ba3d1a9c6b961188043c4dc97b9e74c1be03e3ac5aa364b4bf574b916"
+    },
+    {
+      "slug": "case-815e2d823159",
+      "rank": 615,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "ac89f59be5334ff1654ae06c1987d450903e0841d49c5672588719fb0757b3f9"
+    },
+    {
+      "slug": "liyue-ai-seedance-ai-10c1ac4f1c20",
+      "rank": 616,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "36b95a1fa2f45bab1cff25f57835f6699480260fe2570689e265820fac59ecfb"
+    },
+    {
+      "slug": "transform-data",
+      "rank": 617,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "677d3fcb3c1f2fe378d9d463a05925f39951c343dbb3a22920cc0f604fe73f6b"
+    },
+    {
+      "slug": "case-7ae7792f04fb",
+      "rank": 618,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "4798b868e555356057f685f382177fe5d01286dd6b6653b4c2b0b22839cd5e59"
+    },
+    {
+      "slug": "ugc-97bdc477915b",
+      "rank": 619,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "fec0d6dd3251ad1357678b68967847c9929a84ed5606673b849bd8323f536fb9"
+    },
+    {
+      "slug": "securify-data-security",
+      "rank": 620,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "9bc9f2f0d7bb0a9c759714a3814e38a3012362afe02fcf3d7fb79823950e0452"
+    },
+    {
+      "slug": "q-5c9bd23e9454",
+      "rank": 621,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "be0554dde047b242ef778ea48189911b20240818f45526fbf78d2107396e3279"
+    },
+    {
+      "slug": "case-6152b0808b14",
+      "rank": 622,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "3f3c800e96a2336326cf624cb5c7aa439af1ce3c019e6a14910a2b8dc0aa3ba0"
+    },
+    {
+      "slug": "40-svg-5229d1feb246",
+      "rank": 623,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "fbe7df64cff7d3b8ab778b673a9ee614bf452815fd31ef16c189b597ea0dd323"
+    },
+    {
+      "slug": "3-4-1-1-50-a75849d424e7",
+      "rank": 624,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "de213d5c0cee7b4951f0ed66c1ca5fdbffd763ec5f2752a67e3c6bb57a95e92e"
+    },
+    {
+      "slug": "created-with-minimax-h3-11c349",
+      "rank": 625,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "1c1f768a47fd7db3bf3402c3e52f828f3de297d6a4ef32f449c7f75cb0cbb651"
+    },
+    {
+      "slug": "dora-ai-231e2a7e1ec6",
+      "rank": 626,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "9d2df0fddaf07843869925936db91e7da566f4566b31e432061b180e4feae792"
+    },
+    {
+      "slug": "case-c8e2b24ad9b5",
+      "rank": 627,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "36e901472f700ad1cf342d78ac9ea21fea44b7def83dd1867ccfd53364de16b7"
+    },
+    {
+      "slug": "case-723eadafece5",
+      "rank": 628,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "1b368d2096273a78e99aeb96b6863e0bd580ac8d8fb84dab16bb0ed47e06bcf7"
+    },
+    {
+      "slug": "dora-ai-58f4cdc4795f",
+      "rank": 629,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "0eb74120605a6ccd946a4cbc73423a5cd7884b144cb73e355b65334f34b05825"
+    },
+    {
+      "slug": "case-6ec2162f3f24",
+      "rank": 630,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "d8a986abf6dfeb6d5538e758ffe7e50cb34ea8172fb41172ec83ff8e99a70232"
+    },
+    {
+      "slug": "aiwithlariab-seedance-ai-801301860e89",
+      "rank": 631,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "6741011ea206fbbe78ca8a58db4288e6ac4811eb6f7af1f33748d3719408b1fe"
+    },
+    {
+      "slug": "wellbeing-os",
+      "rank": 632,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "6883361e5addea9ca09740bb047d4050683b32312c5b97dbc43811c530f95662"
+    },
+    {
+      "slug": "case-2440dea2825f",
+      "rank": 633,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "69695968dac569cef446d357a379c4716e5162b18c7f7f6ce70e8b290fea23df"
+    },
+    {
+      "slug": "case-98ee40004d15",
+      "rank": 634,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "ab994e2f79aad1d7fd595ed631300d7ca0a6dfd20cafb896f61c38b27ba0b659"
+    },
+    {
+      "slug": "case-9fdee4d2d483",
+      "rank": 635,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "93ecfeb6127db9408bcadcf9b89263fdfab44d36dd666e2e10cf8f9064d571f4"
+    },
+    {
+      "slug": "nano-banana-create-a-stylish-full-body-editorial-fashion-illustration-of-a-young-woman-in-afd9f20ffee8",
+      "rank": 636,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "c1816ca001a48097ff545a82b5adbeb82b7613fad8450c904c0e3c0769e8afe6"
+    },
+    {
+      "slug": "case-72e571e9353d",
+      "rank": 637,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "f6388eed03026b7ef8a542b11ec7affdfe32027b5387a048095d9da676533024"
+    },
+    {
+      "slug": "svg-html-c03f30659230",
+      "rank": 638,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "558cad74f046255e7b41b2b855e4162705a4debecc8be3e000651bd2a3f8d202"
+    },
+    {
+      "slug": "midjourney-115ca00e0bea",
+      "rank": 639,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "21fc389792ae6c9a6a63f540b9b594c78bd54ad3fdfcee591da5b6843af5a847"
+    },
+    {
+      "slug": "seedance-cinematic-19-second-commercial-ad-for-a-luxury-perfume-142bf48ed0d2",
+      "rank": 640,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "4e7acfc7e5126057ee5c42ad4bbc225a345effaa6d810fbc55cbc6e954ecdaa5"
+    },
+    {
+      "slug": "oren-studio-e212a06e8569",
+      "rank": 641,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "794227f1a46664636f2e2e1f95e94f6f253c5cb4ef6caf46f687cd6eb4a80680"
+    },
+    {
+      "slug": "3-slides-18e4f701fd60",
+      "rank": 642,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "60ded37d873b087c322844c5c0eb5db5ea6080b03b326c139c93ce8d8c09b83e"
+    },
+    {
+      "slug": "seedance-a-clean-minimalist-commercial-beauty-video-aesthetic-with-soft-pastel-purple-a-42d26dd79b36",
+      "rank": 643,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "9be298fcf68fd776d81434911434166903bc77e8438bd7a922bab63997fa839d"
+    },
+    {
+      "slug": "cognitra-feature",
+      "rank": 644,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "c457671bf0c32c0034ae80d8c3ca8ce0ad4fe8aba78abb7ef6edda3daefdf1e9"
+    },
+    {
+      "slug": "nano-banana-create-a-premium-editorial-poster-featuring-a-two-part-visual-composition-7ae4da60ca4d",
+      "rank": 645,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "a7347439665bfb87475287a97ba96e6af8c5f11eb62f1b337bb57984cedbfe52"
+    },
+    {
+      "slug": "seedance-high-end-cosmetic-product-commercial-8k-resolution-cinematic-lighting-studio-88b6d439e00b",
+      "rank": 646,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "dbaeb09d8c0f7bcd2d87cddce49e7c7dc69762057bdf47b33d923444e9dd9888"
+    },
+    {
+      "slug": "ai-0f055800c6f5",
+      "rank": 647,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "a6e4b64d18ffd44e76b60723ce0c2d70bbcfea6555d18237b954b384efd00ef1"
+    },
+    {
+      "slug": "case-6a9ead1b41ba",
+      "rank": 648,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "3d2bf5ea51dd161c1861b2fca7b085b6fdbfb28a89277ecfba2fe894ff6a72c8"
+    },
+    {
+      "slug": "seedance-create-a-30-second-photorealistic-japanese-winter-lifestyle-vlog-in-a-tradition-f4aa8ee8d702",
+      "rank": 649,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "d535637b9824e341ca436f134d487fc29f6e74427be9fd64220d75928407cb83"
+    },
+    {
+      "slug": "wanderful-hero",
+      "rank": 650,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "a88ec2d864bdaff152230391d1725468982663d6abec1fe71ee124ed306e4a98"
+    },
+    {
+      "slug": "case-215bdf3b4e8d",
+      "rank": 651,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "bbce4547773077162dfd13d1da4767fe62c09ad7d7ba6cd4f823be7f69c4fd03"
+    },
+    {
+      "slug": "seedance-created-a-video-in-soft-anime-style-of-a-fluffy-white-cat-with-big-sparkling-te-5d65967aaf57",
+      "rank": 652,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "9b1a6eefba41699a039aee5b9a78d1573dbf78e51f9d78766f02544c19bc2cea"
+    },
+    {
+      "slug": "i-made-an-interactive-dumpling-feast-8175f90663ea",
+      "rank": 653,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "571a61a34bb2a1374c7c77ea26caaa298d2f4f818ca8a15de64ea0dc58635d68"
+    },
+    {
+      "slug": "case-862ef5c29284",
+      "rank": 654,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "58a17e7c18e6b4ee9af1188922d901e107469242001a82c21f0b9f33c20a259e"
+    },
+    {
+      "slug": "cats-chasing-via-red-mini-motorcycle",
+      "rank": 655,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "bbcc079b2e67c7c74cb18aeaef5091dc2675b0bd1758abc25a672cd94e1027d1"
+    },
+    {
+      "slug": "i-ve-been-experimenting-with-turning-grok-bot-into-my-own-personal-teacher",
+      "rank": 656,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "f3c12f7a93333e00e577eb8b7f8d8ce3ba5e489e9dc6315660c7c9ff291a419c"
+    },
+    {
+      "slug": "bento-8-a1c6fd3c7c70",
+      "rank": 657,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "fbfe4ff63e360e4f03967150a4351c515513113af3d3d36231a24b64b5519974"
+    },
+    {
+      "slug": "case-ca50a10508f6",
+      "rank": 658,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "7950e36468b56c803ac7520377cec92a044486b5368831ca47e1a9fcf35f98ae"
+    },
+    {
+      "slug": "neo-brutalism-57ba09899348",
+      "rank": 659,
+      "category": "web",
+      "editorialScore": 0,
+      "sourcePromptSha256": "7de3e399ca3a52662c785da085768c9ce0e4205e800843b0b2ae167b0e2473fb"
+    },
+    {
+      "slug": "gpt-image-turn-this-portrait-photo-into-a-single-high-end-halftone-travel-collage-poster-d72f910456eb",
+      "rank": 660,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "f325f35626d15d0a8f98ee4a90e5152873bb038ee97c0fae7e2eff1154b70540"
+    },
+    {
+      "slug": "seedance-create-a-highly-realistic-cinematic-winter-video-of-a-peaceful-woman-staying-in-d5e93fbf164d",
+      "rank": 661,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "f8330971f6d989fd56a79d1039aef91e3934c7101d980bb57dc76cb322bf0bbf"
+    },
+    {
+      "slug": "midjourney-19ed7d946cbb",
+      "rank": 662,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "a408c01004de098c643ee348e68d36216c9d9c01401675dd2a94463ac14fe632"
+    },
+    {
+      "slug": "seedance-a-cinematic-3d-pixar-style-animated-short-of-a-beautiful-young-woman-with-long-7a1efe5f0a2a",
+      "rank": 663,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "02c7f10f9fd178fbc4483f8029f97def5d1db8d19f6a606c3135e1378a325dd5"
+    },
+    {
+      "slug": "adhd-c8a69ca12c30",
+      "rank": 664,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "da8928110be3bdc606da8a536606705105040de5ef5457dd42f6b21ec7f64a50"
+    },
+    {
+      "slug": "create-a-30-second-cinematic-3d-animated-short-film-titled-the-last-piece-of-b-51bf68bf458c",
+      "rank": 665,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "4cc57269edbbfc34033c81d4591b146136c24c342ec69e699d0add05c1bde2d7"
+    },
+    {
+      "slug": "case-ff91f24960ec",
+      "rank": 666,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "10c726cb6e9d6c04187813ac24e70ba367e0bd91f371518475067ae93de0021e"
+    },
+    {
+      "slug": "seedance-create-a-photorealistic-30-second-personal-travel-vlog-featuring-the-exact-same-d5ee016defda",
+      "rank": 667,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "4d538775c7dcd6fd1d33cd1f19958989eaf84b057a2d08598d379158f3b21569"
+    },
+    {
+      "slug": "9-instagram-dc3c00872593",
+      "rank": 668,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "7d531e5ee922d47e1c3a39957e0c2b577e536918097ea6898bfd62adf91b913b"
+    },
+    {
+      "slug": "seedance-2-5-create-a-cinematic-ultra-realistic-15-second-stop-motion-style-miniature-craft-c43cb05be517",
+      "rank": 669,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "bb7be4cb7fd532caf0044599cae40e38e3ad84f4ea9d3ae8499f925b4f933a6f"
+    },
+    {
+      "slug": "case-364cabcdb35f",
+      "rank": 670,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "d65557d9c3fdd6212f6457290a60cdf4270434ba838522154043ed487019b10e"
+    },
+    {
+      "slug": "seedance-2-5-create-a-cinematic-ultra-realistic-17-second-live-action-food-sequence-showing-6c9fa0508f22",
+      "rank": 671,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "96ea015168ba410e538212a074a2e1b8eaca3666409cc44ae84b0a770b191922"
+    },
+    {
+      "slug": "case-595b5f3d6691",
+      "rank": 672,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "21d241f492c9b34195fccd1e8ffcb59132a5aabec8a446622f9dfcc584e69499"
+    },
+    {
+      "slug": "yesandyou-seedance-ai-d92a0a788b85",
+      "rank": 673,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "e28131408245c0dea1f7ed51163da8d05b3d28ccbcd932282af1d3cd3d36f815"
+    },
+    {
+      "slug": "midjourney-36d68a6ca48e",
+      "rank": 674,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "6e00082031351a70ee7be9d2e5f5b19b93fbf2428b2832b2b25a36a37083dfa9"
+    },
+    {
+      "slug": "youmind-travel-vlog-city-to-beach",
+      "rank": 675,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "0d2d0242a417ce5ca15f60d711aef51dffdf906267fd3da0e5a6ce10f1ca3e99"
+    },
+    {
+      "slug": "midjourney-v8-raw-3de7ffae830a",
+      "rank": 676,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "a6370f1f15947a00d7e7de6c571f8d364ae1119b1b76e42bfd069a41d58ab198"
+    },
+    {
+      "slug": "case-398be18644ee",
+      "rank": 677,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "21098ca81c0cae730d3db9c19b0850fb044e40330794f02095b987cb29043566"
+    },
+    {
+      "slug": "midjourney-730d48a2d858",
+      "rank": 678,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "0a80c6687b13ca397d570c403e1dd58e34225bde1c916bfe980e6386cb737eb1"
+    },
+    {
+      "slug": "seedance-2-5-a-high-definition-4k-cinematic-video-of-a-white-and-orange-tabby-cat-sitting-in-1d06290d933c",
+      "rank": 679,
+      "category": "video",
+      "editorialScore": 0,
+      "sourcePromptSha256": "b8a80db57b500964f32517c7759c11fd223059d988f77497b10fd38ff121c2ea"
+    },
+    {
+      "slug": "case-94e8818b884f",
+      "rank": 680,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "176fe11c497da7373304252d53e15d65345a63afa317645f02247225b2dfb45a"
+    },
+    {
+      "slug": "midjourney-8532566eb928",
+      "rank": 681,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "721bceb88fa7333482a1bdab2aece65c72e732c1e454c7d327a80e162f465838"
+    },
+    {
+      "slug": "x-1ce2526a228f",
+      "rank": 682,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "17783a7ea2a8e150e00bd70b2e8abe59b7196e180f7f5d704a7da5e4246b7802"
+    },
+    {
+      "slug": "case-c01e0ddbd711",
+      "rank": 683,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "23c2de9ff24ea875fe4f762c11b5483c20f8479b12cc1665739c5adba97770b9"
+    },
+    {
+      "slug": "midjourney-243d5283a68d",
+      "rank": 684,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "066c586f71b0ebaf65db055b97c2bd34203002e50673a33cd38f96cdda3ec423"
+    },
+    {
+      "slug": "case-c4d37a890ce1",
+      "rank": 685,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "a5e68a08e6d1e6cfde8e20fcd58638fd058b0dafab99822749e19040bdb329ac"
+    },
+    {
+      "slug": "midjourney-6e4024141a3d",
+      "rank": 686,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "b48fecb189b4f92b21b1cc6fc39189c7eb05fd939c35936ab1453e64f0a23085"
+    },
+    {
+      "slug": "case-69c3e4ebf4ae",
+      "rank": 687,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "69ac3ab23b891fa85898b58094fca5e3233773d43741a04e28970733b113aff2"
+    },
+    {
+      "slug": "nano-banana-created-with-google-gemini-nano-banana-pro-3d5aae668d2d",
+      "rank": 688,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "60b2cb9a752a4fea97d25926ce21f8f97e4a35ef42e5c6254d1c6dadc657203a"
+    },
+    {
+      "slug": "gpt-image-2-5-27-0c673704c99c",
+      "rank": 689,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "6b82f4b4a174a05c5184626e5dda65961774cedbc7fbb8398101211869c99d81"
+    },
+    {
+      "slug": "case-666480249199",
+      "rank": 690,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "6e905967d6caca34f68ace77e9cff86b0c8e96b0f5c37957bb3d7c6a22dfc9cd"
+    },
+    {
+      "slug": "case-078643a74462",
+      "rank": 691,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "f7027271799a093e62adea0a22fa6b5f9c0e8efaf759abad9c469acbd66b0282"
+    },
+    {
+      "slug": "case-d81ac2a534a2",
+      "rank": 692,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "44c5ff768091d09e1c5e47bb00ea37b4fe4927b908394ce163e562a50a9843b3"
+    },
+    {
+      "slug": "case-ec38c48079bc",
+      "rank": 693,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "1d6f1b284889cae7197df9b9bbf9e9b91e495cc64cb532170f33831bd3723b11"
+    },
+    {
+      "slug": "case-57f8fef4d763",
+      "rank": 694,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "083792691acb3489ffb737bef55e976416d51f290750789d408916091720ac5c"
+    },
+    {
+      "slug": "case-15a04aeb5815",
+      "rank": 695,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "2562840ae0b1814560ffe0e28274cf75f17d0cfd70651740d9322feb8c4ecbce"
+    },
+    {
+      "slug": "case-2602d71a7684",
+      "rank": 696,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "c09166683aaf82d3638aef43582f04e8091cf47a17c541bd6e0ffc3b11d13bdc"
+    },
+    {
+      "slug": "gpt-image-2-5-the-image-is-in-a-3-4-vertical-composition-divided-into-two-regions-with-a-st-09fb7ad6f330",
+      "rank": 697,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "19ae903a195c4e55ad41eeabca85cc012a8db523ac4d4c0c13f70cfb14a57d53"
+    },
+    {
+      "slug": "gpt-image-2-5-transform-the-uploaded-photo-into-a-cute-minimalist-hand-drawn-doodle-illustrat-d087bfd31c56",
+      "rank": 698,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "59e1f2ce5a8af3d18f79a07b0259a24dff4b323f21492e6e7df7cf25f77adc6d"
+    },
+    {
+      "slug": "using-the-uploaded-reference-photo-as-the-single-source-of-truth-for-the-person-5215f5c8eab6",
+      "rank": 699,
+      "category": "image",
+      "editorialScore": 0,
+      "sourcePromptSha256": "a55c77ab58b2c5bf4e5e85ac2624bd8cfa901cabdb41a553cc219d2d8e2e8eb6"
     }
   ],
   "batches": [
@@ -4177,6 +4877,16 @@
         "image": 75,
         "web": 30,
         "video": 45
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "added": 100,
+      "total": 699,
+      "categories": {
+        "image": 50,
+        "video": 30,
+        "web": 20
       }
     }
   ]

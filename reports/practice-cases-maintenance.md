@@ -1,5 +1,15 @@
 # AI 实践案例集维护
 
+## 2026-11-03：增量新增 100 个（v1.83）
+
+- 599 → 699：新增图片 50、视频 30、网站与工具 20；累计 275/314/110。原有完整数据、顺序、详情、封面与标签保持。
+- 来源目录本次为 2051 条；复用历史缓存并补取新目录，最终 100 条逐条重新请求详情。原始响应、排除记录、审阅与媒体信息保存在忽略缓存 `docs/.vitepress/cache/goodcase/batch699/`。
+- 本批手工审定 `selection-candidates.json` 后，通过 `python3 scripts/import-practice-cases.py --append --expected-add 100` 增量导入；不要运行旧的覆盖导入。100 条中文说明与练习保存在编辑覆盖，标签单独存储。四条日文来源补完整译文。
+- 去重除标识与规范化原文外，同时检查原始帖子与媒体地址；不同提示词共用同一媒体也应排除。本批最终没有与旧库或新增条目重复的来源帖子和媒体。
+- 验收：`node scripts/case-catalog-integrity.mjs 7db0b9e0144ee7b5a3de95879558d66e177aab8a 100 '{"image":50,"video":30,"web":20}'` 与 `npm run docs:build`。
+- 43 段视频媒体信息可读取；代表香水案例实际播放至 19.156009 秒结束。没有复现生成作品，亦不把媒体检查说成全量播放验收。
+- 完整记录见 `reports/practice-cases-699-test-report.md`。William 已于 2026-11-03 验收并确认发布；线上结果在发布后另行核对。
+
 - 数据正本：`docs/.vitepress/data/practice-cases.json`；每个案例一个稳定 slug，详情页在 `docs/cases/`。
 - 内容来源：Goodcase 公开列表与单条详情接口。必须请求详情取得完整原文，不能把列表预览补写成全文。
 - 分类由本站按用途整理为 copy / image / video / web / tool。网站展示页不因为介绍某款工具就归为工具；工具组件需明确功能边界。
