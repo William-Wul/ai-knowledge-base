@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 16,
   "evaluationCount": 55,
-  "sourceUpdatedAt": "11/02 14:05",
-  "syncedAt": "2026-11-02T10:56:04.669Z",
+  "sourceUpdatedAt": "11/03 14:05",
+  "syncedAt": "2026-11-03T10:45:33.458Z",
   "models": [
     {
       "rank": 1,
@@ -16,8 +16,8 @@
       "evidenceCount": 55,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥26.61",
-      "outputPrice": "¥133.06",
+      "inputPrice": "¥26.59",
+      "outputPrice": "¥132.97",
       "score": 73.8
     },
     {
@@ -29,8 +29,8 @@
       "evidenceCount": 48,
       "evidenceStatus": "覆盖92%",
       "cachePrice": "¥1.66",
-      "inputPrice": "¥66.53",
-      "outputPrice": "¥332.64",
+      "inputPrice": "¥66.48",
+      "outputPrice": "¥332.42",
       "score": 72.1
     },
     {
@@ -42,8 +42,8 @@
       "evidenceCount": 55,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥6.65",
-      "inputPrice": "¥66.53",
-      "outputPrice": "¥332.64",
+      "inputPrice": "¥66.48",
+      "outputPrice": "¥332.42",
       "score": 71.6
     },
     {
@@ -55,8 +55,8 @@
       "evidenceCount": 50,
       "evidenceStatus": "覆盖95%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥26.61",
-      "outputPrice": "¥133.06",
+      "inputPrice": "¥26.59",
+      "outputPrice": "¥132.97",
       "score": 71.5
     },
     {
@@ -67,9 +67,9 @@
       "releaseDate": "2026-09-28",
       "evidenceCount": 55,
       "evidenceStatus": "覆盖100%",
-      "cachePrice": "¥0.67",
-      "inputPrice": "¥13.31",
-      "outputPrice": "¥66.53",
+      "cachePrice": "¥0.66",
+      "inputPrice": "¥13.3",
+      "outputPrice": "¥66.48",
       "score": 71.4
     },
     {
@@ -80,9 +80,9 @@
       "releaseDate": "2026-09-29",
       "evidenceCount": 54,
       "evidenceStatus": "覆盖97%",
-      "cachePrice": "¥0.67",
-      "inputPrice": "¥13.31",
-      "outputPrice": "¥66.53",
+      "cachePrice": "¥0.66",
+      "inputPrice": "¥13.3",
+      "outputPrice": "¥66.48",
       "score": 69.9
     },
     {
@@ -93,9 +93,9 @@
       "releaseDate": "2026-07-24",
       "evidenceCount": 42,
       "evidenceStatus": "覆盖90%",
-      "cachePrice": "¥3.33",
-      "inputPrice": "¥33.26",
-      "outputPrice": "¥166.32",
+      "cachePrice": "¥3.32",
+      "inputPrice": "¥33.24",
+      "outputPrice": "¥166.21",
       "score": 69.2
     },
     {
@@ -108,7 +108,7 @@
       "evidenceStatus": "覆盖58%",
       "cachePrice": "¥0.33",
       "inputPrice": "¥6.65",
-      "outputPrice": "¥33.26",
+      "outputPrice": "¥33.24",
       "score": 68.9
     },
     {
@@ -133,8 +133,8 @@
       "evidenceCount": 36,
       "evidenceStatus": "覆盖79%",
       "cachePrice": "¥6.65",
-      "inputPrice": "¥66.53",
-      "outputPrice": "¥332.64",
+      "inputPrice": "¥66.48",
+      "outputPrice": "¥332.42",
       "score": 68.7
     },
     {
@@ -146,8 +146,8 @@
       "evidenceCount": 40,
       "evidenceStatus": "覆盖82%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥26.61",
-      "outputPrice": "¥133.06",
+      "inputPrice": "¥26.59",
+      "outputPrice": "¥132.97",
       "score": 67.3
     },
     {
@@ -158,9 +158,9 @@
       "releaseDate": "2026-07-09",
       "evidenceCount": 41,
       "evidenceStatus": "覆盖84%",
-      "cachePrice": "¥3.33",
-      "inputPrice": "¥33.26",
-      "outputPrice": "¥199.59",
+      "cachePrice": "¥3.32",
+      "inputPrice": "¥33.24",
+      "outputPrice": "¥199.45",
       "score": 66.2
     },
     {
@@ -185,8 +185,8 @@
       "evidenceCount": 41,
       "evidenceStatus": "覆盖90%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥13.31",
-      "outputPrice": "¥66.53",
+      "inputPrice": "¥13.3",
+      "outputPrice": "¥66.48",
       "score": 65.4
     },
     {
@@ -198,8 +198,8 @@
       "evidenceCount": 39,
       "evidenceStatus": "覆盖79%",
       "cachePrice": "¥1",
-      "inputPrice": "¥8.32",
-      "outputPrice": "¥28.27",
+      "inputPrice": "¥8.31",
+      "outputPrice": "¥28.26",
       "score": 64
     },
     {
@@ -211,8 +211,8 @@
       "evidenceCount": 53,
       "evidenceStatus": "覆盖97%",
       "cachePrice": "¥1",
-      "inputPrice": "¥9.98",
-      "outputPrice": "¥49.9",
+      "inputPrice": "¥9.97",
+      "outputPrice": "¥49.86",
       "score": 63.3
     },
     {
@@ -262,9 +262,9 @@
       "releaseDate": "2026-04-23",
       "evidenceCount": 31,
       "evidenceStatus": "覆盖68%",
-      "cachePrice": "¥3.33",
-      "inputPrice": "¥33.26",
-      "outputPrice": "¥199.59",
+      "cachePrice": "¥3.32",
+      "inputPrice": "¥33.24",
+      "outputPrice": "¥199.45",
       "score": 62.7
     },
     {
@@ -276,8 +276,8 @@
       "evidenceCount": 36,
       "evidenceStatus": "覆盖79%",
       "cachePrice": "¥1",
-      "inputPrice": "¥9.98",
-      "outputPrice": "¥49.9",
+      "inputPrice": "¥9.97",
+      "outputPrice": "¥49.86",
       "score": 62.6
     },
     {
@@ -288,10 +288,10 @@
       "releaseDate": "2026-09-21",
       "evidenceCount": 53,
       "evidenceStatus": "覆盖97%",
-      "cachePrice": "¥3.33",
-      "inputPrice": "¥13.31",
-      "outputPrice": "¥39.92",
-      "score": 62.5
+      "cachePrice": "¥3.32",
+      "inputPrice": "¥13.3",
+      "outputPrice": "¥39.89",
+      "score": 62.6
     },
     {
       "rank": 23,
@@ -314,9 +314,9 @@
       "releaseDate": "2026-05-28",
       "evidenceCount": 35,
       "evidenceStatus": "覆盖74%",
-      "cachePrice": "¥3.33",
-      "inputPrice": "¥33.26",
-      "outputPrice": "¥166.32",
+      "cachePrice": "¥3.32",
+      "inputPrice": "¥33.24",
+      "outputPrice": "¥166.21",
       "score": 62.3
     },
     {
@@ -328,8 +328,8 @@
       "evidenceCount": 51,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥0.0665",
-      "inputPrice": "¥0.67",
-      "outputPrice": "¥3.33",
+      "inputPrice": "¥0.66",
+      "outputPrice": "¥3.32",
       "score": 62.1
     },
     {
@@ -340,9 +340,9 @@
       "releaseDate": "2026-08-12",
       "evidenceCount": 40,
       "evidenceStatus": "覆盖87%",
-      "cachePrice": "¥3.33",
-      "inputPrice": "¥13.31",
-      "outputPrice": "¥39.92",
+      "cachePrice": "¥3.32",
+      "inputPrice": "¥13.3",
+      "outputPrice": "¥39.89",
       "score": 61.8
     },
     {
@@ -380,8 +380,8 @@
       "evidenceCount": 37,
       "evidenceStatus": "覆盖79%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥13.31",
-      "outputPrice": "¥79.83",
+      "inputPrice": "¥13.3",
+      "outputPrice": "¥79.78",
       "score": 61.5
     },
     {
@@ -392,9 +392,9 @@
       "releaseDate": "2026-04-16",
       "evidenceCount": 27,
       "evidenceStatus": "覆盖63%",
-      "cachePrice": "¥3.33",
-      "inputPrice": "¥33.26",
-      "outputPrice": "¥166.32",
+      "cachePrice": "¥3.32",
+      "inputPrice": "¥33.24",
+      "outputPrice": "¥166.21",
       "score": 60.8
     }
   ]
