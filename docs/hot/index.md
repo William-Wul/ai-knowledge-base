@@ -1,53 +1,87 @@
 ---
 title: AI 日报
-description: 2026-11-02 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-02
+description: 2026-11-03 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-03
 ---
 
-# 🔥 AI 日报 · 2026-11-02
+# 🔥 AI 日报 · 2026-11-03
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## OpenAI 12月起将ChatGPT与Codex合并为统一Token额度
+## OpenAI 推出 Grid Protectors 计划，从 Georgia 校园开始支持电网削峰
 
-作者引述OpenAI凌晨更新的帮助文档称，从12月开始Plus和Pro用户的ChatGPT聊天与Codex用量将合并为同一Token额度，仅Instant聊天不受影响。作者回顾此前按条数计费的历史、一个月内Codex Pro额度先降后恢复的运营反复，以及社区在GitHub上提issue抗议的反应，认为合并与IPO预期下的算力成本压力有关。
+OpenAI 推出 Grid Protectors 计划，与电力公司、监管机构和政策制定者合作，让未来算力校园在电网紧张时降低用电需求，首站为 Effingham County 校园。
+
+## 🚀 产品发布/更新
+
+### 1. Claude Platform 推出 message threads 公测，降低长会话智能体延迟
+
+Anthropic 在 Claude Platform 推出 message threads 公测，智能体每轮只需发送新增消息而无需重发全部对话历史，从而缩短首 token 时间。
+
+[阅读原文 →](https://claude.com/blog/message-threads) · 来源：Claude：Blog
+
+### 2. 腾讯混元发布 Hyra 2.0：让通用 agent 研发可复用的科学工具与模型
+
+腾讯混元发布 Hyra 2.0，将自动化科研重点从直接解题转向由 agent 研发和升级科学模型、工作流与软件工具。系统采用 Overall、Mission、Worker 三层分工，接入企业微信、计算平台和代码仓库的实际研发环境，成果已公开在 GitHub 仓库。
+
+[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzkwODU2OTQyNQ%3D%3D&mid=2247498763&idx=1&sn=279f8fb4e43a987fdc0aa2af0b0f7958) · 来源：公众号：腾讯混元
+
+---
 
 ## 🌐 行业动态
 
-### 1. OpenAI 12月起将ChatGPT与Codex合并为统一Token额度
+### 1. OpenAI 推出 Grid Protectors 计划，从 Georgia 校园开始支持电网削峰
 
-作者引述OpenAI凌晨更新的帮助文档称，从12月开始Plus和Pro用户的ChatGPT聊天与Codex用量将合并为同一Token额度，仅Instant聊天不受影响。作者回顾此前按条数计费的历史、一个月内Codex Pro额度先降后恢复的运营反复，以及社区在GitHub上提issue抗议的反应，认为合并与IPO预期下的算力成本压力有关。
+OpenAI 推出 Grid Protectors 计划，与电力公司、监管机构和政策制定者合作，让未来算力校园在电网紧张时降低用电需求，首站为 Effingham County 校园。
 
-[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647688028&idx=1&sn=e509269da2e0e0b4d4dfbb121b42204b) · 来源：公众号：数字生命卡兹克
+[阅读原文 →](https://openai.com/index/grid-protectors-program) · 来源：OpenAI：官网动态
+
+### 2. Anthropic 季度营收增长十二倍至近 170 亿美元，但净亏损达 233 亿美元
+
+据 Bloomberg 与 The Information，Anthropic 该季度营收近 170 亿美元，为一年前的十二倍，但运营成本达 175 亿美元，季度净亏损 233 亿美元，高于去年同期的 121 亿美元。
+
+[阅读原文 →](https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/) · 来源：The Decoder：AI News
+
+---
+
+## 📚 论文研究
+
+### 1. OpenAI 训练并部署激活分类器作为前沿模型安全监控层
+
+OpenAI 自 GPT-5.6 起在其最强模型的内部和外部流量上部署激活分类器（probes），利用模型内部激活逐 token 实时评分，可在生成中途阻断违规回复和工具调用并交由推理模型复审。实验显示 probes 比更大的文本分类器对测试的越狱攻击更鲁棒，准确率随模型能力提升，且在后训练各检查点间迁移良好，但需为新基础模型重新训练，且只能检测可显式训练的已知违规类型。
+
+[阅读原文 →](https://alignment.openai.com/training-activation-classifiers/) · 来源：OpenAI：Alignment 研究博客
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. OpenRouter 教程：用 Responses API 构建可在 Linux 沙箱验证 bug 的 AI 代码审查脚本
+### 1. 数字生命卡兹克分享折腾一年的Agent自动化系统架构
 
-OpenRouter 发布教程，介绍一个 233 行、仅用标准库的 review.py，通过 Responses API 组合 Files API、Shell 沙箱工具和 Apply Patch 工具，把变更文件上传到托管 Linux 沙箱，让模型实际运行检查确认 bug 并返回 V4A 补丁。
+自媒体作者卡兹克分享自己搭建近一年的Agent自动化系统，核心是把任务起点从人身上移开，由事件触发Agent工作。系统分为自动化中台、Agent执行、CI中台和飞书决策四层：中台用rules.json统一管理事件触发和Agent调度，本地MacMini跑Agent任务，自建CI中台完成审查、检查、合并、发布、核实五步，只在删数据、花钱、改方向等关键决策时通过飞书卡片找作者拍板。
 
-[阅读原文 →](https://openrouter.ai/blog/tutorials/ai-code-review/) · 来源：OpenRouter：Announcements
+[阅读原文 →](https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647688060&idx=1&sn=e00d7e57b6f0e3670f0e267e677047df) · 来源：公众号：数字生命卡兹克
 
-### 2. Claude Code 技巧：任务变难时输入 ultrathink 提升当前回合推理努力
+---
 
-Addy Osmani 分享 Claude Code 技巧：当任务比预期更难时，在 Claude 工作期间输入 ultrathink，可提升该回合剩余部分的推理努力，该功能适用于最新版本的终端。他引用 @dmwlff 的帖子，其中提到 ultrathink 已回归 Claude Code CLI，此前因显得怪异且可能令人困惑曾被关闭。
+## 📌 快讯
 
-[阅读原文 →](https://x.com/addyosmani/status/2116986087390486816) · 来源：X：Addy Osmani (@addyosmani)
+### 1. Anthropic 算力与基础设施合同承诺达 $895.4B，其中 $447.5B 须在 2031 年前支付
+
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2117368258571784296) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-02](./2026-11-02) — OpenAI 12月起将ChatGPT与Codex合并为统一Token额度
 - [2026-11-01](./2026-11-01) — Wiz 报告“黑色十月”：九个 AI 开发者平台接连披露安全事件
 - [2026-10-31](./2026-10-31) — Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
 - [2026-10-30](./2026-10-30) — Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型
 - [2026-10-29](./2026-10-29) — Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 - [2026-10-28](./2026-10-28) — Anthropic 招股书拆解：IPO 计划募资约 1000 亿美元背后的 11 个细节
-- [2026-10-27](./2026-10-27) — Anthropic 向 SEC 提交 S-1 文件启动 IPO，拟以代码 ANT 登陆纳斯达克
 
 [查看全部往期日报 →](./archive)
 
