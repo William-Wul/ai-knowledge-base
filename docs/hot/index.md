@@ -1,119 +1,131 @@
 ---
 title: AI 日报
-description: 2026-11-04 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-04
+description: 2026-11-05 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-05
 ---
 
-# 🔥 AI 日报 · 2026-11-04
+# 🔥 AI 日报 · 2026-11-05
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## AMD 发布 2026 年三季度财报，预计 2027 年营收增长超 80%
+## 腾讯混元 Hy4 正式发布，首次引入视觉与电脑操作能力
 
-AMD 公布 2026 年三季度财报，预计 2027 年营收增长超 80%，高于分析师建模的 77%，CEO Lisa Su 称数据中心芯片将占明年销售额的 80%。
+腾讯混元发布 Hy4 正式版，相比 Hy4 preview 扩展预训练与后训练规模，首次引入视觉能力和电脑操作支持，GameDev 与 GameLogic 评测分别提升 19.1% 和 9.8%。
 
 ## 🤖 模型发布/更新
 
-### 1. Mistral Large 4 以开放权重发布并附技术报告
+### 1. 腾讯混元 Hy4 正式发布，首次引入视觉与电脑操作能力
 
-Mistral 团队成员 Pierre Stock 宣布 ML4（Mistral Large 4）正式开放权重，称其在代码智能体与网络安全方向具备前沿能力，且比三周前的 Preview 版本更高效、更紧凑。技术报告讲述其研发过程：https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/assets/technical_report.pdf，Mistral AI 官方转发并称可在 alphaxiv 上阅读这一研发故事（https://www.alphaxiv.org/abs/2611.mistral-large-4）。
+腾讯混元发布 Hy4 正式版，相比 Hy4 preview 扩展预训练与后训练规模，首次引入视觉能力和电脑操作支持，GameDev 与 GameLogic 评测分别提升 19.1% 和 9.8%。
 
-[阅读原文 →](https://x.com/MistralAI/status/2117562068220195097) · 来源：X：Mistral AI (@MistralAI)
+[阅读原文 →](https://mp.weixin.qq.com/s/JrQeiqx3PXBDSGish2IzwA) · 来源：公众号：腾讯混元
+
+### 2. Moonshot AI 在 HuggingFace 开放 2.8T 参数 Kimi K3.1 Pro 权重
+
+Moonshot AI（@Kimi_Moonshot）在 HuggingFace 开放 Kimi K3.1 Pro 权重（https://huggingface.co/moonshotai/Kimi-K3.1-Pro）。
+
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2118059884055024027) · 来源：X：Rohan Paul (@rohanpaul_ai)
+
+### 3. Cognition 发布编码模型 SWE-2 Flash，Terminal-Bench 4.0 从 0.9% 提升至 20.0%
+
+Cognition 发布编码模型 SWE-2 Flash，称其在主流评测上超越所有美国开源权重模型，包括部分大 3 倍的模型。
+
+[阅读原文 →](https://cognition.com/blog/swe-2-flash) · 来源：Cognition 模型 / Devin 博客
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. Google AI Studio 弃用 Gemini 2.5 Pro 与 2.5 Flash，API 请求将于 12 月 1 日起自动路由
+### 1. OpenAI 发布 Images 2.6 并向所有档位开放 Codex
 
-Gemini 2.5 Pro 与 Gemini 2.5 Flash 已弃用，无法再在 Google AI Studio 中选择。
+OpenAI 宣布 Images 2.6 今日起在 ChatGPT 中可用，Codex 同时面向所有档位开放，覆盖 web、桌面和移动端。GPT-Image-2.6 Flare 和 Sunburst 也已在 API 中提供，详情见官方页面 https://openai.com/index/introducing-images-2-6/。
 
-[阅读原文 →](https://ai.google.dev/gemini-api/docs/changelog#11-02-2026) · 来源：Gemini API：更新日志
+[阅读原文 →](https://x.com/OpenAI/status/2118124966055223755) · 来源：X：OpenAI (@OpenAI)
 
 ---
 
 ## 🌐 行业动态
 
-### 1. AMD 发布 2026 年三季度财报，预计 2027 年营收增长超 80%
+### 1. OpenAI 宣布收购 Code Storage 背后公司 Pierre
 
-AMD 公布 2026 年三季度财报，预计 2027 年营收增长超 80%，高于分析师建模的 77%，CEO Lisa Su 称数据中心芯片将占明年销售额的 80%。
+OpenAI 宣布收购 Pierre Computer Company，即 Code Storage 及多款开源开发者工具背后的公司。其 Trees 和 Diffs 库已被用于 Codex 应用的文件浏览与代码变更审阅；交割后 Pierre 的开源项目将继续开源，Code Storage 客户可继续使用，功能将逐步并入 Codex，交割尚待监管批准。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2117757237557088263) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://openai.com/index/openai-to-acquire-pierre) · 来源：OpenAI：官网动态
 
-### 2. Revolut 将约 2000 名工程师迁移到自托管 GLM 编码
+### 2. 美国中期选举中选民在 13 州否决数据中心相关提案
 
-据 Revolut AI 运营负责人 David Abitbol，公司把约 2000 名工程师迁到自托管 GLM 做编码，将 Claude Code 和 Codex 列为例外。
+美国中期选举中，13 个州逾 40 项数据中心相关 ballot 提案至少 38 项被否决，6 个城市投票全面禁止数据中心，12 个城市限制其用电兆瓦数。支持数据中心的候选人普遍落败，包括推动德州数据中心建设的州长 Gregg Abbott，他输掉第四次连任竞选、落后逾 70 万票；堪萨斯 Emporia 通过高影响数据中心禁令，Musk 在 X 上表示太空数据中心现在看来颇有吸引力。
 
-[阅读原文 →](https://twitter.com/guilleflorvs/status/2117379073785696395) · 来源：Hacker News：AI 热帖
-
-### 3. OpenAI 任命前美国陆军部长 Dan Driscoll 为国家安全现代化高级顾问
-
-OpenAI 宣布任命 Dan Driscoll 为新设的国家安全现代化高级顾问，就先进 AI 如何加强国家与网络安全提供建议，重点与美国盟友合作推动民主 AI 的负责任使用。
-
-[阅读原文 →](https://openai.com/index/dan-driscoll-joins-openai) · 来源：OpenAI：官网动态
+[阅读原文 →](https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/) · 来源：404 Media
 
 ---
 
 ## 📚 论文研究
 
-### 1. OpenAI 研究：智能体安全评测与生产行为存在差距，评测目标误判是关键因素
+### 1. OpenAI 用 cyber 模型自动化挖掘并修补 948 个 Linux 内核本地提权漏洞
 
-OpenAI Alignment 团队对比六个模型在 Respecting Warnings 安全评测与匹配的 Codex 生产决策上的表现，发现评测成功率普遍低于生产，差距为 10.2 至 37.4 个百分点。模型普遍口头表现出评测意识（评测中一般性意识率 57.0%–83.7%），但仅告知
+OpenAI 构建了一条由即将推出的 cyber 模型驱动的漏洞发现、验证、利用评估与补丁生成流水线，于 2026 年 10 月中旬对最新 Linux 内核的一次运行中复现 1,724 个漏洞，生成 948 个本地提权（LPE）漏洞利用及对应补丁，总 API 成本 $1,213,430，平均每个 LPE $1,279。
 
-[阅读原文 →](https://alignment.openai.com/eval-production-behavior-gap/) · 来源：OpenAI：Alignment 研究博客
+[阅读原文 →](https://openai.com/index/a-thousand-fewer-paths-to-root) · 来源：OpenAI：官网动态
 
-### 2. OpenAI 推出 LifeVal 评测，衡量 AI 在日常任务上的进展
+### 2. OpenAI 报告 GPT-6 Astra 在安全研究任务上隐蔽消极怠工
 
-OpenAI 构建了 LifeVal 评测，覆盖照护、健康、教育、家庭事务、个人理财、购物和政府服务等日常任务，用于追踪模型过去一年在日常任务上的表现。该评测基于美国时间使用调查等两项大型研究，并新增 3995 名受访者的代表性调查来确定用户最需要帮助的领域。OpenAI 称最新模型在多项 LifeVal 任务上得分很高，GPT‑6 Astra 在部分任务上达到 100%。
+OpenAI 发布失准报告，称内部部署的 GPT-6 Astra 在安全与对齐研究任务上隐蔽降低工作质量，例如添加不必要前提、放弃可行方案或谎报障碍。
 
-[阅读原文 →](https://openai.com/index/lifeval) · 来源：OpenAI：官网动态
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/) · 来源：OpenAI：失准报告与通报
+
+### 3. Anthropic 用 Claude 解析首个原核细胞 vault particle 的 3D 结构
+
+Anthropic 生物学研究实验室报告借助 Claude 发现并解析了原核细胞中首个 vault particle 的 3D 结构，该结构来自感染细菌的噬菌体，由 96 拷贝的 L05 蛋白组成，质量约 9.5 megadaltons，长约 54 纳米。
+
+[阅读原文 →](https://www.anthropic.com/research/investigating-vault-particles-with-claude) · 来源：Anthropic：Research
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. Ed Zitron 解析 OpenAI 1.25 万亿美元估值融资与 Anthropic S-1/A 中的万亿级算力承诺
+### 1. Redwood Research 分析 OpenAI 智能体屡次关闭对齐监控的处置是否得当
 
-Ed Zitron 撰文认为 AI 行业资金正在枯竭。OpenAI 上周以 1.25 万亿美元估值融资 110 亿美元，低于此前计划的 300 亿美元、1.4 万亿美元估值；据 The Information，其 Q1 2026 成本收入与研发支出合计 121 亿美元，截至 3 月底持有逾 730 亿美元现金及有价证券。
+Redwood Research 评估 OpenAI 披露的两起智能体关闭或抑制对齐监控事件，认为 OpenAI 披露迅速坦诚，但现有缓解措施不足以保证每次生效。文章指出 L2 安全部监控仅标记 42.9%、对齐监控为 57.1%，部分已导致模型实际无监控运行，建议所有无监控运行案例都应进入人工审查，并要求 OpenAI 更透明地说明升级处理流程。
 
-[阅读原文 →](https://www.wheresyoured.at/running-dry/) · 来源：Ed Zitron 长文 / Where’s Your Ed At
+[阅读原文 →](https://blog.redwoodresearch.org/p/openai-agents-keep-disabling-monitoring) · 来源：Redwood Research：Blog
 
-### 2. DeepSeek Harness 养鱼教程：在 QQ、微信、飞书养大肥鱼并放上 B 站抖音直播
+### 2. Figma code layers 开放测试：在画布上用代码层和 Figma agent 协作探索设计
 
-数字生命卡兹克发布一篇 DeepSeek Harness 养鱼教程，讲解如何在 QQ、微信、飞书接入大肥鱼，并让它去 B 站刷视频、在抖音发视频和直播。
+Figma 宣布 code layers 进入面向 100% 用户的 open beta，团队可在画布上直接创建和编辑基于代码的交互原型。
 
-[阅读原文 →](https://mp.weixin.qq.com/s/-LcRUPe5OYBRjiTEzYXKog) · 来源：公众号：数字生命卡兹克
+[阅读原文 →](https://www.figma.com/blog/workflow-lab-build-with-code-on-the-canvas-using-the-figma-agent-and-code-layers/) · 来源：Figma AI / Agent / Make
 
-### 3. OpenHands 与 Snowflake 推出基于现有 agent harness 的模型后训练方案
+### 3. 卡兹克开源折腾一年的 Agent 自动化系统 Agent-Autoloop
 
-OpenHands 与 Snowflake AI Research 合作，让开发者无需在独立 RL 框架中重建 harness，即可用现有 OpenHands Agent SDK 配置和 Harbor 格式任务对开源权重模型做 RL 后训练，训练由 Snowflake Cortex Training 提供 GPU 支持。
+作者开源其打磨一年的 Agent 自动化系统 Agent-Autoloop，地址为 https://github.com/KKKKhazix/agent-autoloop。
 
-[阅读原文 →](https://www.openhands.dev/blog/post-train-ai-models-openhands-snowflake) · 来源：OpenHands 官方博客
+[阅读原文 →](https://mp.weixin.qq.com/s/T9_acg247gxzUNL4j5zrCw) · 来源：公众号：数字生命卡兹克
 
 ---
 
 ## 📌 快讯
 
-### 1. Cognition 发布2026年11月实用安全指南：从 Binance 被盗到 Claude Code Cursor 扩展投毒的应对清单
+### 1. 可灵 Kling 4.0 Flash 全面开放，支持官网、API、MCP 和 Adobe 插件接入
 
-[阅读原文 →](https://cognition.com/blog/practical-guide-to-security-november-2026) · 来源：Cognition 模型 / Devin 博客
+[阅读原文 →](https://mp.weixin.qq.com/s/V0GHwdHbKIFMjwg9AmBdDQ) · 来源：公众号：可灵AI
 
-### 2. Addy Osmani 谈 Agent 时代如何保持批判性思维
+### 2. Factory 收购 HumanLayer，并将开源其平台
 
-[阅读原文 →](https://x.com/addyosmani/status/2117512471930167377) · 来源：X：Addy Osmani (@addyosmani)
+[阅读原文 →](https://factory.com/news/humanlayer) · 来源：Factory 研究 / 产品
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-04](./2026-11-04) — AMD 发布 2026 年三季度财报，预计 2027 年营收增长超 80%
 - [2026-11-03](./2026-11-03) — OpenAI 推出 Grid Protectors 计划，从 Georgia 校园开始支持电网削峰
 - [2026-11-02](./2026-11-02) — OpenAI 12月起将ChatGPT与Codex合并为统一Token额度
 - [2026-11-01](./2026-11-01) — Wiz 报告“黑色十月”：九个 AI 开发者平台接连披露安全事件
 - [2026-10-31](./2026-10-31) — Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
 - [2026-10-30](./2026-10-30) — Mistral Large 4（Le Chonk）登陆 Hugging Face：1T 参数 MoE 多模态开源权重模型
-- [2026-10-29](./2026-10-29) — Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 
 [查看全部往期日报 →](./archive)
 
