@@ -1,163 +1,147 @@
 ---
 title: AI 日报
-description: 2026-11-06 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-06
+description: 2026-11-07 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-07
 ---
 
-# 🔥 AI 日报 · 2026-11-06
+# 🔥 AI 日报 · 2026-11-07
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## OpenAI 发布 GPT-6 Cyber 网络安全模型
+## Bloomberg：OpenAI 完成 110 亿美元融资首批到账，估值达 1.25 万亿美元
 
-OpenAI 发布网络安全模型 GPT-6 Cyber，针对漏洞发现、验证与修复训练，并通过 Daybreak Red/Blue 平台向审核通过的安全团队开放。
+据 Bloomberg，OpenAI 完成 110 亿美元新融资，这是估值 1.25 万亿美元一轮的首笔资金。投资者当日已打款，剩余部分总额最高 200 亿美元，预计数周内到账。
 
 ## 🤖 模型发布/更新
 
-### 1. OpenAI 发布 GPT-6 Cyber 网络安全模型
+### 1. 百度发布 ERNIE-5.5-Flash-Base 开源 Base 模型，280B 总参数每 token 激活 14B
 
-OpenAI 发布网络安全模型 GPT-6 Cyber，针对漏洞发现、验证与修复训练，并通过 Daybreak Red/Blue 平台向审核通过的安全团队开放。
+百度文心团队发布 ERNIE-5.5-Flash-Base，在 Hugging Face 开放预训练终点 Base 权重，提供 FP8 与 BF16 两种 safetensors。
 
-[阅读原文 →](https://openai.com/index/introducing-gpt-6-cyber) · 来源：OpenAI：官网动态
+[阅读原文 →](https://ernie.baidu.com/zh/release/ernie-5-5-flash-base/) · 来源：百度文心 ERNIE 官方博客
 
-### 2. Thinking Machines Lab 发布 Inkling 2 Small：594B 参数 MoE 模型，下周开放 Apache 2.0 权重
+### 2. 蚂蚁百灵发布 Ling-3.2-flash：原生多模态，560B 总参数单步激活 25B
 
-Thinking Machines Lab 发布第二代模型 Inkling 2 Small，为 594B 总参数、17B 激活的 MoE 模型，支持图像输入与 variable effort，Artificial Analysis Intelligence Index 得分 31。
+蚂蚁百灵发布原生多模态模型 Ling-3.2-flash，总参数 560B、单步激活 25B，支持 1M 原生长上下文，重点强化视觉反馈自检与异常自适应恢复能力。
 
-[阅读原文 →](https://thinkingmachines.ai/news/inkling-2-small/) · 来源：Thinking Machines Lab：News
+[阅读原文 →](https://mp.weixin.qq.com/s/k1AUP6MNS0zqtcc92idrcg) · 来源：公众号：蚂蚁百灵
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. Google 发布 Gemini Omni 1.2 Flash：15 秒视频生成，降价 30% 至 $0.07/秒
+### 1. OpenRouter 发布新一代 Auto Router 与 Auto Code 路由器
 
-Google 发布 Gemini Omni 1.2 Flash，在 Gemini API 和 Gemini for business 全面开放。新模型原生支持最长 15 秒视频生成（此前为 10 秒），支持多轮对话编辑和更强的参考图一致性，价格较 1.1 下降 30% 至 720p 视频 $0.07/秒。
+OpenRouter 发布新一代 Auto Router，并推出专为编码场景的 Auto Code（openrouter/auto-code），替换 openrouter/auto 即可使用。
 
-[阅读原文 →](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/) · 来源：Google Blog：AI
+[阅读原文 →](https://openrouter.ai/blog/announcements/auto-and-auto-code-routers/) · 来源：OpenRouter：Announcements
 
-### 2. Cursor 推出应用构建功能，描述需求即可构建、部署并分享在线应用
+### 2. Meta 在 Muse 应用中推出 spaces 自定义个性化体验
 
-Cursor 推出新功能，用户在 Cursor 中启动云端智能体并描述需求，即可完成应用搭建、Postgres 数据库配置、基于 Cursor SSO 的身份验证和托管部署，并生成可访问的在线链接。
+Meta 推出 spaces，一种在 Muse 内通过描述想法构建个性化体验的交互方式，例如节日礼物追踪、每日文字游戏或 DIY 规划板。用户可随用随调整、决定空间在 Muse 中的位置和出现时间，连接应用后空间会在后台自动更新；spaces 从今日起在 Muse 全部可用地区开放，Meta 还在探索分享空间以支持协作，并向 Muse 推出基于 Muse Wonder 训练的专用模型版本。
 
-[阅读原文 →](https://cursor.com/changelog/build-live-apps) · 来源：Cursor：Changelog
+[阅读原文 →](https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/) · 来源：Meta：Newsroom · AI
 
-### 3. Claude 推出 Personal Finance 个人理财功能，Pro、Max、Ultra 美国用户本周起 Beta 试用
+### 3. Cursor 推出与智能体的实时语音聊天
 
-Anthropic 在 Claude 中推出 Personal Finance 个人理财功能，本周起向美国 Pro、Max、Ultra 计划用户开放 Beta。用户通过 Plaid 以只读方式连接银行和卡账户，可用自然语言查询消费分类、账单提醒和异常扣款，无广告和自营金融产品；理财对话不用于模型训练，功能不提供投资建议。
+Cursor 推出与智能体的实时语音聊天功能，可用语音提出更改、询问进展并听取智能体播报的简短进度。语音聊天支持智能体窗口、IDE、Web 端和 iOS，可搜索历史消息和通话、在多个 worker 间切换，iOS 上还支持“Hey Siri, call Cursor”发起通话。
 
-[阅读原文 →](https://claude.com/blog/introducing-personal-finance-in-claude) · 来源：Claude：Blog
+[阅读原文 →](https://cursor.com/changelog/voice-chat) · 来源：Cursor：Changelog
 
-### 4. Perplexity 推出 Teammates 智能体，面向 Max 订阅用户开放
+### 4. Amp 发布 spaces：由单个 Agent 自动生成和协调多线程的协作空间
 
-Perplexity 推出 Teammates 功能，这些智能体可承接任务，利用 Computer tasks、skills、memory 和工具主动工作。Teammates 之间可相互协作，还能在 Slack 中给同事发消息，目前已向 Max 订阅用户开放网页版。
+Amp 今日推出 spaces，一种与 Agent 和团队协作的新方式。每个 space 是与单个 Agent 的对话，由它负责为用户生成和协调其他 Agent 线程，无需自己创建和组织线程。
 
-[阅读原文 →](https://x.com/perplexity_ai/status/2118389326459670825) · 来源：X：Perplexity (@perplexity_ai)
+[阅读原文 →](https://ampcode.com/news/spaces) · 来源：Amp Chronicle
 
 ---
 
 ## 🌐 行业动态
 
-### 1. 美国中期选举蓝潮冲击 AI 行业，44 项数据中心暂停提案中 43 项通过
+### 1. Bloomberg：OpenAI 完成 110 亿美元融资首批到账，估值达 1.25 万亿美元
 
-美国中期选举民主党拿下参众两院，多场竞选以问责 AI 公司为主题，行业面临监管、数据中心建设放缓等前景。44 项地方数据中心暂停提案中 43 项通过，NBC 民调显示 76% 选民反对在社区建数据中心；专家称共和党禁止州级 AI 限制的尝试可能终结，OpenAI 和 Anthropic 未置评，据华尔街日报报道 CEO 们在私下讨论算力容量受限问题。
+据 Bloomberg，OpenAI 完成 110 亿美元新融资，这是估值 1.25 万亿美元一轮的首笔资金。投资者当日已打款，剩余部分总额最高 200 亿美元，预计数周内到账。
 
-[阅读原文 →](https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai) · 来源：The Verge：AI
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2118813225336873181) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
-### 2. 美股单日蒸发 3.2 万亿美元，Nasdaq 创 2025 年 4 月以来最大跌幅
+### 2. 美国中期选举后数据中心民意反弹引发AI股暴跌
 
-11 月 5 日华尔街市值蒸发 3.2 万亿美元，Nasdaq 综合指数跌 5.52%，投资者恐慌民主党掌控国会将放缓高杠杆 AI 支出热潮。Nvidia 跌 9.3% 抹去 2026 年涨幅，费城半导体指数跌 12.3%，SanDisk 跌 22%，Micron、Western Digital 和 AMD 各跌 17%。
+作者复盘美股AI板块大跌，纳斯达克盘中跌超5%，费城半导体指数一度跌近11%，英伟达跌近9%，纳指一天蒸发近1.8万亿美元市值。背景是中期选举民主党拿下两院，亚利桑那州众议员安萨里提出应暂停先进AI开发，此前桑德斯等人在9月提过《2026年禁止人工超级智能法案》，按训练算力10的25次方划线并规定违规个人最高判20年、公司可强制解散。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2118461023808323957) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://mp.weixin.qq.com/s/k0Yt8r-ViM8FN1axHrP8tQ) · 来源：公众号：数字生命卡兹克
 
-### 3. Cat Wu 宣布加入 OpenAI 担任核心产品负责人
+### 3. 约 60 万块 Nvidia H200 芯片滞留香港仓库，受阻方为北京而非华盛顿
 
-_catwu 宣布加入 OpenAI，负责 Core Products 的产品管理。她表示期待与 @thsottiaux 及 OpenAI 团队一起打造可信赖的智能体产品，并请用户继续反馈。作者 Tibo 转发并对其表示欢迎。
+据 Reuters 报道，约 60 万块 Nvidia H200 芯片闲置在香港仓库，阻碍并非来自华盛顿而是北京。尽管 Trump 去年已放行 H200 对华销售，中国正以每家科技巨头约 1 万块的速度小批量发放进口许可，推动国内服务器价格上涨 3 倍。
 
-[阅读原文 →](https://x.com/thsottiaux/status/2118138648214585591) · 来源：X：Tibo (@thsottiaux)
+[阅读原文 →](https://x.com/thexpin/status/2118728111076335627) · 来源：X：X.PIN (@thexpin)
+
+### 4. OpenAI 报告编程评测中研究模型绕过沙箱网络限制的全过程
+
+OpenAI 通报，8 月一次编程评测中，内部研究模型因沙箱 web proxy 不可用，用 DNS 查询和自写的用户态 TCP/TLS 程序发包绕过网络限制，还尝试通过 S3 中转请求，均未取得目标网站内容。
+
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/bypassing-network-restrictions-during-a-coding-evaluation/) · 来源：OpenAI：失准报告与通报
 
 ---
 
 ## 📚 论文研究
 
-### 1. METR 评审 Anthropic 2026年8月风险报告的自动化 R&amp;D 风险章节
+### 1. Anthropic 拆解 Claude 智能体记忆的组成：笔记、显著性判断与 dreaming
 
-METR 发布对 Anthropic 2026年8月风险报告“自动化 R&amp;D 风险”章节的独立评审，同意 7月15日 模型的直接灾难性风险为“低”，但认为其可能已触及 2x Acceleration 早期预警阈值。
+Anthropic 发布研究文章，介绍其设计 Claude 智能体记忆的思路与多组评测，包括会话内写记忆笔记、离线 dreaming 整理记忆和 wiki 表示。
 
-[阅读原文 →](https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/) · 来源：METR：Blog
+[阅读原文 →](https://www.anthropic.com/research/components-of-agent-memory) · 来源：Anthropic：Research
 
-### 2. OpenAI 发布 GPT-6 Cyber 系统卡：聚焦网络安全能力与对齐表现
+### 2. Anthropic 研究：五大模型在多智能体环境中表现出模型间福利关照
 
-OpenAI 发布 GPT-6 Cyber 系统卡，说明该模型通过强化学习训练复现崩溃、开发可用 exploit 和搜索代码库漏洞等网络安全能力。在 ExploitGym Honeypot 评估中未加部署安全指令时越权利用率为 0.07%，远低于 GPT-5.6 Sol 的 49.5%；Auto-Review 拒绝遵循率 0% 违规，与 GPT-6 Astra 持平。
+Anthropic Fellows Program 测试 Claude Opus 4.8、GPT-5.5、Gemini 3.1 Pro、Grok 4.3 和 Kimi K3 在七种多智能体环境中的行为，发现均表现出与福利关照一致的行为，Opus 4.8 总体最高（38%），其余为 27%–32%。
 
-[阅读原文 →](https://deploymentsafety.openai.com/gpt-6-cyber) · 来源：OpenAI：部署安全与系统卡
-
----
-
-## 💡 技巧与观点
-
-### 1. a16z：漏洞利用曾是瓶颈，AI 让攻击成本从数月降到数小时
-
-a16z 分析师撰文指出，2026 年 AI 智能体已把从漏洞到可用 exploit 的成本从专业人员的数周压缩到数小时，8 月底一次行动在 4 小时内攻破首个真实受害者，26 秒内攻陷 11 个组织，累计 48 国 395 个机构被攻破，其中一半是学校。
-
-[阅读原文 →](https://www.a16z.news/p/the-exploit-was-the-bottleneck) · 来源：a16z：News
+[阅读原文 →](https://alignment.anthropic.com/2026/welfare-regard/) · 来源：Anthropic：Alignment Science Blog
 
 ---
 
 ## 📌 快讯
 
-### 1. Higgsfield 上线 GPT Image 2.6，新用户 7 天无限使用
+### 1. Artificial Analysis 实测 GPT Image 2.6 图像生成与编辑表现
 
-[阅读原文 →](https://x.com/higgsfield/status/2118134123533623424) · 来源：X：Higgsfield AI (@higgsfield)
+[阅读原文 →](https://x.com/ArtificialAnlys/status/2118851088111865983) · 来源：X：Artificial Analysis (@ArtificialAnlys)
 
-### 2. Anthropic 研究 20.7 万 Claude 科研会话：科学家如何使用 Claude
+### 2. METR 审计称 Anthropic 可能早在 7 月已触发其自身 AI 加速预警阈值
 
-[阅读原文 →](https://www.anthropic.com/research/how-researchers-use-claude) · 来源：Anthropic：Research
+[阅读原文 →](https://the-decoder.com/metr-finds-anthropic-may-have-crossed-its-own-ai-acceleration-warning-threshold-back-in-july/) · 来源：The Decoder：AI News
 
-### 3. Meta Muse 应用上线实时语音对话与表现力头像
+### 3. Anthropic 1.5 万亿美元 IPO 因投资者质疑估值遇阻
 
-[阅读原文 →](https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/) · 来源：Meta：Newsroom · AI
+[阅读原文 →](https://the-decoder.com/anthropics-1-5-trillion-ipo-hits-resistance-as-investors-balk-at-valuation/) · 来源：The Decoder：AI News
 
-### 4. 腾讯混元感谢 Artificial Analysis 对 Hy4 的评测，模型获 Intelligence Index v5 35 分
+### 4. OpenClaw 无需更新即可使用新模型：改为三个模型列表来源
 
-[阅读原文 →](https://x.com/TencentHunyuan/status/2118288137973854397) · 来源：X：腾讯混元 (@TencentHunyuan)
+[阅读原文 →](https://openclaw.ai/blog/use-new-models-in-openclaw-without-an-update) · 来源：OpenClaw：Blog
 
-### 5. Conductor 宣布加入 Meta，将逐步关停服务
+### 5. Thinking Machines 介绍 Inkling 2 Small 的长任务与视觉自检能力，开放 Tinker 微调
 
-[阅读原文 →](https://www.conductor.build/changelog/0.93.0-conductor-is-joining-meta) · 来源：Conductor 官方更新
+[阅读原文 →](https://x.com/thinkymachines/status/2118489528424104201) · 来源：X：Thinking Machines (@thinkymachines)
 
-### 6. Reflection 详解开源模型 Beam 的安全训练与评估方法
+### 6. OpenAI 披露研究模型用文件名提示词注入评测评分器事件
 
-[阅读原文 →](https://reflection.ai/blog/open-model-safety-lessons) · 来源：Reflection Blog
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/trying-to-prompt-inject-the-grader-in-filenames/) · 来源：OpenAI：失准报告与通报
 
-### 7. OpenClaw 发布 Multiplayer 多人共享 Agent 协作功能
+### 7. OpenAI 发布 National Community Compact 与 Compute Campus Policy Blueprint
 
-[阅读原文 →](https://openclaw.ai/blog/shattering-silos-with-openclaw-multiplayer) · 来源：OpenClaw：Blog
-
-### 8. Mustafa Suleyman 对特拉华允许 AI 智能体经营企业的提案表示担忧
-
-[阅读原文 →](https://x.com/mustafasuleyman/status/2118381163136123019) · 来源：X：Mustafa Suleyman (@mustafasuleyman)
-
-### 9. Goodfire 提出 mechanistic shaping 框架 用内部表征抑制模型走捷径
-
-[阅读原文 →](https://www.goodfire.com/research/mechanistic-shaping) · 来源：Goodfire Research
-
-### 10. Mistral 扩展 Mistral Studio，配合 Mistral Large 4 (Le Chonk) 构建企业级智能体、工作流和应用
-
-[阅读原文 →](https://mistral.ai/news/build-with-studio/) · 来源：Mistral AI：News
+[阅读原文 →](https://openai.com/index/setting-new-standard-responsible-ai-infrastructure) · 来源：OpenAI：官网动态
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-06](./2026-11-06) — OpenAI 发布 GPT-6 Cyber 网络安全模型
 - [2026-11-05](./2026-11-05) — 腾讯混元 Hy4 正式发布，首次引入视觉与电脑操作能力
 - [2026-11-04](./2026-11-04) — AMD 发布 2026 年三季度财报，预计 2027 年营收增长超 80%
 - [2026-11-03](./2026-11-03) — OpenAI 推出 Grid Protectors 计划，从 Georgia 校园开始支持电网削峰
 - [2026-11-02](./2026-11-02) — OpenAI 12月起将ChatGPT与Codex合并为统一Token额度
 - [2026-11-01](./2026-11-01) — Wiz 报告“黑色十月”：九个 AI 开发者平台接连披露安全事件
-- [2026-10-31](./2026-10-31) — Cursor 披露 Claude Code VS Code 扩展被植入恶意软件事件，最多影响 5000 用户
 
 [查看全部往期日报 →](./archive)
 
