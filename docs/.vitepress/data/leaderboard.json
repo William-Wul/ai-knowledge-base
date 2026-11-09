@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 16,
   "evaluationCount": 54,
-  "sourceUpdatedAt": "11/08 14:05",
-  "syncedAt": "2026-11-08T10:14:04.078Z",
+  "sourceUpdatedAt": "11/09 14:05",
+  "syncedAt": "2026-11-09T11:23:39.293Z",
   "models": [
     {
       "rank": 1,
@@ -31,7 +31,7 @@
       "cachePrice": "¥1.67",
       "inputPrice": "¥66.71",
       "outputPrice": "¥333.56",
-      "score": 72.6
+      "score": 72.5
     },
     {
       "rank": 3,
@@ -109,7 +109,7 @@
       "cachePrice": "¥0.33",
       "inputPrice": "¥6.67",
       "outputPrice": "¥33.36",
-      "score": 69.3
+      "score": 69.2
     },
     {
       "rank": 9,
@@ -252,23 +252,10 @@
       "cachePrice": "¥1.5",
       "inputPrice": "¥12",
       "outputPrice": "¥36",
-      "score": 62.9
+      "score": 62.8
     },
     {
       "rank": 20,
-      "slug": "inkling-2-small",
-      "name": "Inkling 2 Small",
-      "provider": "Thinking Machines Lab",
-      "releaseDate": "2026-11-05",
-      "evidenceCount": 25,
-      "evidenceStatus": "覆盖55%",
-      "cachePrice": "¥0.2",
-      "inputPrice": "¥2",
-      "outputPrice": "¥6.67",
-      "score": 62.7
-    },
-    {
-      "rank": 21,
       "slug": "grok-4-7",
       "name": "Grok 4.7",
       "provider": "xAI",
@@ -281,7 +268,7 @@
       "score": 62.7
     },
     {
-      "rank": 22,
+      "rank": 21,
       "slug": "gemini-3-7-flash",
       "name": "Gemini 3.7 Flash",
       "provider": "Google",
@@ -294,7 +281,7 @@
       "score": 62.7
     },
     {
-      "rank": 23,
+      "rank": 22,
       "slug": "kimi-k-3",
       "name": "Kimi K3",
       "provider": "Moonshot AI",
@@ -304,10 +291,10 @@
       "cachePrice": "¥2",
       "inputPrice": "¥20",
       "outputPrice": "¥100",
-      "score": 62.7
+      "score": 62.6
     },
     {
-      "rank": 24,
+      "rank": 23,
       "slug": "mimo-v-2-6-pro",
       "name": "MiMo-V2.6-Pro",
       "provider": "Xiaomi",
@@ -320,7 +307,7 @@
       "score": 62.4
     },
     {
-      "rank": 25,
+      "rank": 24,
       "slug": "claude-haiku-5-5",
       "name": "Claude Haiku 5.5",
       "provider": "Anthropic",
@@ -333,7 +320,7 @@
       "score": 62.2
     },
     {
-      "rank": 26,
+      "rank": 25,
       "slug": "claude-opus-4-8",
       "name": "Claude Opus 4.8",
       "provider": "Anthropic",
@@ -346,7 +333,7 @@
       "score": 62.1
     },
     {
-      "rank": 27,
+      "rank": 26,
       "slug": "grok-4-6",
       "name": "Grok 4.6",
       "provider": "xAI",
@@ -356,6 +343,19 @@
       "cachePrice": "¥3.34",
       "inputPrice": "¥13.34",
       "outputPrice": "¥40.03",
+      "score": 62
+    },
+    {
+      "rank": 27,
+      "slug": "inkling-2-small",
+      "name": "Inkling 2 Small",
+      "provider": "Thinking Machines Lab",
+      "releaseDate": "2026-11-05",
+      "evidenceCount": 26,
+      "evidenceStatus": "覆盖58%",
+      "cachePrice": "¥0.2",
+      "inputPrice": "¥2",
+      "outputPrice": "¥6.67",
       "score": 62
     },
     {
