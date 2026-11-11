@@ -5,6 +5,7 @@ const root = resolve('docs/.vitepress/dist')
 const walk = dir => readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(join(dir, e.name)) : [join(dir, e.name)])
 const pages = walk(root).filter(file => file.endsWith('.html'))
 const cache = new Map()
+const linkedAssets = new Set()
 const errors = new Set()
 const decode = value => value.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
 function targetFile(pathname) {
@@ -24,11 +25,17 @@ for (const page of pages) {
     let target
     try { target = targetFile(url.pathname) } catch { errors.add(`${pagePath}: 无效路径 ${reference}`); continue }
     if (!target) { errors.add(`${pagePath}: 缺少文件 ${reference}`); continue }
+    linkedAssets.add(target)
     if (!url.hash || url.hash === '#' || !target.endsWith('.html')) continue
     if (!cache.has(target)) cache.set(target, new Set([...readFileSync(target, 'utf8').matchAll(/\bid="([^"]+)"/g)].map(m => decode(m[1]))))
     let anchor
     try { anchor = decodeURIComponent(url.hash.slice(1)) } catch { anchor = url.hash.slice(1) }
     if (!cache.get(target).has(anchor)) errors.add(`${pagePath}: 缺少锚点 ${reference}`)
+  }
+}
+for (const cssFile of walk(join(root, 'assets')).filter(file => file.endsWith('.css'))) {
+  if (!linkedAssets.has(cssFile)) {
+    errors.add(`未挂载到页面的样式文件: /${relative(root, cssFile).replace(/\\/g, '/')}`)
   }
 }
 if (errors.size) {
