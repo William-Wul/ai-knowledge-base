@@ -2,6 +2,9 @@
 title: AI 工具快速上手
 description: 市面上最常用的 AI 工具上手教程：通用对话、办公助手、AI 编程工具
 ---
+<script setup>
+import ModuleArticles from '../.vitepress/theme/components/ModuleArticles.vue'
+</script>
 
 # AI 工具快速上手
 

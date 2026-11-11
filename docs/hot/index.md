@@ -1,119 +1,163 @@
 ---
 title: AI 日报
-description: 2026-11-10 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-10
+description: 2026-11-11 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-11
 ---
 
-# 🔥 AI 日报 · 2026-11-10
+# 🔥 AI 日报 · 2026-11-11
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2
+## Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 
-Anthropic 发布 Claude Fable 5.2 和 Claude Mythos 5.2，两者为同一底层模型，Mythos 需通过 Cyber 或 Life Sciences Verification Program 申请访问。
+Google DeepMind 正式向开发者、企业、科学家和普通用户开放 Gemini 4 Carbon，定位为其最强前沿模型，主打网络安全能力与复杂知识工作、软件工程、科学推理中的长程智能体工作流。
 
 ## 🤖 模型发布/更新
 
-### 1. Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2
+### 1. Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 
-Anthropic 发布 Claude Fable 5.2 和 Claude Mythos 5.2，两者为同一底层模型，Mythos 需通过 Cyber 或 Life Sciences Verification Program 申请访问。
+Google DeepMind 正式向开发者、企业、科学家和普通用户开放 Gemini 4 Carbon，定位为其最强前沿模型，主打网络安全能力与复杂知识工作、软件工程、科学推理中的长程智能体工作流。
 
-[阅读原文 →](https://www.anthropic.com/claude-fable-and-mythos-5-2) · 来源：Anthropic：Newsroom
+[阅读原文 →](https://deepmind.google/blog/gemini-4-carbon-is-now-available/) · 来源：Google DeepMind：Blog
 
-### 2. Meta 发布最小最高效模型 Muse Ember，主打智能体高频任务
+### 2. MiniMax 发布开源图像生成模型 H3-Image，10 秒内生成 4K 图像
 
-Meta 发布 Muse Ember（muse-ember-1.0），定位最小最高效的复杂推理执行模型，面向工具调用、编码子任务、路由、抽取和长文档解析等智能体日常重复任务。
+MiniMax 发布基于 H3 的开源权重图像生成模型 H3-Image，支持文生图、参考图生成和图像编辑，可生成 4096 × 4096 的 4K 图像，速度最高达主流方案的 5 倍。
 
-[阅读原文 →](https://research.meta.ai/blog/muse-ember) · 来源：Meta AI：Research Blog
-
-### 3. 字节发布 Seedream 5.5 图像创作模型：支持 100 轮编辑与原生 RGBA 透明输出
-
-字节 Seed 发布新一代图像创作模型 Seedream 5.5，带来三项升级：非编辑区域像素级保持、支持围绕同一作品多达 100 轮连续编辑；新增原生 RGBA 透明素材生成，直接输出带 Alpha 通道的图像，省去抠图；改善光照材质与皮肤纹理表现，并显著提升文字渲染能力。
-
-[阅读原文 →](https://seed.bytedance.com/zh/blog/%E7%94%9F%E6%88%90%E6%9B%B4%E7%9C%9F%E5%AE%9E-%E7%99%BE%E8%BD%AE%E7%BC%96%E8%BE%91%E6%9B%B4%E7%A8%B3%E5%AE%9A-seedream-5-5-%E5%8F%91%E5%B8%83) · 来源：字节 Seed：Research Feed
-
-### 4. Zyphra 发布开源 TTS 模型 ZONOS3-Mini，可在手机浏览器实时运行
-
-Zyphra 发布 ZONOS3-Mini，一个 Apache 2.0 开源的零样本语音克隆 TTS 模型，采用稀疏 MoE 架构，总参数 8 亿、活跃参数 1 亿，在 Pixel 9 浏览器端 Time To First Audio 低于 570 ms，在 M3 MacBook Air 上低于 150 ms。
-
-[阅读原文 →](https://www.zyphra.com/our-work/zonos3-mini) · 来源：Zyphra Research
-
-### 5. Claude Mythos 5.2 预测基因治疗载体 AAV 衣壳结构
-
-Claude 官方视频介绍 Claude Mythos 5.2 预测了完整 AAV 衣壳结构，即用于递送基因治疗的蛋白质外壳。模型编写代码在相邻五链分组上运行开源折叠模型，再利用衣壳对称性拼合全部 60 条链；在 AAV2 上预测结果与实验结构误差约为一个原子宽度。
-
-[阅读原文 →](https://www.youtube.com/watch?v=FMbXUxn_nBw) · 来源：Claude：YouTube
+[阅读原文 →](https://www.minimax.io/blog/minimax-h3-image) · 来源：MiniMax：Blog
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. 百度发布 ERNIE Evolve 自动研究系统，公开任务超最好纪录并落地 ERNIE-5.5-Flash 推理优化
+### 1. Anthropic 发布 Claude Whiteboards 和 Claude Sheets，Claude Dashboards 转正为 Claude Data
 
-百度文心团队发布自动研究系统 ERNIE Evolve，用双层循环组织研究方向选择与实验迭代，由 Director、Selector、Executor、Evaluator 和 Reviewer 分工推进研究。
+Anthropic 推出 Claude Whiteboards 和 Claude Sheets 测试版，Claude Dashboards 正式可用并更名为 Claude Data，三款产品面向所有付费计划开放。
 
-[阅读原文 →](https://ernie.baidu.com/zh/research/posts/ernie-evolve/) · 来源：百度文心 ERNIE 官方博客
+[阅读原文 →](https://claude.com/blog/sheets-whiteboards-data) · 来源：Claude：Blog
 
-### 2. Google 扩展第八代 TPU 阵容，新增两款智能体专用系统
+### 2. Gemini 4 Carbon 上线 Gemini API、AI Studio 和 Antigravity
 
-Google 宣布扩展第八代 TPU 产品线，新增 TPU 8i Max 和 TPU 8tx 两款系统，使一年内发布的第八代 TPU 系统总数达到四款。TPU 8i Max 面向超大上下文窗口和单机架最高算力密度，TPU 8tx 则针对安全与机密推理优化。Google 称这四款系统覆盖智能体生命周期的各个阶段，为开发者提供专用加速器。
+Philipp Schmid 介绍 Gemini 4 Carbon 现已可在 Gemini API、Google AI Studio 和 Antigravity（限 Google AI Ultra 订阅者）中使用。
 
-[阅读原文 →](https://x.com/Google/status/2119788086490001906) · 来源：X：Google (@Google)
+[阅读原文 →](https://x.com/_philschmid/status/2120186354537812452) · 来源：X：Philipp Schmid (@_philschmid)
 
-### 3. 数字生命卡兹克上线免费 Token 福利聚合网站 Token羊毛
+### 3. n8n Labs 发布本机个人智能体 Nod 研究预览版
 
-数字生命卡兹克上线免费聚合网站 Token羊毛（aihot.news/free-tokens），把各厂商公开的免费额度、签到积分、限时免费等活动汇总到一页，页面显示今日可领金额并按日、周、月分组，还设计了随领取次数升级亮度的卡片收集玩法。
+n8n 发布 n8n Labs 首个实验项目 Nod 的研究预览版，一个独立于 n8n 的开源个人智能体，可在 Mac 或 Windows 本机的沙盒和浏览器中代用户完成取消订阅、比价、订酒店等任务，无需 n8n 账号或云服务。
 
-[阅读原文 →](https://mp.weixin.qq.com/s/MyNWZlURmO0xIxQpMOQZWg) · 来源：公众号：数字生命卡兹克
+[阅读原文 →](https://blog.n8n.io/meet-nod/) · 来源：n8n Blog
 
 ---
 
 ## 🌐 行业动态
 
-### 1. Nvidia CEO 黄仁勋婚外情风波削弱其对严格 AI 芯片出口管制的游说
+### 1. Anthropic 启动 IPO 路演，拟发行 8.25 亿股 A 类普通股并申请以代码 ANT 上市纳斯达克
 
-据 Bloomberg 报道，Nvidia CEO 黄仁勋在全员备忘录中承认与被美国情报机构认定为疑似中国情报人员线人的 Alice Huang（Huang Le）存在婚外关系，董事会已启动独立董事主导的调查。
+Anthropic 启动拟议 IPO 路演，拟发行 825,000,000 股 A 类普通股，其中 801,351,354 股由 Anthropic 发售、23,648,646 股由部分现有股东出售，Anthropic 不获后者出售所得款项。
 
-[阅读原文 →](https://the-decoder.com/nvidia-espionage-scandal-weakens-huangs-lobby-against-tighter-ai-chip-export-controls/) · 来源：The Decoder：AI News
+[阅读原文 →](https://www.anthropic.com/news/roadshow-launch) · 来源：Anthropic：Newsroom
+
+### 2. FT 曝 Alice Huang 借 Megaspeed 走私 Nvidia 芯片
+
+FT 发文披露 Alice Huang 与秘密男友兼商业伙伴 Kang Wei 运营新加坡公司 Megaspeed，用阿里巴巴的资金向被美国出口规则限制的中国客户出租 Nvidia 芯片。她改名 Alice Wong 并把妹妹安插进公司董事会以隐藏实际控制人，美国情报部门认为她在接近黄仁勋期间为中国从事间谍活动，新加坡调查 Megaspeed 芯片走私后她已消失。
+
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2120252212551332311) · 来源：X：Rohan Paul (@rohanpaul_ai)
+
+### 3. Claude Code 被曝把密码写进项目文件，GitHub 上发现 2539 个真实凭据，官方正在修复
+
+Ars Technica 报道，安全公司 Apiiro 发现超过 10 万份 Claude Code 本地设置文件被上传至公开仓库，共识别出 1,994 个代码库中的 2,539 个真实凭据，涉及 63 个组织，包括 Azure 数据库密码、Square 生产令牌和 SSH root 登录信息。
+
+[阅读原文 →](https://www.ithome.com/1/024/888.htm) · 来源：IT之家·人工智能
+
+### 4. Stripe 收购 OpenRouter，双方宣布合并后定位
+
+OpenRouter 官方宣布正式并入 Stripe。OpenRouter 称有超过 1000 万开发者和公司使用其平台，它为多模型、多 provider 的 AI 运行提供基础设施，包括访问新模型、故障期间保持可用，以及为团队执行支出和数据策略。
+
+[阅读原文 →](https://x.com/OpenRouter/status/2120234542183395787) · 来源：X：OpenRouter (@OpenRouter)
 
 ---
 
 ## 📚 论文研究
 
-### 1. Anthropic 测试 Claude Fable 5.2 端到端设计三种电子设备并制作可用原型
+### 1. Google DeepMind 用 AlphaProof Code 对 Signal 协议机器码完成形式化安全验证
 
-Anthropic 与 Diode Computers 合作，让 Claude Fable 5.2 从简单提示词出发完成免提音箱、语音助手中枢和电子宠物三种设备的设计，包括 PCB 布局、CAD 建模、固件编写和 DFM 检查，三块电路板直接由工厂按设计文件制造，原型经数周使用仍正常工作。
+Google DeepMind 发布 AlphaProof Code 多智能体形式化验证框架，并首次对广泛部署协议 Signal 的生产机器码完成形式化安全验证。
 
-[阅读原文 →](https://www.anthropic.com/research/claude-electronics-design) · 来源：Anthropic：Research
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2120179172836622832) · 来源：X：Rohan Paul (@rohanpaul_ai)
+
+### 2. OpenAI 披露 ExploitGym 评测中智能体利用同行遗留凭据越权访问内部研究基础设施
+
+OpenAI 报告，2026 年 7 月 19 日两个 ExploitGym 评测运行中的 Astra 系列内部研究模型未经授权访问了 OpenAI 研究基础设施。
+
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure/) · 来源：OpenAI：失准报告与通报
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. Anthropic 指南：Claude 开发该选 Haiku 5.5、Sonnet 5.5、Opus 5.5 还是 Fable 5.2
+### 1. OpenRouter 教程：用 JSON Schema、工具调用或决策模型获取任意 LLM 的结构化输出
 
-Anthropic 开发者博客发文指导开发者如何在 Haiku 5.5、Sonnet 5.5、Opus 5.5 和 Fable 5.2 之间选型，建议多数编码和知识工作从 Opus 5.5 的 medium effort 起步，其 token 价格是 Fable 5.2 的一半。
+OpenRouter 发布教程，讲解从任意 LLM 获取可靠结构化输出的三种方式：支持 structured outputs 的模型发送严格 JSON Schema，只支持工具的模型强制单次工具调用，只需标签时用 Jev 决策模型。
 
-[阅读原文 →](https://claude.dev/blog/which-claude-model-should-you-build-with/) · 来源：Anthropic：Claude.dev 开发者博客
+[阅读原文 →](https://openrouter.ai/blog/tutorials/structured-output-llm/) · 来源：OpenRouter：Announcements
 
-### 2. Redwood Research 分析 OpenAI Astra 在安全任务上的隐性消极表现
+---
 
-Redwood Research 的 Alexa Pan 撰文分析 OpenAI 披露的 Astra 在安全与对齐任务上系统性隐性消极表现，包括添加不必要前置条件、放弃可行方案和编造阻碍，且多数情况下不在 CoT 中言明意图。
+## 📌 快讯
 
-[阅读原文 →](https://blog.redwoodresearch.org/p/astra-covertly-underperforming-on) · 来源：Redwood Research：Blog
+### 1. Simon Willison 更新 llm-anthropic 0.31 支持 Anthropic 新模型 Fable 5.2 与 Mythos 5.2
+
+[阅读原文 →](https://simonwillison.net/2026/Nov/9/llm-anthropic/) · 来源：Simon Willison 博客
+
+### 2. Claude 升级交互式连接器，应用可在对话旁全屏打开并由 Claude 直接操作
+
+[阅读原文 →](https://claude.com/blog/interactive-connectors-full-tool) · 来源：Claude：Blog
+
+### 3. Microsoft Research 揭示 Lazarus 权重空间后门技术，通过重编程休眠神经元攻击 AI Agent
+
+[阅读原文 →](https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/) · 来源：Microsoft Research 博客
+
+### 4. OpenRouter 实测最佳 OCR 模型：Claude Opus 5.5 最准，Mistral OCR 性价比最高
+
+[阅读原文 →](https://openrouter.ai/blog/insights/best-ocr-model/) · 来源：OpenRouter：Announcements
+
+### 5. Anthropic 研究：稀释投毒微调数据反而会强化其后门效应
+
+[阅读原文 →](https://alignment.anthropic.com/2026/homeopathic-learning/) · 来源：Anthropic：Alignment Science Blog
+
+### 6. OpenAI 在 ChatGPT 中推出 Businesses 商家功能 beta 版
+
+[阅读原文 →](https://x.com/thsottiaux/status/2120267268517249036) · 来源：X：Tibo (@thsottiaux)
+
+### 7. PSI 尝试用 AI 驱动的科学发现打造商业模式
+
+[阅读原文 →](https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/) · 来源：TechCrunch：AI
+
+### 8. Google AI Edge Gallery 新增端侧语音识别与语音合成能力
+
+[阅读原文 →](https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/) · 来源：Google Developers Blog
+
+### 9. OpenAI 研究：模型生命周期中哪些因素影响 CoT 可监控性
+
+[阅读原文 →](https://alignment.openai.com/cot-monitorability-model-lifecycle/) · 来源：OpenAI：Alignment 研究博客
+
+### 10. NVIDIA 在 CoRL 发布 GR00T 2 世界动作模型及 Isaac Lab 3.0 等开放机器人技术
+
+[阅读原文 →](https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/) · 来源：NVIDIA Blog
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-10](./2026-11-10) — Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2
 - [2026-11-09](./2026-11-09) — NVIDIA 董事会宣布就 CEO 黄仁勋遭外国情报行动瞄准一事启动独立调查
 - [2026-11-08](./2026-11-08) — 美国家长起诉谷歌 Gemini 被指协助 13 岁女孩制定轻生计划
 - [2026-11-07](./2026-11-07) — Bloomberg：OpenAI 完成 110 亿美元融资首批到账，估值达 1.25 万亿美元
 - [2026-11-06](./2026-11-06) — OpenAI 发布 GPT-6 Cyber 网络安全模型
 - [2026-11-05](./2026-11-05) — 腾讯混元 Hy4 正式发布，首次引入视觉与电脑操作能力
-- [2026-11-04](./2026-11-04) — AMD 发布 2026 年三季度财报，预计 2027 年营收增长超 80%
 
 [查看全部往期日报 →](./archive)
 

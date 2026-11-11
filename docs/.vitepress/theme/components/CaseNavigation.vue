@@ -1,19 +1,16 @@
 <script setup>
-import { computed, onMounted, onBeforeUnmount, ref, watch } from 'vue'
-import { useRoute } from 'vitepress'
-import cases from '../../data/cases-generated/index.json'
+import { computed, onBeforeUnmount } from 'vue'
 import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../../casesData.js'
-import { resolveCaseContext, buildCaseHref, buildPreviewHref, getListContext, pauseCaseMedia } from './caseBrowsing.js'
+import { buildCaseHref, buildPreviewHref, getListContext, pauseCaseMedia } from './caseBrowsing.js'
+import { useCaseOriginContext } from './useCaseOriginContext.js'
 
 const props = defineProps({ item: { type: Object, required: true } })
-const route = useRoute()
-const fromPath = ref(null)
-const context = computed(() => resolveCaseContext(props.item, cases, fromPath.value))
+const { context } = useCaseOriginContext(() => props.item)
 const previewHref = computed(() => buildPreviewHref(props.item.slug, context.value.listPath))
 const previousHref = computed(() => context.value.previous && buildCaseHref(context.value.previous.slug, context.value.listPath))
 const nextHref = computed(() => context.value.next && buildCaseHref(context.value.next.slug, context.value.listPath))
 // 计数器说明“第几个”是在哪个范围里数的：全部案例、某个分类，或带搜索/标签的筛选结果，
-// 避免读者把分类里的序号（如 32 / 90）和全站总数（599）混淆
+// 避免读者把分类里的序号（如 32 / 90）和全站总数混淆
 const scopeLabel = computed(() => {
   const list = getListContext(context.value.listPath)
   if (!list) return '当前列表'
@@ -22,13 +19,8 @@ const scopeLabel = computed(() => {
   return [...CASE_CATEGORIES, ...CASE_COLLECTIONS].find(c => c.id === list.category)?.name || '当前列表'
 })
 
-function readOrigin() {
-  fromPath.value = new URLSearchParams(window.location.search).get('from')
-}
 function pause() { pauseCaseMedia() }
-watch(() => route.path, () => { if (typeof window !== 'undefined') readOrigin() }, { flush: 'post' })
-onMounted(() => { readOrigin(); window.addEventListener('popstate', readOrigin) })
-onBeforeUnmount(() => { pause(); window.removeEventListener('popstate', readOrigin) })
+onBeforeUnmount(pause)
 </script>
 
 <template>

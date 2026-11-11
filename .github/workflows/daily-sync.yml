@@ -1,0 +1,139 @@
+name: 每日动态与榜单同步巡检
+
+# 统一负责每日 AI 日报同步、模型排行榜同步，以及「仓库最新状态 vs 线上实况」闭环自愈。
+# 触发条件：
+#   - 定时：每天 UTC 02:35（北京时间 10:35）主同步 + UTC 11:15（北京时间 19:15）晚间兜底巡检
+#   - 手动：可在 Actions 页面点击 "Run workflow" 立即触发
+on:
+  schedule:
+    - cron: '35 2 * * *'
+    - cron: '15 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: daily-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-and-heal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 设置 Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 同步 AIHOT 日报
+        id: hot
+        continue-on-error: true
+        run: node scripts/sync-aihot.mjs
+
+      - name: 同步 AI 模型排行榜
+        id: leaderboard
+        continue-on-error: true
+        run: node scripts/sync-leaderboard.mjs
+
+      - name: 提交并推送变更
+        id: commit
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date +%Y-%m-%d)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/hot/ docs/.vitepress/data/leaderboard.json
+
+          if git diff --cached --quiet; then
+            echo "仓库数据无新增变更"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "🤖 自动同步每日动态与模型榜单 $TODAY"
+          git pull --rebase origin main
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: 检查线上是否落后于仓库（闭环自愈）
+        id: drift
+        run: |
+          node --input-type=module -e '
+            import { appendFileSync } from "node:fs";
+            import { createSnapshot } from "./scripts/check-site-health.mjs";
+            const changed = process.env.CHANGED === "true";
+            if (changed) {
+              console.log("本次已有新提交，需要触发部署");
+              appendFileSync(process.env.GITHUB_OUTPUT, "need_deploy=true\nreason=new_commit\n");
+              process.exit(0);
+            }
+            const local = createSnapshot();
+            try {
+              const bust = Math.floor(Date.now() / 60000);
+              const res = await fetch(`https://ailinkstart.com/site-health.json?check=${bust}`, {
+                headers: { "Cache-Control": "no-cache", "User-Agent": "AILinkStart-sync/1.0" },
+                signal: AbortSignal.timeout(20000),
+              });
+              if (!res.ok) throw new Error(`HTTP ${res.status}`);
+              const live = await res.json();
+              const behind =
+                local.daily.date > (live.daily?.date || "") ||
+                (local.daily.date === live.daily?.date && local.daily.sha256 !== live.daily?.sha256) ||
+                Date.parse(local.leaderboard.syncedAt) > Date.parse(live.leaderboard?.syncedAt || "1970-01-01T00:00:00Z") ||
+                (local.leaderboard.syncedAt === live.leaderboard?.syncedAt && local.leaderboard.sha256 !== live.leaderboard?.sha256);
+              if (behind) {
+                console.log(`检测到仓库领先于线上（仓库日报 ${local.daily.date} vs 线上 ${live.daily?.date}），自动补发部署`);
+                appendFileSync(process.env.GITHUB_OUTPUT, "need_deploy=true\nreason=live_behind_repo\n");
+              } else {
+                console.log(`线上已与仓库一致（日报 ${live.daily?.date}，榜单 ${live.leaderboard?.syncedAt}）`);
+                appendFileSync(process.env.GITHUB_OUTPUT, "need_deploy=false\nreason=in_sync\n");
+              }
+            } catch (err) {
+              console.warn(`读取线上快照异常（${err.message}），保守补发一次部署`);
+              appendFileSync(process.env.GITHUB_OUTPUT, "need_deploy=true\nreason=live_check_failed\n");
+            }
+          '
+        env:
+          CHANGED: ${{ steps.commit.outputs.changed }}
+
+      - name: 触发站点部署（带接口瞬时故障重试）
+        id: trigger_deploy
+        if: steps.drift.outputs.need_deploy == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for attempt in 1 2 3; do
+            if gh workflow run deploy.yml --ref main; then
+              echo "已成功触发 deploy.yml（第 ${attempt} 次尝试）"
+              exit 0
+            fi
+            echo "触发 deploy.yml 失败（第 ${attempt} 次），5 秒后重试..."
+            sleep 5
+          done
+          echo "::error::连续 3 次触发 deploy.yml 失败"
+          exit 1
+
+      - name: 输出运行摘要并校验子任务结果
+        if: always()
+        run: |
+          {
+            echo "### 每日同步与线上闭环巡检摘要"
+            echo ""
+            echo "| 检查项 | 状态 |"
+            echo "| --- | --- |"
+            echo "| AIHOT 日报同步 | ${{ steps.hot.outcome }} |"
+            echo "| AI 模型排行榜同步 | ${{ steps.leaderboard.outcome }} |"
+            echo "| Git 提交变更 | ${{ steps.commit.outputs.changed || 'false' }} |"
+            echo "| 部署触发原因 | ${{ steps.drift.outputs.reason || 'n/a' }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "${{ steps.hot.outcome }}" = "failure" ] || [ "${{ steps.leaderboard.outcome }}" = "failure" ]; then
+            echo "::error::部分上游同步步骤失败（已不影响成功项入库与部署），请查看上方对应步骤日志"
+            exit 1
+          fi

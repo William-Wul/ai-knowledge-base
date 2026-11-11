@@ -16,22 +16,29 @@ function applyClasses() {
   el.classList.toggle('kb-zen', zen.value)
 }
 
+function readFlag(key) {
+  try { return typeof localStorage !== 'undefined' && localStorage.getItem(key) === '1' } catch { return false }
+}
+
+function writeFlag(key, enabled) {
+  try { if (typeof localStorage !== 'undefined') localStorage.setItem(key, enabled ? '1' : '') } catch {}
+}
+
 export function initReadingState() {
-  if (typeof localStorage === 'undefined') return
-  collapsed.value = localStorage.getItem(SIDEBAR_KEY) === '1'
-  zen.value = localStorage.getItem(ZEN_KEY) === '1'
+  collapsed.value = readFlag(SIDEBAR_KEY)
+  zen.value = readFlag(ZEN_KEY)
   applyClasses()
 }
 
 export function toggleSidebar() {
   collapsed.value = !collapsed.value
-  localStorage.setItem(SIDEBAR_KEY, collapsed.value ? '1' : '')
+  writeFlag(SIDEBAR_KEY, collapsed.value)
   applyClasses()
 }
 
 export function toggleZen() {
   zen.value = !zen.value
-  localStorage.setItem(ZEN_KEY, zen.value ? '1' : '')
+  writeFlag(ZEN_KEY, zen.value)
   applyClasses()
 }
 

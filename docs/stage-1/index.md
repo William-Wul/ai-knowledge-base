@@ -2,6 +2,9 @@
 title: AI 快速认知
 description: 10 分钟建立 AI 世界观，搞清楚那些每天都在被提到却从未被解释清楚的词
 ---
+<script setup>
+import ModuleArticles from '../.vitepress/theme/components/ModuleArticles.vue'
+</script>
 
 # AI 快速认知
 

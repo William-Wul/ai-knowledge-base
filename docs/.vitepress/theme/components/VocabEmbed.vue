@@ -1,13 +1,14 @@
 <template>
   <div class="vocab-embed">
     <iframe
+      v-if="unlocked"
       ref="frame"
       class="vocab-embed-frame"
       :src="src"
       :style="frameHeight ? { height: frameHeight + 'px' } : null"
       title="AI 学习词汇本"
       loading="eager"
-      @load="syncTheme"
+      @load="onFrameLoad"
     ></iframe>
   </div>
 </template>
@@ -15,15 +16,36 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useData } from 'vitepress'
+import { ACCESS_CONFIG } from '../../accessConfig.js'
+import { hasSessionAccess } from '../accessState.js'
 
 const BASE = '/vocab/index.html'
 const frame = ref(null)
 const src = ref(BASE)
+const unlocked = ref(false)
 // 手机单栏时 = 词汇本内容高度（iframe 不再内部滚动）；双栏时为 null，走 CSS 的视口高度
 const frameHeight = ref(null)
 const { isDark } = useData()
+
+function checkAccess() {
+  if (unlocked.value) return
+  let stored = null
+  try { stored = localStorage.getItem(ACCESS_CONFIG.storageKey) } catch {}
+  if (stored === ACCESS_CONFIG.storageValue || hasSessionAccess()) unlocked.value = true
+}
+
 function syncTheme() {
   frame.value?.contentWindow?.postMessage({ type: 'ailinkstart:vocab:theme', dark: isDark.value }, window.location.origin)
+}
+
+function syncAuth() {
+  if (!unlocked.value) return
+  frame.value?.contentWindow?.postMessage({ type: 'ailinkstart:vocab:auth' }, window.location.origin)
+}
+
+function onFrameLoad() {
+  syncAuth()
+  syncTheme()
 }
 
 // 深链：/vocab-book#Agent → 把 #Agent 交给 iframe，由词汇本自己定位词条
@@ -48,7 +70,10 @@ function stickyOffset() {
 function onMessage(event) {
   if (event.origin !== window.location.origin || event.source !== frame.value?.contentWindow) return
   const data = event.data || {}
-  if (data.type === 'ailinkstart:vocab:ready') syncTheme()
+  if (data.type === 'ailinkstart:vocab:ready') {
+    syncAuth()
+    syncTheme()
+  }
   if (data.type === 'ailinkstart:vocab:size') {
     frameHeight.value = data.stacked && data.height > 0 ? data.height : null
   }
@@ -60,11 +85,14 @@ function onMessage(event) {
 }
 watch(isDark, syncTheme)
 onMounted(() => {
+  checkAccess()
+  window.addEventListener('kb-authenticated', checkAccess)
   window.addEventListener('message', onMessage)
   window.addEventListener('hashchange', passHash)
   if (window.location.hash) src.value = BASE + window.location.hash
 })
 onBeforeUnmount(() => {
+  window.removeEventListener('kb-authenticated', checkAccess)
   window.removeEventListener('message', onMessage)
   window.removeEventListener('hashchange', passHash)
 })

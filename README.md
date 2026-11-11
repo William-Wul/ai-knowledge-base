@@ -47,7 +47,7 @@ npm run check:online
 - **AI 进阶实践**：不绑定单一工具的技巧方法，跨 stage-2/3/4；具体归组以 stagesData.js 为准
 - **AI 学习小工具**：`exams/`（能力自测）+ `/vocab-book`（AI 学习词汇本）
 
-辅助入口：`cases/` 提供 550 个实践案例（图片 225、视频 235、网站与工具 90），支持按用途和题材组合筛选；`videos/` 提供 13 条视频课。
+辅助入口：`cases/` 提供 699 个实践案例（图片、视频、网站与工具，含 Opus 5.5 专题合集），详情页通过 `docs/cases/[slug].md` 动态路由按需生成，支持按用途和题材组合筛选；`videos/` 提供精选 B 站 AI 学习视频课；`model-ranking/` 提供每日同步的 AI 模型综合排行榜。
 
 ```
 docs/
@@ -60,9 +60,10 @@ docs/
 ├── stage-4/    进阶实践 / 工具上手
 ├── stage-5/    AI 编程教程（展示归工具上手，不接新稿）
 ├── stage-6/    一人公司（展示归 AI 前沿，不接新稿）
-├── exams/      能力自测
-├── cases/      案例入口与生成详情
-├── videos/     视频课
+├── exams/      AI 协作力测评
+├── cases/      案例列表与 [slug].md 动态详情路由
+├── videos/     B 站 AI 视频精选
+├── model-ranking/ AI 模型排行榜
 ```
 
 侧边栏由 `docs/.vitepress/config.js` 的 `autoItems()` 函数配合 stagesData.js 清单自动维护，新增文章无需手动更新侧边栏。

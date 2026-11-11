@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFileSync, existsSync } from 'node:fs'
 import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../docs/.vitepress/casesData.js'
 import { loadCases } from './practice-cases-data.mjs'
+import { renderCaseDetailMarkdown } from './generate-practice-cases.mjs'
 import { createHash } from 'node:crypto'
 import { expectedCatalogSize, validateCatalog } from './case-catalog-integrity.mjs'
 import { caseSourceName, hasValidCaseSource } from '../docs/.vitepress/caseSources.js'
@@ -13,6 +14,7 @@ const index = JSON.parse(readFileSync('docs/.vitepress/data/cases-generated/inde
 assert.equal(index.length, expected)
 assert.deepEqual(index.map(item => item.slug), selection.map(item => item.slug), '列表与清单顺序不一致')
 assert(index.every(c => !('promptZh' in c) && !('promptOriginal' in c)), '列表不应包含完整提示词')
+assert(index.every(c => c.sourceUrl?.startsWith('https://')), '列表缺少有效原帖链接 sourceUrl')
 const ids = new Set()
 const dist = 'docs/.vitepress/dist'
 const checkPage = path => {
@@ -45,8 +47,8 @@ for (const c of cases) {
   assert(html.includes('作者原文') || html.includes('完整源码'))
   assert(html.includes('以下步骤与练习由本站整理') && html.includes('本站练习建议'), `缺少本站教学来源说明：${c.slug}`)
   if (c.tested !== true) assert(html.includes('本站未实测生成效果'), `未实测状态缺少读者提示：${c.slug}`)
-  const markdown = readFileSync(`docs/cases/${c.slug}.md`, 'utf8')
-  assert(markdown.includes('值得学习的写法') && markdown.includes('## 开始前准备'), '学习内容未进入可搜索的 Markdown')
+  const markdown = renderCaseDetailMarkdown(c)
+  assert(markdown.includes('值得学习的写法') && markdown.includes('## 开始前准备') && html.includes('值得学习的写法'), '学习内容未进入案例详情正文')
   if (c.promptParts) {
     assert(c.promptParts.every(p => c.promptOriginal.includes(p.original) && c.promptZh.includes(p.zh)), '分段提示词偏离完整原文')
   }

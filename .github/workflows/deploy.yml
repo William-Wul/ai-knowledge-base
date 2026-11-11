@@ -17,6 +17,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -46,6 +47,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: 部署到 GitHub Pages
         id: deployment

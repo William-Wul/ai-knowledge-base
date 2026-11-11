@@ -1,33 +1,17 @@
 <script setup>
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { isOverseasMedia } from './caseBrowsing.js'
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { useOverseasVideoGuard } from './useOverseasVideoGuard.js'
 const props = defineProps({ item: { type: Object, required: true }, index: { type: Number, required: true }, total: { type: Number, required: true }, detailHref: { type: String, required: true } })
 const emit = defineEmits(['previous', 'next', 'close', 'learn'])
 const dialog = ref(null)
 const media = ref(null)
 const closeButton = ref(null)
-const failed = ref(false)
-const waiting = ref(false)
 const imageLoaded = ref(false)
-const retryCount = ref(0)
-// 海外平台托管的视频（如 video.twimg.com）国内网络常常打不开，提前提示并在失败时说明原因
-const overseas = computed(() => props.item.mediaType === 'video' && isOverseasMedia(props.item.mediaUrl))
+const { failed, waiting, retryCount, overseas, clearStall, watchStall, videoReady, videoFailed, resetMedia, retryMedia } = useOverseasVideoGuard(() => props.item, media)
 let scrollY = 0
 let bodyStyle
-// 被墙的视频常常既不报错也不加载，一直转圈：开始播放后长时间拿不到画面，就按加载失败处理
-const STALL_MS = 15000
-let stallTimer
-function clearStall() { clearTimeout(stallTimer) }
-function watchStall() {
-  clearStall()
-  stallTimer = setTimeout(() => {
-    if ((media.value?.readyState || 0) < 2) { failed.value = true; waiting.value = false }
-  }, STALL_MS)
-}
 function stop() { clearStall(); media.value?.pause?.() }
-function retry() { clearStall(); failed.value = false; waiting.value = false; imageLoaded.value = false; retryCount.value++ }
-function videoFailed() { clearStall(); failed.value = true; waiting.value = false }
-function videoReady() { clearStall(); waiting.value = false }
+function retry() { imageLoaded.value = false; retryMedia() }
 // 手机上左右滑动切换案例：只认明显的横向滑动，竖向滚动和双指缩放不受影响
 const SWIPE_MIN = 50
 let touch = null
@@ -62,7 +46,7 @@ function backdrop(event) {
   const rect = dialog.value.getBoundingClientRect()
   if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) emit('close')
 }
-watch(() => props.item.slug, () => { stop(); touch = null; failed.value = false; waiting.value = false; imageLoaded.value = false; retryCount.value = 0 })
+watch(() => props.item.slug, () => { stop(); touch = null; imageLoaded.value = false; resetMedia() })
 onMounted(async () => {
   scrollY = window.scrollY
   bodyStyle = { position: document.body.style.position, top: document.body.style.top, left: document.body.style.left, right: document.body.style.right, paddingRight: document.body.style.paddingRight }
@@ -89,7 +73,7 @@ onBeforeUnmount(() => {
       </header>
       <div class="case-viewer-main" @touchstart.passive="touchStart" @touchend.passive="touchEnd" @touchcancel.passive="touch = null">
         <div class="case-viewer-stage">
-          <video v-if="item.mediaType === 'video' && !failed" :key="item.slug + retryCount" ref="media" :src="item.mediaUrl" :poster="item.cover" :aria-label="item.title + '效果视频'" controls playsinline :preload="retryCount ? 'metadata' : 'none'" @play="watchStall" @waiting="waiting = true; watchStall()" @loadeddata="videoReady" @canplay="videoReady" @playing="videoReady" @error="videoFailed" />
+          <video v-if="item.mediaType === 'video' && !failed" :key="item.slug + retryCount" ref="media" :src="item.mediaUrl" :poster="item.cover" :aria-label="item.title + '效果视频'" controls playsinline :preload="retryCount ? 'metadata' : 'none'" @play="watchStall()" @waiting="watchStall(true)" @loadeddata="videoReady" @canplay="videoReady" @playing="videoReady" @error="videoFailed" />
           <img v-else :key="item.slug + retryCount" class="no-zoom" :src="failed ? item.cover : (item.imageUrl || item.cover)" :alt="item.title + '效果预览'" @load="imageLoaded = true" @error="failed = true" />
           <img v-if="item.mediaType !== 'video' && !imageLoaded && !failed" class="no-zoom case-viewer-placeholder" :src="item.cover" alt="" aria-hidden="true" />
           <span v-if="waiting || (item.mediaType !== 'video' && !imageLoaded && !failed)" class="case-viewer-loading" role="status">{{ item.mediaType === 'video' ? '视频加载中…' : '图片加载中…' }}</span>

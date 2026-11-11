@@ -3,32 +3,20 @@ import { useRoute, useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import mediumZoom from 'medium-zoom'
 import PasswordGate from './PasswordGate.vue'
-import HomeLayout from './HomeLayout.vue'
-import VocabEmbed from './components/VocabEmbed.vue'
 import BilibiliVideo from './components/BilibiliVideo.vue'
-import AiCollabTest from './components/AiCollabTest.vue'
 import Breadcrumb from './components/Breadcrumb.vue'
 import BackToTop from './components/BackToTop.vue'
 import ReadingControls from './components/ReadingControls.vue'
 import SidebarHeader from './components/SidebarHeader.vue'
-import ModelRanking from './components/ModelRanking.vue'
-import VideoBoard from './components/VideoBoard.vue'
 import ContentReviewNote from './components/ContentReviewNote.vue'
 import ArticleMeta from './components/ArticleMeta.vue'
-import ModuleArticles from './components/ModuleArticles.vue'
 import './custom.css'
 import './components/cases.css'
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
-    app.component('HomeLayout', HomeLayout)
     app.component('BilibiliVideo', BilibiliVideo)
-    app.component('AiCollabTest', AiCollabTest)
-    app.component('VocabEmbed', VocabEmbed)
-    app.component('ModelRanking', ModelRanking)
-    app.component('VideoBoard', VideoBoard)
-    app.component('ModuleArticles', ModuleArticles)
   },
   setup() {
     const route = useRoute()

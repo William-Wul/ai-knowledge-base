@@ -48,7 +48,9 @@ test('兼容已知列名仍拒绝未知列名、缺列、重复列和错误覆�
 test('拒绝截断、重复模型、错误价格和不连续排名', () => {
   assert.throws(() => parse(html.replace(/<tbody>[\s\S]*?<\/tbody>/, '<tbody></tbody>')), /行数异常/)
   assert.throws(() => parse(html.replace('href="/leaderboard/gemini-4-argon"', 'href="/leaderboard/claude-fable-5-1"')), /重复/)
-  assert.throws(() => parse(html.replace('¥26.82', '$26.82')), /价格/)
+  assert.throws(() => parse(html.replace('¥26.82', '$26.82')), /价格字段异常#0\(Claude Opus 5\.5\): .*\$26\.82/)
+  assert.equal(parse(html.replace('¥26.82', '免费')).models[0].inputPrice, '免费')
+  assert.equal(parse(html.replace('¥26.82', '-')).models[0].inputPrice, null)
   assert.throws(() => parse(html.replace('>02</span>', '>99</span>')), /名次/)
   assert.throws(() => parse('<html>Access denied</html>'))
 })

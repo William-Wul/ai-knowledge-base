@@ -1,4 +1,5 @@
 import { hasSessionAccess } from '../accessState.js'
+import { ACCESS_CONFIG } from '../../accessConfig.js'
 import { normalizeTagFilters, caseTagLabels } from '../../caseTags.js'
 import { CASE_CATEGORIES, CASE_COLLECTIONS } from '../../casesData.js'
 
@@ -131,7 +132,7 @@ export function hasCaseAccess(storage) {
   if (arguments.length === 0 && hasSessionAccess()) return true
   try {
     const target = storage || (typeof window === 'undefined' ? null : window.localStorage)
-    return target?.getItem('kb_auth_v1') === 'ok'
+    return target?.getItem(ACCESS_CONFIG.storageKey) === ACCESS_CONFIG.storageValue
   } catch { return false }
 }
 

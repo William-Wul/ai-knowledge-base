@@ -268,6 +268,7 @@ export default defineConfig({
 
   lang: 'zh-CN',
   cleanUrls: true,
+  metaChunk: true,
   // 2026-08：恢复深色模式开关。首次访问跟随系统偏好，
   // 用户手动切换后 VitePress 自动写入 localStorage 记住选择。
   appearance: true,
@@ -322,8 +323,8 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://gstatic.loli.net', crossorigin: '' }],
     // 字体非阻塞加载：先用系统字体出字，网络字体到了再替换，弱网下不白屏
     ['link', { rel: 'stylesheet', href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@700;900&family=JetBrains+Mono:wght@400;500&display=swap', media: 'print', onload: "this.media='all'" }],
-    // 已登录过的访客：在页面渲染前就标记，避免每次打开先闪一下密码框（样式见 custom.css）
-    ['script', {}, `try { if (localStorage.getItem(${JSON.stringify(ACCESS_CONFIG.storageKey)}) === ${JSON.stringify(ACCESS_CONFIG.storageValue)}) document.documentElement.classList.add('kb-authed') } catch (e) {}`],
+    // 已登录过的访客：在页面渲染前就标记，避免每次打开先闪一下密码框；受限环境禁用存储时提供内存兜底防 VitePress 主题报错
+    ['script', {}, `try { if (localStorage.getItem(${JSON.stringify(ACCESS_CONFIG.storageKey)}) === ${JSON.stringify(ACCESS_CONFIG.storageValue)}) document.documentElement.classList.add('kb-authed') } catch (e) { try { var __m = Object.create(null); Object.defineProperty(window, 'localStorage', { configurable: true, value: { getItem: function(k){ return k in __m ? __m[k] : null }, setItem: function(k,v){ __m[k] = String(v) }, removeItem: function(k){ delete __m[k] }, clear: function(){ __m = Object.create(null) } } }) } catch (_) {} }`],
     ['script', {}, `if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }`],
     ['script', {}, `var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?a681b724c97970a6d082bec9d556c968"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();`],
   ],
@@ -350,16 +351,17 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        // 案例详情（有自己的筛选浏览器）、往期日报和搬家页不进搜索索引：
-        // 索引从 6MB 降下来，手机第一次搜索更快，结果也不再被案例提示词淹没
+        // 案例详情（有自己的筛选浏览器）、往期日报、更新日志和搬家页不进搜索索引：
+        // 先按路径快速短路，避免构建期无意义渲染 870+ 个排除页面的 Markdown
         _render(src, env, md) {
-          // 先渲染才能拿到 env.frontmatter
-          const html = md.render(src, env)
           const path = env.relativePath || ''
-          const fm = env.frontmatter || {}
-          if (fm.search === false || fm.caseDetail) return ''
           if (/^hot\/\d{4}-/.test(path)) return ''
           if (/^(stage-3|stage-5|stage-6|news)\/index\.md$/.test(path)) return ''
+          if (path === 'changelog.md') return ''
+          if (/^cases\/[^/]+\.md$/.test(path) && path !== 'cases/index.md') return ''
+          const html = md.render(src, env)
+          const fm = env.frontmatter || {}
+          if (fm.search === false || fm.caseDetail) return ''
           return html
         },
         miniSearch: {

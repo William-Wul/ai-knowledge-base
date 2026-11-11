@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <title>AI 学习词汇本</title>
 <script>
 try {
@@ -635,6 +636,18 @@ html.embedded .word-card { border-color: var(--border); }
   var btn = document.getElementById('ailinkstart-gate-btn');
   var err = document.getElementById('ailinkstart-gate-error');
   if (!gate) return;
+  function unlockGate() {
+    gate.parentNode && gate.parentNode.removeChild(gate);
+    document.documentElement.style.overflow = '';
+  }
+  if (window.addEventListener) {
+    window.addEventListener('storage', function(ev){
+      if (config && ev && ev.key === STORAGE_KEY && ev.newValue === config.storageValue) unlockGate();
+    });
+    window.addEventListener('message', function(ev){
+      if (config && window.self !== window.top && ev && ev.origin === window.location.origin && ev.source === window.parent && ev.data && ev.data.type === 'ailinkstart:vocab:auth') unlockGate();
+    });
+  }
   gate.style.display = 'flex';
   if (!config) err.textContent = '访问配置暂时无法加载，请刷新后重试。';
   document.documentElement.style.overflow = 'hidden';
@@ -659,8 +672,7 @@ html.embedded .word-card { border-color: var(--border); }
     }
     if (hash === config.hash) {
       try { localStorage.setItem(STORAGE_KEY, config.storageValue); } catch(e) {}
-      gate.parentNode && gate.parentNode.removeChild(gate);
-      document.documentElement.style.overflow = '';
+      unlockGate();
     } else {
       err.textContent = '密码错误，请重试';
       input.classList.add('error');

@@ -1,24 +1,11 @@
 <script setup>
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
-import { isOverseasMedia } from './caseBrowsing.js'
+import { computed, ref, watch } from 'vue'
+import { useOverseasVideoGuard } from './useOverseasVideoGuard.js'
 const props = defineProps({ item: { type: Object, required: true } })
 const item = computed(() => props.item)
-const failed = ref(false)
-const retryCount = ref(0)
 const video = ref(null)
-// 海外平台托管的视频（如 video.twimg.com）国内网络常常打不开，提前说明并给出替代入口
-const overseas = computed(() => item.value.mediaType === 'video' && isOverseasMedia(item.value.mediaUrl))
-// 被墙的视频常常既不报错也不加载：开始播放后 15 秒仍拿不到画面，就按加载失败处理
-let stallTimer
-function clearStall() { clearTimeout(stallTimer) }
-function watchStall() {
-  clearStall()
-  stallTimer = setTimeout(() => { if ((video.value?.readyState || 0) < 2) failed.value = true }, 15000)
-}
-function videoFailed() { clearStall(); failed.value = true }
-function retry() { clearStall(); failed.value = false; retryCount.value++ }
-watch(() => item.value.slug, () => { clearStall(); failed.value = false; retryCount.value = 0 })
-onBeforeUnmount(clearStall)
+const { failed, retryCount, overseas, clearStall, watchStall, videoFailed, resetMedia, retryMedia: retry } = useOverseasVideoGuard(() => item.value, video)
+watch(() => item.value.slug, resetMedia)
 </script>
 <template>
   <figure v-if="item" class="case-media-block">

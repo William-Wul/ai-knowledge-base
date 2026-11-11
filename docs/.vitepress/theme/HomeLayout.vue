@@ -10,7 +10,6 @@
 import HomeNav from './components/HomeNav.vue'
 import HomeHero from './components/HomeHero.vue'
 import HomeFooter from './components/HomeFooter.vue'
-// 注：HomeFeatures（独立第二屏）已合并进 HomeHero 首屏，组件文件保留便于日后恢复
 </script>
 
 <style>

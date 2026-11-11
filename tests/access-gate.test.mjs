@@ -54,3 +54,55 @@ test('存储不可用仍可在本次页面校验成功，缺配置必须保持�
   missingInput.value = 'fixture-password'; missingInput.listeners.input()
   assert.equal(missing.elements.get('ailinkstart-gate-btn').disabled, true)
 })
+test('嵌入主站解锁与跨标签 storage 事件可同步放行，跨源或顶层伪造消息被拒绝', async () => {
+  const windowListeners = {}
+  const parent = {}
+  const win = {
+    KB_ACCESS_CONFIG: fixture,
+    self: {},
+    top: parent,
+    parent,
+    location: { origin: 'https://ailinkstart.com' },
+    addEventListener(name, fn) { windowListeners[name] = fn },
+  }
+  const elements = new Map()
+  const removed = []
+  for (const name of ['gate', 'gate-card', 'gate-form', 'gate-input', 'gate-btn', 'gate-error']) {
+    elements.set('ailinkstart-' + name, { style: {}, value: '', disabled: true, listeners: {}, classList: { add() {}, remove() {} }, focus() {}, addEventListener(n, l) { this.listeners[n] = l }, parentNode: { removeChild(el) { removed.push(el) } } })
+  }
+  const document = { getElementById: id => elements.get(id), documentElement: { style: {} } }
+  const localStorage = { getItem() { throw new Error('blocked') }, setItem() { throw new Error('blocked') } }
+  runInNewContext(script, { window: win, document, localStorage, crypto: webcrypto, TextEncoder, Uint8Array, setTimeout: fn => fn() })
+
+  windowListeners.message({ origin: 'https://evil.example', source: parent, data: { type: 'ailinkstart:vocab:auth' } })
+  assert.equal(removed.length, 0)
+
+  windowListeners.message({ origin: 'https://ailinkstart.com', source: parent, data: { type: 'ailinkstart:vocab:auth' } })
+  assert.equal(removed.length, 1)
+
+  const { initReadingState, toggleSidebar, toggleZen } = await import('../docs/.vitepress/theme/readingState.js')
+  const origDescriptor = Object.getOwnPropertyDescriptor(globalThis, 'localStorage')
+  Object.defineProperty(globalThis, 'localStorage', {
+    configurable: true,
+    get() {
+      return {
+        getItem() { throw new Error('SecurityError') },
+        setItem() { throw new Error('SecurityError') },
+      }
+    },
+  })
+  try {
+    assert.doesNotThrow(() => {
+      initReadingState()
+      toggleSidebar()
+      toggleZen()
+    })
+  } finally {
+    if (origDescriptor) Object.defineProperty(globalThis, 'localStorage', origDescriptor)
+    else delete globalThis.localStorage
+  }
+
+  const { hasCaseAccess } = await import('../docs/.vitepress/theme/components/caseBrowsing.js')
+  assert.equal(hasCaseAccess({ getItem: k => k === ACCESS_CONFIG.storageKey ? ACCESS_CONFIG.storageValue : null }), true)
+  assert.equal(hasCaseAccess({ getItem: () => null }), false)
+})

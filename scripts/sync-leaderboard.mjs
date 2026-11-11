@@ -90,8 +90,10 @@ export function parse(html) {
     const evidenceStatus = pick(/(覆盖\s*\d+\s*%)/, text(evidence), `evidenceStatus#${i}`).replace(/\s+/g, '')
     if (Number(evidenceStatus.match(/\d+/)[0]) > 100) throw new Error(`评测覆盖率异常#${i}`)
     const prices = ['缓存价格', '输入价格', '输出价格'].map(label => text(cell(label)))
-    if (prices.some(p => !/^(?:¥(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?|—|暂无|待核验)$/.test(p))) throw new Error(`价格字段异常#${i}`)
-    const [cachePrice, inputPrice, outputPrice] = prices.map(p => /^(—|暂无)$/.test(p) ? null : p)
+    if (prices.some(p => !/^(?:¥(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?|—|-|暂无|待核验|待定|免费)$/.test(p))) {
+      throw new Error(`价格字段异常#${i}(${name}): ${prices.join(' / ')}`)
+    }
+    const [cachePrice, inputPrice, outputPrice] = prices.map(p => /^(?:—|-|暂无)$/.test(p) ? null : p)
     const score = Number(pick(/<strong[^>]*>([\d.]+)<\/strong>/, cell('AIHOT 评分'), `score#${i}`))
     if (!Number.isFinite(score) || score < 0 || score > 100 || !Number.isInteger(evidenceCount) || evidenceCount < 0 || evidenceCount > evaluationCount || !/^\d{4}-\d{2}-\d{2}$/.test(releaseDate)) throw new Error(`模型字段异常#${i}`)
     return { rank, slug, name, provider, releaseDate, evidenceCount, evidenceStatus, cachePrice, inputPrice, outputPrice, score }

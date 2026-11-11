@@ -4,5 +4,8 @@ description: 12 道认知题 + 8 道协作风格题，测出你是 16 种 AI 协
 prev: false
 next: false
 ---
+<script setup>
+import AiCollabTest from '../.vitepress/theme/components/AiCollabTest.vue'
+</script>
 
 <AiCollabTest />

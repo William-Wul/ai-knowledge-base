@@ -2,6 +2,9 @@
 title: AI 进阶实践
 description: 不绑定任何一个工具的 AI 使用技巧、思路和方法
 ---
+<script setup>
+import ModuleArticles from '../.vitepress/theme/components/ModuleArticles.vue'
+</script>
 
 # AI 进阶实践
 

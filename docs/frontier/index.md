@@ -2,6 +2,9 @@
 title: AI 前沿
 description: 最新 AI 资讯专题与前沿深度内容：行业动态、技术趋势、值得关注的思考
 ---
+<script setup>
+import ModuleArticles from '../.vitepress/theme/components/ModuleArticles.vue'
+</script>
 
 # AI 前沿
 

@@ -2,6 +2,9 @@
 title: AI 模型排行榜
 description: 聚合多家公开评测榜单的大模型综合排行，每日自动同步
 ---
+<script setup>
+import ModelRanking from '../.vitepress/theme/components/ModelRanking.vue'
+</script>
 
 # AI 模型排行榜
 

@@ -71,37 +71,20 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import lb from '../../data/leaderboard.json'
+import { formatSyncTime, isTimestampStale } from '../dataFreshness.js'
 
 // 浏览器打开页面后按当前时间检查，静态站停止部署时也能提示过期。
 const isStale = ref(false)
 let staleTimer
 onMounted(() => {
-  const check = () => { isStale.value = !Number.isFinite(Date.parse(lb.syncedAt)) || Date.now() - Date.parse(lb.syncedAt) > 2 * 86400_000 }
+  const check = () => { isStale.value = isTimestampStale(lb.syncedAt) }
   check()
   staleTimer = setInterval(check, 60_000)
 })
 onUnmounted(() => clearInterval(staleTimer))
 
 const pad = (n) => String(n).padStart(2, '0')
-
-// 同步时间统一转成北京时间展示
-const syncedText = (() => {
-  try {
-    const d = new Date(lb.syncedAt)
-    const parts = new Intl.DateTimeFormat('zh-CN', {
-      timeZone: 'Asia/Shanghai',
-      month: 'numeric',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: false,
-    }).formatToParts(d)
-    const get = (t) => parts.find((p) => p.type === t)?.value || ''
-    return `${get('month')}月${get('day')}日 ${get('hour')}:${get('minute')}`
-  } catch {
-    return ''
-  }
-})()
+const syncedText = formatSyncTime(lb.syncedAt)
 </script>
 
 <style scoped>

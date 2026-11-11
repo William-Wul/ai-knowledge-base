@@ -266,6 +266,7 @@ onBeforeUnmount(() => clearInterval(freshnessTimer))
 .hero-text {
   max-width: 560px;
   position: relative;
+  margin: 0 0 0.75rem;
   /* 左列内容整体垂直居中，避免标题与小工具之间留大段空白 */
   align-self: stretch;
   display: flex;
@@ -305,7 +306,7 @@ onBeforeUnmount(() => clearInterval(freshnessTimer))
   border-radius: 2px;
 }
 .hero-actions {
-  display: flex; gap: 14px; flex-wrap: wrap;
+  display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
   opacity: 0; animation: fadeUp 0.8s 0.6s ease forwards;
 }
 .btn {
