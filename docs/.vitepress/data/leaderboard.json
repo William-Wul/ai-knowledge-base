@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 16,
   "evaluationCount": 56,
-  "sourceUpdatedAt": "11/11 14:05",
-  "syncedAt": "2026-11-11T08:20:53.384Z",
+  "sourceUpdatedAt": "11/12 02:05",
+  "syncedAt": "2026-11-11T18:42:21.390Z",
   "models": [
     {
       "rank": 1,
@@ -16,8 +16,8 @@
       "evidenceCount": 37,
       "evidenceStatus": "覆盖71%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥53.36",
-      "outputPrice": "¥266.81",
+      "inputPrice": "¥53.37",
+      "outputPrice": "¥266.83",
       "score": 81
     },
     {
@@ -55,8 +55,8 @@
       "evidenceCount": 49,
       "evidenceStatus": "覆盖92%",
       "cachePrice": "¥1.67",
-      "inputPrice": "¥66.7",
-      "outputPrice": "¥333.51",
+      "inputPrice": "¥66.71",
+      "outputPrice": "¥333.54",
       "score": 72.7
     },
     {
@@ -68,8 +68,8 @@
       "evidenceCount": 56,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥6.67",
-      "inputPrice": "¥66.7",
-      "outputPrice": "¥333.51",
+      "inputPrice": "¥66.71",
+      "outputPrice": "¥333.54",
       "score": 72.2
     },
     {
@@ -95,7 +95,7 @@
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.34",
-      "outputPrice": "¥66.7",
+      "outputPrice": "¥66.71",
       "score": 71.9
     },
     {
@@ -108,7 +108,7 @@
       "evidenceStatus": "覆盖97%",
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.34",
-      "outputPrice": "¥66.7",
+      "outputPrice": "¥66.71",
       "score": 70.3
     },
     {
@@ -121,7 +121,7 @@
       "evidenceStatus": "覆盖90%",
       "cachePrice": "¥3.34",
       "inputPrice": "¥33.35",
-      "outputPrice": "¥166.76",
+      "outputPrice": "¥166.77",
       "score": 69.8
     },
     {
@@ -146,8 +146,8 @@
       "evidenceCount": 36,
       "evidenceStatus": "覆盖79%",
       "cachePrice": "¥6.67",
-      "inputPrice": "¥66.7",
-      "outputPrice": "¥333.51",
+      "inputPrice": "¥66.71",
+      "outputPrice": "¥333.54",
       "score": 69.1
     },
     {
@@ -186,7 +186,7 @@
       "evidenceStatus": "覆盖84%",
       "cachePrice": "¥3.34",
       "inputPrice": "¥33.35",
-      "outputPrice": "¥200.11",
+      "outputPrice": "¥200.12",
       "score": 66.5
     },
     {
@@ -195,12 +195,12 @@
       "name": "Muse Ember",
       "provider": "Meta",
       "releaseDate": "2026-11-09",
-      "evidenceCount": 19,
-      "evidenceStatus": "覆盖45%",
+      "evidenceCount": 20,
+      "evidenceStatus": "覆盖47%",
       "cachePrice": "¥0.0267",
       "inputPrice": "¥0.67",
       "outputPrice": "¥3.34",
-      "score": 66.2
+      "score": 66.1
     },
     {
       "rank": 16,
@@ -238,7 +238,7 @@
       "evidenceStatus": "覆盖90%",
       "cachePrice": "¥1.33",
       "inputPrice": "¥13.34",
-      "outputPrice": "¥66.7",
+      "outputPrice": "¥66.71",
       "score": 65.7
     },
     {
@@ -316,7 +316,7 @@
       "evidenceStatus": "覆盖68%",
       "cachePrice": "¥3.34",
       "inputPrice": "¥33.35",
-      "outputPrice": "¥200.11",
+      "outputPrice": "¥200.12",
       "score": 62.8
     },
     {
@@ -368,7 +368,7 @@
       "evidenceStatus": "覆盖74%",
       "cachePrice": "¥3.34",
       "inputPrice": "¥33.35",
-      "outputPrice": "¥166.76",
+      "outputPrice": "¥166.77",
       "score": 62.4
     },
     {
