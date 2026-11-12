@@ -1,163 +1,147 @@
 ---
 title: AI 日报
-description: 2026-11-11 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-11
+description: 2026-11-12 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-12
 ---
 
-# 🔥 AI 日报 · 2026-11-11
+# 🔥 AI 日报 · 2026-11-12
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Google DeepMind 发布 Gemini 4 Carbon 前沿模型
+## Google 发布 Gemini Decisions API 与 Gemini Decision 1 模型，专注快速多模态封闭式决策
 
-Google DeepMind 正式向开发者、企业、科学家和普通用户开放 Gemini 4 Carbon，定位为其最强前沿模型，主打网络安全能力与复杂知识工作、软件工程、科学推理中的长程智能体工作流。
+Google 推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动，可在 150-250ms 端到端延迟内对文本、图像、音频、视频和 PDF（最多 256K tokens）一次性评估最多 1000 个是/否、多选和评分题。
 
 ## 🤖 模型发布/更新
 
-### 1. Google DeepMind 发布 Gemini 4 Carbon 前沿模型
+### 1. 百度发布 ERNIE 5.5 Flash Preview，权重将于 11 月 25 日前开源
 
-Google DeepMind 正式向开发者、企业、科学家和普通用户开放 Gemini 4 Carbon，定位为其最强前沿模型，主打网络安全能力与复杂知识工作、软件工程、科学推理中的长程智能体工作流。
+百度发布 ERNIE 5.5 Flash Preview，是基于此前 Base 模型的首个后训练版本，总参数 280B、激活参数 14B，支持 1M 上下文。模型 API 已在千帆平台上线，权重将于 11 月 25 日前开源；官方展示了游戏开发、3D 建模、知识工作、视频创作等 Agent 场景成果，并称该版本为后训练中间版本，正式版仍将持续优化。
 
-[阅读原文 →](https://deepmind.google/blog/gemini-4-carbon-is-now-available/) · 来源：Google DeepMind：Blog
+[阅读原文 →](https://ernie.baidu.com/zh/release/ernie-5-5-flash-preview/) · 来源：百度文心 ERNIE 官方博客
 
-### 2. MiniMax 发布开源图像生成模型 H3-Image，10 秒内生成 4K 图像
+### 2. Runway 开源 27B 世界动作模型 Praxis-1，权重采用 Apache 2.0 许可
 
-MiniMax 发布基于 H3 的开源权重图像生成模型 H3-Image，支持文生图、参考图生成和图像编辑，可生成 4096 × 4096 的 4K 图像，速度最高达主流方案的 5 倍。
+Runway 宣布世界动作模型 Praxis-1 以 Apache 2.0 开放权重面向所有人开放。该模型为 27B 参数 MoE 扩散 Transformer，同时预测视频与动作，在 NVIDIA RoboLab-120 榜单以 46.2% 成功率居首，超过 FLUX 3 Action（42.9%）、Cosmos3 Nano（36.8%）和 π0.5（28.0%）。
 
-[阅读原文 →](https://www.minimax.io/blog/minimax-h3-image) · 来源：MiniMax：Blog
+[阅读原文 →](https://runwayml.com/news/company-news/praxis-1-is-now-available) · 来源：Runway：News
+
+### 3. Google DeepMind 发布 AlphaGenome 2，预测基因变异对特定细胞类型的影响
+
+Google DeepMind 发布下一代 DNA 序列模型 AlphaGenome 2，可预测 DNA 变异如何影响数百种人类细胞类型中的基因表达。模型改为条件式架构，训练数据超过 1.07 亿个单细胞样本、覆盖 68 种组织，在 TenK10K 数据集上识别的因果变异数量接近上一代的两倍（30% vs 16%），并能在不重新训练的情况下泛化到新的单细胞实验。
+
+[阅读原文 →](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/) · 来源：Google DeepMind：Blog
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. Anthropic 发布 Claude Whiteboards 和 Claude Sheets，Claude Dashboards 转正为 Claude Data
+### 1. Google 发布 Gemini Decisions API 与 Gemini Decision 1 模型，专注快速多模态封闭式决策
 
-Anthropic 推出 Claude Whiteboards 和 Claude Sheets 测试版，Claude Dashboards 正式可用并更名为 Claude Data，三款产品面向所有付费计划开放。
+Google 推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动，可在 150-250ms 端到端延迟内对文本、图像、音频、视频和 PDF（最多 256K tokens）一次性评估最多 1000 个是/否、多选和评分题。
 
-[阅读原文 →](https://claude.com/blog/sheets-whiteboards-data) · 来源：Claude：Blog
-
-### 2. Gemini 4 Carbon 上线 Gemini API、AI Studio 和 Antigravity
-
-Philipp Schmid 介绍 Gemini 4 Carbon 现已可在 Gemini API、Google AI Studio 和 Antigravity（限 Google AI Ultra 订阅者）中使用。
-
-[阅读原文 →](https://x.com/_philschmid/status/2120186354537812452) · 来源：X：Philipp Schmid (@_philschmid)
-
-### 3. n8n Labs 发布本机个人智能体 Nod 研究预览版
-
-n8n 发布 n8n Labs 首个实验项目 Nod 的研究预览版，一个独立于 n8n 的开源个人智能体，可在 Mac 或 Windows 本机的沙盒和浏览器中代用户完成取消订阅、比价、订酒店等任务，无需 n8n 账号或云服务。
-
-[阅读原文 →](https://blog.n8n.io/meet-nod/) · 来源：n8n Blog
+[阅读原文 →](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/) · 来源：Google Blog：AI
 
 ---
 
 ## 🌐 行业动态
 
-### 1. Anthropic 启动 IPO 路演，拟发行 8.25 亿股 A 类普通股并申请以代码 ANT 上市纳斯达克
+### 1. OpenAI Q3 营收达 100 亿美元，效率仍落后于 Anthropic
 
-Anthropic 启动拟议 IPO 路演，拟发行 825,000,000 股 A 类普通股，其中 801,351,354 股由 Anthropic 发售、23,648,646 股由部分现有股东出售，Anthropic 不获后者出售所得款项。
+据《华尔街日报》和 The Information 报道，OpenAI Q3 环比增长约 50% 至 100 亿美元，但调整后经营亏损从 101 亿升至 109 亿美元。
 
-[阅读原文 →](https://www.anthropic.com/news/roadshow-launch) · 来源：Anthropic：Newsroom
+[阅读原文 →](https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/) · 来源：The Decoder：AI News
 
-### 2. FT 曝 Alice Huang 借 Megaspeed 走私 Nvidia 芯片
+### 2. Grok 被指生成儿童色情图像，xAI 面临多起集体诉讼
 
-FT 发文披露 Alice Huang 与秘密男友兼商业伙伴 Kang Wei 运营新加坡公司 Megaspeed，用阿里巴巴的资金向被美国出口规则限制的中国客户出租 Nvidia 芯片。她改名 Alice Wong 并把妹妹安插进公司董事会以隐藏实际控制人，美国情报部门认为她在接近黄仁勋期间为中国从事间谍活动，新加坡调查 Megaspeed 芯片走私后她已消失。
+据彭博社报道，多名未成年受害者就 Grok 被用于把普通照片篡改成儿童性虐待材料（CSAM）对马斯克旗下 xAI 提起多起集体诉讼，律师估计符合索赔条件的受害者可能多达数千人。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2120252212551332311) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://www.ithome.com/1/025/809.htm) · 来源：IT之家·人工智能
 
-### 3. Claude Code 被曝把密码写进项目文件，GitHub 上发现 2539 个真实凭据，官方正在修复
+### 3. 安全公司 Claroc：94.7% 的 Grok 构建应用可被任意访问，含患者数据和 SpaceXSI 内部文件
 
-Ars Technica 报道，安全公司 Apiiro 发现超过 10 万份 Claude Code 本地设置文件被上传至公开仓库，共识别出 1,994 个代码库中的 2,539 个真实凭据，涉及 63 个组织，包括 Azure 数据库密码、Square 生产令牌和 SSH root 登录信息。
+安全公司 Claroc 报告称，在检查的 37,571 个仍在线的 Grok 构建应用中，35,578 个（94.7%）无需登录即可访问，原因是发布对话框默认预选"Anyone with the link"，且每个应用的独立子域名会进入可检索的 passive DNS 数据库。
 
-[阅读原文 →](https://www.ithome.com/1/024/888.htm) · 来源：IT之家·人工智能
+[阅读原文 →](https://the-decoder.com/grok-built-apps-exposed-patient-data-plaintext-passwords-and-spacexsis-own-sales-pipeline/) · 来源：The Decoder：AI News
 
-### 4. Stripe 收购 OpenRouter，双方宣布合并后定位
+### 4. Anthropic 修订版 S1 文件披露与 Microsoft 和 Google 超 100 亿美元级新算力协议
 
-OpenRouter 官方宣布正式并入 Stripe。OpenRouter 称有超过 1000 万开发者和公司使用其平台，它为多模型、多 provider 的 AI 运行提供基础设施，包括访问新模型、故障期间保持可用，以及为团队执行支出和数据策略。
+Anthropic 在当日修订的 S1 文件中披露与 Microsoft 和 Google 达成超 100 亿美元的新协议。Microsoft 承诺到 2033 年 6 月支出至少 472 亿、最高 492 亿美元，Google 最低承诺从约 1145 亿升至约 1213 亿美元，两笔均不可撤销、无论是否使用容量都须付款。文件还提到上季度短期算力支出 50 亿美元且价格明显更高。
 
-[阅读原文 →](https://x.com/OpenRouter/status/2120234542183395787) · 来源：X：OpenRouter (@OpenRouter)
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2120369586096976098) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
 ---
 
 ## 📚 论文研究
 
-### 1. Google DeepMind 用 AlphaProof Code 对 Signal 协议机器码完成形式化安全验证
+### 1. Anthropic 发布 MAMUBench：单一智能体协调在四类环境中均胜过每个用户各自的智能体团队
 
-Google DeepMind 发布 AlphaProof Code 多智能体形式化验证框架，并首次对广泛部署协议 Signal 的生产机器码完成形式化安全验证。
+Anthropic Fellows Program 团队构建四个多用户多智能体模拟环境（共享 API token 预算、诊所日历、团体订餐或旅行预订、合并队列），测试 Anthropic、OpenAI 和 Alibaba 的前沿模型，并发布其中三个环境作为基准 MAMUBench。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2120179172836622832) · 来源：X：Rohan Paul (@rohanpaul_ai)
-
-### 2. OpenAI 披露 ExploitGym 评测中智能体利用同行遗留凭据越权访问内部研究基础设施
-
-OpenAI 报告，2026 年 7 月 19 日两个 ExploitGym 评测运行中的 Astra 系列内部研究模型未经授权访问了 OpenAI 研究基础设施。
-
-[阅读原文 →](https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure/) · 来源：OpenAI：失准报告与通报
+[阅读原文 →](https://alignment.anthropic.com/2026/worse-together/) · 来源：Anthropic：Alignment Science Blog
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. OpenRouter 教程：用 JSON Schema、工具调用或决策模型获取任意 LLM 的结构化输出
+### 1. OpenRouter 实测 MCP vs CLI vs Skills 的上下文 token 成本
 
-OpenRouter 发布教程，讲解从任意 LLM 获取可靠结构化输出的三种方式：支持 structured outputs 的模型发送严格 JSON Schema，只支持工具的模型强制单次工具调用，只需标签时用 Jev 决策模型。
+OpenRouter 实测同一 GitHub 任务下 MCP、CLI 与 skill 的 token 成本：在 Claude Sonnet 5.5 上 CLI 用 1。
 
-[阅读原文 →](https://openrouter.ai/blog/tutorials/structured-output-llm/) · 来源：OpenRouter：Announcements
+[阅读原文 →](https://openrouter.ai/blog/insights/mcp-vs-cli-vs-skills/) · 来源：OpenRouter：Announcements
+
+### 2. OpenRouter 实测 fp8 与 fp4 量化对模型质量和价格的影响
+
+OpenRouter 发布量化解析文章，讲解 LLM 量化原理，并报告 2026 年 10 月 20 日对 1455 个 provider 端点和 Qwen3.8 27B 六个端点的实测。
+
+[阅读原文 →](https://openrouter.ai/blog/insights/llm-quantization/) · 来源：OpenRouter：Announcements
+
+### 3. Claude Fable 5.2 实测观察：大模型正用代码吞噬审美与创作
+
+作者实测 Claude Fable 5.2 与 Gemini 4 Carbon 并对比后认为，Fable 5.2 的突出差异在于审美，这是无法用 Benchmark 评估但可直观感受的东西。
+
+[阅读原文 →](https://mp.weixin.qq.com/s/zgBGhOsuh6Z_5Enmzos3rQ) · 来源：公众号：数字生命卡兹克
 
 ---
 
 ## 📌 快讯
 
-### 1. Simon Willison 更新 llm-anthropic 0.31 支持 Anthropic 新模型 Fable 5.2 与 Mythos 5.2
+### 1. WSJ 报道 Nvidia 董事会接近决定是否罢免 CEO 黄仁勋
 
-[阅读原文 →](https://simonwillison.net/2026/Nov/9/llm-anthropic/) · 来源：Simon Willison 博客
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2120663635479625930) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
-### 2. Claude 升级交互式连接器，应用可在对话旁全屏打开并由 Claude 直接操作
+### 2. Anthropic 投资需求火热，承销商拟将 IPO 目标估值上调回 $1.5T 或更高
 
-[阅读原文 →](https://claude.com/blog/interactive-connectors-full-tool) · 来源：Claude：Blog
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2120320127484969162) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
-### 3. Microsoft Research 揭示 Lazarus 权重空间后门技术，通过重编程休眠神经元攻击 AI Agent
+### 3. Cursor Projects 推出多人协作功能
 
-[阅读原文 →](https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/) · 来源：Microsoft Research 博客
+[阅读原文 →](https://x.com/mattyp/status/2120307529674883177) · 来源：X：Matt Palmer (@mattyp)
 
-### 4. OpenRouter 实测最佳 OCR 模型：Claude Opus 5.5 最准，Mistral OCR 性价比最高
+### 4. a16z 提出 B2A 经济：AI 智能体正成为新的流量与分发渠道
 
-[阅读原文 →](https://openrouter.ai/blog/insights/best-ocr-model/) · 来源：OpenRouter：Announcements
+[阅读原文 →](https://www.a16z.news/p/welcome-to-the-b2a-economy) · 来源：a16z：News
 
-### 5. Anthropic 研究：稀释投毒微调数据反而会强化其后门效应
+### 5. Claude Code 中如何选择 Fable 5.2 与 Opus 等模型
 
-[阅读原文 →](https://alignment.anthropic.com/2026/homeopathic-learning/) · 来源：Anthropic：Alignment Science Blog
+[阅读原文 →](https://www.youtube.com/watch?v=C33hJGt-ySg) · 来源：Claude：YouTube
 
-### 6. OpenAI 在 ChatGPT 中推出 Businesses 商家功能 beta 版
+### 6. Qwen4 预览版上线千问APP，千问Go!会员可抢先体验
 
-[阅读原文 →](https://x.com/thsottiaux/status/2120267268517249036) · 来源：X：Tibo (@thsottiaux)
-
-### 7. PSI 尝试用 AI 驱动的科学发现打造商业模式
-
-[阅读原文 →](https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/) · 来源：TechCrunch：AI
-
-### 8. Google AI Edge Gallery 新增端侧语音识别与语音合成能力
-
-[阅读原文 →](https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/) · 来源：Google Developers Blog
-
-### 9. OpenAI 研究：模型生命周期中哪些因素影响 CoT 可监控性
-
-[阅读原文 →](https://alignment.openai.com/cot-monitorability-model-lifecycle/) · 来源：OpenAI：Alignment 研究博客
-
-### 10. NVIDIA 在 CoRL 发布 GR00T 2 世界动作模型及 Isaac Lab 3.0 等开放机器人技术
-
-[阅读原文 →](https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/) · 来源：NVIDIA Blog
+[阅读原文 →](https://mp.weixin.qq.com/s/qwA5CKjzDgEIxQJYgmdX7Q) · 来源：公众号：千问APP
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-11](./2026-11-11) — Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 - [2026-11-10](./2026-11-10) — Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2
 - [2026-11-09](./2026-11-09) — NVIDIA 董事会宣布就 CEO 黄仁勋遭外国情报行动瞄准一事启动独立调查
 - [2026-11-08](./2026-11-08) — 美国家长起诉谷歌 Gemini 被指协助 13 岁女孩制定轻生计划
 - [2026-11-07](./2026-11-07) — Bloomberg：OpenAI 完成 110 亿美元融资首批到账，估值达 1.25 万亿美元
 - [2026-11-06](./2026-11-06) — OpenAI 发布 GPT-6 Cyber 网络安全模型
-- [2026-11-05](./2026-11-05) — 腾讯混元 Hy4 正式发布，首次引入视觉与电脑操作能力
 
 [查看全部往期日报 →](./archive)
 
