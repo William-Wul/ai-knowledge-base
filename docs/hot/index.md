@@ -1,147 +1,147 @@
 ---
 title: AI 日报
-description: 2026-11-12 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-12
+description: 2026-11-13 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-13
 ---
 
-# 🔥 AI 日报 · 2026-11-12
+# 🔥 AI 日报 · 2026-11-13
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Google 发布 Gemini Decisions API 与 Gemini Decision 1 模型，专注快速多模态封闭式决策
+## NVIDIA 宣布 CEO 变动：Jensen Huang 辞任，CFO Colette Kress 出任临时 CEO
 
-Google 推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动，可在 150-250ms 端到端延迟内对文本、图像、音频、视频和 PDF（最多 256K tokens）一次性评估最多 1000 个是/否、多选和评分题。
+NVIDIA 董事会宣布 Jensen Huang 即刻辞去总裁、CEO 及董事职务，CFO Colette Kress 被任命为临时 CEO，直至选定永久继任者，董事会已启动内外部人选遴选。
 
 ## 🤖 模型发布/更新
 
-### 1. 百度发布 ERNIE 5.5 Flash Preview，权重将于 11 月 25 日前开源
+### 1. Google DeepMind 发布 Gemini 4 Hydrogen
 
-百度发布 ERNIE 5.5 Flash Preview，是基于此前 Base 模型的首个后训练版本，总参数 280B、激活参数 14B，支持 1M 上下文。模型 API 已在千帆平台上线，权重将于 11 月 25 日前开源；官方展示了游戏开发、3D 建模、知识工作、视频创作等 Agent 场景成果，并称该版本为后训练中间版本，正式版仍将持续优化。
+Google DeepMind 发布 Gemini 4 Hydrogen，定位快速执行日常编码与智能体工作流，面向 Gemini API、AI Studio、Gemini 应用、Google Search 等全层级开放。
 
-[阅读原文 →](https://ernie.baidu.com/zh/release/ernie-5-5-flash-preview/) · 来源：百度文心 ERNIE 官方博客
-
-### 2. Runway 开源 27B 世界动作模型 Praxis-1，权重采用 Apache 2.0 许可
-
-Runway 宣布世界动作模型 Praxis-1 以 Apache 2.0 开放权重面向所有人开放。该模型为 27B 参数 MoE 扩散 Transformer，同时预测视频与动作，在 NVIDIA RoboLab-120 榜单以 46.2% 成功率居首，超过 FLUX 3 Action（42.9%）、Cosmos3 Nano（36.8%）和 π0.5（28.0%）。
-
-[阅读原文 →](https://runwayml.com/news/company-news/praxis-1-is-now-available) · 来源：Runway：News
-
-### 3. Google DeepMind 发布 AlphaGenome 2，预测基因变异对特定细胞类型的影响
-
-Google DeepMind 发布下一代 DNA 序列模型 AlphaGenome 2，可预测 DNA 变异如何影响数百种人类细胞类型中的基因表达。模型改为条件式架构，训练数据超过 1.07 亿个单细胞样本、覆盖 68 种组织，在 TenK10K 数据集上识别的因果变异数量接近上一代的两倍（30% vs 16%），并能在不重新训练的情况下泛化到新的单细胞实验。
-
-[阅读原文 →](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/) · 来源：Google DeepMind：Blog
+[阅读原文 →](https://deepmind.google/blog/introducing-gemini-4-hydrogen/) · 来源：Google DeepMind：Blog
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. Google 发布 Gemini Decisions API 与 Gemini Decision 1 模型，专注快速多模态封闭式决策
+### 1. Anthropic 推出 Claude Meetings，Claude 以参会者身份加入视频会议
 
-Google 推出 Gemini Decisions API，由新模型 Gemini Decision 1 驱动，可在 150-250ms 端到端延迟内对文本、图像、音频、视频和 PDF（最多 256K tokens）一次性评估最多 1000 个是/否、多选和评分题。
+Anthropic 推出 Claude Meetings beta，Claude 可作为可见参会者加入视频通话，在会中回答提问、协作创建文档和白板，并生成笔记和行动项。
 
-[阅读原文 →](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/) · 来源：Google Blog：AI
+[阅读原文 →](https://claude.com/blog/claude-meetings) · 来源：Claude：Blog
+
+### 2. Anthropic 建议把 Claude Opus 5.5 作为知识工作的日常主力模型
+
+Anthropic 宣布 Claude Opus 5.5 成为 Pro、Max、Ultra 和 Team 套餐的默认模型，并推荐将其作为研究、分析和写作等知识工作的日常主力。
+
+[阅读原文 →](https://claude.com/blog/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work) · 来源：Claude：Blog
+
+### 3. Google 智能眼镜开放预购，12 月 10 日发货
+
+Josh Woodward 宣布 Google 智能眼镜开启预购，用户可在 https://glasses.google 下单，12 月 10 日发货。首批用户可到部分 Warby Parker、Gentle Monster 和 Google 门店试戴体验。
+
+[阅读原文 →](https://x.com/joshwoodward/status/2120990821902397885) · 来源：X：Josh Woodward (@joshwoodward, Google Labs VP)
+
+### 4. Replit Agent 新增代购能力和 Google Ads 投放功能
+
+Replit 给 Replit Agent 新增两项能力：通过 Stripe Link 和 Visa 为企业代购物资，以及在 Replit 内直接创建和投放 Google Ads 覆盖 Search、YouTube 等渠道。
+
+[阅读原文 →](https://replit.com/blog/replit-agent-ads-commerce) · 来源：Replit：Blog
 
 ---
 
 ## 🌐 行业动态
 
-### 1. OpenAI Q3 营收达 100 亿美元，效率仍落后于 Anthropic
+### 1. NVIDIA 宣布 CEO 变动：Jensen Huang 辞任，CFO Colette Kress 出任临时 CEO
 
-据《华尔街日报》和 The Information 报道，OpenAI Q3 环比增长约 50% 至 100 亿美元，但调整后经营亏损从 101 亿升至 109 亿美元。
+NVIDIA 董事会宣布 Jensen Huang 即刻辞去总裁、CEO 及董事职务，CFO Colette Kress 被任命为临时 CEO，直至选定永久继任者，董事会已启动内外部人选遴选。
 
-[阅读原文 →](https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/) · 来源：The Decoder：AI News
+[阅读原文 →](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition) · 来源：NVIDIA：Newsroom
 
-### 2. Grok 被指生成儿童色情图像，xAI 面临多起集体诉讼
+### 2. Anthropic 官宣首次公开募股（IPO）
 
-据彭博社报道，多名未成年受害者就 Grok 被用于把普通照片篡改成儿童性虐待材料（CSAM）对马斯克旗下 xAI 提起多起集体诉讼，律师估计符合索赔条件的受害者可能多达数千人。
+Anthropic 官方宣布启动首次公开募股（IPO），并公布入口 ipo.anthropic.com。Anthropic 已向 SEC 提交注册声明及招股说明书，证券在注册声明生效前不得出售，初步招股说明书可经高盛与摩根士丹利获取。
 
-[阅读原文 →](https://www.ithome.com/1/025/809.htm) · 来源：IT之家·人工智能
+[阅读原文 →](https://x.com/AnthropicAI/status/2120841731302154708) · 来源：X：Anthropic (@AnthropicAI)
 
-### 3. 安全公司 Claroc：94.7% 的 Grok 构建应用可被任意访问，含患者数据和 SpaceXSI 内部文件
+### 3. Jensen Huang 辞任 Nvidia CEO 后对 AI 经济的五点影响分析
 
-安全公司 Claroc 报告称，在检查的 37,571 个仍在线的 Grok 构建应用中，35,578 个（94.7%）无需登录即可访问，原因是发布对话框默认预选"Anyone with the link"，且每个应用的独立子域名会进入可检索的 passive DNS 数据库。
+Tomasz Tunguz 分析 Jensen Huang 即日辞任 Nvidia 总裁、CEO 及董事后对 AI 行业的影响，CFO Colette Kress 出任临时 CEO。
 
-[阅读原文 →](https://the-decoder.com/grok-built-apps-exposed-patient-data-plaintext-passwords-and-spacexsis-own-sales-pipeline/) · 来源：The Decoder：AI News
+[阅读原文 →](https://tomtunguz.com/the-impact-of-jensens-resignation/) · 来源：Tomasz Tunguz 博客
 
-### 4. Anthropic 修订版 S1 文件披露与 Microsoft 和 Google 超 100 亿美元级新算力协议
+### 4. 民主党对 Nvidia 对华芯片销售启动调查，致函质疑黄仁勋与特朗普的安排
 
-Anthropic 在当日修订的 S1 文件中披露与 Microsoft 和 Google 达成超 100 亿美元的新协议。Microsoft 承诺到 2033 年 6 月支出至少 472 亿、最高 492 亿美元，Google 最低承诺从约 1145 亿升至约 1213 亿美元，两笔均不可撤销、无论是否使用容量都须付款。文件还提到上季度短期算力支出 50 亿美元且价格明显更高。
+民主党议员 Rep. Richard Neal 和 Sen. Ron Wyden 就特朗普政府处理 Nvidia 对华芯片销售一事开启调查，并致函商务部长 Howard Lutnick 要求保存相关记录。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2120369586096976098) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/) · 来源：TechCrunch：AI
 
----
+### 5. Rohan Paul 类比乔布斯被逐，评 NVIDIA 放走黄仁勋
 
-## 📚 论文研究
+Lex Fridman 发文称 NVIDIA 让黄仁勋离开对美国和人类都是巨大错误，堪比 Apple 当年解雇 Steve Jobs 但影响更大，并为其品格辩护、回应间谍传闻。Rohan Paul 转引并列举 Atari 1978（Nolan Bushnell）、Apple 1985（Steve Jobs）、Uber 2017（Travis Kalanick）、OpenAI 2023（Sam Altman），称每隔几年董事会就会重新认识到创始人本身就是战略。
 
-### 1. Anthropic 发布 MAMUBench：单一智能体协调在四类环境中均胜过每个用户各自的智能体团队
-
-Anthropic Fellows Program 团队构建四个多用户多智能体模拟环境（共享 API token 预算、诊所日历、团体订餐或旅行预订、合并队列），测试 Anthropic、OpenAI 和 Alibaba 的前沿模型，并发布其中三个环境作为基准 MAMUBench。
-
-[阅读原文 →](https://alignment.anthropic.com/2026/worse-together/) · 来源：Anthropic：Alignment Science Blog
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2120994977421705296) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. OpenRouter 实测 MCP vs CLI vs Skills 的上下文 token 成本
+### 1. OpenRouter 详解自纠错网站本地化流水线：GPT-6.1 Sol 翻译 7 种语言全站约 $460
 
-OpenRouter 实测同一 GitHub 任务下 MCP、CLI 与 skill 的 token 成本：在 Claude Sonnet 5.5 上 CLI 用 1。
+OpenRouter 上线简体中文、日语等 7 种语言 Beta 本地化，并详解配套的自纠错翻译流水线：GPT-6.1 Sol 翻译 16,918 条字符串，经代码检查、同模型校验和每日 AI 审查重试，最坏情况每条约 20 次模型调用。全站重译 7 种语言约 $460，约为 Smartling 机器翻译牌价的 6%，错误报告会转化为术语规则、风格注释或评测用例。
 
-[阅读原文 →](https://openrouter.ai/blog/insights/mcp-vs-cli-vs-skills/) · 来源：OpenRouter：Announcements
+[阅读原文 →](https://openrouter.ai/blog/announcements/openrouter-in-8-languages/) · 来源：OpenRouter：Announcements
 
-### 2. OpenRouter 实测 fp8 与 fp4 量化对模型质量和价格的影响
+### 2. OpenRouter 实测六模型并给出四层防护，解决 AI Agent 无限循环烧钱问题
 
-OpenRouter 发布量化解析文章，讲解 LLM 量化原理，并报告 2026 年 10 月 20 日对 1455 个 provider 端点和 Qwen3.8 27B 六个端点的实测。
+OpenRouter 发布教程，讲解 AI Agent 因工具反复失败而陷入无限循环的成因，并给出四层防护：doom-loop 检测、loopKey 参数归一化、stopWhen 步数与成本上限、API key 信用额度。
 
-[阅读原文 →](https://openrouter.ai/blog/insights/llm-quantization/) · 来源：OpenRouter：Announcements
-
-### 3. Claude Fable 5.2 实测观察：大模型正用代码吞噬审美与创作
-
-作者实测 Claude Fable 5.2 与 Gemini 4 Carbon 并对比后认为，Fable 5.2 的突出差异在于审美，这是无法用 Benchmark 评估但可直观感受的东西。
-
-[阅读原文 →](https://mp.weixin.qq.com/s/zgBGhOsuh6Z_5Enmzos3rQ) · 来源：公众号：数字生命卡兹克
+[阅读原文 →](https://openrouter.ai/blog/tutorials/ai-agent-infinite-loop/) · 来源：OpenRouter：Announcements
 
 ---
 
 ## 📌 快讯
 
-### 1. WSJ 报道 Nvidia 董事会接近决定是否罢免 CEO 黄仁勋
+### 1. World Labs 开放世界模型 Atlas，支持生成关键帧、视频片段和 3D Gaussian splats
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2120663635479625930) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://x.com/drfeifei/status/2120942509786558671) · 来源：X：Fei-Fei Li (@drfeifei, World Labs)
 
-### 2. Anthropic 投资需求火热，承销商拟将 IPO 目标估值上调回 $1.5T 或更高
+### 2. Anthropic 发布 Claude Tag 创业公司使用指南
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2120320127484969162) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://claude.com/blog/claude-tag-guide-for-startups) · 来源：Claude：Blog
 
-### 3. Cursor Projects 推出多人协作功能
+### 3. Epoch AI 分析华为和林格尔数据中心，揭示中美算力差距
 
-[阅读原文 →](https://x.com/mattyp/status/2120307529674883177) · 来源：X：Matt Palmer (@mattyp)
+[阅读原文 →](https://epochai.substack.com/p/what-huaweis-horinger-data-center) · 来源：Epoch AI：Gradient Updates
 
-### 4. a16z 提出 B2A 经济：AI 智能体正成为新的流量与分发渠道
+### 4. OpenAI 用自动化红队训练提升 GPT-6 Astra 和 Sol 在高风险领域的模糊鲁棒性
 
-[阅读原文 →](https://www.a16z.news/p/welcome-to-the-b2a-economy) · 来源：a16z：News
+[阅读原文 →](https://alignment.openai.com/fuzzy-robustness/) · 来源：OpenAI：Alignment 研究博客
 
-### 5. Claude Code 中如何选择 Fable 5.2 与 Opus 等模型
+### 5. Figma 3D transforms 开放测试上线，品牌团队分享用它制作发布视频的过程
 
-[阅读原文 →](https://www.youtube.com/watch?v=C33hJGt-ySg) · 来源：Claude：YouTube
+[阅读原文 →](https://www.figma.com/blog/how-3d-transforms-and-figmas-agent-brought-a-launch-video-to-life/) · 来源：Figma AI / Agent / Make
 
-### 6. Qwen4 预览版上线千问APP，千问Go!会员可抢先体验
+### 6. Grok Bot 1.0 发布，主打团队协作的 AI 智能体队友
 
-[阅读原文 →](https://mp.weixin.qq.com/s/qwA5CKjzDgEIxQJYgmdX7Q) · 来源：公众号：千问APP
+[阅读原文 →](https://x.com/bot/status/2120582957782200586) · 来源：X：Grok Bot (@bot)
+
+### 7. Thinking Machines 开源 Inkling 2 Small 模型权重，采用 Apache 2.0 许可
+
+[阅读原文 →](https://x.com/thinkymachines/status/2120982625582195011) · 来源：X：Thinking Machines (@thinkymachines)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-12](./2026-11-12) — Google 发布 Gemini Decisions API 与 Gemini Decision 1 模型，专注快速多模态封闭式决策
 - [2026-11-11](./2026-11-11) — Google DeepMind 发布 Gemini 4 Carbon 前沿模型
 - [2026-11-10](./2026-11-10) — Anthropic 发布 Claude Fable 5.2 与 Claude Mythos 5.2
 - [2026-11-09](./2026-11-09) — NVIDIA 董事会宣布就 CEO 黄仁勋遭外国情报行动瞄准一事启动独立调查
 - [2026-11-08](./2026-11-08) — 美国家长起诉谷歌 Gemini 被指协助 13 岁女孩制定轻生计划
 - [2026-11-07](./2026-11-07) — Bloomberg：OpenAI 完成 110 亿美元融资首批到账，估值达 1.25 万亿美元
-- [2026-11-06](./2026-11-06) — OpenAI 发布 GPT-6 Cyber 网络安全模型
 
 [查看全部往期日报 →](./archive)
 
