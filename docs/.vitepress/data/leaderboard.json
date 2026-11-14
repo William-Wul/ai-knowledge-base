@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 16,
   "evaluationCount": 54,
-  "sourceUpdatedAt": "11/14 14:06",
-  "syncedAt": "2026-11-14T09:16:34.134Z",
+  "sourceUpdatedAt": "11/14 20:06",
+  "syncedAt": "2026-11-14T17:09:27.032Z",
   "models": [
     {
       "rank": 1,
@@ -26,12 +26,12 @@
       "name": "Gemini 4 Carbon",
       "provider": "Google",
       "releaseDate": "2026-10-28",
-      "evidenceCount": 30,
+      "evidenceCount": 31,
       "evidenceStatus": "覆盖62%",
       "cachePrice": "¥1.33",
       "inputPrice": "¥26.69",
       "outputPrice": "¥133.44",
-      "score": 77
+      "score": 77.1
     },
     {
       "rank": 3,
