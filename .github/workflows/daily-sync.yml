@@ -2,10 +2,18 @@ name: 每日动态与榜单同步巡检
 
 # 统一负责每日 AI 日报同步、模型排行榜同步，以及「仓库最新状态 vs 线上实况」闭环自愈。
 # 触发条件：
-#   - 定时：每天 UTC 02:35（北京时间 10:35）主同步 + UTC 11:15（北京时间 19:15）晚间兜底巡检
+#   - 定时：每天 4 个时间点，任务幂等（无新数据不提交、不部署），多跑无副作用
+#     上游 AIHOT 日报每天北京时间 08:00 生成。实测本仓库 GitHub 定时任务固定延迟约 6–8 小时才启动
+#     （2026-10-30 至 11-16 全部记录），所以前两个时间点故意排在上游出刊之前，延迟后正好落在北京时间上午：
+#     UTC 18:35（北京 02:35）→ 实际约北京 09:00–10:30
+#     UTC 21:35（北京 05:35）→ 实际约北京 12:00–13:30
+#     UTC 02:35（北京 10:35）、UTC 11:15（北京 19:15）→ 原有主同步与晚间兜底，保留作冗余
+#     若某次没有延迟、在上游出刊前就跑了，只是空跑一次，由后面的时间点补上
 #   - 手动：可在 Actions 页面点击 "Run workflow" 立即触发
 on:
   schedule:
+    - cron: '35 18 * * *'
+    - cron: '35 21 * * *'
     - cron: '35 2 * * *'
     - cron: '15 11 * * *'
   workflow_dispatch:
@@ -25,12 +33,12 @@ jobs:
 
     steps:
       - name: 检出仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: 设置 Node.js 20
-        uses: actions/setup-node@v4
+      - name: 设置 Node.js 22
+        uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 22
 
       - name: 同步 AIHOT 日报
         id: hot

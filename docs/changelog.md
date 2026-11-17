@@ -17,6 +17,16 @@ description: AI 学习知识库近期内容与功能更新记录
 
 - [AI 前沿](/frontier/)新增《[扣子企业版下线：手动连线搭工作流的时代过去了](/frontier/coze-enterprise-shutdown)》：讲清这次下线的范围（个人版和扣子编程不受影响）、扣子半年来的收缩过程，以及拖拽搭工作流这种做法为什么不再值钱、哪些工作流依然有用。
 
+### 内容更新
+
+- [Claude Code 从零开始：保姆级完整教程](/stage-5/claude-code-guide)复核套餐与模型信息：官方最强模型更新为 Fable 5.2，套餐价格改为现行的 Pro / Max / Ultra 三档；国产模型更新到 DeepSeek V4.1、Kimi K3.1，DeepSeek 补充工作日高峰时段价格翻倍的说明，并修正"国内最便宜""充 10 块钱能跑很久"等不准确的说法。
+- [Codex 从零开始：保姆级完整教程](/stage-5/codex-guide)按官方说明重写 Chat、Work、Codex 三种模式的分工：Work 和 Codex 都能动手干活、共用同一份额度，区别在于要不要看技术细节；ChatGPT Pro 更新为 100 / 200 / 500 美元三档。
+- [PPT 场景：怎么用 AI 做 PPT](/stage-4/ppt-ai-tools)在扣子（Coze）部分补充企业版下线说明。
+
+### 功能优化
+
+- 调整 [AI 日报](/hot/) 与 [AI 模型排行榜](/model-ranking/) 的自动更新时间，争取每天上午就能看到当天的日报。
+
 ---
 
 ## 2026-11-11

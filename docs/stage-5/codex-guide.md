@@ -1,6 +1,8 @@
 ---
 title: Codex 从零开始：保姆级完整教程
 description: 2026 年 7 月起 Codex 并入 ChatGPT 桌面应用。怎么装、怎么登录、怎么跑通第一个任务，国内能不能用，从安装到进阶一篇全讲完
+lastReviewed: 2026-11-17
+reviewScope: 按官方说明重写 Chat / Work / Codex 的分工，更新 Pro 档位；安装步骤与截图未重走
 ---
 
 # Codex 从零开始：保姆级完整教程
@@ -9,7 +11,7 @@ description: 2026 年 7 月起 Codex 并入 ChatGPT 桌面应用。怎么装、�
 
 ---
 
-先说一件最重要的事：**从 2026 年 7 月起，Codex 不再是一个独立软件了。** OpenAI 把它并进了 ChatGPT 桌面应用：你现在装一个 ChatGPT，里面就同时有聊天（Chat）、长任务（Work）、干活（Codex）三种模式，Codex 是其中一个。本文已按合并后的新版重写；文中少数界面截图拍摄于合并前的独立 Codex App，布局略有差异，但操作流程不变，以你电脑上的实际界面为准。
+先说一件最重要的事：**从 2026 年 7 月起，Codex 不再是一个独立软件了。** OpenAI 把它并进了 ChatGPT 桌面应用：你现在装一个 ChatGPT，里面就同时有聊天（Chat）、交付成品（Work）、看得见技术细节的干活模式（Codex）三种模式，Codex 是其中一个。本文已按合并后的新版重写；文中少数界面截图拍摄于合并前的独立 Codex App，布局略有差异，但操作流程不变，以你电脑上的实际界面为准。
 
 这是一篇很长的教程，但你不用一口气读完，翻到你需要的那一节，跟着做，就行。
 
@@ -31,32 +33,32 @@ description: 2026 年 7 月起 Codex 并入 ChatGPT 桌面应用。怎么装、�
 
 很多人一看到 "Codex" 里那个 "Code"，就以为这是个只有程序员才用得上的写代码工具，直接劝退，这是最大的误会。
 
-我们先把它讲清楚。**Codex 是 OpenAI（就是做 ChatGPT 那家公司）出的 AI 助手，现在它活在 ChatGPT 桌面应用里。** 打开新版 ChatGPT 桌面应用，左边一列三个模式，各管一件事：
+我们先把它讲清楚。**Codex 是 OpenAI（就是做 ChatGPT 那家公司）出的 AI 助手，现在它活在 ChatGPT 桌面应用里。** 打开新版 ChatGPT 桌面应用，左边一列有三个模式：
 
 <div style="display:flex;gap:14px;flex-wrap:wrap;margin:20px 0;">
   <div style="flex:1;min-width:200px;border:1px solid #e2e2e2;border-radius:12px;padding:18px;background:#fafafa;">
-    <div style="font-size:15px;font-weight:700;color:#555;margin-bottom:8px;">💬 Chat ＝ 嘴替</div>
-    <div style="font-size:14px;line-height:1.7;color:#444;">你问它问题，它<strong>动嘴</strong>告诉你答案、给你建议、帮你写一段文字。但具体的活，还得你自己去电脑上一步步操作。</div>
+    <div style="font-size:15px;font-weight:700;color:#555;margin-bottom:8px;">💬 Chat：快问快答</div>
+    <div style="font-size:14px;line-height:1.7;color:#444;">问个问题、搜一下网页、起草一段话、比较几个选项，<strong>一来一回地聊</strong>。</div>
   </div>
   <div style="flex:1;min-width:200px;border:1px solid #e2e2e2;border-radius:12px;padding:18px;background:#fafafa;">
-    <div style="font-size:15px;font-weight:700;color:#555;margin-bottom:8px;">📋 Work ＝ 长工</div>
-    <div style="font-size:14px;line-height:1.7;color:#444;">交办一件要<strong>跑很久</strong>的事：跨应用查资料、做调研、产出文档和表格，它能连续干几个小时，最后交一份成品。</div>
+    <div style="font-size:15px;font-weight:700;color:#555;margin-bottom:8px;">📋 Work：交一份成品</div>
+    <div style="font-size:14px;line-height:1.7;color:#444;">说清你要的结果，它自己查资料、处理文件、跑代码，最后交一份<strong>能检查的成品</strong>（文档、表格、演示稿）。过程用大白话汇报，不显示技术细节。</div>
   </div>
   <div style="flex:1;min-width:200px;border:2px solid #10a37f;border-radius:12px;padding:18px;background:#f0fbf8;">
-    <div style="font-size:15px;font-weight:700;color:#10a37f;margin-bottom:8px;">🛠 Codex ＝ 手替</div>
-    <div style="font-size:14px;line-height:1.7;color:#444;">绑定你电脑上的文件夹，你交代一件事，它<strong>动手</strong>替你做完：自己读文件、自己写、自己改、自己验证，一步步干到底。</div>
+    <div style="font-size:15px;font-weight:700;color:#10a37f;margin-bottom:8px;">🛠 Codex：干活带技术细节</div>
+    <div style="font-size:14px;line-height:1.7;color:#444;">能做的事和 Work 大体重合，区别是会把<strong>改了哪些文件、跑了哪些命令</strong>都摊开给你看，适合写代码、查问题、跑测试。</div>
   </div>
 </div>
-<p class="figcaption">合并后的 ChatGPT 桌面应用 = 三个模式一个壳：聊天找 Chat，长任务找 Work，动手干活找 Codex。本篇讲的是 Codex。</p>
+<p class="figcaption">三个模式一个壳：快问快答找 Chat；Work 和 Codex 都能动手干活、共用同一份额度，区别在于要不要看技术细节。本篇讲的是 Codex。</p>
 
-> 💡 **"嘴替 / 手替"这个说法**：嘴替就是替你说话的人，手替就是替你动手的人。Codex 的厉害之处在于它能直接动手：文件、代码、网页、数据、甚至帮你操作整台电脑，它都能上手做，而不只是"告诉你该怎么做"。
+> 💡 **Work 和 Codex 怎么选？** 官方的说法是两者能力有重叠：Work 用大白话汇报、直接交成品，Codex 会把改动对比、执行的命令这些技术细节都显示出来。习惯了 Codex 的人，查资料、写文档、做演示稿也可以继续用它。本篇讲 Codex，是因为它能让你看清 AI 每一步做了什么，出了问题好排查；如果完全不碰代码，Work 用起来更省心。
 
 它的工作方式跟普通 AI 聊天完全不同：
 
 - **普通 AI 对话**：你提问，它给出回答；同一段对话通常会参考前面的内容。是否能读取文件、调用工具或继续执行，要看产品支持什么，以及我们给了哪些权限。
 - **Codex 的工作方式**：你交代一件事，它自己规划步骤、自己调工具、自己看结果、自己再决定下一步，反复循环，直到任务完成或卡住。这种"自己干一整条任务链"的能力，就是大家常说的 **Agent（智能体）**。
 
-一句话总结：**Codex 是 ChatGPT 桌面应用里那个能直接上手帮你把事情做完的模式，不是再来一个聊天框。**
+一句话总结：**Codex 是 ChatGPT 桌面应用里能直接上手把事情做完、并把每一步摊开给你看的模式，不是再来一个聊天框。**
 
 > 💡 **它和 Claude Code 什么关系？** 两个是同一赛道的竞品，就像 iOS 和安卓。Claude Code 是 Anthropic 家的，Codex 是 OpenAI 家的，两家你追我赶、互相抄作业，功能高度相似。学会一个，另一个基本一通百通。**新手先挑一个上手就行**（哪个能用上用哪个），别一上来就给自己加负担。
 
@@ -113,7 +115,7 @@ https://chatgpt.com/download
 
 *登录两步：① 点"使用 ChatGPT 继续" → ② 浏览器里确认你的 ChatGPT 账号，点 Continue（截图拍摄于合并前的独立 Codex App，新应用流程相同）*
 
-**关于额度（很重要）**：从免费版到 Plus、Pro、企业版，各档 ChatGPT 会员都能用 Codex，区别在"能用多少、能用哪些模型"。**没有固定的"每天几次"，而是按你的会员等级、用的模型、任务复杂度动态计算的。** 一个大致的体感：
+**关于额度（很重要）**：从免费版到 Plus、Pro、企业版，各档 ChatGPT 会员都能用 Codex，区别在"能用多少、能用哪些模型"。**没有固定的"每天几次"，而是按你的会员等级、用的模型、任务复杂度动态计算的。** Codex 和 Work 共用同一份额度，在哪个模式里用都算。一个大致的体感：
 
 <div style="margin:20px 0;border:1px solid #e2e2e2;border-radius:12px;overflow:hidden;">
   <div style="display:flex;background:#f5f5f5;font-weight:700;font-size:13px;color:#555;padding:12px 16px;">
@@ -126,7 +128,7 @@ https://chatgpt.com/download
     <div style="flex:1;">Plus（约 $20/月）</div><div style="flex:2;">日常轻度使用够用</div>
   </div>
   <div style="display:flex;font-size:14px;padding:12px 16px;border-top:1px solid #eee;">
-    <div style="flex:1;">Pro（约 $200/月）</div><div style="flex:2;">额度宽裕，模型全开，可以放开了用</div>
+    <div style="flex:1;">Pro（$100 / $200 / $500 三档）</div><div style="flex:2;">额度宽裕，档位越高额度越多，可以放开了用</div>
   </div>
 </div>
 
@@ -136,7 +138,7 @@ https://chatgpt.com/download
 
 *点头像就能看到"剩余用量"：5 小时窗口、1 周窗口各剩多少，还有"升级至 Pro"入口*
 
-> 💡 **价格、额度和模型阵容 OpenAI 经常调整**，光是 2026 年 7、8 两个月就改过好几轮。上面的体感仅供参考，**一切以你登录后的官方 pricing 页面和用量面板为准**。如果你已经是 ChatGPT 会员，登录后直接用，不用额外付费。
+> 💡 **价格、额度和模型阵容 OpenAI 经常调整**，2026 年 7 月以来已经改过好几轮（比如 Pro 拆成了三档）。上面的体感仅供参考，**一切以你登录后的官方 pricing 页面和用量面板为准**。如果你已经是 ChatGPT 会员，登录后直接用，不用额外付费。
 
 ### 路线 B：用 API Key 登录（进阶）
 

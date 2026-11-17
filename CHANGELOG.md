@@ -2,6 +2,19 @@
 
 ---
 
+## v1.86 · 2026-11-17
+
+### 高频教程时效复核（3 篇）与内部收尾
+
+- `docs/stage-5/claude-code-guide.md`：路线选择表按 claude.com/pricing 改为 Pro $20 / Max $100 / Ultra $200 与 Fable 用量规则（Max、Ultra 每周额度一半可用 Fable，Pro 走 usage credits），最强模型由 Fable 5 改为 Fable 5.2（11-09）；"国内最便宜"按 AIHOT 榜单价格改为"最低的一档"（GLM-5.3 Flash、Qwen3.8 Flash Next 更低），DeepSeek 价格与高峰时段按官方定价页补充；国产模型型号更新为 DeepSeek V4.1、Kimi K3.1；"充 10 块钱能跑很久"改为"跑通入门任务足够"并提示 CC 用量增长快。新增 `lastReviewed` / `reviewScope`。
+- `docs/stage-5/codex-guide.md`：按 learn.chatgpt.com 官方说明重写 Chat / Work / Codex 三卡（删去"嘴替/长工/手替"），明确 Work 与 Codex 能力重叠、共享额度、区别在技术细节呈现；Pro 改为 $100 / $200 / $500 三档。新增 `lastReviewed` / `reviewScope`。
+- `docs/stage-4/ppt-ai-tools.md`：Coze 一节补企业版下线说明，`lastReviewed` 更新为 2026-11-17（仍未复测产品）。
+- 经 William 批准调整 `.github/workflows/daily-sync.yml`：上游 AIHOT 日报每天北京时间 08:00 生成，而本仓库定时任务实测固定延迟约 6–8 小时（2026-10-30 至 11-16 全部记录，部分时段直接被跳过），新增 UTC 18:35、21:35 两个提前排队的时间点，延迟后约在北京时间上午与中午落地；原 UTC 02:35、11:15 保留作冗余。任务幂等，提前空跑不提交、不部署。
+- 两份工作流升级运行环境：Node 20（2026-04 已停止维护）→ 22；`actions/checkout` v4 → v7、`actions/setup-node` v4 → v7、`actions/upload-pages-artifact` v3 → v5（构建产物无隐藏文件，不受 v4 起排除点文件的影响）、`actions/deploy-pages` v4 → v5，消除 Node 20 弃用警告。
+- `reports/site-health-2026-11-03.md` 提交留档。本地：删除过期写作规范备份 `ai-site-writer.bak-20260814`；`AGENTS.md` 同步六板块结构、三方维护者与 Node 版本说明；写作规范新增"题眼写成完整判断句，禁对仗口号"（v1.85 写作反馈）。
+
+---
+
 ## v1.85 · 2026-11-17
 
 ### AI 前沿新增《扣子企业版下线：手动连线搭工作流的时代过去了》
