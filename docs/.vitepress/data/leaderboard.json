@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 16,
   "evaluationCount": 54,
-  "sourceUpdatedAt": "11/18 14:08",
-  "syncedAt": "2026-11-18T10:31:42.964Z",
+  "sourceUpdatedAt": "11/19 02:05",
+  "syncedAt": "2026-11-18T19:24:43.407Z",
   "models": [
     {
       "rank": 1,
@@ -16,8 +16,8 @@
       "evidenceCount": 40,
       "evidenceStatus": "覆盖78%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥53.33",
-      "outputPrice": "¥266.64",
+      "inputPrice": "¥53.34",
+      "outputPrice": "¥266.69",
       "score": 79.9
     },
     {
@@ -29,9 +29,9 @@
       "evidenceCount": 31,
       "evidenceStatus": "覆盖62%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥26.66",
-      "outputPrice": "¥133.32",
-      "score": 77
+      "inputPrice": "¥26.67",
+      "outputPrice": "¥133.34",
+      "score": 77.1
     },
     {
       "rank": 3,
@@ -39,12 +39,12 @@
       "name": "gpt-6.2-astra",
       "provider": "OpenAI",
       "releaseDate": "2026-11-17",
-      "evidenceCount": 29,
-      "evidenceStatus": "覆盖57%",
+      "evidenceCount": 30,
+      "evidenceStatus": "覆盖60%",
       "cachePrice": "¥2.67",
-      "inputPrice": "¥53.33",
-      "outputPrice": "¥266.64",
-      "score": 77
+      "inputPrice": "¥53.34",
+      "outputPrice": "¥266.69",
+      "score": 76.4
     },
     {
       "rank": 4,
@@ -55,35 +55,35 @@
       "evidenceCount": 54,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥26.66",
-      "outputPrice": "¥133.32",
+      "inputPrice": "¥26.67",
+      "outputPrice": "¥133.34",
       "score": 74.1
     },
     {
       "rank": 5,
-      "slug": "gpt-6-2-sol",
-      "name": "gpt-6.2-sol",
-      "provider": "OpenAI",
-      "releaseDate": "2026-11-17",
-      "evidenceCount": 25,
-      "evidenceStatus": "覆盖51%",
-      "cachePrice": "¥0.67",
-      "inputPrice": "¥13.33",
-      "outputPrice": "¥66.66",
-      "score": 73.5
-    },
-    {
-      "rank": 6,
       "slug": "gemini-4-hydrogen",
       "name": "Gemini 4 Hydrogen",
       "provider": "Google",
       "releaseDate": "2026-11-12",
-      "evidenceCount": 21,
-      "evidenceStatus": "覆盖46%",
+      "evidenceCount": 22,
+      "evidenceStatus": "覆盖49%",
       "cachePrice": "¥0.5",
       "inputPrice": "¥10",
       "outputPrice": "¥50",
-      "score": 72.7
+      "score": 73.4
+    },
+    {
+      "rank": 6,
+      "slug": "gpt-6-2-sol",
+      "name": "gpt-6.2-sol",
+      "provider": "OpenAI",
+      "releaseDate": "2026-11-17",
+      "evidenceCount": 26,
+      "evidenceStatus": "覆盖54%",
+      "cachePrice": "¥0.67",
+      "inputPrice": "¥13.33",
+      "outputPrice": "¥66.67",
+      "score": 73
     },
     {
       "rank": 7,
@@ -94,8 +94,8 @@
       "evidenceCount": 47,
       "evidenceStatus": "覆盖92%",
       "cachePrice": "¥1.67",
-      "inputPrice": "¥66.66",
-      "outputPrice": "¥333.31",
+      "inputPrice": "¥66.67",
+      "outputPrice": "¥333.36",
       "score": 72.3
     },
     {
@@ -107,9 +107,9 @@
       "evidenceCount": 54,
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥6.67",
-      "inputPrice": "¥66.66",
-      "outputPrice": "¥333.31",
-      "score": 71.8
+      "inputPrice": "¥66.67",
+      "outputPrice": "¥333.36",
+      "score": 71.9
     },
     {
       "rank": 9,
@@ -120,8 +120,8 @@
       "evidenceCount": 50,
       "evidenceStatus": "覆盖95%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥26.66",
-      "outputPrice": "¥133.32",
+      "inputPrice": "¥26.67",
+      "outputPrice": "¥133.34",
       "score": 71.7
     },
     {
@@ -134,7 +134,7 @@
       "evidenceStatus": "覆盖100%",
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.33",
-      "outputPrice": "¥66.66",
+      "outputPrice": "¥66.67",
       "score": 71.5
     },
     {
@@ -147,11 +147,24 @@
       "evidenceStatus": "覆盖97%",
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.33",
-      "outputPrice": "¥66.66",
+      "outputPrice": "¥66.67",
       "score": 70
     },
     {
       "rank": 12,
+      "slug": "qwen-4-max",
+      "name": "Qwen4 Max",
+      "provider": "Alibaba",
+      "releaseDate": "2026-11-16",
+      "evidenceCount": 25,
+      "evidenceStatus": "覆盖51%",
+      "cachePrice": "¥0.5",
+      "inputPrice": "¥10",
+      "outputPrice": "¥30",
+      "score": 69.3
+    },
+    {
+      "rank": 13,
       "slug": "claude-opus-5",
       "name": "Claude Opus 5",
       "provider": "Anthropic",
@@ -159,12 +172,12 @@
       "evidenceCount": 44,
       "evidenceStatus": "覆盖89%",
       "cachePrice": "¥3.33",
-      "inputPrice": "¥33.33",
-      "outputPrice": "¥166.65",
+      "inputPrice": "¥33.34",
+      "outputPrice": "¥166.68",
       "score": 69.2
     },
     {
-      "rank": 13,
+      "rank": 14,
       "slug": "gpt-6-1-terra",
       "name": "GPT-6.1 Terra",
       "provider": "OpenAI",
@@ -173,11 +186,11 @@
       "evidenceStatus": "覆盖68%",
       "cachePrice": "¥0.33",
       "inputPrice": "¥6.67",
-      "outputPrice": "¥33.33",
+      "outputPrice": "¥33.34",
       "score": 69
     },
     {
-      "rank": 14,
+      "rank": 15,
       "slug": "claude-fable-5",
       "name": "Claude Fable 5",
       "provider": "Anthropic",
@@ -185,21 +198,8 @@
       "evidenceCount": 35,
       "evidenceStatus": "覆盖78%",
       "cachePrice": "¥6.67",
-      "inputPrice": "¥66.66",
-      "outputPrice": "¥333.31",
-      "score": 68.7
-    },
-    {
-      "rank": 15,
-      "slug": "qwen-4-max",
-      "name": "Qwen4 Max",
-      "provider": "Alibaba",
-      "releaseDate": "2026-11-16",
-      "evidenceCount": 24,
-      "evidenceStatus": "覆盖49%",
-      "cachePrice": "¥0.5",
-      "inputPrice": "¥10",
-      "outputPrice": "¥30",
+      "inputPrice": "¥66.67",
+      "outputPrice": "¥333.36",
       "score": 68.7
     },
     {
@@ -224,8 +224,8 @@
       "evidenceCount": 41,
       "evidenceStatus": "覆盖84%",
       "cachePrice": "¥1.33",
-      "inputPrice": "¥26.66",
-      "outputPrice": "¥133.32",
+      "inputPrice": "¥26.67",
+      "outputPrice": "¥133.34",
       "score": 67.3
     },
     {
@@ -237,8 +237,8 @@
       "evidenceCount": 40,
       "evidenceStatus": "覆盖84%",
       "cachePrice": "¥3.33",
-      "inputPrice": "¥33.33",
-      "outputPrice": "¥199.98",
+      "inputPrice": "¥33.34",
+      "outputPrice": "¥200.02",
       "score": 66.7
     },
     {
@@ -290,7 +290,7 @@
       "evidenceStatus": "覆盖89%",
       "cachePrice": "¥1.33",
       "inputPrice": "¥13.33",
-      "outputPrice": "¥66.66",
+      "outputPrice": "¥66.67",
       "score": 65.5
     },
     {
@@ -303,7 +303,7 @@
       "evidenceStatus": "覆盖81%",
       "cachePrice": "¥1",
       "inputPrice": "¥8.33",
-      "outputPrice": "¥28.33",
+      "outputPrice": "¥28.34",
       "score": 64.2
     },
     {
@@ -380,8 +380,8 @@
       "evidenceCount": 30,
       "evidenceStatus": "覆盖68%",
       "cachePrice": "¥3.33",
-      "inputPrice": "¥33.33",
-      "outputPrice": "¥199.98",
+      "inputPrice": "¥33.34",
+      "outputPrice": "¥200.02",
       "score": 62.8
     },
     {
@@ -447,7 +447,7 @@
       "cachePrice": "¥3.33",
       "inputPrice": "¥13.33",
       "outputPrice": "¥40",
-      "score": 62.2
+      "score": 62.3
     },
     {
       "rank": 35,
@@ -471,8 +471,8 @@
       "evidenceCount": 34,
       "evidenceStatus": "覆盖73%",
       "cachePrice": "¥3.33",
-      "inputPrice": "¥33.33",
-      "outputPrice": "¥166.65",
+      "inputPrice": "¥33.34",
+      "outputPrice": "¥166.68",
       "score": 62.2
     },
     {
@@ -486,7 +486,7 @@
       "cachePrice": "¥0.3",
       "inputPrice": "¥6",
       "outputPrice": "¥18",
-      "score": 62.2
+      "score": 62.1
     },
     {
       "rank": 38,
@@ -511,7 +511,7 @@
       "evidenceStatus": "覆盖78%",
       "cachePrice": "¥1.33",
       "inputPrice": "¥13.33",
-      "outputPrice": "¥79.99",
+      "outputPrice": "¥80.01",
       "score": 62
     },
     {
@@ -523,8 +523,8 @@
       "evidenceCount": 26,
       "evidenceStatus": "覆盖62%",
       "cachePrice": "¥3.33",
-      "inputPrice": "¥33.33",
-      "outputPrice": "¥166.65",
+      "inputPrice": "¥33.34",
+      "outputPrice": "¥166.68",
       "score": 60.7
     },
     {
@@ -550,7 +550,7 @@
       "evidenceStatus": "覆盖73%",
       "cachePrice": "¥1",
       "inputPrice": "¥8.33",
-      "outputPrice": "¥28.33",
+      "outputPrice": "¥28.34",
       "score": 60
     },
     {
@@ -602,7 +602,7 @@
       "evidenceStatus": "覆盖73%",
       "cachePrice": "¥1.33",
       "inputPrice": "¥13.33",
-      "outputPrice": "¥66.66",
+      "outputPrice": "¥66.67",
       "score": 59.3
     },
     {
@@ -616,7 +616,7 @@
       "cachePrice": "¥0.02",
       "inputPrice": "¥1",
       "outputPrice": "¥2",
-      "score": 59
+      "score": 58.9
     },
     {
       "rank": 48,
@@ -641,7 +641,7 @@
       "evidenceStatus": "覆盖43%",
       "cachePrice": "¥1.67",
       "inputPrice": "¥16.67",
-      "outputPrice": "¥99.99",
+      "outputPrice": "¥100.01",
       "score": 58.8
     },
     {
