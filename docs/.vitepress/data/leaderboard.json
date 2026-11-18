@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 15,
   "evaluationCount": 53,
-  "sourceUpdatedAt": "11/18 02:05",
-  "syncedAt": "2026-11-17T19:52:30.477Z",
+  "sourceUpdatedAt": "11/18 08:05",
+  "syncedAt": "2026-11-18T01:14:24.599Z",
   "models": [
     {
       "rank": 1,
@@ -74,19 +74,6 @@
     },
     {
       "rank": 6,
-      "slug": "gpt-6-astra",
-      "name": "GPT-6 Astra",
-      "provider": "OpenAI",
-      "releaseDate": "2026-09-03",
-      "evidenceCount": 53,
-      "evidenceStatus": "覆盖100%",
-      "cachePrice": "¥6.67",
-      "inputPrice": "¥66.66",
-      "outputPrice": "¥333.31",
-      "score": 71.5
-    },
-    {
-      "rank": 7,
       "slug": "gemini-4-argon",
       "name": "Gemini 4 Argon",
       "provider": "Google",
@@ -96,6 +83,19 @@
       "cachePrice": "¥1.33",
       "inputPrice": "¥26.66",
       "outputPrice": "¥133.32",
+      "score": 71.5
+    },
+    {
+      "rank": 7,
+      "slug": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "provider": "OpenAI",
+      "releaseDate": "2026-09-03",
+      "evidenceCount": 53,
+      "evidenceStatus": "覆盖100%",
+      "cachePrice": "¥6.67",
+      "inputPrice": "¥66.66",
+      "outputPrice": "¥333.31",
       "score": 71.5
     },
     {
@@ -135,7 +135,7 @@
       "cachePrice": "¥0.33",
       "inputPrice": "¥6.67",
       "outputPrice": "¥33.33",
-      "score": 69.1
+      "score": 69
     },
     {
       "rank": 11,
@@ -226,7 +226,7 @@
       "cachePrice": "¥0.3",
       "inputPrice": "¥6",
       "outputPrice": "¥18",
-      "score": 66.6
+      "score": 66.7
     },
     {
       "rank": 18,
@@ -252,7 +252,7 @@
       "cachePrice": "¥0.02",
       "inputPrice": "¥1",
       "outputPrice": "¥4",
-      "score": 65.7
+      "score": 65.8
     },
     {
       "rank": 20,
@@ -382,7 +382,7 @@
       "cachePrice": "¥0.025",
       "inputPrice": "¥3",
       "outputPrice": "¥6",
-      "score": 62.6
+      "score": 62.7
     },
     {
       "rank": 30,
@@ -421,7 +421,7 @@
       "cachePrice": "¥3.33",
       "inputPrice": "¥13.33",
       "outputPrice": "¥40",
-      "score": 62.2
+      "score": 62.3
     },
     {
       "rank": 33,
@@ -460,7 +460,7 @@
       "cachePrice": "¥0.3",
       "inputPrice": "¥6",
       "outputPrice": "¥18",
-      "score": 62.1
+      "score": 62.2
     },
     {
       "rank": 36,
@@ -473,7 +473,7 @@
       "cachePrice": "¥0.0667",
       "inputPrice": "¥0.67",
       "outputPrice": "¥3.33",
-      "score": 62
+      "score": 62.1
     },
     {
       "rank": 37,
@@ -503,19 +503,6 @@
     },
     {
       "rank": 39,
-      "slug": "muse-spark-1-2",
-      "name": "Muse Spark 1.2",
-      "provider": "Meta",
-      "releaseDate": "2026-08-05",
-      "evidenceCount": 28,
-      "evidenceStatus": "覆盖72%",
-      "cachePrice": "¥1",
-      "inputPrice": "¥8.33",
-      "outputPrice": "¥28.33",
-      "score": 60.5
-    },
-    {
-      "rank": 40,
       "slug": "step-5-preview",
       "name": "Step 5 Preview",
       "provider": "StepFun",
@@ -525,6 +512,19 @@
       "cachePrice": "¥0.7",
       "inputPrice": "¥7",
       "outputPrice": "¥20",
+      "score": 60.5
+    },
+    {
+      "rank": 40,
+      "slug": "muse-spark-1-2",
+      "name": "Muse Spark 1.2",
+      "provider": "Meta",
+      "releaseDate": "2026-08-05",
+      "evidenceCount": 28,
+      "evidenceStatus": "覆盖72%",
+      "cachePrice": "¥1",
+      "inputPrice": "¥8.33",
+      "outputPrice": "¥28.33",
       "score": 60.5
     },
     {
@@ -538,23 +538,10 @@
       "cachePrice": "¥0.1",
       "inputPrice": "¥1",
       "outputPrice": "¥4",
-      "score": 59.7
+      "score": 59.8
     },
     {
       "rank": 42,
-      "slug": "qwen-3-8-flash-next",
-      "name": "Qwen3.8 Flash Next",
-      "provider": "Alibaba",
-      "releaseDate": "2026-08-26",
-      "evidenceCount": 18,
-      "evidenceStatus": "覆盖44%",
-      "cachePrice": "¥0.1",
-      "inputPrice": "¥0.8",
-      "outputPrice": "¥2.7",
-      "score": 59.6
-    },
-    {
-      "rank": 43,
       "slug": "deepseek-v-4-pro-20260813",
       "name": "DeepSeek V4 Pro 0813",
       "provider": "DeepSeek",
@@ -564,6 +551,19 @@
       "cachePrice": "¥0.15",
       "inputPrice": "¥4.5",
       "outputPrice": "¥13.5",
+      "score": 59.6
+    },
+    {
+      "rank": 43,
+      "slug": "qwen-3-8-flash-next",
+      "name": "Qwen3.8 Flash Next",
+      "provider": "Alibaba",
+      "releaseDate": "2026-08-26",
+      "evidenceCount": 18,
+      "evidenceStatus": "覆盖44%",
+      "cachePrice": "¥0.1",
+      "inputPrice": "¥0.8",
+      "outputPrice": "¥2.7",
       "score": 59.6
     },
     {
@@ -581,19 +581,6 @@
     },
     {
       "rank": 45,
-      "slug": "grok-4-5",
-      "name": "Grok 4.5",
-      "provider": "xAI",
-      "releaseDate": "2026-07-08",
-      "evidenceCount": 33,
-      "evidenceStatus": "覆盖78%",
-      "cachePrice": "¥2",
-      "inputPrice": "¥13.33",
-      "outputPrice": "¥40",
-      "score": 58.9
-    },
-    {
-      "rank": 46,
       "slug": "mimo-v-2-6-flash",
       "name": "MiMo V 2.6 Flash",
       "provider": "Xiaomi",
@@ -603,6 +590,19 @@
       "cachePrice": "¥0.02",
       "inputPrice": "¥1",
       "outputPrice": "¥2",
+      "score": 58.9
+    },
+    {
+      "rank": 46,
+      "slug": "grok-4-5",
+      "name": "Grok 4.5",
+      "provider": "xAI",
+      "releaseDate": "2026-07-08",
+      "evidenceCount": 33,
+      "evidenceStatus": "覆盖78%",
+      "cachePrice": "¥2",
+      "inputPrice": "¥13.33",
+      "outputPrice": "¥40",
       "score": 58.9
     },
     {
