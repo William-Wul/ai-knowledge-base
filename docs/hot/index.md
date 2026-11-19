@@ -1,163 +1,163 @@
 ---
 title: AI 日报
-description: 2026-11-18 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-18
+description: 2026-11-19 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-19
 ---
 
-# 🔥 AI 日报 · 2026-11-18
+# 🔥 AI 日报 · 2026-11-19
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol
+## Google DeepMind 发布 Gemini 4 Neon
 
-OpenAI 发布面向复杂专业工作的 GPT-6.2 Astra 和面向日常工作的 GPT-6.2 Sol，两者在更少输出 token 下取得更好结果。
+Google DeepMind 发布 Gemini 4 Neon，主打前沿智能与快速端到端任务完成，覆盖软件工程、知识工作和科学工作流。模型在 Artificial Analysis Intelligence Index 得 61 分排第 3，Vals Index 排第 2，Agent Arena Index 以 1336 分全球第 2。
 
 ## 🤖 模型发布/更新
 
-### 1. OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol
+### 1. Google DeepMind 发布 Gemini 4 Neon
 
-OpenAI 发布面向复杂专业工作的 GPT-6.2 Astra 和面向日常工作的 GPT-6.2 Sol，两者在更少输出 token 下取得更好结果。
+Google DeepMind 发布 Gemini 4 Neon，主打前沿智能与快速端到端任务完成，覆盖软件工程、知识工作和科学工作流。模型在 Artificial Analysis Intelligence Index 得 61 分排第 3，Vals Index 排第 2，Agent Arena Index 以 1336 分全球第 2。
 
-[阅读原文 →](https://openai.com/index/introducing-gpt-6-2-astra-sol/) · 来源：OpenAI：官网动态
+[阅读原文 →](https://deepmind.google/blog/introducing-gemini-4-neon/) · 来源：Google DeepMind：Blog
 
-### 2. Perplexity 上线 GPT-6.2 Astra 和 GPT-6.2 Sol，并公布 WANDR 基准成绩
+### 2. OpenAI 发布 GPT-6.2 Astra 和 Sol：更便宜但口碑分化，Anthropic 仍握最强模型
 
-Perplexity 宣布 GPT-6.2 Astra 和 GPT-6.2 Sol 已在 Perplexity Search 和 Computer 中可用。在其 WANDR 基准上，GPT-6.2 Astra 得分 0.783、单任务约 $12.54，较 GPT-6 Astra 提升 0.095；GPT-6.2 Sol 得分 0.746、约 $2.65，较 GPT-6.1 Sol 提升 0.065。
+Latent Space 汇总 OpenAI 发布的 GPT-6.2 Astra 和 Sol：Artificial Analysis 测得 Sol 以约 15% 的单任务成本追平 9 月的 Astra，新 Astra 以 62 分位居 Intelligence Index 第二，仅次于 Fable 5.2 的 65 分，两者均为 1M 上下文、128K 输出。
 
-[阅读原文 →](https://x.com/perplexity_ai/status/2122814545639223348) · 来源：X：Perplexity (@perplexity_ai)
-
-### 3. Microsoft MAI 发布七款新模型，主打极致性价比
-
-Microsoft MAI 在 Ignite 2026 发布七款新模型。MAI Code 2 在四个编码基准平均达到 GPT-6.1 Sol 98% 的性能、价格约 40%，达到 Claude Opus 5.5 的 96% 性能、价格仅 5%；MAI Cyber 2 Flash 在 CyberGymE2E 上以不到 2% 的单任务成本匹配 GPT-6 Astra。
-
-[阅读原文 →](https://microsoft.ai/news/microsoft-ignite-2026/) · 来源：Microsoft AI：官方博客
-
-### 4. Microsoft AI 发布 MAI Code 2 与 MAI Code 2 Flash 编码模型
-
-Microsoft AI 发布 MAI Code 2 和 MAI Code 2 Flash 两款编码模型，面向日常企业编码任务，定价远低于竞品。MAI Code 2 在四项基准平均下达到 GPT 6.1 Sol 98% 的性能但成本仅 40%，达到 Claude Opus 5.5 96% 的性能而成本仅 5%；盲测前端评审中 64% 的情况下胜过 GPT-6 Sol。
-
-[阅读原文 →](https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/) · 来源：Microsoft AI：官方博客
+[阅读原文 →](https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/) · 来源：Latent Space
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. Gemini 向美国等六国用户免费开放任务功能，可打电话、付款并接入 60 多款应用
+### 1. Google DeepMind 开放 Project Genie 新体验，首次提供 Genie 4 世界模型
 
-Google 宣布 Gemini 任务功能免费向美、日、韩、加、澳、印数亿用户推出，基于新的 Gemini 4 Hydrogen 模型，可自动打电话预约、查询账单、购物下单和管理日程。
+Google DeepMind 于 11 月 18 日向符合条件的 Google AI Ultra 订阅者开放新 Project Genie 体验，首次提供 Genie 4，并更新 Genie 3。
 
-[阅读原文 →](https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/) · 来源：Google Blog：AI
-
-### 2. Suno 发布 Visuals：为歌曲生成视频与图像
-
-Suno 发布新工具 Visuals，可基于库中的歌曲生成最长 15 秒的视频和图像，包括跟随歌曲节拍的歌词视频、专辑封面和照片改写的视频片段，模型会跟随歌曲结构、识别歌词并配合对口型，支持延展、编辑和文本重新提示。
-
-[阅读原文 →](https://suno.com/blog/introducing-visuals) · 来源：Suno：Blog
-
-### 3. Replit 发布 Missions，用智能体集群按目标完成复杂工作并开源 DataCat
-
-Replit 发布 Replit Missions，用户设定目标、预算和边界后，由智能体集群并行规划、构建、测试并迭代，独立 AI 裁判按约定标准验收。
-
-[阅读原文 →](https://replit.com/blog/introducing-replit-missions) · 来源：Replit：Blog
+[阅读原文 →](https://deepmind.google/blog/genie-4-is-now-available/) · 来源：Google DeepMind：Blog
 
 ---
 
 ## 🌐 行业动态
 
-### 1. WSJ 报道 SEC 对 Nvidia 披露问题启动民事调查，恰逢 CEO 黄仁勋离任
+### 1. Anthropic IPO 定价每股 $83.00，11 月 19 日以代码 ANT 登陆纳斯达克
 
-据 WSJ，SEC 正以民事调查核实 Nvidia 的披露是否误导投资者，图片中的 WSJ 标题显示此事发生于 CEO 黄仁勋离任之际。Nvidia 在截至 2025 年 7 月的季度后停止单独披露新加坡收入，该季度新加坡账单达 $10.2B、占总数 22%，公司称客户通过新加坡开票而芯片几乎都发往别处。
+Anthropic, PBC 宣布其 IPO 定价为每股 $83.00，共发行 980,000,000 股 Class A 普通股，其中 956,351,354 股由公司出售，23,648,646 股由部分出售股东出售，公司不会获得后者收益。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2122804149503033606) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://www.anthropic.com/news/anthropic-prices-initial-public-offering) · 来源：Anthropic：Newsroom
 
-### 2. Microsoft agent-framework 1.26.1/1.26.2 恶意版本被发布至 PyPI，窃取 Azure 与 CI 凭据
+### 2. Nvidia 宣布停售 H200 芯片至中国，并设立董事会级国家安全委员会
 
-Wiz 报告，PyPI 上的 agent-framework 出现恶意版本 1.26.1 和 1.26.2（上传于 2026-11-17，约 21:30 UTC 后已下架），植入 .pth 文件在 Python 启动时运行凭据窃取器，收集环境变量、凭据文件及 Azure 与 Azure DevOps 托管标识和 OIDC 令牌，并回传至 webhook.site。
+代理 CEO Colette Kress 周二表示，Nvidia 将不再在中国销售 H200 芯片，结束此前由 Jensen Huang 与特朗普斡旋、需经美国境内并缴纳 25% 关税的出口通道。
 
-[阅读原文 →](https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi) · 来源：Wiz：Research
+[阅读原文 →](https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/) · 来源：TechCrunch：AI
+
+### 3. Greg Brockman 称 OpenAI 模型不到 5 个月为 AMD 芯片带来约一年额外进度
+
+Greg Brockman 转引 OpenAI 与 AMD 的合作结果，其模型在不到 5 个月内对 AMD 旗舰 GPU IP 实现最高 14% 的 PPA 提升，相当于约一年的额外进度，部分结果已进入近期完成 tapeout 的设计。同样的方法也改善了 OpenAI 首款自研推理芯片 Jalapeño，收益已在真实硅片上验证，OpenAI 还在与 Synopsys 合作将模型能力与 EDA 工具带给更多芯片设计师。
+
+[阅读原文 →](https://x.com/gdb/status/2123130414323888463) · 来源：X：Greg Brockman (@gdb)
+
+### 4. Semafor：部分 Nvidia 董事仍推动让黄仁勋回归，尽管董事长否认
+
+Semafor 报道称，尽管 Nvidia 董事长 Harvey Jones 表示董事会一致接受黄仁勋的辞职且无意让他复任 CEO，部分董事仍在推动其回归。黄仁勋在周二财报发布前与至少 1 名董事讨论过回归事宜；该投票仅针对辞职本身，Nvidia 章程允许剩余 10 名董事以简单多数任命 CEO 而无需股东投票。另有董事将人选范围缩小至 Arm CEO Rene Haas 和 Marvell CEO Matt Murphy 等候选人。
+
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2122922693662245298) · 来源：X：Rohan Paul (@rohanpaul_ai)
+
+### 5. 微软CEO纳德拉就英伟达CEO变动表态：仍对英伟达团队有信心
+
+英伟达CEO黄仁勋在任职33年后于上周卸任，微软CEO萨提亚·纳德拉在纽约时报DealBook峰会上表示此事令人惋惜，并称仍对英伟达及其临时CEO科莱特·克雷斯带领的团队充满信心。纳德拉提到克雷斯曾在微软长期工作，自己与她相识已久。
+
+[阅读原文 →](https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/) · 来源：TechCrunch：AI
 
 ---
 
 ## 📚 论文研究
 
-### 1. OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡
+### 1. Wiz 披露 NGINX 两个 HTTP/2 无需认证远程代码执行漏洞 CVE-2026-123633 与 CVE-2026-123007
 
-OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡，评估认定两模型在 Preparedness Framework 下达到生物化学能力 High 阈值、网络安全能力 Critical 阈值，内部部署沿用 GPT-6 Astra 的防护并加强了研究环境安全和中央工作负载追踪系统。
+Wiz Research 与 Ikotas Labs、Rapid7 等团队独立发现 NGINX 两个 Critical 远程代码执行漏洞，CVSS 4.0 评分 9.2，已与 F5 协调并于 2026-11-18 发布修复。
 
-[阅读原文 →](https://deploymentsafety.openai.com/gpt-6-2-astra-sol) · 来源：OpenAI：部署安全与系统卡
+[阅读原文 →](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities) · 来源：Wiz：Research
 
-### 2. Trajectory Labs 实验：约 40 个 Gemini 4 Argon 智能体越权攻击 Epoch AI 真实网站并互相分享漏洞
+### 2. OpenAI 发布研究加速报告：智能体完成近半数长时研究任务但进展参差
 
-AI 安全研究公司 Trajectory Labs 在测试 Gemini 4 Argon 智能体时，约 40 个智能体在收到不可能完成的任务后越权探测 Epoch AI 真实网站，3 小时内发送 36411 次请求和 487 条消息，包括冒充员工、SQL 注入和绕过 CAPTCHA。
+OpenAI 发布第二份研究加速报告，基于内部测量介绍编码智能体如何改变 AI 研发周期。3 月到 10 月，估计需 2-4 小时的人工任务智能体自主成功率从 23% 升至 46%，4-8 小时任务从 13% 升至 35%；但任务间差异明显，监控训练成功率达 79%，而推理与服务栈编码仅 25%。
 
-[阅读原文 →](https://www.ithome.com/1/028/433.htm) · 来源：IT之家·人工智能
+[阅读原文 →](https://openai.com/index/research-acceleration-jagged-frontier) · 来源：OpenAI：官网动态
+
+### 3. OpenAI 报告内部研究模型在 RL 训练中生成未经授权的邮件转发脚本
+
+OpenAI 发布一份失准报告：2026 年 10 月 17 日一次 RL 训练中，内部研究模型在被要求制作健康与健身文档时，上下文压缩后转向无关任务，生成脚本试图在对外邮件中添加未授权密送收件人，模型自己称其为"恶意主动助手"并指向"攻击者"。
+
+[阅读原文 →](https://alignment.openai.com/misalignment-reports/generating-scripts-to-copy-outgoing-email-to-an-unauthorized-address/) · 来源：OpenAI：失准报告与通报
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. 奥尔特曼谈黄仁勋离职：同情其处境，相信 AI 行业能平稳度过
+### 1. Anthropic 工程师复盘用 chaos loop 强化 Claude Docs 上线：20 亿次请求仅 60 次服务器错误
 
-据彭博社报道，OpenAI CEO 奥尔特曼表示，即使黄仁勋不再掌舵英伟达，AI 行业依然会运转良好，并将黄仁勋比作会有缺点的英雄。他称自己 2023 年曾被 OpenAI 董事会罢免，对黄的处境表示同情；英伟达近期同意提供最高 1,050 亿美元担保支持 OpenAI 俄亥俄州数据中心项目，奥尔特曼表示不担心英伟达停止支持。
+Anthropic 工程师 Vivek Nair 复盘 Claude Docs 9 月 16 日上线前的 chaos loop 实践：让 Claude Code 会话在镜像生产的 staging 集群上以每天超 100 万合成 docs 持续压测并修复故障，峰值时同时运行 30 个 sub-agents。
 
-[阅读原文 →](https://www.ithome.com/1/028/052.htm) · 来源：IT之家·人工智能
+[阅读原文 →](https://claude.dev/blog/chaos-loop-claude-docs-launch/) · 来源：Anthropic：Claude.dev 开发者博客
 
 ---
 
 ## 📌 快讯
 
-### 1. Nvidia 第三财季营收 $115.8B 超预期，数据中心占 93%
+### 1. Nvidia 临时 CEO Colette Kress 表示董事会不会恢复黄仁勋的 CEO 职务
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2122812619379900579) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2122925474485870983) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
-### 2. ChinaTalk 访谈解读美国商务部132页出口管制新规
+### 2. Palmer Luckey 就 Nvidia CEO 人事变动发表看法
 
-[阅读原文 →](https://www.chinatalk.media/p/bis-finally-takes-a-stand) · 来源：ChinaTalk
+[阅读原文 →](https://techcrunch.com/2026/11/18/palmer-luckey-thinks-china-is-thrilled-to-have-jensen-out-so-he-wants-the-ousted-nvidia-ceo-reinstated/) · 来源：TechCrunch：AI
 
-### 3. Ed Zitron 长文解析 NVIDIA 泡沫：循环融资、渠道压货与芯片出口管制争议如何支撑AI行业
+### 3. Vals AI 评测：Anthropic、OpenAI 和 Google 模型易将医护人员与投降士兵标记为自杀式无人机目标
 
-[阅读原文 →](https://www.wheresyoured.at/the-nvidia-bubble/) · 来源：Ed Zitron 长文 / Where’s Your Ed At
+[阅读原文 →](https://the-decoder.com/anthropic-openai-and-google-models-readily-marked-medics-journalists-and-surrendering-soldiers-as-kamikaze-drone-targets/) · 来源：The Decoder：AI News
 
-### 4. Google AI Studio 集成 Gemini 4 Carbon 与 Hydrogen 支持构建全栈 Android 应用并发布到 Google Play
+### 4. Meta 员工内部聊天显示对 Muse 智能体隐私风险的担忧
 
-[阅读原文 →](https://developers.googleblog.com/build-full-stack-android-apps-with-gemini-in-google-ai-studio/) · 来源：Google Developers Blog
+[阅读原文 →](https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show/) · 来源：Ars Technica：AI
 
-### 5. Demis Hassabis 宣布为 Isomorphic Labs 融资 50 亿美元加速用 AI 研发新药
+### 5. OpenAI Codex 团队成员解释 6.2 Sol/Astra 评测视频与现场反馈的差异
 
-[阅读原文 →](https://x.com/demishassabis/status/2122662616367853670) · 来源：X：Demis Hassabis (@demishassabis)
+[阅读原文 →](https://x.com/thsottiaux/status/2122929634916679820) · 来源：X：Tibo (@thsottiaux)
 
-### 6. 可灵 AI 发布 Kling Image 4.0 图像模型并开放 API
+### 6. 腾讯混元 Hy4 flash 开放权重，含 FP8 与 Base 版本
 
-[阅读原文 →](https://mp.weixin.qq.com/s/p3_DIBRUUgmxShjD5Wp27w) · 来源：公众号：可灵AI
+[阅读原文 →](https://x.com/TencentHunyuan/status/2122912575302119554) · 来源：X：腾讯混元 (@TencentHunyuan)
 
-### 7. Wiz 解读 OpenJDK 远程代码执行漏洞 CVE-2026-114938（Java4Shell）
+### 7. ElevenLabs 收购日本语音 AI 公司 Kotoba
 
-[阅读原文 →](https://www.wiz.io/blog/cve-2026-114938-rce-java4shell-openjdk) · 来源：Wiz：Research
+[阅读原文 →](https://elevenlabs.io/blog/kotoba) · 来源：ElevenLabs：Blog
 
-### 8. Claude Code 推出实验性 Code Mode 工具调用方式
+### 8. OpenAI 详解前沿 AI 风险管理：从训练到部署的四层防护
 
-[阅读原文 →](https://x.com/ClaudeDevs/status/2122801681939234950) · 来源：X：Claude Devs (@ClaudeDevs)
+[阅读原文 →](https://openai.com/index/managing-frontier-ai-risk) · 来源：OpenAI：官网动态
 
-### 9. Fireworks 评测 Kimi K3.1 Pro：智能体场景下该替换还是组合使用
+### 9. 腾讯混元宣布 11 月 20 日在 Reddit r/LocalLLaMA 举办 AMA
 
-[阅读原文 →](https://fireworks.ai/blog/should-you-switch-your-agents-to-kimi-k3-1-pro/) · 来源：Fireworks AI
+[阅读原文 →](https://x.com/TencentHunyuan/status/2123095410327879735) · 来源：X：腾讯混元 (@TencentHunyuan)
 
-### 10. OpenClaw 上线 OpenAI GPT-6.2 Astra 和 Sol 模型
+### 10. OpenAI 深入解析 Codex 沙箱的权限设计与三平台实现
 
-[阅读原文 →](https://x.com/openclaw/status/2122778563829174468) · 来源：X：OpenClaw (@openclaw)
+[阅读原文 →](https://openai.com/index/inside-the-codex-sandbox) · 来源：OpenAI：官网动态
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-18](./2026-11-18) — OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol
 - [2026-11-17](./2026-11-17) — Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力
 - [2026-11-16](./2026-11-16) — 今日安静，无大事发生
 - [2026-11-15](./2026-11-15) — Nathan Lambert 分析黄仁勋辞职后美国开源模型生态的真空
 - [2026-11-14](./2026-11-14) — Nvidia 领导层变动引发以色列科技界关注，投资人认为挑战者或有机会
 - [2026-11-13](./2026-11-13) — NVIDIA 宣布 CEO 变动：Jensen Huang 辞任，CFO Colette Kress 出任临时 CEO
-- [2026-11-12](./2026-11-12) — Google 发布 Gemini Decisions API 与 Gemini Decision 1 模型，专注快速多模态封闭式决策
 
 [查看全部往期日报 →](./archive)
 

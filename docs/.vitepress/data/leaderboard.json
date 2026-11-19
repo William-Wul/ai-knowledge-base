@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 16,
   "evaluationCount": 54,
-  "sourceUpdatedAt": "11/19 02:05",
-  "syncedAt": "2026-11-18T19:24:43.407Z",
+  "sourceUpdatedAt": "11/19 08:05",
+  "syncedAt": "2026-11-19T00:42:56.028Z",
   "models": [
     {
       "rank": 1,
@@ -18,7 +18,7 @@
       "cachePrice": "¥1.33",
       "inputPrice": "¥53.34",
       "outputPrice": "¥266.69",
-      "score": 79.9
+      "score": 80
     },
     {
       "rank": 2,
@@ -65,12 +65,12 @@
       "name": "Gemini 4 Hydrogen",
       "provider": "Google",
       "releaseDate": "2026-11-12",
-      "evidenceCount": 22,
-      "evidenceStatus": "覆盖49%",
+      "evidenceCount": 26,
+      "evidenceStatus": "覆盖54%",
       "cachePrice": "¥0.5",
       "inputPrice": "¥10",
       "outputPrice": "¥50",
-      "score": 73.4
+      "score": 73.3
     },
     {
       "rank": 6,
@@ -148,7 +148,7 @@
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.33",
       "outputPrice": "¥66.67",
-      "score": 70
+      "score": 70.1
     },
     {
       "rank": 12,
@@ -187,7 +187,7 @@
       "cachePrice": "¥0.33",
       "inputPrice": "¥6.67",
       "outputPrice": "¥33.34",
-      "score": 69
+      "score": 69.1
     },
     {
       "rank": 15,
@@ -230,19 +230,6 @@
     },
     {
       "rank": 18,
-      "slug": "gpt-5-6-sol",
-      "name": "GPT-5.6 Sol",
-      "provider": "OpenAI",
-      "releaseDate": "2026-07-09",
-      "evidenceCount": 40,
-      "evidenceStatus": "覆盖84%",
-      "cachePrice": "¥3.33",
-      "inputPrice": "¥33.34",
-      "outputPrice": "¥200.02",
-      "score": 66.7
-    },
-    {
-      "rank": 19,
       "slug": "hy-4",
       "name": "Hy4",
       "provider": "Tencent",
@@ -252,6 +239,19 @@
       "cachePrice": "¥0.3",
       "inputPrice": "¥6",
       "outputPrice": "¥18",
+      "score": 66.7
+    },
+    {
+      "rank": 19,
+      "slug": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "provider": "OpenAI",
+      "releaseDate": "2026-07-09",
+      "evidenceCount": 40,
+      "evidenceStatus": "覆盖84%",
+      "cachePrice": "¥3.33",
+      "inputPrice": "¥33.34",
+      "outputPrice": "¥200.02",
       "score": 66.7
     },
     {
@@ -291,7 +291,7 @@
       "cachePrice": "¥1.33",
       "inputPrice": "¥13.33",
       "outputPrice": "¥66.67",
-      "score": 65.5
+      "score": 65.6
     },
     {
       "rank": 23,
@@ -330,7 +330,7 @@
       "cachePrice": "¥3.33",
       "inputPrice": "¥13.33",
       "outputPrice": "¥40",
-      "score": 63.5
+      "score": 63.6
     },
     {
       "rank": 26,
@@ -347,19 +347,6 @@
     },
     {
       "rank": 27,
-      "slug": "kimi-k-3",
-      "name": "Kimi K3",
-      "provider": "Moonshot AI",
-      "releaseDate": "2026-07-16",
-      "evidenceCount": 52,
-      "evidenceStatus": "覆盖97%",
-      "cachePrice": "¥2",
-      "inputPrice": "¥20",
-      "outputPrice": "¥100",
-      "score": 62.9
-    },
-    {
-      "rank": 28,
       "slug": "qwen-3-8-max-0902",
       "name": "Qwen3.8 Max 0902",
       "provider": "Alibaba",
@@ -369,6 +356,19 @@
       "cachePrice": "¥1.5",
       "inputPrice": "¥12",
       "outputPrice": "¥36",
+      "score": 62.9
+    },
+    {
+      "rank": 28,
+      "slug": "kimi-k-3",
+      "name": "Kimi K3",
+      "provider": "Moonshot AI",
+      "releaseDate": "2026-07-16",
+      "evidenceCount": 52,
+      "evidenceStatus": "覆盖97%",
+      "cachePrice": "¥2",
+      "inputPrice": "¥20",
+      "outputPrice": "¥100",
       "score": 62.9
     },
     {
@@ -438,6 +438,19 @@
     },
     {
       "rank": 34,
+      "slug": "inkling-2-small",
+      "name": "Inkling 2 Small",
+      "provider": "Thinking Machines Lab",
+      "releaseDate": "2026-11-05",
+      "evidenceCount": 30,
+      "evidenceStatus": "覆盖65%",
+      "cachePrice": "¥0.2",
+      "inputPrice": "¥2",
+      "outputPrice": "¥6.67",
+      "score": 62.3
+    },
+    {
+      "rank": 35,
       "slug": "grok-4-6",
       "name": "Grok 4.6",
       "provider": "xAI",
@@ -448,19 +461,6 @@
       "inputPrice": "¥13.33",
       "outputPrice": "¥40",
       "score": 62.3
-    },
-    {
-      "rank": 35,
-      "slug": "inkling-2-small",
-      "name": "Inkling 2 Small",
-      "provider": "Thinking Machines Lab",
-      "releaseDate": "2026-11-05",
-      "evidenceCount": 30,
-      "evidenceStatus": "覆盖65%",
-      "cachePrice": "¥0.2",
-      "inputPrice": "¥2",
-      "outputPrice": "¥6.67",
-      "score": 62.2
     },
     {
       "rank": 36,
@@ -486,7 +486,7 @@
       "cachePrice": "¥0.3",
       "inputPrice": "¥6",
       "outputPrice": "¥18",
-      "score": 62.1
+      "score": 62.2
     },
     {
       "rank": 38,
@@ -616,7 +616,7 @@
       "cachePrice": "¥0.02",
       "inputPrice": "¥1",
       "outputPrice": "¥2",
-      "score": 58.9
+      "score": 59
     },
     {
       "rank": 48,
