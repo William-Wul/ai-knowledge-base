@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 15,
   "evaluationCount": 50,
-  "sourceUpdatedAt": "11/20 10:03",
-  "syncedAt": "2026-11-20T02:32:43.037Z",
+  "sourceUpdatedAt": "11/20 14:06",
+  "syncedAt": "2026-11-20T10:19:54.284Z",
   "models": [
     {
       "rank": 1,
@@ -13,12 +13,12 @@
       "name": "Claude Fable 5.2",
       "provider": "Anthropic",
       "releaseDate": "2026-11-09",
-      "evidenceCount": 40,
-      "evidenceStatus": "覆盖83%",
+      "evidenceCount": 41,
+      "evidenceStatus": "覆盖86%",
       "cachePrice": "¥1.33",
       "inputPrice": "¥53.33",
       "outputPrice": "¥266.67",
-      "score": 80
+      "score": 79.4
     },
     {
       "rank": 2,
@@ -39,12 +39,12 @@
       "name": "gpt-6.2-astra",
       "provider": "OpenAI",
       "releaseDate": "2026-11-17",
-      "evidenceCount": 31,
-      "evidenceStatus": "覆盖66%",
+      "evidenceCount": 32,
+      "evidenceStatus": "覆盖69%",
       "cachePrice": "¥2.67",
       "inputPrice": "¥53.33",
       "outputPrice": "¥266.67",
-      "score": 76.7
+      "score": 75.7
     },
     {
       "rank": 4,
@@ -57,7 +57,7 @@
       "cachePrice": "¥1.33",
       "inputPrice": "¥26.67",
       "outputPrice": "¥133.33",
-      "score": 74.9
+      "score": 74.8
     },
     {
       "rank": 5,
@@ -70,23 +70,10 @@
       "cachePrice": "¥0.5",
       "inputPrice": "¥10",
       "outputPrice": "¥50",
-      "score": 73.5
-    },
-    {
-      "rank": 6,
-      "slug": "gpt-6-2-sol",
-      "name": "gpt-6.2-sol",
-      "provider": "OpenAI",
-      "releaseDate": "2026-11-17",
-      "evidenceCount": 27,
-      "evidenceStatus": "覆盖60%",
-      "cachePrice": "¥0.67",
-      "inputPrice": "¥13.33",
-      "outputPrice": "¥66.67",
       "score": 73.4
     },
     {
-      "rank": 7,
+      "rank": 6,
       "slug": "gpt-6-astra",
       "name": "GPT-6 Astra",
       "provider": "OpenAI",
@@ -96,10 +83,10 @@
       "cachePrice": "¥6.67",
       "inputPrice": "¥66.67",
       "outputPrice": "¥333.33",
-      "score": 73.1
+      "score": 73
     },
     {
-      "rank": 8,
+      "rank": 7,
       "slug": "claude-fable-5-1",
       "name": "Claude Fable 5.1",
       "provider": "Anthropic",
@@ -112,6 +99,19 @@
       "score": 72.8
     },
     {
+      "rank": 8,
+      "slug": "gpt-6-2-sol",
+      "name": "gpt-6.2-sol",
+      "provider": "OpenAI",
+      "releaseDate": "2026-11-17",
+      "evidenceCount": 28,
+      "evidenceStatus": "覆盖63%",
+      "cachePrice": "¥0.67",
+      "inputPrice": "¥13.33",
+      "outputPrice": "¥66.67",
+      "score": 72.5
+    },
+    {
       "rank": 9,
       "slug": "claude-sonnet-5-5",
       "name": "Claude Sonnet 5.5",
@@ -122,7 +122,7 @@
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.33",
       "outputPrice": "¥66.67",
-      "score": 72.3
+      "score": 72.2
     },
     {
       "rank": 10,
@@ -148,7 +148,7 @@
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.33",
       "outputPrice": "¥66.67",
-      "score": 71.2
+      "score": 71.1
     },
     {
       "rank": 12,
@@ -161,7 +161,7 @@
       "cachePrice": "¥3.33",
       "inputPrice": "¥33.33",
       "outputPrice": "¥166.67",
-      "score": 70.4
+      "score": 70.3
     },
     {
       "rank": 13,
@@ -174,23 +174,10 @@
       "cachePrice": "¥0.5",
       "inputPrice": "¥10",
       "outputPrice": "¥30",
-      "score": 69.5
+      "score": 69.4
     },
     {
       "rank": 14,
-      "slug": "gpt-6-1-terra",
-      "name": "GPT-6.1 Terra",
-      "provider": "OpenAI",
-      "releaseDate": "2026-10-26",
-      "evidenceCount": 32,
-      "evidenceStatus": "覆盖71%",
-      "cachePrice": "¥0.33",
-      "inputPrice": "¥6.67",
-      "outputPrice": "¥33.33",
-      "score": 69.3
-    },
-    {
-      "rank": 15,
       "slug": "claude-fable-5",
       "name": "Claude Fable 5",
       "provider": "Anthropic",
@@ -203,6 +190,19 @@
       "score": 69.2
     },
     {
+      "rank": 15,
+      "slug": "gpt-6-1-terra",
+      "name": "GPT-6.1 Terra",
+      "provider": "OpenAI",
+      "releaseDate": "2026-10-26",
+      "evidenceCount": 33,
+      "evidenceStatus": "覆盖74%",
+      "cachePrice": "¥0.33",
+      "inputPrice": "¥6.67",
+      "outputPrice": "¥33.33",
+      "score": 68.8
+    },
+    {
       "rank": 16,
       "slug": "muse-wonder",
       "name": "Muse Wonder",
@@ -213,7 +213,7 @@
       "cachePrice": "¥1.33",
       "inputPrice": "¥26.67",
       "outputPrice": "¥133.33",
-      "score": 68.1
+      "score": 68
     },
     {
       "rank": 17,
@@ -226,7 +226,7 @@
       "cachePrice": "¥1.3",
       "inputPrice": "¥13",
       "outputPrice": "¥68",
-      "score": 68.1
+      "score": 67.9
     },
     {
       "rank": 18,
@@ -239,7 +239,7 @@
       "cachePrice": "¥3.33",
       "inputPrice": "¥33.33",
       "outputPrice": "¥200",
-      "score": 67.4
+      "score": 67.3
     },
     {
       "rank": 19,
@@ -247,8 +247,8 @@
       "name": "Hy4",
       "provider": "Tencent",
       "releaseDate": "2026-11-04",
-      "evidenceCount": 24,
-      "evidenceStatus": "覆盖57%",
+      "evidenceCount": 25,
+      "evidenceStatus": "覆盖60%",
       "cachePrice": "¥0.3",
       "inputPrice": "¥6",
       "outputPrice": "¥18",
@@ -278,7 +278,7 @@
       "cachePrice": "¥0.0267",
       "inputPrice": "¥0.67",
       "outputPrice": "¥3.33",
-      "score": 66.3
+      "score": 66.2
     },
     {
       "rank": 22,
@@ -334,19 +334,6 @@
     },
     {
       "rank": 26,
-      "slug": "claude-haiku-5-5",
-      "name": "Claude Haiku 5.5",
-      "provider": "Anthropic",
-      "releaseDate": "2026-10-07",
-      "evidenceCount": 47,
-      "evidenceStatus": "覆盖100%",
-      "cachePrice": "¥0.0667",
-      "inputPrice": "¥0.67",
-      "outputPrice": "¥3.33",
-      "score": 63.7
-    },
-    {
-      "rank": 27,
       "slug": "glm-5-3",
       "name": "GLM-5.3",
       "provider": "Z.ai",
@@ -356,6 +343,19 @@
       "cachePrice": "¥2",
       "inputPrice": "¥8",
       "outputPrice": "¥28",
+      "score": 63.7
+    },
+    {
+      "rank": 27,
+      "slug": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "provider": "Anthropic",
+      "releaseDate": "2026-10-07",
+      "evidenceCount": 47,
+      "evidenceStatus": "覆盖100%",
+      "cachePrice": "¥0.0667",
+      "inputPrice": "¥0.67",
+      "outputPrice": "¥3.33",
       "score": 63.7
     },
     {
@@ -447,7 +447,7 @@
       "cachePrice": "¥0.3",
       "inputPrice": "¥6",
       "outputPrice": "¥18",
-      "score": 62.6
+      "score": 62.5
     },
     {
       "rank": 35,
@@ -590,7 +590,7 @@
       "cachePrice": "¥1",
       "inputPrice": "¥8.33",
       "outputPrice": "¥28.33",
-      "score": 59.5
+      "score": 59.6
     },
     {
       "rank": 46,
