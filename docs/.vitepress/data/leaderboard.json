@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 15,
   "evaluationCount": 50,
-  "sourceUpdatedAt": "11/20 02:06",
-  "syncedAt": "2026-11-19T19:29:41.884Z",
+  "sourceUpdatedAt": "11/20 08:10",
+  "syncedAt": "2026-11-20T00:52:17.018Z",
   "models": [
     {
       "rank": 1,
@@ -204,6 +204,19 @@
     },
     {
       "rank": 16,
+      "slug": "muse-wonder",
+      "name": "Muse Wonder",
+      "provider": "Meta",
+      "releaseDate": "2026-10-12",
+      "evidenceCount": 37,
+      "evidenceStatus": "覆盖80%",
+      "cachePrice": "¥1.33",
+      "inputPrice": "¥26.67",
+      "outputPrice": "¥133.33",
+      "score": 68.1
+    },
+    {
+      "rank": 17,
       "slug": "kimi-k-3-1-pro",
       "name": "Kimi K3.1 Pro",
       "provider": "Moonshot AI",
@@ -214,19 +227,6 @@
       "inputPrice": "¥13",
       "outputPrice": "¥68",
       "score": 68.1
-    },
-    {
-      "rank": 17,
-      "slug": "muse-wonder",
-      "name": "Muse Wonder",
-      "provider": "Meta",
-      "releaseDate": "2026-10-12",
-      "evidenceCount": 37,
-      "evidenceStatus": "覆盖80%",
-      "cachePrice": "¥1.33",
-      "inputPrice": "¥26.67",
-      "outputPrice": "¥133.33",
-      "score": 68
     },
     {
       "rank": 18,

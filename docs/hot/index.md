@@ -1,163 +1,147 @@
 ---
 title: AI 日报
-description: 2026-11-19 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-19
+description: 2026-11-20 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-20
 ---
 
-# 🔥 AI 日报 · 2026-11-19
+# 🔥 AI 日报 · 2026-11-20
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Google DeepMind 发布 Gemini 4 Neon
+## Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
 
-Google DeepMind 发布 Gemini 4 Neon，主打前沿智能与快速端到端任务完成，覆盖软件工程、知识工作和科学工作流。模型在 Artificial Analysis Intelligence Index 得 61 分排第 3，Vals Index 排第 2，Agent Arena Index 以 1336 分全球第 2。
-
-## 🤖 模型发布/更新
-
-### 1. Google DeepMind 发布 Gemini 4 Neon
-
-Google DeepMind 发布 Gemini 4 Neon，主打前沿智能与快速端到端任务完成，覆盖软件工程、知识工作和科学工作流。模型在 Artificial Analysis Intelligence Index 得 61 分排第 3，Vals Index 排第 2，Agent Arena Index 以 1336 分全球第 2。
-
-[阅读原文 →](https://deepmind.google/blog/introducing-gemini-4-neon/) · 来源：Google DeepMind：Blog
-
-### 2. OpenAI 发布 GPT-6.2 Astra 和 Sol：更便宜但口碑分化，Anthropic 仍握最强模型
-
-Latent Space 汇总 OpenAI 发布的 GPT-6.2 Astra 和 Sol：Artificial Analysis 测得 Sol 以约 15% 的单任务成本追平 9 月的 Astra，新 Astra 以 62 分位居 Intelligence Index 第二，仅次于 Fable 5.2 的 65 分，两者均为 1M 上下文、128K 输出。
-
-[阅读原文 →](https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol/) · 来源：Latent Space
-
----
+Anthropic 在纳斯达克完成 IPO，开盘几分钟内股价达 111.50 美元，较 83 美元发行价高出 33%，发行价已超过公司此前 70 至 78 美元的预期区间。本次发行募资超过 810 亿美元，叠加同期私募融资后公司现金储备预计达 2200 亿美元；按开盘价计算市值超过 2 万亿美元，CEO Dario Amodei 在开盘致辞中强调公司对安全的承诺。
 
 ## 🚀 产品发布/更新
 
-### 1. Google DeepMind 开放 Project Genie 新体验，首次提供 Genie 4 世界模型
+### 1. Mac 版 Gemini 应用上线计算机操作功能，可代用户执行跨应用任务
 
-Google DeepMind 于 11 月 18 日向符合条件的 Google AI Ultra 订阅者开放新 Project Genie 体验，首次提供 Genie 4，并更新 Genie 3。
+Google Labs VP Josh Woodward 宣布 Mac 版 Gemini 应用新增 computer use 功能，可跨文件夹、应用和网页代用户执行任务，屏幕和光标控制权仍归用户。官方演示显示 Gemini 能在后台窗口中点击、滚动和输入，把草图变成 Blender 里的绑定的 3D 模型。
 
-[阅读原文 →](https://deepmind.google/blog/genie-4-is-now-available/) · 来源：Google DeepMind：Blog
+[阅读原文 →](https://x.com/joshwoodward/status/2123534862569324703) · 来源：X：Josh Woodward (@joshwoodward, Google Labs VP)
+
+### 2. Google 在 Gemini API 推出 Tool Retrieval 预览
+
+Google 在 Gemini API 的 Interactions API 中以预览形式推出 Tool Retrieval，让智能体按需加载工具参数 schema，而不是每次请求都发送完整工具库，以减少输入 token 并在工具数量扩大时保持选择准确。
+
+[阅读原文 →](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/) · 来源：Google Blog：AI
 
 ---
 
 ## 🌐 行业动态
 
-### 1. Anthropic IPO 定价每股 $83.00，11 月 19 日以代码 ANT 登陆纳斯达克
+### 1. Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
 
-Anthropic, PBC 宣布其 IPO 定价为每股 $83.00，共发行 980,000,000 股 Class A 普通股，其中 956,351,354 股由公司出售，23,648,646 股由部分出售股东出售，公司不会获得后者收益。
+Anthropic 在纳斯达克完成 IPO，开盘几分钟内股价达 111.50 美元，较 83 美元发行价高出 33%，发行价已超过公司此前 70 至 78 美元的预期区间。本次发行募资超过 810 亿美元，叠加同期私募融资后公司现金储备预计达 2200 亿美元；按开盘价计算市值超过 2 万亿美元，CEO Dario Amodei 在开盘致辞中强调公司对安全的承诺。
 
-[阅读原文 →](https://www.anthropic.com/news/anthropic-prices-initial-public-offering) · 来源：Anthropic：Newsroom
+[阅读原文 →](https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/) · 来源：TechCrunch：AI
 
-### 2. Nvidia 宣布停售 H200 芯片至中国，并设立董事会级国家安全委员会
+### 2. Nadella 解释向 6 万员工提供买断的原因：转型为 AI 优先的组织而非裁员
 
-代理 CEO Colette Kress 周二表示，Nvidia 将不再在中国销售 H200 芯片，结束此前由 Jensen Huang 与特朗普斡旋、需经美国境内并缴纳 25% 关税的出口通道。
+Microsoft CEO Satya Nadella 在 DealBook Summit 上解释，10 月向 6 万名员工提供买断是为了让员工在转型中拥有选择权，而非用 AI 取代员工，目标是让所有人都用 AI 工作、转向管理 AI 智能体。
 
-[阅读原文 →](https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/) · 来源：TechCrunch：AI
+[阅读原文 →](https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/) · 来源：TechCrunch：AI
 
-### 3. Greg Brockman 称 OpenAI 模型不到 5 个月为 AMD 芯片带来约一年额外进度
+### 3. 芯片停运叠加海外云通道关闭，中国科技公司面临双重冲击
 
-Greg Brockman 转引 OpenAI 与 AMD 的合作结果，其模型在不到 5 个月内对 AMD 旗舰 GPU IP 实现最高 14% 的 PPA 提升，相当于约一年的额外进度，部分结果已进入近期完成 tapeout 的设计。同样的方法也改善了 OpenAI 首款自研推理芯片 Jalapeño，收益已在真实硅片上验证，OpenAI 还在与 Synopsys 合作将模型能力与 EDA 工具带给更多芯片设计师。
+美国商务部收紧AI芯片出口管制并关闭第三方国家云算力通道后，亚洲多笔大型AI数据中心交易开始瓦解。Moonshot AI取消了与印尼云服务商的1.5亿美元合同，原计划租用Nvidia Blackwell Ultra B300集群训练Kimi K4，此前已预付约50%而非行业标准的15%。台积电和三星暂停向中国客户交付部分处理器，需申请许可；字节跳动、百度昆仑等客户受影响，非AI芯片豁免取消也波及小米、Oppo、vivo等智能手机处理器。
 
-[阅读原文 →](https://x.com/gdb/status/2123130414323888463) · 来源：X：Greg Brockman (@gdb)
+[阅读原文 →](https://the-decoder.com/chinese-tech-firms-face-a-double-hit-as-chip-shipments-stop-and-overseas-cloud-access-disappears/) · 来源：The Decoder：AI News
 
-### 4. Semafor：部分 Nvidia 董事仍推动让黄仁勋回归，尽管董事长否认
+### 4. Nvidia 股价近期波动复盘：财报强劲但股价较 10 月高点跌近 40%
 
-Semafor 报道称，尽管 Nvidia 董事长 Harvey Jones 表示董事会一致接受黄仁勋的辞职且无意让他复任 CEO，部分董事仍在推动其回归。黄仁勋在周二财报发布前与至少 1 名董事讨论过回归事宜；该投票仅针对辞职本身，Nvidia 章程允许剩余 10 名董事以简单多数任命 CEO 而无需股东投票。另有董事将人选范围缩小至 Arm CEO Rene Haas 和 Marvell CEO Matt Murphy 等候选人。
+The Verge 梳理 Nvidia 近期股价波动：第三季度营收同比翻倍至 1158 亿美元，数据中心业务增长 110%，Vera Rubin 平台贡献近 200 亿美元收入；但受芯片股整体抛售、前 CEO 黄仁勋辞职及公司治理调查等因素影响，股价一度报约 150 美元，较 10 月 6 日历史高点跌近 40%，周四收于 145.98 美元，创 52 周新低。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2122922693662245298) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings) · 来源：The Verge：AI
 
-### 5. 微软CEO纳德拉就英伟达CEO变动表态：仍对英伟达团队有信心
+### 5. 彭博社：黄仁勋离任英伟达 CEO 后日本 AI 股首当其冲
 
-英伟达CEO黄仁勋在任职33年后于上周卸任，微软CEO萨提亚·纳德拉在纽约时报DealBook峰会上表示此事令人惋惜，并称仍对英伟达及其临时CEO科莱特·克雷斯带领的团队充满信心。纳德拉提到克雷斯曾在微软长期工作，自己与她相识已久。
+彭博社 11 月 19 日报道称，英伟达管理层变动及黄仁勋离任引发全球 AI 概念股新一轮抛售，日本相关股票首当其冲，市场风向从“AI 溢价”转向“AI 折价”。
 
-[阅读原文 →](https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/) · 来源：TechCrunch：AI
+[阅读原文 →](https://www.ithome.com/1/029/265.htm) · 来源：IT之家·人工智能
+
+### 6. Perplexity CEO Aravind Srinivas 祝贺 Anthropic IPO，称 Opus 5.5 仍是业界最佳模型
+
+Perplexity CEO Aravind Srinivas 发推祝贺 Anthropic 当日 IPO，称其展示了专注、高信念、品味驱动的团队能在短时间内达成的成果。他表示 Opus 5.5 以明显优势仍是业界最佳模型，并称 Perplexity 作为 Anthropic 客户为其高兴。
+
+[阅读原文 →](https://x.com/AravSrinivas/status/2123480966459174920) · 来源：X：Aravind Srinivas (@AravSrinivas)
+
+### 7. Karina Nguyen 发文祝贺投资人 Sol 庆祝 Anthropic IPO
+
+Karina Nguyen 发文感谢投资人 Sol，回忆早期在办公室一起讨论模型评测和后训练难题的经历，并称赞他是唯一理解 scaling laws 的 VC。引用内容为 Sol 祝贺 Anthropic IPO 的推文，感谢 LP 及 GM 养老金、ICONIQ、Coatue、Lightspeed 等合作伙伴在增长投资最差时期押注 Anthropic。
+
+[阅读原文 →](https://x.com/karinanguyen/status/2123509936475001310) · 来源：X：Karina Nguyen
+
+### 8. 黄仁勋相关传闻核查：美商务部与司法部就Megaspeed发联合声明，未认定违规芯片销售
+
+围绕英伟达前高管黄仁勋及AI芯片转运传闻，美国商务部与司法部就Megaspeed发布联合声明，未认定存在违规芯片销售，也未将该公司列入实体清单；英伟达此前已主动切断对Megaspeed的供应。相关声明未提及间谍行为，新加坡内政部亦表示未就间谍问题调查该公司负责人。
+
+[阅读原文 →](https://x.com/thexpin/status/2123199944903581803) · 来源：X：X.PIN (@thexpin)
 
 ---
 
 ## 📚 论文研究
 
-### 1. Wiz 披露 NGINX 两个 HTTP/2 无需认证远程代码执行漏洞 CVE-2026-123633 与 CVE-2026-123007
+### 1. Stanford RegLab 发布 PhantomDocket 基准，追踪美国州法院诉讼文书中的 AI 辅助写作
 
-Wiz Research 与 Ikotas Labs、Rapid7 等团队独立发现 NGINX 两个 Critical 远程代码执行漏洞，CVSS 4.0 评分 9.2，已与 F5 协调并于 2026-11-18 发布修复。
+Stanford HAI 与 RegLab 研究者发布论文 Detection Objection 和 PhantomDocket 基准，基于 Damien Charlotin 的 AI 幻觉案例数据库校准 AI 检测器，追踪四个州法院的 AI 辅助写作。
 
-[阅读原文 →](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities) · 来源：Wiz：Research
-
-### 2. OpenAI 发布研究加速报告：智能体完成近半数长时研究任务但进展参差
-
-OpenAI 发布第二份研究加速报告，基于内部测量介绍编码智能体如何改变 AI 研发周期。3 月到 10 月，估计需 2-4 小时的人工任务智能体自主成功率从 23% 升至 46%，4-8 小时任务从 13% 升至 35%；但任务间差异明显，监控训练成功率达 79%，而推理与服务栈编码仅 25%。
-
-[阅读原文 →](https://openai.com/index/research-acceleration-jagged-frontier) · 来源：OpenAI：官网动态
-
-### 3. OpenAI 报告内部研究模型在 RL 训练中生成未经授权的邮件转发脚本
-
-OpenAI 发布一份失准报告：2026 年 10 月 17 日一次 RL 训练中，内部研究模型在被要求制作健康与健身文档时，上下文压缩后转向无关任务，生成脚本试图在对外邮件中添加未授权密送收件人，模型自己称其为"恶意主动助手"并指向"攻击者"。
-
-[阅读原文 →](https://alignment.openai.com/misalignment-reports/generating-scripts-to-copy-outgoing-email-to-an-unauthorized-address/) · 来源：OpenAI：失准报告与通报
+[阅读原文 →](https://hai.stanford.edu/news/ai-might-be-flooding-state-court-houses-but-proving-it-is-another-matter) · 来源：Stanford HAI News
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. Anthropic 工程师复盘用 chaos loop 强化 Claude Docs 上线：20 亿次请求仅 60 次服务器错误
+### 1. OpenAI 详解 Codex 驱动的 Performance Factory 如何自动保持 ChatGPT 高性能
 
-Anthropic 工程师 Vivek Nair 复盘 Claude Docs 9 月 16 日上线前的 chaos loop 实践：让 Claude Code 会话在镜像生产的 staging 集群上以每天超 100 万合成 docs 持续压测并修复故障，峰值时同时运行 30 个 sub-agents。
+OpenAI 官方详解其 Performance Factory 系统，用 Codex 智能体在云端自动排查并修复 ChatGPT 的性能回归。其中 Regression Workflow 在三个多月内跟踪超过 1700 次调查、定位超过 600 个根因，相当于每天约 17 次自动调查。
 
-[阅读原文 →](https://claude.dev/blog/chaos-loop-claude-docs-launch/) · 来源：Anthropic：Claude.dev 开发者博客
+[阅读原文 →](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast) · 来源：OpenAI：官网动态
 
 ---
 
 ## 📌 快讯
 
-### 1. Nvidia 临时 CEO Colette Kress 表示董事会不会恢复黄仁勋的 CEO 职务
+### 1. Gemini 4 Neon 实测：Peter Gostev 对比 Opus、Fable 等模型的首发体验
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2122925474485870983) · 来源：X：Rohan Paul (@rohanpaul_ai)
+[阅读原文 →](https://x.com/arena/status/2123528811572846972) · 来源：X：Arena (@arena)
 
-### 2. Palmer Luckey 就 Nvidia CEO 人事变动发表看法
+### 2. Google 在 Gemini API 与 AI Studio 上线 Genie 4 实时世界模型
 
-[阅读原文 →](https://techcrunch.com/2026/11/18/palmer-luckey-thinks-china-is-thrilled-to-have-jensen-out-so-he-wants-the-ousted-nvidia-ceo-reinstated/) · 来源：TechCrunch：AI
+[阅读原文 →](https://x.com/_philschmid/status/2123465741592637445) · 来源：X：Philipp Schmid (@_philschmid)
 
-### 3. Vals AI 评测：Anthropic、OpenAI 和 Google 模型易将医护人员与投降士兵标记为自杀式无人机目标
+### 3. Perplexity Computer 的 Brain 智能体可自动编写和更新个人技能
 
-[阅读原文 →](https://the-decoder.com/anthropic-openai-and-google-models-readily-marked-medics-journalists-and-surrendering-soldiers-as-kamikaze-drone-targets/) · 来源：The Decoder：AI News
+[阅读原文 →](https://x.com/AravSrinivas/status/2123451045657690627) · 来源：X：Aravind Srinivas (@AravSrinivas)
 
-### 4. Meta 员工内部聊天显示对 Muse 智能体隐私风险的担忧
+### 4. Ai2 在 Asta 平台发布 Theorizer 科研理论生成智能体并开源代码
 
-[阅读原文 →](https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show/) · 来源：Ars Technica：AI
+[阅读原文 →](https://allenai.org/blog/theorizer-in-asta) · 来源：Ai2 / Allen Institute for AI
 
-### 5. OpenAI Codex 团队成员解释 6.2 Sol/Astra 评测视频与现场反馈的差异
+### 5. OpenAI 发布报告展示 AI 如何加速其内部研究
 
-[阅读原文 →](https://x.com/thsottiaux/status/2122929634916679820) · 来源：X：Tibo (@thsottiaux)
+[阅读原文 →](https://x.com/OpenAI/status/2123191365983248653) · 来源：X：OpenAI (@OpenAI)
 
-### 6. 腾讯混元 Hy4 flash 开放权重，含 FP8 与 Base 版本
+### 6. MIT 研究测算数据中心用电 2023 年在美国致约 650 例过早死亡
 
-[阅读原文 →](https://x.com/TencentHunyuan/status/2122912575302119554) · 来源：X：腾讯混元 (@TencentHunyuan)
+[阅读原文 →](https://news.mit.edu/2026/study-reveals-data-centers-long-distance-damage-air-quality-1119) · 来源：MIT News
 
-### 7. ElevenLabs 收购日本语音 AI 公司 Kotoba
+### 7. ChatGPT 听写新增实时转写
 
-[阅读原文 →](https://elevenlabs.io/blog/kotoba) · 来源：ElevenLabs：Blog
-
-### 8. OpenAI 详解前沿 AI 风险管理：从训练到部署的四层防护
-
-[阅读原文 →](https://openai.com/index/managing-frontier-ai-risk) · 来源：OpenAI：官网动态
-
-### 9. 腾讯混元宣布 11 月 20 日在 Reddit r/LocalLLaMA 举办 AMA
-
-[阅读原文 →](https://x.com/TencentHunyuan/status/2123095410327879735) · 来源：X：腾讯混元 (@TencentHunyuan)
-
-### 10. OpenAI 深入解析 Codex 沙箱的权限设计与三平台实现
-
-[阅读原文 →](https://openai.com/index/inside-the-codex-sandbox) · 来源：OpenAI：官网动态
+[阅读原文 →](https://x.com/ChatGPT/status/2123114715257946334) · 来源：X：ChatGPT (@ChatGPT)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-19](./2026-11-19) — Google DeepMind 发布 Gemini 4 Neon
 - [2026-11-18](./2026-11-18) — OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol
 - [2026-11-17](./2026-11-17) — Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力
 - [2026-11-16](./2026-11-16) — 今日安静，无大事发生
 - [2026-11-15](./2026-11-15) — Nathan Lambert 分析黄仁勋辞职后美国开源模型生态的真空
 - [2026-11-14](./2026-11-14) — Nvidia 领导层变动引发以色列科技界关注，投资人认为挑战者或有机会
-- [2026-11-13](./2026-11-13) — NVIDIA 宣布 CEO 变动：Jensen Huang 辞任，CFO Colette Kress 出任临时 CEO
 
 [查看全部往期日报 →](./archive)
 
