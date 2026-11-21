@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 15,
   "evaluationCount": 50,
-  "sourceUpdatedAt": "11/21 10:11",
-  "syncedAt": "2026-11-21T02:45:47.370Z",
+  "sourceUpdatedAt": "11/21 14:05",
+  "syncedAt": "2026-11-21T10:04:17.636Z",
   "models": [
     {
       "rank": 1,
@@ -57,7 +57,7 @@
       "cachePrice": "¥2.67",
       "inputPrice": "¥53.42",
       "outputPrice": "¥267.11",
-      "score": 74.9
+      "score": 75
     },
     {
       "rank": 5,
@@ -343,7 +343,7 @@
       "cachePrice": "¥1",
       "inputPrice": "¥10.02",
       "outputPrice": "¥50.08",
-      "score": 63.9
+      "score": 64
     },
     {
       "rank": 27,
@@ -464,19 +464,6 @@
     },
     {
       "rank": 36,
-      "slug": "inkling-2-small",
-      "name": "Inkling 2 Small",
-      "provider": "Thinking Machines Lab",
-      "releaseDate": "2026-11-05",
-      "evidenceCount": 30,
-      "evidenceStatus": "覆盖69%",
-      "cachePrice": "¥0.2",
-      "inputPrice": "¥2",
-      "outputPrice": "¥6.68",
-      "score": 62.5
-    },
-    {
-      "rank": 37,
       "slug": "grok-4-6",
       "name": "Grok 4.6",
       "provider": "xAI",
@@ -487,6 +474,19 @@
       "inputPrice": "¥13.36",
       "outputPrice": "¥40.07",
       "score": 62.5
+    },
+    {
+      "rank": 37,
+      "slug": "inkling-2-small",
+      "name": "Inkling 2 Small",
+      "provider": "Thinking Machines Lab",
+      "releaseDate": "2026-11-05",
+      "evidenceCount": 30,
+      "evidenceStatus": "覆盖69%",
+      "cachePrice": "¥0.2",
+      "inputPrice": "¥2",
+      "outputPrice": "¥6.68",
+      "score": 62.4
     },
     {
       "rank": 38,
