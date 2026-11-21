@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 15,
   "evaluationCount": 50,
-  "sourceUpdatedAt": "11/21 02:06",
-  "syncedAt": "2026-11-20T19:06:47.558Z",
+  "sourceUpdatedAt": "11/21 08:05",
+  "syncedAt": "2026-11-21T00:09:23.404Z",
   "models": [
     {
       "rank": 1,
@@ -122,7 +122,7 @@
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.36",
       "outputPrice": "¥66.78",
-      "score": 72.5
+      "score": 72.4
     },
     {
       "rank": 10,
@@ -187,7 +187,7 @@
       "cachePrice": "¥0.5",
       "inputPrice": "¥10",
       "outputPrice": "¥30",
-      "score": 69.5
+      "score": 69.4
     },
     {
       "rank": 15,
@@ -373,19 +373,6 @@
     },
     {
       "rank": 29,
-      "slug": "gpt-5-5",
-      "name": "GPT-5.5",
-      "provider": "OpenAI",
-      "releaseDate": "2026-04-23",
-      "evidenceCount": 26,
-      "evidenceStatus": "覆盖63%",
-      "cachePrice": "¥3.34",
-      "inputPrice": "¥33.39",
-      "outputPrice": "¥200.33",
-      "score": 63.3
-    },
-    {
-      "rank": 30,
       "slug": "kimi-k-3",
       "name": "Kimi K3",
       "provider": "Moonshot AI",
@@ -395,6 +382,19 @@
       "cachePrice": "¥2",
       "inputPrice": "¥20",
       "outputPrice": "¥100",
+      "score": 63.3
+    },
+    {
+      "rank": 30,
+      "slug": "gpt-5-5",
+      "name": "GPT-5.5",
+      "provider": "OpenAI",
+      "releaseDate": "2026-04-23",
+      "evidenceCount": 26,
+      "evidenceStatus": "覆盖63%",
+      "cachePrice": "¥3.34",
+      "inputPrice": "¥33.39",
+      "outputPrice": "¥200.33",
       "score": 63.3
     },
     {
@@ -408,7 +408,7 @@
       "cachePrice": "¥1.5",
       "inputPrice": "¥12",
       "outputPrice": "¥36",
-      "score": 63.2
+      "score": 63.1
     },
     {
       "rank": 32,
@@ -607,19 +607,6 @@
     },
     {
       "rank": 47,
-      "slug": "gpt-6-luna",
-      "name": "GPT-6 Luna",
-      "provider": "OpenAI",
-      "releaseDate": "2026-09-22",
-      "evidenceCount": 46,
-      "evidenceStatus": "覆盖97%",
-      "cachePrice": "¥0.0668",
-      "inputPrice": "¥0.67",
-      "outputPrice": "¥3.34",
-      "score": 59.5
-    },
-    {
-      "rank": 48,
       "slug": "deepseek-v-4-pro-20260813",
       "name": "DeepSeek V4 Pro 0813",
       "provider": "DeepSeek",
@@ -629,6 +616,19 @@
       "cachePrice": "¥0.15",
       "inputPrice": "¥4.5",
       "outputPrice": "¥13.5",
+      "score": 59.5
+    },
+    {
+      "rank": 48,
+      "slug": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "provider": "OpenAI",
+      "releaseDate": "2026-09-22",
+      "evidenceCount": 46,
+      "evidenceStatus": "覆盖97%",
+      "cachePrice": "¥0.0668",
+      "inputPrice": "¥0.67",
+      "outputPrice": "¥3.34",
       "score": 59.5
     },
     {

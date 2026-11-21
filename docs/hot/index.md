@@ -1,147 +1,135 @@
 ---
 title: AI 日报
-description: 2026-11-20 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-20
+description: 2026-11-21 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-21
 ---
 
-# 🔥 AI 日报 · 2026-11-20
+# 🔥 AI 日报 · 2026-11-21
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
+## Thinking Machines Lab 发布可跑在笔记本上的开源权重模型 Inkling 2 Mini
 
-Anthropic 在纳斯达克完成 IPO，开盘几分钟内股价达 111.50 美元，较 83 美元发行价高出 33%，发行价已超过公司此前 70 至 78 美元的预期区间。本次发行募资超过 810 亿美元，叠加同期私募融资后公司现金储备预计达 2200 亿美元；按开盘价计算市值超过 2 万亿美元，CEO Dario Amodei 在开盘致辞中强调公司对安全的承诺。
+Thinking Machines Lab 发布开源权重模型 Inkling 2 Mini，采用循环 Transformer 架构，将中间 12 层每 token 运行三次，总参数 26.4B、激活 3.4B，内存占用约 20GB，可在 32GB 内存以上的 Mac 本地运行。
 
-## 🚀 产品发布/更新
+## 🤖 模型发布/更新
 
-### 1. Mac 版 Gemini 应用上线计算机操作功能，可代用户执行跨应用任务
+### 1. Thinking Machines Lab 发布可跑在笔记本上的开源权重模型 Inkling 2 Mini
 
-Google Labs VP Josh Woodward 宣布 Mac 版 Gemini 应用新增 computer use 功能，可跨文件夹、应用和网页代用户执行任务，屏幕和光标控制权仍归用户。官方演示显示 Gemini 能在后台窗口中点击、滚动和输入，把草图变成 Blender 里的绑定的 3D 模型。
+Thinking Machines Lab 发布开源权重模型 Inkling 2 Mini，采用循环 Transformer 架构，将中间 12 层每 token 运行三次，总参数 26.4B、激活 3.4B，内存占用约 20GB，可在 32GB 内存以上的 Mac 本地运行。
 
-[阅读原文 →](https://x.com/joshwoodward/status/2123534862569324703) · 来源：X：Josh Woodward (@joshwoodward, Google Labs VP)
+[阅读原文 →](https://thinkingmachines.ai/news/inkling-2-mini/) · 来源：Thinking Machines Lab：News
 
-### 2. Google 在 Gemini API 推出 Tool Retrieval 预览
+### 2. 腾讯混元开放 Hy4 权重
 
-Google 在 Gemini API 的 Interactions API 中以预览形式推出 Tool Retrieval，让智能体按需加载工具参数 schema，而不是每次请求都发送完整工具库，以减少输入 token 并在工具数量扩大时保持选择准确。
+腾讯混元发布 Hy4 开放权重，定位原生多模态旗舰 MoE 模型，总参数 770B、激活 49B，支持 1M 上下文。同步发布含安全评估报告的 Hy4 System Card，并提供 GitHub、Hugging Face 权重与 GGUF 下载链接，团队将于本周五 8–10 AM PT 在 r/LocalLLaMA 举行 AMA。
 
-[阅读原文 →](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/) · 来源：Google Blog：AI
+[阅读原文 →](https://x.com/TencentHunyuan/status/2123625549147070538) · 来源：X：腾讯混元 (@TencentHunyuan)
+
+### 3. Google 发布 Gemini 4 Hydrogen，已上线 Gemini 应用和 Search
+
+Google 宣布 Gemini 4 Hydrogen 正式上线，主打速度和日常任务，现已可在 Gemini 应用和 Search 中使用。该模型面向多样化的智能体工作流设计，强调快速高效执行；官方称其能更紧密地遵循指令、更准确地调用工具，用更少的来回沟通产出可靠结果。
+
+[阅读原文 →](https://x.com/Google/status/2123825847815561261) · 来源：X：Google (@Google)
 
 ---
 
-## 🌐 行业动态
+## 🚀 产品发布/更新
 
-### 1. Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
+### 1. ChatGPT 推出 Space：统一管理页面、幻灯片、图片与文件
 
-Anthropic 在纳斯达克完成 IPO，开盘几分钟内股价达 111.50 美元，较 83 美元发行价高出 33%，发行价已超过公司此前 70 至 78 美元的预期区间。本次发行募资超过 810 亿美元，叠加同期私募融资后公司现金储备预计达 2200 亿美元；按开盘价计算市值超过 2 万亿美元，CEO Dario Amodei 在开盘致辞中强调公司对安全的承诺。
+ChatGPT 官方宣布侧边栏中的 Space 成为 pages、slides、images、files 和 uploads 的新家。用 ChatGPT 可写页面、做研究、生成图片并创建交互式图表，把想法变成带图片和图形的幻灯片并邀请他人协作；页面和幻灯片还可从已连接的工具自动更新。
 
-[阅读原文 →](https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/) · 来源：TechCrunch：AI
+[阅读原文 →](https://x.com/ChatGPT/status/2123850915061104735) · 来源：X：ChatGPT (@ChatGPT)
 
-### 2. Nadella 解释向 6 万员工提供买断的原因：转型为 AI 优先的组织而非裁员
+### 2. browser-use 1.0 发布：用一个 Python REPL 工具替代 24 个浏览器动作
 
-Microsoft CEO Satya Nadella 在 DealBook Summit 上解释，10 月向 6 万名员工提供买断是为了让员工在转型中拥有选择权，而非用 AI 取代员工，目标是让所有人都用 AI 工作、转向管理 AI 智能体。
+Browser Use 发布 browser-use 1.0，用单一 python 持久 REPL 加原生 Chrome DevTools Protocol 访问替代 0.x 的 24 个浏览器动作。
 
-[阅读原文 →](https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/) · 来源：TechCrunch：AI
+[阅读原文 →](https://browser-use.com/posts/browser-use-1-0) · 来源：Browser Use
 
-### 3. 芯片停运叠加海外云通道关闭，中国科技公司面临双重冲击
+### 3. Google 回顾 Duplex 十年演进：如何在 Gemini Tasks 中替用户打电话给商家
 
-美国商务部收紧AI芯片出口管制并关闭第三方国家云算力通道后，亚洲多笔大型AI数据中心交易开始瓦解。Moonshot AI取消了与印尼云服务商的1.5亿美元合同，原计划租用Nvidia Blackwell Ultra B300集群训练Kimi K4，此前已预付约50%而非行业标准的15%。台积电和三星暂停向中国客户交付部分处理器，需申请许可；字节跳动、百度昆仑等客户受影响，非AI芯片豁免取消也波及小米、Oppo、vivo等智能手机处理器。
+Google Research 回顾 Duplex 十年架构演进，并介绍本周在 Gemini App Tasks 中上线的自动致电商家功能。
 
-[阅读原文 →](https://the-decoder.com/chinese-tech-firms-face-a-double-hit-as-chip-shipments-stop-and-overseas-cloud-access-disappears/) · 来源：The Decoder：AI News
-
-### 4. Nvidia 股价近期波动复盘：财报强劲但股价较 10 月高点跌近 40%
-
-The Verge 梳理 Nvidia 近期股价波动：第三季度营收同比翻倍至 1158 亿美元，数据中心业务增长 110%，Vera Rubin 平台贡献近 200 亿美元收入；但受芯片股整体抛售、前 CEO 黄仁勋辞职及公司治理调查等因素影响，股价一度报约 150 美元，较 10 月 6 日历史高点跌近 40%，周四收于 145.98 美元，创 52 周新低。
-
-[阅读原文 →](https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings) · 来源：The Verge：AI
-
-### 5. 彭博社：黄仁勋离任英伟达 CEO 后日本 AI 股首当其冲
-
-彭博社 11 月 19 日报道称，英伟达管理层变动及黄仁勋离任引发全球 AI 概念股新一轮抛售，日本相关股票首当其冲，市场风向从“AI 溢价”转向“AI 折价”。
-
-[阅读原文 →](https://www.ithome.com/1/029/265.htm) · 来源：IT之家·人工智能
-
-### 6. Perplexity CEO Aravind Srinivas 祝贺 Anthropic IPO，称 Opus 5.5 仍是业界最佳模型
-
-Perplexity CEO Aravind Srinivas 发推祝贺 Anthropic 当日 IPO，称其展示了专注、高信念、品味驱动的团队能在短时间内达成的成果。他表示 Opus 5.5 以明显优势仍是业界最佳模型，并称 Perplexity 作为 Anthropic 客户为其高兴。
-
-[阅读原文 →](https://x.com/AravSrinivas/status/2123480966459174920) · 来源：X：Aravind Srinivas (@AravSrinivas)
-
-### 7. Karina Nguyen 发文祝贺投资人 Sol 庆祝 Anthropic IPO
-
-Karina Nguyen 发文感谢投资人 Sol，回忆早期在办公室一起讨论模型评测和后训练难题的经历，并称赞他是唯一理解 scaling laws 的 VC。引用内容为 Sol 祝贺 Anthropic IPO 的推文，感谢 LP 及 GM 养老金、ICONIQ、Coatue、Lightspeed 等合作伙伴在增长投资最差时期押注 Anthropic。
-
-[阅读原文 →](https://x.com/karinanguyen/status/2123509936475001310) · 来源：X：Karina Nguyen
-
-### 8. 黄仁勋相关传闻核查：美商务部与司法部就Megaspeed发联合声明，未认定违规芯片销售
-
-围绕英伟达前高管黄仁勋及AI芯片转运传闻，美国商务部与司法部就Megaspeed发布联合声明，未认定存在违规芯片销售，也未将该公司列入实体清单；英伟达此前已主动切断对Megaspeed的供应。相关声明未提及间谍行为，新加坡内政部亦表示未就间谍问题调查该公司负责人。
-
-[阅读原文 →](https://x.com/thexpin/status/2123199944903581803) · 来源：X：X.PIN (@thexpin)
+[阅读原文 →](https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/) · 来源：Google Research：Blog
 
 ---
 
 ## 📚 论文研究
 
-### 1. Stanford RegLab 发布 PhantomDocket 基准，追踪美国州法院诉讼文书中的 AI 辅助写作
+### 1. Anthropic 数学家 Levent Alpöge 宣布与 Claude 合作证明黎曼猜想，放出 1737 万行 Lean 代码
 
-Stanford HAI 与 RegLab 研究者发布论文 Detection Objection 和 PhantomDocket 基准，基于 Damien Charlotin 的 AI 幻觉案例数据库校准 AI 检测器，追踪四个州法院的 AI 辅助写作。
+Anthropic 数学家 Levent Alpöge 在个人网站宣布与 Claude 合作证明了黎曼猜想，没有论文，只放出 14 个压缩包共 175187 个 Lean 文件、1737 万行代码。
 
-[阅读原文 →](https://hai.stanford.edu/news/ai-might-be-flooding-state-court-houses-but-proving-it-is-another-matter) · 来源：Stanford HAI News
+[阅读原文 →](https://mp.weixin.qq.com/s/8Zi3nfwddzFy6cZsK2_KxA) · 来源：公众号：数字生命卡兹克
+
+### 2. METR 发布 2026 年 11 月能力测量更新：AI R&amp;D 相关能力每约 3.6 个月翻倍且更难测量
+
+METR 发布截至 Opus 5.5 和 GPT-6 Astra 的能力评测更新，发现在 TH1.1 与 TH2 任务上模型时间视野约每 3.6 个月翻倍，可验证子集翻倍时间约 1.65 个月。
+
+[阅读原文 →](https://metr.org/blog/2026-11-20-q4-2026-capability-update/) · 来源：METR：Research
+
+### 3. MiniMax 内部模型 MIM 实现多项密码分析实用攻击并开源验证轨迹
+
+MiniMax 研究团队用内部研究模型 MIM 对现代密码方案做自动化密码分析，报告称在 NIST 候选算法、同行评审方案和公开挑战基准上取得多个此前无实用攻击方案的首个实用破解，并把部分理论攻击变为可执行攻击。
+
+[阅读原文 →](https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-internal-model) · 来源：MiniMax：Blog
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. OpenAI 详解 Codex 驱动的 Performance Factory 如何自动保持 ChatGPT 高性能
+### 1. Runway 详解如何构建智能体驱动的软件工厂
 
-OpenAI 官方详解其 Performance Factory 系统，用 Codex 智能体在云端自动排查并修复 ChatGPT 的性能回归。其中 Regression Workflow 在三个多月内跟踪超过 1700 次调查、定位超过 600 个根因，相当于每天约 17 次自动调查。
+Runway 介绍了逐步把软件交付各环节交给智能体完成的实践。智能体 10 月驱动了 38% 的合并 PR（6 月仅 0.1%），首次批准等待中位数从超过 2 小时降至约 5 分钟；AI 单独批准的 PR 回滚率约千分之一，低于人工批准的约 1/200。
 
-[阅读原文 →](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast) · 来源：OpenAI：官网动态
+[阅读原文 →](https://runwayml.com/news/engineering/building-a-software-factory) · 来源：Runway：News
+
+### 2. DeepSeek Harness 发布100天，作者分享13个实用插件玩法
+
+卡兹克在DeepSeek Harness发布100天之际分享了13个插件玩法。
+
+[阅读原文 →](https://x.com/Khazix0918/status/2123627885730951241) · 来源：X：卡兹克 (@Khazix0918)
+
+### 3. OpenHands 详解用 Agent 自动修复自家镜像 CVE 的软件工厂
+
+OpenHands 团队详解把大部分 CVE 修复工作交给 Agent 流水线的做法：Agent 选择修复、开 PR、合并低风险项并跟踪到部署，人每天只读一条最多 11 行的 Slack 消息和少量 PR。
+
+[阅读原文 →](https://www.openhands.dev/blog/automating-cve-remediation-with-openhands) · 来源：OpenHands 官方博客
 
 ---
 
 ## 📌 快讯
 
-### 1. Gemini 4 Neon 实测：Peter Gostev 对比 Opus、Fable 等模型的首发体验
+### 1. Anthropic 破纪录 IPO 未能止住 AI 抛售，全球股市下挫
 
-[阅读原文 →](https://x.com/arena/status/2123528811572846972) · 来源：X：Arena (@arena)
+[阅读原文 →](https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off) · 来源：Hacker News：AI 热帖
 
-### 2. Google 在 Gemini API 与 AI Studio 上线 Genie 4 实时世界模型
+### 2. Figma 演示用 Specs 与 Figma agent 把上下文变成可实现的开发计划
 
-[阅读原文 →](https://x.com/_philschmid/status/2123465741592637445) · 来源：X：Philipp Schmid (@_philschmid)
+[阅读原文 →](https://www.figma.com/blog/workflow-lab-specs-and-the-figma-agent/) · 来源：Figma AI / Agent / Make
 
-### 3. Perplexity Computer 的 Brain 智能体可自动编写和更新个人技能
+### 3. MIT 数学面板讨论 AI 冲击下的数学研究未来
 
-[阅读原文 →](https://x.com/AravSrinivas/status/2123451045657690627) · 来源：X：Aravind Srinivas (@AravSrinivas)
+[阅读原文 →](https://news.mit.edu/2026/following-mathocalypse-mathematicians-consider-future-1120) · 来源：MIT News
 
-### 4. Ai2 在 Asta 平台发布 Theorizer 科研理论生成智能体并开源代码
+### 4. Conductor 0.97.0 发布并宣布加入 Meta，本地工作区智能体新增 artifacts
 
-[阅读原文 →](https://allenai.org/blog/theorizer-in-asta) · 来源：Ai2 / Allen Institute for AI
-
-### 5. OpenAI 发布报告展示 AI 如何加速其内部研究
-
-[阅读原文 →](https://x.com/OpenAI/status/2123191365983248653) · 来源：X：OpenAI (@OpenAI)
-
-### 6. MIT 研究测算数据中心用电 2023 年在美国致约 650 例过早死亡
-
-[阅读原文 →](https://news.mit.edu/2026/study-reveals-data-centers-long-distance-damage-air-quality-1119) · 来源：MIT News
-
-### 7. ChatGPT 听写新增实时转写
-
-[阅读原文 →](https://x.com/ChatGPT/status/2123114715257946334) · 来源：X：ChatGPT (@ChatGPT)
+[阅读原文 →](https://www.conductor.build/changelog/0.97.0-first-class-artifacts) · 来源：Conductor 官方更新
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-20](./2026-11-20) — Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
 - [2026-11-19](./2026-11-19) — Google DeepMind 发布 Gemini 4 Neon
 - [2026-11-18](./2026-11-18) — OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol
 - [2026-11-17](./2026-11-17) — Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力
 - [2026-11-16](./2026-11-16) — 今日安静，无大事发生
 - [2026-11-15](./2026-11-15) — Nathan Lambert 分析黄仁勋辞职后美国开源模型生态的真空
-- [2026-11-14](./2026-11-14) — Nvidia 领导层变动引发以色列科技界关注，投资人认为挑战者或有机会
 
 [查看全部往期日报 →](./archive)
 
