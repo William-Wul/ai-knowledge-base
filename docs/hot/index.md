@@ -1,75 +1,61 @@
 ---
 title: AI 日报
-description: 2026-11-22 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-22
+description: 2026-11-23 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-23
 ---
 
-# 🔥 AI 日报 · 2026-11-22
+# 🔥 AI 日报 · 2026-11-23
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Anthropic 数学家称与 Claude 完成黎曼猜想证明，斯坦福数小时后发布纯人类竞争草稿
+## OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据
 
-Anthropic 数学家 Levent Alpöge 周五宣布与 Claude 合作得到黎曼猜想及广义黎曼猜想的证明，证明以 Lean 语言分 14 个数据包发布，打印将超 25 万页。
-
-## 🚀 产品发布/更新
-
-### 1. Qwen4 Max 上线 Together AI，单次调用修复 Tornado 整仓 bug
-
-Together AI 宣布阿里旗舰模型 Qwen4 Max 上线其 Serverless 推理平台（模型串 Qwen/Qwen4-Max），1M token 上下文，截至 2026 年 11 月 22 日 7 折。
-
-[阅读原文 →](https://www.together.ai/blog/qwen4-max) · 来源：Together AI 研究与产品博客
-
----
+OpenAI 撰文提议将 perplexity（交叉熵损失）确立为跨模型开发者比较和安全标准的共享指标，并公开其内部预训练测量数据。
 
 ## 🌐 行业动态
 
-### 1. Together AI 通报 2026 年 6-7 月 serverless 推理服务提示词泄露事件
+### 1. MiniCPM 8B 成为老挝国家模型，端侧小模型加速落地多国
 
-Together AI 通报一起安全事件：因 AI 编码 agent 在公开 GitHub 仓库 xorl 中提交了私有 Hugging Face 仓库凭证，未授权方下载了 2026 年 6-7 月提交给 MiniMax M3、GLM-5.2、Kimi K2.6 等 serverless 推理服务的存储提示词样本，并搜索其中其他服务凭证。
+面壁智能转发并认同 @xiaoanlab 对 MiniCPM 端侧落地的观察：截至 2026 年 11 月 MiniCPM 下载量超过 7000 万，其 8B 老挝国家模型接入老挝政府 G-Chat v2 通讯软件，老挝翻译在国际基准上超过 GPT-4o。马来西亚用 VoxCPM2 做语音交互，肯尼亚一家银行在其上运行端侧风控 Agent，开发者基于它推出离线应用；小模型之争正从参数量转向谁真正嵌入日常系统。
 
-[阅读原文 →](https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026) · 来源：Together AI 研究与产品博客
+[阅读原文 →](https://x.com/OpenBMB/status/2124464239670964531) · 来源：X：面壁智能 OpenBMB (@OpenBMB)
 
 ---
 
-## 📚 论文研究
+## 💡 技巧与观点
 
-### 1. Anthropic 数学家称与 Claude 完成黎曼猜想证明，斯坦福数小时后发布纯人类竞争草稿
+### 1. OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据
 
-Anthropic 数学家 Levent Alpöge 周五宣布与 Claude 合作得到黎曼猜想及广义黎曼猜想的证明，证明以 Lean 语言分 14 个数据包发布，打印将超 25 万页。
+OpenAI 撰文提议将 perplexity（交叉熵损失）确立为跨模型开发者比较和安全标准的共享指标，并公开其内部预训练测量数据。
 
-[阅读原文 →](https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/) · 来源：The Decoder：AI News
+[阅读原文 →](https://openai.com/index/perplexity-and-intelligence) · 来源：OpenAI：官网动态
 
-### 2. 研究者向 AI 供应链埋入 200 万个金丝雀，揭露敏感数据泄露
+### 2. 用户实测用 MiniCPM5-2B 在 Mac 上本地跑通体检报告分析
 
-研究者在经过 OpenRouter 等 AI 路由的请求中埋入 200 万个金丝雀链接，测试敏感信息是否会沿 AI 服务链泄露，结果显示这些数据像筛子一样大量外泄。
+用户@cxjwin 分享在 Mac（M4 Pro、48GB）上用 Homebrew 装 llama.cpp 跑 minicpm5-2b、colima 起 Docker 本地运行开源项目 Mirobody 的实测：14 页 PDF 首次处理漏掉 3 页扫描版化验单，截图单独上传后 58 行化验数值逐项与原件对上，其中 20 行成功映射到 LOINC 标准编码，肌酐因名称歧义留空未猜。问超标指标时 2B 模型走 11 步找到全部 5 项箭头指标，但把一项在范围内的血糖误判为超标。接 Claude Code 时改用演示账号避免数据上传。Mirobody 由 Theta Health 以 Apache-2.0 开源，网页版和微信小程序也基于它。
 
-[阅读原文 →](https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/) · 来源：Ars Technica：AI
+[阅读原文 →](https://x.com/OpenBMB/status/2124461770043785636) · 来源：X：面壁智能 OpenBMB (@OpenBMB)
 
-### 3. Columbia 与 MIT 论文展示 Claude 发现的算法突破 3SUM 与 APSP 长期速度上限
+---
 
-Columbia 和 MIT 的论文展示 Claude 发现的算法在 3SUM 和全对最短路径（APSP）上取得多项式改进，3SUM 达到 O(n^1.9992)、APSP 达到 O(n^2.9995)，推翻了 3SUM 和 APSP 假设。
+## 📌 快讯
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2124213113583174076) · 来源：X：Rohan Paul (@rohanpaul_ai)
+### 1. 菲尔兹奖得主梅纳德谈 Claude 合作证明黎曼猜想：相信证明正确，但需被理解才可能获认可
 
-### 4. OpenAI 发布 MedChemBench：评估 AI 模型解读分子结构与实验数据的能力
-
-OpenAI 推出 MedChemBench，用 99 道源自已发表研究的题目评估 AI 模型解读分子结构、解释实验证据并预测化合物性质的能力。在 xhigh 推理设置下，GPT‑6.2 Astra 获得 84.5% 的可用分数，GPT‑6 Astra 为 83.3%，GPT‑6.1 Sol 为 82.0%，GPT‑5.6 Sol 为 58.2%。
-
-[阅读原文 →](https://openai.com/index/introducing-medchembench) · 来源：OpenAI：官网动态
+[阅读原文 →](https://www.ithome.com/1/030/677.htm) · 来源：IT之家·人工智能
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-22](./2026-11-22) — Anthropic 数学家称与 Claude 完成黎曼猜想证明，斯坦福数小时后发布纯人类竞争草稿
 - [2026-11-21](./2026-11-21) — Thinking Machines Lab 发布可跑在笔记本上的开源权重模型 Inkling 2 Mini
 - [2026-11-20](./2026-11-20) — Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
 - [2026-11-19](./2026-11-19) — Google DeepMind 发布 Gemini 4 Neon
 - [2026-11-18](./2026-11-18) — OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol
 - [2026-11-17](./2026-11-17) — Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力
-- [2026-11-16](./2026-11-16) — 今日安静，无大事发生
 
 [查看全部往期日报 →](./archive)
 
