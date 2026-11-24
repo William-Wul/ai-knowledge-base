@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 14,
   "evaluationCount": 48,
-  "sourceUpdatedAt": "11/24 08:08",
-  "syncedAt": "2026-11-24T05:29:04.395Z",
+  "sourceUpdatedAt": "11/24 20:05",
+  "syncedAt": "2026-11-24T12:49:49.940Z",
   "models": [
     {
       "rank": 1,
@@ -26,12 +26,12 @@
       "name": "Gemini 4 Carbon",
       "provider": "Google",
       "releaseDate": "2026-10-28",
-      "evidenceCount": 30,
+      "evidenceCount": 31,
       "evidenceStatus": "覆盖65%",
       "cachePrice": "¥1.33",
       "inputPrice": "¥26.66",
       "outputPrice": "¥133.29",
-      "score": 76.9
+      "score": 76.8
     },
     {
       "rank": 3,
@@ -148,7 +148,7 @@
       "cachePrice": "¥0.67",
       "inputPrice": "¥13.33",
       "outputPrice": "¥66.65",
-      "score": 71.1
+      "score": 71.2
     },
     {
       "rank": 12,
@@ -169,8 +169,8 @@
       "name": "Qwen4 Max",
       "provider": "Alibaba",
       "releaseDate": "2026-11-16",
-      "evidenceCount": 29,
-      "evidenceStatus": "覆盖62%",
+      "evidenceCount": 30,
+      "evidenceStatus": "覆盖65%",
       "cachePrice": "¥0.5",
       "inputPrice": "¥10",
       "outputPrice": "¥30",
@@ -278,7 +278,7 @@
       "cachePrice": "¥0.0267",
       "inputPrice": "¥0.67",
       "outputPrice": "¥3.33",
-      "score": 66.2
+      "score": 66.1
     },
     {
       "rank": 22,
@@ -299,7 +299,7 @@
       "name": "Gemini 3.8 Flash",
       "provider": "Google",
       "releaseDate": "2026-09-02",
-      "evidenceCount": 46,
+      "evidenceCount": 45,
       "evidenceStatus": "覆盖97%",
       "cachePrice": "¥1",
       "inputPrice": "¥10",
@@ -494,7 +494,7 @@
       "name": "Qwen3.8 Max",
       "provider": "Alibaba",
       "releaseDate": "2026-07-19",
-      "evidenceCount": 33,
+      "evidenceCount": 32,
       "evidenceStatus": "覆盖79%",
       "cachePrice": "¥1.5",
       "inputPrice": "¥12",
@@ -507,12 +507,12 @@
       "name": "DeepSeek V4.1 Flash",
       "provider": "DeepSeek",
       "releaseDate": "2026-09-10",
-      "evidenceCount": 39,
-      "evidenceStatus": "覆盖97%",
+      "evidenceCount": 38,
+      "evidenceStatus": "覆盖94%",
       "cachePrice": "¥0.02",
       "inputPrice": "¥1",
       "outputPrice": "¥4",
-      "score": 61.8
+      "score": 62.1
     },
     {
       "rank": 40,
