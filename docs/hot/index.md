@@ -1,61 +1,139 @@
 ---
 title: AI 日报
-description: 2026-11-23 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-23
+description: 2026-11-24 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-24
 ---
 
-# 🔥 AI 日报 · 2026-11-23
+# 🔥 AI 日报 · 2026-11-24
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据
+## NVIDIA 宣布黄仁勋复任总裁兼 CEO 并重回董事会
 
-OpenAI 撰文提议将 perplexity（交叉熵损失）确立为跨模型开发者比较和安全标准的共享指标，并公开其内部预训练测量数据。
+NVIDIA 于 11 月 23 日宣布黄仁勋即刻复任总裁、CEO 及董事会成员，董事会一致投票通过，临时 CEO Colette Kress 继续担任 CFO。复职决定参考了美国政府高层意见，董事会认为其不构成国家安全风险，此前因黄仁勋成为外国情报行动目标而启动的独立董事调查将继续进行，董事会另设国家安全与出口管制委员会并招聘首席合规官。
+
+## 🤖 模型发布/更新
+
+### 1. 智谱发布GLM-5.4：首个Loop Transformer架构旗舰模型开启泛Coding
+
+智谱发布旗舰模型GLM-5.4，为第一代采用Loop Transformer架构的模型，让28层共享权重循环执行两轮，在参数量不变下获得更深推理，智能水平达到2-3T级模型效果，并开启泛Coding能力。
+
+[阅读原文 →](https://mp.weixin.qq.com/s/D-IZr-QaT1or_chminK8IQ) · 来源：公众号：智谱
+
+---
+
+## 🚀 产品发布/更新
+
+### 1. Anthropic 推出 Claude Ship 测试版，自动完成 PR 审查、修复与审批
+
+Anthropic 发布 Claude Ship 测试版，由 Code Review（已正式可用）、PR Steward 和 Claude Approvals 两个 beta 智能体组成，可审查 PR、推送修复并按团队写进仓库的策略文件决定能否合并。
+
+[阅读原文 →](https://claude.com/blog/introducing-claude-ship) · 来源：Claude：Blog
+
+### 2. ChatGPT 推出面向日常对话优化的 GPT-6.2 Sol
+
+ChatGPT 宣布在 Chat 标签页推出面向日常对话优化的 GPT-6.2 Sol，今日起面向 Plus、Pro、Business 和 Enterprise 用户开放。该版本更擅长处理复杂请求和在线信息查找，能识别照片中标签文字、路牌符号等细节，并更好地根据价格、位置等偏好缩小选项范围。转发者 Tibo 表示答案质量会有明显提升，年底前应用体验还会更快、更简洁。
+
+[阅读原文 →](https://x.com/thsottiaux/status/2124998553856844186) · 来源：X：Tibo (@thsottiaux)
+
+### 3. Google Search AI Mode 支持连接 Google Wallet、Drive 和 Gemini 应用
+
+Google 宣布在 Search 的 AI Mode 中扩展 Personal Intelligence，用户可选择安全连接 Google Wallet、Drive 和 Gemini 应用，Wallet 即日起开放，Drive 和 Gemini 应用将在未来数周跟进。
+
+[阅读原文 →](https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/) · 来源：Google Blog：AI
+
+### 4. Claude 推出插件，统一连接器与技能的接入方式
+
+Claude 官方宣布将连接器和技能合并为插件，提供统一的方式为 Claude 接入工具或教授新技能。插件已在 Free、Pro、Max 和 Ultra 套餐上线，Team 和 Enterprise 即将支持，用户可在 https://claude.ai/plugins 浏览 10,000 多个插件。
+
+[阅读原文 →](https://x.com/claudeai/status/2124970294523945328) · 来源：X：Claude (@claudeai)
+
+---
 
 ## 🌐 行业动态
 
-### 1. MiniCPM 8B 成为老挝国家模型，端侧小模型加速落地多国
+### 1. NVIDIA 宣布黄仁勋复任总裁兼 CEO 并重回董事会
 
-面壁智能转发并认同 @xiaoanlab 对 MiniCPM 端侧落地的观察：截至 2026 年 11 月 MiniCPM 下载量超过 7000 万，其 8B 老挝国家模型接入老挝政府 G-Chat v2 通讯软件，老挝翻译在国际基准上超过 GPT-4o。马来西亚用 VoxCPM2 做语音交互，肯尼亚一家银行在其上运行端侧风控 Agent，开发者基于它推出离线应用；小模型之争正从参数量转向谁真正嵌入日常系统。
+NVIDIA 于 11 月 23 日宣布黄仁勋即刻复任总裁、CEO 及董事会成员，董事会一致投票通过，临时 CEO Colette Kress 继续担任 CFO。复职决定参考了美国政府高层意见，董事会认为其不构成国家安全风险，此前因黄仁勋成为外国情报行动目标而启动的独立董事调查将继续进行，董事会另设国家安全与出口管制委员会并招聘首席合规官。
 
-[阅读原文 →](https://x.com/OpenBMB/status/2124464239670964531) · 来源：X：面壁智能 OpenBMB (@OpenBMB)
+[阅读原文 →](https://x.com/thexpin/status/2124866686025400819) · 来源：X：X.PIN (@thexpin)
+
+### 2. Trump 力挺黄仁勋回归 Nvidia，称美国政府无其不当行为的证据
+
+Trump 在 Truth Social 上表态支持 Nvidia 董事会复职黄仁勋为 CEO 兼总裁，称美国政府没有理由认为其回归构成国家安全风险。他称司法部长 Todd Blanche 已确认政府没有黄仁勋违法行为的证据，但 Blanche 本人尚未正式声明。
+
+[阅读原文 →](https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/) · 来源：TechCrunch：AI
+
+### 3. 俄勒冈州和弗吉尼亚州起诉 SpaceX 指控 Grok 生成色情深伪防护不足
+
+俄勒冈州和弗吉尼亚州总检察长周一分别起诉 SpaceX，指控其忽视行业标准防护并虚假宣传 X 平台和 Grok AI 的安全性，两案均寻求经济赔偿。诉讼核心指向 Grok Imagine：xAI 于 2025 年 8 月为该工具推出生成色情内容的 spicy 模式，2026 年 1 月又允许 X 用户无需同意即可编辑任意图片，导致非自愿色情深伪泛滥。
+
+[阅读原文 →](https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit) · 来源：The Verge：AI
+
+### 4. Anthropic IPO 前三家机构如何重注押注
+
+TechCrunch 报道 Notable Capital、GIC 和 Baillie Gifford 在 Anthropic IPO 前的重仓投资逻辑。
+
+[阅读原文 →](https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/) · 来源：TechCrunch：AI
+
+---
+
+## 📚 论文研究
+
+### 1. Anthropic 访谈 58 家企业客户：AI 采用的价值、雇佣影响与组织重组
+
+Anthropic 研究团队对 58 家企业客户进行 66 次面对面访谈，分析企业采用 AI 的方式、瓶颈与组织变化。研究发现多数 AI 应用通过扩大产出而非削减成本创造价值；直接裁员案例很少，但约三分之二的公司因 AI 减少招聘，九家削减外包和离岸承包商；高价值应用通常需要更深度的组织重组，如拓宽岗位职责、把员工转向 AI 无法完成的瓶颈任务，以及为非技术员工建设数据和基础设施支持。
+
+[阅读原文 →](https://www.anthropic.com/research/working-with-ai) · 来源：Anthropic：Research
+
+### 2. Google DeepMind 用 Gemini 4 智能体团队与 Lean 形式化验证改进量子算法
+
+Google DeepMind 发布新论文，用多个 Gemini 4 智能体团队结合 Lean 形式化定理证明改进量子算法，生成经数学验证的高效量子电路，并在 GitHub 开源 Lean 库、问题规格和验证解法。
+
+[阅读原文 →](https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/) · 来源：Google DeepMind：Blog
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据
+### 1. a16z 实测 11,307 次 Agent 购物流程，总结企业赢得 B2A 经济的五条方法
 
-OpenAI 撰文提议将 perplexity（交叉熵损失）确立为跨模型开发者比较和安全标准的共享指标，并公开其内部预训练测量数据。
+a16z 联合 The Prompting Company 测试 Grok Bot、Muse、Instinct、Dots 等智能体在 1,270 条提示词、11,307 次完整运行中的购物表现，并比对 YipitData 消费数据。
 
-[阅读原文 →](https://openai.com/index/perplexity-and-intelligence) · 来源：OpenAI：官网动态
-
-### 2. 用户实测用 MiniCPM5-2B 在 Mac 上本地跑通体检报告分析
-
-用户@cxjwin 分享在 Mac（M4 Pro、48GB）上用 Homebrew 装 llama.cpp 跑 minicpm5-2b、colima 起 Docker 本地运行开源项目 Mirobody 的实测：14 页 PDF 首次处理漏掉 3 页扫描版化验单，截图单独上传后 58 行化验数值逐项与原件对上，其中 20 行成功映射到 LOINC 标准编码，肌酐因名称歧义留空未猜。问超标指标时 2B 模型走 11 步找到全部 5 项箭头指标，但把一项在范围内的血糖误判为超标。接 Claude Code 时改用演示账号避免数据上传。Mirobody 由 Theta Health 以 Apache-2.0 开源，网页版和微信小程序也基于它。
-
-[阅读原文 →](https://x.com/OpenBMB/status/2124461770043785636) · 来源：X：面壁智能 OpenBMB (@OpenBMB)
+[阅读原文 →](https://www.a16z.news/p/welcome-to-the-b2a-economy-how-agents) · 来源：a16z：News
 
 ---
 
 ## 📌 快讯
 
-### 1. 菲尔兹奖得主梅纳德谈 Claude 合作证明黎曼猜想：相信证明正确，但需被理解才可能获认可
+### 1. 卡兹克分享 Claude、GPT、Gemini 三模型协同调度方法
 
-[阅读原文 →](https://www.ithome.com/1/030/677.htm) · 来源：IT之家·人工智能
+[阅读原文 →](https://mp.weixin.qq.com/s/gwj0xLNHPfToQnQJN7IkMA) · 来源：公众号：数字生命卡兹克
+
+### 2. Figma agent 正式开放至 FigJam 和 Figma Slides
+
+[阅读原文 →](https://www.figma.com/blog/introducing-figma-agent-in-figjam-and-slides/) · 来源：Figma AI / Agent / Make
+
+### 3. AISI 红队论文：攻击策略选择会让 LLM 监视器评估结果失真
+
+[阅读原文 →](https://www.aisi.gov.uk/blog/attack-policy-selection-can-make-monitor-evaluations-misleading) · 来源：英国 AI Security Institute：Blog
+
+### 4. Wiz Research 披露 ARTEX 智能体攻击框架的真实云入侵案例
+
+[阅读原文 →](https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks) · 来源：Wiz：Research
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-23](./2026-11-23) — OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据
 - [2026-11-22](./2026-11-22) — Anthropic 数学家称与 Claude 完成黎曼猜想证明，斯坦福数小时后发布纯人类竞争草稿
 - [2026-11-21](./2026-11-21) — Thinking Machines Lab 发布可跑在笔记本上的开源权重模型 Inkling 2 Mini
 - [2026-11-20](./2026-11-20) — Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
 - [2026-11-19](./2026-11-19) — Google DeepMind 发布 Gemini 4 Neon
 - [2026-11-18](./2026-11-18) — OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol
-- [2026-11-17](./2026-11-17) — Qwen 发布 Qwen4-Max：2.4T 参数骨干、百万 token 上下文与长程智能体能力
 
 [查看全部往期日报 →](./archive)
 
