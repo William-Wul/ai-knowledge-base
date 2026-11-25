@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 14,
   "evaluationCount": 48,
-  "sourceUpdatedAt": "11/25 08:05",
-  "syncedAt": "2026-11-25T02:44:33.783Z",
+  "sourceUpdatedAt": "11/25 12:07",
+  "syncedAt": "2026-11-25T04:32:46.472Z",
   "models": [
     {
       "rank": 1,
@@ -538,7 +538,7 @@
       "cachePrice": "¥0.7",
       "inputPrice": "¥7",
       "outputPrice": "¥20",
-      "score": 60.8
+      "score": 60.7
     },
     {
       "rank": 42,
