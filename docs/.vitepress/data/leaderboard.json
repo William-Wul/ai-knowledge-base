@@ -4,8 +4,8 @@
   "rulesUrl": "https://aihot.news/leaderboard/rules",
   "sourceCount": 14,
   "evaluationCount": 48,
-  "sourceUpdatedAt": "11/25 02:06",
-  "syncedAt": "2026-11-24T21:12:13.498Z",
+  "sourceUpdatedAt": "11/25 08:05",
+  "syncedAt": "2026-11-25T02:44:33.783Z",
   "models": [
     {
       "rank": 1,
@@ -169,8 +169,8 @@
       "name": "Qwen4 Max",
       "provider": "Alibaba",
       "releaseDate": "2026-11-16",
-      "evidenceCount": 30,
-      "evidenceStatus": "覆盖65%",
+      "evidenceCount": 31,
+      "evidenceStatus": "覆盖68%",
       "cachePrice": "¥0.5",
       "inputPrice": "¥10",
       "outputPrice": "¥30",
