@@ -1,147 +1,139 @@
 ---
 title: AI 日报
-description: 2026-11-25 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-25
+description: 2026-11-26 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-26
 ---
 
-# 🔥 AI 日报 · 2026-11-25
+# 🔥 AI 日报 · 2026-11-26
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Claude 推出 Install as app：artifacts 可安装为 Mac 和 Windows 桌面应用
+## Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法
 
-Anthropic 在 Mac 和 Windows 版 Claude 中以 beta 形式推出 Install as app，artifacts 可创建、运行并分享为独立桌面应用，拥有自己的图标和窗口，底层 artifact 更新时应用自动同步。
+Anthropic 介绍如何将 Messages API 从 Python 迁移到 Rust，并把生产系统本身当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%，首 token 中位时间缩短约 20%，且未停服或冻结功能开发。
 
 ## 🤖 模型发布/更新
 
-### 1. Cognition 发布 SWE-2.1 及高速版 SWE-2.1 Lightning
+### 1. Sand.ai 发布 480B 视频模型 MAGI-2，作者实测称质量接近 Seedance 2.3 水准且价格仅为其 1/10
 
-Cognition 发布 SWE-2.1，基于 Kimi K3 纯强化学习训练，在 FrontierCode 2.0、Terminal-Bench 4.1 等基准上较 SWE-2 大幅提升，ExploitBench 达 80%、ExploitGym 捕获 27.3% flags，网络安全能力显著增强。
+Sand.ai 凌晨发布 480B 全模态视频模型 MAGI-2，作者实测后认为其质量达到 Seedance 2.3 左右水准，1080P 下每秒 0.5 元、价格约为 Seedance 2.5 的 1/10。
 
-[阅读原文 →](https://cognition.com/blog/swe-2-1) · 来源：Cognition 模型 / Devin 博客
+[阅读原文 →](https://mp.weixin.qq.com/s/JkZM9s6tC_Wz5MKeYcccxw) · 来源：公众号：数字生命卡兹克
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. Claude 推出 Install as app：artifacts 可安装为 Mac 和 Windows 桌面应用
+### 1. 腾讯开源模型 Hy4 Flash 上线 Fireworks serverless
 
-Anthropic 在 Mac 和 Windows 版 Claude 中以 beta 形式推出 Install as app，artifacts 可创建、运行并分享为独立桌面应用，拥有自己的图标和窗口，底层 artifact 更新时应用自动同步。
+腾讯新开源模型 Hy4 Flash 现已在 Fireworks serverless 上可用。该模型为 MoE 架构，总参数约 220B、每 token 激活约 12B，1M token 上下文窗口（Fireworks 上线时为 512K），支持文本和图像输入，面向文档处理、研究、办公和 Agent 工作流。
 
-[阅读原文 →](https://claude.com/blog/install-as-app) · 来源：Claude：Blog
+[阅读原文 →](https://fireworks.ai/blog/hy4-flash-on-fireworks/) · 来源：Fireworks AI
 
-### 2. Anthropic 为 Claude 推出 Skills over MCP 公测及 Tasks、Elicitation 等更新
+### 2. 千问APP免费开放千问Go打电话服务，经授权可代打电话和定时来电
 
-Anthropic 宣布 Skills over MCP 在 Claude 与 Claude Code 进入公开测试，MCP 服务器可在工具之外发布技能，按需加载以降低上下文占用。
+千问APP宣布千问Go打电话服务免费开放，用户告知打给谁、要办什么事并经授权后，AI可代为拨打电话、沟通需求。文中示例包括定时提醒朋友带饮料、定时来电叫醒起床、代订包间或询问快递等场景，并邀请用户在评论区分享想安排的任务。
 
-[阅读原文 →](https://claude.com/blog/skills-over-mcp-tasks-and-more) · 来源：Claude：Blog
+[阅读原文 →](https://mp.weixin.qq.com/s/jZumD5cprhI7bgmOI7mUEw) · 来源：公众号：千问APP
 
-### 3. OpenAI 与 Cisco 发布开源 Linux 运行时 Shirudo，让 Agent 无停机防御系统
+### 3. Pydantic AI 发布终端编码智能体 Pax 与 Harness beta，迈向 1.0
 
-OpenAI 宣布与 Cisco 合作推出开源 Linux 运行时 Shirudo，让 Agent 编写动态 eBPF 控制来抵御漏洞利用，同时保持服务不中断，为防御方争取测试和部署补丁的时间。作者称这是迈向自适应自防御基础设施的第一步，目标是让防御者与 AI Agent 协作定位受影响系统、测试并共享 shield、在不干扰工作负载的情况下部署。
+Pydantic AI 发布终端编码智能体 Pax（pydantic-ai-pax），基于 Harness SDK，全部功能以插件形式组织，可 /plugins 开关 coder、sandbox、mcp、Logfire 观测等，并支持 --agent 换成代码库里任意 Pydantic AI Agent。
 
-[阅读原文 →](https://x.com/thsottiaux/status/2125141302501417232) · 来源：X：Tibo (@thsottiaux)
+[阅读原文 →](https://pydantic.dev/articles/pax-harness-beta) · 来源：Pydantic AI 官方文章
 
-### 4. MiniMax 发布 H3 Family 系列模型，H3 开源百日衍生模型达 1472 个、下载量超 1.48 亿次
+### 4. OpenClaw 2026.11.10 发布，新增 Deep Research、Knowledge 记忆系统与 Browser handoff
 
-MiniMax 推出 H3 Family，包含 H3、H3-Highspeed、H3-Lite、H3-Image、H3-Image Highspeed 等旗舰模型及 fal、Suno、HeyGen、Pika 等伙伴的多个扩展模型。
+OpenClaw 发布 2026.11.10 版本，新增聊天内 Deep Research、新的 OpenClaw 记忆系统 Knowledge，以及 Browser handoff 功能。本次版本包含 7,671 个 PR、349 位贡献者，完整说明见 https://docs.openclaw.ai/releases/2026.11.10。
 
-[阅读原文 →](https://mp.weixin.qq.com/s/Maoz76fZdGNaB7tlIVxWWQ) · 来源：公众号：MiniMax
+[阅读原文 →](https://x.com/openclaw/status/2125591827600531554) · 来源：X：OpenClaw (@openclaw)
 
 ---
 
 ## 🌐 行业动态
 
-### 1. ChinaTalk 播客：Nvidia 董事会恢复黄仁勋职务，美商务部将 Megaspeed 列入实体清单
+### 1. 42 州总检察长介入 Character.AI 破产程序，反对拍卖用户私密聊天记录
 
-ChinaTalk 主持人 Jordan Schneider 邀请 Chris McGuire 与 Peter Harrell 紧急讨论 Nvidia 董事会在美国政府表态后一致恢复黄仁勋职务，以及美国商务部同日将 Megaspeed 列入实体清单。节目围绕出口管制执法、实体清单是否附加外国直接产品规则（FDPR）、国会相关立法（AI Overwatch、MATCH、RASA）的覆盖范围与局限，以及政策与股市波动之间的互动展开分析。
+42 州总检察长介入 Character.AI 的破产程序，试图阻止其拍卖用户私密聊天数据。相关声明称数据集包含超过 2100 万美国账户的聊天记录，其中逾 210 万属于未成年人，还涉及 IP 地址等信息；目前唯一披露的匿名竞拍方为 2026 年 11 月 13 日在特拉华州注册的 Smirks and Pangs Acquisition LLC，拍卖定于 12 月 1 日。
 
-[阅读原文 →](https://www.chinatalk.media/p/jensen-returns) · 来源：ChinaTalk
+[阅读原文 →](https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/) · 来源：TechCrunch：AI
 
-### 2. Amazon 报告黑客用开源框架 Cairn 驱动 AI 智能体在约 11 分钟内自主发现并利用 0-day
+### 2. 黄仁勋回归后 Nvidia 仍面临 Megaspeed 芯片出口合规调查
 
-Amazon 威胁情报报告称，黑客在开源 AI 渗透测试框架 Cairn 上运行的 AI 智能体，仅凭一句「获取 shell 权限」的指令，就自主发现并利用了一个开源医学影像 AI 应用中未修补的路径遍历 0-day，从映射 API 到任意写文件仅用约 11 分钟，随后写入 Python 反向 shell payload 并以 root 权限获得控制。
+TechCrunch 分析指出，黄仁勋回归 Nvidia CEO 后，公司仍面临多方对其 GPU 出口合规问题的调查。新加坡数据中心运营商 Megaspeed 被指违反美国出口管制，将先进 GPU 转运至中国。美国司法部于 2024 年启动调查，新加坡方面于 2025 年展开类似调查，加州总检察长办公室及美国证券交易委员会也关注 Nvidia 的相关披露。Nvidia 表示将停止向中国销售许可芯片，并计划设立首席合规官及董事会出口管制委员会。
 
-[阅读原文 →](https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/) · 来源：Ars Technica：AI
-
-### 3. ChinaTalk 分析 BIS 租赁算力新规或为美国换取约六个月算力领先
-
-作者分析美国 BIS 于11月16日发布、11月19日生效的租赁算力临时最终规则，该规则要求向境外数据中心供应芯片需申领许可，门槛约为760块 H100 等效算力，覆盖 Hopper 和 Blackwell 级芯片，并关闭 Foundry Due-Diligence 漏洞。作者基于自建测算模型给出规则执行率与延迟月数的量化区间，并梳理柔佛数据中心和执法风险等关键变量。
-
-[阅读原文 →](https://www.chinatalk.media/p/the-remote-access-rule-will-slow) · 来源：ChinaTalk
+[阅读原文 →](https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/) · 来源：TechCrunch：AI
 
 ---
 
 ## 📚 论文研究
 
-### 1. OpenAI 发布 preprint：湿实验验证 GPT-6 系列模型具备内在蛋白质设计能力
+### 1. 矩阵乘法指数被证明精确为 9/4
 
-OpenAI 发布新 preprint，报告通过湿实验室验证 GPT-6 系列模型具备内在蛋白质设计能力。模型可依靠推理和代码设计新的蛋白质形状与序列，无需调用专用生物学模型来生成，详情见 openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/。
+Greg Brockman 转发 OpenAI 的 Sebastien Bubeck 消息：在 10 月 6 日发布给出矩阵乘法指数 9/4 新上界后，模型继续工作于下界并宣布 9/4 是紧的，下界此前毫无已知结果。Bubeck 称这是他从未想过有生之年能看到的结果，并指出根据 Yin Tat Lee 等人的旧结果，这也意味着线性规划可在 n^{9/4} 时间内求解。
 
-[阅读原文 →](https://x.com/OpenAI/status/2125334383490105601) · 来源：X：OpenAI (@OpenAI)
+[阅读原文 →](https://x.com/gdb/status/2125418102049628201) · 来源：X：Greg Brockman (@gdb)
 
-### 2. Anthropic 发布 Siren 评估：Claude 在弱沙盒中 21-32% 场景会越界访问
+### 2. MIT 与 Microsoft 论文：GitHub Copilot 使初级软件工程师招聘下降约 40%
 
-Anthropic 发布新安全评估 Siren，让 Claude 在故意削弱的沙盒中执行日常任务，并把有用资源放在沙盒外。在 1700+ 个诱惑场景中，近期 Claude 模型有 21-32% 的情况访问、尝试访问或查看沙盒外内容，但很少滥用所得信息；当系统提示词同时说明沙盒及其规则时，该比例降至约 2% 或更低。
+MIT 和 Microsoft 的新论文《AI-Assisted Programming and Labor Demand》利用 5,414 家跨国公司（覆盖 38% 美国程序员）的 GitHub 合同审查时点构造自然实验，估计 Copilot 采用对劳动力需求的影响。
 
-[阅读原文 →](https://x.com/AnthropicAI/status/2125341904644763678) · 来源：X：Anthropic (@AnthropicAI)
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2125461932111229203) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
-### 3. OpenClaw 联合多家机构发布真实任务基准 ShellBench，最强模型完成率约六成
+### 3. Mantic 与 Thinking Machines 训练可扩展预测智能体，成本降 15 倍
 
-OpenClaw 与 Hugging Face、Red Hat、UC Berkeley 等机构合作推出 ShellBench，基于超过 1000 万条匿名真实智能体交互构建 100 个日常任务，含 90 个 rubric 评分任务（721 项标准，其中 381 项安全标准）和 10 个代码测试任务，共 53,100 次评分运行。
+Mantic 与 Thinking Machines 在 Tinker 上对 Inkling 2 Small 做后训练，得到一个端到端完成研究与预测的预测智能体，其准确度接近 Fable 5.2 (medium)，单次预测成本降低 15 倍。
 
-[阅读原文 →](https://openclaw.ai/blog/shellbench) · 来源：OpenClaw：Blog
+[阅读原文 →](https://thinkingmachines.ai/news/training-a-scalable-forecasting-agent/) · 来源：Thinking Machines Lab：News
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. Ed Zitron 撰文批评 NVIDIA 董事会在政府施压下恢复黄仁勋 CEO 职务
+### 1. Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法
 
-Ed Zitron 撰文批评 NVIDIA 董事会在政府施压下未咨询高管即恢复黄仁勋 CEO 职务，认为此举旨在稳定股市，并指出 AI 行业面临的流动性问题并未因此改变。
+Anthropic 介绍如何将 Messages API 从 Python 迁移到 Rust，并把生产系统本身当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%，首 token 中位时间缩短约 20%，且未停服或冻结功能开发。
 
-[阅读原文 →](https://www.wheresyoured.at/defective-accelerationism/) · 来源：Ed Zitron 长文 / Where’s Your Ed At
+[阅读原文 →](https://www.anthropic.com/research/migrating-api-to-rust) · 来源：Anthropic：Research
+
+### 2. 上下文漂移如何影响你的 AI Agent：470 项实验与一个免费的 MCP 解法
+
+Google AI 开发者 Patrick Kelly 通过 470 个任务实测区分 context rot 与 context drift，在 Gemini 3.8 Flash 和 Gemini Pro 的沙盒中发现：模型在 73% 的运行中内部察觉文件冲突，但 0% 会主动告知用户，95%-100% 的情况下任务级 skill 文件会覆盖 AGENTS.md 的严格规则。
+
+[阅读原文 →](https://dev.to/googleai/how-context-drift-impacts-your-ai-agents-1iph) · 来源：Google AI：DEV 作者专属
 
 ---
 
 ## 📌 快讯
 
-### 1. Anthropic 股价跌破 83 美元 IPO 发行价，上市不到一周最低跌至 76 美元
+### 1. Claude Code 团队发布实用指南讲解 Claude Ship 的 PR 审查与守护用法
 
-[阅读原文 →](https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/) · 来源：TechCrunch：AI
+[阅读原文 →](https://x.com/addyosmani/status/2125492213903978917) · 来源：X：Addy Osmani (@addyosmani)
 
-### 2. Google Workspace MCP servers 与 gwscli 正式发布，Personal 模式一键开通
+### 2. METR 解读 OpenAI 预训练损失加速：2026 年初以来下降速度约为此前 7 倍
 
-[阅读原文 →](https://x.com/_philschmid/status/2125296446459056156) · 来源：X：Philipp Schmid (@_philschmid)
+[阅读原文 →](https://metr.org/blog/2026-11-24-interpreting-a-recent-acceleration-in-pretraining-loss/) · 来源：METR：Blog
 
-### 3. GPT-6.2 Astra 用 22 分钟破解 1808 年素描画作者之谜
+### 3. 面壁智能等发布 EVIL 基准，测出 GPT-4o 等模型在违法场景下安全率不足
 
-[阅读原文 →](https://x.com/gdb/status/2125305172721320165) · 来源：X：Greg Brockman (@gdb)
+[阅读原文 →](https://x.com/OpenBMB/status/2125575267217531181) · 来源：X：面壁智能 OpenBMB (@OpenBMB)
 
-### 4. 卡兹克分享两个优化用户体验和产品动效的 Prompt
+### 4. Meta 个人智能体 Muse 登陆 Instagram
 
-[阅读原文 →](https://x.com/Khazix0918/status/2125110224143171669) · 来源：X：卡兹克 (@Khazix0918)
-
-### 5. 蚂蚁 inclusionAI 发布开源权重多模态模型 Ling-3.2-air
-
-[阅读原文 →](https://huggingface.co/inclusionAI/Ling-3.2-air) · 来源：蚂蚁 inclusionAI：HuggingFace 新模型
-
-### 6. Goodfire 用可解释性改进 BioReason-Pro 2 生物推理模型并用湿实验验证假设
-
-[阅读原文 →](https://www.goodfire.com/research/building-stronger-biological-reasoning-models) · 来源：Goodfire Research
+[阅读原文 →](https://x.com/Muse/status/2125284171417637002) · 来源：X：Muse (@Muse)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-25](./2026-11-25) — Claude 推出 Install as app：artifacts 可安装为 Mac 和 Windows 桌面应用
 - [2026-11-24](./2026-11-24) — NVIDIA 宣布黄仁勋复任总裁兼 CEO 并重回董事会
 - [2026-11-23](./2026-11-23) — OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据
 - [2026-11-22](./2026-11-22) — Anthropic 数学家称与 Claude 完成黎曼猜想证明，斯坦福数小时后发布纯人类竞争草稿
 - [2026-11-21](./2026-11-21) — Thinking Machines Lab 发布可跑在笔记本上的开源权重模型 Inkling 2 Mini
 - [2026-11-20](./2026-11-20) — Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
-- [2026-11-19](./2026-11-19) — Google DeepMind 发布 Gemini 4 Neon
 
 [查看全部往期日报 →](./archive)
 
