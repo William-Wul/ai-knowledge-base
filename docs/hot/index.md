@@ -1,139 +1,101 @@
 ---
 title: AI 日报
-description: 2026-11-26 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-26
+description: 2026-11-27 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-27
 ---
 
-# 🔥 AI 日报 · 2026-11-26
+# 🔥 AI 日报 · 2026-11-27
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法
+## FT 报道 Nvidia 暂停向东南亚四国发运服务器
 
-Anthropic 介绍如何将 Messages API 从 Python 迁移到 Rust，并把生产系统本身当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%，首 token 中位时间缩短约 20%，且未停服或冻结功能开发。
+据 FT 报道，Nvidia 已通知 Dell、Supermicro 等制造伙伴停止向马来西亚、新加坡、泰国和印尼发运服务器，原因是美国要求这些国家及巴西的先进 AI 芯片需申请许可。此前中国 AI 实验室通过当地云厂商租用 Nvidia 算力绕开直接出口禁令，云厂商现有 90 天证明无受限用户但缺乏申请指引；Nvidia 2025 年经新加坡部门入账 $104B，同比增长 72%。
 
 ## 🤖 模型发布/更新
 
-### 1. Sand.ai 发布 480B 视频模型 MAGI-2，作者实测称质量接近 Seedance 2.3 水准且价格仅为其 1/10
+### 1. 蚂蚁 inclusionAI 开源 Ming-Image-0.2-Design 图像生成模型
 
-Sand.ai 凌晨发布 480B 全模态视频模型 MAGI-2，作者实测后认为其质量达到 Seedance 2.3 左右水准，1080P 下每秒 0.5 元、价格约为 Seedance 2.5 的 1/10。
+蚂蚁 inclusionAI 在 Hugging Face 发布并开源 Ming-Image-0.2-Design，改进复杂构图、光照和文字渲染，可用于电商主图、UI 设计稿和空间效果图。
 
-[阅读原文 →](https://mp.weixin.qq.com/s/JkZM9s6tC_Wz5MKeYcccxw) · 来源：公众号：数字生命卡兹克
+[阅读原文 →](https://huggingface.co/inclusionAI/Ming-Image-0.2-Design) · 来源：蚂蚁 inclusionAI：HuggingFace 新模型
 
 ---
 
 ## 🚀 产品发布/更新
 
-### 1. 腾讯开源模型 Hy4 Flash 上线 Fireworks serverless
+### 1. OpenAI 测试私有推理功能
 
-腾讯新开源模型 Hy4 Flash 现已在 Fireworks serverless 上可用。该模型为 MoE 架构，总参数约 220B、每 token 激活约 12B，1M token 上下文窗口（Fireworks 上线时为 512K），支持文本和图像输入，面向文档处理、研究、办公和 Agent 工作流。
+私有推理——机密计算，在模型处理提示词和响应时对其进行严格控制，现已进入测试阶段：
 
-[阅读原文 →](https://fireworks.ai/blog/hy4-flash-on-fireworks/) · 来源：Fireworks AI
-
-### 2. 千问APP免费开放千问Go打电话服务，经授权可代打电话和定时来电
-
-千问APP宣布千问Go打电话服务免费开放，用户告知打给谁、要办什么事并经授权后，AI可代为拨打电话、沟通需求。文中示例包括定时提醒朋友带饮料、定时来电叫醒起床、代订包间或询问快递等场景，并邀请用户在评论区分享想安排的任务。
-
-[阅读原文 →](https://mp.weixin.qq.com/s/jZumD5cprhI7bgmOI7mUEw) · 来源：公众号：千问APP
-
-### 3. Pydantic AI 发布终端编码智能体 Pax 与 Harness beta，迈向 1.0
-
-Pydantic AI 发布终端编码智能体 Pax（pydantic-ai-pax），基于 Harness SDK，全部功能以插件形式组织，可 /plugins 开关 coder、sandbox、mcp、Logfire 观测等，并支持 --agent 换成代码库里任意 Pydantic AI Agent。
-
-[阅读原文 →](https://pydantic.dev/articles/pax-harness-beta) · 来源：Pydantic AI 官方文章
-
-### 4. OpenClaw 2026.11.10 发布，新增 Deep Research、Knowledge 记忆系统与 Browser handoff
-
-OpenClaw 发布 2026.11.10 版本，新增聊天内 Deep Research、新的 OpenClaw 记忆系统 Knowledge，以及 Browser handoff 功能。本次版本包含 7,671 个 PR、349 位贡献者，完整说明见 https://docs.openclaw.ai/releases/2026.11.10。
-
-[阅读原文 →](https://x.com/openclaw/status/2125591827600531554) · 来源：X：OpenClaw (@openclaw)
+[阅读原文 →](https://x.com/gdb/status/2125824585027272727) · 来源：X：Greg Brockman (@gdb)
 
 ---
 
 ## 🌐 行业动态
 
-### 1. 42 州总检察长介入 Character.AI 破产程序，反对拍卖用户私密聊天记录
+### 1. FT 报道 Nvidia 暂停向东南亚四国发运服务器
 
-42 州总检察长介入 Character.AI 的破产程序，试图阻止其拍卖用户私密聊天数据。相关声明称数据集包含超过 2100 万美国账户的聊天记录，其中逾 210 万属于未成年人，还涉及 IP 地址等信息；目前唯一披露的匿名竞拍方为 2026 年 11 月 13 日在特拉华州注册的 Smirks and Pangs Acquisition LLC，拍卖定于 12 月 1 日。
+据 FT 报道，Nvidia 已通知 Dell、Supermicro 等制造伙伴停止向马来西亚、新加坡、泰国和印尼发运服务器，原因是美国要求这些国家及巴西的先进 AI 芯片需申请许可。此前中国 AI 实验室通过当地云厂商租用 Nvidia 算力绕开直接出口禁令，云厂商现有 90 天证明无受限用户但缺乏申请指引；Nvidia 2025 年经新加坡部门入账 $104B，同比增长 72%。
 
-[阅读原文 →](https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/) · 来源：TechCrunch：AI
-
-### 2. 黄仁勋回归后 Nvidia 仍面临 Megaspeed 芯片出口合规调查
-
-TechCrunch 分析指出，黄仁勋回归 Nvidia CEO 后，公司仍面临多方对其 GPU 出口合规问题的调查。新加坡数据中心运营商 Megaspeed 被指违反美国出口管制，将先进 GPU 转运至中国。美国司法部于 2024 年启动调查，新加坡方面于 2025 年展开类似调查，加州总检察长办公室及美国证券交易委员会也关注 Nvidia 的相关披露。Nvidia 表示将停止向中国销售许可芯片，并计划设立首席合规官及董事会出口管制委员会。
-
-[阅读原文 →](https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/) · 来源：TechCrunch：AI
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2125847124600656142) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
 ---
 
 ## 📚 论文研究
 
-### 1. 矩阵乘法指数被证明精确为 9/4
+### 1. OEMpocalypse Part 2：利用 Knox DualDAR 漏洞链 root Galaxy S23 与 S26 旗舰机
 
-Greg Brockman 转发 OpenAI 的 Sebastien Bubeck 消息：在 10 月 6 日发布给出矩阵乘法指数 9/4 新上界后，模型继续工作于下界并宣布 9/4 是紧的，下界此前毫无已知结果。Bubeck 称这是他从未想过有生之年能看到的结果，并指出根据 Yin Tat Lee 等人的旧结果，这也意味着线性规划可在 n^{9/4} 时间内求解。
+Calif Research 发布 OEMpocalypse 系列第二篇，通过 Knox DualDAR 的 confused-deputy 漏洞与内核驱动页 UAF 组成两阶段利用链，从零权限应用在 Galaxy S23、S26 EU、S26 US 和 S26 Ultra 四款机型上高可靠获取 root。
 
-[阅读原文 →](https://x.com/gdb/status/2125418102049628201) · 来源：X：Greg Brockman (@gdb)
+[阅读原文 →](https://calif.io/research/oempocalypse-part-2) · 来源：Calif：Research
 
-### 2. MIT 与 Microsoft 论文：GitHub Copilot 使初级软件工程师招聘下降约 40%
+### 2. Calif 披露 Tor Browser 15.0.22 UAF 漏洞链可致真实 IP 泄露
 
-MIT 和 Microsoft 的新论文《AI-Assisted Programming and Labor Demand》利用 5,414 家跨国公司（覆盖 38% 美国程序员）的 GitHub 合同审查时点构造自然实验，估计 Copilot 采用对劳动力需求的影响。
+Calif 在 OpenAI Patch the Planet 项目下发布研究，展示恶意网站可通过 UAF 漏洞链绕过 Tor Browser 15.0.22 默认防御，泄露用户真实 IP。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2125461932111229203) · 来源：X：Rohan Paul (@rohanpaul_ai)
-
-### 3. Mantic 与 Thinking Machines 训练可扩展预测智能体，成本降 15 倍
-
-Mantic 与 Thinking Machines 在 Tinker 上对 Inkling 2 Small 做后训练，得到一个端到端完成研究与预测的预测智能体，其准确度接近 Fable 5.2 (medium)，单次预测成本降低 15 倍。
-
-[阅读原文 →](https://thinkingmachines.ai/news/training-a-scalable-forecasting-agent/) · 来源：Thinking Machines Lab：News
+[阅读原文 →](https://calif.io/research/tortilla-with-onion) · 来源：Calif：Research
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法
+### 1. Dario Amodei 澄清不主张向 AI 交出人类自由意志
 
-Anthropic 介绍如何将 Messages API 从 Python 迁移到 Rust，并把生产系统本身当作校验器。该 API 流量从 2024 年初到 2026 年秋增长约 1800 倍，迁移后每请求 CPU 降低约 70%，首 token 中位时间缩短约 20%，且未停服或冻结功能开发。
+Anthropic 的 Dario Amodei 发长文否认其主张“向 AI 交出人类自由意志”，称其文章一贯主张 AI 须受合法民主程序治理。他区分了全球治理层面的交权与具体任务的自动化，后者持混合态度，包括对递归自我改进设限、警惕端到端部署带来的就业冲击，并称 Anthropic 曾拒绝让自家模型用于自主武器；文末批评部分 AI CEO 只喊“人类控制”等口号而无实质行动。Elon Musk 转发并评论 Interesting。
 
-[阅读原文 →](https://www.anthropic.com/research/migrating-api-to-rust) · 来源：Anthropic：Research
+[阅读原文 →](https://x.com/elonmusk/status/2125669066388209784) · 来源：X：Elon Musk (@elonmusk, xAI)
 
-### 2. 上下文漂移如何影响你的 AI Agent：470 项实验与一个免费的 MCP 解法
+### 2. Karpathy 用 Claude Code 和 Opus 5.5 把美国真实数据做成文明风格游戏地图
 
-Google AI 开发者 Patrick Kelly 通过 470 个任务实测区分 context rot 与 context drift，在 Gemini 3.8 Flash 和 Gemini Pro 的沙盒中发现：模型在 73% 的运行中内部察觉文件冲突，但 0% 会主动告知用户，95%-100% 的情况下任务级 skill 文件会覆盖 AGENTS.md 的严格规则。
+Karpathy 分享用 Claude Code 桌面版加 Opus 5.5（开启 ultracode）构建的美国文明风格游戏地图，7 小时生成 45K 行代码，整合 Census、BEA、BLS、EIA、NOAA 等 31 个真实数据源，统一到 25 km 六边形网格。GDP 映射为金产量、城市按真实产业分化，含 19 个视图、524 个都市的 City View 和覆盖 3,100+ 县的 Explorer，已部署在 https://karpathy.ai/usaciv/。作者 Ado 转发并感叹。
 
-[阅读原文 →](https://dev.to/googleai/how-context-drift-impacts-your-ai-agents-1iph) · 来源：Google AI：DEV 作者专属
+[阅读原文 →](https://x.com/adocomplete/status/2125994186252161315) · 来源：X：Ado Kukic (@adocomplete)
 
----
+### 3. 卡兹克把《人生意义设计课》做成AI Prompt，帮你设计人生的意义
 
-## 📌 快讯
+公众号作者卡兹克将斯坦福《人生意义设计课》新书的核心方法改编成一个多轮对话Prompt，通过四个阶段6到9个问题，最终生成一份5000到7000字的《个人意义设计手册》。他用GPT-6.2完整实测并展示了手册内容，包括意义地图、思维误区重构、罗盘价值观和可执行的意义时刻设计，全程约20到30分钟。
 
-### 1. Claude Code 团队发布实用指南讲解 Claude Ship 的 PR 审查与守护用法
+[阅读原文 →](https://mp.weixin.qq.com/s/d-MoIMsMdxtR9qw3dn-8sg) · 来源：公众号：数字生命卡兹克
 
-[阅读原文 →](https://x.com/addyosmani/status/2125492213903978917) · 来源：X：Addy Osmani (@addyosmani)
+### 4. Philipp Schmid 撰文解释为何在 Skills 与 CLI 兴起后仍更看好 MCP
 
-### 2. METR 解读 OpenAI 预训练损失加速：2026 年初以来下降速度约为此前 7 倍
+Philipp Schmid 撰文解释为何在 Skills 和 CLI 流行后依然看好 MCP：Linear 和 Notion 的 agent 每周创建约 240 万条 issue 和页面，Atlassian 每天 MCP 工具调用超 500 万次，其中 44% 用户来自软件团队之外，Notion 报告 60 倍 MCP 流量增长。
 
-[阅读原文 →](https://metr.org/blog/2026-11-24-interpreting-a-recent-acceleration-in-pretraining-loss/) · 来源：METR：Blog
-
-### 3. 面壁智能等发布 EVIL 基准，测出 GPT-4o 等模型在违法场景下安全率不足
-
-[阅读原文 →](https://x.com/OpenBMB/status/2125575267217531181) · 来源：X：面壁智能 OpenBMB (@OpenBMB)
-
-### 4. Meta 个人智能体 Muse 登陆 Instagram
-
-[阅读原文 →](https://x.com/Muse/status/2125284171417637002) · 来源：X：Muse (@Muse)
+[阅读原文 →](https://x.com/_philschmid/status/2125945282072297794) · 来源：X：Philipp Schmid (@_philschmid)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-26](./2026-11-26) — Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法
 - [2026-11-25](./2026-11-25) — Claude 推出 Install as app：artifacts 可安装为 Mac 和 Windows 桌面应用
 - [2026-11-24](./2026-11-24) — NVIDIA 宣布黄仁勋复任总裁兼 CEO 并重回董事会
 - [2026-11-23](./2026-11-23) — OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据
 - [2026-11-22](./2026-11-22) — Anthropic 数学家称与 Claude 完成黎曼猜想证明，斯坦福数小时后发布纯人类竞争草稿
 - [2026-11-21](./2026-11-21) — Thinking Machines Lab 发布可跑在笔记本上的开源权重模型 Inkling 2 Mini
-- [2026-11-20](./2026-11-20) — Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%
 
 [查看全部往期日报 →](./archive)
 
