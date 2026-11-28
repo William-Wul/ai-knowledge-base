@@ -1,101 +1,61 @@
 ---
 title: AI 日报
-description: 2026-11-27 AI 行业精选 · 由 AIHOT 同步
-date: 2026-11-27
+description: 2026-11-28 AI 行业精选 · 由 AIHOT 同步
+date: 2026-11-28
 ---
 
-# 🔥 AI 日报 · 2026-11-27
+# 🔥 AI 日报 · 2026-11-28
 
 > 📡 本期内容由 [AIHOT](https://aihot.news/) 自动同步 · 数据精选由数字生命卡兹克维护 · 完整精选请访问 [aihot.news](https://aihot.news/)
 
 ---
 
-## FT 报道 Nvidia 暂停向东南亚四国发运服务器
+## 实测支付宝 SkillPay：手把手教你怎么把 Skill 挂上去卖钱
 
-据 FT 报道，Nvidia 已通知 Dell、Supermicro 等制造伙伴停止向马来西亚、新加坡、泰国和印尼发运服务器，原因是美国要求这些国家及巴西的先进 AI 芯片需申请许可。此前中国 AI 实验室通过当地云厂商租用 Nvidia 算力绕开直接出口禁令，云厂商现有 90 天证明无受限用户但缺乏申请指引；Nvidia 2025 年经新加坡部门入账 $104B，同比增长 72%。
-
-## 🤖 模型发布/更新
-
-### 1. 蚂蚁 inclusionAI 开源 Ming-Image-0.2-Design 图像生成模型
-
-蚂蚁 inclusionAI 在 Hugging Face 发布并开源 Ming-Image-0.2-Design，改进复杂构图、光照和文字渲染，可用于电商主图、UI 设计稿和空间效果图。
-
-[阅读原文 →](https://huggingface.co/inclusionAI/Ming-Image-0.2-Design) · 来源：蚂蚁 inclusionAI：HuggingFace 新模型
-
----
-
-## 🚀 产品发布/更新
-
-### 1. OpenAI 测试私有推理功能
-
-私有推理——机密计算，在模型处理提示词和响应时对其进行严格控制，现已进入测试阶段：
-
-[阅读原文 →](https://x.com/gdb/status/2125824585027272727) · 来源：X：Greg Brockman (@gdb)
-
----
+作者完整实测支付宝 SkillPay 平台的 Skill 变现流程，该平台7月上线，支持买断和订阅两种售卖模式。买断制将 Skill 完整内容交付本地，订阅制把 Skill 保留在云端沙盒中、Agent 看不到明文；买断定价 0.01-50 元，订阅按周月季度收费上限 50 元，免费试用最低 5 次。
 
 ## 🌐 行业动态
 
-### 1. FT 报道 Nvidia 暂停向东南亚四国发运服务器
+### 1. OpenBMB 点评 InternLM 基于 MiniCPM-o 4.5 打造的 Sage-Interaction
 
-据 FT 报道，Nvidia 已通知 Dell、Supermicro 等制造伙伴停止向马来西亚、新加坡、泰国和印尼发运服务器，原因是美国要求这些国家及巴西的先进 AI 芯片需申请许可。此前中国 AI 实验室通过当地云厂商租用 Nvidia 算力绕开直接出口禁令，云厂商现有 90 天证明无受限用户但缺乏申请指引；Nvidia 2025 年经新加坡部门入账 $104B，同比增长 72%。
+OpenBMB 转发并点评上海人工智能实验室 InternLM 团队发布的开源全双工语音视频模型 Sage-Interaction，该模型基于 MiniCPM-o 4.5 构建。OpenBMB 称赞其边说边听、在不打断对话的情况下把复杂任务交给后端模型，是迈向更自然 AI 交互的一步，并向 InternLM 团队致意。
 
-[阅读原文 →](https://x.com/rohanpaul_ai/status/2125847124600656142) · 来源：X：Rohan Paul (@rohanpaul_ai)
-
----
-
-## 📚 论文研究
-
-### 1. OEMpocalypse Part 2：利用 Knox DualDAR 漏洞链 root Galaxy S23 与 S26 旗舰机
-
-Calif Research 发布 OEMpocalypse 系列第二篇，通过 Knox DualDAR 的 confused-deputy 漏洞与内核驱动页 UAF 组成两阶段利用链，从零权限应用在 Galaxy S23、S26 EU、S26 US 和 S26 Ultra 四款机型上高可靠获取 root。
-
-[阅读原文 →](https://calif.io/research/oempocalypse-part-2) · 来源：Calif：Research
-
-### 2. Calif 披露 Tor Browser 15.0.22 UAF 漏洞链可致真实 IP 泄露
-
-Calif 在 OpenAI Patch the Planet 项目下发布研究，展示恶意网站可通过 UAF 漏洞链绕过 Tor Browser 15.0.22 默认防御，泄露用户真实 IP。
-
-[阅读原文 →](https://calif.io/research/tortilla-with-onion) · 来源：Calif：Research
+[阅读原文 →](https://x.com/OpenBMB/status/2126308118741323853) · 来源：X：面壁智能 OpenBMB (@OpenBMB)
 
 ---
 
 ## 💡 技巧与观点
 
-### 1. Dario Amodei 澄清不主张向 AI 交出人类自由意志
+### 1. 实测支付宝 SkillPay：手把手教你怎么把 Skill 挂上去卖钱
 
-Anthropic 的 Dario Amodei 发长文否认其主张“向 AI 交出人类自由意志”，称其文章一贯主张 AI 须受合法民主程序治理。他区分了全球治理层面的交权与具体任务的自动化，后者持混合态度，包括对递归自我改进设限、警惕端到端部署带来的就业冲击，并称 Anthropic 曾拒绝让自家模型用于自主武器；文末批评部分 AI CEO 只喊“人类控制”等口号而无实质行动。Elon Musk 转发并评论 Interesting。
+作者完整实测支付宝 SkillPay 平台的 Skill 变现流程，该平台7月上线，支持买断和订阅两种售卖模式。买断制将 Skill 完整内容交付本地，订阅制把 Skill 保留在云端沙盒中、Agent 看不到明文；买断定价 0.01-50 元，订阅按周月季度收费上限 50 元，免费试用最低 5 次。
 
-[阅读原文 →](https://x.com/elonmusk/status/2125669066388209784) · 来源：X：Elon Musk (@elonmusk, xAI)
+[阅读原文 →](https://mp.weixin.qq.com/s/x7Yt237NPL-sLvkUJlwESw) · 来源：公众号：数字生命卡兹克
 
-### 2. Karpathy 用 Claude Code 和 Opus 5.5 把美国真实数据做成文明风格游戏地图
+### 2. Antigravity 实用技巧：在 GEMINI.md 加一句话让模型边干活边汇报
 
-Karpathy 分享用 Claude Code 桌面版加 Opus 5.5（开启 ultracode）构建的美国文明风格游戏地图，7 小时生成 45K 行代码，整合 Census、BEA、BLS、EIA、NOAA 等 31 个真实数据源，统一到 25 km 六边形网格。GDP 映射为金产量、城市按真实产业分化，含 19 个视图、524 个都市的 City View 和覆盖 3,100+ 县的 Explorer，已部署在 https://karpathy.ai/usaciv/。作者 Ado 转发并感叹。
+卡兹克分享一个 Antigravity 使用技巧，针对模型长时间闷头干活不输出信息的问题，只需在 GEMINI.md 中加一句话，要求动手前说要做什么、有发现、换方向、卡住或连干四五步时再说一句，即可获得类似 Claude 或 Codex 那种实时汇报进度的交互体验。
 
-[阅读原文 →](https://x.com/adocomplete/status/2125994186252161315) · 来源：X：Ado Kukic (@adocomplete)
+[阅读原文 →](https://x.com/Khazix0918/status/2126294658431201385) · 来源：X：卡兹克 (@Khazix0918)
 
-### 3. 卡兹克把《人生意义设计课》做成AI Prompt，帮你设计人生的意义
+---
 
-公众号作者卡兹克将斯坦福《人生意义设计课》新书的核心方法改编成一个多轮对话Prompt，通过四个阶段6到9个问题，最终生成一份5000到7000字的《个人意义设计手册》。他用GPT-6.2完整实测并展示了手册内容，包括意义地图、思维误区重构、罗盘价值观和可执行的意义时刻设计，全程约20到30分钟。
+## 📌 快讯
 
-[阅读原文 →](https://mp.weixin.qq.com/s/d-MoIMsMdxtR9qw3dn-8sg) · 来源：公众号：数字生命卡兹克
+### 1. Dragos 调查称 MiniMax 在用户请求不存储的情况下仍打开提示词中的私有链接
 
-### 4. Philipp Schmid 撰文解释为何在 Skills 与 CLI 兴起后仍更看好 MCP
-
-Philipp Schmid 撰文解释为何在 Skills 和 CLI 流行后依然看好 MCP：Linear 和 Notion 的 agent 每周创建约 240 万条 issue 和页面，Atlassian 每天 MCP 工具调用超 500 万次，其中 44% 用户来自软件团队之外，Notion 报告 60 倍 MCP 流量增长。
-
-[阅读原文 →](https://x.com/_philschmid/status/2125945282072297794) · 来源：X：Philipp Schmid (@_philschmid)
+[阅读原文 →](https://x.com/rohanpaul_ai/status/2126214860421914884) · 来源：X：Rohan Paul (@rohanpaul_ai)
 
 ---
 
 ## 📅 往期日报
 
+- [2026-11-27](./2026-11-27) — FT 报道 Nvidia 暂停向东南亚四国发运服务器
 - [2026-11-26](./2026-11-26) — Anthropic 复盘 Messages API 从 Python 迁移到 Rust 的校验方法
 - [2026-11-25](./2026-11-25) — Claude 推出 Install as app：artifacts 可安装为 Mac 和 Windows 桌面应用
 - [2026-11-24](./2026-11-24) — NVIDIA 宣布黄仁勋复任总裁兼 CEO 并重回董事会
 - [2026-11-23](./2026-11-23) — OpenAI 提议以困惑度作为行业共享指标并公开内部预训练测量数据
 - [2026-11-22](./2026-11-22) — Anthropic 数学家称与 Claude 完成黎曼猜想证明，斯坦福数小时后发布纯人类竞争草稿
-- [2026-11-21](./2026-11-21) — Thinking Machines Lab 发布可跑在笔记本上的开源权重模型 Inkling 2 Mini
 
 [查看全部往期日报 →](./archive)
 
